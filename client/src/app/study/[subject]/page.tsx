@@ -16,7 +16,8 @@ import {
   ArrowRight
 } from 'lucide-react';
 import 'katex/dist/katex.min.css';
-import { InlineMath } from 'react-katex';
+import { InlineMath as _InlineMath } from 'react-katex';
+const InlineMath = _InlineMath as any;
 
 export default function StudyPage() {
   const params = useParams();
