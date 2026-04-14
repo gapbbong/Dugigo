@@ -19,6 +19,8 @@ import 'katex/dist/katex.min.css';
 import { InlineMath as _InlineMath } from 'react-katex';
 const InlineMath = _InlineMath as any;
 
+export const dynamic = 'force-dynamic';
+
 export default function StudyPage() {
   const params = useParams();
   const router = useRouter();

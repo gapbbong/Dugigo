@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, Suspense } from "react";
 import { Move, Copy, RotateCcw, Image as ImageIcon, Check, ArrowLeft, ZoomIn, ZoomOut } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+export const dynamic = 'force-dynamic';
 
 function CropToolContent() {
   const searchParams = useSearchParams();
