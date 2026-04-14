@@ -66,7 +66,7 @@ export default function SelectSubjectPage() {
             <GraduationCap className="w-6 h-6 text-white" />
           </div>
           <h2 className="text-2xl font-black tracking-tighter text-slate-900">
-            DugiGo+ <span className="text-[10px] text-slate-400 font-medium ml-1 bg-slate-100 px-1.5 py-0.5 rounded-full">v4.2.2</span>
+            DugiGo+ <span className="text-[10px] text-slate-400 font-medium ml-1 bg-slate-100 px-1.5 py-0.5 rounded-full">v2.0.2</span>
           </h2>
         </div>
         
