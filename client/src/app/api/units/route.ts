@@ -57,7 +57,13 @@ export async function GET(req: NextRequest) {
 
     // 150문항(5세트) 초과 단원 쪼개기 로직
     const MAX_PER_UNIT = 150;
-    const finalUnits = [];
+    const finalUnits: { 
+      name: string; 
+      count: number; 
+      isPart?: boolean; 
+      originalName?: string; 
+      range?: [number, number] 
+    }[] = [];
     
     prioritizedUnits.forEach(([name, count]) => {
       if (count > MAX_PER_UNIT) {
