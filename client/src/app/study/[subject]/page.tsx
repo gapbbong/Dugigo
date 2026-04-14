@@ -249,7 +249,7 @@ export default function StudyPage() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.4, cubicBezier: [0.4, 0, 0.2, 1] }}
+            transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
             className="flex-1 flex flex-col gap-12"
           >
             {/* 문제 카드 */}
