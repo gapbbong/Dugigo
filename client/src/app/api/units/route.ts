@@ -41,7 +41,7 @@ export async function GET(req: NextRequest) {
       .sort((a, b) => a[0].localeCompare(b[0]));
 
     // [이론] -> [기기] -> [설비] 순서로 가중치 부여하여 재정렬
-    const getWeight = (name) => {
+    const getWeight = (name: string): number => {
       if (name.includes('[이론]')) return 1;
       if (name.includes('[기기]')) return 2;
       if (name.includes('[설비]')) return 3;
