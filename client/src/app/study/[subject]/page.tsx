@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { supabase } from '@/lib/supabase';
 import { 
@@ -21,7 +21,10 @@ import { InlineMath } from 'react-katex';
 export default function StudyPage() {
   const params = useParams();
   const router = useRouter();
+  const searchParams = useSearchParams();
+
   const subject = decodeURIComponent(params.subject as string);
+  const unitFilter = searchParams.get('unit');
   
   const [questions, setQuestions] = useState<any[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,7 +50,12 @@ export default function StudyPage() {
         const res = await fetch(`/api/questions?subject=${subject}`);
         const data = await res.json();
         if (data.questions) {
-          setQuestions(data.questions);
+          let filtered = data.questions;
+          if (unitFilter) {
+            filtered = data.questions.filter((q: any) => q.sub_unit === unitFilter);
+          }
+          // 문제 순서 섞기 (랜덤하게)
+          setQuestions(filtered.sort(() => Math.random() - 0.5));
         }
       } catch (err) {
         console.error('Failed to fetch questions:', err);
@@ -56,7 +64,7 @@ export default function StudyPage() {
       }
     };
     fetchQuestions();
-  }, [subject]);
+  }, [subject, unitFilter]);
 
   const currentQuestion = questions[currentIndex];
 
@@ -236,6 +244,21 @@ export default function StudyPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-[1.3] tracking-tight decoration-brand-100 underline-offset-8">
                 {renderMath(currentQuestion.question)}
               </h2>
+
+              {/* 🖼️ 이미지 추가 */}
+              {currentQuestion.image && (
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-white/50 p-6 rounded-[2.5rem] border border-white/60 shadow-sm flex justify-center"
+                >
+                  <img 
+                    src={currentQuestion.image} 
+                    alt="Question Diagram" 
+                    className="max-h-[300px] object-contain rounded-xl"
+                  />
+                </motion.div>
+              )}
             </div>
 
             {/* 보기 리스트 */}

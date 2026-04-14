@@ -43,7 +43,7 @@ export default function SelectSubjectPage() {
 
   const handleSelect = (subject: string) => {
     localStorage.setItem('selected_subject', subject);
-    router.push(`/study/${encodeURIComponent(subject)}`);
+    router.push(`/select-unit/${encodeURIComponent(subject)}`);
   };
 
   if (loading) {
