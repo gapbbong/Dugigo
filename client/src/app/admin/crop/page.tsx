@@ -3,26 +3,25 @@
 import { useState, useRef, useEffect, Suspense } from "react";
 import { Move, Copy, RotateCcw, Image as ImageIcon, Check, ArrowLeft, ZoomIn, ZoomOut } from "lucide-react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 export const dynamic = 'force-dynamic';
 
-function CropToolContent() {
-  const searchParams = useSearchParams();
+function CropToolContent({ searchParamsProps }: { searchParamsProps: any }) {
   const [qId, setQId] = useState<string | null>(null);
   const [examName, setExamName] = useState("exam2015");
   const [selectedPage, setSelectedPage] = useState(1);
   const [paramsReady, setParamsReady] = useState(false);
 
   useEffect(() => {
-    const qIdParam = searchParams.get("qId");
-    const examParam = searchParams.get("exam") || "exam2015";
-    const pageParam = Number(searchParams.get("page")) || 1;
+    const s = searchParamsProps || {};
+    const qIdParam = s.qId || null;
+    const examParam = s.exam || "exam2015";
+    const pageParam = Number(s.page) || 1;
     
     setQId(qIdParam);
     setExamName(examParam);
     setSelectedPage(pageParam);
     setParamsReady(true);
-  }, [searchParams]);
+  }, [searchParamsProps]);
 
   const [crop, setCrop] = useState({ top: 20, left: 20, width: 20, height: 20 });
   const [isSaving, setIsSaving] = useState(false);
@@ -281,10 +280,10 @@ function CropToolContent() {
   );
 }
 
-export default function CropTool() {
+export default function CropTool({ searchParams }: { searchParams: any }) {
   return (
     <Suspense fallback={<div className="min-h-screen bg-zinc-950 flex items-center justify-center text-orange-500 font-bold">Loading Cropper...</div>}>
-      <CropToolContent />
+      <CropToolContent searchParamsProps={searchParams} />
     </Suspense>
   );
 }

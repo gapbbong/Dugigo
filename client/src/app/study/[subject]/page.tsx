@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useParams, useRouter, useSearchParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { supabase } from '@/lib/supabase';
 import { 
@@ -20,10 +20,11 @@ import { InlineMath as _InlineMath } from 'react-katex';
 import { Suspense } from 'react';
 const InlineMath = _InlineMath as any;
 
-function StudyContent() {
+export const dynamic = 'force-dynamic';
+
+function StudyContent({ searchParamsProps }: { searchParamsProps: any }) {
   const params = useParams();
   const router = useRouter();
-  const searchParams = useSearchParams();
 
   const subject = decodeURIComponent(params.subject as string);
   
@@ -46,13 +47,15 @@ function StudyContent() {
 
   // URL 파라미터 추출 (마운트 시 한 번만 실행)
   useEffect(() => {
-    setUnitFilter(searchParams.get('unit'));
-    setSetNum(searchParams.get('set'));
-    setSetSize(searchParams.get('size'));
-    setRStart(searchParams.get('rStart'));
-    setREnd(searchParams.get('rEnd'));
+    // Props가 객체일 경우 직접 접근, 아닐 경우 (Next.js 15 대비) 대비 로직
+    const s = searchParamsProps || {};
+    setUnitFilter(s.unit || null);
+    setSetNum(s.set || null);
+    setSetSize(s.size || null);
+    setRStart(s.rStart || null);
+    setREnd(s.rEnd || null);
     setParamsReady(true);
-  }, [searchParams]);
+  }, [searchParamsProps]);
 
   // 타이머 작동
   useEffect(() => {
@@ -352,7 +355,7 @@ function StudyContent() {
   );
 }
 
-export default function StudyPage() {
+export default function StudyPage({ searchParams }: { searchParams: any }) {
   return (
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center bg-black">
@@ -362,7 +365,7 @@ export default function StudyPage() {
         </div>
       </div>
     }>
-      <StudyContent />
+      <StudyContent searchParamsProps={searchParams} />
     </Suspense>
   );
 }
