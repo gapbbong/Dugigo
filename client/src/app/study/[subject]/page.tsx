@@ -26,11 +26,6 @@ function StudyContent() {
   const searchParams = useSearchParams();
 
   const subject = decodeURIComponent(params.subject as string);
-  const unitFilter = searchParams.get('unit');
-  const setNum = searchParams.get('set');
-  const setSize = searchParams.get('size');
-  const rStart = searchParams.get('rStart');
-  const rEnd = searchParams.get('rEnd');
   
   const [questions, setQuestions] = useState<any[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,6 +35,24 @@ function StudyContent() {
   const [startTime] = useState(Date.now());
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
+
+  // 파라미터 상태 관리
+  const [unitFilter, setUnitFilter] = useState<string | null>(null);
+  const [setNum, setSetNum] = useState<string | null>(null);
+  const [setSize, setSetSize] = useState<string | null>(null);
+  const [rStart, setRStart] = useState<string | null>(null);
+  const [rEnd, setREnd] = useState<string | null>(null);
+  const [paramsReady, setParamsReady] = useState(false);
+
+  // URL 파라미터 추출 (마운트 시 한 번만 실행)
+  useEffect(() => {
+    setUnitFilter(searchParams.get('unit'));
+    setSetNum(searchParams.get('set'));
+    setSetSize(searchParams.get('size'));
+    setRStart(searchParams.get('rStart'));
+    setREnd(searchParams.get('rEnd'));
+    setParamsReady(true);
+  }, [searchParams]);
 
   // 타이머 작동
   useEffect(() => {
@@ -51,6 +64,8 @@ function StudyContent() {
 
   // 문제 데이터 가져오기
   useEffect(() => {
+    if (!paramsReady) return;
+
     const fetchQuestions = async () => {
       try {
         const res = await fetch(`/api/questions?subject=${subject}`);
@@ -85,7 +100,7 @@ function StudyContent() {
       }
     };
     fetchQuestions();
-  }, [subject, unitFilter]);
+  }, [subject, unitFilter, rStart, rEnd, setNum, setSize, paramsReady]);
 
   const currentQuestion = questions[currentIndex];
 

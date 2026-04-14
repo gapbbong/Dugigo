@@ -8,17 +8,36 @@ export const dynamic = 'force-dynamic';
 
 function CropToolContent() {
   const searchParams = useSearchParams();
-  const qId = searchParams.get("qId");
-  const examName = searchParams.get("exam") || "exam2015";
-  const initialPage = Number(searchParams.get("page")) || 1;
+  const [qId, setQId] = useState<string | null>(null);
+  const [examName, setExamName] = useState("exam2015");
+  const [selectedPage, setSelectedPage] = useState(1);
+  const [paramsReady, setParamsReady] = useState(false);
 
-  const [selectedPage, setSelectedPage] = useState(initialPage);
+  useEffect(() => {
+    const qIdParam = searchParams.get("qId");
+    const examParam = searchParams.get("exam") || "exam2015";
+    const pageParam = Number(searchParams.get("page")) || 1;
+    
+    setQId(qIdParam);
+    setExamName(examParam);
+    setSelectedPage(pageParam);
+    setParamsReady(true);
+  }, [searchParams]);
+
   const [crop, setCrop] = useState({ top: 20, left: 20, width: 20, height: 20 });
   const [isSaving, setIsSaving] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [dragType, setDragType] = useState<"move" | "resize" | null>(null);
   const [copied, setCopied] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  if (!paramsReady) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-slate-900"></div>
+      </div>
+    );
+  }
 
   const pages = Array.from({ length: 30 }, (_, i) => i + 1);
   const imageSrc = `/images/exams/${examName}/pages/page_${selectedPage}.png`;
