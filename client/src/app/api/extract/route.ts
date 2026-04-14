@@ -1,10 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
-import pdf from "pdf-parse";
 import path from "path";
 import fs from "fs/promises";
 
 export async function POST(req: NextRequest) {
   try {
+    // Dynamic import to avoid Turbopack build error with CJS module
+    // @ts-ignore
+    const pdf = (await import("pdf-parse/lib/pdf-parse.js")).default;
+
     const formData = await req.formData();
     const file = formData.get("file") as File;
     if (!file) {
