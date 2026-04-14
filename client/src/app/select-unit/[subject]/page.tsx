@@ -94,7 +94,7 @@ export default function SelectUnitPage() {
             어떤 부분을 <span className="text-gradient">집중 공략</span>할까요?
           </motion.h1>
           <p className="text-slate-500 text-lg font-medium">
-            전체 랜덤 학습이나 AI가 분류한 소단원별 학습을 선택할 수 있습니다.
+            AI가 분류한 단원별 학습을 통해 효율적으로 학습하세요.
           </p>
         </div>
 
@@ -116,43 +116,76 @@ export default function SelectUnitPage() {
               </div>
               
               <h3 className="text-3xl font-black mb-4 text-slate-900">전체 랜덤 학습</h3>
-              <p className="text-slate-500 font-bold mb-10 leading-relaxed">
+              <p className="text-slate-500 font-bold mb-10 leading-relaxed text-sm">
                 모든 단원을 골고루 섞어서<br />실전처럼 시험을 치릅니다.
                 <span className="block mt-2 text-brand-600 font-black">({totalQuestions}문항 로드됨)</span>
               </p>
               
-              <div className="mt-auto pt-4 flex items-center gap-2 text-brand-600 font-black">
-                지금 도전하기 <ChevronRight size={20} />
+              <div className="mt-auto pt-4 flex items-center gap-2 text-brand-600 font-black text-xs">
+                지금 도전하기 <ChevronRight size={16} />
               </div>
             </div>
           </motion.div>
 
           {/* 소단원 리스트 */}
-          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-1 gap-3">
+          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
             <AnimatePresence>
-              {units.map((unit, index) => (
-                <motion.div
-                  key={unit.name}
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  onClick={() => handleSelect(unit.name)}
-                  className="glass-card p-5 rounded-[1.5rem] cursor-pointer hover:bg-white hover:border-brand-200 transition-all flex items-center gap-5 group relative overflow-hidden"
-                >
-                  <div className="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-400 font-black text-xs group-hover:bg-brand-50 group-hover:text-brand-600 transition-all">
-                    {(index + 1).toString().padStart(2, '0')}
-                  </div>
-                  <div className="flex-1 flex items-center justify-between">
-                    <h4 className="text-lg font-bold text-slate-800 group-hover:text-brand-600 transition-colors leading-tight">
-                      {unit.name}
-                    </h4>
-                    <span className="px-3 py-1 bg-slate-100 group-hover:bg-brand-100 text-slate-500 group-hover:text-brand-700 text-[11px] font-black rounded-full transition-all">
-                      {unit.count}문항
-                    </span>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-brand-600 transform group-hover:translate-x-1 transition-all" />
-                </motion.div>
-              ))}
+              {units.map((unit, index) => {
+                const setSize = 30;
+                const setCount = Math.ceil(unit.count / setSize);
+                const hasMultipleSets = setCount > 1;
+                
+                return (
+                  <motion.div
+                    key={unit.name}
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                    onClick={() => !hasMultipleSets && handleSelect(unit)}
+                    className={`glass-card p-5 rounded-[2rem] relative overflow-hidden flex flex-col gap-4 transition-all ${
+                      !hasMultipleSets ? 'cursor-pointer hover:bg-white hover:border-brand-300 hover:shadow-xl hover:shadow-brand-500/10' : ''
+                    }`}
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 font-black text-sm shrink-0 border-2 border-brand-100/50">
+                        {(index + 1).toString().padStart(2, '0')}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-xl font-black text-slate-800 leading-snug truncate">
+                          {unit.name}
+                        </h4>
+                        <div className="flex items-center gap-3 mt-1.5">
+                          <span className="text-xs font-black text-brand-600 bg-brand-50 px-3 py-1 rounded-full border border-brand-100">
+                            {unit.count}문항
+                          </span>
+                          {!hasMultipleSets && (
+                            <span className="text-xs font-bold text-slate-400">지금 학습 시작</span>
+                          )}
+                        </div>
+                      </div>
+                      {!hasMultipleSets && <ChevronRight className="w-5 h-5 text-slate-300" />}
+                    </div>
+
+                    {/* 세트 선택 그리드 */}
+                    {hasMultipleSets && (
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-2">
+                        {Array.from({ length: setCount }).map((_, sIdx) => (
+                          <button
+                            key={sIdx}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleSelect(unit, sIdx);
+                            }}
+                            className="py-3 bg-white border-2 border-slate-100 rounded-2xl text-sm font-black text-slate-600 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50/50 transition-all shadow-sm"
+                          >
+                            {sIdx + 1}세트
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </motion.div>
+                );
+              })}
             </AnimatePresence>
 
             {units.length === 0 && (

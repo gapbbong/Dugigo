@@ -28,7 +28,7 @@
       ],
       "explanation": "유효전력 P = EI cosθ [W] 입니다.",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 2,
@@ -58,7 +58,7 @@
       ],
       "explanation": "자성체의 종류:\n- 강자성체(μs >> 1): 자기장 방향으로 강하게 자화.\n- 상자성체(μs > 1): 자기장 방향으로 미약하게 자화.\n- 반자성체(μs < 1): 자기장 반대 방향으로 자화.",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 3,
@@ -88,7 +88,7 @@
       ],
       "explanation": "도전율 순서: 은(Ag) > 구리(Cu) > 금(Au) > 알루미늄(Al)",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 4,
@@ -118,7 +118,7 @@
       ],
       "explanation": "Δ결선에서 Vp = Vl = 200[V].\n임피던스 절대값 |Z| = √(6² + 8²) = 10[Ω].\n상전류 Ip = Vp / |Z| = 200 / 10 = 20[A].\n선전류 Il = √3 Ip = 20√3 [A].",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 5,
@@ -148,7 +148,7 @@
       ],
       "explanation": "전자력 F = BIl sinθ = 3 * 4 * 0.1 * sin 90° = 1.2 [N]",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 5,
@@ -183,7 +183,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 7,
@@ -208,7 +208,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 8,
@@ -223,7 +223,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 5,
@@ -232,7 +232,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 9,
@@ -241,7 +241,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 10,
@@ -261,7 +261,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 11,
@@ -270,7 +270,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 12,
@@ -290,7 +290,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 13,
@@ -299,7 +299,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 8,
@@ -308,7 +308,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 14,
@@ -317,7 +317,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 15,
@@ -332,7 +332,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 16,
@@ -341,7 +341,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 17,
@@ -356,7 +356,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 18,
@@ -371,7 +371,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 19,
@@ -380,7 +380,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 20,
@@ -389,7 +389,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 12,
@@ -409,7 +409,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 21,
@@ -439,7 +439,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 22,
@@ -448,7 +448,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 23,
@@ -457,7 +457,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 24,
@@ -466,7 +466,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 9,
@@ -475,7 +475,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 26,
@@ -484,7 +484,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 27,
@@ -493,7 +493,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 28,
@@ -502,7 +502,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 2,
@@ -511,7 +511,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 29,
@@ -551,7 +551,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 31,
@@ -560,7 +560,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 32,
@@ -575,7 +575,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 9,
@@ -590,7 +590,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 3,
@@ -610,7 +610,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 37,
@@ -630,7 +630,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 38,
@@ -639,7 +639,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 39,
@@ -674,7 +674,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 43,
@@ -689,7 +689,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 3,
@@ -709,7 +709,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 48,
@@ -739,7 +739,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 49,
@@ -748,7 +748,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -757,7 +757,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 50,
@@ -782,7 +782,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 51,
@@ -791,7 +791,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 52,
@@ -800,7 +800,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 53,
@@ -809,7 +809,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 4,
@@ -818,7 +818,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 54,
@@ -827,7 +827,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 8,
@@ -836,7 +836,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 55,
@@ -845,7 +845,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 56,
@@ -854,7 +854,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 57,
@@ -863,7 +863,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 59,
@@ -898,7 +898,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 1,
@@ -923,7 +923,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 2,
@@ -932,7 +932,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 3,
@@ -957,7 +957,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 5,
@@ -966,7 +966,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -975,7 +975,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 6,
@@ -1005,7 +1005,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 7,
@@ -1014,7 +1014,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 8,
@@ -1023,7 +1023,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -1048,7 +1048,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 10,
@@ -1057,7 +1057,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 11,
@@ -1077,7 +1077,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 12,
@@ -1107,7 +1107,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 13,
@@ -1116,7 +1116,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 14,
@@ -1125,7 +1125,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 15,
@@ -1155,7 +1155,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 17,
@@ -1164,7 +1164,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -1184,7 +1184,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 18,
@@ -1193,7 +1193,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -1202,7 +1202,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 19,
@@ -1211,7 +1211,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 20,
@@ -1226,7 +1226,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 21,
@@ -1235,7 +1235,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 22,
@@ -1244,7 +1244,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 23,
@@ -1253,7 +1253,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 24,
@@ -1262,7 +1262,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 25,
@@ -1271,7 +1271,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 26,
@@ -1286,7 +1286,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 27,
@@ -1295,7 +1295,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 28,
@@ -1320,7 +1320,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 29,
@@ -1329,7 +1329,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 30,
@@ -1349,7 +1349,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 31,
@@ -1358,7 +1358,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 32,
@@ -1373,7 +1373,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 33,
@@ -1382,7 +1382,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 34,
@@ -1391,7 +1391,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 35,
@@ -1400,7 +1400,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 36,
@@ -1409,7 +1409,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 3,
@@ -1418,7 +1418,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 37,
@@ -1433,7 +1433,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 6,
@@ -1442,7 +1442,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 39,
@@ -1451,7 +1451,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 8,
@@ -1460,7 +1460,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 40,
@@ -1469,7 +1469,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 41,
@@ -1494,7 +1494,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 43,
@@ -1519,7 +1519,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 45,
@@ -1528,7 +1528,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 9,
@@ -1537,7 +1537,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 49,
@@ -1567,7 +1567,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 51,
@@ -1587,7 +1587,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 52,
@@ -1602,7 +1602,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 53,
@@ -1627,7 +1627,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 54,
@@ -1636,7 +1636,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 5,
@@ -1645,7 +1645,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 55,
@@ -1670,7 +1670,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 56,
@@ -1700,7 +1700,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 57,
@@ -1709,7 +1709,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -1718,7 +1718,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 58,
@@ -1727,7 +1727,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 59,
@@ -1752,7 +1752,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -1772,7 +1772,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 2,
@@ -1781,7 +1781,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 1,
@@ -1790,7 +1790,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 2,
@@ -1810,7 +1810,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 4,
@@ -1819,7 +1819,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 5,
@@ -1828,7 +1828,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 1,
@@ -1848,7 +1848,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -1873,7 +1873,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 10,
@@ -1893,7 +1893,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 11,
@@ -1902,7 +1902,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 5,
@@ -1922,7 +1922,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 12,
@@ -1952,7 +1952,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 13,
@@ -1961,7 +1961,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 14,
@@ -1970,7 +1970,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 15,
@@ -1995,7 +1995,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 16,
@@ -2004,7 +2004,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 17,
@@ -2013,7 +2013,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 5,
@@ -2022,7 +2022,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 18,
@@ -2031,7 +2031,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 19,
@@ -2040,7 +2040,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 20,
@@ -2060,7 +2060,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 1,
@@ -2069,7 +2069,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -2089,7 +2089,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 22,
@@ -2098,7 +2098,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 23,
@@ -2118,7 +2118,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -2127,7 +2127,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 75,
@@ -2136,7 +2136,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 24,
@@ -2161,7 +2161,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 27,
@@ -2176,7 +2176,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 28,
@@ -2185,7 +2185,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -2200,7 +2200,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 29,
@@ -2209,7 +2209,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 3,
@@ -2224,7 +2224,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 30,
@@ -2239,7 +2239,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 31,
@@ -2248,7 +2248,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 32,
@@ -2257,7 +2257,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 33,
@@ -2266,7 +2266,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 35,
@@ -2275,7 +2275,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 36,
@@ -2295,7 +2295,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 37,
@@ -2315,7 +2315,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 38,
@@ -2340,7 +2340,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 40,
@@ -2355,7 +2355,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 4,
@@ -2364,7 +2364,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -2373,7 +2373,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 42,
@@ -2398,7 +2398,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 43,
@@ -2407,7 +2407,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 5,
@@ -2416,7 +2416,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 45,
@@ -2425,7 +2425,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -2455,7 +2455,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 46,
@@ -2475,7 +2475,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 44,
@@ -2490,7 +2490,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 47,
@@ -2510,7 +2510,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 48,
@@ -2519,7 +2519,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -2528,7 +2528,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 50,
@@ -2537,7 +2537,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -2546,7 +2546,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 52,
@@ -2555,7 +2555,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 54,
@@ -2564,7 +2564,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -2573,7 +2573,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 1,
@@ -2582,7 +2582,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 1,
@@ -2597,7 +2597,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 56,
@@ -2622,7 +2622,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 58,
@@ -2631,7 +2631,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 60,
@@ -2640,7 +2640,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -2649,7 +2649,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 59,
@@ -2658,7 +2658,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 7,
@@ -2673,7 +2673,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -2682,7 +2682,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 3,
@@ -2697,7 +2697,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 5,
@@ -2706,7 +2706,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 6,
@@ -2736,7 +2736,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 7,
@@ -2751,7 +2751,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 8,
@@ -2760,7 +2760,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 7,
@@ -2780,7 +2780,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 9,
@@ -2795,7 +2795,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 10,
@@ -2804,7 +2804,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 11,
@@ -2829,7 +2829,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 12,
@@ -2849,7 +2849,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -2858,7 +2858,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 14,
@@ -2867,7 +2867,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 1,
@@ -2876,7 +2876,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 21,
@@ -2891,7 +2891,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 15,
@@ -2900,7 +2900,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 16,
@@ -2909,7 +2909,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -2918,7 +2918,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 17,
@@ -2948,7 +2948,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 18,
@@ -2957,7 +2957,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 19,
@@ -2966,7 +2966,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 20,
@@ -3001,7 +3001,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 22,
@@ -3016,7 +3016,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -3031,7 +3031,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 25,
@@ -3046,7 +3046,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 26,
@@ -3055,7 +3055,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 27,
@@ -3064,7 +3064,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 28,
@@ -3073,7 +3073,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 29,
@@ -3082,7 +3082,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 30,
@@ -3097,7 +3097,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 31,
@@ -3106,7 +3106,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 32,
@@ -3121,7 +3121,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 33,
@@ -3130,7 +3130,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 34,
@@ -3139,7 +3139,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 8,
@@ -3148,7 +3148,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 8,
@@ -3157,7 +3157,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 36,
@@ -3166,7 +3166,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 37,
@@ -3191,7 +3191,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 38,
@@ -3200,7 +3200,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 0,
@@ -3209,7 +3209,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 39,
@@ -3218,7 +3218,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 40,
@@ -3227,7 +3227,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 47,
@@ -3257,7 +3257,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 42,
@@ -3266,7 +3266,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 3,
@@ -3275,7 +3275,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 43,
@@ -3290,7 +3290,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 44,
@@ -3310,7 +3310,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 46,
@@ -3319,7 +3319,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 48,
@@ -3328,7 +3328,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 49,
@@ -3337,7 +3337,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 50,
@@ -3367,7 +3367,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 51,
@@ -3397,7 +3397,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 25,
@@ -3406,7 +3406,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 52,
@@ -3415,7 +3415,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 53,
@@ -3440,7 +3440,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 55,
@@ -3449,7 +3449,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 55,
@@ -3458,7 +3458,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 56,
@@ -3478,7 +3478,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 57,
@@ -3487,7 +3487,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 58,
@@ -3496,7 +3496,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 59,
@@ -3505,7 +3505,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 60,
@@ -3525,7 +3525,7 @@
       ],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 8,
@@ -3534,7 +3534,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 3,
@@ -3543,7 +3543,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 18,
@@ -3552,7 +3552,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 7,
@@ -3561,7 +3561,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 2,
@@ -3570,7 +3570,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 2,
@@ -3579,7 +3579,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 3,
@@ -3588,7 +3588,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": 7,
@@ -3597,7 +3597,7 @@
       "options": [],
       "explanation": "",
       "image": null,
-      "sub_unit": "미분류"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     }
   ]
 }

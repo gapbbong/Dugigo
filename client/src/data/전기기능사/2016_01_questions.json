@@ -15,7 +15,7 @@
       "answer": 3,
       "explanation": "• 최대 저항값: 직렬 $R_{\\text{직}} = 4R [\\Omega]$\n• 최소 저항값: 병렬 $R_{\\text{병}} = \\frac{R}{4} [\\Omega]$\n$\\frac{R_{\\text{직}}}{R_{\\text{병}}} = \\frac{4R}{\\frac{R}{4}} = 4^2 = 16$배",
       "level": "중",
-      "sub_unit": "직병렬 회로의 해석"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_2",
@@ -32,7 +32,7 @@
       "answer": 1,
       "explanation": "1. 저항 1개의 저항 $R = V^2 / P = 200^2 / 2000 = 20[\\Omega]$\n2. 직렬 시 전력 $P_{직} = V^2 / (2R) = 200^2 / 40 = 1000[W]$\n3. 병렬 시 전력 $P_{병} = V^2 / (R/2) = 200^2 / 10 = 4000[W]$\n따라서 직렬 시 전력은 병렬 시의 $\\frac{1}{4}$배가 됩니다.",
       "level": "중",
-      "sub_unit": "전력 및 에너지 계산"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_3",
@@ -49,7 +49,7 @@
       "answer": 2,
       "explanation": "인덕턴스의 식\n$L = \\frac{N\\Phi}{I} = \\frac{300 \\times 0.05}{6} = \\frac{15}{6} = 2.5[\\text{H}]$",
       "level": "하",
-      "sub_unit": "자기 인덕턴스 및 결합 계수"
+      "sub_unit": "[이론] 자기장과 인덕턴스"
     },
     {
       "id": "2016_01_4",
@@ -66,7 +66,7 @@
       "answer": 1,
       "explanation": "전기분해 시 음극(-)에서는 금속 이온이 전자를 얻어 금속으로 석출되므로 구리판이 두터워집니다. 양극(+)에서는 구리가 녹아 나와 얇아집니다.",
       "level": "하",
-      "sub_unit": "전기 화학 및 축전지"
+      "sub_unit": "[이론] 전기 에너지와 화학"
     },
     {
       "id": "2016_01_5",
@@ -84,7 +84,7 @@
       "answer": 1,
       "explanation": "병렬 회로에서의 전류 분배 법칙에 의해\n$I_1 = I \\cdot \\frac{R_2}{R_1 + R_2}$ 입니다.",
       "level": "중",
-      "sub_unit": "직병렬 회로의 해석"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_6",
@@ -101,7 +101,7 @@
       "answer": 3,
       "explanation": "변위전류밀도 $J_d$는 전속밀도의 시간적 변화율로 정의됩니다. $J_d = \\frac{\\partial D}{\\partial t} = \\epsilon \\frac{\\partial E}{\\partial t}$ 이므로 전속밀도($D$), 전계의 세기($E$), 유전율($\\epsilon$)과는 직접적인 관계가 있으나 자계의 세기($H$)와는 관계가 없습니다.",
       "level": "하",
-      "sub_unit": "맥스웰 방정식 및 전자파"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_7",
@@ -118,7 +118,7 @@
       "answer": 4,
       "explanation": "자성체의 극성이 외부 자계와 같은 극으로 유도되는 자성체는 반(역)자성체이다.",
       "level": "상",
-      "sub_unit": "벡터의 연산 및 좌표계"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_8",
@@ -135,7 +135,7 @@
       "answer": 2,
       "explanation": "영상전하법에 의해 대지면 아래 $-h$ 지점에 반대 부호의 영상전하 $-\\lambda$가 있다고 가정하면, 두 선전하 사이의 거리는 $2h$가 됩니다. 이때 단위 길이당 작용하는 힘 $F = \\frac{\\lambda^2}{4\\pi \\epsilon_0 h}$ 이므로 높이 $h$에 반비례하게 됩니다.",
       "level": "중",
-      "sub_unit": "정전 용량 및 영상법"
+      "sub_unit": "[이론] 정전계와 콘덴서"
     },
     {
       "id": "2016_01_9",
@@ -152,7 +152,7 @@
       "answer": 3,
       "explanation": "자속 $\\Phi = \\frac{NI}{R_m} = \\frac{\\mu N I A}{l} = \\frac{\\mu_0 \\mu_r N I A}{l}$ 공식을 사용합니다. $\\Phi = \\frac{4\\pi \\times 10^{-7} \\times 800 \\times 600 \\times 1 \\times 10 \\times 10^{-4}}{0.3} \\approx 2 \\times 10^{-3} [Wb]$ 입니다.",
       "level": "중",
-      "sub_unit": "자기 회로의 법칙"
+      "sub_unit": "[이론] 자기장과 인덕턴스"
     },
     {
       "id": "2016_01_10",
@@ -169,7 +169,7 @@
       "answer": 1,
       "explanation": "최대전력 전달 조건은 부하저항($R$)이 전원의 내부 합성저항과 같을 때 성립합니다. 저항 $r$인 전지 $M$개가 병렬로 연결되어 있으므로 내부 합성저항은 $r/M$이 되며, 따라서 부하저항도 $r/M$일 때 최대전력이 공급됩니다.",
       "level": "하",
-      "sub_unit": "최대전력 전달조건"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_11",
@@ -186,7 +186,7 @@
       "answer": 1,
       "explanation": "두 도선을 연결하면 전위가 같아지며, 이때의 공통 전위 $V = \\frac{C_1 V_1 + C_2 V_2}{C_1 + C_2}$가 됩니다. 이동한 전하량 $Q = C_1(V_1 - V)$를 계산하면 $\\frac{C_1 C_2 (V_1 - V_2)}{C_1 + C_2}$를 얻을 수 있습니다.",
       "level": "중",
-      "sub_unit": "도체의 연결과 전하 분배"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_12",
@@ -203,7 +203,7 @@
       "answer": 1,
       "explanation": "$1 \\; [\\Omega \\cdot m] = 10^2 \\; [\\Omega \\cdot cm] = 10^6 \\; [\\Omega \\cdot mm^2/m]$",
       "level": "하",
-      "sub_unit": "유도기전력과 플레밍의 법칙"
+      "sub_unit": "[이론] 자기장과 인덕턴스"
     },
     {
       "id": "2016_01_13",
@@ -220,7 +220,7 @@
       "answer": 2,
       "explanation": "가우스 법칙에 의해 전하가 균일하게 분포된 구 내부($r \\le a$)에서의 전계 $E = \\frac{\\rho r}{3\\epsilon_0}$ 입니다. $\\rho=1, r=1$을 대입하면 $E = \\frac{1}{3\\epsilon_0}$ 이 됩니다.",
       "level": "상",
-      "sub_unit": "가우스의 법칙을 이용한 전계의 계산"
+      "sub_unit": "[이론] 정전계와 콘덴서"
     },
     {
       "id": "2016_01_14",
@@ -237,7 +237,7 @@
       "answer": 3,
       "explanation": "한 변이 $a$인 정삼각형 중심의 자계 세기 공식 $H = \\frac{9I}{2\\pi a}$를 사용합니다. $a=3, I=2$를 대입하면 $H = \\frac{9 \\times 2}{2\\pi \\times 3} = \\frac{3}{\\pi} [AT/m]$ 입니다.",
       "level": "중",
-      "sub_unit": "유한장 직선전류에 의한 자계"
+      "sub_unit": "[이론] 자기장과 인덕턴스"
     },
     {
       "id": "2016_01_15",
@@ -254,7 +254,7 @@
       "answer": 3,
       "explanation": "저항 $R = \\rho \\frac{l}{A}$에서 체적 $V = Al$이 일정하므로, 길이가 2배($2l$)가 되면 단면적은 1/2배($A/2$)가 됩니다. 따라서 새로운 저항 $R' = \\rho \\frac{2l}{A/2} = 4R$이 되어 4배가 됩니다.",
       "level": "하",
-      "sub_unit": "도체의 저항과 형상"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_16",
@@ -271,7 +271,7 @@
       "answer": 1,
       "explanation": "균일하게 대전된 구에서 내부 전계는 거리 $r$에 비례($E \\propto r$)하고, 외부 전계는 거리의 제곱에 반비례($E \\propto 1/r^2$)합니다.",
       "level": "중",
-      "sub_unit": "구대칭 전하의 전계"
+      "sub_unit": "[이론] 정전계와 콘덴서"
     },
     {
       "id": "2016_01_17",
@@ -288,7 +288,7 @@
       "answer": 3,
       "explanation": "자성체에 의한 영상전류법을 적용하면 영상전류 $I' = \\frac{\\mu - \\mu_0}{\\mu + \\mu_0} I$가 대칭인 $-a$ 지점에 흐릅니다. 두 평행 전류 사이의 거리 $d=2a$에서의 힘 $F = \\frac{\\mu_0 I I'}{2\\pi d} = \\frac{\\mu_0 I^2}{4\\pi a}(\\frac{\\mu - \\mu_0}{\\mu + \\mu_0})$ 가 됩니다.",
       "level": "상",
-      "sub_unit": "자기 영상법"
+      "sub_unit": "[이론] 자기장과 인덕턴스"
     },
     {
       "id": "2016_01_18",
@@ -305,7 +305,7 @@
       "answer": 4,
       "explanation": "전기 쌍극자 모멘트의 방향은 (-)전하에서 시작하여 (+)전하로 향하는 방향으로 정의됩니다.",
       "level": "하",
-      "sub_unit": "전기 쌍극자"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_19",
@@ -322,7 +322,7 @@
       "answer": 2,
       "explanation": "영상전하법에 의해 거리 $2d = 4m$인 곳에 $-4C$의 전하가 있다고 보면, $F = \\frac{1}{4\\pi \\epsilon_0} \\frac{Q^2}{(2d)^2} = 9 \\times 10^9 \\times \\frac{4^2}{4^2} = 9 \\times 10^9 [N]$ 가 됩니다.",
       "level": "중",
-      "sub_unit": "전기 영상법"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_20",
@@ -339,7 +339,7 @@
       "answer": 4,
       "explanation": "유전체가 들어간 경우의 전계는 공기 중 전계 $E_0$에 대하여 유전체 내부에서 $E_0/\\epsilon_s$가 됩니다. 전위차 $V = E_0(d-t) + \\frac{E_0}{\\epsilon_s}t$ 를 계산하여 정리하면 $V = V_0 [1 - \\frac{t}{d}(1 - \\frac{1}{\\epsilon_s})]$ 가 됩니다.",
       "level": "상",
-      "sub_unit": "유전체가 삽입된 평행판 콘덴서"
+      "sub_unit": "[이론] 정전계와 콘덴서"
     },
     {
       "id": "2016_01_21",
@@ -356,7 +356,7 @@
       "answer": 4,
       "explanation": "전동기 표면에 누설 전류가 흐르면 감전의 우려가 있으므로 접지 공사를 한다.",
       "level": "하",
-      "sub_unit": "변압기의 V-V 결선"
+      "sub_unit": "[기기] 변압기와 계기용 변성기"
     },
     {
       "id": "2016_01_22",
@@ -373,7 +373,7 @@
       "answer": 3,
       "explanation": "안정도를 증진시키기 위해서는 선로의 리액턴스를 **작게** 해야 합니다. 이를 위해 복도체 사용, 직렬 콘덴서 설치 등의 방법을 사용합니다.",
       "level": "하",
-      "sub_unit": "전력계통의 안정도 향상 대책"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_23",
@@ -390,7 +390,7 @@
       "answer": 2,
       "explanation": "비속도(특유속도)는 수차가 1m의 유효낙차에서 1kW의 출력을 발생시키는 데 필요한 회전속도를 말합니다. 공식은 $N_s = N \\frac{P^{1/2}}{H^{5/4}}$입니다.",
       "level": "중",
-      "sub_unit": "수차의 특성 및 비속도"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_24",
@@ -407,7 +407,7 @@
       "answer": 4,
       "explanation": "차단기의 자동 차단 과정은 '고장 검출(OCR) → 트립코일 여자 → 기구적 개로 → 아크 소호'의 순서로 이루어집니다. 모노그램(계통도) 등을 통한 원격 조작은 일반적인 자동 차단 과정에 포함되지 않는 설명입니다.",
       "level": "중",
-      "sub_unit": "차단기의 소호 원리 및 차단 과정"
+      "sub_unit": "[설비] 접지, 차단기 및 보호 장치"
     },
     {
       "id": "2016_01_25",
@@ -424,7 +424,7 @@
       "answer": 2,
       "explanation": "3상 회로에서 한 상이 끊어지는 결상 사고 발생 시 모터나 변압기가 과열되어 소손되는 것을 방지하기 위해 결상 계전기(Phase-failure relay)를 사용합니다.",
       "level": "하",
-      "sub_unit": "변압기의 보호 계전 방식"
+      "sub_unit": "[기기] 변압기와 계기용 변성기"
     },
     {
       "id": "2016_01_26",
@@ -441,7 +441,7 @@
       "answer": 2,
       "explanation": "인터록은 오조작을 방지하기 위한 안전 장치로, 반드시 차단기(CB)가 열려(OFF) 있는 상태에서만 단로기(DS)를 조작할 수 있도록 제한하는 기능입니다.",
       "level": "하",
-      "sub_unit": "개폐 장치의 인터록 회로"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_27",
@@ -459,7 +459,7 @@
       "answer": 1,
       "explanation": "단락전류 $I_s = \\frac{100}{\\%Z} I_n = \\frac{100}{\\%Z} \\times \\frac{P}{\\sqrt{3}V}$ 공식에 대입하면, $I_s = \\frac{100}{8} \\times \\frac{20000}{\\sqrt{3} \\times 22} \\approx 12.5 \\times 524.8 \\approx 6561 [A]$입니다.",
       "level": "중",
-      "sub_unit": "%임피던스와 단락전류 계산"
+      "sub_unit": "[이론] 정현파 교류와 RLC 회로"
     },
     {
       "id": "2016_01_28",
@@ -476,7 +476,7 @@
       "answer": 3,
       "explanation": "무부하 선로의 충전전류를 차단할 때 발생하는 이상전압은 재점호에 의해 매우 커지며, 이는 내부 이상전압 중 최대 수준(대략 상전압의 3~4배)에 이릅니다.",
       "level": "하",
-      "sub_unit": "전력계통의 내부 이상전압"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_29",
@@ -493,7 +493,7 @@
       "answer": 4,
       "explanation": "재열기(Reheater)는 고압 터빈에서 일을 마친 증기를 다시 보일러로 보내어 가열함으로써 열효율을 증대시키기 위한 장치입니다.",
       "level": "하",
-      "sub_unit": "화력발전소의 재열 사이클"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_30",
@@ -510,7 +510,7 @@
       "answer": 1,
       "explanation": "3상 1회선 송전선의 작용 정전용량 공식은 $C_w = C_s + 3C_m = \\frac{0.02413}{\\log_{10} \\frac{D}{r}} [\\mu F/km]$입니다.",
       "level": "하",
-      "sub_unit": "송전선로의 정전용량"
+      "sub_unit": "[이론] 전기 에너지와 화학"
     },
     {
       "id": "2016_01_31",
@@ -527,7 +527,7 @@
       "answer": 1,
       "explanation": "플리커 현상을 줄이기 위해서는 전압 강하를 최소화해야 하므로 공급전압을 **높이는 것**이 올바른 방안입니다.",
       "level": "하",
-      "sub_unit": "전압 변동과 플리커 현상"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_32",
@@ -544,7 +544,7 @@
       "answer": 4,
       "explanation": "전력손실 $P_L = \\frac{3 P^2 R}{V^2 \\cos^2 \\theta} = \\frac{3 P^2 \\rho L}{V^2 A \\cos^2 \\theta}$에서 전선 단면적 $A = \\frac{3 P^2 \\rho L}{V^2 P_L \\cos^2 \\theta}$이므로 $A \\propto \\frac{1}{V^2}$ 관계가 성립합니다.",
       "level": "중",
-      "sub_unit": "송전 전압과 전선 단면적의 관계"
+      "sub_unit": "[설비] 전선 및 배선 재료/공구"
     },
     {
       "id": "2016_01_33",
@@ -561,7 +561,7 @@
       "answer": 2,
       "explanation": "동기조상기는 부족여자로 운전할 경우 **리액터**(지상 전류)로 작용하여 전압이 오를 때 낮추는 역할을 합니다. 컨덕턴스로 사용한다는 설명은 틀렸습니다.",
       "level": "하",
-      "sub_unit": "동기조상기의 특성"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_34",
@@ -578,7 +578,7 @@
       "answer": 1,
       "explanation": "비등수형(BWR) 원자로는 원자로 내에서 직접 물을 끓여 증기를 발생시키므로 별도의 열교환기(증기발생기)가 필요 없습니다. 반면 가압경수형(PWR)은 열교환기가 필요합니다.",
       "level": "중",
-      "sub_unit": "원자로의 종류와 특성"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_35",
@@ -596,7 +596,7 @@
       "answer": 3,
       "explanation": "- If the magnitude of the electromotive force is different: reactive circulating current (reactive cross current).\n- If the phase of the electromotive force is different: active circulating current (synchronizing current).",
       "level": "중",
-      "sub_unit": "배전선로의 전압 강하 계산"
+      "sub_unit": "[설비] 전선 및 배선 재료/공구"
     },
     {
       "id": "2016_01_36",
@@ -613,7 +613,7 @@
       "answer": 4,
       "explanation": "제한전압은 피뢰기가 동작하여 충격파 전류를 방전하고 있을 때, 피뢰기 단자 사이에 남게 되는 충격 전압의 파고값을 의미합니다.",
       "level": "하",
-      "sub_unit": "피뢰기의 제한전압"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_37",
@@ -630,7 +630,7 @@
       "answer": 2,
       "explanation": "Fixed loss (No-load loss): A loss that is always constant regardless of the load.\n- Iron loss ($P_i$): Hysteresis loss, Eddy current loss.\n- Mechanical loss ($P_m$): Friction loss, Windage loss.\n- Electrical loss of brush.\n- Resistance loss of field winding (Copper loss).",
       "level": "하",
-      "sub_unit": "%임피던스와 단락용량 계산"
+      "sub_unit": "[이론] 정현파 교류와 RLC 회로"
     },
     {
       "id": "2016_01_38",
@@ -647,7 +647,7 @@
       "answer": 2,
       "explanation": "상용주파방전개시전압은 정상적인 운전 전압에서 피뢰기가 오동작하지 않도록 **충분히 높아야** 합니다.",
       "level": "하",
-      "sub_unit": "피뢰기의 구비 조건"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_39",
@@ -664,7 +664,7 @@
       "answer": 2,
       "explanation": "저압 밸런서는 단상 **3선식** 선로에서 부하의 불평형으로 인해 발생하는 중성선과 각 전압선 사이의 전압 불평형을 방지하기 위해 사용됩니다.",
       "level": "하",
-      "sub_unit": "저압 배전 방식의 특징"
+      "sub_unit": "[설비] 가공 전선로 및 배전 시설"
     },
     {
       "id": "2016_01_40",
@@ -682,7 +682,7 @@
       "answer": 3,
       "explanation": "1선 지락 고장 시 지락 지점의 임피던스 $Z_{gf}$에는 영상전류 $I_0$가 아닌 대지전류 $3I_0$가 흐르므로, 영상 성분으로 환산한 단상 임피던스는 $3Z_{gf}$가 됩니다. 따라서 전체 영상 임피던스는 $Z_0 = Z_l + Z_t + 3Z_{gf}$입니다.",
       "level": "중",
-      "sub_unit": "대칭 좌표법에 의한 고장 해석"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_41",
@@ -699,7 +699,7 @@
       "answer": 3,
       "explanation": "동기발전기의 여자를 약하게 하면(부족여자), 유도 기전력이 감소하여 단자 전압과의 위상차에 의해 앞선 전류(진상 무효전류)가 흐르게 됩니다. 위상특성곡선(V곡선)에 따라 발전기에서 부족여자 운전 시 진상 전류가 흐릅니다.",
       "level": "중",
-      "sub_unit": "동기발전기의 여자 전류와 출력"
+      "sub_unit": "[기기] 동기 발전기와 전동기"
     },
     {
       "id": "2016_01_42",
@@ -716,7 +716,7 @@
       "answer": 1,
       "explanation": "다이오드를 병렬로 연결하면 전류를 분담하여 흘릴 수 있으므로 과대한 부하 전류로부터 다이오드를 보호할 수 있습니다. (직렬 연결은 과전압으로부터 보호하기 위한 전압 분담용입니다.)",
       "level": "하",
-      "sub_unit": "정류 소자의 보호 및 접속"
+      "sub_unit": "[기기] 정류기 및 반도체 소자"
     },
     {
       "id": "2016_01_43",
@@ -733,7 +733,7 @@
       "answer": 2,
       "explanation": "외부 특성곡선은 발전기가 회전하고 있을 때 부하 전류 $I$와 단자 전압 $V$ 사이의 관계를 나타내는 곡선입니다.",
       "level": "하",
-      "sub_unit": "직류 발전기의 특성 곡선"
+      "sub_unit": "[기기] 직류 발전기와 전동기"
     },
     {
       "id": "2016_01_44",
@@ -750,7 +750,7 @@
       "answer": 4,
       "explanation": "전기자 반작용은 주자속을 감소시키고 중성축을 이동시켜 브러시에서 불꽃(Sparking)을 발생시키며 결과적으로 단자 전압을 하강시킵니다. 브러시 사이의 유기기전력이 증가하는 현상은 발생하지 않습니다.",
       "level": "중",
-      "sub_unit": "직류기의 전기자 반작용"
+      "sub_unit": "[기기] 직류 발전기와 전동기"
     },
     {
       "id": "2016_01_45",
@@ -767,7 +767,7 @@
       "answer": 4,
       "explanation": "사용 전력량 $W = (0.04 \\times 10 \\times 5 + 1 \\times 0.5 + 0.1 \\times 2 \\times 5 + 1 \\times 1) \\times 30 = 135[\\text{kWh}]$",
       "level": "하",
-      "sub_unit": "정류 회로의 맥동률"
+      "sub_unit": "[기기] 정류기 및 반도체 소자"
     },
     {
       "id": "2016_01_46",
@@ -784,7 +784,7 @@
       "answer": 1,
       "explanation": "동전선의 종단 접속 (Termination of copper wires):\n* 가는 단선($4[\text{mm}^2]$ 이하)의 종단 접속 (Termination of fine single wires ($4[\text{mm}^2]$ or less))\n* 동선 압착 단자에 의한 접속 (Connection by copper wire compression terminal)\n* 비틀어 꽂는 형의 전선 접속기에 의한 접속 (Connection by twist-on type wire connector)\n* 종단 겸침용 슬리브(P형)에 의한 접속 (Connection by crimping sleeve (P-type) for termination)\n* 직선 겸침용 슬리브(P형)에 의한 접속 (Connection by straight crimping sleeve (P-type))\n* 꽃형 커넥터에 의한 접속 (Connection by flower-type connector)\nC형 전선 접속기는 보통 분기 접속(branch connection)에 사용되는 방법이다. Therefore, C-type wire connector is not a termination method.",
       "level": "하",
-      "sub_unit": "변압기의 정격 전류 계산"
+      "sub_unit": "[기기] 변압기와 계기용 변성기"
     },
     {
       "id": "2016_01_47",
@@ -801,7 +801,7 @@
       "answer": 2,
       "explanation": "3상 출시는 $P = \\sqrt{3} V I \\cos\\phi \\eta$ 입니다. $P = \\sqrt{3} \\times 200 \\times 21.5 \\times 0.86 \\times 0.85 \\approx 5444.3[W]$ 입니다.",
       "level": "하",
-      "sub_unit": "유도 전동기의 출력 및 효율"
+      "sub_unit": "[기기] 유도 발전기와 전동기"
     },
     {
       "id": "2016_01_48",
@@ -819,7 +819,7 @@
       "answer": 3,
       "explanation": "변압기를 거쳐 부하로 전달되는 전압은 부하의 저항 비율로 분배됩니다. 전체 전압 3300V에 대하여 $E_1$ 측 부하 저항이 5, 다른 쪽이 7이므로, $E_1 = \\frac{5}{5+7} \\times 3300 = 1375[V]$ 입니다.",
       "level": "중",
-      "sub_unit": "변압기의 직렬 접속과 전압 분배"
+      "sub_unit": "[기기] 변압기와 계기용 변성기"
     },
     {
       "id": "2016_01_49",
@@ -836,7 +836,7 @@
       "answer": 4,
       "explanation": "단절권은 고조파를 제거하여 기전력의 파형을 개선하고, 권선 끝부분의 길이를 짧게 하여 동(Copper) 소모를 줄일 수 있는 권선법입니다. 고조파 제거를 병행하기 위해 분포권도 사용되나 권선 절약 특징은 단절권이 더 큽니다.",
       "level": "하",
-      "sub_unit": "교류 발전기의 권선법"
+      "sub_unit": "[이론] 정현파 교류와 RLC 회로"
     },
     {
       "id": "2016_01_50",
@@ -853,7 +853,7 @@
       "answer": 4,
       "explanation": "저압 옥내 배선의 시설 장소별: 합성수지관, 금속관, 가요 전선관, 케이블 공사는 다음 시설 장소에 관계없이 모두 시설 가능하다. (Low voltage indoor wiring installation locations: Synthetic resin conduits, metal conduits, flexible conduits, and cable installations are all possible regardless of the following installation locations.)\n\n| 구분 (Category) | $400[\text{V}]$ 미만 (Less than $400[\text{V}]$) | $400[\text{V}]$ 이상 (Greater than or equal to $400[\text{V}]$) |\n|---|---|---|\n| 전개 건조한 곳 (Exposed dry place) | 애자 사용, 합성수지 몰드, 금속 몰드, 금속 덕트, 버스 덕트, 라이팅 덕트 | 애자 사용, 금속 덕트, 버스 덕트 |\n| 기타 (Others) | 애자 사용, 버스 덕트 | 애자 사용 |\n| 점검 가능 건조한 곳 은폐 장소 (Concealed dry place, accessible for inspection) | 애자 사용, 합성수지 몰드, 금속 몰드, 금속 덕트, 버스 덕트, 셀룰러 덕트 | 애자 사용, 금속 덕트, 버스 덕트 |\n| 기타 (Others) | 애자 사용 | 애자 사용 |\n| 점검할 수 없는 은폐 장소 (건조한 곳) (Concealed dry place, not accessible for inspection) | 플로어 덕트, 셀룰러 덕트 | - |\n\nFrom the table, for \"점검할 수 없는 은폐 장소 (건조한 곳)\" (Concealed dry place, not accessible for inspection) where Floor ducts are used (\"플로어 덕트\"), it is only allowed for \"$400[\text{V}]$ 미만\" (Less than $400[\text{V}]$). Thus, the operating voltage for floor duct wiring is limited to less than $400[\text{V}]$.",
       "level": "하",
-      "sub_unit": "전기각과 기계각"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_51",
@@ -870,7 +870,7 @@
       "answer": 3,
       "explanation": "변압기 중성점 접지 목적: 고·저압 혼촉 사고 방지 (Purpose of grounding transformer neutral point: Prevention of high and low voltage contact accidents).",
       "level": "중",
-      "sub_unit": "유도전동기의 토크와 출력"
+      "sub_unit": "[기기] 동기 발전기와 전동기"
     },
     {
       "id": "2016_01_52",
@@ -887,7 +887,7 @@
       "answer": 2,
       "explanation": "철심의 자기 포화와 히스테리시스 현상으로 인해 정현파 기전력을 얻으려면 여자 전류에 제3고조파 성분이 포함된 왜형파가 흘러야 합니다.",
       "level": "하",
-      "sub_unit": "변압기의 여자전류와 기전력"
+      "sub_unit": "[기기] 변압기와 계기용 변성기"
     },
     {
       "id": "2016_01_53",
@@ -904,7 +904,7 @@
       "answer": 1,
       "explanation": "선형 전동기(Linear Motor)는 기계적 구조의 특성상 회전형 전동기보다 공극(Air gap)이 훨씬 넓게 형성되어야 합니다.",
       "level": "하",
-      "sub_unit": "특수 전동기의 종류와 특성"
+      "sub_unit": "[기기] 동기 발전기와 전동기"
     },
     {
       "id": "2016_01_54",
@@ -921,7 +921,7 @@
       "answer": 1,
       "explanation": "전일 효율(All-day efficiency)이 최대가 되려면 철손(무부하손)의 24시간 합계가 부하 운전 시간 동안 발생하는 동손(부하손)의 합계와 같아야 합니다.",
       "level": "하",
-      "sub_unit": "변압기의 효율과 손실"
+      "sub_unit": "[기기] 변압기와 계기용 변성기"
     },
     {
       "id": "2016_01_55",
@@ -938,7 +938,7 @@
       "answer": 2,
       "explanation": "전압 $V$가 상승하면 자속 $\\phi$가 증가하여 철손 및 자화 전류가 증가하므로 역률이 하강합니다. 또한 일정한 토크와 출력을 위해 부하 전류는 감소해야 합니다. 따라서 2번과 3번이 틀린 설명으로 실제 시험에서는 복수 정답 처리되었습니다.",
       "level": "상",
-      "sub_unit": "유도전동기의 운전 특성"
+      "sub_unit": "[기기] 동기 발전기와 전동기"
     },
     {
       "id": "2016_01_56",
@@ -955,7 +955,7 @@
       "answer": 3,
       "explanation": "차동 복권 발전기는 부하 전류가 증가하면 전압이 급격히 감소하는 수하 특성을 가지고 있어 아크 용접기 등에 사용됩니다.",
       "level": "하",
-      "sub_unit": "직류 발전기의 종류와 특성"
+      "sub_unit": "[기기] 직류 발전기와 전동기"
     },
     {
       "id": "2016_01_57",
@@ -972,7 +972,7 @@
       "answer": 1,
       "explanation": "파권(Wave winding)은 병렬 회로 수가 항상 2이므로 전위 불평형이 발생하지 않아 균압환이 불필요합니다. 균압환은 병렬 회로 수가 극수와 같은 중권에서 4극 이상일 때 필요합니다.",
       "level": "중",
-      "sub_unit": "직류기의 권선법"
+      "sub_unit": "[기기] 직류 발전기와 전동기"
     },
     {
       "id": "2016_01_58",
@@ -989,7 +989,7 @@
       "answer": 1,
       "explanation": "스테핑 모터의 주요 장점은 기동, 정지 및 역회전 시의 정밀도와 응답 특성이 매우 우수하다는 점입니다.",
       "level": "하",
-      "sub_unit": "스테핑 모터의 원리와 특성"
+      "sub_unit": "[설비] 기타 및 안전 수칙"
     },
     {
       "id": "2016_01_59",
@@ -1006,7 +1006,7 @@
       "answer": 1,
       "explanation": "합성수지관 지지점 간 거리 : $1.5 \\text{ m}$ 이하다마다 새들로 지지할 것",
       "level": "하",
-      "sub_unit": "변압기의 효율과 손실"
+      "sub_unit": "[기기] 변압기와 계기용 변성기"
     },
     {
       "id": "2016_01_60",
@@ -1023,7 +1023,7 @@
       "answer": 2,
       "explanation": "제동권선은 회전자의 난조(Hunting) 현상을 방지하고, 기온 시에 기동 토크를 발생시키는 역할을 합니다.",
       "level": "하",
-      "sub_unit": "동기기의 이상현상과 대책"
+      "sub_unit": "[기기] 동기 발전기와 전동기"
     }
   ]
 }

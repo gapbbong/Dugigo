@@ -25,6 +25,10 @@ export default function StudyPage() {
 
   const subject = decodeURIComponent(params.subject as string);
   const unitFilter = searchParams.get('unit');
+  const setNum = searchParams.get('set');
+  const setSize = searchParams.get('size');
+  const rStart = searchParams.get('rStart');
+  const rEnd = searchParams.get('rEnd');
   
   const [questions, setQuestions] = useState<any[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -51,10 +55,25 @@ export default function StudyPage() {
         const data = await res.json();
         if (data.questions) {
           let filtered = data.questions;
+          
+          // 1. 단원 필터링
           if (unitFilter) {
             filtered = data.questions.filter((q: any) => q.sub_unit === unitFilter);
           }
-          // 문제 순서 섞기 (랜덤하게)
+
+          // 2. 범위 필터링 (대단원 쪼개기용)
+          if (rStart !== null && rEnd !== null) {
+            filtered = filtered.slice(parseInt(rStart), parseInt(rEnd));
+          }
+
+          // 3. 세션(세트) 필터링
+          if (setNum && setSize) {
+            const startIdx = (parseInt(setNum) - 1) * parseInt(setSize);
+            const endIdx = startIdx + parseInt(setSize);
+            filtered = filtered.slice(startIdx, endIdx);
+          }
+
+          // 4. 문제 순서 섞기 (랜덤하게)
           setQuestions(filtered.sort(() => Math.random() - 0.5));
         }
       } catch (err) {
