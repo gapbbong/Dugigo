@@ -14,12 +14,20 @@ import {
   LayoutGrid
 } from 'lucide-react';
 
+interface Unit {
+  name: string;
+  count: number;
+  isPart?: boolean;
+  originalName?: string;
+  range?: [number, number];
+}
+
 export default function SelectUnitPage() {
   const params = useParams();
   const router = useRouter();
   const subject = decodeURIComponent(params.subject as string);
   
-  const [units, setUnits] = useState<{name: string, count: number}[]>([]);
+  const [units, setUnits] = useState<Unit[]>([]);
   const [loading, setLoading] = useState(true);
   const [totalQuestions, setTotalQuestions] = useState(0);
 
@@ -43,10 +51,25 @@ export default function SelectUnitPage() {
     fetchUnits();
   }, [subject]);
 
-  const handleSelect = (unit: string | null) => {
-    const url = unit 
-      ? `/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unit)}`
-      : `/study/${encodeURIComponent(subject)}`;
+  const handleSelect = (unit: Unit | null, setIdx: number = 0) => {
+    if (!unit) {
+      router.push(`/study/${encodeURIComponent(subject)}`);
+      return;
+    }
+
+    const setSize = 30;
+    // 분할된 단원이면 오리지널 이름을, 아니면 그냥 이름을 사용
+    const unitName = unit.originalName || unit.name;
+    let url = `/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unitName)}`;
+    
+    // 세트 정보 (30문항씩)
+    url += `&set=${setIdx + 1}&size=${setSize}`;
+
+    // 분할 범위 정보가 있다면 추가
+    if (unit.range) {
+      url += `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}`;
+    }
+
     router.push(url);
   };
 
