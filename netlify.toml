@@ -2,8 +2,3 @@
   base = "client"
   command = "npm run build"
   publish = ".next"
-
-[build]
-  base = "client"
-  command = "npm run build"
-  publish = ".next"
