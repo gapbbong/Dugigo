@@ -6,9 +6,9 @@ import fs from "fs/promises";
 
 export async function POST(req: NextRequest) {
   try {
-    // Dynamic import to avoid Turbopack build error with CJS module
+    // Dynamic import without deep path to avoid Turbopack build error
     // @ts-ignore
-    const pdf = (await import("pdf-parse/lib/pdf-parse.js")).default;
+    const pdf = (await import("pdf-parse")).default;
 
     const formData = await req.formData();
     const file = formData.get("file") as File;
