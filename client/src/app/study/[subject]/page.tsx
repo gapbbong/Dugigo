@@ -134,7 +134,7 @@ export default function StudyPage() {
     const parts = text.split(/(\$.*?\$)/g);
     return parts.map((part, i) => {
       if (part.startsWith('$') && part.endsWith('$')) {
-        return <InlineMath key={i}>{part.slice(1, -1)}</InlineMath>;
+        return <InlineMath key={i} math={part.slice(1, -1)} />;
       }
       return <span key={i}>{part}</span>;
     });

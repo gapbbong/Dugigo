@@ -2,12 +2,12 @@ declare module 'react-katex' {
   import * as React from 'react';
 
   export interface InlineMathProps {
-    math: string;
+    math?: string;
     children?: React.ReactNode;
   }
 
   export interface BlockMathProps {
-    math: string;
+    math?: string;
     children?: React.ReactNode;
   }
 
