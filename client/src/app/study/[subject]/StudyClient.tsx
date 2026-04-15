@@ -297,17 +297,18 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           <ChevronLeft size={16} />
         </button>
         
-        <div className="flex flex-col items-center">
-          <span className="text-sm md:text-xl font-black tracking-[0.15em] text-brand-600 uppercase">
+        <div className="flex items-center gap-4 md:gap-10">
+          <span className="text-xs md:text-lg font-black tracking-[0.05em] text-brand-600 uppercase">
             {unitFilter ? `${unitFilter}${setNum ? ` · 세트 ${setNum}` : ''}` : `${subject} 기출학습`}
           </span>
-          <div className="flex items-center gap-3 md:gap-6 mt-1.5 md:mt-2">
-            <div className="flex items-center gap-2 text-lg md:text-3xl font-black text-slate-900">
-              <Timer className="w-4 h-4 md:w-7 md:h-7 text-brand-500" /> {formatTime(elapsedSeconds)}
+          <div className="hidden md:block w-px h-6 bg-slate-200" />
+          <div className="flex items-center gap-4 md:gap-8">
+            <div className="flex items-center gap-2 text-base md:text-2xl font-black text-slate-900">
+              <Timer className="w-4 h-4 md:w-6 md:h-6 text-brand-500" /> {formatTime(elapsedSeconds)}
             </div>
-            <div className="w-px h-5 bg-slate-200" />
-            <div className="flex items-center gap-2 text-lg md:text-3xl font-black text-slate-900">
-              <BarChart3 className="w-4 h-4 md:w-7 md:h-7 text-brand-500" /> {currentIndex + 1} / {questions.length}
+            <div className="w-px h-4 md:h-6 bg-slate-200" />
+            <div className="flex items-center gap-2 text-base md:text-2xl font-black text-slate-900">
+              <BarChart3 className="w-4 h-4 md:w-6 md:h-6 text-brand-500" /> {currentIndex + 1} / {questions.length}
             </div>
           </div>
         </div>
@@ -336,16 +337,14 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             className="flex-1 flex flex-col gap-2 md:gap-6"
           >
             {/* 문제 */}
-            <div className="space-y-1 md:space-y-3">
-              <div className="flex items-center gap-2 md:gap-3">
-                <span className="px-3 py-1 md:px-5 md:py-2 bg-brand-50 text-brand-600 text-xs md:text-xl font-black tracking-widest rounded-full uppercase">
-                  Q. {currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num}
-                </span>
-                <div className="h-px flex-1 bg-brand-100/50" />
-              </div>
-              <h2 className="text-lg md:text-4xl font-bold text-slate-900 leading-[1.4] md:leading-[1.3] tracking-tight">
+            <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+              <h2 className="text-lg md:text-3xl font-bold text-slate-900 leading-[1.4] md:leading-[1.3] tracking-tight flex-1">
                 {renderMath(currentQuestion.question)}
               </h2>
+              <span className="self-end md:self-start px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 text-brand-600 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase shrink-0">
+                Q. {currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num}
+              </span>
+            </div>
 
               {currentQuestion.image && (
                 <motion.div 
