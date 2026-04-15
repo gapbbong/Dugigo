@@ -393,13 +393,13 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
                   {/* 해설 본문 */}
                   {currentQuestion.explanation && (
-                    <div className={`px-4 py-3 md:px-5 md:py-4 text-xs md:text-sm font-medium leading-relaxed text-slate-700 ${
+                    <div className={`px-4 py-3 md:px-5 md:py-4 font-medium leading-relaxed text-slate-700 ${
                       isCurrentCorrect ? 'bg-emerald-50' : 'bg-rose-50'
                     }`}>
-                      <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1.5">해설</p>
+                      <p className="text-xs md:text-base font-black uppercase tracking-widest text-slate-900 mb-1.5">해설</p>
                       <div className="space-y-0.5">
                         {currentQuestion.explanation.split('\n').map((line: string, i: number) => (
-                          <p key={i} className="leading-relaxed">{renderMath(line)}</p>
+                          <p key={i} className="leading-relaxed text-sm md:text-xl font-bold">{renderMath(line)}</p>
                         ))}
                       </div>
                     </div>
@@ -413,9 +413,9 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   }`}>
                     <button
                       onClick={() => setReportOpen(true)}
-                      className="flex items-center gap-1 text-[10px] font-bold text-slate-400 hover:text-rose-500 transition-colors"
+                      className="flex items-center gap-1.5 text-xs md:text-base font-black text-slate-500 hover:text-rose-500 transition-colors"
                     >
-                      <Flag className="w-3 h-3" /> 문항 오류 신고
+                      <Flag className="w-3.5 h-3.5 md:w-4 h-4" /> 문항 오류 신고
                     </button>
                   </div>
                 </motion.div>
