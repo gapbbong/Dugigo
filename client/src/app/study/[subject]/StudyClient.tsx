@@ -359,7 +359,6 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   />
                 </motion.div>
               )}
-            </div>
 
             {/* 선택지 */}
             <div className="grid grid-cols-1 gap-2 md:gap-4">
