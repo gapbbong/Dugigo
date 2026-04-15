@@ -302,11 +302,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             {unitFilter ? `${unitFilter}${setNum ? ` · 세트 ${setNum}` : ''}` : `${subject} 기출학습`}
           </span>
           <div className="hidden md:block w-px h-6 bg-slate-200" />
-          <div className="flex items-center gap-4 md:gap-8">
-            <div className="flex items-center gap-2 text-base md:text-2xl font-black text-slate-900">
-              <Timer className="w-4 h-4 md:w-6 md:h-6 text-brand-500" /> {formatTime(elapsedSeconds)}
-            </div>
-            <div className="w-px h-4 md:h-6 bg-slate-200" />
+          <div className="flex items-center gap-2 md:gap-4">
             <div className="flex items-center gap-2 text-base md:text-2xl font-black text-slate-900">
               <BarChart3 className="w-4 h-4 md:w-6 md:h-6 text-brand-500" /> {currentIndex + 1} / {questions.length}
             </div>
@@ -337,13 +333,16 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             className="flex-1 flex flex-col gap-2 md:gap-6"
           >
             {/* 문제 */}
-            <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
-              <h2 className="text-lg md:text-3xl font-bold text-slate-900 leading-[1.4] md:leading-[1.3] tracking-tight flex-1">
+            <div className="space-y-2 md:space-y-4">
+              <div className="flex items-center gap-3">
+                <span className="px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 text-brand-600 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase">
+                  Q. {currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num}
+                </span>
+                <div className="h-px flex-1 bg-brand-100/50" />
+              </div>
+              <h2 className="text-lg md:text-4xl font-bold text-slate-900 leading-[1.4] md:leading-[1.3] tracking-tight">
                 {renderMath(currentQuestion.question)}
               </h2>
-              <span className="self-end md:self-start px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 text-brand-600 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase shrink-0">
-                Q. {currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num}
-              </span>
             </div>
 
               {currentQuestion.image && (
@@ -458,7 +457,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         </AnimatePresence>
       </main>
 
-      {/* 우측 플로팅 다음 버튼 */}
+      {/* 플로팅 이동 버튼 */}
       <AnimatePresence>
         {isAnswered && (
           <motion.button
@@ -471,6 +470,22 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             className="fixed right-4 md:right-12 top-1/2 -translate-y-1/2 z-50 w-12 h-12 md:w-20 md:h-20 bg-brand-600 hover:bg-brand-700 text-white rounded-full flex items-center justify-center shadow-2xl shadow-brand-500/40 border-4 border-white transition-colors"
           >
             <ChevronRight className="w-6 h-6 md:w-10 md:h-10" />
+          </motion.button>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {currentIndex > 0 && (
+          <motion.button
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            whileHover={{ scale: 1.1, x: 5 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={handlePrev}
+            className="fixed left-4 md:left-12 top-1/2 -translate-y-1/2 z-50 w-12 h-12 md:w-20 md:h-20 bg-white hover:bg-slate-50 text-slate-400 hover:text-brand-600 rounded-full flex items-center justify-center shadow-2xl shadow-black/5 border-4 border-slate-100 transition-colors"
+          >
+            <ChevronLeft className="w-6 h-6 md:w-10 md:h-10" />
           </motion.button>
         )}
       </AnimatePresence>
