@@ -43,11 +43,13 @@ function classify(q) {
 
 function processFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
-  const data = JSON.parse(content);
-  if (!data.questions) return;
+  const rawData = JSON.parse(content);
+  
+  const questions = Array.isArray(rawData) ? rawData : rawData.questions;
+  if (!questions) return;
 
   let changed = false;
-  data.questions.forEach(q => {
+  questions.forEach(q => {
     const newUnit = classify(q);
     if (q.sub_unit !== newUnit) {
       q.sub_unit = newUnit;
@@ -56,10 +58,12 @@ function processFile(filePath) {
   });
 
   if (changed) {
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+    const output = Array.isArray(rawData) ? questions : { ...rawData, questions };
+    fs.writeFileSync(filePath, JSON.stringify(output, null, 2));
     console.log(`RECLASSIFIED: ${path.basename(filePath)}`);
   }
 }
+
 
 const files = fs.readdirSync(dataDir).filter(f => f.endsWith('.json'));
 files.forEach(f => processFile(path.join(dataDir, f)));
