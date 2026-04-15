@@ -343,7 +343,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               })}
             </div>
 
-            {/* 정오 결과 배너 (답 선택 후 표시) */}
+            {/* 정오 결과 + 해설 배너 (답 선택 후 표시) */}
             <AnimatePresence>
               {isAnswered && (
                 <motion.div
@@ -351,39 +351,42 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 12 }}
                   transition={{ duration: 0.3 }}
-                  className={`flex items-center gap-3 px-4 py-3 md:px-5 md:py-4 rounded-2xl ${
-                    isCurrentCorrect
-                      ? 'bg-emerald-50 border border-emerald-200'
-                      : 'bg-rose-50 border border-rose-200'
+                  className={`rounded-2xl overflow-hidden border ${
+                    isCurrentCorrect ? 'border-emerald-200' : 'border-rose-200'
                   }`}
                 >
-                  {isCurrentCorrect ? (
-                    <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
-                  ) : (
-                    <XCircle className="w-5 h-5 text-rose-500 shrink-0" />
-                  )}
-                  <div className="flex-1">
-                    <p className={`text-sm font-black ${isCurrentCorrect ? 'text-emerald-700' : 'text-rose-700'}`}>
-                      {isCurrentCorrect ? '정답입니다! 🎉' : '오답입니다'}
-                    </p>
-                    {!isCurrentCorrect && (
-                      <p className="text-xs font-bold text-slate-500 mt-0.5">
-                        정답: <span className="text-emerald-600 font-black">
-                          {currentQuestion.answer}번 — {renderMath((currentQuestion.choices || currentQuestion.options)?.[parseInt(currentQuestion.answer) - 1] || '')}
-                        </span>
-                      </p>
-                    )}
+                  {/* 결과 헤더 */}
+                  <div className={`flex items-center gap-3 px-4 py-3 ${
+                    isCurrentCorrect ? 'bg-emerald-500' : 'bg-rose-500'
+                  }`}>
+                    {isCurrentCorrect
+                      ? <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
+                      : <XCircle className="w-4 h-4 text-white shrink-0" />
+                    }
+                    <span className="text-white font-black text-sm flex-1">
+                      {isCurrentCorrect ? '정답입니다! 🎉' : `오답 — 정답은 ${currentQuestion.answer}번`}
+                    </span>
+                    <button
+                      onClick={handleNext}
+                      className="flex items-center gap-1 px-3 py-1 bg-white/20 hover:bg-white/30 text-white rounded-lg font-black text-xs transition-all active:scale-95"
+                    >
+                      {isLastQuestion ? '완료' : '다음'} <ChevronRight size={12} />
+                    </button>
                   </div>
-                  <button
-                    onClick={handleNext}
-                    className={`flex items-center gap-1 px-3 py-1.5 rounded-xl font-black text-xs transition-all active:scale-95 ${
-                      isCurrentCorrect
-                        ? 'bg-emerald-500 hover:bg-emerald-600 text-white'
-                        : 'bg-rose-500 hover:bg-rose-600 text-white'
-                    }`}
-                  >
-                    {isLastQuestion ? '완료' : '다음'} <ChevronRight size={13} />
-                  </button>
+
+                  {/* 해설 본문 */}
+                  {currentQuestion.explanation && (
+                    <div className={`px-4 py-3 md:px-5 md:py-4 text-xs md:text-sm font-medium leading-relaxed text-slate-700 ${
+                      isCurrentCorrect ? 'bg-emerald-50' : 'bg-rose-50'
+                    }`}>
+                      <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1.5">해설</p>
+                      <div className="space-y-0.5">
+                        {currentQuestion.explanation.split('\n').map((line: string, i: number) => (
+                          <p key={i} className="leading-relaxed">{renderMath(line)}</p>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </motion.div>
               )}
             </AnimatePresence>
