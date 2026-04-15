@@ -3,26 +3,35 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { supabase } from '@/lib/supabase';
-import { Mail, Lock, ArrowRight, AlertCircle, GraduationCap } from 'lucide-react';
+import { Mail, Lock, ArrowRight, AlertCircle, GraduationCap, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+
+const AUTO_LOGIN_KEY = 'dugigo_auto_login';
 
 export default function LoginPage() {
   const router = useRouter();
   const [formData, setFormData] = useState({ email: '', password: '' });
+  const [autoLogin, setAutoLogin] = useState(false);
   const [status, setStatus] = useState<{
     type: 'idle' | 'loading' | 'success' | 'error';
     message: string;
   }>({ type: 'idle', message: '' });
+  const [findMode, setFindMode] = useState<'none' | 'id' | 'pw'>('none');
+  const [findEmail, setFindEmail] = useState('');
 
   useEffect(() => {
-    // 기존에 평문으로 저장된 비밀번호 제거 (보안 정리)
+    // 기존 평문 비밀번호 정리
     localStorage.removeItem('auto_login_email');
     localStorage.removeItem('auto_login_pw');
 
-    // 이미 세션이 있으면 바로 이동
+    // 자동로그인 설정 불러오기
+    const savedAutoLogin = localStorage.getItem(AUTO_LOGIN_KEY) === 'true';
+    setAutoLogin(savedAutoLogin);
+
+    // 자동로그인이 켜져 있고 유효한 세션이 있으면 바로 이동
     supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) {
+      if (session && savedAutoLogin) {
         router.push('/select-subject');
       }
     });
@@ -37,16 +46,20 @@ export default function LoginPage() {
     try {
       const { error } = await supabase.auth.signInWithPassword({ email, password });
       if (error) throw error;
-      setStatus({ type: 'success', message: '환영합니다! 곧 대시보드로 이동합니다.' });
-      // 세션 저장 후 이동 (supabase가 세션을 LocalStorage에 쓸 시간 확보)
-      setTimeout(() => router.push('/select-subject'), 800);
+
+      // 자동로그인 설정 저장
+      if (autoLogin) {
+        localStorage.setItem(AUTO_LOGIN_KEY, 'true');
+      } else {
+        localStorage.removeItem(AUTO_LOGIN_KEY);
+      }
+
+      setStatus({ type: 'success', message: '환영합니다! 곧 이동합니다.' });
+      setTimeout(() => router.push('/select-subject'), 700);
     } catch (err: any) {
       setStatus({ type: 'error', message: err.message || '로그인에 실패했습니다.' });
     }
   };
-
-  const [findMode, setFindMode] = useState<'none' | 'id' | 'pw'>('none');
-  const [findEmail, setFindEmail] = useState('');
 
   return (
     <div className="relative min-h-screen flex items-center justify-center p-6 text-slate-800 overflow-hidden font-sans">
@@ -103,11 +116,40 @@ export default function LoginPage() {
 
                 <button
                   disabled={status.type === 'loading'}
-                  className="w-full btn-primary font-black py-5 rounded-2xl transition-all flex items-center justify-center gap-2 group mt-4 h-16"
+                  className="w-full btn-primary font-black py-5 rounded-2xl transition-all flex items-center justify-center gap-2 group mt-4 h-16 disabled:opacity-70"
                 >
                   {status.type === 'loading' ? '확인 중...' : '로그인'} 
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
+
+                {/* 자동로그인 체크박스 */}
+                <label className="flex items-center gap-3 cursor-pointer px-1 group select-none">
+                  <div
+                    onClick={() => setAutoLogin(v => !v)}
+                    className={`w-5 h-5 rounded-md border-2 flex items-center justify-center transition-all duration-200 shrink-0
+                      ${autoLogin 
+                        ? 'bg-brand-600 border-brand-600 shadow-sm shadow-brand-500/30' 
+                        : 'bg-white border-slate-300 group-hover:border-brand-400'
+                      }`}
+                  >
+                    {autoLogin && <CheckCircle2 className="w-3.5 h-3.5 text-white" strokeWidth={3} />}
+                  </div>
+                  <span 
+                    onClick={() => setAutoLogin(v => !v)}
+                    className="text-sm font-bold text-slate-500 group-hover:text-slate-700 transition-colors"
+                  >
+                    자동 로그인
+                  </span>
+                  {autoLogin && (
+                    <motion.span 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      className="ml-auto text-[10px] font-black text-brand-600 bg-brand-50 px-2 py-0.5 rounded-full"
+                    >
+                      ON
+                    </motion.span>
+                  )}
+                </label>
               </motion.form>
             ) : (
               <motion.div 
@@ -151,7 +193,7 @@ export default function LoginPage() {
             )}
           </AnimatePresence>
 
-          <div className="mt-12 text-center pt-8 border-t border-slate-100">
+          <div className="mt-10 text-center pt-8 border-t border-slate-100">
             <p className="text-slate-400 text-sm font-bold">
               아직 회원이 아니신가요?{' '}
               <Link href="/register" className="text-brand-600 hover:text-brand-700 font-black border-b-2 border-brand-100 hover:border-brand-600 transition-all ml-1">
