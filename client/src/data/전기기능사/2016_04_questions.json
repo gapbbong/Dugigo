@@ -56,7 +56,7 @@
       "year": 2016,
       "round": "04",
       "question_num": 4,
-      "question": "$0.2[\\Omega]$의 컨덕턴스 2개를 직렬로 접��하여 $3[A]$의 전류를 흘리려면 몇 $[V]$의 전압을 공급하면 되는가?",
+      "question": "$0.2[\\Omega]$의 컨덕턴스 2개를 직렬로 접속하여 $3[A]$의 전류를 흘리려면 몇 $[V]$의 전압을 공급하면 되는가?",
       "options": [
         "220",
         "110",
@@ -149,7 +149,7 @@
         "88"
       ],
       "answer": 1,
-      "explanation": "스��치 $S$가 열렸을 때 (단기 전전류 $I_s$): $R_{eq,open} = 8 + 3 = 11[\\Omega]$이므로 $I_s = \\frac{E}{11}[A]$. 스위치 $S$를 닫았을 때 (전류 $I$): $8[\\Omega]$과 $R_x[\\Omega]$이 병렬 연결되고 이 조합이 $3[\\Omega]$과 직렬 연결되므로 $R_{eq,closed} = 3 + \\frac{8R_x}{8+R_x}[\\Omega]$. 따라서 $I = \\frac{E}{3 + \\frac{8R_x}{8+R_x}}[A]$. 주어진 조건 $I = 3I_s$에 대입하면 $\\frac{E}{3 + \\frac{8R_x}{8+R_x}} = 3 \\times \\frac{E}{11}$. 양변에서 $E$를 소거하고 정리하면 $11 = 3(3 + \\frac{8R_x}{8+R_x}) \\Rightarrow 11 = 9 + \\frac{24R_x}{8+R_x} \\Rightarrow 2 = \\frac{24R_x}{8+R_x} \\Rightarrow 2(8+R_x) = 24R_x \\Rightarrow 16 + 2R_x = 24R_x \\Rightarrow 16 = 22R_x \\Rightarrow R_x = \\frac{16}{22} = \\frac{8}{11} \\approx 0.727[\\Omega]$.",
+      "explanation": "스위치 $S$가 열렸을 때 (단기 전전류 $I_s$): $R_{eq,open} = 8 + 3 = 11[\\Omega]$이므로 $I_s = \\frac{E}{11}[A]$. 스위치 $S$를 닫았을 때 (전류 $I$): $8[\\Omega]$과 $R_x[\\Omega]$이 병렬 연결되고 이 조합이 $3[\\Omega]$과 직렬 연결되므로 $R_{eq,closed} = 3 + \\frac{8R_x}{8+R_x}[\\Omega]$. 따라서 $I = \\frac{E}{3 + \\frac{8R_x}{8+R_x}}[A]$. 주어진 조건 $I = 3I_s$에 대입하면 $\\frac{E}{3 + \\frac{8R_x}{8+R_x}} = 3 \\times \\frac{E}{11}$. 양변에서 $E$를 소거하고 정리하면 $11 = 3(3 + \\frac{8R_x}{8+R_x}) \\Rightarrow 11 = 9 + \\frac{24R_x}{8+R_x} \\Rightarrow 2 = \\frac{24R_x}{8+R_x} \\Rightarrow 2(8+R_x) = 24R_x \\Rightarrow 16 + 2R_x = 24R_x \\Rightarrow 16 = 22R_x \\Rightarrow R_x = \\frac{16}{22} = \\frac{8}{11} \\approx 0.727[\\Omega]$.",
       "level": "상",
       "sub_unit": "[설비] 기타 및 안전 수칙"
     },
@@ -279,7 +279,7 @@
       "question_num": 17,
       "question": "다음 설명 중 틀린 것은?",
       "options": [
-        "같은 부��의 전하끼리는 반발력이 생긴다.",
+        "같은 부하의 전하끼리는 반발력이 생긴다.",
         "정전 유도에 의하여 작용하는 힘은 반발력이다.",
         "정전 용량이란 콘덴서가 전하를 축적하는 능력을 말한다.",
         "콘덴서에 전압을 가하는 순간은 콘덴서는 단락 상태가 된다."
@@ -702,7 +702,7 @@
       "year": 2016,
       "round": "04",
       "question_num": 42,
-      "question": "다음 중 $220[V]$ 3상 유도 전동기 2차 측에 인가할 절연 저항 ��험 전압은 $V$로 하여야 하는가?",
+      "question": "다음 중 $220[V]$ 3상 유도 전동기 2차 측에 인가할 절연 저항 시험 전압은 $V$로 하여야 하는가?",
       "options": [
         "$330$",
         "$500$",
@@ -863,7 +863,7 @@
         "$105$ (전선)"
       ],
       "answer": 3,
-      "explanation": "해설: 가교 폴리에틸렌($X L P E$), 에틸렌 프로���렌 고무 혼합물($E P R$) 절연 전선의 허용 온도: $90[^{\\circ}C]$",
+      "explanation": "해설: 가교 폴리에틸렌($X L P E$), 에틸렌 프로렌 고무 혼합물($E P R$) 절연 전선의 허용 온도: $90[^{\\circ}C]$",
       "level": "중",
       "sub_unit": "[설비] 전선 및 배선 재료/공구"
     },

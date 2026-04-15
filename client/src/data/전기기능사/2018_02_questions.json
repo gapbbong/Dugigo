@@ -81,7 +81,7 @@
         "$40$"
       ],
       "answer": 3,
-      "explanation": "건물의 종류에 대한 부하 밀도 $ [VA/m^2] $\n*   공장, 공회당, 사원, 교회: $10$\n*   기숙사, 여관, 호텔, 병원, 학교, 유흥장, 다방, 대중목욕탕: $20$\n*   사무실, 은행, ��점, 이발소, 미용원: $30$\n*   주택, 아파트: $40$\n(Note: There is a discrepancy between the question's explicit mention of '주택, 아파트' (40 VA/m²) and the provided answer (30 VA/m²). The answer is based on the provided solution key.)",
+      "explanation": "건물의 종류에 대한 부하 밀도 $ [VA/m^2] $\n*   공장, 공회당, 사원, 교회: $10$\n*   기숙사, 여관, 호텔, 병원, 학교, 유흥장, 다방, 대중목욕탕: $20$\n*   사무실, 은행, 점, 이발소, 미용원: $30$\n*   주택, 아파트: $40$\n(Note: There is a discrepancy between the question's explicit mention of '주택, 아파트' (40 VA/m²) and the provided answer (30 VA/m²). The answer is based on the provided solution key.)",
       "level": "중",
       "sub_unit": "[설비] 기타 및 안전 수칙"
     },
@@ -245,7 +245,7 @@
       "question_num": 15,
       "question": "분권 전동기에 대한 설명으로 옳지 않은 것은?",
       "options": [
-        "토크는 전기자 전류의 자승에 ���례한다.",
+        "토크는 전기자 전류의 자승에 례한다.",
         "부하 전류에 따른 속도 변화가 거의 없다.",
         "계자 회로에 퓨즈를 넣어서는 안 된다.",
         "계자 권선과 전기자 권선이 전원에 병렬로 접속되어 있다."
@@ -277,7 +277,7 @@
       "year": 2018,
       "round": "02",
       "question_num": 17,
-      "question": "절연 전선으로 가선된 배전 선로에서 활선 상���인 경우 전선의 피복을 벗기는 것은 매 우 곤란한 작업이다. 이런 경우 활선 상태에서 전선의 피복을 벗기는 공구는?",
+      "question": "절연 전선으로 가선된 배전 선로에서 활선 상인 경우 전선의 피복을 벗기는 것은 매 우 곤란한 작업이다. 이런 경우 활선 상태에서 전선의 피복을 벗기는 공구는?",
       "options": [
         "데드 엔드 커버",
         "애자 커버",
@@ -362,7 +362,7 @@
       "year": 2018,
       "round": "02",
       "question_num": 22,
-      "question": "단상 반파 정류회로의 전원 전압 $200\\,[V]$, 부하 저항이 $10\\,[\\Omega]$이면 부��� 전류는 몇 $[A]$인가?",
+      "question": "단상 반파 정류회로의 전원 전압 $200\\,[V]$, 부하 저항이 $10\\,[\\Omega]$이면 부 전류는 몇 $[A]$인가?",
       "options": [
         "이층권",
         "전절권",
@@ -727,7 +727,7 @@
         "$10\\text{[mm^2]}$"
       ],
       "answer": 4,
-      "explanation": "옥내 배선 공사에서 플로어 덕트 공사에 의한 전선은 절연 전선으로 연선이 원칙이지만 단선 사용 시에는 단면적 $10\\text{[mm^2]}$ 이하까지는 사용할 수 ��다.",
+      "explanation": "옥내 배선 공사에서 플로어 덕트 공사에 의한 전선은 절연 전선으로 연선이 원칙이지만 단선 사용 시에는 단면적 $10\\text{[mm^2]}$ 이하까지는 사용할 수 다.",
       "level": "중",
       "sub_unit": "[설비] 기타 및 안전 수칙"
     },
@@ -761,7 +761,7 @@
         "$220$"
       ],
       "answer": 1,
-      "explanation": "합성수지관 전선관의 ��지름 $D$, 바깥지름 $d$일 경우\n곡률 반지름 $r = 6d + \\frac{D-d}{2}$ 이므로, $6 \\times 18 + \\frac{22-18}{2} = 119\\text{[mm]}$",
+      "explanation": "합성수지관 전선관의 접지름 $D$, 바깥지름 $d$일 경우\n곡률 반지름 $r = 6d + \\frac{D-d}{2}$ 이므로, $6 \\times 18 + \\frac{22-18}{2} = 119\\text{[mm]}$",
       "level": "중",
       "sub_unit": "[설비] 기타 및 안전 수칙"
     },

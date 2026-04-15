@@ -64,7 +64,7 @@
         "상 권선형 유도 전동기"
       ],
       "answer": 4,
-      "explanation": "그림의 토크-슬립 곡선은 3상 권선형 ���도 전동기의 기동 특성을 나타낸다.",
+      "explanation": "그림의 토크-슬립 곡선은 3상 권선형 유도 전동기의 기동 특성을 나타낸다.",
       "level": "중",
       "sub_unit": "[기기] 직류 발전기와 전동기"
     },
@@ -506,7 +506,7 @@
         "LASCR"
       ],
       "answer": 2,
-      "explanation": "GTO(Gate Turn-off thyristor)는 게이트 신호로 ON-OFF가 자유로우며 개폐 동작이 빠르고 직류의 개폐에 사용되며 자기 소호 기��이 가장 좋다.",
+      "explanation": "GTO(Gate Turn-off thyristor)는 게이트 신호로 ON-OFF가 자유로우며 개폐 동작이 빠르고 직류의 개폐에 사용되며 자기 소호 기이 가장 좋다.",
       "level": "중",
       "sub_unit": "[기기] 정류기 및 반도체 소자"
     },
