@@ -37,6 +37,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [startTime] = useState(Date.now());
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
+  const [direction, setDirection] = useState(0); // 1 for next, -1 for prev
 
   // 신고 모달 상태
   const [reportOpen, setReportOpen] = useState(false);
@@ -179,11 +180,20 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   };
 
   const handleRetry = () => {
+    setDirection(0);
     setCurrentIndex(0);
     setAnswers([]);
     setSelectedIndex(null);
     setElapsedSeconds(0);
     setIsFinished(false);
+  };
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setDirection(-1);
+      setCurrentIndex(prev => prev - 1);
+      setSelectedIndex(null);
+    }
   };
 
   const handleNextSet = () => {
@@ -197,6 +207,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const handleNext = () => {
     if (!isAnswered) return; // 선택하지 않으면 다음으로 못 감
     if (currentIndex < questions.length - 1) {
+      setDirection(1);
       setCurrentIndex(prev => prev + 1);
       setSelectedIndex(null);
     } else {
@@ -357,13 +368,14 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       </div>
 
       <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-2 md:px-8 md:py-8 flex flex-col">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentIndex}
-            initial={{ opacity: 0, x: 20 }}
+            custom={direction}
+            initial={{ opacity: 0, x: direction > 0 ? 50 : -50 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+            exit={{ opacity: 0, x: direction > 0 ? -50 : 50 }}
+            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
             className="flex-1 flex flex-col gap-2 md:gap-6"
           >
             {/* 문제 */}
