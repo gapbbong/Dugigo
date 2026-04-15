@@ -13,7 +13,9 @@ import {
   BarChart3, 
   Trophy,
   Loader2,
-  Home
+  Home,
+  Flag,
+  X
 } from 'lucide-react';
 import 'katex/dist/katex.min.css';
 import { InlineMath as _InlineMath } from 'react-katex';
@@ -34,6 +36,12 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [startTime] = useState(Date.now());
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
+
+  // 신고 모달 상태
+  const [reportOpen, setReportOpen] = useState(false);
+  const [reportType, setReportType] = useState('');
+  const [reportComment, setReportComment] = useState('');
+  const [reportStatus, setReportStatus] = useState<'idle'|'sending'|'done'>('idle');
 
   // 파라미터 상태 관리
   const [unitFilter, setUnitFilter] = useState<string | null>(null);
@@ -98,6 +106,38 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       questionId: currentQuestion.id || currentIndex.toString(), 
       isCorrect 
     }]);
+  };
+
+  // 문항 오류 신고
+  const handleReport = async () => {
+    if (!reportType) return;
+    setReportStatus('sending');
+    try {
+      const { data: userData } = await supabase.auth.getUser();
+      await fetch('/api/reports', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          question_id: currentQuestion.id,
+          subject,
+          year: currentQuestion.year,
+          round: currentQuestion.round,
+          question_num: currentQuestion.question_num,
+          user_id: userData.user?.id,
+          report_type: reportType,
+          comment: reportComment,
+        }),
+      });
+      setReportStatus('done');
+      setTimeout(() => {
+        setReportOpen(false);
+        setReportType('');
+        setReportComment('');
+        setReportStatus('idle');
+      }, 1500);
+    } catch {
+      setReportStatus('idle');
+    }
   };
 
   // 다음 버튼 핸들러
@@ -364,6 +404,20 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                       </div>
                     </div>
                   )}
+
+                  {/* 신고 링크 */}
+                  <div className={`px-4 py-2 flex justify-end ${
+                    isCurrentCorrect ? 'bg-emerald-50' : 'bg-rose-50'
+                  } border-t ${
+                    isCurrentCorrect ? 'border-emerald-100' : 'border-rose-100'
+                  }`}>
+                    <button
+                      onClick={() => setReportOpen(true)}
+                      className="flex items-center gap-1 text-[10px] font-bold text-slate-400 hover:text-rose-500 transition-colors"
+                    >
+                      <Flag className="w-3 h-3" /> 문항 오류 신고
+                    </button>
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -371,6 +425,104 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           </motion.div>
         </AnimatePresence>
       </main>
+
+      {/* 오류 신고 모달 */}
+      <AnimatePresence>
+        {reportOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-4 bg-black/40 backdrop-blur-sm"
+            onClick={(e) => { if (e.target === e.currentTarget) setReportOpen(false); }}
+          >
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 60, opacity: 0 }}
+              transition={{ type: 'spring', damping: 25 }}
+              className="w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden"
+            >
+              {/* 모달 헤더 */}
+              <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100">
+                <div className="flex items-center gap-2">
+                  <Flag className="w-4 h-4 text-rose-500" />
+                  <h3 className="font-black text-slate-800 text-sm">문항 오류 신고</h3>
+                  <span className="text-[10px] text-slate-400 font-bold bg-slate-100 px-2 py-0.5 rounded-full">
+                    Q.{currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num}
+                  </span>
+                </div>
+                <button onClick={() => setReportOpen(false)} className="text-slate-400 hover:text-slate-600">
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              {reportStatus === 'done' ? (
+                <div className="px-6 py-10 text-center">
+                  <CheckCircle2 className="w-10 h-10 text-emerald-500 mx-auto mb-3" />
+                  <p className="font-black text-slate-800">신고가 접수되었습니다!</p>
+                  <p className="text-xs text-slate-400 mt-1">검토 후 수정하겠습니다.</p>
+                </div>
+              ) : (
+                <div className="px-6 py-5 space-y-4">
+                  {/* 오류 유형 */}
+                  <div className="space-y-2">
+                    <p className="text-xs font-black text-slate-500 uppercase tracking-widest">오류 유형</p>
+                    {[
+                      { value: 'wrong_answer', label: '정답이 틀린 것 같아요' },
+                      { value: 'wrong_explanation', label: '해설이 이상해요' },
+                      { value: 'broken_text', label: '문제 문장/수식이 깨졌어요' },
+                      { value: 'other', label: '기타' },
+                    ].map(opt => (
+                      <label key={opt.value} className="flex items-center gap-3 p-3 rounded-xl border-2 cursor-pointer transition-all"
+                        style={{ borderColor: reportType === opt.value ? '#7c3aed' : '#e2e8f0',
+                                 background: reportType === opt.value ? '#f5f3ff' : 'white' }}
+                      >
+                        <input type="radio" name="reportType" value={opt.value}
+                          checked={reportType === opt.value}
+                          onChange={() => setReportType(opt.value)}
+                          className="accent-brand-600"
+                        />
+                        <span className="text-sm font-bold text-slate-700">{opt.label}</span>
+                      </label>
+                    ))}
+                  </div>
+
+                  {/* 추가 설명 */}
+                  <div>
+                    <p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-2">추가 설명 (선택)</p>
+                    <textarea
+                      value={reportComment}
+                      onChange={e => setReportComment(e.target.value)}
+                      placeholder="구체적으로 어떤 부분이 문제인지 적어주세요."
+                      rows={3}
+                      className="w-full text-sm border-2 border-slate-200 rounded-xl p-3 resize-none focus:outline-none focus:border-brand-400 font-medium text-slate-700 placeholder:text-slate-300"
+                    />
+                  </div>
+
+                  {/* 버튼 */}
+                  <div className="flex gap-3 pt-1">
+                    <button
+                      onClick={() => setReportOpen(false)}
+                      className="flex-1 py-3 rounded-xl border-2 border-slate-200 text-slate-500 font-black text-sm hover:bg-slate-50 transition-all"
+                    >
+                      취소
+                    </button>
+                    <button
+                      onClick={handleReport}
+                      disabled={!reportType || reportStatus === 'sending'}
+                      className="flex-1 py-3 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-black text-sm transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                    >
+                      {reportStatus === 'sending' ? <Loader2 className="w-4 h-4 animate-spin" /> : <Flag className="w-4 h-4" />}
+                      {reportStatus === 'sending' ? '신고 중...' : '신고하기'}
+                    </button>
+                  </div>
+                </div>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
