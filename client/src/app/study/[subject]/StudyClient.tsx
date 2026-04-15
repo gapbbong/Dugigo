@@ -360,7 +360,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         />
       </div>
 
-      <main className="flex-1 w-full max-w-xl mx-auto px-4 py-2 md:px-8 md:py-8 flex flex-col">
+      <main className="flex-1 w-full max-w-xl mx-auto px-4 py-2 pb-32 md:px-8 md:py-8 md:pb-8 flex flex-col">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentIndex}
@@ -508,7 +508,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             whileHover={{ scale: 1.1, x: -5 }}
             whileTap={{ scale: 0.9 }}
             onClick={handleNext}
-            className="fixed right-4 md:right-12 top-1/2 -translate-y-1/2 z-50 w-12 h-12 md:w-20 md:h-20 bg-brand-600 hover:bg-brand-700 text-white rounded-full flex items-center justify-center shadow-2xl shadow-brand-500/40 border-4 border-white transition-colors"
+            className="fixed right-4 md:right-12 bottom-8 md:top-1/2 md:-translate-y-1/2 z-50 w-14 h-14 md:w-20 md:h-20 bg-brand-600 hover:bg-brand-700 text-white rounded-full flex items-center justify-center shadow-2xl shadow-brand-500/40 border-4 border-white transition-colors"
           >
             <ChevronRight className="w-6 h-6 md:w-10 md:h-10" />
           </motion.button>
@@ -524,7 +524,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             whileHover={{ scale: 1.1, x: 5 }}
             whileTap={{ scale: 0.9 }}
             onClick={handlePrev}
-            className="fixed left-4 md:left-12 top-1/2 -translate-y-1/2 z-50 w-12 h-12 md:w-20 md:h-20 bg-white hover:bg-slate-50 text-slate-400 hover:text-brand-600 rounded-full flex items-center justify-center shadow-2xl shadow-black/5 border-4 border-slate-100 transition-colors"
+            className="fixed left-4 md:left-12 bottom-8 md:top-1/2 md:-translate-y-1/2 z-50 w-14 h-14 md:w-20 md:h-20 bg-white hover:bg-slate-50 text-slate-400 hover:text-brand-600 rounded-full flex items-center justify-center shadow-2xl shadow-black/5 border-4 border-slate-100 transition-colors"
           >
             <ChevronLeft className="w-6 h-6 md:w-10 md:h-10" />
           </motion.button>
