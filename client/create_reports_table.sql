@@ -22,9 +22,10 @@ CREATE INDEX IF NOT EXISTS idx_dukigo_question_reports_question_id ON dukigo_que
 -- RLS 정책
 ALTER TABLE dukigo_question_reports ENABLE ROW LEVEL SECURITY;
 
--- 로그인한 사용자는 제보 가능
-CREATE POLICY "Users can insert reports" ON dukigo_question_reports
-  FOR INSERT TO authenticated WITH CHECK (true);
+-- 제보 등록 (권한 제한 없이 가능하도록 public 오픈)
+-- 서버 사이드 API가 anon 세션으로 요청을 보낼 경우를 대비해 TO public으로 설정합니다.
+CREATE POLICY "Anyone can insert reports" ON dukigo_question_reports
+  FOR INSERT TO public WITH CHECK (true);
 
 -- 본인 제보만 조회 가능 (학생)
 CREATE POLICY "Users can view own reports" ON dukigo_question_reports
@@ -33,3 +34,8 @@ CREATE POLICY "Users can view own reports" ON dukigo_question_reports
 -- service_role은 전체 접근 (서버에서 처리)
 CREATE POLICY "Service role full access" ON dukigo_question_reports
   FOR ALL TO service_role USING (true);
+
+-- 익명 사용자(anon)도 목록 조회 가능 (어드민 페이지에서 anon 키를 쓸 경우 대비)
+-- 보안상 가능하다면 service_role을 환경변수에 설정하고 이 정책은 삭제하는 것이 좋습니다.
+CREATE POLICY "Allow anon select" ON dukigo_question_reports
+  FOR SELECT TO public USING (true);

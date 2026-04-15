@@ -34,7 +34,10 @@ export async function POST(request: Request) {
       .select()
       .single();
 
-    if (error) throw error;
+    if (error) {
+      console.error('Error inserting report:', error);
+      throw error;
+    }
     return NextResponse.json({ success: true, report: data });
   } catch (err: any) {
     return NextResponse.json({ error: err.message }, { status: 500 });
@@ -53,7 +56,10 @@ export async function GET(request: Request) {
       .eq('status', status)
       .order('created_at', { ascending: false });
 
-    if (error) throw error;
+    if (error) {
+      console.error('Error fetching reports:', error);
+      throw error;
+    }
     return NextResponse.json({ reports: data });
   } catch (err: any) {
     return NextResponse.json({ error: err.message }, { status: 500 });
