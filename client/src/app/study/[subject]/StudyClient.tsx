@@ -15,7 +15,8 @@ import {
   Loader2,
   Home,
   Flag,
-  X
+  X,
+  RotateCcw
 } from 'lucide-react';
 import 'katex/dist/katex.min.css';
 import { InlineMath as _InlineMath } from 'react-katex';
@@ -177,6 +178,21 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     }
   };
 
+  const handleRetry = () => {
+    setCurrentIndex(0);
+    setAnswers([]);
+    setSelectedIndex(null);
+    setElapsedSeconds(0);
+    setIsFinished(false);
+  };
+
+  const handleNextSet = () => {
+    if (!setNum) return;
+    const nextSet = parseInt(setNum) + 1;
+    // URL 구성을 props와 일치시킴
+    router.push(`/study/${params.subject}?unit=${unitFilter || ''}&set=${nextSet}&size=${setSize || '30'}`);
+  };
+
   // 다음 버튼 핸들러
   const handleNext = () => {
     if (!isAnswered) return; // 선택하지 않으면 다음으로 못 감
@@ -272,12 +288,30 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             </div>
           </div>
 
-          <button 
-            onClick={() => router.push('/select-subject')}
-            className="w-full btn-primary font-black py-6 rounded-3xl flex items-center justify-center gap-2"
-          >
-            <Home className="w-6 h-6" /> 메인으로 돌아가기
-          </button>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mt-6">
+            <button 
+              onClick={handleRetry}
+              className="py-5 rounded-2xl bg-white border-2 border-slate-100 text-slate-600 font-black text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-2"
+            >
+              <RotateCcw className="w-5 h-5" /> 다시 풀기
+            </button>
+            
+            {setNum && (
+              <button 
+                onClick={handleNextSet}
+                className="py-5 rounded-2xl bg-brand-600 text-white font-black text-lg hover:bg-brand-700 shadow-lg shadow-brand-500/20 transition-all flex items-center justify-center gap-2"
+              >
+                다음 세트 <ChevronRight className="w-5 h-5" />
+              </button>
+            )}
+
+            <button 
+              onClick={() => router.push('/select-subject')}
+              className={`py-5 rounded-2xl border-2 border-slate-100 text-slate-400 font-bold text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-2 ${!setNum ? 'col-span-1' : 'md:col-span-2'}`}
+            >
+              <Home className="w-5 h-5" /> 메인으로
+            </button>
+          </div>
         </motion.div>
       </div>
     );
