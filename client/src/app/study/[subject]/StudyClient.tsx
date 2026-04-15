@@ -360,7 +360,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         />
       </div>
 
-      <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-2 md:px-8 md:py-8 flex flex-col">
+      <main className="flex-1 w-full max-w-2xl mx-auto px-4 py-2 md:px-8 md:py-8 flex flex-col">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentIndex}
@@ -456,8 +456,10 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                       ? <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
                       : <XCircle className="w-4 h-4 text-white shrink-0" />
                     }
-                    <span className="text-white font-black text-sm flex-1">
-                      {isCurrentCorrect ? '정답입니다! 🎉' : `오답 — 정답은 ${currentQuestion.answer}번`}
+                    <span className="text-white font-black text-sm flex-1 flex items-center gap-1">
+                      {isCurrentCorrect 
+                        ? '정답입니다! 🎉' 
+                        : <>정답은 {renderMath(currentQuestion.choices?.[parseInt(currentQuestion.answer)-1] || currentQuestion.options?.[parseInt(currentQuestion.answer)-1])}</>}
                     </span>
                   </div>
 
