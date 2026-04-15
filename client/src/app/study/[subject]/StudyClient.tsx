@@ -107,6 +107,28 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       isCorrect 
     }]);
   };
+  
+  // 키보드 단축키 추가
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // 숫자 키 1-4: 선택지 선택
+      if (['1', '2', '3', '4'].includes(e.key)) {
+        const idx = parseInt(e.key) - 1;
+        if (!isAnswered && currentQuestion?.choices?.[idx] !== "") {
+          handleAnswer(idx);
+        }
+      }
+      // 오른쪽 방향키: 다음 문제
+      if (e.key === 'ArrowRight') {
+        if (isAnswered) {
+          handleNext();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isAnswered, currentIndex, questions, currentQuestion]);
 
   // 문항 오류 신고
   const handleReport = async () => {
@@ -142,6 +164,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
   // 다음 버튼 핸들러
   const handleNext = () => {
+    if (!isAnswered) return; // 선택하지 않으면 다음으로 못 감
     if (currentIndex < questions.length - 1) {
       setCurrentIndex(prev => prev + 1);
       setSelectedIndex(null);
@@ -385,12 +408,6 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     <span className="text-white font-black text-sm flex-1">
                       {isCurrentCorrect ? '정답입니다! 🎉' : `오답 — 정답은 ${currentQuestion.answer}번`}
                     </span>
-                    <button
-                      onClick={handleNext}
-                      className="flex items-center gap-1 px-3 py-1 bg-white/20 hover:bg-white/30 text-white rounded-lg font-black text-xs transition-all active:scale-95"
-                    >
-                      {isLastQuestion ? '완료' : '다음'} <ChevronRight size={12} />
-                    </button>
                   </div>
 
                   {/* 해설 본문 */}
@@ -427,6 +444,23 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           </motion.div>
         </AnimatePresence>
       </main>
+
+      {/* 우측 플로팅 다음 버튼 */}
+      <AnimatePresence>
+        {isAnswered && (
+          <motion.button
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 20 }}
+            whileHover={{ scale: 1.1, x: -5 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={handleNext}
+            className="fixed right-4 md:right-12 top-1/2 -translate-y-1/2 z-50 w-12 h-12 md:w-20 md:h-20 bg-brand-600 hover:bg-brand-700 text-white rounded-full flex items-center justify-center shadow-2xl shadow-brand-500/40 border-4 border-white transition-colors"
+          >
+            <ChevronRight className="w-6 h-6 md:w-10 md:h-10" />
+          </motion.button>
+        )}
+      </AnimatePresence>
 
       {/* 오류 신고 모달 */}
       <AnimatePresence>
