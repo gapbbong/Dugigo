@@ -260,7 +260,9 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         </button>
         
         <div className="flex flex-col items-center">
-          <span className="text-[9px] md:text-[10px] font-black tracking-[0.15em] text-brand-600 uppercase">{subject} 기출학습</span>
+          <span className="text-[9px] md:text-[10px] font-black tracking-[0.15em] text-brand-600 uppercase">
+            {unitFilter ? `${unitFilter}${setNum ? ` · 세트 ${setNum}` : ''}` : `${subject} 기출학습`}
+          </span>
           <div className="flex items-center gap-2 md:gap-4 mt-0.5">
             <div className="flex items-center gap-1 text-xs md:text-sm font-black text-slate-900">
               <Timer className="w-3 h-3 md:w-4 md:h-4 text-brand-500" /> {formatTime(elapsedSeconds)}
