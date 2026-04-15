@@ -16,30 +16,31 @@ export default function LoginPage() {
   }>({ type: 'idle', message: '' });
 
   useEffect(() => {
-    const savedEmail = localStorage.getItem('auto_login_email');
-    const savedPassword = localStorage.getItem('auto_login_pw');
-    if (savedEmail && savedPassword) handleLogin(null, savedEmail, savedPassword);
-  }, []);
+    // 기존에 평문으로 저장된 비밀번호 제거 (보안 정리)
+    localStorage.removeItem('auto_login_email');
+    localStorage.removeItem('auto_login_pw');
 
-  const handleLogin = async (e: React.FormEvent | null, autoEmail?: string, autoPW?: string) => {
-    if (e) e.preventDefault();
-    const email = autoEmail || formData.email;
-    const password = autoPW || formData.password;
+    // 이미 세션이 있으면 바로 이동
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) {
+        router.push('/select-subject');
+      }
+    });
+  }, [router]);
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const { email, password } = formData;
     if (!email || !password) return;
 
     setStatus({ type: 'loading', message: '접속 권한을 확인하고 있습니다...' });
     try {
       const { error } = await supabase.auth.signInWithPassword({ email, password });
       if (error) throw error;
-      localStorage.setItem('auto_login_email', email);
-      localStorage.setItem('auto_login_pw', password);
       setStatus({ type: 'success', message: '환영합니다! 곧 대시보드로 이동합니다.' });
-      setTimeout(() => router.push('/select-subject'), 1200);
+      // 세션 저장 후 이동 (supabase가 세션을 LocalStorage에 쓸 시간 확보)
+      setTimeout(() => router.push('/select-subject'), 800);
     } catch (err: any) {
-      if (autoEmail) {
-        localStorage.removeItem('auto_login_email');
-        localStorage.removeItem('auto_login_pw');
-      }
       setStatus({ type: 'error', message: err.message || '로그인에 실패했습니다.' });
     }
   };
@@ -73,7 +74,7 @@ export default function LoginPage() {
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 10 }}
-                onSubmit={(e) => handleLogin(e)} 
+                onSubmit={handleLogin} 
                 className="space-y-5"
               >
                 <div className="space-y-4">
@@ -104,7 +105,7 @@ export default function LoginPage() {
                   disabled={status.type === 'loading'}
                   className="w-full btn-primary font-black py-5 rounded-2xl transition-all flex items-center justify-center gap-2 group mt-4 h-16"
                 >
-                  {status.type === 'loading' && !formData.email ? '자동 로그인 중...' : '로그인'} 
+                  {status.type === 'loading' ? '확인 중...' : '로그인'} 
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </motion.form>
