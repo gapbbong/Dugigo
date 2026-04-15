@@ -3,7 +3,8 @@ import { StudyContent } from './StudyClient';
 
 export const dynamic = 'force-dynamic';
 
-export default function StudyPage({ searchParams }: { searchParams: any }) {
+export default async function StudyPage({ searchParams }: { searchParams: Promise<any> }) {
+  const resolvedParams = await searchParams;
   return (
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center bg-black">
@@ -13,7 +14,7 @@ export default function StudyPage({ searchParams }: { searchParams: any }) {
         </div>
       </div>
     }>
-      <StudyContent searchParamsProps={searchParams} />
+      <StudyContent searchParamsProps={resolvedParams} />
     </Suspense>
   );
 }
