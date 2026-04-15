@@ -220,25 +220,25 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     <div className="min-h-screen relative flex flex-col text-slate-800">
       <div className="mesh-bg" />
 
-      <nav className="sticky top-0 z-50 px-8 py-4 glass-card border-none bg-white/40 backdrop-blur-md flex justify-between items-center h-20">
-        <button onClick={() => router.back()} className="w-10 h-10 flex items-center justify-center bg-white/50 rounded-xl hover:bg-white transition-all text-slate-600 shadow-sm">
-          <ChevronLeft size={20} />
+      <nav className="sticky top-0 z-50 px-4 py-2 glass-card border-none bg-white/40 backdrop-blur-md flex justify-between items-center h-12 md:h-20 md:px-8 md:py-4">
+        <button onClick={() => router.back()} className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/50 rounded-xl hover:bg-white transition-all text-slate-600 shadow-sm">
+          <ChevronLeft size={16} />
         </button>
         
         <div className="flex flex-col items-center">
-          <span className="text-[10px] font-black tracking-[0.2em] text-brand-600 uppercase">{subject} 기출학습</span>
-          <div className="flex items-center gap-4 mt-0.5">
-            <div className="flex items-center gap-1.5 text-sm font-black text-slate-900">
-              <Timer className="w-4 h-4 text-brand-500" /> {formatTime(elapsedSeconds)}
+          <span className="text-[9px] md:text-[10px] font-black tracking-[0.15em] text-brand-600 uppercase">{subject} 기출학습</span>
+          <div className="flex items-center gap-2 md:gap-4 mt-0.5">
+            <div className="flex items-center gap-1 text-xs md:text-sm font-black text-slate-900">
+              <Timer className="w-3 h-3 md:w-4 md:h-4 text-brand-500" /> {formatTime(elapsedSeconds)}
             </div>
             <div className="w-px h-3 bg-slate-300" />
-            <div className="flex items-center gap-1.5 text-sm font-black text-slate-900">
-              <BarChart3 className="w-4 h-4 text-brand-500" /> {currentIndex + 1} / {questions.length}
+            <div className="flex items-center gap-1 text-xs md:text-sm font-black text-slate-900">
+              <BarChart3 className="w-3 h-3 md:w-4 md:h-4 text-brand-500" /> {currentIndex + 1} / {questions.length}
             </div>
           </div>
         </div>
 
-        <div className="w-10 h-10 flex items-center justify-center bg-brand-50 rounded-xl text-brand-600 font-black text-xs shadow-sm">
+        <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-brand-50 rounded-xl text-brand-600 font-black text-[10px] md:text-xs shadow-sm">
           {Math.round(((currentIndex + 1) / questions.length) * 100)}%
         </div>
       </nav>
@@ -251,7 +251,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         />
       </div>
 
-      <main className="flex-1 w-full max-w-4xl mx-auto px-8 py-16 flex flex-col">
+      <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-3 md:px-8 md:py-16 flex flex-col">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -259,16 +259,16 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-            className="flex-1 flex flex-col gap-12"
+            className="flex-1 flex flex-col gap-3 md:gap-12"
           >
-            <div className="space-y-6">
-              <div className="flex items-center gap-3">
-                <span className="px-3 py-1 bg-brand-50 text-brand-600 text-[10px] font-black tracking-widest rounded-full uppercase">
+            <div className="space-y-2 md:space-y-6">
+              <div className="flex items-center gap-2 md:gap-3">
+                <span className="px-2 py-0.5 md:px-3 md:py-1 bg-brand-50 text-brand-600 text-[9px] md:text-[10px] font-black tracking-widest rounded-full uppercase">
                   Q. {currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num}
                 </span>
                 <div className="h-px flex-1 bg-brand-100/50" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-[1.3] tracking-tight decoration-brand-100 underline-offset-8">
+              <h2 className="text-lg md:text-4xl font-bold text-slate-900 leading-[1.4] md:leading-[1.3] tracking-tight">
                 {renderMath(currentQuestion.question)}
               </h2>
 
@@ -287,7 +287,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               )}
             </div>
 
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 gap-2 md:gap-4">
               {(currentQuestion.choices || currentQuestion.options) && (currentQuestion.choices || currentQuestion.options).map((choice: string, idx: number) => {
                 const isCorrect = idx + 1 === parseInt(currentQuestion.answer);
                 const isSelected = selectedIndex === idx;
@@ -307,18 +307,18 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     whileTap={{ scale: 0.98 }}
                     disabled={selectedIndex !== null}
                     onClick={() => handleAnswer(idx)}
-                    className={`group w-full p-8 rounded-[2rem] border-2 flex items-center gap-6 transition-all duration-300 text-left relative overflow-hidden ${styleStr}`}
+                    className={`group w-full px-3 py-3 md:p-8 rounded-2xl md:rounded-[2rem] border-2 flex items-center gap-3 md:gap-6 transition-all duration-300 text-left relative overflow-hidden ${styleStr}`}
                   >
-                    <div className={`w-10 h-10 rounded-2xl flex items-center justify-center font-black transition-all shadow-sm ${
+                    <div className={`w-7 h-7 md:w-10 md:h-10 shrink-0 rounded-xl md:rounded-2xl flex items-center justify-center font-black text-sm md:text-base transition-all shadow-sm ${
                       isSelected || (selectedIndex !== null && isCorrect) 
                         ? (isCorrect ? 'bg-emerald-500 text-white' : 'bg-rose-500 text-white')
                         : 'bg-brand-50 text-brand-600 group-hover:bg-brand-600 group-hover:text-white'
                     }`}>
-                      {selectedIndex !== null && isCorrect ? <CheckCircle2 className="w-6 h-6" /> : 
-                       selectedIndex !== null && isSelected && !isCorrect ? <XCircle className="w-6 h-6" /> : 
+                      {selectedIndex !== null && isCorrect ? <CheckCircle2 className="w-4 h-4 md:w-6 md:h-6" /> : 
+                       selectedIndex !== null && isSelected && !isCorrect ? <XCircle className="w-4 h-4 md:w-6 md:h-6" /> : 
                        idx + 1}
                     </div>
-                    <span className="text-xl font-bold flex-1 leading-snug">{renderMath(choice)}</span>
+                    <span className="text-sm md:text-xl font-bold flex-1 leading-snug">{renderMath(choice)}</span>
                   </motion.button>
                 );
               })}
@@ -327,11 +327,11 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         </AnimatePresence>
       </main>
 
-      <footer className="w-full py-8 px-8 flex justify-center">
-        <div className="glass-card bg-white/30 px-6 py-3 rounded-full flex items-center gap-3 shadow-sm border-none">
-          <div className="w-2 h-2 rounded-full bg-brand-500 animate-pulse" />
-          <p className="text-[11px] font-bold text-slate-500 tracking-tight">
-            정답을 선택하면 다음 문제로 매끄럽게 넘어갑니다.
+      <footer className="w-full py-2 md:py-8 px-4 md:px-8 flex justify-center">
+        <div className="glass-card bg-white/30 px-4 py-2 md:px-6 md:py-3 rounded-full flex items-center gap-2 md:gap-3 shadow-sm border-none">
+          <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-brand-500 animate-pulse" />
+          <p className="text-[10px] md:text-[11px] font-bold text-slate-500 tracking-tight">
+            정답을 선택하면 다음 문제로 넘어갑니다.
           </p>
         </div>
       </footer>
