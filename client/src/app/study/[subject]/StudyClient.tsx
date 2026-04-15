@@ -287,7 +287,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         />
       </div>
 
-      <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-3 md:px-8 md:py-16 flex flex-col">
+      <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-2 md:px-8 md:py-8 flex flex-col">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -295,10 +295,10 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-            className="flex-1 flex flex-col gap-3 md:gap-12"
+            className="flex-1 flex flex-col gap-2 md:gap-6"
           >
             {/* 문제 */}
-            <div className="space-y-2 md:space-y-6">
+            <div className="space-y-1 md:space-y-3">
               <div className="flex items-center gap-2 md:gap-3">
                 <span className="px-2 py-0.5 md:px-3 md:py-1 bg-brand-50 text-brand-600 text-[9px] md:text-[10px] font-black tracking-widest rounded-full uppercase">
                   Q. {currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num}
@@ -345,7 +345,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     whileTap={!isAnswered ? { scale: 0.98 } : {}}
                     disabled={isAnswered}
                     onClick={() => handleAnswer(idx)}
-                    className={`group w-full px-3 py-3 md:p-8 rounded-2xl md:rounded-[2rem] border-2 flex items-center gap-3 md:gap-6 transition-all duration-300 text-left relative overflow-hidden ${styleStr}`}
+                    className={`group w-full px-3 py-2 md:px-8 md:py-5 rounded-2xl md:rounded-[2rem] border-2 flex items-center gap-3 md:gap-6 transition-all duration-300 text-left relative overflow-hidden ${styleStr}`}
                   >
                     <div className={`w-7 h-7 md:w-10 md:h-10 shrink-0 rounded-xl md:rounded-2xl flex items-center justify-center font-black text-sm md:text-base transition-all shadow-sm ${
                       isAnswered
