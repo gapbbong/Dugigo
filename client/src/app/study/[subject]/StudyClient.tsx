@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { supabase } from '@/lib/supabase';
 import { 
   ChevronLeft, 
+  ChevronRight,
   Timer, 
   CheckCircle2, 
   XCircle, 
@@ -42,7 +43,6 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [rEnd, setREnd] = useState<string | null>(null);
   const [paramsReady, setParamsReady] = useState(false);
 
-  // URL 파라미터 추출 (마운트 시 한 번만 실행)
   useEffect(() => {
     const s = searchParamsProps || {};
     setUnitFilter(s.unit || null);
@@ -53,7 +53,6 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     setParamsReady(true);
   }, [searchParamsProps]);
 
-  // 타이머 작동
   useEffect(() => {
     const timer = setInterval(() => {
       if (!isFinished) setElapsedSeconds(Math.floor((Date.now() - startTime) / 1000));
@@ -61,7 +60,6 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     return () => clearInterval(timer);
   }, [startTime, isFinished]);
 
-  // 문제 데이터 가져오기
   useEffect(() => {
     if (!paramsReady) return;
 
@@ -71,21 +69,12 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         const data = await res.json();
         if (data.questions) {
           let filtered = data.questions;
-          
-          if (unitFilter) {
-            filtered = data.questions.filter((q: any) => q.sub_unit === unitFilter);
-          }
-
-          if (rStart !== null && rEnd !== null) {
-            filtered = filtered.slice(parseInt(rStart), parseInt(rEnd));
-          }
-
+          if (unitFilter) filtered = data.questions.filter((q: any) => q.sub_unit === unitFilter);
+          if (rStart !== null && rEnd !== null) filtered = filtered.slice(parseInt(rStart), parseInt(rEnd));
           if (setNum && setSize) {
             const startIdx = (parseInt(setNum) - 1) * parseInt(setSize);
-            const endIdx = startIdx + parseInt(setSize);
-            filtered = filtered.slice(startIdx, endIdx);
+            filtered = filtered.slice(startIdx, startIdx + parseInt(setSize));
           }
-
           setQuestions(filtered.sort(() => Math.random() - 0.5));
         }
       } catch (err) {
@@ -99,34 +88,34 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
   const currentQuestion = questions[currentIndex];
 
+  // 답 선택 — 자동 넘김 없음, 결과만 표시
   const handleAnswer = (choiceIndex: number) => {
     if (selectedIndex !== null) return;
 
     setSelectedIndex(choiceIndex);
     const isCorrect = choiceIndex + 1 === parseInt(currentQuestion.answer);
-    
     setAnswers(prev => [...prev, { 
       questionId: currentQuestion.id || currentIndex.toString(), 
       isCorrect 
     }]);
+  };
 
-    setTimeout(() => {
-      if (currentIndex < questions.length - 1) {
-        setCurrentIndex(prev => prev + 1);
-        setSelectedIndex(null);
-      } else {
-        handleFinish();
-      }
-    }, 1200);
+  // 다음 버튼 핸들러
+  const handleNext = () => {
+    if (currentIndex < questions.length - 1) {
+      setCurrentIndex(prev => prev + 1);
+      setSelectedIndex(null);
+    } else {
+      handleFinish();
+    }
   };
 
   const handleFinish = async () => {
     setIsFinished(true);
-    
     try {
       const { data: userData } = await supabase.auth.getUser();
       if (userData.user) {
-        const correctCount = answers.filter(a => a.isCorrect).length + (selectedIndex !== null && (selectedIndex + 1 === parseInt(currentQuestion.answer)) ? 1 : 0);
+        const correctCount = answers.filter(a => a.isCorrect).length;
         await supabase.from('dukigo_study_logs').insert({
           user_id: userData.user.id,
           subject: subject,
@@ -216,10 +205,15 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     );
   }
 
+  const isAnswered = selectedIndex !== null;
+  const isLastQuestion = currentIndex === questions.length - 1;
+  const isCurrentCorrect = isAnswered && (selectedIndex + 1 === parseInt(currentQuestion.answer));
+
   return (
     <div className="min-h-screen relative flex flex-col text-slate-800">
       <div className="mesh-bg" />
 
+      {/* 네비게이션 */}
       <nav className="sticky top-0 z-50 px-4 py-2 glass-card border-none bg-white/40 backdrop-blur-md flex justify-between items-center h-12 md:h-20 md:px-8 md:py-4">
         <button onClick={() => router.back()} className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/50 rounded-xl hover:bg-white transition-all text-slate-600 shadow-sm">
           <ChevronLeft size={16} />
@@ -238,14 +232,37 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           </div>
         </div>
 
-        <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-brand-50 rounded-xl text-brand-600 font-black text-[10px] md:text-xs shadow-sm">
-          {Math.round(((currentIndex + 1) / questions.length) * 100)}%
-        </div>
+        {/* 우측 상단: 답 선택 전 → %, 선택 후 → 다음 버튼 */}
+        <AnimatePresence mode="wait">
+          {isAnswered ? (
+            <motion.button
+              key="next-btn"
+              initial={{ opacity: 0, scale: 0.8, x: 10 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              onClick={handleNext}
+              className="flex items-center gap-1 px-3 py-1.5 md:px-4 md:py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-xl font-black text-xs md:text-sm shadow-md shadow-brand-500/30 transition-all active:scale-95"
+            >
+              {isLastQuestion ? '완료' : '다음'}
+              <ChevronRight size={14} />
+            </motion.button>
+          ) : (
+            <motion.div
+              key="progress"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-brand-50 rounded-xl text-brand-600 font-black text-[10px] md:text-xs shadow-sm"
+            >
+              {Math.round(((currentIndex + 1) / questions.length) * 100)}%
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
 
+      {/* 진행 바 */}
       <div className="w-full h-1 bg-white/20">
         <motion.div 
-          initial={{ width: 0 }}
           animate={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
           className="h-full bg-gradient-to-r from-brand-600 to-cyan-400 shadow-[0_0_10px_rgba(99,91,255,0.4)]"
         />
@@ -261,6 +278,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
             className="flex-1 flex flex-col gap-3 md:gap-12"
           >
+            {/* 문제 */}
             <div className="space-y-2 md:space-y-6">
               <div className="flex items-center gap-2 md:gap-3">
                 <span className="px-2 py-0.5 md:px-3 md:py-1 bg-brand-50 text-brand-600 text-[9px] md:text-[10px] font-black tracking-widest rounded-full uppercase">
@@ -276,46 +294,47 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                 <motion.div 
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-white/50 p-6 rounded-[2.5rem] border border-white/60 shadow-sm flex justify-center"
+                  className="bg-white/50 p-4 md:p-6 rounded-[2rem] border border-white/60 shadow-sm flex justify-center"
                 >
                   <img 
                     src={currentQuestion.image} 
                     alt="Question Diagram" 
-                    className="max-h-[300px] object-contain rounded-xl"
+                    className="max-h-[200px] md:max-h-[300px] object-contain rounded-xl"
                   />
                 </motion.div>
               )}
             </div>
 
+            {/* 선택지 */}
             <div className="grid grid-cols-1 gap-2 md:gap-4">
               {(currentQuestion.choices || currentQuestion.options) && (currentQuestion.choices || currentQuestion.options).map((choice: string, idx: number) => {
                 const isCorrect = idx + 1 === parseInt(currentQuestion.answer);
                 const isSelected = selectedIndex === idx;
                 
-                if (choice === "" && idx > 0) return null; 
+                if (choice === "" && idx > 0) return null;
 
-                let styleStr = "glass-card bg-white/50 hover:bg-white text-slate-700 hover:text-brand-600";
-                if (selectedIndex !== null) {
-                  if (isCorrect) styleStr = "bg-emerald-50 text-emerald-600 border-emerald-200 shadow-[0_0_20px_rgba(16,185,129,0.1)] ring-1 ring-emerald-500 scale-[1.02]";
-                  else if (isSelected) styleStr = "bg-rose-50 text-rose-600 border-rose-200 shadow-[0_0_20px_rgba(244,63,94,0.1)] ring-1 ring-rose-500 grayscale-[0.5]";
-                  else styleStr = "opacity-40 grayscale pointer-events-none";
+                let styleStr = "glass-card bg-white/50 hover:bg-white text-slate-700 hover:text-brand-600 cursor-pointer";
+                if (isAnswered) {
+                  if (isCorrect) styleStr = "bg-emerald-50 text-emerald-700 border-emerald-300 shadow-[0_0_20px_rgba(16,185,129,0.15)] ring-1 ring-emerald-400 scale-[1.01]";
+                  else if (isSelected) styleStr = "bg-rose-50 text-rose-600 border-rose-200 ring-1 ring-rose-400 opacity-80";
+                  else styleStr = "opacity-35 grayscale pointer-events-none";
                 }
 
                 return (
                   <motion.button
                     key={idx}
-                    whileTap={{ scale: 0.98 }}
-                    disabled={selectedIndex !== null}
+                    whileTap={!isAnswered ? { scale: 0.98 } : {}}
+                    disabled={isAnswered}
                     onClick={() => handleAnswer(idx)}
                     className={`group w-full px-3 py-3 md:p-8 rounded-2xl md:rounded-[2rem] border-2 flex items-center gap-3 md:gap-6 transition-all duration-300 text-left relative overflow-hidden ${styleStr}`}
                   >
                     <div className={`w-7 h-7 md:w-10 md:h-10 shrink-0 rounded-xl md:rounded-2xl flex items-center justify-center font-black text-sm md:text-base transition-all shadow-sm ${
-                      isSelected || (selectedIndex !== null && isCorrect) 
-                        ? (isCorrect ? 'bg-emerald-500 text-white' : 'bg-rose-500 text-white')
+                      isAnswered
+                        ? (isCorrect ? 'bg-emerald-500 text-white' : isSelected ? 'bg-rose-500 text-white' : 'bg-slate-100 text-slate-400')
                         : 'bg-brand-50 text-brand-600 group-hover:bg-brand-600 group-hover:text-white'
                     }`}>
-                      {selectedIndex !== null && isCorrect ? <CheckCircle2 className="w-4 h-4 md:w-6 md:h-6" /> : 
-                       selectedIndex !== null && isSelected && !isCorrect ? <XCircle className="w-4 h-4 md:w-6 md:h-6" /> : 
+                      {isAnswered && isCorrect ? <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5" /> : 
+                       isAnswered && isSelected && !isCorrect ? <XCircle className="w-4 h-4 md:w-5 md:h-5" /> : 
                        idx + 1}
                     </div>
                     <span className="text-sm md:text-xl font-bold flex-1 leading-snug">{renderMath(choice)}</span>
@@ -323,18 +342,55 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                 );
               })}
             </div>
+
+            {/* 정오 결과 배너 (답 선택 후 표시) */}
+            <AnimatePresence>
+              {isAnswered && (
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 12 }}
+                  transition={{ duration: 0.3 }}
+                  className={`flex items-center gap-3 px-4 py-3 md:px-5 md:py-4 rounded-2xl ${
+                    isCurrentCorrect
+                      ? 'bg-emerald-50 border border-emerald-200'
+                      : 'bg-rose-50 border border-rose-200'
+                  }`}
+                >
+                  {isCurrentCorrect ? (
+                    <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
+                  ) : (
+                    <XCircle className="w-5 h-5 text-rose-500 shrink-0" />
+                  )}
+                  <div className="flex-1">
+                    <p className={`text-sm font-black ${isCurrentCorrect ? 'text-emerald-700' : 'text-rose-700'}`}>
+                      {isCurrentCorrect ? '정답입니다! 🎉' : '오답입니다'}
+                    </p>
+                    {!isCurrentCorrect && (
+                      <p className="text-xs font-bold text-slate-500 mt-0.5">
+                        정답: <span className="text-emerald-600 font-black">
+                          {currentQuestion.answer}번 — {renderMath((currentQuestion.choices || currentQuestion.options)?.[parseInt(currentQuestion.answer) - 1] || '')}
+                        </span>
+                      </p>
+                    )}
+                  </div>
+                  <button
+                    onClick={handleNext}
+                    className={`flex items-center gap-1 px-3 py-1.5 rounded-xl font-black text-xs transition-all active:scale-95 ${
+                      isCurrentCorrect
+                        ? 'bg-emerald-500 hover:bg-emerald-600 text-white'
+                        : 'bg-rose-500 hover:bg-rose-600 text-white'
+                    }`}
+                  >
+                    {isLastQuestion ? '완료' : '다음'} <ChevronRight size={13} />
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
           </motion.div>
         </AnimatePresence>
       </main>
-
-      <footer className="w-full py-2 md:py-8 px-4 md:px-8 flex justify-center">
-        <div className="glass-card bg-white/30 px-4 py-2 md:px-6 md:py-3 rounded-full flex items-center gap-2 md:gap-3 shadow-sm border-none">
-          <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-brand-500 animate-pulse" />
-          <p className="text-[10px] md:text-[11px] font-bold text-slate-500 tracking-tight">
-            정답을 선택하면 다음 문제로 넘어갑니다.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
