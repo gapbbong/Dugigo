@@ -1,14 +1,11 @@
 import fs from 'fs';
 import https from 'https';
 
-const API_KEY = 'AIzaSyBijZ3TNMEiPW-iC_farcdl-9ysKnqRzS8';
-const FILE_URI = 'https://generativelanguage.googleapis.com/v1beta/files/q8k7ggg6ws08';
+const API_KEY = 'AIzaSyA4k2juxTP3wGn7m2Ma89LsRwO2yXn_9FE';
+const FILE_URI = 'https://generativelanguage.googleapis.com/v1beta/files/cmcqhiknaom7';
 
 const ROUNDS = [
-  { year: 2019, rounds: ['01', '02', '03', '04'] },
-  { year: 2020, rounds: ['01', '02', '03', '04'] },
-  { year: 2021, rounds: ['01', '02', '03', '04'] },
-  { year: 2022, rounds: ['01', '02', '03'] }
+  { year: 2015, rounds: ['01', '02', '04', '05'] }
 ];
 
 /**
@@ -111,12 +108,7 @@ IMPORTANT:
 async function processAll() {
   for (const group of ROUNDS) {
     for (const round of group.rounds) {
-      const fileName = `e:\\DugiGo\\client\\src\\data\\${group.year}_${round}_questions.json`;
-      if (fs.existsSync(fileName)) {
-        console.log(`Skipping ${group.year} Round ${round} (Already exists)`);
-        continue;
-      }
-
+      const fileName = `e:\\DugiGo\\client\\src\\data\\전기기능사\\${group.year}_${round}_questions.json`;
       console.log(`Starting ${group.year} Round ${round}...`);
       try {
         const chunk1 = await digitizeChunk(group.year, round, 1, 20);

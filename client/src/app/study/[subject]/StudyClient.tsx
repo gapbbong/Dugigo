@@ -171,13 +171,6 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     }
   };
 
-  // 이전 버튼 핸들러
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(prev => prev - 1);
-      setSelectedIndex(null);
-    }
-  };
 
   const handleRetry = () => {
     setDirection(0);
