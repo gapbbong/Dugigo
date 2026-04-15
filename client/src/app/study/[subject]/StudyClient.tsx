@@ -127,6 +127,10 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           handleNext();
         }
       }
+      // 왼쪽 방향키: 이전 문제
+      if (e.key === 'ArrowLeft') {
+        handlePrev();
+      }
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -162,6 +166,14 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       }, 1500);
     } catch {
       setReportStatus('idle');
+    }
+  };
+
+  // 이전 버튼 핸들러
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(prev => prev - 1);
+      setSelectedIndex(null);
     }
   };
 
@@ -278,7 +290,10 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
       {/* 네비게이션 */}
       <nav className="sticky top-0 z-50 px-4 py-2 glass-card border-none bg-white/40 backdrop-blur-md flex justify-between items-center h-12 md:h-20 md:px-8 md:py-4">
-        <button onClick={() => router.back()} className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/50 rounded-xl hover:bg-white transition-all text-slate-600 shadow-sm">
+        <button 
+          onClick={() => currentIndex > 0 ? handlePrev() : router.back()} 
+          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/50 rounded-xl hover:bg-white transition-all text-slate-600 shadow-sm"
+        >
           <ChevronLeft size={16} />
         </button>
         
