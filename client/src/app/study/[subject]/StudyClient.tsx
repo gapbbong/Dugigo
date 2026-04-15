@@ -95,6 +95,9 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   }, [subject, unitFilter, rStart, rEnd, setNum, setSize, paramsReady]);
 
   const currentQuestion = questions[currentIndex];
+  const isAnswered = selectedIndex !== null;
+  const isLastQuestion = currentIndex === questions.length - 1;
+  const isCurrentCorrect = currentQuestion && isAnswered && (selectedIndex + 1 === parseInt(currentQuestion.answer));
 
   // 답 선택 — 자동 넘김 없음, 결과만 표시
   const handleAnswer = (choiceIndex: number) => {
@@ -268,9 +271,6 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     );
   }
 
-  const isAnswered = selectedIndex !== null;
-  const isLastQuestion = currentIndex === questions.length - 1;
-  const isCurrentCorrect = isAnswered && (selectedIndex + 1 === parseInt(currentQuestion.answer));
 
   return (
     <div className="min-h-screen relative flex flex-col text-slate-800">
