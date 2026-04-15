@@ -232,32 +232,9 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           </div>
         </div>
 
-        {/* 우측 상단: 답 선택 전 → %, 선택 후 → 다음 버튼 */}
-        <AnimatePresence mode="wait">
-          {isAnswered ? (
-            <motion.button
-              key="next-btn"
-              initial={{ opacity: 0, scale: 0.8, x: 10 }}
-              animate={{ opacity: 1, scale: 1, x: 0 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              onClick={handleNext}
-              className="flex items-center gap-1 px-3 py-1.5 md:px-4 md:py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-xl font-black text-xs md:text-sm shadow-md shadow-brand-500/30 transition-all active:scale-95"
-            >
-              {isLastQuestion ? '완료' : '다음'}
-              <ChevronRight size={14} />
-            </motion.button>
-          ) : (
-            <motion.div
-              key="progress"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-brand-50 rounded-xl text-brand-600 font-black text-[10px] md:text-xs shadow-sm"
-            >
-              {Math.round(((currentIndex + 1) / questions.length) * 100)}%
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-brand-50 rounded-xl text-brand-600 font-black text-[10px] md:text-xs shadow-sm">
+          {Math.round(((currentIndex + 1) / questions.length) * 100)}%
+        </div>
       </nav>
 
       {/* 진행 바 */}
