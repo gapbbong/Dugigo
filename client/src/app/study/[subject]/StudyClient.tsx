@@ -360,7 +360,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         />
       </div>
 
-      <main className="flex-1 w-full max-w-2xl mx-auto px-4 py-2 md:px-8 md:py-8 flex flex-col">
+      <main className="flex-1 w-full max-w-xl mx-auto px-4 py-2 md:px-8 md:py-8 flex flex-col">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentIndex}
