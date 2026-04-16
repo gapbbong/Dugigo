@@ -488,10 +488,14 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                       isCurrentCorrect ? 'bg-emerald-50' : 'bg-rose-50'
                     }`}>
                       <p className="text-xs md:text-base font-black uppercase tracking-widest text-slate-900 mb-1.5">해설</p>
-                      <div className="space-y-0.5">
-                        {currentQuestion.explanation.split('\n').map((line: string, i: number) => (
-                          <p key={i} className="leading-relaxed text-sm md:text-xl font-bold">{renderMath(line)}</p>
-                        ))}
+                      <div className="space-y-0.5 explanation-table">
+                        {currentQuestion.explanation.includes('<table') ? (
+                          <div dangerouslySetInnerHTML={{ __html: currentQuestion.explanation }} />
+                        ) : (
+                          currentQuestion.explanation.split('\n').map((line: string, i: number) => (
+                            <p key={i} className="leading-relaxed text-sm md:text-xl font-bold">{renderMath(line)}</p>
+                          ))
+                        )}
                       </div>
                     </div>
                   )}
