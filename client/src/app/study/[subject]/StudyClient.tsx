@@ -229,13 +229,32 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
   const renderMath = (text: string) => {
     if (!text) return '';
-    const parts = text.split(/(\$.*?\$)/g);
+    // 정규식: $...$, \(...\), \[...\], 또는 \로 시작하는 명령(\text{}, \times 등)을 찾음
+    const regex = /(\$.*?\$|\\\(.*?\\\)|\\\[.*?\\\]|\\text\{.*?\}|\\\w+(\{.*?\})?)/g;
+    const parts = text.split(regex);
+    
     return parts.map((part, i) => {
+      if (!part) return null;
+      
+      // $...$ 형태
       if (part.startsWith('$') && part.endsWith('$')) {
         return <InlineMath key={i} math={part.slice(1, -1)} />;
       }
+      // \(...\) 형태
+      if (part.startsWith('\\(') && part.endsWith('\\)')) {
+        return <InlineMath key={i} math={part.slice(2, -2)} />;
+      }
+      // \[...\] 형태
+      if (part.startsWith('\\[') && part.endsWith('\\]')) {
+        return <InlineMath key={i} math={part.slice(2, -2)} />;
+      }
+      // \text{...} 또는 \명령 형태 (단독 기초 수식 포함)
+      if (part.startsWith('\\')) {
+        return <InlineMath key={i} math={part} />;
+      }
+      
       return <span key={i}>{part}</span>;
-    });
+    }).filter(Boolean);
   };
 
   const formatTime = (seconds: number) => {
@@ -502,17 +521,16 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         </AnimatePresence>
       </main>
 
-      {/* 플로팅 이동 버튼 */}
       <AnimatePresence>
         {isAnswered && (
           <motion.button
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            whileHover={{ scale: 1.1, x: -5 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.5 }}
+            whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={handleNext}
-            className="fixed right-6 md:right-[7.5%] md:translate-x-1/2 bottom-10 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-16 h-16 md:w-20 md:h-20 bg-brand-600 hover:bg-brand-700 text-white rounded-full flex items-center justify-center shadow-2xl shadow-brand-500/40 border-4 border-white transition-colors"
+            className="fixed right-6 md:right-[7.5%] md:translate-x-1/2 bottom-12 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-16 h-16 md:w-20 md:h-20 bg-brand-600 hover:bg-brand-700 text-white rounded-full flex items-center justify-center shadow-2xl shadow-brand-500/40 border-4 border-white transition-colors"
           >
             <ChevronRight className="w-8 h-8 md:w-10 md:h-10" />
           </motion.button>
@@ -522,13 +540,13 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       <AnimatePresence>
         {currentIndex > 0 && (
           <motion.button
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            whileHover={{ scale: 1.1, x: 5 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.5 }}
+            whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={handlePrev}
-            className="fixed left-6 md:left-[7.5%] md:-translate-x-1/2 bottom-10 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-16 h-16 md:w-20 md:h-20 bg-white hover:bg-slate-50 text-slate-400 hover:text-brand-600 rounded-full flex items-center justify-center shadow-2xl shadow-black/5 border-4 border-slate-100 transition-colors"
+            className="fixed left-6 md:left-[7.5%] md:-translate-x-1/2 bottom-12 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-16 h-16 md:w-20 md:h-20 bg-white hover:bg-slate-50 text-slate-400 hover:text-brand-600 rounded-full flex items-center justify-center shadow-2xl shadow-black/5 border-4 border-slate-100 transition-colors"
           >
             <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" />
           </motion.button>
