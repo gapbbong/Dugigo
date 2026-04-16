@@ -435,6 +435,25 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                 );
               })}
             </div>
+            
+            {/* 모바일 하단 이동 버튼 (선택지 바로 밑) */}
+            <div className="flex md:hidden items-center justify-center gap-4 mt-6">
+              <button 
+                onClick={handlePrev}
+                disabled={currentIndex === 0}
+                className="flex-1 py-4 rounded-2xl bg-white border-2 border-slate-100 text-slate-400 font-black flex items-center justify-center gap-2 active:scale-95 transition-all disabled:opacity-30"
+              >
+                <ChevronLeft className="w-5 h-5" /> 이전
+              </button>
+              
+              <button 
+                onClick={handleNext}
+                disabled={!isAnswered}
+                className="flex-[2] py-4 rounded-2xl bg-brand-600 text-white font-black flex items-center justify-center gap-2 active:scale-95 transition-all disabled:opacity-50 shadow-lg shadow-brand-500/20"
+              >
+                {isLastQuestion ? '학습 완료' : '다음 문항'} <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
 
             {/* 정오 결과 + 해설 배너 (답 선택 후 표시) */}
             <AnimatePresence>
@@ -508,7 +527,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             whileHover={{ scale: 1.1, x: -5 }}
             whileTap={{ scale: 0.9 }}
             onClick={handleNext}
-            className="fixed right-4 md:right-[7.5%] md:translate-x-1/2 bottom-8 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-14 h-14 md:w-20 md:h-20 bg-brand-600 hover:bg-brand-700 text-white rounded-full flex items-center justify-center shadow-2xl shadow-brand-500/40 border-4 border-white transition-colors"
+            className="hidden md:flex fixed right-4 md:right-[7.5%] md:translate-x-1/2 bottom-8 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-14 h-14 md:w-20 md:h-20 bg-brand-600 hover:bg-brand-700 text-white rounded-full items-center justify-center shadow-2xl shadow-brand-500/40 border-4 border-white transition-colors"
           >
             <ChevronRight className="w-6 h-6 md:w-10 md:h-10" />
           </motion.button>
@@ -524,7 +543,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             whileHover={{ scale: 1.1, x: 5 }}
             whileTap={{ scale: 0.9 }}
             onClick={handlePrev}
-            className="fixed left-4 md:left-[7.5%] md:-translate-x-1/2 bottom-8 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-14 h-14 md:w-20 md:h-20 bg-white hover:bg-slate-50 text-slate-400 hover:text-brand-600 rounded-full flex items-center justify-center shadow-2xl shadow-black/5 border-4 border-slate-100 transition-colors"
+            className="hidden md:flex fixed left-4 md:left-[7.5%] md:-translate-x-1/2 bottom-8 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-14 h-14 md:w-20 md:h-20 bg-white hover:bg-slate-50 text-slate-400 hover:text-brand-600 rounded-full items-center justify-center shadow-2xl shadow-black/5 border-4 border-slate-100 transition-colors"
           >
             <ChevronLeft className="w-6 h-6 md:w-10 md:h-10" />
           </motion.button>
