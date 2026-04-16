@@ -289,7 +289,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
       <main className="flex-1 w-full max-w-screen-2xl mx-auto px-4 md:px-[15%] py-2 pb-32 md:py-8 md:pb-8 flex flex-col">
         <AnimatePresence mode="wait" custom={direction}>
-          <motion.div key={currentIndex} custom={direction} initial={{ opacity: 0, x: direction > 0 ? 50 : -50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: direction > 0 ? -50 : 50 }} transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }} className="flex-1 flex flex-col gap-2 md:gap-6">
+          <motion.div key={currentIndex} custom={direction} initial={{ opacity: 0, x: direction > 0 ? 50 : -50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: direction > 0 ? -50 : 50 }} transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }} className="flex-1 flex flex-col gap-4 md:gap-12">
             <div className="space-y-2 md:space-y-4">
               <div className="flex items-center gap-3"><span className="px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 text-brand-600 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase">Q. {currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num}</span><div className="h-px flex-1 bg-brand-100/50" /></div>
               <h2 className="text-lg md:text-4xl font-bold text-slate-900 leading-[1.4] md:leading-[1.3] tracking-tight">{renderMath(currentQuestion.question)}</h2>
@@ -300,7 +300,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             )}
 
             {/* 선택지 */}
-            <div className="grid grid-cols-1 gap-2 md:gap-4">
+            <div className="grid grid-cols-1 gap-4 md:gap-8">
               {(currentQuestion.choices || currentQuestion.options) && (currentQuestion.choices || currentQuestion.options).map((choice: string, idx: number) => {
                 const isCorrect = idx + 1 === parseInt(currentQuestion.answer);
                 const isSelected = selectedIndex === idx;
@@ -323,7 +323,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             </div>
 
             {/* 모바일 하단 이동 버튼 (선택지 바로 밑) */}
-            <div className="flex md:hidden items-center justify-between gap-4 mt-6 px-2">
+            <div className="flex md:hidden items-center justify-between gap-4 mt-3 px-2">
               <button 
                 onClick={handlePrev} 
                 disabled={currentIndex === 0} 
