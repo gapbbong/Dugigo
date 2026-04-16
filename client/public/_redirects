@@ -1,0 +1,2 @@
+# Next.js routing is handled by @netlify/plugin-nextjs
+# Do NOT add /* /index.html 200 here — it breaks SSR routes

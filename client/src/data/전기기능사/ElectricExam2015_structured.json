@@ -1,0 +1,3603 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "page": 1,
+      "text": "유효 전력의 식으로 옳은 것은? (단, E: 전압, I: 전류, θ: 위상각)",
+      "options": [
+        {
+          "number": 1,
+          "text": "EI cosθ",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "EI sinθ",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "EI tanθ",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "EI",
+          "image": null
+        }
+      ],
+      "explanation": "유효전력 P = EI cosθ [W] 입니다.",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 2,
+      "page": 1,
+      "text": "물질에 따라 자석에 반발하는 물체를 무엇이라 하는가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "비자성체",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "상자성체",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "반자성체",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "가역성체",
+          "image": null
+        }
+      ],
+      "explanation": "자성체의 종류:\n- 강자성체(μs >> 1): 자기장 방향으로 강하게 자화.\n- 상자성체(μs > 1): 자기장 방향으로 미약하게 자화.\n- 반자성체(μs < 1): 자기장 반대 방향으로 자화.",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 3,
+      "page": 1,
+      "text": "도체를 전기 전도도가 좋은 순서대로 나열한 것은?",
+      "options": [
+        {
+          "number": 1,
+          "text": "은 -> 구리 -> 금 -> 알루미늄",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "구리 -> 금 -> 은 -> 알루미늄",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "금 -> 구리 -> 알루미늄 -> 은",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "알루미늄 -> 금 -> 은 -> 구리",
+          "image": null
+        }
+      ],
+      "explanation": "도전율 순서: 은(Ag) > 구리(Cu) > 금(Au) > 알루미늄(Al)",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 4,
+      "page": 1,
+      "text": "전원과 부하가 다같이 Δ결선된 3상 평형 회로가 있다. 상전압이 200[V], 부하 임피던스가 Z = 6 + j8 [Ω]인 경우 선전류는 몇 [A]인가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "20",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "20/√3",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "20√3",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "10√3",
+          "image": null
+        }
+      ],
+      "explanation": "Δ결선에서 Vp = Vl = 200[V].\n임피던스 절대값 |Z| = √(6² + 8²) = 10[Ω].\n상전류 Ip = Vp / |Z| = 200 / 10 = 20[A].\n선전류 Il = √3 Ip = 20√3 [A].",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 5,
+      "page": 1,
+      "text": "공기 중에서 자속 밀도 3[Wb/m²]의 평등 자장 속에 길이 10[cm]의 직선 도선을 자장의 방향과 직각으로 놓고 여기에 4[A]의 전류를 흐르게 하면 이 도선이 받는 힘은 몇 [N]인가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "0.5",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "1.2",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "2.8",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "4.2",
+          "image": null
+        }
+      ],
+      "explanation": "전자력 F = BIl sinθ = 3 * 4 * 0.1 * sin 90° = 1.2 [N]",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 5,
+      "page": 2,
+      "text": "공기 중에서 자속 밀도 3006/ㅁ의 BE\n자장 속에 길이 10[6ㅁ]의 직선 도선을 자\n장의 방향과 직각으로 놓고 여기에 4[ㅅ의\n전류를 흐르게 하면 이 도선이 받는 힘은\n몇 [4]인가?\n@® 05",
+      "options": [
+        {
+          "number": 1,
+          "text": ".2",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "8",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": ".2\n AA F=IBlsind=4x3x%0.1=12[N]\n0b 저항이 10219! 도체에 LAI] BFE 10\n분간 흘렸다면 발생하는 열량은 몇 [ㅇ21|\n인가?\n9069",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": ".44",
+          "image": null
+        },
+        {
+          "number": 5,
+          "text": ".46           @ 6.24\n 전열기 발생 열량\nH=024% PRt=024x1*x 10x 10% 60\n=1,440= 1.44/cal]\nww",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 7,
+      "page": 2,
+      "text": "다음 회로의 합성 정전 용량[/.피은?\n [08                     21",
+      "options": [
+        {
+          "number": 1,
+          "text": "30)",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "ha",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "ALF\n 2AuF)it 4[//피은 병렬이므로 6[//피이고 다시\npF) 직렬 접속이므로 합성 정전 용량은 다\n음과 같다.\na= D8 tum",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 8,
+      "page": 2,
+      "text": "= toosin[314t- 7 viet 파형의 주파수\n 는 약 몇 [4]인가?\n@",
+      "options": [
+        {
+          "number": 1,
+          "text": "0            ® 50\n® 60             @ 80\nTH ㆍ 각주파수 w= 2rf=314r",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 5,
+      "page": 2,
+      "text": "TEE 50 060 07.0 08.0\n3",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 9,
+      "page": 2,
+      "text": "정전 용량 cur 콘덴서에 충전된 전하\n가 0= V2 @51ㅁ[이와 같이 변화하도\n록 하였다면, 이때 콘덴서에 흘러 들어가\n는 전류의 값은?\n@ i= V2wQsinwt\n® i= V2wQcoswt\n® i= vV2wQsin(wi—60°)\n@ i= v2wQcos (wt— 60°)\n 정전 2Y(CF) 특징 : 전류가 전압(또는 전\n하량)보다 위상 90° 앞선다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 10,
+      "page": 2,
+      "text": "[미와 6[피의 콘덴서를 병렬 접속하고\n 10[vie 전압을 가했을 때 축적되는 전하\n량 <[이는?",
+      "options": [
+        {
+          "number": 1,
+          "text": "9\n@50\n® 80",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "00\n * 병렬 접속이므로 합성 정전 용량\nGy = C+ Cy =4+6=10[F]\n* 전하량\nQ=C,V=10x10=100[C]",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 11,
+      "page": 2,
+      "text": "회로망 임의의 접속점에 유입되는 전류는\n그7= 0라는 법칙은?\n<) 쿨롱의 법칙\n© 패러데이의 법칙\n<) 키르히호프의 제1법칙\n@ 키르히호프의 제8법칙\n 키르히호프의 MY : 유입 전류의 총합은 유출\n전류의 총합과 같다.\nZL =Zhw\nZh — Lu) =0\n09.2 1089 1.9\n\n\n[P3]\ni +",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 12,
+      "page": 3,
+      "text": "자체 인덕턴스가 각각 160[mH], 250[mH]\n의 두 코일이 있다. 두 코일 사이의 상호\n인덕턴스가 150[ㅁ8]이면 결합 계수는?",
+      "options": [
+        {
+          "number": 1,
+          "text": "0.5            @)0.62\n® 0.75           @ 0.86\n 자기 인덕턴스와 상호 인덕턴스 관계식은\nM=k/LL,[HI0<k<",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "wpe DM\n결함 계수 《= -승는\n_    150\n= Vieox20\n150     =\n= Tx50 07",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 13,
+      "page": 3,
+      "text": "전기장의 세기 단위로 ge 것은?\n[08150        @ [F/m)",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 8,
+      "page": 3,
+      "text": "[AT/m]       @ [V/m]\nFH 전기장의 세기 : 전기장 내에 +1|이의 단위 A\n전하를 놓았을 때 이 단위 정전하에 작용하는\n힘의 세기는 다음과 같다.\nre @ yin @\nEB  po  9x10” x 3 [V/m]",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 14,
+      "page": 3,
+      "text": "기전력이 v,[v1, 내부 저항이 rile! nif\n의 전지를 직렬 연결하였다. 전체 내부 저\n항을 87 나타낸 것은?\noR          @ nr\nn\n® 5           @ nr?\nn\n 전지 ㅠ개가 직렬 접속이므로 내부 저항은 nr\n[Ql],",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 15,
+      "page": 3,
+      "text": "비정현파의 실효값을 나타낸 것으로 울은\n것은?\n© 최대파의 실효값\n<) 각 고조파의 실효값의 합\nTEED: 120 130 14. 150 18\n\n————————— =.\n20154 제1회 기출문제 | OW [",
+      "options": [
+        {
+          "number": 1,
+          "text": "각 고조파의 실효값 합의 제곱근\n@ 각 고조파 실효값 AF gol 대한\n제곱근\n 비정현파의 실효값 : 각 고조파 실효값 제곱의\n합에 대한 제곱근",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 16,
+      "page": 3,
+      "text": "평균 반지름이 ~[ㅁ이고, 감은 횟수가 //인\n환상 솔레노이드에 전류 7[^ㅅ가 흐를 때\n내부 자기장의 세기 HIAT/mls?\n_ NI\n© 세\n_M\n@ d= or\n_ 2a\n® #= NT\n= 그\n@ #= NT\n 환상 술레노이드 내부 자계(평등 자계)\n20 22\n고 구=골09",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 17,
+      "page": 3,
+      "text": "그림의 병렬 공진 회로에서 공진 주파수\n70 18지는?\n1\nI\nR       I\nve\nLg       e\n_ 1 [RT\n@ fo= awVL LC\n_ 1/12 1\n®lm Fm 1c\n1/1\n®h=3\\Ic\"&\n_1   /  1 Rr\nD fo= w\\zc Zz",
+      "options": [
+        {
+          "number": 1,
+          "text": "7.9\n_— 총 remo",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 18,
+      "page": 4,
+      "text": "ame 단자 1-2에서 본 노튼 등가 회로의\n개방단 컨덕턴스는 몇 [ㅇ]인가?\n209]    0809]   1\nFav   Lua\n2\n® 0.5",
+      "options": [
+        {
+          "number": 1,
+          "text": "@ 58\n 1-3단자에서 전원측을 바라봤을 때 합성 저항\n은 0.8[]은 직렬이고 2(Q), 3[9]은 병렬 접\n속이므로\n* 등가 저항 By =08+ 233-500)\n1   1\n* 컨덕턴스 G= Ry 2 05]\n&",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 19,
+      "page": 4,
+      "text": "히스테리시스손은 최대 자속 밀도 및 주파\n수의 각각 몇 승에 비례하는가?\n© 최대 자속 밀도 : 1.6, 주파수 : 1.0\n통 TED: 180 19.0 200 210\n\n—————————————————\n\n< HY 자속 밀도 : 10, 주파수 : 16\n@ 최대 자속 밀도 : 1.0, 주파수 : 1.0\n@ 최대 자속 밀도 : 1.6, 주파수 : 1.6\n\n 히스테리시스손은 자성체를 자화시킬 때 발생\n하는 손실로 철손의 일부이다.\nPo fB, 이므로 최대 자속 밀도의 1.6승에\n비례하고 주파수에 비례한다.\n\nwie",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 20,
+      "page": 4,
+      "text": "어떤 도체의 길이를 2배로 하고 단면적을",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 12,
+      "page": 4,
+      "text": "했을 때의 저항은 원래 저항의 몇 배\n가 되는가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "배",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "배\n@ 6배\n@ ow",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 21,
+      "page": 4,
+      "text": "사용 중인 변류기의 2차를 개방하면 어떻\n게 되는가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "차 전류가 감소한다.",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "차 권선에 10[9]가 걸린다.",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "개방단의 전압은 불변하고 안전하다.",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "차 권선에 고압이 유도된다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 22,
+      "page": 5,
+      "text": "동기 전동기에 관한 내용으로 틀린 것은?\n<) 기동 토크가 작다.\n® 역률을 조정할 수 없다.\n<) 난조가 발생하기 쉽다.\n@ 여자기가 필요하다.\n 동기 전동기의 특징\n* 장점\n- 속도가 일정하다.\n- 역률 조정이 가능하다,\n- 전부하 효율이 좋다.\n- 공극이 크고 기계적으로 튼튼하다.\n* 단점\n- 기동 토크가 작다.\n- 속도 제어가 어렵다.\n- 직류 여자기가 필요하다.\n- 난조가 일어나기 쉽다.\n* 용도 : 시멘트 공장의 분쇄기, 공기 압축기,\n송풍기",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 23,
+      "page": 5,
+      "text": "다음 중 동기 전동기의 직류 여자 전류가 증\n가될 때의 현상으로 §2 것은 무엇인가?\n<) 진상 역률을 만든다.\n® 지상 역률을 만든다,\n@ 동상 역률을 만든다.\n@ 진상ㆍ지상 역률을 만든다.\n 동기 조상기 \\곡선 : 0080 =1인 상태에서 계자\n전류를 증감할 경우\n* 과여자(계자 전류 증가) ：증가하는 전기\n자 전류가 앞선 전류가 되어 콘덴서로 작\n용한다.\n* 부족 여자(계자 전류 감소) : 중가하는 전기\n자 전류가 뒤진 전류가 되어 리액터로 작용\n한다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 24,
+      "page": 5,
+      "text": "직류 스테핑 모터(20 stepping motor)2|\n특징 중 가장 옮은 것은?\n© 교류 동기 서보 모터에 비하여 효율\n이 나쁘고 토크 발생도 작다.\nTEED) 20 BO 24. 50 2\n\nEET hol\n2015년 제!회 기출문제 、 00구\nc—————————————————————\n< 입력되는 전기 신호에 따라 계속하\n여 회전한다.\n® 일반적인 공작 기계에 많이 사용된다.\n@ AL 이용하여 특수 기계의 속도,\n거리, 방향 등을 정확하게 제어할 수\n있다.\n 직류 스테핑 모터\n＊ 전기 신호를 받아 회전 운동으로 바꾸고 기계\n적 이동을 하게 한 전동기로, 자동 제어 장치\n를 제어할 때 주로 사용한다.\n© 교류 동기 서보 모터에 비하여 효율이 훨씬\n좋고, 큰 토크를 발생한다.\n+ 일력되는 각 전기 신호에 따라 규정된 각만큼\n회전한다.\n© 전동기 출력을 이용해 속도, 거리, 방향 FE\n정확하게 제어할 수 있다.\nwick",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 9,
+      "page": 5,
+      "text": "절연 내력이 클 것\n@ 인화점이 낮을 것\n@ 응고점이 높을 것\n@ 비열이 작을 것\n 변압기 절연유의 구비 조건\n* 절연 내력이 클 것\n＊ 인화점이 높을 것\n* 응고점이 낮을 것\n* 점도가 낮을 것\n* 비열이 커 냉각 효과가 클 것\n＊ 화학적으로 안정적일 것\n＊ 고온에서 산화되거나 석출물이 발생하지 않\n을 것\nwick",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 26,
+      "page": 5,
+      "text": "동기기에서 제동 AME 설치하는 이유로\n 옮은 것은?\n© 역률 개선     @ 출력 증가\n@) 전압 조정     @ 난조 방지\n 제동 권선의 목적\nㆍ 난조 방지\n＊ 기동 토크 발생\n.@\n@® REECE.\n\n\n[P6]\n| CC . 과년도 출제문제\nEE ———",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 27,
+      "page": 6,
+      "text": "we 전압을 높은 전압으로 su uf 일반적\n으로 사용되는 변압기의 3상 결선 방식은?\n@ 스-스        @ 스-모\n® Y-Y           @ Y-4o\n -스, 스-* 결선의 특성 : YN 장점과 a2\n선의 장점을 모두 가지고 있는 결선으로, 주로\n-스는 강압용, A-Ye 승압용으로 사용하면서\n다음과 같은 특성을 갖는다.\n* 결선 중성점을 접지할 수 있다,\n© 스결선에 의한 여자 전류의 제8고조파 통로가\n형성되므로 제8고조파 장해가 작고, 기전력\n파형이 사인파가 된다,\n* 1ㆍ차 전압 및 전류 간에는 Grade\n위상차가 발생한다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 28,
+      "page": 6,
+      "text": "선풍기, 가정용 펌프, 헤어 드라이기 등에\n주로 사용되는 전동기는?",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 2,
+      "page": 6,
+      "text": "단상 유도 전동기\n@ 권선형 유도 전동기\n® 농기 전동기\n@ 직류 직권 전동기\n 단상 유도 전동기의 용도\n© 분상 기동형 : 전기 냉장고, 세탁기, 소형 공\n작 기계, 펌프 등\n＊ 콘덴서 기동형 : 2000 이상의 가정용 Hx,\n송풍기, 소형 공작 기계\n＊ 영구 콘덴서형 : 큰 기동 토크를 요하지 않는\n선풍기, 세탁기\n© Holy 코일형 : AEE 전동기, 소형 선풍기\n등 수십 와트 이하의 소형 전동기",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 29,
+      "page": 6,
+      "text": "슬립이 (인 유도 전동기에서 동기 속도\n가 1,200[rpm] 때 전동기의 회전 속도\n [rpm]=?\n@ 697",
+      "options": [
+        {
+          "number": 1,
+          "text": ",051",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": ",152",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": ",321\nCEE): 70 80 50 00",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "N,",
+          "image": null
+        },
+        {
+          "number": 5,
+          "text": "x 1,200 = 1,152[rpm]",
+          "image": null
+        },
+        {
+          "number": 6,
+          "text": "이므로\n입력 P= Posh =60 x 0.8[MW]\n£4 1,600(kW]=1,6{MW]\n_ 60X08-16\n= —eox08 ^ 100\n= 97(%]",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 31,
+      "page": 6,
+      "text": "부흐홀츠 계전기로 보호되는 기기는?\n\n@° 변압기        < 유도 전동기\n@ 직류 발전기 @ 교류 발전기\n\nTH 부흐홀츠 계전기는 변압기 주탱크와 콘서베이\n터 사이에 설치하여 고장 발생 시 절연유의 온\n도가 상승하여 유증기가 콘서베이터로 올라갈\n때 유증기를 검출하여 경보 및 차단을 하기 위\n한 기계적 보호 장치이다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 32,
+      "page": 6,
+      "text": "주상 변압기의 고압측에 여러 개의 탭을 설\n치하는 이유는?\n© 선로 고장 대비\n@ 선로 전압 조정",
+      "options": [
+        {
+          "number": 1,
+          "text": "선로 역률 개선\n@ 선로 과부하 방지",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 9,
+      "page": 7,
+      "text": "전원의 극수를 바꾼다.\n0@ 전원의 주파수를 바꾼다.",
+      "options": [
+        {
+          "number": 1,
+          "text": "3상 전원 3선 중 두 선의 접속을 바꾼다.\n@ 기동 보상기를 이용한다.\n 3상 유도 전동기의 3선 중 3선의 결선을 바꾸면\n회전 자계의 회전 방향이 반데로 되어 전동기는\n역회전을 한다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 3,
+      "page": 7,
+      "text": "다음 중 3상 전파 정류 회로에서 전원\n250(v] 때 부하에 나타나는 전압[?]의\n@” 최대값은?\n© ok 177        @ oF 292\n@ °F 337        @ °F 530\nFB 전원 250[\\]는 실효같이므로\n*＊ 직류분 전압 F,=135E=135X250\n=337.62[V]\n«Ag 5, = Ei = ZX 37.62=5301V)\nhk\n35 3단자 사이리스터가 아닌 것은?\n 0 808           @ SCR",
+      "options": [
+        {
+          "number": 1,
+          "text": "TRIAC         @ GTO\n 사이리스터의 특성\n© SCR: 8단자 단방향성 사이리스터\n© GTO: 3단자 단방향성 사이리스터(게이트 신\n호로 턴 오프 가능 소자)\n* TRIAC : 단자 쌍방향성 사이리스터\n* 605 : 9개의 게이트를 갖고 있는 4단자 단방\n향성 사이리스터(쌍방향성 단자)\n36 34 58 유도 전동기의 -스 기동 시 기\n동 전류를 전전압 기동 시와 비교하면 어떻\n게 되는가?\n© 전전압 기동 전류의 승로 된다.\n@ 전전압 기동 전류의 3 배로 된다,",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "전전압 기동 전류의 3배로 된다.\nTEED: 30 3669 350 360 27",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 37,
+      "page": 7,
+      "text": "유도 전동기의 무부하 시 슬립은?",
+      "options": [
+        {
+          "number": 1,
+          "text": "@0\n 전동기 회전 속도\nN=(1-",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "N,[rpm]\n* 정지 상태 : s=1(N=0)\n＊ 동기 속도로 회전하는 221s =0(N=N,)\n* 무부하 상태에서는 N= 이므로 >= 0 이\n된다.\npo",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 38,
+      "page": 7,
+      "text": "다음 중 정류자와 접촉하여 전기자 권선과\n외부 회로를 연결하는 역할을 하는 것은?\n@ 계자          @ 전기자\n@ 브러시        @ 계자 철심\n 브러시 : 전기자에서 발생한 교류 기전력을 직\n류로 변환시키는 정류자에 접촉하여 직류 기전\ndg 의부로 인출하는 역할",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 39,
+      "page": 7,
+      "text": "직류 발전기의 정격 전압 100], 무부하\n전압 109[\\]이다. 이 발전기의 전압 변동\n 률 =[%1은?",
+      "options": [
+        {
+          "number": 1,
+          "text": "@6              @9\n호리               Vi— Va\n 전압 변동률 e=—1 x10\n= 100-100, 109\n=9[%]\n@ BO 9.0\n    @ —",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "®@5\n® 6              @8\nSHE 애자 사용 공사 시 전선 상호 간 간격\n© 저압 : lem) 이상일 것\n© 고압 : lem] 이상일 것\n427 금속 몰드의 지지점 간의 거리는 몇 [ㅁ]\n이하로 하는 것이 가장 바람직한가?\nD1",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "5",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "®",
+          "image": null
+        },
+        {
+          "number": 5,
+          "text": "TH 금속 몰드 공사 시 몰드의 지지점 간 거리는\n1.5[ 이하가 되도록 하여야 한다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 43,
+      "page": 8,
+      "text": "합성 수지관 상호 및 관과 박스는 접속 시\nsy 에 삽입하는 깊이를 관 바깥지름의 몇 배\nyh 하여야 하는가? (단, 접착제를\n사용하지 않은 경우이다.)\n-   TEE) 402 41.0 20 00\nB)\n\n——————————————————————————————\n®o0.2            @ 05",
+      "options": [
+        {
+          "number": 1,
+          "text": "2\n 합성 수지관 상호 및 관과 박스 접속 시 관의 삽\n입 깊이\n* 접착제를 사용하지 않는 경우 : 관 바같지름\n의 1.8배 이상\n* 접착제를 사용하는 경우 : 관 바깥지름의 0.8배\n이상\n< 옥내 배선의 접속함이나 박스 내에서 접속\n난해 때 주로 사용하는 접속법은?\n© 슬리브 접속 © 쥐꼬리 접속\n® 트위스트 접속 @ 브리타니아 접속\n 접속함이나 박스 안에서 가는 전선을 접속할 때\n는 쥐꼬리 접속을 한다. 이때, 접속 부분의 절연\n을 위해 박스용 커넥터나 와이어 커넥터를 사용\n하면 커넥터 자체가 절연물이므로 테이프 감기\n가 필요 없다.\n£5 확약류의 분말이 전기 설비가 발화원이 되\nof 폭발할 우려가 있는 곳에 시설하는 저\nDa 옥내 배선의 공사 방법으로 가장 알맞\n은 것은?\n© 금속관 공사\n@ 애자 사용 공사\n@ 버스 덕트 공사\n@ 함성 수지 몰드 공사\n 폭연성 분진 또는 화약류의 분말이 존재하는 곳\n의 저압 옥내 배선 공사는 금속관 공사나 개장\n케이블, MI 케이블 공사에 의하여 시설한다.\nLb 위험물 등이 있는 곳에서의 저압 옥내 배선\nye 방법이 아닌 것은?\n© 케이블 공사",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 3,
+      "page": 8,
+      "text": "함성 수지관 공사\n® 금속관 공사\n@ 애자 사용 공사\n“wo 5.0 460\n\n\n[P9]\n…ㅣㅡ--600000000000000000000000000000000000000000000000\n 셀룰로이드, 성냥, 석유류 등 기타 가연성 위험\n물질을 제조 또는 저장하는 장소의 배선으로는\n금속관 공사, 케이블 공사, 두께 [4] 이상의\n합성 수지관 공사 FOR 시설하여야 한다.\n£7 저압 가공 전선이 철도 또는 궤도를 횡단하\n는 경우에는 레일면상 몇 [ㅁ] 이상이어야\n하는가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "3.5",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": ".5\n®5.5            @ 6.5\n 저압 가공 전선의 높이]\naE             높이[ㅁ]\n도로            6[m] 이상\n철도           0.5[00] 이상\n횡단 보도교            310] 이상\n기타           5m] 이상",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 48,
+      "page": 9,
+      "text": "가공 전선의 지지물에 승탑 또는 승강용으\n로 사용하는 발판 볼트 등은 지표상 몇 [ㅁ]\n 미만에 시설하여서는 안 되는가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "2",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "5",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "6",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "8\nFH 일반적으로 가공 전선로 지지물에 취급자가 ©\n르고 내리는 데 사용하는 발판 볼트 등은 지표\nA 1.8[0)부터 180\" 방향에 0.45[0]씩 양쪽으\n로 완금 하부 0.9[0]까지 부착한다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 49,
+      "page": 9,
+      "text": "합성 수지 몰드 공사 방법으로 틀린 것은?",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 9,
+      "text": "전선은 절연 전선일 것\n@ 함성 수지 몰드 안에는 접속점이 없\n도록 할 것\n® 합성 수지 BEE 홈의 폭 및 깊이가\n6.5m] 이하일 것\n@ 합성 수지 몰드와 박스, 기타의 부속\n품과는 전선이 노출되지 않도록 할 것\n 합성 수지 몰드 공사의 시설 원칙\n© 사용 전압은 400[\\] 이하일 것\nTEE) 479 80 9.0 500 51\n\npr\n20154 제1회 기출문제  4 |\n>\n* 전개된 장소나 은폐 장소로서 점검 가능한 건\n조한 장소일 것\n* 전선은 절연 전선일 것(단, owe 제외)\n＊ 몰드 안에는 전선의 접속점이 없도록 할 것\n* 몰드 홈의 폭 및 oj 3.5(cm] 이하로 할\n것(단, 사람 접촉 우려 없는 경우 5lem] 이하\n일 것)",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 50,
+      "page": 9,
+      "text": "배전반 및 분전반을 넣은 강판제로 만든 함\n의 두께는 몇 [ㅁㅁ] 이상인가? (단, 가로\n세로의 길이가 30[cm] 초과한 경우이다.)\n® 08            ®",
+      "options": [
+        {
+          "number": 1,
+          "text": "2\n®",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "5",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": ".0\n 분전반의 시설 원칙 및 구비 조건\n＊ 분전반의 이면에는 배선 및 기구를 배치하지\n말것",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 51,
+      "page": 9,
+      "text": "금속관을 절단할 때 사용되는 공구는?\n\n ® 오스터        @ 녹아웃 펀치\n@ 파이프 커터 _ 0) 파이프 렌치\n\n 금속관 절단 공구 : 파이프 커터, 4§",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 52,
+      "page": 9,
+      "text": "다음 중 실링ㆍ직접 부착등을 시설하고자\n할 때 배선도에 표기할 그림 기호로 옮은\n것은?\noH®         oJ\n@@           @(",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 53,
+      "page": 9,
+      "text": "지중 전선로 시설 방식이 아닌 것은?\n\n © 직접 매설식_ “9 관로식\n® 트라이식      @ 암거식\n\n.8 520 53.0\n{0\n\n\n[P10]\n^ 올레  —      ~   0     60",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 4,
+      "page": 10,
+      "text": "과년도 출제문제\nI ———————————\n 지중 전선로의 부설 방식\n＊ 직접 매설식 : 콘크리트 트러프 등을 이용하\n여 케이블을 직접 매설하는 방식\n＊ 관로식 : 관 등을 부설한 후 관 상호 간을 연\n결한 WES 통하여 케이블을 인입하는 방식\n* 암거식 : 터널과 같은 콘크리트 구조물을 A\n치하여 다회선의 케이블을 수용하는 방식",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 54,
+      "page": 10,
+      "text": "조명 기구를 배광에 따라 분류하는 경우 특\n정한 장소만을 고조도로 하기 위한 조명 기\n구는?\n© 직접 조명 기구\n< 전반 확산 조명 기구",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 8,
+      "page": 10,
+      "text": "광천장 조명 기구\n@ 반직접 조명 기구\n 직접 조명 기구는 특정한 장소만을 하향 광속\n90[%] 이상이 되도록 설계된 조명 기구이다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 55,
+      "page": 10,
+      "text": "다음 중 8형 슬리브를 사용하여 전선을\n접속하는 경우의 유의 사항이 아닌 것은?\n@ 전선은 연선만 사용이 가능하다.\n@ 전선의 끝은 슬리브의 끝에서 조금\n나오는 것이 좋다.\n<) 슬리브는 전선의 굽기에 적합한 것\n을 사용한다.\n@ 도체는 샌드페이퍼 등으로 ghobA 사\n용한다.\n 슬리브 접속은 단선과 연선 접속 모두 가능하다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 56,
+      "page": 10,
+      "text": "[한국전기설비규정에 따른 삭제]\n해%느",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 57,
+      "page": 10,
+      "text": "인입용 비닐 절연 전선을 나타내는 약호는?\n® DV            @ NV\n%  TEED 54D 55.0 564m 57.(\n\n-------- ---\n\n 전선의 약호\n+ OW: 옥외용 비닐 절연 전선\nㆍ 6 : 폴리에틸렌 절연 비닐 외장 케이블\n* 1\\/ : 클로로프렌 절연 비닐 외장 케이블",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 59,
+      "page": 10,
+      "text": "정격 전압 3상 24000], 정격 차단 전류\n300[A12 수전 설비의 차단 용량은 몇\n040시인가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "7.26",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "8.34",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "2.47",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "4.94\n 3상 차단기 용량 P= V3VIVA]\n= ㅠ3>×24×300\n=12,470[kVA]\n=12.47[MVA]\n-",
+          "image": null
+        },
+        {
+          "number": 5,
+          "text": "시 무전\n압, 무전류 상태로 전로에서 단독으로 전\n로의 접속 또는 분리하는 것을 주목적으로\n사용하는 수ㆍ변전 기기는?",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 1,
+      "page": 11,
+      "text": "다음 ( ) 안에 들어갈 알맞은 내용은?\n자기 인덕턴스 [는 전류의 변화율이\nASI 때 (ㆍ )가(이) 발생할 때의 값\n이다.\n9 10의 힘",
+      "options": [
+        {
+          "number": 1,
+          "text": "0]의 에너지",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "11]의 기전력",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "182|의 주파수\n 유도기전력 ㅇ=2우[이=1×1=그[이의 기전력",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 2,
+      "page": 11,
+      "text": "[이의 전기량이 도체를 이동하면서 한\n일을 Willa 했을 때 전위차 VIVIE 나\n타내는 관계식으로 82 것은?\nOv=w @ v= x\n_Q             = 그.\n®@ v= Ww    @ Vv  ow\nFH 전기량이 한 일 W=QVIIAA\nv=-guelc",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 3,
+      "page": 11,
+      "text": "단면적 ㅅ[ㅁ], 자로의 길이 Im], 투자율\n/,, 권수 NE 환상 철심의 자체 인덕턴\n스[미는?\nPAN?         ALN?",
+      "options": [
+        {
+          "number": 1,
+          "text": "6\n40420?        WIN?\nCh\nCEE: 01.0 20 60 ud o",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "00\\]|\n@) 2.5(kW]",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "0[kW]\n 소비 전력 p= 20\n=10,000[W]=10[kW]",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 5,
+      "page": 11,
+      "text": "자기 회로에 강자성체를 사용하는 이유는?",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 11,
+      "text": "자기 저항을 감소시키기 위하여\n© 자기 저항을 증가시키기 위하여\n® 공극을 크게 하기 위하여\n@ 주자속을 감소시키기 위하여\n 강자성체는 비투자율 /%,가 아주 크므로 자기 저\n:     =      A\n향[#=근이 현저히 goes,",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 6,
+      "page": 11,
+      "text": "sila 저항과 8[으]의 용량성 리액턴스\n의 병렬 회로가 있다. 이 병렬 회로의 임피\n던스는 몇 [으]인가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "5",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "6",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "8",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "38\nFH 병렬 흐로의 합성 임피던스\n__R-X _ 6x8 _48_\n>  TR  ar   0  438(Q]\n5.0 06.9\nee       & J",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 7,
+      "page": 12,
+      "text": "평형 3상 교류 회로에서 Aste 한 상의\n 임피던스가 ㅇ, 일 때, 등가 HEHE ?부하\n의 한 상의 임피던스 Zz £ 얼마인가?\n@ Z=V3Z, @ Z=32a\n® Z= r=  @=긍6\n 3상 평형 회로의 임피던스 변환식\n%=32",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 8,
+      "page": 12,
+      "text": "다음 중 전동기의 원리에 적용되는 법칙은?\n <) 렌츠의 법칙\n@ 플레밍의 오른손 법칙",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 12,
+      "text": "옴의 법칙\n 전동기는 전자력에 의해 회전이 발생하는 기기\n이며 전자력의 방향을 알기 쉽게 정의한 플레밍\n의 왼손 법칙이다.\n© 엄지 : FER)\n＊ 검지 : BRE 밀도)\n* 중지 : /(전류)\n09 1[00]는 몇 []인가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "x10 1°",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": ".16x10*",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": ".602x10™*°\n 전자 BE 1[eV]=1.602x10 [J]",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 10,
+      "page": 12,
+      "text": "평행한 왕복 도체에 흐르는 전류에 의한 작\n용력은?\n@ 흡인력        © 반발력\n® 회전력       @) 작용력이 없다.\nFH 평형한 왕복 도체에 흐르는 ARE 방향이 서로\n반대이므로 서로 반발력이 작용한다,",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 11,
+      "page": 12,
+      "text": "저항 sor) 전구에 =100v/2 sinwt\nI.  TEED 07.0 18.0 090 100\n\n———————————————\n[viel 전압을 가할 때 순시 BR[AIZE?\n® V2sinwt",
+      "options": [
+        {
+          "number": 1,
+          "text": "V2 sinwt\n® 5V2sinwt",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "0V2 sinwt",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 12,
+      "page": 12,
+      "text": "진공 중에서 같은 3719 두 x32 1m]\n거리에 놓았을 때 그 작용하는 힘이 6.33\nx10°[NJO| 되는 자극 세기의 단위는?",
+      "options": [
+        {
+          "number": 1,
+          "text": "[Wb]",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "0",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "0a]",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "wW]",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 13,
+      "page": 12,
+      "text": "사인파 교류 전압을 표시한 것으로 잘못된\n것은? (단, 0 : 회전각, < : 각속도)\n@?=1.500 @ v= V,sinwt\n@ v= V,sin2nt @ v= V,sint\n\n 사인파 교류 전압\nv=V,sinf= V,sin2nft= V,sin Ziv)\n여기서, w=2ef = 0=내\n\n\"ok",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 14,
+      "page": 12,
+      "text": "공기 중 자장의 세기가 20(aT/m]Q! 곳에\n8x10” *[\\6]의 자극을 놓으면 작용하는\nNe?\n® 0.16           ® 0.32\n® 0.43           ® 0.56\n\n 힘과 자계와의 관계식\nF=mH=8x10\"\"x20=0.16[N]\n\nne 120 13.9 Kd\n\n\n[P13]",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 15,
+      "page": 13,
+      "text": "평등 자계 2046/0?] 속을 『[ㄷ/9]의 속\n도를 가진 전자가 움직일 때 받는 ENR?\n@ Bev       @웅\n® Bev        @ 그\n 전자력 /\"= 2901 =ㅇ「#[4]\n16 R=8[Q], L=19.1[mH]2| 직렬 회로에\n5(Al7 흐르고 있을 때 인덕턴스(/.)에 걸\n리는 단자 전압의 크기는 약 몇 (VIR?\n(단, 주파수=60[82",
+      "options": [
+        {
+          "number": 1,
+          "text": "2",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "5",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "9",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "6\n V,=wLI=2nfLT\n=2X 7% 60% 19.1 107° x 5=36[V]",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 17,
+      "page": 13,
+      "text": "무효 전력에 대한 설명으로 틀린 것은?",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 13,
+      "text": "P= Vicosf 2 계산된다.",
+      "options": [
+        {
+          "number": 1,
+          "text": "부하에서 소모되지 않는다.",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "단위로는 [\\8ㅁ|를 사용한다.\n@® 전원과 부하 사이를 왕복하기만 하\n고 부하에 유효하게 사용되지 않는\n에너지이다.\n 무효 전력 P= Visin[Varl2 표시된다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 18,
+      "page": 13,
+      "text": "= 금속을 접속하여 여기에 전류를 흘리면,\n줄열 외에 그 접점에서 열의 발생 또는 흡\n& 수가 일어나는 현상은?",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 13,
+      "text": "줄 효과       (@) 홀 효과\n® 제베크 효과 @ 펠티에 효과\n * 제베크 효과 : 두 금속의 접합점에 LEAS\n주면 열전류가 흐르는 현상\n* 펠티에 효과 : 제베크 효과와 반대로, 즉 전류\n를 인가하면 열의 발생 또는 흡수가 일어나는\n현상\nCEE: 150 160 17.0 180 1\n\n——————————\n2015년 제2회 기출문제 | 4 [\n세대",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 19,
+      "page": 13,
+      "text": "전지의 전압 강하 원인으로 틀린 것은?\nOF FE QA 작용\n@ 성극 작용 _ 6) 자기 방전\n 전압 강하의 원인으로는 분극 작용(성극 작용),\n국부 작용, 자기 방전 Fol 있다. 산화 작용은\n화학 작용으로 전압 강하와 무관하다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 20,
+      "page": 13,
+      "text": "실효값 sal, 주파수 fH, 위상 60\"인\n전류의 순시값 :[ㅅ를 수식으로 A 표현\n한 것은?\n®i=5 Vasinforsi+ I)\n®i=5 VE sin(onst+",
+      "options": [
+        {
+          "number": 1,
+          "text": "@ i= ssin(2nft + 회\n@ i= ssinfonst + z)\nFH 30g /, = 27= VaIx5=5x V2 (Al\n0=60\"= 3 lradielzz\ni(t) =Lsin(2rft +6)\n=svZsinfarpe+ Zia",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 21,
+      "page": 13,
+      "text": "직류 전동기의 규약 588 표시하는 식은?\n출력\nQO Fgrag ×10이0\n출력\n[©] EER 100[%]\n입력ㅡ손실\n® qa <100[%]\n입력\n© Furey 109\n 전동기는 전기 에너지를 인가하여 동작시키는 전\n기 기기이므로, 규약 효을은 입력으로 표시한다.\n입력ㅡ손실\n전동기의 규약 BE = gg x 100[%]\n1.2 202 21.9                       5\n\n\n[P14]\n%®_ Oh                    -\nJe\nWl ald ottde SER LAME 256",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 22,
+      "page": 14,
+      "text": "부하의 변동에 대하여 단자 전압의 변화가\n가장 작은 직류 발전기는?\n® 직권          @ 분권\n@) 평복권        @ 과복권\n 부하의 변동에 대하여 단자 전압이 거의 일정\n한 발전기는 가동 복권 발전기 중 평복권 발전\n기이다,",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 23,
+      "page": 14,
+      "text": "부하의 저항을 어느 정도 감소시켜도 전류\n는 일정하게 되는 수하 특성을 이용하여 정\n전류를 만드는 곳이나 아크 용접 등에 사용\n되는 직류 발전기는?\n<) 직권 발전기\n< 분권 발전기\n® 가동 복권 발전기\n@ 차동 복권 발전기\nFH 수하 특성을 이용하여 용접용 발전기로 사용되\n는 발전기는 직류 차동 복권 발전기이다,",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 24,
+      "page": 14,
+      "text": "변압기유가 구비해야 할 조건 중 맞는 것은?\n © 절연 내력이 작고 산화하지 않을 것\n® 비열이 작아서 냉각 효과가 클 것\n@ 인화점이 높고 응고점이 낮을 것\n@ 절연 재료나 금속에 접촉할 때 화학\n작용을 일으킬 것\nFH 번압기유의 구비 조건으로서 인화점(불붙는 온\n도)은 높고, 응고점(고체가 되는 온도)은 낮아야\n한다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 25,
+      "page": 14,
+      "text": "다음 단상 유도 전동기 중 기동 토크가 큰\n 것부터 율게 나열한 것은?\n으 반발 기동형 © 콘덴서 기동형\n© 분상 기동형 @ Mog 코일형\n=  CEE) 20 260 %0 250\n\ner ———————————————————\n\n© 0>0>e>@\n@ 0>@>0>0\n® 0>0>@>0\n@® 60>0>@>0\n\nFH 단상 유도 전동기의 기동 토크 크기 순서\n반발 기동형 >반발 유도형>콘덴서 기동형>분상\n기동형 >셰이딩 코일형",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 26,
+      "page": 14,
+      "text": "유도 전동기의 제동법이 아닌 것은?",
+      "options": [
+        {
+          "number": 1,
+          "text": "상 제동\n@ 발전 제동\n@ 회생 제동\n@ 역상 제동",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 27,
+      "page": 14,
+      "text": "변압기, 87171 등의 층간 단락 등의 내부\n\n 고장 보호에 사용되는 계전기는?\n< 차동 계전기\n<@ 접지 계전기\n< 과전압 계전기\n@ 역상 계전기\n\n 변압기, 동기기 등의 32 단락 등의 내부 고장\n보호에 사용되는 계전기는 차동 계전기이다.\n\nx",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 28,
+      "page": 14,
+      "text": "단상 전파 정류 회로에서 전원이 220(V]0|\n면 부하에 나타나는 전압의 평균값은 약 몇\n인가?\n® 99",
+      "options": [
+        {
+          "number": 1,
+          "text": "98",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "57.4",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "07",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 29,
+      "page": 15,
+      "text": "PN 접합 정류 소자의 설명 중 틀린 것은?\n (단, 실리콘 정류 소자인 경우이다.)\n® 온도가 높아지면 순방향 및 역방향\n전류가 모두 감소한다.\n< 순방향 전압은 PY (+), 시형에 (-)\n전압을 가함을 말한다.\n® 정류비가 클수록 정류 특성은 좋다.\n@ 역방향 전압에서는 극히 작은 전류\n만이 흐른다.\n PN 접합 실리콘 정류 소자의 특징\n* 순방향 전압은 PY (+), NY (DALE\n가함을 말한다.\n＊ 정류비가 클수록 정류 특성은 좋다.\n+ 역방향 전압에서는 극히 작은 전류만이 흐른다,",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 30,
+      "page": 15,
+      "text": "회전자 입력 10000], 슬립 3[%]인 3상 유\n도 전동기의 차 SAW?",
+      "options": [
+        {
+          "number": 1,
+          "text": "00",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "00\n® 500           @ 700\n 유도 전동기의 2차 동손\nPy = 5-P=0.03% 10[kW]\n=0.3[kW]\n=300|\\|",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 31,
+      "page": 15,
+      "text": "변압기의 효율이 가장 좋을 때의 조건은?\nSo 철손=동손 © 철손=승동손\n@ 동손=긍철손 © Beads\n 변압기의 효율은 '철손 = 동손'일 때 가장 좋다,",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 32,
+      "page": 15,
+      "text": "동기 발전기의 전기자 권선을 단절권으로\n 하면?\n® 고조파를 제거한다.\n® 절연이 잘 된다.\nTEED 200 200 31.0 20 3\n\n20154 제2회 기출문제 , fee\n—— ~~",
+      "options": [
+        {
+          "number": 1,
+          "text": "역률이 좋아진다.\n@ 기전력을 높인다.\n 동기 발전기의 전기자 권선을 단절권으로 하면\n고조파가 제거되어 파형이 개선된다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 33,
+      "page": 15,
+      "text": "전력 계통에 접속되어 있는 변압기나 장거\n리 송전 시 정전 용량으로 인한 충전 특성\n등을 보상하기 위한 기기는?\n@ 유도 전동기 © 동기 발전기\n@ 유도 발전기 © 동기 조상기\n 전력 계통에 접속되어 있는 변압기나 장거리 송\n전 시 정전 용량으로 인한 충전 특성 등을 보상하\n기 위한 동기 조상기로는 동기 전동기를 이용한\n다(우리나라는 제주 발전소에 설치되어 HVDC\n송전에서 사용 중에 있음).",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 34,
+      "page": 15,
+      "text": "전력 변환 기기가 아닌 것은?\n@ 변압기        @ 정류기\n@ 유도 전동기 _ 0) 인버터\n 유도 전동기는 회전기(전기 에너지를 기계적 에\n너지로 변환하는 에너지 변환기)이다.\n* 변압기 : 전압을 변성하는 전력 변환 기기\n* 정류기 : ACE DCE 변환하는 전력 변환기\n* 인버터 : DCE 40로 변환하는 전력 변환기",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 35,
+      "page": 15,
+      "text": "직류 전동기의 속도 제어법이 아닌 것은?\noe 전압 제어법 _ < 계자 제어법\n@ 저항 제어법 @ 주파수 제어법\n 직류 전동기의 속도 제어법에는 전압 제어법,\n계자 제어법, 저항 제어법 등이 있다. 주파수 제\n어법은 유도 전동기의 속도 제어법이다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 36,
+      "page": 15,
+      "text": "변압기에서 2차측이란 무엇인가?\n © 부하측        @ 고압측\n® 전원측       @ 저압측\n 변압기의 1차측은 전원측, %차측은 부하측이다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 3,
+      "page": 15,
+      "text": "@ U0 35.0 36.0)\n토이 ae 1\n\n\n[P16]\n[개\n(rey\n분\" 과년도 출제문제\n———————",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 37,
+      "page": 16,
+      "text": "동기 발전기의 병렬 운전에서 기전력의 크\n 기가 다를 경우 나타나는 현상은?\n© 주파수가 변한다.\n< 동기화 전류가 흐른다.",
+      "options": [
+        {
+          "number": 1,
+          "text": "난조 현상이 발생한다.\n@ 무효 순환 전류가 흐른다,\n 동기 발전기의 병렬 운전에서 기전력의 크기가 다\n를 경우에는 무효 순환 전류가 흐른다.\n38 83 파권 직류 발전기의 전기자 권선의 병\n렬 회로수 <는 얼마로 하고 있는가?",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 6,
+      "page": 16,
+      "text": "@8\n 직류 발전기의 전기자 권선 중 파권의 병렬 회\n로수 a=20|t},",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 39,
+      "page": 16,
+      "text": "변압기의 절연 내력 시험법이 아닌 것은?\n@° 유도 시험\n@ 가압 시험",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 8,
+      "page": 16,
+      "text": "단락 시험\n@ 충격 전압 시험\n 변압기의 절연 내력 시험법 : 유도 시험, 가압 시\n험, 충격 전압 시험법 등이 있다,",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 40,
+      "page": 16,
+      "text": "동기 전동기 중 안정도 증진범으로 틀린 것은?\nHo 전기자 저항 감소\n@ 관성 효과 증대\n<) 동기 임피던스 증대\n@ 속응 여자 채용\n 동기 전동기의 안정도 증진 방법\n＊ 단락비를 크게 한다.\n＊ 동기 임피던스(리액턴스)를 작게 한다.\n＊ 관성 모멘트를 크게 한다,\n＊ 조속기의 동작을 신속하게 한다.\n＊ 속응 여자 방식을 채택한다.\nTEED) 37.0 380 3095 400\n기\n\n——————————————————————————",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 41,
+      "page": 16,
+      "text": "금속관을 구부릴 때 금속관의 단면이 심하\n게 변형되지 아니하도록 구부려야 하며,\n\n 그 안쪽의 반지름은 관 안지름의 몇 배 이\n상이 되어야 하는가?\n@6              @8",
+      "options": [
+        {
+          "number": 1,
+          "text": "0             ®",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "2",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "오스터(08667\n@ 파이프 AE (pipe cutter)",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 43,
+      "page": 16,
+      "text": "접지 저항값에 가장 2 영향을 주는 것은?\n< 접지선 굽기\n< 접지 전극 크기\n@ 온도\n@ 대지 저항\n\n 접지 저항은 대지와 접지 전극 사이의 전기적\n저항이므로 접지 저항에 가장 큰 영향을 주는\n것은 대지 저항이다.\n\n< 접지선을 철주, 기타 금속체를 따라 시설\n하는 경우 접지극은 지중에서 그 금속체로\n부터 몇 [em] 이상 떼어 매설해야 하는가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "0            @ 60\n@75",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "00",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "0 80 ue",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 45,
+      "page": 17,
+      "text": "금속관 공사에서 녹아웃의 지름이 금속관\n 의 지름보다 큰 경우에 사용하는 재료는?\n\n< 로크 너트\n@ 부싱",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 9,
+      "page": 17,
+      "text": "커넥터\n@ 링리듀서\n 금속관 공사에서 녹아웃의 지름이 금속관의 지름\n보다 큰 경우에 사용하는 재료는 링리듀서이다.\nLb 애자 사용 배선 공사 시 사용할 수 없는 전\n선은?\n® 고무 절연 전선\n@ 폴리에틸렌 절연 전선\n® 플루오르 수지 절연 전선\n@ 인입용 비닐 절연 전선\n 애자 사용 공사 시 사용할 수 없는 전선은 인입\n용 비닐 절연 전선(09)과 옥외용 비닐 절연 전\n선(00)이다,\n£7 전선의 재료로서 구비해야 할 조건이 아닌\n 고기\n© 기계적 강도가 클 것\n® 가요성이 풍부할 것\n@ 고유 저항이 클 것\n@ 비중이 작을 것\n 전선 재료의 구비 조건\n＊ 도전율이 클 것\n＊ 기계적 강도가 클 것\n＊ 내식성이 클 것\n＊ 가요성이 클 것\n＊ 접속이 쉬울 것\n＊ 비중이 작을 것\n* 가격이 쌀 것\n© 대량 생산이 가능할 것\nTEED 5.0 6460 47.0 BAH .\n\nLok\naes = 을\n20154 제2회 기출문제      7\n어디지",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 49,
+      "page": 17,
+      "text": "화재 시 소방대가 조명 기구나 파괴용 기\n구, 배연기 등 소화 활동 및 인명 구조 활\n동에 필요한 전원으로 사용하기 위해 설치\n하는 것은?\n© 상용 전원 장치\n@ 유도등\n@ 비상용 콘센트\n@ 비상등\n졸로 화재 시 소방대가 조명 기구나 파괴용 기구, 배\n연기 등 소화 활동 및 인명 구조 활동에 필요한\n전원으로 사용하기 위해 비상용 콘센트를 설치\n하여야 한다.\n50 712 전선 지지물의 기초 강도는 주체(호\n8에 가하여지는 곡하중(#788)에 대하여\n안전율은 얼마 이상으로 하여야 하는가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "0",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "5",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": ".8             ®",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "0\nTH 가공 전선 지지물의 기초 강도는 주체에 가하여\n지는 곡(00)하중에 대하여 FALE 20 이상으\n로 하여야 한다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 51,
+      "page": 17,
+      "text": "전주 외등 설치 시 백열전등 및 형광등의\n조명 기구를 전주에 부착하는 경우 부착한\n점으로부터 돌출되는 수평 거리는 몇 (m]\n이내로 하여야 하는가?\n®o5            ® 0.38",
+      "options": [
+        {
+          "number": 1,
+          "text": "0",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "2\n 전주 외등 설치 시 백열전등 및 형광등의 조명\n기구를 전주에 부착하는 경우 부착한 점으로부\n터 돌출되는 수평 거리는 100m] 이내로 하여야\n한다.\n49.9 50.9) 51.9\n15\n80",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 52,
+      "page": 18,
+      "text": "전선의 접속에 대한 설명으로 틀린 것은?\n © 접속 부분의 전기 저항을 20[9%] 이상\n증가되도록 한다.",
+      "options": [
+        {
+          "number": 1,
+          "text": "접속 부분의 인장 강도를 80[%] 이상\n유지되도록 한다.\n@ 접속 부분에 전선 접속 기구를 사용\n한다,\n® 알루미늄 전선과 구리선의 접속 시 전\n기적인 부식이 생기지 않도록 한다.\n 전선 접속 부분의 전기 저항을 증가시키지 않도\n록 하여야 한다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 53,
+      "page": 18,
+      "text": "간선에 접속하는 전동기의 정격 전류의 합\n계가 50[^]를 초과하는 경우에는 그 정격\ni) 전류 합계의 몇 배에 견디는 전선을 산정하\n여야 하는가?\n® 0.8",
+      "options": [
+        {
+          "number": 1,
+          "text": "1",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": ".25",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "간선에 접속하는 전동기의 정격 전류의 함계가\n50(AJg 초과하는 경우 그 정격 전류의 1.1배에\n견디는 전선을 선정하여야 한다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 54,
+      "page": 18,
+      "text": "전선 약호가 wel 케이블의 종류로 옮은\n것은?\n@ 0.6/1100] 비닐 절연 비닐시스 케이블\n© 0.6/1[kV] EP 고무 절연 클로로프렌\n시스 케이블\n@ 0.6/16] EP 고무 절연 비닐시스\n케이블\n@ 0.6/1[kV] 비닐 절연 비닐 캡타이어\n케이블\n VV cable : 비닐 절연 비닐시스(86686) cable",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 5,
+      "page": 18,
+      "text": "(  [정담 제   52.0) 53.0 540 55.0\n메져 J",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 55,
+      "page": 18,
+      "text": "저압 2조의 전선 설치 시 크로스 완금의 표\n준 길이[ㅁ0]는?\n® 900",
+      "options": [
+        {
+          "number": 1,
+          "text": ",400",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": ",800",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": ",400",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 56,
+      "page": 18,
+      "text": "다음 중 전등 1개를 2개소에서 점멸하고자\n할 때 3로 스위치가 필요한 개수는 얼마\n인가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "개",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "개",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "개",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "A",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 57,
+      "page": 18,
+      "text": "수 ㆍ변전 설비 구성 기기의 계기용 변압기\n(PT) 설명으로 맞는 것은?",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 18,
+      "text": "높은 전압을 낮은 전압으로 변성하\n는 기기이다.\n\n< 높은 전류를 낮은 전류로 변성하는\n기기이다.\n\n@ 회로에 병렬로 접속하여 사용하는 기\n기이다.\n\n@ 부족 전압 트립 코일의 전원으로 사\n용된다.\n\n PTE 높은 전압을 낮은 전압(10[\\])으로 변성\n하여 전압계, OVR, OVGR 등에 전원을 공급하\n는 전력 변환 장치이다.\n\n56.3 57.0)\n\n\n[P19]",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 58,
+      "page": 19,
+      "text": "폭연성 분진이 존재하는 곳의 저압 옥내 배\n 선 공사 시 공사 방법으로 짝지어진 것은?\n© 금속관 공사, MI 케이블 공사, 개장\n된 케이블 공사\n® CD 케이블 공사, MI 케이블 공사,\n금속관 공사\n® CD 케이블 공사, MI 케이블 공사,\n제1종 캡타이어 케이블 공사\n@ 개장된 케이블 공사, CD 케이블 공\n사, 제1종 캡타이어 케이블 공사\n 폭연성 분진이 존재하는 곳의 저압 옥내 배선\n공사 시 공사 방법은 금속관 공사, 케이블(캡타\n이어 케이블 제외) 공사에 의하여 시설한다,\n[개 중 개",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 59,
+      "page": 19,
+      "text": "화약고의 배선 공사 시 개폐기 및 과전류\n 차단기에서 화약고 인입구까지는 어떤 배\n선 공사에 의하여 시설하여야 하는가?\n< 함성 수지관 FAR 지중 선로\n® 금속관 FAR 지중 선로\n<) 함성 수지몰드 지중 선로\n@ 케이블 사용 지중 선로\n 화약고의 배선 공사 시 개폐기 및 과전류 차단\n기에서 화약고 인입구까지는 케이블을 사용하\n여 지중에 매설한다.\nTEED: 580 59.0 600\n\n2015년 제2회 기출문제 | Ou  |\n\n60 22.9007- 가공 전선의 #7 단면적이\n\n몇 [mm] 이상이어야 하는가? (단, 동선의\n\n경우이다.)",
+      "options": [
+        {
+          "number": 1,
+          "text": "2",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "2",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "0",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 20,
+      "text": "콘멘서의 정전 용량에 대한 설명으로 틀린\n것은?\n© 전압에 반비례한다.",
+      "options": [
+        {
+          "number": 1,
+          "text": "이동 전하량에 비례한다.",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "극판의 넓이에 비례한다.\n@ 극판의 간격에 비례한다.\n 2949 정전 용량 = LL [이므로 극간의\n넓이 .4[ㅁ)]에 비례하고 극판의 간격 4[ㅁ에 반\n비례한다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 2,
+      "page": 20,
+      "text": "정전 에너지 WIE 구하는 식으로 ge\n것은? (단, = 콘덴서 BFF, VE 공\n 급 전압 <[이이다.)",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 1,
+      "page": 20,
+      "text": "1\n@ w= Fev?  ® w=5cv\n@ w= SCV  @ w=20V?\n 도체에 축적되는 정전 에너지\nw=tov-tev- Ly",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 2,
+      "page": 20,
+      "text": "2      20\n(03 등전위면과 전기력선과의 교차 관계는?\n© 직각으로 교차한다.",
+      "options": [
+        {
+          "number": 1,
+          "text": "0\"로 교차한다.",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "5\"로 교차한다.\n@ 교차하지 않는다.\n 등전위면과 전기력선은 수직(직각)으로 교차한다.\n-  TEED: 01.0 20 03.0 00\n®)",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 4,
+      "page": 20,
+      "text": "전기 분해를 통하여 석출된 물질의 양은 통\n과한 전기량 및 화학당량과 어떤 관계가 있\n 는가?\n< 전기량과 화학당량에 비례한다.\n@ 전기량과 화학당량에 반비례한다.\n< > 전기량에 비례하고 화학당량에 반비\n례한다.\n<) 전기량에 반비례하고 화학당량에 비\n례한다.\n 전극에서 석출되는 물질의 양은 전기량에 비례\n하고 화학당량에 비례한다.\nW=kQ=Kltlg]",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 5,
+      "page": 20,
+      "text": "평형 3상 교류 회로에서 결선할 때 M2\n 전압 과 상전압 Vote] 관계는?\n@@ =      ® v,=v2V,",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 1,
+      "page": 20,
+      "text": "® V=V3V, @ V= NG Vy\n vase 특징\n선간 전압 = V3 \\;(상전압)\n06 2전력계법으로 3상 전력을 측정할 때 지시\n값이 /\\ = 200[\\], 7, = 200[\\]일 때\n 부하 전력[\\]은?",
+      "options": [
+        {
+          "number": 1,
+          "text": "00",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "00\n® 600           @ 800\nFH 2전력계법 /\"= P+ P,=200+200 =400[W]\n05.9 06.2",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 21,
+      "text": "플레밍의 왼손 법칙\n\n<) 렌츠의 자기 유도 법칙\n\n< 앙페르의 오른 나사 법칙\n@ 패러데이의 전자 유도 법칙\n\n 앙페르의 오른 나사 법칙 : 전류에 의한 자기장\n의 방향을 알기 쉽게 정의한 법칙\n\nok\n\n09 r=509), L=30mHIY #- 2 직렬 회\n로에 V=200[V], /=60[82|]인 교류 전\nUS 가할 때 전류의 크기는 약 몇 (AIRF?\n© 8.67",
+      "options": [
+        {
+          "number": 1,
+          "text": "1.42",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "6.17",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "1.25",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 10,
+      "page": 21,
+      "text": "tlemlg 권수가 10인 무한 길이 솔레노이\n드에 11]의 전류가 흐르고 있을 때 솔레노\n이드 외부 자계의 세기[47/]는?\n\n[OX]             @5",
+      "options": [
+        {
+          "number": 1,
+          "text": "0",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "0\nTEED 07.0 080 09.0 10.0 1",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 11,
+      "page": 21,
+      "text": "그림과 같은 #- /. 병렬 회로에서 《= 25\n[의, wz=\"L [019 때, 200[위의 전\n압을 가하면 코일에 흐르는 전류 (A127\nR iy",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 5,
+      "page": 21,
+      "text": "ES 를\noO",
+      "options": [
+        {
+          "number": 1,
+          "text": ".0",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": ".8\n® 6.0            @ 82\nTW 유도성 리역틴스 06 = 북[으]이므로\n코일에 흐르는 전류\nVv   200   600\nL=%x- 00 Joo Ola!",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 12,
+      "page": 21,
+      "text": "다음 중 10)]와 같은 값을 갖는 것은?",
+      "options": [
+        {
+          "number": 1,
+          "text": "0/이",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "[Wb/m]",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "[Q/m]",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "A - sec)\n 전위 정의식 v= v=\n*",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 13,
+      "page": 21,
+      "text": "다음 그림과 같은 회로의 저항값이 &. >\n2 > 4 > RY 때, 전류가 최소로 흐르\n는 저항은?\nR,\n제 [a]\nOR           @ R,\n® By           ® R,\n 전류는 저항에 반비례하므로 저항값이 클수록\n.8 120 13.9\nee ---(@ [rs\n\n\n[P22]\nKr, b\n| cv . 과년도 출제문제\n주 을 20055 5 0000\n작게 흐른다. 그러나 Role 전체 전류가 흐르\n므로 병렬 접속된 저항 중 가장 큰 Rel 전류가\n최소로 흐른다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 14,
+      "page": 22,
+      "text": "원자핵의 구속력을 벗어나서 물질 내에서\n안에 이동할 수 있는 것은?\n© 중성자        © 양자\n® 분자         @ 자유 전자\n\n 자유 전자 : 원자핵의 구속력을 벗어나 자유로\n이 이동할 수 있는 전자",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 15,
+      "page": 22,
+      "text": "권수가 1502! 코일에서 2초간 \\1]의 자\n속이 변화한다면, 코일에 발생되는 유도\n\n 기전력의 크기는 몇 []인가?\n® 50",
+      "options": [
+        {
+          "number": 1,
+          "text": "5",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "00",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "50",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 16,
+      "page": 22,
+      "text": "복소수에 대한 설명으로 틀린 것은?\n© 실수부와 허수부로 구성된다.\n® 허수를 제곱하면 음수가 된다.\n\n@ 복소수는 A=a+)bo] 형태로 표시\n된다.\n\n@ 거리와 방향을 나타내는 스칼라량으\n로 표시한다.\n\n 복소수는 크기와 방향을 나타내는 벡터량으로\n표시된다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 17,
+      "page": 22,
+      "text": "자기 인덕턴스가 각각 L,[H], L,[H]I 두\n개의 코일이 직렬로 가동 접속되었을 때,\n합성 인덕턴스는? (단, 자기력선에 의한\n영향을 서로 받는 경우이다.)",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 5,
+      "page": 22,
+      "text": "TEED: 140 150 160 170\n\n@ Li+L,-M\n@ Li+L,—2M\n@ Li+L,+M\n@ Li+L+2M\n 가동 접속에 의한 합성 인덕턴스\nLy=L,+L,+2MH]\nok",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 18,
+      "page": 22,
+      "text": "저항이 있는 도선에 전류가 흐르면 열이 발\n생한다. 이와 같이 전류의 열작용과 가장\n관계가 깊은 법칙은?\n© 패러데이의 법칙\n®@ 키르히호프의 법칙\n® 줄의 법칙\n®@ 옴의 법칙\n 줄의 법칙 : 전류에 의한 저항체에 발생하는 열\n량을 계산한 법칙\nH=024VIL=024PR1\n— 021 4fcar]\nRr\nok",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 19,
+      "page": 22,
+      "text": "#- 직렬 회로에 교류 전압 v=,\nsinwt[VIE 가했을 때 회로의 위상차 68\n나타낸 것은?\n®o= 때 2\n@ f=tan\" ek\nPE |\n®@ 0=tan  Rol\n@ 6=tan\" RB\nVR*+ (WL)?\n R-L 직렬 회로 합성 임피던스\nZ=R+juLlQ)\n0=tan 22\n18.9 19.2\n\n\n[P23]\n홍액독릭에기에익기오",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 20,
+      "page": 23,
+      "text": "그림에서 a—b 간의 합성 저항은 ㅠ-< 2\n의 합성 저항의 몇 배인가?\n—\na        bi\n[OBL]",
+      "options": [
+        {
+          "number": 1,
+          "text": "<) 3배",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "배\n + ab 간의 합성 저항 : 휘트스톤 브리지 평형\n조건을 만족하므로 중간에 WEE 접속되어\n있는 ri 무시한다.\nr= 220)\n* ㅇ-0 간의 합성 저항 : 2, ㅠ。 2r9] 저항 3개\n가 병렬 접속",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 1,
+      "page": 23,
+      "text": "메\n세 그 1 2\nParas\nory =r, [RQ]\n인",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 23,
+      "text": "정격 전류가 흐를 때의 변압기 내의\n전압 강하",
+      "options": [
+        {
+          "number": 1,
+          "text": "여자 전류가 흐를 때의 3차측 단자\n전압\n® 정격 전류가 흐를 때의 3차측 단자\n전압",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "차 단락 전류가 흐를 때 변압기 내\n의 전압 강하\n 임피던스 전압 : 정격 전류가 흐를 때 변압기 내의\n임피던스 전압 강하\n*",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 22,
+      "page": 23,
+      "text": "그림은 전력 제어 소자를 이용한 위상 제어\n회로이다. 전동기의 속도를 제어하기 위하\n여 '가' 부분에 사용되는 소자는?\nTEED: 200 21.0 20 20 24.\n\n~      2015년 제4회 기출문제 | OWS\nFR       I\n사인과              pl\n1 a\n< 전력용 트랜지스터\n@ 제너 다이오드\n® 트라이액\n@) 레글레이터 788※ 시리즈",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 23,
+      "page": 23,
+      "text": "정격이 10.000[이, 500[시, 역률 90[%]\n의 3상 동기 발전기의 단락 전류 /.[시는?\n(단, 단락비는 1.3으로 하고 전기자 저항은\n무시한다.)",
+      "options": [
+        {
+          "number": 1,
+          "text": "50           ® 550\n® 650           @ 750",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "A. 8 양 발전기의 역률이 높아진다.\n@ A, B 양 발전기의 역률이 낮아진다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 23,
+      "text": "/\n\n대            [항시 [3536 0205 세\n\n\n[P24]\n% 스미   토\n도                 .\n| 875 과년도 출제문제\n쁘 lili de —",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 75,
+      "page": 24,
+      "text": "다음의 정류 곡선 중 브러시의 후단에서 불\nEn 발생하기 쉬운 곳은?\n@ 직선 정류 __ © 정현파 정류\n® 과정류       @ 부족 정류\n 정류 곡선\n* 직선 정류 : 이상적인 정류\n* 정현파 정류 : 양호한 정류\n* 과정류 : 브러시 전단부에서 불꽃 발생\n© 부족 정류 : 브러시 후단부에서 불꽃 발생",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 24,
+      "page": 24,
+      "text": "슬립이 일정한 경우 유도 전동기의 공급 전\n압이 32 감소하면 토크는 처음에 비해\n어떻게 되는가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "배가 된다。_",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "배가 된다.\n@ 슬로 줄어든다. 0) +2 줄어든다.\n 토크와 공급 전압과의 관계\nTox &?이므로",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "= 그르 Fad,",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 27,
+      "page": 24,
+      "text": "권선형에서 비례 추이를 이용한 기동법은?\nHo 리액터 기동법 @ 기동 보상기법",
+      "options": [
+        {
+          "number": 1,
+          "text": "차 저항 기동법 <) ＊-스 기동법\n 2차 저항 기동법(기동 저항기법) : 권선형 전동\n기에서 기동 시 저항이 증가하는 만큼 슬립이\n비례 중가하면서 기동 토크는 증가하고 기동 전\n류가 감소하는 비례 추이 원리를 이용한 기동\n방식",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 28,
+      "page": 24,
+      "text": "동기 발전기의 역률각이 90\" 늦을 때의 전\n 기자 반작용은?\n@ 증자 작응。_ “9 편자 작용",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 24,
+      "text": "교차 작용 @ 감자 작용\n 동기 발전기의 전기자 반작용\n* 감자 작용 : 위상이 90° 늦은 전류\n* 증자 작용 : 위상이 90\" 앞선 전류\nTEE): 2509 26",
+      "options": [
+        {
+          "number": 1,
+          "text": "7.0 26\n15\n0",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 29,
+      "page": 24,
+      "text": "유도 전동기가 회전하고 있을 때 생기는 손\n실 중에서 구리손이란?\n© 브러시의 마찰손",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 3,
+      "page": 24,
+      "text": "베어링의 마찰손\n@ 표유 부하손",
+      "options": [
+        {
+          "number": 1,
+          "text": "차, 2% 권선의 저항손",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 30,
+      "page": 24,
+      "text": "그림에서와 같이 6, 의 양 자극 사이에\n정류자를 가진 298 두고 ©, 에 직류\n를 공급하여 ~ X'8 축으로 하여 코일\n을 시계 방향으로 회전시키고자 한다. (3,\n<0의 자극 극성과 © @ 전원 극성을 of\nFA 해야 되는가?\n>\n[20]    /",
+      "options": [
+        {
+          "number": 1,
+          "text": "27\n8&7 ©\nDON OS ©+ @-\n@ON OS ©- @+\n®OS. ONO + @-\n©@OS. ON ®- @+",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 31,
+      "page": 24,
+      "text": "그림과 같은 24 기동형 단상 유도 전동기\n를 역회전시키기 위한 방법이 아닌 것은?\ngy =\nH\n원실력 스위차[[ Cs\n기동 권선    69\n© 원심력 스위치를 개로 또는 폐로한다.\n@ 기동 권선이나 운전 권선의 어느 한\n권선의 단자 접속을 반대로 한다.\n® 71% 권선의 단자 접속을 반대로 한다.\n@ 운전 권선의 단자 접속을 반대로\n한다.\n29.0 30.02 NO\n\n\n[P25]",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 32,
+      "page": 25,
+      "text": "다음 그림은 단상 변압기 결선도이다. 1, 2차\n는 각각 어떤 결선인가?\nㅁ        |       u\nv        |       Vv\nw        |       Ww\nDY-YEH @a-yzEA\n@ ㅅ-스결선. 0) *-ㅅ결선",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 33,
+      "page": 25,
+      "text": "다음 그림의 직류 METIS 어떤 전동기인가?\n,    I        I\nKE\n© 직권 전동기 © 타여자 전동기\n® 분권 전동기 © 복권 전동기\nFH 분권 전동기는 전기자 도체와 계자 Agel 병렬\n로 접속된 전동기로 속도가 일정한 정속도 전동\n기이다.\n3; 전력용변압기의 내부 고장 보호용 계전 방\n 식은?\n© 역상 계전기 @ 차동 계전기\n@ 접지 계전기 @ 과전류 계전기\n 변압기 내부 고장 보호 계전기 : 차동 계전기, 비\n을 차동 계전기, 부흐홀츠 계전기",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 35,
+      "page": 25,
+      "text": "다음 중 병렬 운전 시 균압선을 설치해야\n하는 직류 발전기는?\n< 분권          09 차동 복권\n® 평복권        @ 부족 복권\nTEED 20 339 %O BO 36\n\n~ ㅣ 0 개들  ㅣ\neee eng\n 균압선 : 공극의 불균일에 의한 전압 불평형 시\n발전기 전기자 권선 내에 흐르는 순환 전류를\n방지하기 위해 등전위가 되는 점을 연결하기 위\n한 원형 접속 도체",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 36,
+      "page": 25,
+      "text": "다음 변압기 극성에 관한 설명 중 틀린\n것은?\n© 우리나라는 감극성이 표준이다.",
+      "options": [
+        {
+          "number": 1,
+          "text": "차와 2차 권선에 유기되는 AY\n극성이 반대이며 감극성이다.",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "3상 결선 시 극성을 고려한다.\n@) 병렬 운전 시 극성을 고려해야 한다.\n 감극성 : 변압기는 실제 감극성을 사용하며 혼\n촉 시 전압이 감소하는 특징이 있다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 37,
+      "page": 25,
+      "text": "애벌런치 항복 전압은 온도 중가에 따라 of\n떻게 변화하는가?\n© 감소한다.",
+      "options": [
+        {
+          "number": 1,
+          "text": "증가한다.",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "증가했다 감소한다.\n® 무관하다.\n 애벌런치 항복 전압은 온도가 상승하면 전압도\n중가한다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 38,
+      "page": 25,
+      "text": "용량이 작은 유도 전동기의 경우 전부하에\n서의 슬립[%]은?",
+      "options": [
+        {
+          "number": 1,
+          "text": "~25",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": ".5~4\n® 5~10",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "0~20\n 용량이 작은 유도 전동기의 슬립 범위 1 510%]\n39 6018], 20,000[6시의 발전기의 회전수\n가 1,200[rpm]0[2te 이 발전기의 극수는\n& 얼마인가?",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 40,
+      "page": 26,
+      "text": "변압기를 v- 스로 연결할 때 1, 2차 간의\n위상차는?\n 30°",
+      "options": [
+        {
+          "number": 1,
+          "text": "5°\n® 60°\n@ 90°\n 선간 전압과 상전압의 위상차\n0=종1001=30”",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 4,
+      "page": 26,
+      "text": "저압 연접 인입선의 시설 규정으로 적합한\n 외부",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 26,
+      "text": "분기점으로부터 90[ㅁ] 지점에 시설\n@ 6lm] 도로를 횡단하여 시설\n® 수용가 옥내를 관통하여 설치\n@ 지름 1.5mm] 인입용 비닐 절연 전\n선을 사용\nFH 저압 연접 인입선은 분기점으로부터 10010] 이\n내에 시설해야 한다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 42,
+      "page": 26,
+      "text": "Aol 쉽게 접촉하는 장소에 설치하는 누\n전 차단기의 사용 전압 기준은 몇 [] 초과\n인가?\n© 50",
+      "options": [
+        {
+          "number": 1,
+          "text": "10\n®",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "50",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "20",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 43,
+      "page": 26,
+      "text": "전선을 접속할 경우의 설명으로 틀린 것은?\nEo 접속 부분의 전기 저항이 증가되지\n않아야 한다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 5,
+      "page": 26,
+      "text": "CEB 0 0.0 20 £20\nwees §  1           --   -    ---\n\n© 전선의 세기를 80[%) 이상 감소시키\n지 않아야 한다.\n@ 접속 부분은 접속 기구를 사용하거\n나 dS 하여야 한다.\n@ 알루미늄 전선과 동선을 접속하는 경\n우 전기적 부식이 생기지 않도록 해야\n한다.\n 전선 접속 시 주의 사항\n＊ 전기 AE 증가시켜서는 안 된다.\n* 전선의 세기는 200%) 이상 감소시켜서는 안\n된다.\n444 [한국전기설비규정에 따른 삭제]",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 45,
+      "page": 26,
+      "text": "화약류 저장소에서 백열전등이나 형광등 또",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 26,
+      "text": "는 이들에 전기를 공급하기 위한 전기 설비\n를 시설하는 경우 전로의 대지 MY(VIR?",
+      "options": [
+        {
+          "number": 1,
+          "text": "00[V] 이하",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "00[V] 이하",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "201V] 이하\n@",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "00[V] 이하\n * 화약류 저장소 시설 방법 : 금속관, 케이블\n공사\n* 개폐기, 과전류 차단기는 저장소 밖에 시설하\n되 지중 케이블 공사에 의할 것",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 46,
+      "page": 26,
+      "text": "om 없는 케이블을 배선할 때 직각 구부리\n& 기(Ｌ형)는 대략 굴곡 반지름을 케이블 바\n깥지름의 몇 배 이상으로 하는가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "®6",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "0\n 연피 없는 일반 케이블의 곡률 반경은 케이블\n외경의 6배이다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 44,
+      "page": 26,
+      "text": "삭제 45.",
+      "options": [
+        {
+          "number": 1,
+          "text": "6.0)",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 47,
+      "page": 27,
+      "text": "정격 전류 20|시인 전동기 1때와 정격 전류\n[시인 전열기 3대가 연결된 분기 회로에\n\n@ 시설하는 과전류 차단기의 정격 전류는?",
+      "options": [
+        {
+          "number": 1,
+          "text": "5\n@ 50\n®@ 75",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "00",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 48,
+      "page": 27,
+      "text": "접지 저항 측정 방법으로 가장 적당한 것은?",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 27,
+      "text": "절연 저항계\n® 전력계\n© 교류의 전압, 전류계\n@ 콜라우슈 브리지\n\n 접지 저항 측정 : 접지 저항계, 콜라우슈 브리지\n법, 어스테스터기\n\n6\n\n49 2 건물의 공사에서 콘크리트에 구멍을 둘\nof 드라이브 핀을 경제적으로 고정하는 공\n구는?\n<) 스패너\n< 드라이브 이트 툴\n® 오스터\n@ 녹아웃 펀치\n\n 드라이브 이트 : 화약의 폭발력을 이용하여 콘\n크리트에 구멍을 둘는 공구",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 50,
+      "page": 27,
+      "text": "전자 접촉기 2대를 이용하여 유도 전동기\n1대를 정ㆍ역 운전하고 있는 시설에서 전\n자 접촉기 2대가 동시에 여자되어 상간 단\n락되는 것을 방지하기 위하여 구성하는 회\n로는?\nTEED 410 80 69.0 500 5\n\n=         때202202022202002020200202020202020200200\n2015년 제4회 기출문제 | 087 |",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 27,
+      "text": "자기 유지 회로\n@ 순차 제어 회로\n@Y-a 기동 회로\n< 인터로크 회로\n\n 인터로크 회로 : 선행 입력 우선 동작 회로로서\n응답을 하는 동시에 다른 동작을 금지시키는\n회로",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 52,
+      "page": 27,
+      "text": "다음 중 버스 덕트가 아닌 것은?\n< 플로어 버스 덕트\n@ 피더 버스 덕트\n® 트롤리 버스 덕트\n@ 플러그인 버스 덕트\n\n 버스 덕트의 종류 : 피더 버스 덕트, 트롤리 버스\n덕트, 플러그인 버스 덕트",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 54,
+      "page": 27,
+      "text": "가공 전선로의 지지물에서 다른 지지물을\n거치지 아니하고 수용 장소의 인입선 접\n속점에 이르는 가공 전선을 무엇이라 하\n는가?",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 27,
+      "text": "연접 인입선\n@ 가공 AYA\n@) 구내 전선로\n@ 구내 인입선\n\n 저압 가공 인입선 시설 원칙\n＊ 선로 3% 500m] 이하일 것\n+ 전선의 37] 2.6mm] 이상의 인입용 비닐 절\n\n연 전선 사용\n* 도로 횡단 시 5[ 이상 높이에 가설할 것",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 1,
+      "page": 27,
+      "text": "삭제 520 53.삭제 54.0\n— —  --(0@=>\n\n\n[P28]",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 1,
+      "page": 28,
+      "text": "—    -       -            —  a\nB94 nas 출제문제\n해77 ———\n5155 합성수지관 공사의 설명 중 틀린 것은?\nGE 관의 지지점 간의 거리는 150m] 이\n하로 할 것\n@ 합성수지관 안에서는 HA 접속점\n이 없도록 할 것",
+      "options": [
+        {
+          "number": 1,
+          "text": "전선은 절연 전선(옥외용 비닐 절연\n전선을 제외한다)일 것\n© 관 상호 간 및 박스와는 관을 삼입하\n는 깊이를 관의 바깥지름의 1.5배 이\n상으로 할 것\n 합성수지관 시설 원칙\n© 관 삽입 깊이는 관 외경의 1.20 이상일 AR,\n접착제 사용 시 0.8배 이상일 것)\n＊ 관의 지지점 간 거리 : 1.5m] 이하마다 새들\n로 지지할 것",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 56,
+      "page": 28,
+      "text": "배선 설계를 위한 전등 및 소형 전기 기계\n기구의 부하 용량 산정 시 건축물의 종류\n에 대응한 표준 부하에서 원칙적으로 표\n준 부하를 201\\ㅅ/ㄷ\"으로 적용하는 건축\n물은?\n© 교회, 극장    <) 호텔, 병원\n® 은행, 상점     @ 아파트, 미용원\n 부하 용량 산정 시 건축물 종류별 표준 부하 :\n여관, 호텔, 병원, 244, 학교 — 20[va/m’]\nB57 지중 전선로를 직접 매설식에 의하여 시\n설하는 경우 차량, 기타 중량물의 압력\n을 받을 우려가 있는 장소의 매설 깊이\n[ㅁ]는?\n© 0.6[m] 이상",
+      "options": [
+        {
+          "number": 1,
+          "text": ".0m] 이상",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "50 이상",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": ".0m] 이상\n 직접 매설식 케이블 매설 깊이\n© BYE 압력 우려가 있는 경우 : 1.0[ㅁ0] 이상\n© BYE 압력 우려가 없는 경우 : 0.6[2] 이상\n-  TEED: 550 5602 51.0 8.0\n&)/",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 58,
+      "page": 28,
+      "text": "동전선의 직선 접속에서 단선 및 연선에 적\n용되는 접속 방법은?\n© 직선 맞대기용 슬리브에 의한 압착\n접속\n< 가는 단선(.6[0] 이상)의 분기 접속\n® 8형 슬리브에 의한 분기 접속\n@ 터미널 러그에 의한 접속",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 60,
+      "page": 28,
+      "text": "전기 난방 기구인 전기 담요나 전기 장판의\n보호용으로 사용되는 퓨즈는?\n® 플러그 퓨즈",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 28,
+      "text": "온도 퓨즈\n® 절연 퓨즈\n@ 유리관 퓨즈",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 59,
+      "page": 28,
+      "text": "삭제 60.2\n\n\n[P29]\nㅣ     2015년 제5회 7",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 7,
+      "page": 29,
+      "text": "자체 인덕턴스가 40[]인 코일에 10[시\n& 의 전류가 흐를 때 저장되는 에너지는 2\n17k?",
+      "options": [
+        {
+          "number": 1,
+          "text": "@8\n 코일에 축적되는 전자 에너지\nw= 흥22= 금×<640×%10 3% 10° =2[J]",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 29,
+      "text": "접지 저항     @ 절연 저항\n© 도체 저항     @) 접촉 저항",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 3,
+      "page": 29,
+      "text": "ㅅ, L, 두 코일이 접속되어 있을 때 누설\n자속이 없는 이상적인 코일 간의 상호 인덕\n턴스는?\n© M=Li+L, ® M=,/L,— I,\nL\n@ M= LL, @ M=   구\nVz,\n 상호 인덕턴스와 자기 인덕턴스 관계식\nM=kyL,L, THA\n누설이 없는 경우 결합 계수 ㅅ=1이므로\nM=/LL,[H\n04 3000] 전열기를 정격 상태에서 2022 사\n 용하였을 때 열량은 몇 [keall AT}?",
+      "options": [
+        {
+          "number": 1,
+          "text": "30           ® 520\n® 610            @ 860\nCEB). 01.0 020 03.0 04.@ 05",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 5,
+      "page": 29,
+      "text": "대칭 3상 스결선에서 선전류와 상전류와\n\n 의 위상 관계는?\n© 상전류가 lad] 앞선다.\n\n@ 상전류가 Trad) 뒤진다.\n© 상전류가 증069] 앞선다.\n< 상전류가 승(91 뒤진다.\n\n 스결선의 특성\n4= 8. 3 -증띠\n선전류 [HRT 보다 승 [0 뒤지므로 상전\n류가 선전류보다 승 [89] 앞선다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 6,
+      "page": 29,
+      "text": "[의의 저항과 7[으]의 저항이 병렬로\n접속되고 10[으]의 전류가 5[시, 2[으]의\n저항의 전류가 2[시라면 저항 7[으]은?",
+      "options": [
+        {
+          "number": 1,
+          "text": "0",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "0",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "5",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "0",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 7,
+      "page": 30,
+      "text": "저항 8[으]과 코일이 직렬로 접속된 회로에\n200[]의 교류 전압을 가하면 20[ㅅ의 전류\n가 흐른다. 코일의 리액턴스는 몇 [ㅇ]인가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "®@ 6             @8\n 7=7= 20010)\nR-L 직렬 829 합성 임피던스\nZ=R+jX, =8+jX,[Q)\n임피던스 절대값 +? =10(Q]\nX= V1 =8 = V36=0[Q]",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 8,
+      "page": 30,
+      "text": "가정용 전등 Hol 200[]이다. 이 교류",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 7,
+      "page": 30,
+      "text": "최대값은 몇 [\\]인가?\n@ 70.7          ® 86.7",
+      "options": [
+        {
+          "number": 1,
+          "text": "414",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "82.8\nFH 전등 전압 200[1는 실효값이므로\n최대값 V, = V2 V= v2 x 200 =2828[V]",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 9,
+      "page": 30,
+      "text": "다음 설명 중 틀린 것은?\n@ 리액턴스는 주파수의 함수이다,\n@ 콘덴서는 직렬로 연결할수록 용량이\n커진다.",
+      "options": [
+        {
+          "number": 1,
+          "text": "저항은 HER 연결할수록 저항치가\n작아진다.\n@ 코일은 직렬로 연결할수록 인덕턴스\n가 커진다.\n 콘덴서의 정전 용량은 병렬일 때 합이므로 커지\n고, 직렬로 연결하면 합성 정전 용량이 작아진다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 10,
+      "page": 30,
+      "text": "쿨롱의 법칙에서 2개의 점전하 사이에 작\nGE 정전력의 크기는?\n© 두 전하의 곱에 비례하고 거리에 반\n비례한다.\nCEB v0 80 002 106\nAREA ”/\n\n[9990808898889900009009000000000090000008\n\n© 두 전하의 곱에 반비례하고 거리에\n비례한다.\n\n® 두 전하의 곱에 비례하고 거리의 제\n곱에 비례한다.\n\n<@ 두 전하의 곱에 비례하고 거리의 제\n곱에 반비례한다.\n\nTW 250 yy /= 으으\nAmey’\n\n전하의 곱에 비례하고 거리의 제곱에 반비례\n\n한다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 11,
+      "page": 30,
+      "text": "m= 1x107[Wol, m, = 6x 10° [Wh],\nr= 10[600]이면 두 자극 m,, m, 사이에\n작용하는 힘은 약 몇 [피인가?\n\n@) 1.52         0",
+      "options": [
+        {
+          "number": 1,
+          "text": "2.4",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "4",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "52",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 12,
+      "page": 30,
+      "text": "i=s+jolalz 표시되는 전류의 크기\n7[시는 얼마인가?\n®6             @8",
+      "options": [
+        {
+          "number": 1,
+          "text": "0",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "2",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 30,
+      "text": "RC 직렬 회로 @ RL 직렬 회로\n\n@® RC 병렬 회로 @ RL 병렬 회로\n\nne 120 BO\n\n\n[P31]\n 임피던스가 실수와 허수의 조함으로 구성되어 있\n으면 직렬 회로이고 2 =6-.8[92]일 경우 허수\n부가 (-)이므로 진상 82 RC 직렬 회로이다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 14,
+      "page": 31,
+      "text": "-ㅅ- < 병렬 공진 회로에서 공진 주파\n\n 수는?",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 1,
+      "page": 31,
+      "text": "”     1\n이  ㅠ\\260       이  VLC",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 21,
+      "page": 31,
+      "text": "1\n@  vLC",
+      "options": [
+        {
+          "number": 1,
+          "text": "nV LC",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 15,
+      "page": 31,
+      "text": "비유전율이 큰 산화티탄 등을 SHAR A\n용한 것으로 극성이 없으며 가격에 비해 성\n능이 우수하여 널리 사용되고 있는 콘덴서\n의 종류는?\n< 전해 콘덴서 _ 9 세라믹 콘덴서\n<) 마일러 콘덴서 @ 마이카 콘덴서",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 16,
+      "page": 31,
+      "text": "전기 분해를 하면 석출되는 물질의 양은 통\n과한 전기량에 관계가 있다. 이것을 나타\n\n 낸 법칙은?",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 31,
+      "text": "옴의 법칙    ® 쿨롱의 법칙\n@ 앙페르의 법칙 <) 패러데이의 법칙\n\n 패러데이의 법칙 : 전극에서 석춤되는 물질의 양\n은 통과한 전기량에 비례하고 화학당량에 비례\n한다.\n\nW=kQ=kIt[g)",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 17,
+      "page": 31,
+      "text": "결선의 전원에서 각 상전압이 100[]일\n 때 선간 전압은 약 몇 []인가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "00",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "50",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "73",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "95\nCEB): 140 150 160 170 1",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 18,
+      "page": 31,
+      "text": "“mmol waa 자장의 wae 각각 나사\n& 의 진행 방향과 회전 방향에 일치한다.”와\n관계가 있는 법칙은?\n® 플레밍의 왼손 법칙\n® 앙페르의 오른 나사 법칙\n@ 플레밍의 오른손 법칙\n@ 키르히호프의 법칙\n 앙페르의 오른 나사 법칙 : 전류에 의한 자장의\n방향을 알기 쉽게 정의한 법칙\n* 전류 : 나사의 진행 방향\n* 자장 : 나사의 회전 방향",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 19,
+      "page": 31,
+      "text": "삼각파 전압의 최대값이 Vv, [VIY 때 실효\n 값은?\nVi\n@ Va         @ Tz\n2V,,              Vu\n수       5\n 심           의 A       Yn\nTW werhEdshe) 신효같 = -승 0",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 20,
+      "page": 31,
+      "text": "i®)=Lsinot [AI 사인파 교류에서 wt\n가 몇 도일 때 순시값과 실효값이 같게 되\n는가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "0°",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "5°\n® 60°            @ 90°\nFB 순시값 it) = /,810너과 실효값 17} 같을 조건\n이므로\ni(t) =Lsinwt = v2 Isinwt = I{A]\nsinut = —- wt=sin mts”\n8.0 19.9 20.2\nee    ff re",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "00",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "10",
+          "image": null
+        },
+        {
+          "number": 5,
+          "text": "86\n 전동기의 역기전력\n= 1-44,=100-10×1=090[미",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 22,
+      "page": 32,
+      "text": "입력으로 펄스 신호를 가해 주고 속도를\n입력 펄스의 주파수에 의해 조절하는 전\n동기는?\n© 전기 동력계\n< 서보 전동기\n® 스테핑 전동기\n@ 권선형 유도 전동기\n 스테핑 모터의 특징\n＊ 입력 신호에 따라 회전 속도 조절 가능\n＊ 전동기 출력 이용 속도, 거리, 방향 등의 제어\n73 58 유도 전동기의 기동법이 아닌 것은?",
+      "options": [
+        {
+          "number": 1,
+          "text": "차 저항기법",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 32,
+      "text": "-스기동법\n® 전전압 기동법\n@ 기동 보상기에 의한 기농법\n 유도 전동기 기동법\n* 권선형 유도 전동기 : 2차 저항 기동법(기동\n저항기법), 게르게스법\n© 농형 유도 전동기 Y-A 기동법, 전전압 기\n동법, 기동 보상기, 1차 저항 기동법\n24, 동기 전동기의 장점이 아닌 것은?\n © 직류 여자가 필요하다.\n< 전부하 효율이 양호하다.\n® 역률 1로 운전할 수 있다,\n@ 동기 속도를 얻을 수 있다.\nCEB. 21.0 20 80 %0\n15-",
+      "options": [
+        {
+          "number": 1,
+          "text": "3909099000000009900000000000000000000000004",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 25,
+      "page": 32,
+      "text": "정격 속도로 운전하는 무부하 분권 발전기\n의 계자 저항이 60[으], 계자 전류가 1[A],\n전기자 저항이 0.5[으]이라 하면 유도 기\n전력은 of 몇 [\\]인가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "0.5           ®@ 50.5\n@ 60.5           @ 80.5",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 26,
+      "page": 32,
+      "text": "고압 전동기 철심의 강판 홈(9100)의 모양은?\n<@) 반폐형       @ 개방형\n<) 반구형       @ 밀폐형",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 27,
+      "page": 32,
+      "text": "직류 발전기의 전기자 wage 영향에 대\n한 설명으로 틀린 것은?\n\n@ 브러시 사이의 불꽃을 발생시킨다.\n\n@ 주자속이 찌그러지거나 감소된다.\n\n<) 전기자 전류에 의한 자속이 주자속\n에 영향을 준다.\n\n@ 회전 방향과 반대 방향으로 자기적\n중성축이 이동된다.\n\n 전기자 반작용 결과\n＊ 주자속 감소\n© 중성축 이동\nㆍ 브러시 부근 불꽃 발생(정류 불량 원인)",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 28,
+      "page": 32,
+      "text": "다음 제동 방법 중 급정지하는 데 가장 좋\n\n 은 제동 방법은?\n\n@ 발전 제동 _ ㅇ@ 회생 제동\n<) 역상 제동     @ 단상 제동\n2509 26.2 27.0 28.0\n\n\n[P33]\n 역상 제동은 두 상을 바꾸어서 역희전하여 제동\n시키는 방법으로 급정지에 적당한 제동법이다,",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 29,
+      "page": 33,
+      "text": "변압기의 2차측을 개방하였을 경우 1차측에\n흐르는 전류는 무엇에 의하여 결정되는가?\n@ 저항         ® 임피던스\n® 누설 리액턴스 @ 여자 어드미턴스",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 30,
+      "page": 33,
+      "text": "다음 직류 분권 전동기에서 운전 중 계자 권\n선의 저항을 증가하면 회전 속도의 값은?\n© 감소한다。_ © 증가한다.",
+      "options": [
+        {
+          "number": 1,
+          "text": "일정하다.      @ 관계없다.\n 권선의 저항을 증가시키면 전류가 감소하므로\n회전 속도는 증가한다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 31,
+      "page": 33,
+      "text": "다음 그림은 직류 발전기의 분류 중 어느\n것에 해당되는가?\nel]\nO 분권 발전기 © 직권 발전기\n@ 자석 발전기 © 복권 발전기\n 복권 발전기는 전기자 도체와 직렬로 접속된 직\nA 계자가 있고 병렬로 접속된 분권 ARE 구\n성된다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 32,
+      "page": 33,
+      "text": "변압기에 대한 설명 중 틀린 것은?\n© 전압을 변성한다.\n© AYE 발생하지 않는다.",
+      "options": [
+        {
+          "number": 1,
+          "text": "정격 출력은 1차측 단자를 기준으로\n한다.\n< 변압기의 정격 용량은 피상 전력으\n로 표시한다.\nTEED: 20 300 31.0 20 ：:",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 33,
+      "page": 33,
+      "text": "유도 전동기가 많이 사용되는 이유가 아닌\n것은?\n© 값이 저렴\n@ 취급이 어려움\n@ 전원을 쉽게 얻음\n@ 구조가 간단하고 튼튼함",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 34,
+      "page": 33,
+      "text": "변압기의 결선의 특징으로 틀린 것은?\n© 고장시 응급 처치 방법으로도 쓰인다.\n<) 단상 변압기 2대로 3상 전력을 공급\n한다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 8,
+      "page": 33,
+      "text": "부하 중가가 예상되는 지역에 시설\n한다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 8,
+      "page": 33,
+      "text": "\\결선 시 출력은 스결선 시 출력과\n그 크기가 같다.\n 스결선 출력(2 )과 VEY EAR)\n* P,=3P, =3V,/cosf[W]\n+ P= 3 P,=/3V,Icosf[W]\n35 3상유도 전동기의 2차 저항을 2배로 하면\n그 값이 2배로 되는 것은?\n@ 슬립           @ 토크\n@) 전류         @ 역률\n  슬립과 22 저항은 비례하므로 슬립이 2947} 된다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 36,
+      "page": 33,
+      "text": "반도체 사이리스터에 의한 전동기의 속도\n제어 중 주파수 제어는?\n© 초퍼 제어\n@ 인버터 제어\n® 컨버터 제어\n© 브리지 정류 제어\n30 34.@ BD 36.0\n태          (® |S\n\n\n[P34]\n|  34 aus 출제문제              wp\nRR Sincirdoii 62653",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 37,
+      "page": 34,
+      "text": "슬립 *=ㅎ[%], Hg r,=0.1[Q19 유도\n전동기의 등가 저항 RIQI2 얼마인가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "0.4            @0.5",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "9",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": ".0\n 등가 저항 R=2p = 201-1910)",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 38,
+      "page": 34,
+      "text": "동기 발전기의 병렬 운전 중 주파수가 틀리\n면 어떤 현상이 나타나는가?\n© 무효 전력이 생긴다,\n@ 무효 순환 전류가 흐른다.\n@ 유효 순환 전류가 흐른다.",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 0,
+      "page": 34,
+      "text": "출력이 요동치고 권선이 가열된다.\n 동기 발전기의 병렬 운전 조건\n* 기전력의 크기가 같을 것\n© 기전력의 위상이 같을 것\n* 주파수가 일치할 것(주파수가 다를 경우 단자\n전압 변동, 권선 가열)\n+ 기전력의 파형이 일치할 것",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 39,
+      "page": 34,
+      "text": "부흐홀츠 계전기의 설치 위치는?\n © 콘서베이터 내부\n© 변암기 주탱크 내부\n® 변압기의 고압측 부싱\n@ 변압기 본체와 콘서베이터 사이",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 40,
+      "page": 34,
+      "text": "변암기의 용도가 아닌 것은?\n© 교류 전압의 변환\n@ 주파수의 변환\n® 임피던스의 변환\n@) 교류 전류의 변환\n 변압기는 가장 큰 목적이 전압의 크기를 강압\n또는 승압하는 장치로서, 주파수 크기를 변환시\n킬 수는 없다.\nCEB 2009 BO HO 4002\nACRES ® -          SE\n\n———————————————",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 47,
+      "page": 34,
+      "text": "가로 20m), MZ 18[m], 천장의 높이\n3.85[m], 작업면의 높이 0.85[m], 간접\n조명 방식인 호텔 연회장의 실지수는 약 얼\n마인가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "16",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": ".16",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": ".16",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": ".16\n + 작업면 높이 H=385-085=3[m]\nXY\n* 실지수(방지수)= ry\n20×18\n=3x@=+) 16\nok",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 42,
+      "page": 34,
+      "text": "주상 변압기 1차측 보호 장치로 사용하는\n것은?\n© A 아웃 스위치\n<) 자동 구분 개폐기",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 3,
+      "page": 34,
+      "text": "캐치 홀더\n@ 리클로저\nTH 주상 변암기\n＊ 1차측 보호 : 008(컷 아웃 스위치)\n* 2차측 보호 : 캐치 홀더\nex",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 43,
+      "page": 34,
+      "text": "화약류 저장 장소의 배선 공사에서 전용 개\n 폐기에서 화약류 저장소의 인입구까지는\n어떤 공사를 하여야 하는가?\n< 케이블을 사용한 옥측 전선로\n© 금속관을 사용한 지중 전선로",
+      "options": [
+        {
+          "number": 1,
+          "text": "케이블을 사용한 지중 전선로\n@ 금속관을 사용한 옥측 전선로\n 화약류 저장소 등의 위험 장소\n* 금속관 공사, 케이블 공사\n* 대지 전압 : 300V] 이하\n* 개폐기 및 과전류 차단기에서 화약고의 인입\n구까지의 배선에는 케이블을 사용하고 또한\n반드시 지중에 시설할 것\n41.9 42.0 43.0)",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 44,
+      "page": 35,
+      "text": "굽은 전선이나 케이블을 절단할 때 사용되\n는 공구는?\n© 클리퍼        @ 펜치\n® 나이프        @) 플라이어\n 클리퍼 : 전선 단면적 250m’) 이상의 굽은 전\n선이나 볼트 절단 시 사용하는 공구\n45 2930 물의 양에 따라 동작하는 자동 A\n위치는?\n© 부동 스위치 © 압력 스위치",
+      "options": [
+        {
+          "number": 1,
+          "text": "타임 스위치",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "2 스위치\n 부동 스위치 : 물뱅크의 수위 조절을 하는 스위치",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 46,
+      "page": 35,
+      "text": "Acsr 약호의 품명은?\n@ 경동 연선\n® 중공 연선\n@ 알루미늄선\n@ 강심 알루미늄 연선\n ACSR(ZHA 알루미늄 연선) : 온천 지역에 사용\n47 3% 전선관의 관 호칭은 (Q) 크기로 정\n하여 (©)2 표시하는데 0, Oo 들어갈\n내용으로 g2 것은?\nOO HE © 홀수\n<) ㅇ 안지름, © 짝수\n® ㅇ 바깥 지름, © 홀수\n® ㅇ 바깥 지름, © 짝수\n 후강 전선관 호칭 : 내경에 짝수로 표시한다,",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 48,
+      "page": 35,
+      "text": "배전반 및 분전반의 설치 장소로 적합하지\n않은 곳은?\n © 안정된 장소\n@ 밀폐된 장소\nCEE: «wd 650 460 41.0 48\n\nToe          2015년 제5회 기출문제 、 보세 [\n® 개폐기를 쉽게 개폐할 수 있는 장소\n@ 전기 회로를 쉽게 조작할 수 있는 장소\n 배전반 및 분전반 설치 장소 : 전개된 노출 장소\n나 점검 가능한 은폐 장소",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 49,
+      "page": 35,
+      "text": "소맥분, 전분, 기타 가연성의 분진이 존재\n하는 곳의 저압 옥내 배선 공사 방법에 해\n@ 당하는 것으로 짝지어진 것은?\n© 케이블 공사, 애자 사용 공사\n@ 금속관 공사, 콤바인 덕트관\n@> 케이블 공사, 금속관 공사, 애자 사\n용 공사\n@ 케이블 공사, 금속관 공사, 합성 수\n지관 공사",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 50,
+      "page": 35,
+      "text": "합성 수지관 배선에서 경질 비닐 전선관의\n굽기에 해당되지 않는 것은? (단, 관의 호\n칭을 말한다.)",
+      "options": [
+        {
+          "number": 1,
+          "text": "4",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "6",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "8",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "2\nFH 합성 수지관의 굽기 : 14, 16, 22, 28, 36, 42,\n54, 70, 82[mm]",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 51,
+      "page": 35,
+      "text": "전선의 도체 단면적이 2 5imm’el 전선 3본\n을 동일 관 내에 넣는 경우의 2종 가요 전\n선관의 최소 F7|[mm]E?",
+      "options": [
+        {
+          "number": 1,
+          "text": "0",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "5",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": "7",
+          "image": null
+        },
+        {
+          "number": 4,
+          "text": "4",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 25,
+      "page": 35,
+      "text": "가요 전선관의 굽기 선정\n=                   전선 본수\ngoa 1 [2[a[«[s[s [alow\nna]          28 712 el 최소 Flan]\n게미면면미미미미미미미\n매민매매민미미미미미미\n2 49.@ 50.03 51.2\n-------   (ee\n\n\n[P36]\nx 개\nI Jar",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 52,
+      "page": 36,
+      "text": "전로에 지락이 생겼을 경우에 부하 기기,\n금속제 외함 등에 발생하는 고장 전압 또는\n지락 전류를 검출하는 부분과 차단기 부분\n을 조합하여 자동적으로 전로를 차단하는\n장치는?\n[OR 차단 장치\n© 과전류 차단기\n@ 누전 경보 장치\n@ 배선용 차단기\nFA 누전 차단기 : 전동 기계 기구가 접속되어 있는\n전로는 누전에 의한 감전 사고를 방지하기 위해\n사용되는 차단 장치",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 53,
+      "page": 36,
+      "text": "om 케이블을 직접 매설식에 의하여 차량,\n기타 중량물의 압력을 받을 우려가 있는 장\n@ ia 시설하는 경우 매설 깊이는 몇 [ㅁ]\n이상이어야 하는가?\n® 0.6",
+      "options": [
+        {
+          "number": 1,
+          "text": ".0\n®",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": ".2",
+          "image": null
+        },
+        {
+          "number": 3,
+          "text": ".6\nFH 직접 매설식 케이블 매설 깊이\n* 중량물의 하중을 받을 우려가 있는 장소:\n1.0[m] 이상\n* 중량물의 하중을 받을 우려가 없는 장소 :\n0.6m] 이상",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 55,
+      "page": 36,
+      "text": "전주를 건주할 경우에 수종 철근 콘크리트\n,주의 길이가 10[ㅁ]이면 땅에 묻는 표준 깊\n 이는 최저 약 몇 [ㅁ]인가? (단, 설계 하중\n이 6.8[kN] 이하이다.)",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 55,
+      "page": 36,
+      "text": "TEED: 520 53.0 54.삭제 55\n36\n\n000000000090000000000000000000090000000000004\n  전주의 땅에 묻는 깊이\n주 일이벽스=3080스노\n전주 길이 × 6  10× 0 = 1.7[m]",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 56,
+      "page": 36,
+      "text": "노출 장소 또는 점검 가능한 은폐 장소에서\n2 M25 가요 전선관을 시설하고 제거하는\n 것이 부자유하거나 점검 불가능한 경우의\n곡률 반지름은 안지름의 몇 배 이상으로 하\n여야 하는가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "2",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "®5             @6\n A2% 가요관의 굴곡 반경은 관 안지름(내경)의\n@배이다.",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 57,
+      "page": 36,
+      "text": "일반적으로 정크션 박스 내에서 사용되는\n전선 접속 방식은?\n © 슬리브        ®@ 코드 x=\n@ 코드 파스너 @ 와이어 커넥터",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 58,
+      "page": 36,
+      "text": "저압 옥내 간선으로부터 분기하는 곳에 설\n치하여야 하는 것은?\n© 과전압 차단기 © 과전류 차단기\n@ 누전 차단기 @ AF 차단기\n 과전류 차단기의 시설 장소\n＊ 발전기나 전동기, 변압기 등과 같은 기계 기\nTE 보호하는 장소\n＊ 송전 선로나 배전 선로 등에서 보호를 요하는\n장소\n* 인입구나 간선의 전원측 및 분기점 등 보호\n상, 보안상 필요한 장소",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 59,
+      "page": 36,
+      "text": "하나의 콘센트에 둘 또는 세 가지의 기계 기\n구를 끼워서 사용할 때 사용되는 것은?\n< 노출형 콘센트 (9 키리스 소켓\n@ 멀티 탭      @ 아이언 플러그\n) 56.@ 57.@ 58.0 59.0\n\n\n[P37]\nEE ———————\n 플러그 및 접속기\n+ 멀티 탭 : 콘센트 1개에 여러 개 전기 기구 A\n용시 접속하는 장치\n* 테이블 탭 : 코드 길이가 짧을 경우 연장 사용\n하는 장치\n—-—",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 60,
+      "page": 37,
+      "text": "저ㆍ고압 가공 전선이 철도 또는 궤도를 횡\n(29 단하는 경우 높이는 궤조면상 몇 [ㅁ] 이상\n이어야 하는가?",
+      "options": [
+        {
+          "number": 1,
+          "text": "0             ® 85",
+          "image": null
+        },
+        {
+          "number": 2,
+          "text": "75            ® 6.5\n 가공 전선의 높이[ㅁ]\n구분    고압\n== | .& | 0?",
+          "image": null
+        }
+      ],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 8,
+      "page": 37,
+      "text": "| es | es\n횡단 보도교     8.5\n기타\nGEE) wo\n\n=\n\n\n[P38]\n¥ \"1 삐 a |\n,\na 2:\n\nlt pe ae 노사 해\nFSI SAT gk a A pS A\nRAR 고을 EE Fi)\nJ SFr RR PR RAR x rin rads angie\nTai ar =, La oes SR HR\nNER BERR om 1\nPL a Ses ah aia 1 TE\n| para BRE BABIES le) cose ENTE SH",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 3,
+      "page": 38,
+      "text": "ERE ey Ar ETA EER\nHar dtl (he     Hg\n$200 nafs Says Fit BENE ™\nBa hen le Fide 옹 ... 고. SE",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 18,
+      "page": 38,
+      "text": "SEs, St ale ER +057)\neT Reg a      Ect AR a 4 1 |\nHail  poe   es 65 at Cv Re",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 7,
+      "page": 38,
+      "text": "of de Lou 1956 마비 FL 8\npba ops dB Je ELE RD\n이 ~ Ter   or 개 아바 제\nFEE STON TE\nTS aaa 01000.\niE PEETE       A Flite LS i=\nbh NOE a Sa BE SAE\nee pe we\nES SRE FE\nen a a Ra BL 나0\na a ER I pe\nRr a Re ERE he RR\nA pp!  AT cmb] 만타 12536 가라 루소 5",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 2,
+      "page": 38,
+      "text": "PRR MER a el\nye a hie SL 자에\n=    Peg Aah   가 SR\nBe i SRE\n| Ti wil Bf Re rl SE eS 허",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 2,
+      "page": 38,
+      "text": "wr DRE 수 아아는이\n만 매어 at as\nBEBO 기소 아시 시사인 Si nx 위\nLig i ENE EL 본 996산대세   SSeS Fd\nSeibel sini at\ny) SpE Se EEE 고란 히",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 3,
+      "page": 38,
+      "text": "Deelah iss Yes Rar atin dation SE Al\naf TE SE ee ee\nJ LR Se i phy Sle et]\nEE tL) SEE Te\nSEI SE al peg\ned ER ce 에 aa\nRe ee   Erker |\nEE Se 고 을 이\nEE ee 라라난\n다 S57 TERRACES My in se ne pr\nCT oe Se TE EEL Ee\nBs a ei\n© RRR ee i",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    },
+    {
+      "id": 7,
+      "page": 38,
+      "text": "Eri met Ee biel) CER\nas 시 바드    Fee a Ea\n\nfot ee vee te Ly Ae Ba Cag SE dys\npT     2                Bates\nREPENS SS Se\nSEER ER RE a a De",
+      "options": [],
+      "explanation": "",
+      "image": null,
+      "sub_unit": "[설비] 기타 및 안전 수칙"
+    }
+  ]
+}
