@@ -316,7 +316,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     <div className={`w-7 h-7 md:w-10 md:h-10 shrink-0 rounded-xl md:rounded-2xl flex items-center justify-center font-black text-sm md:text-base transition-all shadow-sm ${isAnswered ? (isCorrect ? 'bg-emerald-500 text-white' : isSelected ? 'bg-rose-500 text-white' : 'bg-slate-100 text-slate-400') : 'bg-brand-50 text-brand-600 group-hover:bg-brand-600 group-hover:text-white'}`}>
                       {isAnswered && isCorrect ? <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5" /> : isAnswered && isSelected && !isCorrect ? <XCircle className="w-4 h-4 md:w-5 md:h-5" /> : idx + 1}
                     </div>
-                    <span className="text-sm md:text-xl font-bold flex-1 leading-snug">{renderMath(choice)}</span>
+                    <span className="text-base md:text-xl font-bold flex-1 leading-snug">{renderMath(choice)}</span>
                   </motion.button>
                 );
               })}
