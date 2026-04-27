@@ -43,6 +43,9 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [reportType, setReportType] = useState('');
   const [reportComment, setReportComment] = useState('');
   const [reportStatus, setReportStatus] = useState<'idle'|'sending'|'done'>('idle');
+  const [shuffledOptions, setShuffledOptions] = useState<string[]>([]);
+  const [correctShuffledIndex, setCorrectShuffledIndex] = useState<number>(-1);
+  const [isCurrentCorrect, setIsCurrentCorrect] = useState(false);
 
   const [unitFilter, setUnitFilter] = useState<string | null>(null);
   const [setNum, setSetNum] = useState<string | null>(null);
@@ -97,12 +100,33 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const currentQuestion = questions[currentIndex];
   const isAnswered = selectedIndex !== null;
   const isLastQuestion = currentIndex === questions.length - 1;
-  const isCurrentCorrect = currentQuestion && isAnswered && (selectedIndex + 1 === parseInt(currentQuestion.answer));
+
+  useEffect(() => {
+    if (questions.length > 0 && currentQuestion) {
+      const originalOptions = currentQuestion.options || currentQuestion.choices || [];
+      const correctIdx = parseInt(currentQuestion.answer) - 1;
+      
+      const optionsWithIndex = originalOptions.map((opt, i) => ({ opt, originalIdx: i }));
+      for (let i = optionsWithIndex.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [optionsWithIndex[i], optionsWithIndex[j]] = [optionsWithIndex[j], optionsWithIndex[i]];
+      }
+      
+      const newShuffled = optionsWithIndex.map(item => item.opt);
+      const newCorrectIdx = optionsWithIndex.findIndex(item => item.originalIdx === correctIdx);
+      
+      setShuffledOptions(newShuffled);
+      setCorrectShuffledIndex(newCorrectIdx);
+      setSelectedIndex(null);
+      setIsAnswered(false);
+    }
+  }, [currentIndex, questions]);
 
   const handleAnswer = (choiceIndex: number) => {
     if (selectedIndex !== null) return;
     setSelectedIndex(choiceIndex);
-    const isCorrect = choiceIndex + 1 === parseInt(currentQuestion.answer);
+    const isCorrect = choiceIndex === correctShuffledIndex;
+    setIsCurrentCorrect(isCorrect);
     setAnswers(prev => [...prev, { 
       questionId: currentQuestion.id || currentIndex.toString(), 
       isCorrect 
@@ -210,8 +234,10 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
   const renderMath = (text: string) => {
     if (!text) return '';
+    // 선택지 번호(1., ①, (1)) 제거를 위한 정규식 추가
+    const cleanText = text.replace(/^(\d+\.?|①|②|③|④|⑤|\(\d+\))\s*/, '');
     const regex = /(\$.*?\$|\\\(.*?\\\)|\\\[.*?\\\]|\\text\{.*?\}|\\\w+(\{.*?\})?)/g;
-    const parts = text.split(regex);
+    const parts = cleanText.split(regex);
     return parts.map((part, i) => {
       if (!part) return null;
       if (part.startsWith('$') && part.endsWith('$')) return <InlineMath key={i} math={part.slice(1, -1)} />;
@@ -275,7 +301,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     <div className="min-h-screen relative flex flex-col text-slate-800">
       <div className="mesh-bg" />
       <nav className="sticky top-0 z-50 px-4 py-2 glass-card border-none bg-white/40 backdrop-blur-md flex justify-between items-center h-12 md:h-20 md:px-8 md:py-4">
-        <button onClick={() => currentIndex > 0 ? handlePrev() : router.back()} className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/50 rounded-xl hover:bg-white transition-all text-slate-600 shadow-sm"><ChevronLeft size={16} /></button>
+        <button onClick={() => router.push(`/study/${params.subject}`)} className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/50 rounded-xl hover:bg-white transition-all text-slate-600 shadow-sm"><ChevronLeft size={16} /></button>
         <div className="flex items-center gap-4 md:gap-10">
           <span className="text-xs md:text-lg font-black tracking-[0.05em] text-brand-600 uppercase">{unitFilter ? `${unitFilter}${setNum ? ` · 세트 ${setNum}` : ''}` : `${subject} 기출학습`}</span>
           <div className="hidden md:block w-px h-6 bg-slate-200" />
@@ -289,10 +315,10 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
       <main className="flex-1 w-full max-w-screen-2xl mx-auto px-4 md:px-[15%] py-2 pb-32 md:py-8 md:pb-8 flex flex-col">
         <AnimatePresence mode="wait" custom={direction}>
-          <motion.div key={currentIndex} custom={direction} initial={{ opacity: 0, x: direction > 0 ? 50 : -50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: direction > 0 ? -50 : 50 }} transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }} className="flex-1 flex flex-col gap-4 md:gap-12">
-            <div className="space-y-2 md:space-y-4">
+          <motion.div key={currentIndex} custom={direction} initial={{ opacity: 0, x: direction > 0 ? 50 : -50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: direction > 0 ? -50 : 50 }} transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }} className="flex-1 flex flex-col gap-8 md:gap-16">
+            <div className="space-y-4 md:space-y-8">
               <div className="flex items-center gap-3"><span className="px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 text-brand-600 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase">Q. {currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num}</span><div className="h-px flex-1 bg-brand-100/50" /></div>
-              <h2 className="text-lg md:text-4xl font-bold text-slate-900 leading-[1.4] md:leading-[1.3] tracking-tight">{renderMath(currentQuestion.question)}</h2>
+              <h2 className="text-xl md:text-5xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">{renderMath(currentQuestion.question)}</h2>
             </div>
 
             {currentQuestion.image && (
@@ -301,8 +327,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
             {/* 선택지 */}
             <div className="grid grid-cols-1 gap-4 md:gap-8">
-              {(currentQuestion.choices || currentQuestion.options) && (currentQuestion.choices || currentQuestion.options).map((choice: string, idx: number) => {
-                const isCorrect = idx + 1 === parseInt(currentQuestion.answer);
+              {shuffledOptions.map((choice: string, idx: number) => {
+                const isCorrect = idx === correctShuffledIndex;
                 const isSelected = selectedIndex === idx;
                 if (choice === "" && idx > 0) return null;
                 let styleStr = "glass-card bg-white/50 hover:bg-white text-slate-700 hover:text-brand-600 cursor-pointer";
@@ -316,7 +342,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     <div className={`w-7 h-7 md:w-10 md:h-10 shrink-0 rounded-xl md:rounded-2xl flex items-center justify-center font-black text-sm md:text-base transition-all shadow-sm ${isAnswered ? (isCorrect ? 'bg-emerald-500 text-white' : isSelected ? 'bg-rose-500 text-white' : 'bg-slate-100 text-slate-400') : 'bg-brand-50 text-brand-600 group-hover:bg-brand-600 group-hover:text-white'}`}>
                       {isAnswered && isCorrect ? <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5" /> : isAnswered && isSelected && !isCorrect ? <XCircle className="w-4 h-4 md:w-5 md:h-5" /> : idx + 1}
                     </div>
-                    <span className="text-base md:text-xl font-bold flex-1 leading-snug">{renderMath(choice)}</span>
+                    <span className="text-base md:text-xl font-bold flex-1 leading-relaxed">{renderMath(choice)}</span>
                   </motion.button>
                 );
               })}
@@ -325,9 +351,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             {/* 모바일 하단 이동 버튼 (선택지 바로 밑) */}
             <div className="flex md:hidden items-center justify-between gap-4 mt-3 px-2">
               <button 
-                onClick={handlePrev} 
-                disabled={currentIndex === 0} 
-                className={`w-14 h-14 rounded-full flex items-center justify-center border-2 transition-all active:scale-90 ${currentIndex === 0 ? 'border-slate-100 text-slate-200' : 'bg-white border-slate-200 text-slate-400'}`}
+                onClick={() => router.push(`/study/${params.subject}`)} 
+                className="w-14 h-14 rounded-full flex items-center justify-center bg-white border-2 border-slate-200 text-slate-400 active:scale-90 transition-all"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
@@ -347,7 +372,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   <div className={`flex items-center gap-3 px-4 py-3 ${isCurrentCorrect ? 'bg-emerald-500' : 'bg-rose-500'}`}>
                     {isCurrentCorrect ? <CheckCircle2 className="w-4 h-4 text-white shrink-0" /> : <XCircle className="w-4 h-4 text-white shrink-0" />}
                     <span className="text-white font-black text-sm flex-1 flex items-center gap-1">
-                      {isCurrentCorrect ? '정답입니다! 🎉' : <>정답은 {renderMath(currentQuestion.choices?.[parseInt(currentQuestion.answer)-1] || currentQuestion.options?.[parseInt(currentQuestion.answer)-1])}</>}
+                      {isCurrentCorrect ? '정답입니다! 🎉' : <>정답은 {renderMath(shuffledOptions[correctShuffledIndex])}</>}
                     </span>
                   </div>
                   {currentQuestion.explanation && (
@@ -380,11 +405,9 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           )}
         </AnimatePresence>
         <AnimatePresence>
-          {currentIndex > 0 && (
-            <motion.button initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.5 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={handlePrev} className="fixed left-6 md:left-[7.5%] md:-translate-x-1/2 bottom-12 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-16 h-16 md:w-20 md:h-20 bg-white hover:bg-slate-50 text-slate-400 hover:text-brand-600 rounded-full flex items-center justify-center shadow-2xl shadow-black/5 border-4 border-slate-100 transition-colors">
-              <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" />
-            </motion.button>
-          )}
+          <motion.button initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.5 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => router.push(`/study/${params.subject}`)} className="fixed left-6 md:left-[7.5%] md:-translate-x-1/2 bottom-12 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-16 h-16 md:w-20 md:h-20 bg-white hover:bg-slate-50 text-slate-400 hover:text-brand-600 rounded-full flex items-center justify-center shadow-2xl shadow-black/5 border-4 border-slate-100 transition-colors">
+            <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" />
+          </motion.button>
         </AnimatePresence>
       </div>
 
