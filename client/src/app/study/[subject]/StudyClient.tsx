@@ -118,7 +118,6 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       setShuffledOptions(newShuffled);
       setCorrectShuffledIndex(newCorrectIdx);
       setSelectedIndex(null);
-      setIsAnswered(false);
     }
   }, [currentIndex, questions]);
 
