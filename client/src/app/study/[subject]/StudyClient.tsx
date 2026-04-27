@@ -112,8 +112,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         [optionsWithIndex[i], optionsWithIndex[j]] = [optionsWithIndex[j], optionsWithIndex[i]];
       }
       
-      const newShuffled = optionsWithIndex.map(item => item.opt);
-      const newCorrectIdx = optionsWithIndex.findIndex(item => item.originalIdx === correctIdx);
+      const newShuffled = optionsWithIndex.map((item: { opt: string, originalIdx: number }) => item.opt);
+      const newCorrectIdx = optionsWithIndex.findIndex((item: { opt: string, originalIdx: number }) => item.originalIdx === correctIdx);
       
       setShuffledOptions(newShuffled);
       setCorrectShuffledIndex(newCorrectIdx);
