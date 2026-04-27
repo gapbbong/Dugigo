@@ -1,9 +1,9 @@
 import fs from 'fs';
 import https from 'https';
 
-const API_KEY = 'AIzaSyA4k2juxTP3wGn7m2Ma89LsRwO2yXn_9FE';
-const FILE_PATH = 'e:\\DugiGo\\scan\\ElectricExam2015.pdf';
-const FILE_NAME = 'ElectricExam2015.pdf';
+const API_KEY = 'AIzaSyBVMgA2JdX0YV4PC7Pmb596BsQYNTegSBs';
+const FILE_PATH = 'e:\\DugiGo\\scan\\ElectricExam2019-2022_part1.pdf';
+const FILE_NAME = 'ElectricExam2019-2022_part1.pdf';
 
 async function uploadFile() {
   const stats = fs.statSync(FILE_PATH);
