@@ -89,7 +89,7 @@
         "행거"
       ],
       "explanation": "브레이스 로드(brace rod)\n구조물의 처짐 등을 보완하기 위해 쓰이는 트러스 또는 경사진(대각선) 부재로, 엘리베이터의 카 프레임 구성요소이다.",
-      "explanation_img": "2015_01_06_explanation_img.webp",
+      "explanation_img": "/images/exams/2015_01/2015_01_06_explanation_img.webp",
       "number": "06",
       "page": 3,
       "pdf_file": "ElevatorExam_11_16.pdf",
@@ -218,7 +218,7 @@
         "스트랜드의 꼬는 방향과 로프의 꼬는 방향이 전체 길이의 반은 같고 반은 반대인 것"
       ],
       "explanation": "와이어로프의 꼬는 방법\n보통꼬임(ordinary lay): 스트랜드의 꼬는 방향과 로프의 꼬는 방향이 다름\n랭꼬임(lang lay): 스트랜드의 꼬는 방향과 로프의 꼬는 방향이 같음",
-      "explanation_img": "2015_01_14_explanation_img.webp",
+      "explanation_img": "/images/exams/2015_01/2015_01_14_explanation_img.webp",
       "number": "14",
       "page": 5,
       "pdf_file": "Elevator_11_16.pdf",
@@ -267,7 +267,7 @@
         "워터슈트"
       ],
       "explanation": "제동기의 구성",
-      "explanation_img": "2015_01_17_explanation_img.webp",
+      "explanation_img": "/images/exams/2015_01/2015_01_17_explanation_img.webp",
       "number": "17",
       "page": 5,
       "pdf_file": "Elevator_11_16.pdf",
@@ -716,7 +716,7 @@
         "62"
       ],
       "explanation": "레일의 단면 치수(소수점 이하 반올림)\n\n[이미지: T형 레일 단면도 (치수 A, B, C, D 표시)]\n\n각 부 치수(단위 : [mm])\n| 종류 | 기호 | A | B | C | D |\n|---|---|---|---|---|---|\n| 8[kgf] 레일 | 8K | 56 | 78 | 10 | 26 |\n| 13[kgf] 레일 | 13K | 62 | 89 | 16 | 32 |\n| 18[kgf] 레일 | 18K | 89 | 114 | 16 | 38 |\n| 24[kgf] 레일 | 24K | 89 | 127 | 16 | 50 |\n| 30[kgf] 레일 | 30K | 108 | 140 | 19 | 50 |\n\n13K 레일의 A값은 62mm이다.",
-      "explanation_img": "2015_01_45_explanation_img.webp",
+      "explanation_img": "/images/exams/2015_01/2015_01_45_explanation_img.webp",
       "number": "45",
       "page": 12,
       "pdf_file": "Elevator_11_16.pdf",
@@ -817,7 +817,7 @@
       "page": 14,
       "pdf_file": "Elevator_11_16.pdf",
       "question": "다음과 같은 지침형(아날로그형) 계기로 측정하기에 가장 알맞은 것은?(단, $R$은 지침의 0점을 조절하기 위한 가변저항이다)",
-      "question_img": "2015_01_51_question_img.webp",
+      "question_img": "/images/exams/2015_01/2015_01_51_question_img.webp",
       "round": "01",
       "year": "2015"
     },
@@ -910,7 +910,7 @@
         "$\\mathrm{A} \\cdot \\overline{\\mathrm{B}}=\\mathrm{X}$"
       ],
       "explanation": "논리기호의 논리식\nOR논리회로 $\\mathrm{X}=\\mathrm{A}+\\mathrm{B}$",
-      "explanation_img": "2015_01_57_explanation_img.webp",
+      "explanation_img": "/images/exams/2015_01/2015_01_57_explanation_img.webp",
       "number": "57",
       "page": 15,
       "pdf_file": "Elevator_11_16.pdf",
@@ -927,7 +927,7 @@
         "120"
       ],
       "explanation": "운행속도 = $2\\pi \\times (250+6)[\\mathrm{mm}] \\times 56[\\mathrm{rpm}]$\n= $90,075.7[\\mathrm{mm/min}]$\n$\\fallingdotseq 90[\\mathrm{m/min}]$",
-      "explanation_img": "2015_01_58_explanation_img.webp",
+      "explanation_img": "/images/exams/2015_01/2015_01_58_explanation_img.webp",
       "number": "58",
       "page": 15,
       "pdf_file": "Elevator_11_16.pdf",
@@ -960,7 +960,7 @@
         "힘의 크기는 $W=2P$이고, $W$의 속도는 $P$속도의 $\\frac{1}{4}$이다."
       ],
       "explanation": "동활차\n절반의 힘으로 하중을 위로 올린다.\n힘 : $P = \\frac{1}{2}W$",
-      "explanation_img": "2015_01_60_explanation_img.webp",
+      "explanation_img": "/images/exams/2015_01/2015_01_60_explanation_img.webp",
       "number": "60",
       "page": 16,
       "pdf_file": "Elevator_11_16.pdf",
@@ -1537,7 +1537,7 @@
         "$\\frac{1}{16}$"
       ],
       "explanation": "전기식 엘리베이터의 카 틀에서 브레이스 로드의 분담하중 : $\frac{3}{8}$\n브레이스 로드(brace rod)\n구조체의 수평방향의 힘에 대한 보강재로 대각선 방향의 빗대는 경사형 부재(막대형 첨사)를 말하며 승강기 케이지의 상틀과 하틀을 지탱하고 있다.",
-      "explanation_img": "2015_02_36_explanation_img.webp",
+      "explanation_img": "/images/exams/2015_02/2015_02_36_explanation_img.webp",
       "number": "36",
       "page": 24,
       "pdf_file": "Elevator_11_16.pdf",
@@ -1570,7 +1570,7 @@
         "더스트 와이퍼"
       ],
       "explanation": "유압잭(hydraulic jack)\n유압을 이용하여 중량물을 들어 올리는 기계로 플런저와 패킹, 더스트와이퍼 등으로 구성되어 있다. 사일런서(silencer)는 일반적으로 소음기를 말한다.",
-      "explanation_img": "2015_02_38_explanation_img.webp",
+      "explanation_img": "/images/exams/2015_02/2015_02_38_explanation_img.webp",
       "number": "38",
       "page": 25,
       "pdf_file": "Elevator_11_16.pdf",
@@ -1587,7 +1587,7 @@
         "주의표지판의 바탕은 흰색, 도안은 흑색, 사선은 적색이다."
       ],
       "explanation": "일반적으로 주의 표지판은 흰색 배경에 검은색으로 금지 대상을 도안으로 표현하고 빨간색으로 사선을 그어 금지를 나타내고, 사용을 위한 모든 표시, 안내 및 문구는 견고한 재질로 눈에 띄는 위치에 명확하게 읽을 수 있는 한글로 작성되어야 하며 $80[\\mathrm{mm}] \times 100[\\mathrm{mm}]$ 이상의 크기로 표시되어야 한다.",
-      "explanation_img": "2015_02_39_explanation_img.webp",
+      "explanation_img": "/images/exams/2015_02/2015_02_39_explanation_img.webp",
       "number": "39",
       "page": 25,
       "pdf_file": "Elevator_11_16.pdf",
@@ -1732,7 +1732,7 @@
         "이의 물림이 좋고 연속적으로 접촉한다."
       ],
       "explanation": "헬리컬 기어(helical gear)\n* 이의 변형과 진동 소음이 작고, 큰 동력의 전달과 고속 운전에 적합하다.\n* 회전 시에 축압이 생기고, 스퍼기어보다 가공이 힘들다.\n* 한 쌍의 이의 맞물림이 떨어지기 전에 다른 한 쌍의 이의 맞물림이 시작되므로 이의 맞물림이 원활하다.",
-      "explanation_img": "2015_02_48_explanation_img.webp",
+      "explanation_img": "/images/exams/2015_02/2015_02_48_explanation_img.webp",
       "number": "48",
       "page": 27,
       "pdf_file": "Elevator_11_16.pdf",
@@ -1877,7 +1877,7 @@
         "피드백신호"
       ],
       "explanation": "외란(外亂, disturbance)\n자동제어에서 기준 입력 이외에서 제어량에 변화를 주는 원인이 되는 것. 예를 들면 연소로의 온도제어에서는 연료 질의 변화나 노의 주위 온도 변화, 또는 피가열 물체의 변화 등이 이에 해당한다.",
-      "explanation_img": "2015_02_57_explanation_img.webp",
+      "explanation_img": "/images/exams/2015_02/2015_02_57_explanation_img.webp",
       "number": "57",
       "page": 29,
       "pdf_file": "Elevator_11_16.pdf",
@@ -1894,7 +1894,7 @@
         "절이 진동하는 것을 캠이라 한다."
       ],
       "explanation": "링크 기구 구성 요소\n고정 링크, 크랭크(회전운동), 레버(요동운동), 슬라이더",
-      "explanation_img": "2015_02_58_explanation_img.webp",
+      "explanation_img": "/images/exams/2015_02/2015_02_58_explanation_img.webp",
       "number": "58",
       "page": 29,
       "pdf_file": "Elevator_11_16.pdf",

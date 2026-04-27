@@ -52,7 +52,7 @@
     "year": 2015,
     "round": "01",
     "number": "04",
-    "question": "전원과 부하가 다 같이 $\\Delta$결선된 3상 평형 회로가 있다. 상전압이 $200\\text{ [V]}$, 부하 임피던스가 $\\dot{Z} = 6 + j8 \\text{ [Ω]}$인 경우 선전류는 몇 $\\text{[A]}$인가?<br><img src='http://localhost:5001/serve-image?path=e%3A%5C3D%20studies%5CDukigo%2B%5Cpublic%5Cimages%5Cexams%5C2015%5C01%5Cq4_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
+    "question": "전원과 부하가 다 같이 $\\Delta$결선된 3상 평형 회로가 있다. 상전압이 $200\\text{ [V]}$, 부하 임피던스가 $\\dot{Z} = 6 + j8 \\text{ [Ω]}$인 경우 선전류는 몇 $\\text{[A]}$인가?<br><img src='/images/exams/2015_01/q4_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
     "choices": [
       "$20$",
       "$\\frac{20}{\\sqrt{3}}$",
@@ -100,7 +100,7 @@
     "year": 2015,
     "round": "01",
     "number": "07",
-    "question": "다음 회로($2\\mu\\text{F}$와 $4\\mu\\text{F}$ 병렬 후 $3\\mu\\text{F}$ 직렬)의 합성 정전 용량$[\\mu\\text{F}]$은?<br><img src='http://localhost:5001/serve-image?path=e%3A%5C3D%20studies%5CDukigo%2B%5Cpublic%5Cimages%5Cexams%5C2015%5C01%5Cq7_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
+    "question": "다음 회로($2\\mu\\text{F}$와 $4\\mu\\text{F}$ 병렬 후 $3\\mu\\text{F}$ 직렬)의 합성 정전 용량$[\\mu\\text{F}]$은?<br><img src='/images/exams/2015_01/q7_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
     "choices": [
       "$1.5$",
       "$2.4$",
@@ -260,7 +260,7 @@
     "year": 2015,
     "round": "01",
     "number": "17",
-    "question": "그림의 병렬 공진 회로(R-L 직렬과 C의 병렬)에서 공진 주파수 $f_0\\text{ [Hz]}$는?<br><img src='http://localhost:5001/serve-image?path=e%3A%5C3D%20studies%5CDukigo%2B%5Cpublic%5Cimages%5Cexams%5C2015%5C01%5Cq17_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
+    "question": "그림의 병렬 공진 회로(R-L 직렬과 C의 병렬)에서 공진 주파수 $f_0\\text{ [Hz]}$는?<br><img src='/images/exams/2015_01/q17_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
     "choices": [
       "$f_0 = \\frac{1}{2\\pi} \\sqrt{\\frac{R}{L} - \\frac{1}{LC}}$",
       "$f_0 = \\frac{1}{2\\pi} \\sqrt{\\frac{L^2}{R^2} - \\frac{1}{LC}}$",
@@ -276,7 +276,7 @@
     "year": 2015,
     "round": "01",
     "number": "18",
-    "question": "그림의 단자 1-2에서 본 노튼 등가 회로의 개방단 컨덕턴스는 몇 $[\\text{\\mho}]$인가?<br><img src='http://localhost:5001/serve-image?path=e%3A%5C3D%20studies%5CDukigo%2B%5Cpublic%5Cimages%5Cexams%5C2015%5C01%5Cq18_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
+    "question": "그림의 단자 1-2에서 본 노튼 등가 회로의 개방단 컨덕턴스는 몇 $[\\text{\\mho}]$인가?<br><img src='/images/exams/2015_01/q18_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
     "choices": [
       "$0.5$",
       "$1$",
@@ -2093,7 +2093,7 @@
     "year": 2015,
     "round": "04",
     "number": "11",
-    "question": "그림과 같은 R-L 병렬 회로에서 $R=25$ [$Ω$], $\\omega L=\\frac{100}{3}$ [$Ω$]일 때, 200 [V]의 전압을 가하면 코일에 흐르는 전류 $I_{L}$ [A]은? [그림 참고]<br><img src='http://localhost:5001/serve-image?path=e%3A%5C3D%20studies%5CDukigo%2B%5Cpublic%5Cimages%5Cexams%5C2015%5C04%5Cq11_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
+    "question": "그림과 같은 R-L 병렬 회로에서 $R=25$ [$Ω$], $\\omega L=\\frac{100}{3}$ [$Ω$]일 때, 200 [V]의 전압을 가하면 코일에 흐르는 전류 $I_{L}$ [A]은? [그림 참고]<br><img src='/images/exams/2015_04/q11_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
     "choices": [
       "3.0",
       "4.8",
@@ -2125,7 +2125,7 @@
     "year": 2015,
     "round": "04",
     "number": "13",
-    "question": "다음 그림과 같은 회로의 저항값이 $R_{1} > R_{2} > R_{3} > R_{4}$ 일 때, 전류가 최소로 흐르는 저항은? [그림 참고]<br><img src='http://localhost:5001/serve-image?path=e%3A%5C3D%20studies%5CDukigo%2B%5Cpublic%5Cimages%5Cexams%5C2015%5C04%5Cq13_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
+    "question": "다음 그림과 같은 회로의 저항값이 $R_{1} > R_{2} > R_{3} > R_{4}$ 일 때, 전류가 최소로 흐르는 저항은? [그림 참고]<br><img src='/images/exams/2015_04/q13_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
     "choices": [
       "$R_{1}$",
       "$R_{2}$",
@@ -2237,7 +2237,7 @@
     "year": 2015,
     "round": "04",
     "number": "20",
-    "question": "그림에서 a-b 간의 합성 저항은 c-d 간의 합성 저항의 몇 배인가? [그림 참고]<br><img src='http://localhost:5001/serve-image?path=e%3A%5C3D%20studies%5CDukigo%2B%5Cpublic%5Cimages%5Cexams%5C2015%5C04%5Cq20_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
+    "question": "그림에서 a-b 간의 합성 저항은 c-d 간의 합성 저항의 몇 배인가? [그림 참고]<br><img src='/images/exams/2015_04/q20_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
     "choices": [
       "1배",
       "2배",
@@ -2269,7 +2269,7 @@
     "year": 2015,
     "round": "04",
     "number": "22",
-    "question": "그림은 전력 제어 소자를 이용한 위상 제어 회로이다. 전동기의 속도를 제어하기 위하여 '가' 부분에 사용되는 소자는? [그림 참고]<br><img src='http://localhost:5001/serve-image?path=e%3A%5C3D%20studies%5CDukigo%2B%5Cpublic%5Cimages%5Cexams%5C2015%5C04%5Cq22_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
+    "question": "그림은 전력 제어 소자를 이용한 위상 제어 회로이다. 전동기의 속도를 제어하기 위하여 '가' 부분에 사용되는 소자는? [그림 참고]<br><img src='/images/exams/2015_04/q22_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
     "choices": [
       "전력용 트랜지스터",
       "제너 다이오드",
@@ -2397,7 +2397,7 @@
     "year": 2015,
     "round": "04",
     "number": "30",
-    "question": "[생략 - 문제 설명과 선택지 배치가 혼재됨]<br><img src='http://localhost:5001/serve-image?path=e%3A%5C3D%20studies%5CDukigo%2B%5Cpublic%5Cimages%5Cexams%5C2015%5C04%5Cq30_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
+    "question": "[생략 - 문제 설명과 선택지 배치가 혼재됨]<br><img src='/images/exams/2015_04/q30_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
     "choices": [],
     "answer": "2",
     "explanation": "",
@@ -2408,7 +2408,7 @@
     "year": 2015,
     "round": "04",
     "number": "31",
-    "question": "분상 기동형 단상 유도 전동기를 역회전시키기 위한 방법이 아닌 것은? [그림 참고]<br><img src='http://localhost:5001/serve-image?path=e%3A%5C3D%20studies%5CDukigo%2B%5Cpublic%5Cimages%5Cexams%5C2015%5C04%5Cq31_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
+    "question": "분상 기동형 단상 유도 전동기를 역회전시키기 위한 방법이 아닌 것은? [그림 참고]<br><img src='/images/exams/2015_04/q31_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
     "choices": [
       "원심력 스위치를 개로 또는 폐로한다.",
       "기동 권선이나 운전 권선의 어느 한 권선의 단자 접속을 반대로 한다.",
@@ -2424,7 +2424,7 @@
     "year": 2015,
     "round": "04",
     "number": "32",
-    "question": "다음 그림은 단상 변압기 결선도이다. 1, 2차는 각각 어떤 결선인가? [그림 참고]<br><img src='http://localhost:5001/serve-image?path=e%3A%5C3D%20studies%5CDukigo%2B%5Cpublic%5Cimages%5Cexams%5C2015%5C04%5Cq32_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
+    "question": "다음 그림은 단상 변압기 결선도이다. 1, 2차는 각각 어떤 결선인가? [그림 참고]<br><img src='/images/exams/2015_04/q32_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
     "choices": [
       "Y-Y결선",
       "$\\Delta$-Y결선",
@@ -2440,7 +2440,7 @@
     "year": 2015,
     "round": "04",
     "number": "33",
-    "question": "다음 그림의 직류 전동기는 어떤 전동기인가? [그림 참고]<br><img src='http://localhost:5001/serve-image?path=e%3A%5C3D%20studies%5CDukigo%2B%5Cpublic%5Cimages%5Cexams%5C2015%5C04%5Cq33_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
+    "question": "다음 그림의 직류 전동기는 어떤 전동기인가? [그림 참고]<br><img src='/images/exams/2015_04/q33_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
     "choices": [
       "직권 전동기",
       "타여자 전동기",
@@ -3348,7 +3348,7 @@
     "year": 2015,
     "round": "05",
     "number": "31",
-    "question": "다음 그림은 직류 발전기의 분류 중 어느 것에 해당되는가?<br><img src='http://localhost:5001/serve-image?path=e%3A%5C3D%20studies%5CDukigo%2B%5Cpublic%5Cimages%5Cexams%5C2015%5C05%5Cq31_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
+    "question": "다음 그림은 직류 발전기의 분류 중 어느 것에 해당되는가?<br><img src='/images/exams/2015_05/q31_1.webp' style='max-width:300px; margin-top:10px; border-radius:8px; border:1px solid #444; display:block;'>",
     "choices": [
       "분권 발전기",
       "직권 발전기",
