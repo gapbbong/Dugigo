@@ -234,7 +234,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const renderMath = (text: string) => {
     if (!text) return '';
     // 선택지 번호(1., ①, (1)) 제거를 위한 정규식 추가
-    const cleanText = text.replace(/^(\d+\.?|①|②|③|④|⑤|\(\d+\))\s*/, '');
+    const cleanText = text.replace(/^(\d+\.|①|②|③|④|⑤|\(\d+\))\s*/, '');
     const regex = /(\$.*?\$|\\\(.*?\\\)|\\\[.*?\\\]|\\text\{.*?\}|\\\w+(\{.*?\})?)/g;
     const parts = cleanText.split(regex);
     return parts.map((part, i) => {
@@ -316,7 +316,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div key={currentIndex} custom={direction} initial={{ opacity: 0, x: direction > 0 ? 50 : -50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: direction > 0 ? -50 : 50 }} transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }} className="flex-1 flex flex-col gap-8 md:gap-16">
             <div className="space-y-4 md:space-y-8">
-              <div className="flex items-center gap-3"><span className="px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 text-brand-600 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase">Q. {currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num}</span><div className="h-px flex-1 bg-brand-100/50" /></div>
+              <div className="flex items-center gap-3"><span className="px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 text-brand-600 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase">Q. {currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num || currentQuestion.number}</span><div className="h-px flex-1 bg-brand-100/50" /></div>
               <h2 className="text-xl md:text-5xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">{renderMath(currentQuestion.question)}</h2>
             </div>
 
@@ -416,7 +416,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-4 bg-black/40 backdrop-blur-sm" onClick={(e) => { if (e.target === e.currentTarget) setReportOpen(false); }}>
             <motion.div initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 60, opacity: 0 }} transition={{ type: 'spring', damping: 25 }} className="w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden">
               <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100">
-                <div className="flex items-center gap-2"><Flag className="w-4 h-4 text-rose-500" /><h3 className="font-black text-slate-800 text-sm">문항 오류 신고</h3><span className="text-[10px] text-slate-400 font-bold bg-slate-100 px-2 py-0.5 rounded-full">Q.{currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num}</span></div>
+                <div className="flex items-center gap-2"><Flag className="w-4 h-4 text-rose-500" /><h3 className="font-black text-slate-800 text-sm">문항 오류 신고</h3><span className="text-[10px] text-slate-400 font-bold bg-slate-100 px-2 py-0.5 rounded-full">Q.{currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num || currentQuestion.number}</span></div>
                 <button onClick={() => setReportOpen(false)} className="text-slate-400 hover:text-slate-600"><X className="w-4 h-4" /></button>
               </div>
               {reportStatus === 'done' ? (
