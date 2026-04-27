@@ -106,7 +106,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       const originalOptions = currentQuestion.options || currentQuestion.choices || [];
       const correctIdx = parseInt(currentQuestion.answer) - 1;
       
-      const optionsWithIndex = originalOptions.map((opt, i) => ({ opt, originalIdx: i }));
+      const optionsWithIndex = originalOptions.map((opt: string, i: number) => ({ opt, originalIdx: i }));
       for (let i = optionsWithIndex.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [optionsWithIndex[i], optionsWithIndex[j]] = [optionsWithIndex[j], optionsWithIndex[i]];
