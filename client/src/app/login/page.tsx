@@ -76,8 +76,8 @@ export default function LoginPage() {
             <div className="w-14 h-14 bg-brand-600 rounded-2xl flex items-center justify-center shadow-lg shadow-brand-500/30 mb-6">
               <GraduationCap className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-3xl font-black text-slate-900 tracking-tighter uppercase mb-2">DugiGo<span className="text-brand-600">+</span></h1>
-            <p className="text-slate-500 font-bold text-sm tracking-tight text-center">전기기능사 합격의 지름길, 두기고 플러스</p>
+            <h1 className="text-3xl font-black text-slate-900 tracking-tighter mb-2">두기고<span className="text-brand-600">+</span></h1>
+            <p className="text-slate-500 font-bold text-sm tracking-tight text-center"><span className="text-brand-600">두</span>꺼운 <span className="text-brand-600">기</span>능사 책 대신 <span className="text-brand-600">고</span>득점 비결</p>
           </div>
 
           <AnimatePresence mode="wait">
