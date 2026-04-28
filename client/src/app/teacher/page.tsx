@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 export default function TeacherDashboard() {
   const [students, setStudents] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isOwner, setIsOwner] = useState(false);
   const [stats, setStats] = useState({
     totalStudents: 0,
     avgAccuracy: 0,
@@ -21,11 +22,20 @@ export default function TeacherDashboard() {
   const fetchData = async () => {
     setLoading(true);
     try {
-      // 1. 학생 목록 가져오기
-      const { data: profiles, error: profileErr } = await supabase
-        .from('dukigo_profiles')
-        .select('*')
-        .eq('role', 'student');
+      // 0. 현재 사용자 정보 확인
+      const { data: { user } } = await supabase.auth.getUser();
+      const ownerFlag = user?.email === 'serv@kakao.com';
+      setIsOwner(ownerFlag);
+
+      // 1. 목록 가져오기 (소유자는 교사와 학생 모두, 일반 교사는 학생만)
+      let profileQuery = supabase.from('dukigo_profiles').select('*');
+      if (!ownerFlag) {
+        profileQuery = profileQuery.eq('role', 'student');
+      } else {
+        profileQuery = profileQuery.in('role', ['student', 'teacher']);
+      }
+      
+      const { data: profiles, error: profileErr } = await profileQuery;
       
       if (profileErr) throw profileErr;
 
@@ -140,8 +150,12 @@ export default function TeacherDashboard() {
         <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-10">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="px-3 py-1 bg-brand-100 text-brand-700 font-black text-xs uppercase tracking-widest rounded-full">Admin</span>
-              <h1 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">교사 대시보드</h1>
+              <span className="px-3 py-1 bg-brand-100 text-brand-700 font-black text-xs uppercase tracking-widest rounded-full">
+                {isOwner ? 'Owner' : 'Admin'}
+              </span>
+              <h1 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
+                {isOwner ? '관리자 대시보드' : '교사 대시보드'}
+              </h1>
             </div>
             <p className="text-slate-500 font-bold text-lg">학생들의 전체 학습 현황과 성취도를 한눈에 파악하세요.</p>
           </div>
@@ -190,7 +204,12 @@ export default function TeacherDashboard() {
                           {student.username.charAt(0)}
                         </div>
                         <div>
-                          <div className="font-black text-slate-900 text-lg mb-0.5">{student.username}</div>
+                          <div className="font-black text-slate-900 text-lg mb-0.5 flex items-center gap-2">
+                            {student.username}
+                            {student.role === 'teacher' && (
+                              <span className="px-2 py-0.5 bg-brand-500 text-white text-[10px] rounded-md border border-brand-600 shadow-sm leading-none pt-1">교사</span>
+                            )}
+                          </div>
                           <div className="text-xs font-bold text-slate-400 flex items-center gap-1.5 bg-slate-100 w-fit px-2 py-0.5 rounded-md">
                             <Award className="w-3 h-3 text-amber-500" /> {student.level_title || 'Lv.1 초보자'} ({student.exp_points || 0} EXP)
                           </div>
