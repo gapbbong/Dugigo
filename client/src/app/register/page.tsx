@@ -16,6 +16,9 @@ export default function RegisterPage() {
     confirmPassword: '',
   });
 
+  const [role, setRole] = useState<'student' | 'teacher'>('student');
+  const [teacherCode, setTeacherCode] = useState('');
+
   const [otpCode, setOtpCode] = useState('');
   const [isVerifying, setIsVerifying] = useState(false);
   const [isUsernameUnique, setIsUsernameUnique] = useState<'idle' | 'checking' | 'unique' | 'duplicate'>('idle');
@@ -25,7 +28,8 @@ export default function RegisterPage() {
   }>({ type: 'idle', message: '' });
 
   const checkUsername = async (username: string) => {
-    if (username.length < 4) return;
+    if (role === 'teacher' && username.length < 2) return;
+    if (role === 'student' && username.length < 6) return;
     setIsUsernameUnique('checking');
     try {
       const { data } = await supabase
@@ -41,7 +45,12 @@ export default function RegisterPage() {
   };
 
   const validate = () => {
-    if (formData.username.length < 4) return '학번성명은 4글자 이상이어야 합니다.';
+    if (role === 'teacher') {
+      if (formData.username.length < 2) return '아이디는 2글자 이상이어야 합니다.';
+      if (teacherCode !== '7153') return '올바른 교사 인증 코드를 입력해 주세요.';
+    } else {
+      if (formData.username.length < 6) return '학번이름은 6글자 이상이어야 합니다.';
+    }
     if (isUsernameUnique === 'duplicate') return '이미 사용 중인 정보입니다.';
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) return '유효한 이메일 형식이 아닙니다.';
     if (formData.password.length < 6) return '비밀번호는 6글자 이상을 권장합니다.';
@@ -95,7 +104,7 @@ export default function RegisterPage() {
           id: verifyData.user?.id,
           username: formData.username,
           email: formData.email,
-          role: 'student'
+          role: role
         });
       if (profileError) throw profileError;
 
@@ -134,14 +143,29 @@ export default function RegisterPage() {
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {/* 역할 선택기 */}
+                  <div className="flex bg-slate-100 p-1.5 rounded-2xl mb-4">
+                    <button type="button" onClick={() => setRole('student')} className={`flex-1 py-3 rounded-xl text-sm font-black transition-all ${role === 'student' ? 'bg-white text-brand-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`}>학생</button>
+                    <button type="button" onClick={() => setRole('teacher')} className={`flex-1 py-3 rounded-xl text-sm font-black transition-all ${role === 'teacher' ? 'bg-white text-brand-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`}>교사</button>
+                  </div>
+
                   <div className="space-y-3">
                     <InputGroup 
                       icon={<User className="w-5 h-5" />} 
                       type="text" 
-                      placeholder="학번성명 (예: 20405홍길동)" 
+                      placeholder={role === 'teacher' ? "아이디 (2자 이상)" : "학번이름 (예: 20405홍길동, 6자 이상)"} 
                       value={formData.username}
                       onChange={(e: any) => setFormData({ ...formData, username: e.target.value.replace(/\s/g, '') })}
                     />
+                    {role === 'teacher' && (
+                      <InputGroup 
+                        icon={<KeyRound className="w-5 h-5" />} 
+                        type="password" 
+                        placeholder="교사 인증 코드 (예: 7153)" 
+                        value={teacherCode}
+                        onChange={(e: any) => setTeacherCode(e.target.value)}
+                      />
+                    )}
                     <InputGroup 
                       icon={<Mail className="w-5 h-5" />} 
                       type="email" 
