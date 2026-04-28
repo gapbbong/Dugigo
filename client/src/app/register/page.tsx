@@ -87,13 +87,31 @@ export default function RegisterPage() {
 
     setStatus({ type: 'loading', message: '가입 승인 절차가 시작되었습니다...' });
     try {
-      const { error: authError } = await supabase.auth.signUp({
+      const { data: authData, error: authError } = await supabase.auth.signUp({
         email: formData.email,
         password: formData.password,
       });
       if (authError) throw authError;
+
+      /* 이메일 인증 기능 (1년 뒤 유료화 시 사용 예정) - 현재는 주석 처리
       setIsVerifying(true);
       setStatus({ type: 'idle', message: '' });
+      */
+
+      // 이메일 인증 없이 바로 프로필 생성 및 가입 완료
+      const { error: profileError } = await supabase
+        .from('dukigo_profiles')
+        .insert({
+          id: authData.user?.id,
+          username: formData.username,
+          email: formData.email,
+          role: role
+        });
+      if (profileError) throw profileError;
+
+      setStatus({ type: 'success', message: '가입 성공! 로그인 페이지로 이동합니다.' });
+      setTimeout(() => router.push('/login'), 1500);
+
     } catch (err: any) {
       setStatus({ type: 'error', message: err.message || '가입 중 오류가 발생했습니다.' });
     }
