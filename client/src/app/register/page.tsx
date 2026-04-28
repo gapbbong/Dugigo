@@ -104,6 +104,7 @@ export default function RegisterPage() {
         .insert({
           id: authData.user?.id,
           username: formData.username,
+          display_name: formData.username,
           email: formData.email,
           role: role
         });
@@ -113,7 +114,12 @@ export default function RegisterPage() {
       setTimeout(() => router.push('/login'), 1500);
 
     } catch (err: any) {
-      setStatus({ type: 'error', message: err.message || '가입 중 오류가 발생했습니다.' });
+      let errorMessage = err.message || '가입 중 오류가 발생했습니다.';
+      if (errorMessage.includes('User already registered')) errorMessage = '이미 가입된 이메일입니다.';
+      else if (errorMessage.includes('Password should be')) errorMessage = '비밀번호가 너무 짧거나 취약합니다.';
+      else if (errorMessage.includes('not-null constraint')) errorMessage = '필수 정보(이름 등)가 누락되었습니다. 다시 시도해주세요.';
+      
+      setStatus({ type: 'error', message: errorMessage });
     }
   };
 
@@ -139,15 +145,19 @@ export default function RegisterPage() {
         .insert({
           id: verifyData.user?.id,
           username: formData.username,
+          display_name: formData.username,
           email: formData.email,
           role: role
         });
       if (profileError) throw profileError;
 
-      setStatus({ type: 'success', message: '인증 성공! 합격의 문이 열렸습니다.' });
+      setStatus({ type: 'success', message: '이메일 인증 및 가입 완료!' });
       setTimeout(() => router.push('/login'), 1500);
     } catch (err: any) {
-      setStatus({ type: 'error', message: err.message || '인증에 실패했습니다.' });
+      let errorMessage = err.message || '인증 중 오류가 발생했습니다.';
+      if (errorMessage.includes('Token has expired or is invalid')) errorMessage = '인증 코드가 만료되었거나 잘못되었습니다.';
+      else if (errorMessage.includes('not-null constraint')) errorMessage = '필수 정보(이름 등)가 누락되었습니다. 다시 시도해주세요.';
+      setStatus({ type: 'error', message: errorMessage });
     }
   };
 

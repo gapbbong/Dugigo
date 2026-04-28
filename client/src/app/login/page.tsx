@@ -57,7 +57,13 @@ export default function LoginPage() {
       setStatus({ type: 'success', message: '환영합니다! 곧 이동합니다.' });
       setTimeout(() => router.push('/select-subject'), 700);
     } catch (err: any) {
-      setStatus({ type: 'error', message: err.message || '로그인에 실패했습니다.' });
+      let errorMessage = err.message || '로그인에 실패했습니다.';
+      if (errorMessage.includes('Invalid login credentials')) errorMessage = '이메일 또는 비밀번호가 일치하지 않습니다.';
+      else if (errorMessage.includes('Email not confirmed')) errorMessage = '이메일 인증이 완료되지 않았습니다.';
+      else if (errorMessage.includes('User not found')) errorMessage = '가입되지 않은 이메일입니다.';
+      else if (errorMessage.includes('not-null constraint')) errorMessage = '회원 정보가 누락되었습니다. 관리자에게 문의해주세요.';
+      
+      setStatus({ type: 'error', message: errorMessage });
     }
   };
 
