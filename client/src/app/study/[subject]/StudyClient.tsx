@@ -247,6 +247,48 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     }).filter(Boolean);
   };
 
+  const renderQuestionText = (text: string) => {
+    if (!text) return null;
+    
+    if (text.includes('```')) {
+      const parts = text.split(/(```[\s\S]*?```)/g);
+      return (
+        <div className="text-xl md:text-4xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">
+          {parts.map((part, i) => {
+            if (part.startsWith('```') && part.endsWith('```')) {
+              const codeContent = part.slice(3, -3).replace(/^[a-z]*\n/i, '').trim();
+              return (
+                <div key={i} className="my-6 p-5 md:p-8 bg-[#f8fafc] border-2 border-slate-200 rounded-3xl text-left overflow-x-auto shadow-inner">
+                  <pre className="font-mono text-sm md:text-xl text-slate-800 whitespace-pre-wrap leading-relaxed">{codeContent}</pre>
+                </div>
+              );
+            }
+            return <span key={i}>{renderMath(part)}</span>;
+          })}
+        </div>
+      );
+    }
+    
+    if (text.includes('\n\n')) {
+      const firstDoubleNewline = text.indexOf('\n\n');
+      const questionPart = text.slice(0, firstDoubleNewline);
+      const codePart = text.slice(firstDoubleNewline + 2).trim();
+      
+      return (
+        <div className="text-xl md:text-4xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">
+          <span>{renderMath(questionPart)}</span>
+          {codePart && (
+            <div className="my-6 p-5 md:p-8 bg-[#f8fafc] border-2 border-slate-200 rounded-3xl text-left overflow-x-auto shadow-inner">
+              <pre className="font-mono text-sm md:text-xl text-slate-800 whitespace-pre-wrap leading-relaxed">{codePart}</pre>
+            </div>
+          )}
+        </div>
+      );
+    }
+    
+    return <h2 className="text-xl md:text-4xl md:text-5xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">{renderMath(text)}</h2>;
+  };
+
   const formatTime = (seconds: number) => {
     const m = Math.floor(seconds / 60);
     const s = seconds % 60;
@@ -317,7 +359,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           <motion.div key={currentIndex} custom={direction} initial={{ opacity: 0, x: direction > 0 ? 50 : -50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: direction > 0 ? -50 : 50 }} transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }} className="flex-1 flex flex-col gap-8 md:gap-16">
             <div className="space-y-4 md:space-y-8">
               <div className="flex items-center gap-3"><span className="px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 text-brand-600 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase">Q. {currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num || currentQuestion.number}</span><div className="h-px flex-1 bg-brand-100/50" /></div>
-              <h2 className="text-xl md:text-5xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">{renderMath(currentQuestion.question)}</h2>
+              {renderQuestionText(currentQuestion.question)}
             </div>
 
             {currentQuestion.image && (
