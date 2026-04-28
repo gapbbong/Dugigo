@@ -118,6 +118,8 @@ export default function RegisterPage() {
       if (errorMessage.includes('User already registered')) errorMessage = '이미 가입된 이메일입니다.';
       else if (errorMessage.includes('Password should be')) errorMessage = '비밀번호가 너무 짧거나 취약합니다.';
       else if (errorMessage.includes('not-null constraint')) errorMessage = '필수 정보(이름 등)가 누락되었습니다. 다시 시도해주세요.';
+      else if (errorMessage.includes('check constraint')) errorMessage = '잘못된 형식의 데이터가 포함되어 있습니다. 다시 확인해주세요.';
+      else if (errorMessage.includes('foreign key constraint')) errorMessage = '시스템 내부 식별 오류가 발생했습니다. 관리자에게 문의해주세요.';
       
       setStatus({ type: 'error', message: errorMessage });
     }

@@ -62,6 +62,8 @@ export default function LoginPage() {
       else if (errorMessage.includes('Email not confirmed')) errorMessage = '이메일 인증이 완료되지 않았습니다.';
       else if (errorMessage.includes('User not found')) errorMessage = '가입되지 않은 이메일입니다.';
       else if (errorMessage.includes('not-null constraint')) errorMessage = '회원 정보가 누락되었습니다. 관리자에게 문의해주세요.';
+      else if (errorMessage.includes('check constraint')) errorMessage = '회원 권한 설정에 문제가 있습니다. 관리자에게 문의해주세요.';
+      else if (errorMessage.includes('foreign key constraint')) errorMessage = '시스템 내부 식별 오류가 발생했습니다. 관리자에게 문의해주세요.';
       
       setStatus({ type: 'error', message: errorMessage });
     }
