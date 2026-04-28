@@ -2,8 +2,9 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookOpen, GraduationCap, ChevronRight, Loader2, Sparkles, LogOut } from 'lucide-react';
+import { BookOpen, GraduationCap, ChevronRight, Loader2, Sparkles, LogOut, LayoutDashboard } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
 
 export default function SelectSubjectPage() {
@@ -11,6 +12,7 @@ export default function SelectSubjectPage() {
   const [subjects, setSubjects] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<any>(null);
+  const [isTeacher, setIsTeacher] = useState(false);
 
   useEffect(() => {
     async function init() {
@@ -22,7 +24,22 @@ export default function SelectSubjectPage() {
       }
       setUser(user);
 
-      // 2. Fetch Subjects from API
+      // 2. Fetch user profile to check if teacher or admin
+      try {
+        const { data: profile } = await supabase
+          .from('dukigo_profiles')
+          .select('role')
+          .eq('id', user.id)
+          .single();
+        
+        if (profile?.role === 'teacher' || user.email === 'serv@kakao.com') {
+          setIsTeacher(true);
+        }
+      } catch (e) {
+        console.error('Failed to load profile role:', e);
+      }
+
+      // 3. Fetch Subjects from API
       try {
         const res = await fetch('/api/subjects');
         const data = await res.json();
@@ -70,12 +87,22 @@ export default function SelectSubjectPage() {
           </h2>
         </div>
         
-        <button 
-          onClick={handleLogout}
-          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors px-4 py-2 rounded-xl hover:bg-white/5 font-medium"
-        >
-          <LogOut className="w-4 h-4" /> 로그아웃
-        </button>
+        <div className="flex items-center gap-2">
+          {isTeacher && (
+            <Link 
+              href="/teacher"
+              className="flex items-center gap-2 text-brand-600 hover:text-brand-700 hover:bg-brand-100 transition-colors px-4 py-2 rounded-xl bg-white/80 font-bold border-2 border-brand-200/50 shadow-sm"
+            >
+              <LayoutDashboard className="w-4 h-4" /> 대시보드 이동
+            </Link>
+          )}
+          <button 
+            onClick={handleLogout}
+            className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors px-4 py-2 rounded-xl hover:bg-white/5 font-medium"
+          >
+            <LogOut className="w-4 h-4" /> 로그아웃
+          </button>
+        </div>
       </header>
 
       <main className="max-w-6xl mx-auto relative z-10 px-6 md:px-12">
