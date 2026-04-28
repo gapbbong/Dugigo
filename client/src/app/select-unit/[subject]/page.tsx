@@ -122,36 +122,8 @@ export default function SelectUnitPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* 전체 학습 카드 */}
-          <motion.div
-            className="lg:col-span-4"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-          >
-            <div 
-              onClick={() => handleSelect(null)}
-              className="glass-card p-10 rounded-[3.5rem] cursor-pointer hover:shadow-2xl hover:shadow-brand-500/10 transition-all group relative overflow-hidden h-full flex flex-col highlight-border"
-            >
-              <div className="absolute top-0 right-0 w-40 h-40 bg-brand-500/10 blur-[60px] group-hover:bg-brand-500/20 transition-colors" />
-              
-              <div className="w-16 h-16 bg-brand-600 text-white rounded-[1.5rem] flex items-center justify-center mb-8 shadow-lg shadow-brand-500/30">
-                <LayoutGrid className="w-8 h-8" />
-              </div>
-              
-              <h3 className="text-3xl font-black mb-4 text-slate-900">전체 랜덤 학습</h3>
-              <p className="text-slate-500 font-bold mb-10 leading-relaxed text-sm">
-                모든 단원을 골고루 섞어서<br />실전처럼 시험을 치릅니다.
-                <span className="block mt-2 text-brand-600 font-black">({totalQuestions}문항 로드됨)</span>
-              </p>
-              
-              <div className="mt-auto pt-4 flex items-center gap-2 text-brand-600 font-black text-xs">
-                지금 도전하기 <ChevronRight size={16} />
-              </div>
-            </div>
-          </motion.div>
-
           {/* 소단원 리스트 */}
-          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="lg:col-span-8 order-2 lg:order-1 grid grid-cols-1 md:grid-cols-2 gap-4">
             <AnimatePresence>
               {units.map((unit, index) => {
                 const setSize = 30;
@@ -177,14 +149,11 @@ export default function SelectUnitPage() {
                         <h4 className="text-xl font-black text-slate-800 leading-snug truncate">
                           {unit.name}
                         </h4>
-                        <div className="flex items-center gap-3 mt-1.5">
-                          <span className="text-xs font-black text-brand-600 bg-brand-50 px-3 py-1 rounded-full border border-brand-100">
-                            {unit.count}문항
-                          </span>
-                          {!hasMultipleSets && (
+                        {!hasMultipleSets && (
+                          <div className="mt-1.5">
                             <span className="text-xs font-bold text-slate-400">지금 학습 시작</span>
-                          )}
-                        </div>
+                          </div>
+                        )}
                       </div>
                       {!hasMultipleSets && <ChevronRight className="w-5 h-5 text-slate-300" />}
                     </div>
@@ -218,6 +187,34 @@ export default function SelectUnitPage() {
               </div>
             )}
           </div>
+
+          {/* 전체 학습 카드 */}
+          <motion.div
+            className="lg:col-span-4 order-1 lg:order-2"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+          >
+            <div 
+              onClick={() => handleSelect(null)}
+              className="glass-card p-10 rounded-[3.5rem] cursor-pointer hover:shadow-2xl hover:shadow-brand-500/10 transition-all group relative overflow-hidden h-full flex flex-col highlight-border"
+            >
+              <div className="absolute top-0 right-0 w-40 h-40 bg-brand-500/10 blur-[60px] group-hover:bg-brand-500/20 transition-colors" />
+              
+              <div className="w-16 h-16 bg-brand-600 text-white rounded-[1.5rem] flex items-center justify-center mb-8 shadow-lg shadow-brand-500/30">
+                <LayoutGrid className="w-8 h-8" />
+              </div>
+              
+              <h3 className="text-3xl font-black mb-4 text-slate-900">전체 랜덤 학습</h3>
+              <p className="text-slate-500 font-bold mb-4 leading-relaxed text-sm">
+                모든 단원을 골고루 섞어서<br />실전처럼 시험을 치릅니다.
+                <span className="block mt-2 text-brand-600 font-black">({totalQuestions}문항 로드됨)</span>
+              </p>
+              
+              <div className="flex items-center gap-2 text-brand-600 font-black text-xs mt-2">
+                지금 도전하기 <ChevronRight size={16} />
+              </div>
+            </div>
+          </motion.div>
         </div>
       </main>
     </div>
