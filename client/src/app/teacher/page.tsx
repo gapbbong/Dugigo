@@ -27,12 +27,11 @@ export default function TeacherDashboard() {
       const ownerFlag = user?.email === 'serv@kakao.com';
       setIsOwner(ownerFlag);
 
-      // 1. 목록 가져오기 (소유자는 교사와 학생 모두, 일반 교사는 학생만)
       let profileQuery = supabase.from('dukigo_profiles').select('*');
       if (!ownerFlag) {
-        profileQuery = profileQuery.eq('role', 'student');
+        profileQuery = profileQuery.in('role', ['student', 'STUDENT']);
       } else {
-        profileQuery = profileQuery.in('role', ['student', 'teacher']);
+        profileQuery = profileQuery.in('role', ['student', 'teacher', 'STUDENT', 'TEACHER']);
       }
       
       const { data: profiles, error: profileErr } = await profileQuery;
@@ -206,7 +205,7 @@ export default function TeacherDashboard() {
                         <div>
                           <div className="font-black text-slate-900 text-lg mb-0.5 flex items-center gap-2">
                             {student.username}
-                            {student.role === 'teacher' && (
+                            {student.role?.toLowerCase() === 'teacher' && (
                               <span className="px-2 py-0.5 bg-brand-500 text-white text-[10px] rounded-md border border-brand-600 shadow-sm leading-none pt-1">교사</span>
                             )}
                           </div>

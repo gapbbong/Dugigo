@@ -106,7 +106,7 @@ export default function RegisterPage() {
           username: formData.username,
           display_name: formData.username,
           email: formData.email,
-          role: role
+          role: role.toUpperCase()
         });
       if (profileError) throw profileError;
 

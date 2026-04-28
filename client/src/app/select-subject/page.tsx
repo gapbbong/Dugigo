@@ -73,7 +73,7 @@ export default function SelectSubjectPage() {
           .eq('id', user.id)
           .single();
         
-        if (profile?.role === 'teacher' || user.email === 'serv@kakao.com') {
+        if (profile?.role?.toLowerCase() === 'teacher' || user.email === 'serv@kakao.com') {
           setIsTeacher(true);
         }
       } catch (e) {
