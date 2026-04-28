@@ -47,7 +47,6 @@ export default function RegisterPage() {
   const validate = () => {
     if (role === 'teacher') {
       if (formData.username.length < 2) return '아이디는 2글자 이상이어야 합니다.';
-      if (teacherCode !== '7153') return '올바른 교사 인증 코드를 입력해 주세요.';
     } else {
       if (formData.username.length < 6) return '학번이름은 6글자 이상이어야 합니다.';
     }
@@ -65,6 +64,25 @@ export default function RegisterPage() {
     if (error) {
       setStatus({ type: 'error', message: error });
       return;
+    }
+
+    if (role === 'teacher') {
+      setStatus({ type: 'loading', message: '교사 인증 코드를 확인하고 있습니다...' });
+      try {
+        const res = await fetch('/api/verify-teacher', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code: teacherCode }),
+        });
+        const data = await res.json();
+        if (!data.valid) {
+          setStatus({ type: 'error', message: '올바른 교사 인증 코드를 입력해 주세요.' });
+          return;
+        }
+      } catch (err) {
+        setStatus({ type: 'error', message: '인증 서버 통신에 실패했습니다.' });
+        return;
+      }
     }
 
     setStatus({ type: 'loading', message: '가입 승인 절차가 시작되었습니다...' });
