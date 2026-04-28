@@ -44,7 +44,7 @@ export default function RegisterPage() {
     if (formData.username.length < 4) return '학번성명은 4글자 이상이어야 합니다.';
     if (isUsernameUnique === 'duplicate') return '이미 사용 중인 정보입니다.';
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) return '유효한 이메일 형식이 아닙니다.';
-    if (formData.password.length < 4) return '비밀번호는 4글자 이상을 권장합니다.';
+    if (formData.password.length < 6) return '비밀번호는 6글자 이상을 권장합니다.';
     if (formData.password !== formData.confirmPassword) return '비밀번호가 일치하지 않습니다.';
     return null;
   };
@@ -152,7 +152,7 @@ export default function RegisterPage() {
                     <InputGroup 
                       icon={<Lock className="w-5 h-5" />} 
                       type="password" 
-                      placeholder="비밀번호 (4자 이상)" 
+                      placeholder="비밀번호 (6자 이상)" 
                       value={formData.password}
                       onChange={(e: any) => setFormData({ ...formData, password: e.target.value })}
                     />

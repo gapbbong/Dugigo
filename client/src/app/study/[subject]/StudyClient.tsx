@@ -300,7 +300,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     <div className="min-h-screen relative flex flex-col text-slate-800">
       <div className="mesh-bg" />
       <nav className="sticky top-0 z-50 px-4 py-2 glass-card border-none bg-white/40 backdrop-blur-md flex justify-between items-center h-12 md:h-20 md:px-8 md:py-4">
-        <button onClick={() => router.push(`/study/${params.subject}`)} className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/50 rounded-xl hover:bg-white transition-all text-slate-600 shadow-sm"><ChevronLeft size={16} /></button>
+        <button onClick={() => router.push(`/select-unit/${params.subject}`)} className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/50 rounded-xl hover:bg-white transition-all text-slate-600 shadow-sm"><ChevronLeft size={16} /></button>
         <div className="flex items-center gap-4 md:gap-10">
           <span className="text-xs md:text-lg font-black tracking-[0.05em] text-brand-600 uppercase">{unitFilter ? `${unitFilter}${setNum ? ` · 세트 ${setNum}` : ''}` : `${subject} 기출학습`}</span>
           <div className="hidden md:block w-px h-6 bg-slate-200" />
@@ -350,7 +350,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             {/* 모바일 하단 이동 버튼 (선택지 바로 밑) */}
             <div className="flex md:hidden items-center justify-between gap-4 mt-3 px-2">
               <button 
-                onClick={() => router.push(`/study/${params.subject}`)} 
+                onClick={() => router.push(`/select-unit/${params.subject}`)} 
                 className="w-14 h-14 rounded-full flex items-center justify-center bg-white border-2 border-slate-200 text-slate-400 active:scale-90 transition-all"
               >
                 <ChevronLeft className="w-6 h-6" />
@@ -404,7 +404,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           )}
         </AnimatePresence>
         <AnimatePresence>
-          <motion.button initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.5 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => router.push(`/study/${params.subject}`)} className="fixed left-6 md:left-[7.5%] md:-translate-x-1/2 bottom-12 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-16 h-16 md:w-20 md:h-20 bg-white hover:bg-slate-50 text-slate-400 hover:text-brand-600 rounded-full flex items-center justify-center shadow-2xl shadow-black/5 border-4 border-slate-100 transition-colors">
+          <motion.button initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.5 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => router.push(`/select-unit/${params.subject}`)} className="fixed left-6 md:left-[7.5%] md:-translate-x-1/2 bottom-12 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-16 h-16 md:w-20 md:h-20 bg-white hover:bg-slate-50 text-slate-400 hover:text-brand-600 rounded-full flex items-center justify-center shadow-2xl shadow-black/5 border-4 border-slate-100 transition-colors">
             <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" />
           </motion.button>
         </AnimatePresence>
