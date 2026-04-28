@@ -250,6 +250,25 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const renderQuestionText = (text: string) => {
     if (!text) return null;
     
+    if (text.includes('<pre>') && text.includes('</pre>')) {
+      const parts = text.split(/(<pre>[\s\S]*?<\/pre>)/g);
+      return (
+        <div className="text-xl md:text-4xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">
+          {parts.map((part, i) => {
+            if (part.startsWith('<pre>') && part.endsWith('</pre>')) {
+              const codeContent = part.slice(5, -6).trim();
+              return (
+                <div key={i} className="my-6 p-5 md:p-8 bg-[#f8fafc] border-2 border-slate-200 rounded-3xl text-left overflow-x-auto shadow-inner">
+                  <pre className="font-mono text-sm md:text-xl text-slate-800 whitespace-pre-wrap leading-relaxed">{codeContent}</pre>
+                </div>
+              );
+            }
+            return <span key={i}>{renderMath(part)}</span>;
+          })}
+        </div>
+      );
+    }
+
     if (text.includes('```')) {
       const parts = text.split(/(```[\s\S]*?```)/g);
       return (
