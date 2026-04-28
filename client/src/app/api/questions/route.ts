@@ -56,13 +56,18 @@ export async function GET(request: Request) {
       allQuestions = [...allQuestions, ...fileQuestions];
     });
 
-    // 문제 섞기 (랜덤 학습을 위해)
-    const shuffled = allQuestions.sort(() => Math.random() - 0.5);
+    // 단원별 n세트에 비슷한 문항들이 들어갈 수 있도록 문제 텍스트를 기준으로 정렬
+    // (이렇게 하면 비슷한 키워드로 시작하는 문제들이 서로 인접하게 배치됨)
+    const sorted = allQuestions.sort((a, b) => {
+      const textA = (a.question || '').toString();
+      const textB = (b.question || '').toString();
+      return textA.localeCompare(textB);
+    });
 
     return NextResponse.json({
       subject,
-      total: shuffled.length,
-      questions: shuffled
+      total: sorted.length,
+      questions: sorted
     });
 
   } catch (error: any) {
