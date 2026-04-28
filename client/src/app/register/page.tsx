@@ -161,7 +161,7 @@ export default function RegisterPage() {
                       <InputGroup 
                         icon={<KeyRound className="w-5 h-5" />} 
                         type="password" 
-                        placeholder="교사 인증 코드 (예: 7153)" 
+                        placeholder="사전에 안내받은 교사 인증 코드" 
                         value={teacherCode}
                         onChange={(e: any) => setTeacherCode(e.target.value)}
                       />
