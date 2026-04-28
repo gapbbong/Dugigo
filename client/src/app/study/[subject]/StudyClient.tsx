@@ -126,10 +126,12 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     setSelectedIndex(choiceIndex);
     const isCorrect = choiceIndex === correctShuffledIndex;
     setIsCurrentCorrect(isCorrect);
-    setAnswers(prev => [...prev, { 
-      questionId: currentQuestion.id || currentIndex.toString(), 
-      isCorrect 
-    }]);
+    
+    setAnswers(prev => {
+      const qId = currentQuestion.id || currentIndex.toString();
+      const filtered = prev.filter(a => a.questionId !== qId);
+      return [...filtered, { questionId: qId, isCorrect }];
+    });
   };
   
   useEffect(() => {
@@ -410,12 +412,14 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
             {/* 모바일 하단 이동 버튼 (선택지 바로 밑) */}
             <div className="flex md:hidden items-center justify-between gap-4 mt-3 px-2">
-              <button 
-                onClick={() => router.push(`/select-unit/${params.subject}`)} 
-                className="w-14 h-14 rounded-full flex items-center justify-center bg-white border-2 border-slate-200 text-slate-400 active:scale-90 transition-all"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
+              {currentIndex > 0 ? (
+                <button 
+                  onClick={handlePrev} 
+                  className="w-14 h-14 rounded-full flex items-center justify-center bg-white border-2 border-slate-200 text-slate-400 active:scale-90 transition-all shadow-sm"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+              ) : <div className="w-14 h-14" />}
               <AnimatePresence>
                 {isAnswered && (
                   <motion.button initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} onClick={handleNext} className="w-14 h-14 rounded-full bg-brand-600 text-white flex items-center justify-center shadow-lg shadow-brand-500/30 active:scale-95 transition-all">
@@ -465,9 +469,11 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           )}
         </AnimatePresence>
         <AnimatePresence>
-          <motion.button initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.5 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => router.push(`/select-unit/${params.subject}`)} className="fixed left-6 md:left-[7.5%] md:-translate-x-1/2 bottom-12 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-16 h-16 md:w-20 md:h-20 bg-white hover:bg-slate-50 text-slate-400 hover:text-brand-600 rounded-full flex items-center justify-center shadow-2xl shadow-black/5 border-4 border-slate-100 transition-colors">
-            <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" />
-          </motion.button>
+          {currentIndex > 0 && (
+            <motion.button initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.5 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={handlePrev} className="fixed left-6 md:left-[7.5%] md:-translate-x-1/2 bottom-12 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-16 h-16 md:w-20 md:h-20 bg-white hover:bg-slate-50 text-slate-400 hover:text-brand-600 rounded-full flex items-center justify-center shadow-2xl shadow-black/5 border-4 border-slate-100 transition-colors">
+              <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" />
+            </motion.button>
+          )}
         </AnimatePresence>
       </div>
 
