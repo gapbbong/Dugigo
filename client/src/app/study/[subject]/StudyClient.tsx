@@ -32,7 +32,6 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [questions, setQuestions] = useState<any[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [answers, setAnswers] = useState<{questionId: string, isCorrect: boolean}[]>([]);
   const [startTime] = useState(Date.now());
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
@@ -43,9 +42,6 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [reportType, setReportType] = useState('');
   const [reportComment, setReportComment] = useState('');
   const [reportStatus, setReportStatus] = useState<'idle'|'sending'|'done'>('idle');
-  const [shuffledOptions, setShuffledOptions] = useState<string[]>([]);
-  const [correctShuffledIndex, setCorrectShuffledIndex] = useState<number>(-1);
-  const [isCurrentCorrect, setIsCurrentCorrect] = useState(false);
 
   const [unitFilter, setUnitFilter] = useState<string | null>(null);
   const [setNum, setSetNum] = useState<string | null>(null);
@@ -86,7 +82,30 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             const startIdx = (parseInt(setNum) - 1) * parseInt(setSize);
             filtered = filtered.slice(startIdx, startIdx + parseInt(setSize));
           }
-          setQuestions(filtered.sort(() => Math.random() - 0.5));
+          // 문제 자체를 섞음 (세트 내 랜덤화)
+          const shuffledQuestions = filtered.sort(() => Math.random() - 0.5);
+          
+          // 각 문제의 선택지를 한 번만 섞어서 고정
+          const questionsWithChoices = shuffledQuestions.map((q: any) => {
+            const originalOptions = q.options || q.choices || [];
+            const correctIdx = parseInt(q.answer) - 1;
+            
+            const optionsWithIndex = originalOptions.map((opt: string, i: number) => ({ opt, originalIdx: i }));
+            for (let i = optionsWithIndex.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [optionsWithIndex[i], optionsWithIndex[j]] = [optionsWithIndex[j], optionsWithIndex[i]];
+            }
+            
+            return {
+              ...q,
+              shuffledOptions: optionsWithIndex.map((item: any) => item.opt),
+              correctShuffledIndex: optionsWithIndex.findIndex((item: any) => item.originalIdx === correctIdx),
+              selectedIndex: null,
+              isCurrentCorrect: null
+            };
+          });
+
+          setQuestions(questionsWithChoices);
         }
       } catch (err) {
         console.error('Failed to fetch questions:', err);
@@ -98,34 +117,23 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   }, [subject, unitFilter, rStart, rEnd, setNum, setSize, paramsReady]);
 
   const currentQuestion = questions[currentIndex];
-  const isAnswered = selectedIndex !== null;
+  const isAnswered = currentQuestion?.selectedIndex !== null && currentQuestion?.selectedIndex !== undefined;
   const isLastQuestion = currentIndex === questions.length - 1;
 
-  useEffect(() => {
-    if (questions.length > 0 && currentQuestion) {
-      const originalOptions = currentQuestion.options || currentQuestion.choices || [];
-      const correctIdx = parseInt(currentQuestion.answer) - 1;
-      
-      const optionsWithIndex = originalOptions.map((opt: string, i: number) => ({ opt, originalIdx: i }));
-      for (let i = optionsWithIndex.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [optionsWithIndex[i], optionsWithIndex[j]] = [optionsWithIndex[j], optionsWithIndex[i]];
-      }
-      
-      const newShuffled = optionsWithIndex.map((item: { opt: string, originalIdx: number }) => item.opt);
-      const newCorrectIdx = optionsWithIndex.findIndex((item: { opt: string, originalIdx: number }) => item.originalIdx === correctIdx);
-      
-      setShuffledOptions(newShuffled);
-      setCorrectShuffledIndex(newCorrectIdx);
-      setSelectedIndex(null);
-    }
-  }, [currentIndex, questions]);
-
   const handleAnswer = (choiceIndex: number) => {
-    if (selectedIndex !== null) return;
-    setSelectedIndex(choiceIndex);
-    const isCorrect = choiceIndex === correctShuffledIndex;
-    setIsCurrentCorrect(isCorrect);
+    if (currentQuestion?.selectedIndex !== null) return;
+    
+    const isCorrect = choiceIndex === currentQuestion.correctShuffledIndex;
+    
+    setQuestions(prev => {
+      const newQuestions = [...prev];
+      newQuestions[currentIndex] = {
+        ...newQuestions[currentIndex],
+        selectedIndex: choiceIndex,
+        isCurrentCorrect: isCorrect
+      };
+      return newQuestions;
+    });
     
     setAnswers(prev => {
       const qId = currentQuestion.id || currentIndex.toString();
@@ -184,7 +192,11 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     setDirection(0);
     setCurrentIndex(0);
     setAnswers([]);
-    setSelectedIndex(null);
+    setQuestions(prev => prev.map(q => ({
+      ...q,
+      selectedIndex: null,
+      isCurrentCorrect: null
+    })));
     setElapsedSeconds(0);
     setIsFinished(false);
   };
@@ -193,7 +205,6 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     if (currentIndex > 0) {
       setDirection(-1);
       setCurrentIndex(prev => prev - 1);
-      setSelectedIndex(null);
     }
   };
 
@@ -208,7 +219,6 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     if (currentIndex < questions.length - 1) {
       setDirection(1);
       setCurrentIndex(prev => prev + 1);
-      setSelectedIndex(null);
     } else {
       handleFinish();
     }
@@ -389,9 +399,10 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
             {/* 선택지 */}
             <div className="grid grid-cols-1 gap-4 md:gap-8">
-              {shuffledOptions.map((choice: string, idx: number) => {
-                const isCorrect = idx === correctShuffledIndex;
-                const isSelected = selectedIndex === idx;
+              {currentQuestion.shuffledOptions.map((choice: string, idx: number) => {
+                const isSelected = currentQuestion.selectedIndex === idx;
+                const isCorrect = idx === currentQuestion.correctShuffledIndex;
+                const isAnswered = currentQuestion.selectedIndex !== null;
                 if (choice === "" && idx > 0) return null;
                 let styleStr = "glass-card bg-white/50 hover:bg-white text-slate-700 hover:text-brand-600 cursor-pointer";
                 if (isAnswered) {
@@ -421,7 +432,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                 </button>
               ) : <div className="w-14 h-14" />}
               <AnimatePresence>
-                {isAnswered && (
+                {currentQuestion.selectedIndex !== null && (
                   <motion.button initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} onClick={handleNext} className="w-14 h-14 rounded-full bg-brand-600 text-white flex items-center justify-center shadow-lg shadow-brand-500/30 active:scale-95 transition-all">
                     <ChevronRight className="w-7 h-7" />
                   </motion.button>
@@ -431,16 +442,25 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
             {/* 정오 결과 + 해설 배너 */}
             <AnimatePresence>
-              {isAnswered && (
-                <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 12 }} transition={{ duration: 0.3 }} className={`rounded-2xl overflow-hidden border ${isCurrentCorrect ? 'border-emerald-200' : 'border-rose-200'}`}>
-                  <div className={`flex items-center gap-3 px-4 py-3 ${isCurrentCorrect ? 'bg-emerald-500' : 'bg-rose-500'}`}>
-                    {isCurrentCorrect ? <CheckCircle2 className="w-4 h-4 text-white shrink-0" /> : <XCircle className="w-4 h-4 text-white shrink-0" />}
-                    <span className="text-white font-black text-sm flex-1 flex items-center gap-1">
-                      {isCurrentCorrect ? '정답입니다! 🎉' : <>정답은 {renderMath(shuffledOptions[correctShuffledIndex])}</>}
-                    </span>
+              {currentQuestion.selectedIndex !== null && (
+                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={`mt-8 md:mt-12 rounded-3xl overflow-hidden border-2 ${currentQuestion.isCurrentCorrect ? 'border-emerald-200' : 'border-rose-200'} bg-white shadow-xl shadow-black/5`}>
+                  <div className={`px-6 py-4 md:px-8 md:py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 ${currentQuestion.isCurrentCorrect ? 'bg-emerald-50/50' : 'bg-rose-50/50'}`}>
+                    <div className="flex items-center gap-4">
+                      <div className={`w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center shrink-0 ${currentQuestion.isCurrentCorrect ? 'bg-emerald-100 text-emerald-600' : 'bg-rose-100 text-rose-600'}`}>
+                        {currentQuestion.isCurrentCorrect ? <CheckCircle2 className="w-8 h-8 md:w-10 md:h-10" /> : <XCircle className="w-8 h-8 md:w-10 md:h-10" />}
+                      </div>
+                      <div>
+                        <h4 className={`text-xl md:text-2xl font-black mb-1 ${currentQuestion.isCurrentCorrect ? 'text-emerald-700' : 'text-rose-700'}`}>
+                          {currentQuestion.isCurrentCorrect ? '정답입니다!' : '틀렸습니다!'}
+                        </h4>
+                        <p className={`text-sm md:text-base font-bold ${currentQuestion.isCurrentCorrect ? 'text-emerald-600' : 'text-rose-600'}`}>
+                          {currentQuestion.isCurrentCorrect ? '완벽하게 이해하셨네요 👏' : '해설을 읽고 확실히 짚고 넘어가세요 💪'}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                   {currentQuestion.explanation && (
-                    <div className={`px-4 py-3 md:px-5 md:py-4 font-medium leading-relaxed text-slate-700 ${isCurrentCorrect ? 'bg-emerald-50' : 'bg-rose-50'}`}>
+                    <div className="p-6 md:p-8 bg-white border-t border-slate-100">
                       <p className="text-xs md:text-base font-black uppercase tracking-widest text-slate-900 mb-1.5">해설</p>
                       <div className="space-y-0.5 explanation-table">
                         {currentQuestion.explanation.includes('<table') ? (<div dangerouslySetInnerHTML={{ __html: currentQuestion.explanation }} />) : (
@@ -449,7 +469,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                       </div>
                     </div>
                   )}
-                  <div className={`px-4 py-2 flex justify-end ${isCurrentCorrect ? 'bg-emerald-50' : 'bg-rose-50'} border-t ${isCurrentCorrect ? 'border-emerald-100' : 'border-rose-100'}`}>
+                  <div className={`px-4 py-2 flex justify-end ${currentQuestion.isCurrentCorrect ? 'bg-emerald-50' : 'bg-rose-50'} border-t ${currentQuestion.isCurrentCorrect ? 'border-emerald-100' : 'border-rose-100'}`}>
                     <button onClick={() => setReportOpen(true)} className="flex items-center gap-1.5 text-xs md:text-base font-black text-slate-500 hover:text-rose-500 transition-colors"><Flag className="w-3.5 h-3.5 md:w-4 h-4" /> 문항 오류 신고</button>
                   </div>
                 </motion.div>
