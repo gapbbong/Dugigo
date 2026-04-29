@@ -618,9 +618,17 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                       <div className="absolute inset-0 bg-gradient-to-tr from-brand-500/20 to-indigo-500/20 rounded-full blur-3xl" />
                       <div 
                         style={{ animation: 'float 3s ease-in-out infinite' }} 
-                        className="text-8xl md:text-[10rem] drop-shadow-2xl select-none"
+                        className="flex justify-center items-center drop-shadow-2xl select-none w-full h-full"
                       >
-                        {slideData[currentSlideIdx].emoji}
+                        {slideData[currentSlideIdx].image ? (
+                          <img 
+                            src={slideData[currentSlideIdx].image} 
+                            alt={slideData[currentSlideIdx].title}
+                            className="max-h-[180px] md:max-h-[300px] max-w-full object-cover rounded-[2rem] shadow-2xl border-4 border-white/80"
+                          />
+                        ) : (
+                          <span className="text-8xl md:text-[10rem]">{slideData[currentSlideIdx].emoji}</span>
+                        )}
                       </div>
                     </div>
 
