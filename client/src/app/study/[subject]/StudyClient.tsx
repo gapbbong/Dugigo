@@ -624,7 +624,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center w-full max-w-5xl min-h-full"
                   >
                     {/* 좌측: 거대한 비주얼 영역 */}
-                    <div className="md:col-span-5 flex justify-center items-center relative h-40 md:h-80">
+                    <div className="md:col-span-5 flex justify-center items-center relative h-48 md:h-80 w-full">
                       <div className="absolute inset-0 bg-gradient-to-tr from-brand-500/20 to-indigo-500/20 rounded-full blur-3xl" />
                       <div 
                         style={{ animation: 'float 3s ease-in-out infinite' }} 
