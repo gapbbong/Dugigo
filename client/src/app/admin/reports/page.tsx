@@ -89,7 +89,7 @@ export default function AdminReportsPage() {
           </div>
           <div>
             <h1 className="text-lg font-black text-slate-900 tracking-tight">문항 오류 신고 관리</h1>
-            <p className="text-xs text-slate-400 font-medium">DugiGo+ 어드민</p>
+            <p className="text-xs text-slate-400 font-medium">DugiGo 어드민</p>
           </div>
         </div>
         <button onClick={fetchReports} className="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-brand-600 transition-colors">

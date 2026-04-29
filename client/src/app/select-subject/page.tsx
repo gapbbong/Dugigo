@@ -123,8 +123,11 @@ export default function SelectSubjectPage() {
           <div className="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/20">
             <GraduationCap className="w-6 h-6 text-white" />
           </div>
-          <h2 className="text-2xl font-black tracking-tighter text-slate-900">
-            DugiGo+ <span className="text-[10px] text-slate-400 font-medium ml-1 bg-slate-100 px-1.5 py-0.5 rounded-full">v2.0.2</span>
+          <h2 className="text-2xl font-black tracking-tighter text-slate-900 flex items-center gap-2">
+            DugiGo <span className="text-[10px] text-slate-400 font-medium bg-slate-100 px-1.5 py-0.5 rounded-full">v2.0.2</span>
+            <span className="text-sm font-bold text-slate-500 ml-1">
+              고민말고 <span className="text-brand-600 font-black">두</span><span className="text-rose-500 font-black">기</span><span className="text-amber-500 font-black">고</span>
+            </span>
           </h2>
         </div>
         
@@ -208,7 +211,7 @@ export default function SelectSubjectPage() {
 
       {/* Footer hint */}
       <footer className="max-w-6xl mx-auto mt-20 pb-12 text-center text-slate-400 text-sm font-medium">
-        © 2026 DugiGo+ Smart License Solution. 관리자가 종목 폴더를 추가하면 자동으로 리스트에 반영됩니다.
+        © 2026 DugiGo Smart License Solution. 관리자가 종목 폴더를 추가하면 자동으로 리스트에 반영됩니다.
       </footer>
     </div>
   );
