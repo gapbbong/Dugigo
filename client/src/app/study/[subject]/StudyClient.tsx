@@ -433,7 +433,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
       <main className="flex-1 w-full max-w-screen-2xl mx-auto px-4 md:px-[15%] py-2 pb-32 md:py-8 md:pb-8 flex flex-col">
         <AnimatePresence mode="wait" custom={direction}>
-          <motion.div key={currentIndex} custom={direction} initial={{ opacity: 0, x: direction > 0 ? 50 : -50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: direction > 0 ? -50 : 50 }} transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }} className="flex-1 flex flex-col gap-8 md:gap-16">
+          <motion.div key={currentIndex} custom={direction} initial={{ opacity: 0, x: direction > 0 ? 50 : -50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: direction > 0 ? -50 : 50 }} transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }} className="flex-1 flex flex-col gap-4 md:gap-6">
             <div className="space-y-4 md:space-y-8">
               <div className="flex items-center gap-3"><span className="px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 text-brand-600 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase">Q. {currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num || currentQuestion.number}</span><div className="h-px flex-1 bg-brand-100/50" /></div>
               {renderQuestionText(currentQuestion.question)}
@@ -489,7 +489,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             {/* 정오 결과 + 해설 배너 */}
             <AnimatePresence>
               {currentQuestion.selectedIndex !== null && (
-                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={`mt-8 md:mt-12 rounded-3xl overflow-hidden border-2 ${currentQuestion.isCurrentCorrect ? 'border-emerald-200' : 'border-rose-200'} bg-white shadow-xl shadow-black/5`}>
+                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={`mt-3 md:mt-4 rounded-3xl overflow-hidden border-2 ${currentQuestion.isCurrentCorrect ? 'border-emerald-200' : 'border-rose-200'} bg-white shadow-xl shadow-black/5`}>
                   <div className={`px-6 py-4 md:px-8 md:py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 ${currentQuestion.isCurrentCorrect ? 'bg-emerald-50/50' : 'bg-rose-50/50'}`}>
                     <div className="flex items-center gap-4">
                       {currentQuestion.isCurrentCorrect && (
