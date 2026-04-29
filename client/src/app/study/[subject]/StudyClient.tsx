@@ -53,6 +53,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [aiSliderOpen, setAiSliderOpen] = useState(false);
   const [slideData, setSlideData] = useState<any[] | null>(null);
   const [currentSlideIdx, setCurrentSlideIdx] = useState(0);
+  const [hideAutoSummary, setHideAutoSummary] = useState(false);
 
   useEffect(() => {
     const s = searchParamsProps || {};
@@ -73,8 +74,11 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           const data = await res.json();
           setSlideData(data.slides || null);
           
-          const s = searchParamsProps || {};
-          if (s.autoOpenSummary === 'true' && data.slides && data.slides.length > 0) {
+          const hideKey = `dugigo_hide_summary_${subject}_${unitFilter}_${setNum}`;
+          const isHidden = localStorage.getItem(hideKey) === 'true';
+          setHideAutoSummary(isHidden);
+
+          if (!isHidden && data.slides && data.slides.length > 0) {
             setAiSliderOpen(true);
           }
         } else {
@@ -686,14 +690,35 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               </div>
 
               {/* 하단 페이지네이션 인디케이터 */}
-              <div className="px-6 py-4 md:px-10 md:py-6 border-t border-slate-100 bg-slate-50/50 flex items-center justify-center gap-2">
-                {slideData.map((_: any, idx: number) => (
-                  <button
-                    key={idx}
-                    onClick={() => setCurrentSlideIdx(idx)}
-                    className={`h-2 rounded-full transition-all duration-300 ${idx === currentSlideIdx ? 'w-8 bg-brand-600 shadow-[0_0_10px_rgba(99,91,255,0.3)]' : 'w-2 bg-slate-300 hover:bg-slate-400'}`}
+              <div className="px-6 py-4 md:px-10 md:py-6 border-t border-slate-100 bg-slate-50/50 flex items-center justify-between">
+                <label className="flex items-center gap-2 cursor-pointer select-none">
+                  <input 
+                    type="checkbox"
+                    checked={hideAutoSummary}
+                    onChange={(e) => {
+                      const checked = e.target.checked;
+                      setHideAutoSummary(checked);
+                      const hideKey = `dugigo_hide_summary_${subject}_${unitFilter}_${setNum}`;
+                      if (checked) {
+                        localStorage.setItem(hideKey, 'true');
+                      } else {
+                        localStorage.removeItem(hideKey);
+                      }
+                    }}
+                    className="w-4 h-4 rounded border-slate-300 text-brand-600 focus:ring-brand-500 cursor-pointer"
                   />
-                ))}
+                  <span className="text-xs md:text-sm font-bold text-slate-500">다음부터 이 세트 요약 안 보기</span>
+                </label>
+
+                <div className="flex items-center gap-2 pr-4">
+                  {slideData.map((_: any, idx: number) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentSlideIdx(idx)}
+                      className={`h-2 rounded-full transition-all duration-300 ${idx === currentSlideIdx ? 'w-8 bg-brand-600 shadow-[0_0_10px_rgba(99,91,255,0.3)]' : 'w-2 bg-slate-300 hover:bg-slate-400'}`}
+                    />
+                  ))}
+                </div>
               </div>
             </motion.div>
           </motion.div>

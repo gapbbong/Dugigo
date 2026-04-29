@@ -152,19 +152,8 @@ export default function SelectUnitPage() {
                         </div>
                       </div>
 
-                      {/* 세트 선택 그리드 (연속된 세트 번호) */}
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-2">
-                        {/* 학습 요약 보기 버튼 */}
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            const unitName = unit.originalName || unit.name;
-                            router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unitName)}&set=${startSetIdx}&size=30&autoOpenSummary=true`);
-                          }}
-                          className="py-3 bg-brand-50 border-2 border-brand-100 rounded-2xl text-sm font-black text-brand-600 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition-all shadow-sm flex items-center justify-center gap-1.5"
-                        >
-                          📚 학습
-                        </button>
+                        {/* 세트 선택 그리드 (연속된 세트 번호) */}
+                        <div className="grid grid-cols-3 md:grid-cols-4 gap-3 mt-2">
 
                         {Array.from({ length: setCount }).map((_, sIdx) => {
                           const globalSetNum = startSetIdx + sIdx;
