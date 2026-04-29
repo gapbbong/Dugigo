@@ -496,7 +496,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                           {currentQuestion.isCurrentCorrect ? '정답입니다!' : '틀렸습니다!'}
                         </h4>
                         <p className={`text-sm md:text-base font-bold ${currentQuestion.isCurrentCorrect ? 'text-emerald-600' : 'text-rose-600'}`}>
-                          {currentQuestion.isCurrentCorrect ? '완벽하게 이해하셨네요 👏' : '해설을 읽고 확실히 짚고 넘어가세요 💪'}
+                          {currentQuestion.isCurrentCorrect ? '완벽하게 이해하셨네요 👏' : `정답은 [ ${currentQuestion.shuffledOptions[currentQuestion.correctShuffledIndex]} ] 입니다. 💪`}
                         </p>
                       </div>
                     </div>
