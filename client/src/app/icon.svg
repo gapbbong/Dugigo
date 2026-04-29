@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+    
+    <!-- Gold/Premium Book Cover Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <!-- Page Thickness Gradient -->
+    <linearGradient id="pageGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+
+    <!-- D Letter Gradient -->
+    <linearGradient id="dGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- App Icon Base -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+
+  <!-- Thick Book & D Composition -->
+  <g filter="url(#dropShadow)" transform="translate(32, 32)">
+    <!-- Book Pages (The thickness) -->
+    <path d="M 120,110 L 380,110 C 400,110 410,125 410,140 L 410,380 C 410,395 400,410 380,410 L 120,410 Z" fill="url(#pageGrad)"/>
+    
+    <!-- Spine / Binding Detail -->
+    <path d="M 110,80 Q 75,80 75,115 L 75,395 Q 75,430 110,430 Z" fill="#b45309"/>
+
+    <!-- Book Front Cover -->
+    <path d="M 110,80 L 370,80 C 405,80 425,100 425,135 L 425,375 C 425,410 405,430 370,430 L 110,430 Z" fill="url(#goldGrad)"/>
+
+    <!-- Inner Spine Wrap -->
+    <path d="M 110,80 L 140,80 L 140,430 L 110,430 Z" fill="#78350f" opacity="0.2"/>
+
+    <!-- Modern Styled Alphabet 'D' -->
+    <!-- Drawn as a precise vector for perfect scaling -->
+    <path d="M 200,170 L 260,170 C 310,170 345,195 345,255 C 345,315 310,340 260,340 L 200,340 Z M 235,205 L 235,305 L 255,305 C 285,305 305,290 305,255 C 305,220 285,205 255,205 Z" fill="url(#dGrad)"/>
+  </g>
+</svg>
