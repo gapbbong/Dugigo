@@ -73,7 +73,7 @@
     <!-- Inner Spine Wrap -->
     <path d="M 110,80 L 140,80 L 140,430 L 110,430 Z" fill="#78350f" opacity="0.2"/>
 
-    <!-- Modern Styled Text 'Du' -->
-    <text x="267" y="295" font-family="'Outfit', 'Inter', 'Segoe UI', Arial, sans-serif" font-weight="900" font-size="140" fill="url(#duGrad)" text-anchor="middle" style="letter-spacing: -6px; filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.15));">Du</text>
+    <!-- Modern Styled Text 'Du' (1.5x Bigger: 140 -> 210) -->
+    <text x="267" y="315" font-family="'Outfit', 'Inter', 'Segoe UI', Arial, sans-serif" font-weight="900" font-size="210" fill="url(#duGrad)" text-anchor="middle" style="letter-spacing: -10px; filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.15));">Du</text>
   </g>
 </svg>
