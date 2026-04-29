@@ -91,7 +91,10 @@ export default function RegisterPage() {
         email: formData.email,
         password: formData.password,
       });
-      if (authError) throw authError;
+      if (authError) {
+        console.error('[SIGNUP_AUTH_ERROR]', authError);
+        throw authError;
+      }
 
       /* 이메일 인증 기능 (1년 뒤 유료화 시 사용 예정) - 현재는 주석 처리
       setIsVerifying(true);
@@ -108,12 +111,16 @@ export default function RegisterPage() {
           email: formData.email,
           role: role.toUpperCase()
         });
-      if (profileError) throw profileError;
+      if (profileError) {
+        console.error('[SIGNUP_PROFILE_ERROR]', profileError);
+        throw profileError;
+      }
 
       setStatus({ type: 'success', message: '가입 성공! 로그인 페이지로 이동합니다.' });
       setTimeout(() => router.push('/login'), 1500);
 
     } catch (err: any) {
+      console.error('[SIGNUP_CATCH_ERROR]', err);
       let errorMessage = err.message || '가입 중 오류가 발생했습니다.';
       if (errorMessage.includes('User already registered')) errorMessage = '이미 가입된 이메일입니다.';
       else if (errorMessage.includes('Password should be')) errorMessage = '비밀번호가 너무 짧거나 취약합니다.';
@@ -121,7 +128,7 @@ export default function RegisterPage() {
       else if (errorMessage.includes('check constraint')) errorMessage = '잘못된 형식의 데이터가 포함되어 있습니다. 다시 확인해주세요.';
       else if (errorMessage.includes('foreign key constraint')) errorMessage = '시스템 내부 식별 오류가 발생했습니다. 관리자에게 문의해주세요.';
       
-      setStatus({ type: 'error', message: errorMessage });
+      setStatus({ type: 'error', message: `${errorMessage} (상세: ${err.message || '알 수 없음'})` });
     }
   };
 

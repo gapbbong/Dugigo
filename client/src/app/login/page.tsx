@@ -45,7 +45,10 @@ export default function LoginPage() {
     setStatus({ type: 'loading', message: '접속 권한을 확인하고 있습니다...' });
     try {
       const { error } = await supabase.auth.signInWithPassword({ email, password });
-      if (error) throw error;
+      if (error) {
+        console.error('[LOGIN_AUTH_ERROR]', error);
+        throw error;
+      }
 
       // 자동로그인 설정 저장
       if (autoLogin) {
@@ -57,6 +60,7 @@ export default function LoginPage() {
       setStatus({ type: 'success', message: '환영합니다! 곧 이동합니다.' });
       setTimeout(() => router.push('/select-subject'), 700);
     } catch (err: any) {
+      console.error('[LOGIN_CATCH_ERROR]', err);
       let errorMessage = err.message || '로그인에 실패했습니다.';
       if (errorMessage.includes('Invalid login credentials')) errorMessage = '이메일 또는 비밀번호가 일치하지 않습니다.';
       else if (errorMessage.includes('Email not confirmed')) errorMessage = '이메일 인증이 완료되지 않았습니다.';
@@ -65,7 +69,7 @@ export default function LoginPage() {
       else if (errorMessage.includes('check constraint')) errorMessage = '회원 권한 설정에 문제가 있습니다. 관리자에게 문의해주세요.';
       else if (errorMessage.includes('foreign key constraint')) errorMessage = '시스템 내부 식별 오류가 발생했습니다. 관리자에게 문의해주세요.';
       
-      setStatus({ type: 'error', message: errorMessage });
+      setStatus({ type: 'error', message: `${errorMessage} (상세: ${err.message || '알 수 없음'})` });
     }
   };
 
