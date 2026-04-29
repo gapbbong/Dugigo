@@ -117,7 +117,7 @@ export default function SelectUnitPage() {
             어떤 부분을 <span className="text-gradient">집중 공략</span>할까요?
           </motion.h1>
           <p className="text-slate-500 text-lg font-medium">
-            AI가 분류한 단원별 학습을 통해 효율적으로 학습하세요.
+            자동으로 분류한 단원별 학습을 통해 효율적으로 학습하세요.
           </p>
         </div>
 

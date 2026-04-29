@@ -416,7 +416,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                 }} 
                 className="px-3 py-1 md:px-5 md:py-2 bg-gradient-to-r from-brand-600 to-indigo-600 text-white text-[10px] md:text-sm font-black rounded-full shadow-lg shadow-brand-500/20 hover:scale-105 transition-all flex items-center gap-1.5 shrink-0"
               >
-                ✨ AI 요약
+                ✨ 요약
               </button>
             )}
           </div>
@@ -582,7 +582,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               <div className="flex items-center justify-between px-6 py-4 md:px-10 md:py-6 border-b border-slate-100 bg-slate-50/50">
                 <div className="flex items-center gap-2">
                   <span className="text-xl md:text-2xl">✨</span>
-                  <h3 className="font-black text-slate-800 text-sm md:text-xl">AI 핵심 개념 요약</h3>
+                  <h3 className="font-black text-slate-800 text-sm md:text-xl">핵심 개념 요약</h3>
                   <span className="text-[10px] md:text-xs text-brand-600 font-black bg-brand-50 px-3 py-1 rounded-full uppercase">
                     {subject} · {unitFilter}
                   </span>
