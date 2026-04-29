@@ -638,7 +638,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                         {slideData[currentSlideIdx].title}
                       </h2>
                       <p className="text-base md:text-xl font-bold text-slate-600 leading-relaxed md:leading-loose word-break-keep-all">
-                        {slideData[currentSlideIdx].content}
+                        {slideData[currentSlideIdx].content?.replaceAll('**', '')}
                       </p>
                       {slideData[currentSlideIdx].exam_point && (
                         <div className="p-4 md:p-5 bg-amber-50/80 rounded-[1.5rem] border-2 border-amber-200/50 text-amber-950 self-center md:self-start w-full shadow-sm flex flex-col gap-1 md:gap-2 text-left">
@@ -646,7 +646,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                             📌 기출 공략 포인트 (시험 출제 기준)
                           </span>
                           <span className="text-sm md:text-base font-bold leading-relaxed word-break-keep-all">
-                            {slideData[currentSlideIdx].exam_point}
+                            {slideData[currentSlideIdx].exam_point?.replaceAll('**', '')}
                           </span>
                         </div>
                       )}
