@@ -123,7 +123,7 @@ export default function SelectUnitPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* 소단원 리스트 */}
-          <div className="lg:col-span-8 order-2 lg:order-1 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
             <AnimatePresence>
               {(() => {
                 let runningSetIdx = 0;
@@ -187,7 +187,7 @@ export default function SelectUnitPage() {
 
           {/* 전체 학습 카드 */}
           <motion.div
-            className="lg:col-span-4 order-1 lg:order-2"
+            className="lg:col-span-4"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
           >
