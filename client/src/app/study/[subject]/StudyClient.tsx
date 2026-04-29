@@ -640,6 +640,17 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                       <p className="text-base md:text-xl font-bold text-slate-600 leading-relaxed md:leading-loose word-break-keep-all">
                         {slideData[currentSlideIdx].content}
                       </p>
+                      {slideData[currentSlideIdx].exam_point && (
+                        <div className="p-4 md:p-5 bg-amber-50/80 rounded-[1.5rem] border-2 border-amber-200/50 text-amber-950 self-center md:self-start w-full shadow-sm flex flex-col gap-1 md:gap-2 text-left">
+                          <span className="text-xs md:text-sm font-black text-amber-600 uppercase tracking-widest flex items-center gap-1.5">
+                            📌 기출 공략 포인트 (시험 출제 기준)
+                          </span>
+                          <span className="text-sm md:text-base font-bold leading-relaxed word-break-keep-all">
+                            {slideData[currentSlideIdx].exam_point}
+                          </span>
+                        </div>
+                      )}
+
                       {slideData[currentSlideIdx].visual && (
                         <div className="inline-flex px-5 py-2.5 bg-brand-50 rounded-2xl border border-brand-100 text-brand-700 font-black text-xs md:text-base shadow-inner self-center md:self-start items-center gap-1.5">
                           {slideData[currentSlideIdx].visual}
