@@ -277,7 +277,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const renderMath = (text: string) => {
     if (!text) return '';
     // 선택지 번호(1., ①, (1)) 제거를 위한 정규식 추가
-    const cleanText = text.replace(/^(\d+\.|①|②|③|④|⑤|\(\d+\))\s*/, '');
+    const cleanText = text.replace(/^(\d+\.|①|②|③|④|⑤|\(\d+\))\s*/, '').replace(/\*\*/g, '');
     const regex = /(\$.*?\$|\\\(.*?\\\)|\\\[.*?\\\]|\\text\{.*?\}|\\\w+(\{.*?\})?)/g;
     const parts = cleanText.split(regex);
     return parts.map((part, i) => {
@@ -499,10 +499,25 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                       )}
                       <div>
                         {currentQuestion.isCurrentCorrect ? (
-                          <>
-                            <h4 className="text-xl md:text-2xl font-black mb-1 text-emerald-700">정답입니다!</h4>
-                            <p className="text-sm md:text-base font-bold text-emerald-600">완벽하게 이해하셨네요 👏</p>
-                          </>
+                          (() => {
+                            const praises = [
+                              "완벽하게 이해하셨네요 👏",
+                              "대단해요! 아주 정확합니다 🎯",
+                              "훌륭합니다! 💯",
+                              "정확해요! 이 기세로 계속 가봐요 🚀",
+                              "정말 잘하셨어요! 🌟",
+                              "완벽해요! 핵심을 찌르셨네요 ✨",
+                              "대정답! 찰떡같이 맞추셨네요 🎉",
+                              "아주 좋아요! 개념이 꽉 잡혀있네요 👍"
+                            ];
+                            const praiseText = praises[currentQuestionIndex % praises.length];
+                            return (
+                              <>
+                                <h4 className="text-xl md:text-2xl font-black mb-1 text-emerald-700">정답입니다!</h4>
+                                <p className="text-sm md:text-base font-bold text-emerald-600">{praiseText}</p>
+                              </>
+                            );
+                          })()
                         ) : (
                           <p className="text-xl md:text-3xl font-black text-rose-700 py-1 md:py-2 leading-relaxed word-break-keep-all">
                             정답은 [ {currentQuestion.shuffledOptions[currentQuestion.correctShuffledIndex]} ] 입니다. 💪
