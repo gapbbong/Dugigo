@@ -1,0 +1,36 @@
+[
+  {
+    "id": "2016_01_8",
+    "year": 2016,
+    "round": "01",
+    "question_num": 8,
+    "question": "$R-L$ 직렬 회로에서 서셉턴스는?",
+    "options": [
+      "1. $\\frac{R}{R^2 + X_L^2}$",
+      "2. $\\frac{X_L}{R^2 + X_L^2}$",
+      "3. $-\\frac{R}{R^2 + X_L^2}$",
+      "4. $-\\frac{X_L}{R^2 + X_L^2}$"
+    ],
+    "answer": 4,
+    "explanation": "$R-L$ 직렬 회로의 임피던스 $Z = R + jX_L [\\Omega]$이고\n어드미턴스 $Y = \\frac{1}{Z} = \\frac{1}{R + jX_L} = \\frac{R - jX_L}{(R + jX_L)(R - jX_L)} = \\frac{R - jX_L}{R^2 + X_L^2} = \\frac{R}{R^2 + X_L^2} - j\\frac{X_L}{R^2 + X_L^2}$\n컨덕턴스 $G = \\frac{R}{R^2 + X_L^2}$ ($Y$의 실수부)\n서셉턴스 $B = -\\frac{X_L}{R^2 + X_L^2}$ ($Y$의 허수부)",
+    "level": "상",
+    "sub_unit": "[이론] 교류 회로"
+  },
+  {
+    "id": "2016_01_19",
+    "year": 2016,
+    "round": "01",
+    "question_num": 19,
+    "question": "3상 교류 회로의 선간 전압이 13,200[V], 선전류가 800[A], 역률 80[%] 부하의 소비 전력은 몇 [MW]인가?",
+    "options": [
+      "1. 4.88",
+      "2. 8.45",
+      "3. 14.63",
+      "4. 25.34"
+    ],
+    "answer": 3,
+    "explanation": "3상 교류 전력 $P = \\sqrt{3} V_L I_L \\cos\\theta[W]$이고\n$P = \\sqrt{3} \\times 13.2[kV] \\times 0.8[kA] \\times 0.8 = 14.63[MW]$",
+    "level": "상",
+    "sub_unit": "[이론] 교류 회로"
+  }
+]

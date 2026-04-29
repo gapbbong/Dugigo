@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2015_01_56",
+    "year": 2015,
+    "round": "01",
+    "question_num": 56,
+    "question": "[한국전기설비규정에 따른 삭제]",
+    "options": [],
+    "answer": -1,
+    "explanation": "삭제",
+    "level": "하",
+    "sub_unit": "[설비] 기타 및 안전 수칙"
+  },
+  {
+    "id": "2015_01_58",
+    "year": 2015,
+    "round": "01",
+    "question_num": 58,
+    "question": "[한국전기설비규정에 따른 삭제]",
+    "options": [],
+    "answer": -1,
+    "explanation": "삭제",
+    "level": "하",
+    "sub_unit": "[설비] 기타 및 안전 수칙"
+  }
+]
