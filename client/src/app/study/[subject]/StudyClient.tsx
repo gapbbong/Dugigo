@@ -311,7 +311,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     if (text.includes('```')) {
       const parts = text.split(/(```[\s\S]*?```)/g);
       return (
-        <div className="text-xl md:text-4xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">
+        <div className="text-lg md:text-2xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">
           {parts.map((part, i) => {
             if (part.startsWith('```') && part.endsWith('```')) {
               const codeContent = part.slice(3, -3).replace(/^[a-z]*\n/i, '').trim();
@@ -333,7 +333,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       const codePart = text.slice(firstDoubleNewline + 2).trim();
       
       return (
-        <div className="text-xl md:text-4xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">
+        <div className="text-lg md:text-2xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">
           <span>{renderMath(questionPart)}</span>
           {codePart && (
             <div className="my-6 p-5 md:p-8 bg-[#f8fafc] border-2 border-slate-200 rounded-3xl text-left overflow-x-auto shadow-inner">
@@ -344,7 +344,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       );
     }
     
-    return <h2 className="text-xl md:text-4xl md:text-5xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">{renderMath(text)}</h2>;
+    return <h2 className="text-lg md:text-2xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">{renderMath(text)}</h2>;
   };
 
   const formatTime = (seconds: number) => {
