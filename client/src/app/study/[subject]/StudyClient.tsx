@@ -596,30 +596,48 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               </div>
 
               {/* 슬라이드 본문 */}
-              <div className="flex-1 flex flex-col justify-center items-center px-6 md:px-20 py-8 relative overflow-hidden text-center select-none">
+              <div className="flex-1 flex flex-col justify-center items-center px-6 md:px-20 py-8 relative overflow-hidden select-none">
+                <style>{`
+                  @keyframes float {
+                    0%, 100% { transform: translateY(0px); }
+                    50% { transform: translateY(-15px); }
+                  }
+                `}</style>
+
                 <AnimatePresence mode="wait">
                   <motion.div 
                     key={currentSlideIdx}
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -50 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.3 }}
-                    className="space-y-6 md:space-y-10 flex flex-col items-center max-w-2xl"
+                    className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center w-full max-w-5xl"
                   >
-                    <div className="text-5xl md:text-7xl animate-bounce duration-1000">
-                      {slideData[currentSlideIdx].emoji}
-                    </div>
-                    <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight leading-snug word-break-keep-all">
-                      {slideData[currentSlideIdx].title}
-                    </h2>
-                    <p className="text-base md:text-2xl font-bold text-slate-600 leading-relaxed md:leading-loose word-break-keep-all">
-                      {slideData[currentSlideIdx].content}
-                    </p>
-                    {slideData[currentSlideIdx].visual && (
-                      <div className="px-5 py-2 md:px-8 md:py-3 bg-brand-50/80 rounded-full border border-brand-100 text-brand-700 font-black text-xs md:text-lg shadow-inner">
-                        {slideData[currentSlideIdx].visual}
+                    {/* 좌측: 거대한 비주얼 영역 */}
+                    <div className="md:col-span-5 flex justify-center items-center relative h-40 md:h-80">
+                      <div className="absolute inset-0 bg-gradient-to-tr from-brand-500/20 to-indigo-500/20 rounded-full blur-3xl" />
+                      <div 
+                        style={{ animation: 'float 3s ease-in-out infinite' }} 
+                        className="text-8xl md:text-[10rem] drop-shadow-2xl select-none"
+                      >
+                        {slideData[currentSlideIdx].emoji}
                       </div>
-                    )}
+                    </div>
+
+                    {/* 우측: 핵심 텍스트 영역 */}
+                    <div className="md:col-span-7 flex flex-col justify-center text-center md:text-left space-y-4 md:space-y-6">
+                      <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight leading-snug word-break-keep-all">
+                        {slideData[currentSlideIdx].title}
+                      </h2>
+                      <p className="text-base md:text-xl font-bold text-slate-600 leading-relaxed md:leading-loose word-break-keep-all">
+                        {slideData[currentSlideIdx].content}
+                      </p>
+                      {slideData[currentSlideIdx].visual && (
+                        <div className="inline-flex px-5 py-2.5 bg-brand-50 rounded-2xl border border-brand-100 text-brand-700 font-black text-xs md:text-base shadow-inner self-center md:self-start items-center gap-1.5">
+                          {slideData[currentSlideIdx].visual}
+                        </div>
+                      )}
+                    </div>
                   </motion.div>
                 </AnimatePresence>
 

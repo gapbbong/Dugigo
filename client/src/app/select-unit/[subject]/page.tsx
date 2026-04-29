@@ -159,7 +159,7 @@ export default function SelectUnitPage() {
                           onClick={(e) => {
                             e.stopPropagation();
                             const unitName = unit.originalName || unit.name;
-                            router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unitName)}&set=1&size=30&autoOpenSummary=true`);
+                            router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unitName)}&set=${startSetIdx}&size=30&autoOpenSummary=true`);
                           }}
                           className="py-3 bg-brand-50 border-2 border-brand-100 rounded-2xl text-sm font-black text-brand-600 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition-all shadow-sm flex items-center justify-center gap-1.5"
                         >
