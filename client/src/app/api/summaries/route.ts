@@ -13,7 +13,7 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const summaryPath = path.join(process.cwd(), 'src', 'data', 'summaries', subject, `${unit}_${set}세트.json`);
+    const summaryPath = path.join(process.cwd(), 'src', 'summaries', subject, `${unit}_${set}세트.json`);
     
     if (!fs.existsSync(summaryPath)) {
       return NextResponse.json({ slides: [] }, { status: 404 });
