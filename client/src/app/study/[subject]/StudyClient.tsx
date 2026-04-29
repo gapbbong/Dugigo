@@ -72,6 +72,11 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         if (res.ok) {
           const data = await res.json();
           setSlideData(data.slides || null);
+          
+          const s = searchParamsProps || {};
+          if (s.autoOpenSummary === 'true' && data.slides && data.slides.length > 0) {
+            setAiSliderOpen(true);
+          }
         } else {
           setSlideData(null);
         }
@@ -80,7 +85,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       }
     };
     fetchSummary();
-  }, [subject, unitFilter, setNum, paramsReady]);
+  }, [subject, unitFilter, setNum, paramsReady, searchParamsProps]);
 
   useEffect(() => {
     const timer = setInterval(() => {
