@@ -586,7 +586,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               initial={{ scale: 0.9, opacity: 0, y: 20 }} 
               animate={{ scale: 1, opacity: 1, y: 0 }} 
               exit={{ scale: 0.9, opacity: 0, y: 20 }} 
-              className="w-full max-w-4xl bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col h-[80vh] md:h-[70vh] relative border border-white/20"
+              className="w-full max-w-5xl bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col h-[90vh] md:h-[85vh] relative border border-white/20"
             >
               {/* 상단바 */}
               <div className="flex items-center justify-between px-6 py-4 md:px-10 md:py-6 border-b border-slate-100 bg-slate-50/50">
@@ -606,7 +606,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               </div>
 
               {/* 슬라이드 본문 */}
-              <div className="flex-1 flex flex-col justify-center items-center px-6 md:px-20 py-8 relative overflow-hidden select-none">
+              <div className="flex-1 overflow-y-auto px-6 md:px-20 py-4 md:py-8 relative select-none">
                 <style>{`
                   @keyframes float {
                     0%, 100% { transform: translateY(0px); }
@@ -621,7 +621,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.3 }}
-                    className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center w-full max-w-5xl"
+                    className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center w-full max-w-5xl min-h-full"
                   >
                     {/* 좌측: 거대한 비주얼 영역 */}
                     <div className="md:col-span-5 flex justify-center items-center relative h-40 md:h-80">
