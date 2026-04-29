@@ -125,59 +125,55 @@ export default function SelectUnitPage() {
           {/* 소단원 리스트 */}
           <div className="lg:col-span-8 order-2 lg:order-1 grid grid-cols-1 md:grid-cols-2 gap-4">
             <AnimatePresence>
-              {units.map((unit, index) => {
-                const setSize = 30;
-                const setCount = Math.ceil(unit.count / setSize);
-                const hasMultipleSets = setCount > 1;
-                
-                return (
-                  <motion.div
-                    key={unit.name}
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                    onClick={() => !hasMultipleSets && handleSelect(unit)}
-                    className={`glass-card p-5 rounded-[2rem] relative overflow-hidden flex flex-col gap-4 transition-all ${
-                      !hasMultipleSets ? 'cursor-pointer hover:bg-white hover:border-brand-300 hover:shadow-xl hover:shadow-brand-500/10' : ''
-                    }`}
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 font-black text-sm shrink-0 border-2 border-brand-100/50">
-                        {(index + 1).toString().padStart(2, '0')}
+              {(() => {
+                let runningSetIdx = 0;
+                return units.map((unit, index) => {
+                  const setSize = 30;
+                  const setCount = Math.ceil(unit.count / setSize);
+                  const startSetIdx = runningSetIdx + 1;
+                  runningSetIdx += setCount;
+                  
+                  return (
+                    <motion.div
+                      key={unit.name}
+                      initial={{ opacity: 0, y: 15 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                      className="glass-card p-5 rounded-[2rem] relative overflow-hidden flex flex-col gap-4 transition-all"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 font-black text-sm shrink-0 border-2 border-brand-100/50">
+                          {(index + 1).toString().padStart(2, '0')}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-xl font-black text-slate-800 leading-snug truncate">
+                            {unit.name}
+                          </h4>
+                        </div>
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <h4 className="text-xl font-black text-slate-800 leading-snug truncate">
-                          {unit.name}
-                        </h4>
-                        {!hasMultipleSets && (
-                          <div className="mt-1.5">
-                            <span className="text-xs font-bold text-slate-400">지금 학습 시작</span>
-                          </div>
-                        )}
-                      </div>
-                      {!hasMultipleSets && <ChevronRight className="w-5 h-5 text-slate-300" />}
-                    </div>
 
-                    {/* 세트 선택 그리드 */}
-                    {hasMultipleSets && (
+                      {/* 세트 선택 그리드 (연속된 세트 번호) */}
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-2">
-                        {Array.from({ length: setCount }).map((_, sIdx) => (
-                          <button
-                            key={sIdx}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleSelect(unit, sIdx);
-                            }}
-                            className="py-3 bg-white border-2 border-slate-100 rounded-2xl text-sm font-black text-slate-600 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50/50 transition-all shadow-sm"
-                          >
-                            {sIdx + 1}세트
-                          </button>
-                        ))}
+                        {Array.from({ length: setCount }).map((_, sIdx) => {
+                          const globalSetNum = startSetIdx + sIdx;
+                          return (
+                            <button
+                              key={sIdx}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleSelect(unit, sIdx);
+                              }}
+                              className="py-3 bg-white border-2 border-slate-100 rounded-2xl text-sm font-black text-slate-600 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50/50 transition-all shadow-sm"
+                            >
+                              {globalSetNum}세트
+                            </button>
+                          );
+                        })}
                       </div>
-                    )}
-                  </motion.div>
-                );
-              })}
+                    </motion.div>
+                  );
+                });
+              })()}
             </AnimatePresence>
 
             {units.length === 0 && (
