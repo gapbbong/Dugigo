@@ -210,8 +210,8 @@ export default function SelectUnitPage() {
                 <span className="block mt-2 text-brand-600 font-black">({totalQuestions}문항 로드됨)</span>
               </p>
               
-              <div className="flex items-center gap-2 text-brand-600 font-black text-xs mt-2">
-                지금 도전하기 <ChevronRight size={16} />
+              <div className="flex items-center gap-2 text-brand-600 font-black text-xl mt-4">
+                지금 도전하기 <ChevronRight size={24} />
               </div>
             </div>
           </motion.div>
