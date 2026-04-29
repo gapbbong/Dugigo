@@ -1,11 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4f46e5" />
-      <stop offset="100%" stop-color="#7c3aed" />
+    <!-- Multi-stop Instagram-like Vibrant Gradient -->
+    <linearGradient id="instaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#feda75" />
+      <stop offset="25%" stop-color="#fa7e1e" />
+      <stop offset="50%" stop-color="#d62976" />
+      <stop offset="75%" stop-color="#962fbf" />
+      <stop offset="100%" stop-color="#4f5bd5" />
     </linearGradient>
-    
+
+    <!-- Sunlight Flare Gradient -->
+    <radialGradient id="sunlight" cx="15%" cy="15%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glass Overlay Gradient (Frosting) -->
+    <linearGradient id="glassFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+    </linearGradient>
+
     <!-- Gold/Premium Book Cover Gradient -->
     <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#fbbf24" />
@@ -28,12 +44,22 @@
     <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.3"/>
     </filter>
+    
+    <filter id="glassShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
   </defs>
 
-  <!-- App Icon Base -->
-  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+  <!-- Base Canvas / Instagram Background -->
+  <rect width="512" height="512" rx="128" fill="url(#instaGrad)"/>
 
-  <!-- Perfectly Centered Book & Du Composition -->
+  <!-- Sunlight Effect (Top Left) -->
+  <rect width="512" height="512" rx="128" fill="url(#sunlight)"/>
+
+  <!-- Frosted Glassmorphism Panel -->
+  <rect x="40" y="40" width="432" height="432" rx="96" fill="url(#glassFill)" stroke="#ffffff" stroke-width="2" stroke-opacity="0.4" filter="url(#glassShadow)"/>
+
+  <!-- Perfectly Centered Book & Du Composition (Inside Glass) -->
   <g filter="url(#dropShadow)" transform="translate(6, 1)">
     <!-- Book Pages (The thickness) -->
     <path d="M 120,110 L 380,110 C 400,110 410,125 410,140 L 410,380 C 410,395 400,410 380,410 L 120,410 Z" fill="url(#pageGrad)"/>
