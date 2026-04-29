@@ -488,16 +488,22 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={`mt-8 md:mt-12 rounded-3xl overflow-hidden border-2 ${currentQuestion.isCurrentCorrect ? 'border-emerald-200' : 'border-rose-200'} bg-white shadow-xl shadow-black/5`}>
                   <div className={`px-6 py-4 md:px-8 md:py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 ${currentQuestion.isCurrentCorrect ? 'bg-emerald-50/50' : 'bg-rose-50/50'}`}>
                     <div className="flex items-center gap-4">
-                      <div className={`w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center shrink-0 ${currentQuestion.isCurrentCorrect ? 'bg-emerald-100 text-emerald-600' : 'bg-rose-100 text-rose-600'}`}>
-                        {currentQuestion.isCurrentCorrect ? <CheckCircle2 className="w-8 h-8 md:w-10 md:h-10" /> : <XCircle className="w-8 h-8 md:w-10 md:h-10" />}
-                      </div>
+                      {currentQuestion.isCurrentCorrect && (
+                        <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center shrink-0 bg-emerald-100 text-emerald-600">
+                          <CheckCircle2 className="w-8 h-8 md:w-10 md:h-10" />
+                        </div>
+                      )}
                       <div>
-                        <h4 className={`text-xl md:text-2xl font-black mb-1 ${currentQuestion.isCurrentCorrect ? 'text-emerald-700' : 'text-rose-700'}`}>
-                          {currentQuestion.isCurrentCorrect ? '정답입니다!' : '틀렸습니다!'}
-                        </h4>
-                        <p className={`text-sm md:text-base font-bold ${currentQuestion.isCurrentCorrect ? 'text-emerald-600' : 'text-rose-600'}`}>
-                          {currentQuestion.isCurrentCorrect ? '완벽하게 이해하셨네요 👏' : `정답은 [ ${currentQuestion.shuffledOptions[currentQuestion.correctShuffledIndex]} ] 입니다. 💪`}
-                        </p>
+                        {currentQuestion.isCurrentCorrect ? (
+                          <>
+                            <h4 className="text-xl md:text-2xl font-black mb-1 text-emerald-700">정답입니다!</h4>
+                            <p className="text-sm md:text-base font-bold text-emerald-600">완벽하게 이해하셨네요 👏</p>
+                          </>
+                        ) : (
+                          <p className="text-xl md:text-3xl font-black text-rose-700 py-1 md:py-2 leading-relaxed word-break-keep-all">
+                            정답은 [ {currentQuestion.shuffledOptions[currentQuestion.correctShuffledIndex]} ] 입니다. 💪
+                          </p>
+                        )}
                       </div>
                     </div>
                   </div>
