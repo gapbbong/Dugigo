@@ -582,7 +582,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   "맞아요! 정답의 스페셜리스트 🕵️",
   "정답! 오늘도 빛나는 실력 ✨"
 ];
-                            const praiseText = praises[currentQuestionIndex % praises.length];
+                            const praiseText = praises[currentIndex % praises.length];
                             return (
                               <>
                                 <h4 className="text-xl md:text-2xl font-black mb-1 text-emerald-700">정답입니다!</h4>
