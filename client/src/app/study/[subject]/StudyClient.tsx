@@ -130,6 +130,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             return {
               ...q,
               shuffledOptions: optionsWithIndex.map((item: any) => item.opt),
+              shuffledOptionsIdx: optionsWithIndex.map((item: any) => item.originalIdx),
               correctShuffledIndex: optionsWithIndex.findIndex((item: any) => item.originalIdx === correctIdx),
               selectedIndex: null,
               isCurrentCorrect: null
@@ -461,7 +462,17 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     <div className={`w-7 h-7 md:w-10 md:h-10 shrink-0 rounded-xl md:rounded-2xl flex items-center justify-center font-black text-sm md:text-base transition-all shadow-sm ${isAnswered ? (isCorrect ? 'bg-emerald-500 text-white' : isSelected ? 'bg-rose-500 text-white' : 'bg-slate-100 text-slate-400') : 'bg-brand-50 text-brand-600 group-hover:bg-brand-600 group-hover:text-white'}`}>
                       {isAnswered && isCorrect ? <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5" /> : isAnswered && isSelected && !isCorrect ? <XCircle className="w-4 h-4 md:w-5 md:h-5" /> : idx + 1}
                     </div>
-                    <span className="text-base md:text-xl font-bold flex-1 leading-relaxed">{renderMath(choice)}</span>
+                    <span className="text-base md:text-xl font-bold flex-1 leading-relaxed flex flex-col gap-3">
+                      {renderMath(choice)}
+                      {choice.includes('그림') && (
+                        <img 
+                          src={`/images/exams/${currentQuestion.year}_${currentQuestion.round}/${currentQuestion.year}_${currentQuestion.round}_${currentQuestion.number || currentQuestion.question_num}_choice${(currentQuestion.shuffledOptionsIdx?.[idx] ?? idx) + 1}.webp`} 
+                          alt={`Choice ${idx + 1}`}
+                          className="max-h-[140px] md:max-h-[180px] object-contain rounded-xl border border-slate-200/60 p-2 bg-white/80 shadow-sm"
+                          onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                        />
+                      )}
+                    </span>
                   </motion.button>
                 );
               })}
@@ -605,6 +616,19 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                         {currentQuestion.explanation.includes('<table') ? (<div dangerouslySetInnerHTML={{ __html: currentQuestion.explanation }} />) : (
                           currentQuestion.explanation.split('\n').map((line: string, i: number) => (<p key={i} className="leading-relaxed text-sm md:text-xl font-bold">{renderMath(line)}</p>))
                         )}
+                        {(() => {
+                          const expImgSrc = `/images/exams/${currentQuestion.year}_${currentQuestion.round}/${currentQuestion.year}_${currentQuestion.round}_${currentQuestion.number || currentQuestion.question_num}_explanation.webp`;
+                          return (
+                            <div className="mt-6 flex justify-center">
+                              <img 
+                                src={expImgSrc} 
+                                alt="Explanation Diagram" 
+                                className="max-h-[350px] object-contain rounded-2xl border border-slate-200/60 p-3 bg-white/80 shadow-sm"
+                                onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                              />
+                            </div>
+                          );
+                        })()}
                       </div>
                     </div>
                   )}
