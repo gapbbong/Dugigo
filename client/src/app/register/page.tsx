@@ -16,6 +16,9 @@ export default function RegisterPage() {
     confirmPassword: '',
   });
 
+  const [role, setRole] = useState<'student' | 'teacher'>('student');
+  const [teacherCode, setTeacherCode] = useState('');
+
   const [otpCode, setOtpCode] = useState('');
   const [isVerifying, setIsVerifying] = useState(false);
   const [isUsernameUnique, setIsUsernameUnique] = useState<'idle' | 'checking' | 'unique' | 'duplicate'>('idle');
@@ -25,7 +28,8 @@ export default function RegisterPage() {
   }>({ type: 'idle', message: '' });
 
   const checkUsername = async (username: string) => {
-    if (username.length < 4) return;
+    if (role === 'teacher' && username.length < 2) return;
+    if (role === 'student' && username.length < 6) return;
     setIsUsernameUnique('checking');
     try {
       const { data } = await supabase
@@ -41,10 +45,14 @@ export default function RegisterPage() {
   };
 
   const validate = () => {
-    if (formData.username.length < 4) return '학번성명은 4글자 이상이어야 합니다.';
+    if (role === 'teacher') {
+      if (formData.username.length < 2) return '아이디는 2글자 이상이어야 합니다.';
+    } else {
+      if (formData.username.length < 6) return '학번이름은 6글자 이상이어야 합니다.';
+    }
     if (isUsernameUnique === 'duplicate') return '이미 사용 중인 정보입니다.';
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) return '유효한 이메일 형식이 아닙니다.';
-    if (formData.password.length < 4) return '비밀번호는 4글자 이상을 권장합니다.';
+    if (formData.password.length < 6) return '비밀번호는 6글자 이상을 권장합니다.';
     if (formData.password !== formData.confirmPassword) return '비밀번호가 일치하지 않습니다.';
     return null;
   };
@@ -58,17 +66,69 @@ export default function RegisterPage() {
       return;
     }
 
+    if (role === 'teacher') {
+      setStatus({ type: 'loading', message: '교사 인증 코드를 확인하고 있습니다...' });
+      try {
+        const res = await fetch('/api/verify-teacher', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code: teacherCode }),
+        });
+        const data = await res.json();
+        if (!data.valid) {
+          setStatus({ type: 'error', message: '올바른 교사 인증 코드를 입력해 주세요.' });
+          return;
+        }
+      } catch (err) {
+        setStatus({ type: 'error', message: '인증 서버 통신에 실패했습니다.' });
+        return;
+      }
+    }
+
     setStatus({ type: 'loading', message: '가입 승인 절차가 시작되었습니다...' });
     try {
-      const { error: authError } = await supabase.auth.signUp({
+      const { data: authData, error: authError } = await supabase.auth.signUp({
         email: formData.email,
         password: formData.password,
       });
-      if (authError) throw authError;
+      if (authError) {
+        console.error('[SIGNUP_AUTH_ERROR]', authError);
+        throw authError;
+      }
+
+      /* 이메일 인증 기능 (1년 뒤 유료화 시 사용 예정) - 현재는 주석 처리
       setIsVerifying(true);
       setStatus({ type: 'idle', message: '' });
+      */
+
+      // 이메일 인증 없이 바로 프로필 생성 및 가입 완료
+      const { error: profileError } = await supabase
+        .from('dukigo_profiles')
+        .insert({
+          id: authData.user?.id,
+          username: formData.username,
+          display_name: formData.username,
+          email: formData.email,
+          role: role.toUpperCase()
+        });
+      if (profileError) {
+        console.error('[SIGNUP_PROFILE_ERROR]', profileError);
+        throw profileError;
+      }
+
+      setStatus({ type: 'success', message: '가입 성공! 로그인 페이지로 이동합니다.' });
+      setTimeout(() => router.push('/login'), 1500);
+
     } catch (err: any) {
-      setStatus({ type: 'error', message: err.message || '가입 중 오류가 발생했습니다.' });
+      console.error('[SIGNUP_CATCH_ERROR]', err);
+      let errorMessage = err.message || '가입 중 오류가 발생했습니다.';
+      if (errorMessage.includes('User already registered')) errorMessage = '이미 가입된 이메일입니다.';
+      else if (errorMessage.includes('Password should be')) errorMessage = '비밀번호가 너무 짧거나 취약합니다.';
+      else if (errorMessage.includes('not-null constraint')) errorMessage = '필수 정보(이름 등)가 누락되었습니다. 다시 시도해주세요.';
+      else if (errorMessage.includes('check constraint')) errorMessage = '잘못된 형식의 데이터가 포함되어 있습니다. 다시 확인해주세요.';
+      else if (errorMessage.includes('foreign key constraint')) errorMessage = '시스템 내부 식별 오류가 발생했습니다. 관리자에게 문의해주세요.';
+      
+      setStatus({ type: 'error', message: `${errorMessage} (상세: ${err.message || '알 수 없음'})` });
     }
   };
 
@@ -94,15 +154,19 @@ export default function RegisterPage() {
         .insert({
           id: verifyData.user?.id,
           username: formData.username,
+          display_name: formData.username,
           email: formData.email,
-          role: 'student'
+          role: role
         });
       if (profileError) throw profileError;
 
-      setStatus({ type: 'success', message: '인증 성공! 합격의 문이 열렸습니다.' });
+      setStatus({ type: 'success', message: '이메일 인증 및 가입 완료!' });
       setTimeout(() => router.push('/login'), 1500);
     } catch (err: any) {
-      setStatus({ type: 'error', message: err.message || '인증에 실패했습니다.' });
+      let errorMessage = err.message || '인증 중 오류가 발생했습니다.';
+      if (errorMessage.includes('Token has expired or is invalid')) errorMessage = '인증 코드가 만료되었거나 잘못되었습니다.';
+      else if (errorMessage.includes('not-null constraint')) errorMessage = '필수 정보(이름 등)가 누락되었습니다. 다시 시도해주세요.';
+      setStatus({ type: 'error', message: errorMessage });
     }
   };
 
@@ -134,14 +198,29 @@ export default function RegisterPage() {
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {/* 역할 선택기 */}
+                  <div className="flex bg-slate-100 p-1.5 rounded-2xl mb-4">
+                    <button type="button" onClick={() => setRole('student')} className={`flex-1 py-3 rounded-xl text-sm font-black transition-all ${role === 'student' ? 'bg-white text-brand-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`}>학생</button>
+                    <button type="button" onClick={() => setRole('teacher')} className={`flex-1 py-3 rounded-xl text-sm font-black transition-all ${role === 'teacher' ? 'bg-white text-brand-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`}>교사</button>
+                  </div>
+
                   <div className="space-y-3">
                     <InputGroup 
                       icon={<User className="w-5 h-5" />} 
                       type="text" 
-                      placeholder="학번성명 (예: 20405홍길동)" 
+                      placeholder={role === 'teacher' ? "아이디 (2자 이상)" : "학번이름 (예: 20405홍길동, 6자 이상)"} 
                       value={formData.username}
                       onChange={(e: any) => setFormData({ ...formData, username: e.target.value.replace(/\s/g, '') })}
                     />
+                    {role === 'teacher' && (
+                      <InputGroup 
+                        icon={<KeyRound className="w-5 h-5" />} 
+                        type="password" 
+                        placeholder="사전에 안내받은 교사 인증 코드" 
+                        value={teacherCode}
+                        onChange={(e: any) => setTeacherCode(e.target.value)}
+                      />
+                    )}
                     <InputGroup 
                       icon={<Mail className="w-5 h-5" />} 
                       type="email" 
@@ -152,7 +231,7 @@ export default function RegisterPage() {
                     <InputGroup 
                       icon={<Lock className="w-5 h-5" />} 
                       type="password" 
-                      placeholder="비밀번호 (4자 이상)" 
+                      placeholder="비밀번호 (6자 이상)" 
                       value={formData.password}
                       onChange={(e: any) => setFormData({ ...formData, password: e.target.value })}
                     />

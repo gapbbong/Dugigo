@@ -1,11 +1,11 @@
 import fs from 'fs';
 import https from 'https';
 
-const API_KEY = 'AIzaSyA4k2juxTP3wGn7m2Ma89LsRwO2yXn_9FE';
-const FILE_URI = 'https://generativelanguage.googleapis.com/v1beta/files/cmcqhiknaom7';
+const API_KEY = 'AIzaSyBVMgA2JdX0YV4PC7Pmb596BsQYNTegSBs';
+const FILE_URI = 'https://generativelanguage.googleapis.com/v1beta/files/w88x7h92vo3i';
 
 const ROUNDS = [
-  { year: 2015, rounds: ['01', '02', '04', '05'] }
+  { year: 2020, rounds: ['01', '03'] }
 ];
 
 /**

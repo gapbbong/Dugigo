@@ -1,0 +1,87 @@
+[
+  {
+    "id": "2015_05_05",
+    "year": 2015,
+    "round": "05",
+    "question_num": 5,
+    "question": "대칭 3상 $\\Delta$ 결선에서 선전류와 상전류와 의 위상 관계는?",
+    "options": [
+      "1. 상전류가 $\\frac{\\pi}{3}$ [rad] 앞선다.",
+      "2. 상전류가 $\\frac{\\pi}{3}$ [rad] 뒤진다.",
+      "3. 상전류가 $\\frac{\\pi}{6}$ [rad] 앞선다.",
+      "4. 상전류가 $\\frac{\\pi}{6}$ [rad] 뒤진다."
+    ],
+    "answer": 3,
+    "explanation": "$\\Delta$ 결선의 특성 $I_L = \\sqrt{3}I_p$ [A] 선전류 $I_L$가 상전류 $I_p$보다 $\\frac{\\pi}{6}$ [rad] 뒤지므로 상전류가 선전류보다 $\\frac{\\pi}{6}$ [rad] 앞선다.",
+    "level": "상",
+    "sub_unit": "[이론] 교류 회로"
+  },
+  {
+    "id": "2015_05_07",
+    "year": 2015,
+    "round": "05",
+    "question_num": 7,
+    "question": "저항 8[$\\Omega$]과 코일이 직렬로 접속된 회로에 200[V]의 교류 전압을 가하면 20[A]의 전류가 흐른다. 코일의 리액턴스는 몇 [$\\Omega$]인가?",
+    "options": [
+      "1. 2",
+      "2. 4",
+      "3. 6",
+      "4. 8"
+    ],
+    "answer": 3,
+    "explanation": "$Z = \\frac{V}{I} = \\frac{200}{20} = 10[\\Omega]$ R-L 직렬 회로의 합성 임피던스 $Z=R+jX_L=8+jX_L[\\Omega]$ 임피던스 절대값 $\\sqrt{R^2+X_L^2} = 10[\\Omega]$ $X_L=\\sqrt{10^2-8^2}= \\sqrt{36}=6[\\Omega]$",
+    "level": "상",
+    "sub_unit": "[이론] 교류 회로"
+  },
+  {
+    "id": "2015_05_08",
+    "year": 2015,
+    "round": "05",
+    "question_num": 8,
+    "question": "가정용 전등 전압이 200[V]이다. 이 교류의 최대값은 몇 [V]인가?",
+    "options": [
+      "1. 70.7",
+      "2. 86.7",
+      "3. 141.4",
+      "4. 282.8"
+    ],
+    "answer": 4,
+    "explanation": "전등 전압 200[V]는 실효값이므로 최대값 $V_m = \\sqrt{2}V = \\sqrt{2}\\times200 = 282.8[V]$",
+    "level": "상",
+    "sub_unit": "[이론] 교류 회로"
+  },
+  {
+    "id": "2015_05_13",
+    "year": 2015,
+    "round": "05",
+    "question_num": 13,
+    "question": "R=6[$\\Omega$], $X_C = 8$[$\\Omega$]일 때 임피던스 $\\dot{Z} = 6-j8$[$\\Omega$]으로 표시되는 것은 일반적으로 어떤 회로인가?",
+    "options": [
+      "1. RC 직렬 회로",
+      "2. RL 직렬 회로",
+      "3. RC 병렬 회로",
+      "4. RL 병렬 회로"
+    ],
+    "answer": 1,
+    "explanation": "임피던스가 실수와 허수의 조합으로 구성되어 있으면 직렬 회로이고 $\\dot{Z}=6-j8$[$\\Omega$]일 경우 허수부가 (-)이므로 진상 회로인 RC 직렬 회로이다.",
+    "level": "하",
+    "sub_unit": "[이론] 교류 회로"
+  },
+  {
+    "id": "2015_05_20",
+    "year": 2015,
+    "round": "05",
+    "question_num": 20,
+    "question": "$i(t) = I_m\\sin\\omega t$[A]인 사인파 교류에서 $\\omega t$가 몇 도일 때 순시값과 실효값이 같게 되는가?",
+    "options": [
+      "1. 30°",
+      "2. 45°",
+      "3. 60°",
+      "4. 90°"
+    ],
+    "answer": 2,
+    "explanation": "순시값 $i(t) = I_m\\sin\\omega t$과 실효값 $I$가 같을 조건이므로 $i(t) = I_m\\sin\\omega t = \\sqrt{2}I\\sin\\omega t = I[A]$ $\\sin\\omega t = \\frac{1}{\\sqrt{2}} \\rightarrow \\omega t = \\sin^{-1}\\frac{1}{\\sqrt{2}} = 45°$",
+    "level": "상",
+    "sub_unit": "[이론] 교류 회로"
+  }
+]

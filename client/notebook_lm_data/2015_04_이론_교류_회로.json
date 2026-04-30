@@ -1,0 +1,70 @@
+[
+  {
+    "id": "2015_04_05",
+    "year": 2015,
+    "round": "04",
+    "question_num": 5,
+    "question": "평형 3상 교류 회로에서 Y결선할 때 선간 전압 $V_L$과 상전압 $V_P$와의 관계는?",
+    "options": [
+      "1. $V_L = V_P$",
+      "2. $V_L = \\sqrt{2} V_P$",
+      "3. $V_L = \\sqrt{3} V_P$",
+      "4. $V_L = \\frac{1}{\\sqrt{3}} V_P$"
+    ],
+    "answer": 3,
+    "explanation": "Y결선의 특징 선간 전압 $V_L = \\sqrt{3}V_P$(상전압)",
+    "level": "상",
+    "sub_unit": "[이론] 교류 회로"
+  },
+  {
+    "id": "2015_04_09",
+    "year": 2015,
+    "round": "04",
+    "question_num": 9,
+    "question": "$R=5[\\Omega]$, $L = 30[mH]$인 R-L 직렬 회로에 $V=200[V]$, $f=60[Hz]$인 교류 전압을 가할 때 전류의 크기는 약 몇 [A]인가?",
+    "options": [
+      "1. 8.67",
+      "2. 11.42",
+      "3. 16.17",
+      "4. 21.25"
+    ],
+    "answer": 3,
+    "explanation": "유도성 리액턴스 $X_L=\\omega L=2\\pi fL = 2\\pi \\times 60 \\times 30 \\times 10^{-3} \\fallingdotseq 11.31[\\Omega]$ 합성 임피던스 $Z=R+jX_L=5+j11.31[\\Omega]$ 임피던스 절대값 $Z=\\sqrt{R^2+X_L^2}=\\sqrt{5^2+11.31^2} \\fallingdotseq 12.37[\\Omega]$ 전류의 크기 $I=\\frac{V}{Z}=\\frac{200}{12.36} \\fallingdotseq 16.17[A]$",
+    "level": "중",
+    "sub_unit": "[이론] 교류 회로"
+  },
+  {
+    "id": "2015_04_11",
+    "year": 2015,
+    "round": "04",
+    "question_num": 11,
+    "question": "그림과 같은 R-L 병렬 회로에서 $R=25[\\Omega]$, $\\omega L = \\frac{100}{3}[\\Omega]$일 때, 200[V]의 전압을 가하면 코일에 흐르는 전류 $I_L[A]$은?",
+    "options": [
+      "1. 3.0",
+      "2. 4.8",
+      "3. 6.0",
+      "4. 8.2"
+    ],
+    "answer": 3,
+    "explanation": "유도성 리액턴스 $\\omega L = \\frac{100}{3}[\\Omega]$이므로 코일에 흐르는 전류 $I_L=\\frac{V}{X_L}=\\frac{200}{\\frac{100}{3}}=\\frac{600}{100}=6[A]$",
+    "level": "하",
+    "sub_unit": "[이론] 교류 회로"
+  },
+  {
+    "id": "2015_04_19",
+    "year": 2015,
+    "round": "04",
+    "question_num": 19,
+    "question": "R-L 직렬 회로에 교류 전압 $v=V_m\\sin\\omega t[V]$를 가했을 때 회로의 위상차 $\\theta$를 나타낸 것은?",
+    "options": [
+      "1. $\\theta = \\tan^{-1}\\frac{R}{\\omega L}$",
+      "2. $\\theta = \\tan^{-1}\\frac{\\omega L}{R}$",
+      "3. $\\theta = \\tan^{-1}\\frac{1}{R\\omega L}$",
+      "4. $\\theta = \\tan^{-1}\\frac{R}{\\sqrt{R^2+(\\omega L)^2}}$"
+    ],
+    "answer": 2,
+    "explanation": "R-L 직렬 회로 합성 임피던스 $Z=R+j\\omega L[\\Omega]$ $\\theta = \\tan^{-1}\\frac{\\omega L}{R}$",
+    "level": "중",
+    "sub_unit": "[이론] 교류 회로"
+  }
+]

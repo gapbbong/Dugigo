@@ -10,6 +10,9 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "DugiGo v2 | 전기기능사 마스터",
   description: "Stripe 감성의 프리미엄 전기기능사 기출문제 학습 플랫폼",
+  icons: {
+    icon: '/icon.svg',
+  },
 };
 
 export default function RootLayout({

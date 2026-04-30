@@ -1,0 +1,36 @@
+[
+  {
+    "id": "2015_01_30",
+    "year": 2015,
+    "round": "01",
+    "question_num": 30,
+    "question": "3상 4극 60[MVA], 역률 0.8, 60[Hz], 22.9[kV] 수차 발전기의 전부하 손실이 1,600[kW]이면 전부하 효율[%]은?",
+    "options": [
+      "1. 90",
+      "2. 95",
+      "3. 97",
+      "4. 99"
+    ],
+    "answer": 3,
+    "explanation": "전부하 효율\n$\\eta = \\frac{\\text{출력}}{\\text{출력}+\\text{손실}} \\times 100$\n발전기 출력 60[MVA]는 피상 전력($P_a$)이므로\n입력 $P = P_a \\cos\\theta = 60 \\times 0.8$ [MW]\n손실 $1,600[kW]=1.6[MW]$\n$\\frac{60 \\times 0.8}{60 \\times 0.8 + 1.6} \\times 100 \\fallingdotseq 97$ [%]",
+    "level": "중",
+    "sub_unit": "[기기] 전기 기기 일반"
+  },
+  {
+    "id": "2015_01_35",
+    "year": 2015,
+    "round": "01",
+    "question_num": 35,
+    "question": "3단자 사이리스터가 아닌 것은?",
+    "options": [
+      "1. SCS",
+      "2. SCR",
+      "3. TRIAC",
+      "4. GTO"
+    ],
+    "answer": 1,
+    "explanation": "사이리스터의 특성\n• SCR: 3단자 단방향성 사이리스터\n• GTO: 3단자 단방향성 사이리스터(게이트 신호로 턴 오프 가능 소자)\n• TRIAC: 3단자 쌍방향성 사이리스터\n• SCS: 2개의 게이트를 갖고 있는 4단자 단방향성 사이리스터(쌍방향성 2단자)",
+    "level": "중",
+    "sub_unit": "[기기] 전기 기기 일반"
+  }
+]

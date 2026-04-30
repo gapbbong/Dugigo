@@ -45,7 +45,10 @@ export default function LoginPage() {
     setStatus({ type: 'loading', message: '접속 권한을 확인하고 있습니다...' });
     try {
       const { error } = await supabase.auth.signInWithPassword({ email, password });
-      if (error) throw error;
+      if (error) {
+        console.error('[LOGIN_AUTH_ERROR]', error);
+        throw error;
+      }
 
       // 자동로그인 설정 저장
       if (autoLogin) {
@@ -57,7 +60,16 @@ export default function LoginPage() {
       setStatus({ type: 'success', message: '환영합니다! 곧 이동합니다.' });
       setTimeout(() => router.push('/select-subject'), 700);
     } catch (err: any) {
-      setStatus({ type: 'error', message: err.message || '로그인에 실패했습니다.' });
+      console.error('[LOGIN_CATCH_ERROR]', err);
+      let errorMessage = err.message || '로그인에 실패했습니다.';
+      if (errorMessage.includes('Invalid login credentials')) errorMessage = '이메일 또는 비밀번호가 일치하지 않습니다.';
+      else if (errorMessage.includes('Email not confirmed')) errorMessage = '이메일 인증이 완료되지 않았습니다.';
+      else if (errorMessage.includes('User not found')) errorMessage = '가입되지 않은 이메일입니다.';
+      else if (errorMessage.includes('not-null constraint')) errorMessage = '회원 정보가 누락되었습니다. 관리자에게 문의해주세요.';
+      else if (errorMessage.includes('check constraint')) errorMessage = '회원 권한 설정에 문제가 있습니다. 관리자에게 문의해주세요.';
+      else if (errorMessage.includes('foreign key constraint')) errorMessage = '시스템 내부 식별 오류가 발생했습니다. 관리자에게 문의해주세요.';
+      
+      setStatus({ type: 'error', message: `${errorMessage} (상세: ${err.message || '알 수 없음'})` });
     }
   };
 
@@ -76,8 +88,8 @@ export default function LoginPage() {
             <div className="w-14 h-14 bg-brand-600 rounded-2xl flex items-center justify-center shadow-lg shadow-brand-500/30 mb-6">
               <GraduationCap className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-3xl font-black text-slate-900 tracking-tighter uppercase mb-2">DugiGo<span className="text-brand-600">+</span></h1>
-            <p className="text-slate-500 font-bold text-sm tracking-tight text-center">전기기능사 합격의 지름길, 두기고 플러스</p>
+            <h1 className="text-3xl font-black text-slate-900 tracking-tighter mb-2">두기고<span className="text-brand-600">+</span></h1>
+            <p className="text-slate-500 font-bold text-sm tracking-tight text-center"><span className="text-brand-600">두</span>꺼운 <span className="text-brand-600">기</span>능사 책 대신 <span className="text-brand-600">고</span>득점 비결</p>
           </div>
 
           <AnimatePresence mode="wait">

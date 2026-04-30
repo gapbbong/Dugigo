@@ -1,0 +1,36 @@
+[
+  {
+    "id": "2015_01_1",
+    "year": 2015,
+    "round": "01",
+    "question_num": 1,
+    "question": "유효 전력의 식으로 옳은 것은? (단, E: 전압, I: 전류, \\theta: 위상각)",
+    "options": [
+      "1. $EI\\cos\\theta$",
+      "2. $EI\\sin\\theta$",
+      "3. $EI\\tan\\theta$",
+      "4. $EI$"
+    ],
+    "answer": 1,
+    "explanation": "단상 교류 전력 $P=EI\\cos\\theta$ [W]",
+    "level": "하",
+    "sub_unit": "[이론] 교류 회로"
+  },
+  {
+    "id": "2015_01_4",
+    "year": 2015,
+    "round": "01",
+    "question_num": 4,
+    "question": "전원과 부하가 다같이 $\\triangle$결선된 3상 평형 회로가 있다. 상전압이 200[V], 부하 임피던스가 $Z=6+j8[\\Omega]$인 경우 선전류는 몇 [A]인가?",
+    "options": [
+      "1. 20",
+      "2. $\\frac{20}{\\sqrt{3}}$",
+      "3. $20\\sqrt{3}$",
+      "4. $10\\sqrt{3}$"
+    ],
+    "answer": 3,
+    "explanation": "$\\triangle$결선에서 $V_L = V_P = 200[V]$ \\n한 상의 임피던스 $Z=6+j8[\\Omega]$ \\n• 절대값 $Z= \\sqrt{6^2+8^2} = \\sqrt{100}=10[\\Omega]$ \\n• 선전류 $I_L = \\sqrt{3}I_P = \\sqrt{3} \\times \\frac{V_P}{Z} [A] = \\sqrt{3} \\times \\frac{200}{10} = 20\\sqrt{3}$",
+    "level": "상",
+    "sub_unit": "[이론] 교류 회로"
+  }
+]
