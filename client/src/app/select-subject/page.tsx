@@ -58,22 +58,22 @@ export default function SelectSubjectPage() {
   useEffect(() => {
     async function init() {
       // 1. Check Auth
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) {
+      const { data: { user: currentUser } } = await supabase.auth.getUser();
+      if (!currentUser) {
         router.push('/login');
         return;
       }
-      setUser(user);
+      setUser(currentUser);
 
       // 2. Fetch user profile to check if teacher or admin
       try {
         const { data: profile } = await supabase
           .from('dukigo_profiles')
           .select('role')
-          .eq('id', user.id)
+          .eq('id', currentUser.id)
           .single();
         
-        if (profile?.role?.toLowerCase() === 'teacher' || user.email === 'serv@kakao.com') {
+        if (profile?.role?.toLowerCase() === 'teacher' || currentUser.email === 'serv@kakao.com') {
           setIsTeacher(true);
         }
       } catch (e) {
@@ -118,39 +118,47 @@ export default function SelectSubjectPage() {
       <div className="mesh-bg" />
 
       {/* Header */}
-      <header className="max-w-6xl mx-auto flex justify-between items-center mb-16 relative z-10 pt-12 px-6 md:px-12">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/20">
-            <GraduationCap className="w-6 h-6 text-white" />
+      <header className="max-w-6xl mx-auto mb-8 md:mb-16 relative z-10 pt-6 md:pt-12 px-6 md:px-12 flex flex-col gap-4">
+        {/* Top Row: Logo, Version, Actions */}
+        <div className="flex justify-between items-center w-full">
+          <div className="flex items-center gap-2 md:gap-3">
+            <div className="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/20 flex-shrink-0">
+              <GraduationCap className="w-6 h-6 text-white" />
+            </div>
+            <div className="flex items-center gap-1.5 md:gap-2">
+              <h2 className="text-xl md:text-2xl font-black tracking-tighter text-slate-900">DugiGo</h2>
+              <span className="text-[10px] text-slate-400 font-medium bg-slate-100 px-1.5 py-0.5 rounded-full">v2.0.2</span>
+            </div>
           </div>
-          <h2 className="text-2xl font-black tracking-tighter text-slate-900 flex items-center gap-2">
-            DugiGo <span className="text-[10px] text-slate-400 font-medium bg-slate-100 px-1.5 py-0.5 rounded-full">v2.0.2</span>
-            <span className="text-sm font-bold text-slate-500 ml-2 tracking-normal">
-              두꺼운 기능사 책 대신 고민말고 <span className="text-rose-600 font-black text-lg ml-1">두 기 고</span>
-            </span>
-          </h2>
-        </div>
-        
-        <div className="flex items-center gap-2">
-          {isTeacher && (
-            <Link 
-              href="/teacher"
-              className="flex items-center gap-2 text-brand-600 hover:text-brand-700 hover:bg-brand-100 transition-colors px-4 py-2 rounded-xl bg-white/80 font-bold border-2 border-brand-200/50 shadow-sm"
+          
+          <div className="flex items-center gap-1.5 md:gap-2">
+            {isTeacher && (
+              <Link 
+                href="/teacher"
+                className="flex items-center gap-1.5 text-brand-600 hover:text-brand-700 hover:bg-brand-100 transition-colors px-2.5 py-1.5 rounded-lg bg-white/80 font-bold border-2 border-brand-200/50 shadow-sm text-xs md:text-sm"
+              >
+                <LayoutDashboard className="w-4 h-4" /> Dashboard
+              </Link>
+            )}
+            <button 
+              onClick={handleLogout}
+              className="text-slate-500 hover:text-slate-900 transition-colors px-2.5 py-1.5 rounded-lg hover:bg-slate-100 font-bold text-xs md:text-sm"
             >
-              <LayoutDashboard className="w-4 h-4" /> 대시보드 이동
-            </Link>
-          )}
-          <button 
-            onClick={handleLogout}
-            className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors px-4 py-2 rounded-xl hover:bg-white/5 font-medium"
-          >
-            <LogOut className="w-4 h-4" /> 로그아웃
-          </button>
+              Logout
+            </button>
+          </div>
+        </div>
+
+        {/* Bottom Row: Slogan */}
+        <div className="w-full">
+          <p className="text-xs md:text-sm font-bold text-slate-500 tracking-tight whitespace-nowrap overflow-hidden text-ellipsis">
+            <span className="text-blue-500">두</span>꺼운 <span className="text-emerald-500">기</span>능사 책 대신 <span className="text-rose-500">고</span>민말고 <span className="ml-1 font-black tracking-widest"><span className="text-blue-500">두</span><span className="text-emerald-500">기</span><span className="text-rose-500">고</span></span>
+          </p>
         </div>
       </header>
 
       <main className="max-w-6xl mx-auto relative z-10 px-6 md:px-12">
-        <div className="mb-12">
+        <div className="mb-6 md:mb-12">
           <motion.h1 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -180,19 +188,21 @@ export default function SelectSubjectPage() {
                     whileHover={{ y: -8, scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => handleSelect(subject)}
-                    className="group glass-card p-8 rounded-[2.5rem] cursor-pointer transition-all relative overflow-hidden"
+                    className="group glass-card p-5 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] cursor-pointer transition-all relative overflow-hidden"
                   >
                     <div className={`absolute top-0 right-0 w-32 h-32 blur-[40px] transition-colors ${style.glow}`} />
                     
-                    <div className="flex flex-col h-full relative z-10">
-                      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:text-white transition-all shadow-sm ${style.bg} ${style.color} ${style.hoverBg}`}>
-                        <Icon className="w-7 h-7" />
+                    <div className="flex flex-row md:flex-col items-center md:items-start h-full relative z-10 gap-4 md:gap-0">
+                      <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center md:mb-6 group-hover:text-white transition-all shadow-sm flex-shrink-0 ${style.bg} ${style.color} ${style.hoverBg}`}>
+                        <Icon className="w-6 h-6 md:w-7 md:h-7" />
                       </div>
                       
-                      <h3 className={`text-2xl font-bold mb-2 text-slate-800 transition-colors tracking-tight ${style.hoverText}`}>{subject}</h3>
-                      <p className="text-slate-400 mb-8 text-sm font-medium">최신 기출문제 및 오답 노트 분석 포함</p>
+                      <div className="flex flex-col min-w-0">
+                        <h3 className={`text-lg md:text-2xl font-bold mb-0.5 md:mb-2 text-slate-800 transition-colors tracking-tight truncate ${style.hoverText}`}>{subject}</h3>
+                        <p className="text-slate-400 mb-0 md:mb-8 text-[11px] md:text-sm font-medium line-clamp-1">최신 기출문제 및 오답 분석</p>
+                      </div>
                       
-                      <div className={`mt-auto flex items-center font-bold gap-2 text-sm ${style.color}`}>
+                      <div className={`hidden md:flex mt-auto items-center font-bold gap-2 text-sm ${style.color}`}>
                         학습 시작하기 <ChevronRight className="w-4 h-4" />
                       </div>
                     </div>
