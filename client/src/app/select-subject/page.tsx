@@ -125,8 +125,8 @@ export default function SelectSubjectPage() {
           </div>
           <h2 className="text-2xl font-black tracking-tighter text-slate-900 flex items-center gap-2">
             DugiGo <span className="text-[10px] text-slate-400 font-medium bg-slate-100 px-1.5 py-0.5 rounded-full">v2.0.2</span>
-            <span className="text-sm font-bold text-slate-500 ml-2">
-              두꺼운 기능사 책 대신 고민 말고 <span className="text-blue-700 font-black text-lg ml-2">두</span> <span className="text-rose-600 font-black text-lg">기</span> <span className="text-orange-600 font-black text-lg">고</span>
+            <span className="text-sm font-bold text-slate-500 ml-2 tracking-normal">
+              두꺼운 기능사 책 대신 고민말고 <span className="text-rose-600 font-black text-lg ml-1">두 기 고</span>
             </span>
           </h2>
         </div>
