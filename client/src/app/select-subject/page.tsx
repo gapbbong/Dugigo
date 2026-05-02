@@ -221,7 +221,7 @@ export default function SelectSubjectPage() {
 
       {/* Footer hint */}
       <footer className="max-w-6xl mx-auto mt-20 pb-12 text-center text-slate-400 text-sm font-medium">
-        © 2026 DugiGo Smart License Solution. 관리자가 종목 폴더를 추가하면 자동으로 리스트에 반영됩니다.
+        © 2026 DugiGo Smart License Solution.
       </footer>
     </div>
   );
