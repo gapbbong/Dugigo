@@ -127,7 +127,7 @@ export default function SelectUnitPage() {
             <div className="w-12 h-12 bg-brand-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-brand-500/20">
               <Sparkles size={24} />
             </div>
-            <h2 className="text-3xl font-black text-slate-900">단원별 핵심 공략</h2>
+            <h2 className="text-3xl font-black text-slate-900">단원별 핵심 공략 <span className="text-sm font-bold text-slate-400 ml-2">(매 세트별 해설 슬라이드 포함)</span></h2>
           </div>
 
           {/* 그리드 크기 복구: 기존처럼 시원하게 보여주기 위해 lg:grid-cols-2/3 정도로 조정 */}
