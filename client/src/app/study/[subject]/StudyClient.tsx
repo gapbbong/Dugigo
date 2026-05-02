@@ -107,8 +107,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         const data = await res.json();
         if (data.questions) {
           let filtered = data.questions;
-          const yearFilter = s.year || null;
-          const roundFilter = s.round || null;
+          const yearFilter = searchParamsProps?.year || null;
+          const roundFilter = searchParamsProps?.round || null;
 
           if (unitFilter) {
             filtered = data.questions.filter((q: any) => q.sub_unit === unitFilter);
