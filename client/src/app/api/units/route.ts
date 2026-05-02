@@ -48,6 +48,8 @@ export async function GET(req: NextRequest) {
       return "기본 단원";
     };
 
+    const examsMap = new Map<string, number>();
+
     files.forEach(file => {
       try {
         const fileContent = fs.readFileSync(path.join(dataDir, file), 'utf-8');
@@ -57,11 +59,22 @@ export async function GET(req: NextRequest) {
         questions.forEach((q: any) => {
           const subUnit = classifyQuestion(subject, q);
           unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
+
+          // 연도별 기출 집계 추가
+          if (q.year && q.round) {
+            const examKey = `${q.year}년 ${q.round}회`;
+            examsMap.set(examKey, (examsMap.get(examKey) || 0) + 1);
+          }
         });
       } catch (e) {
         console.error(`Error reading ${file}:`, e);
       }
     });
+
+    // 연도별 기출 정렬 (최신순)
+    const sortedExams = Array.from(examsMap.entries())
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.name.localeCompare(a.name));
 
     // 가나다 순으로 먼저 정렬
     const sortedEntries = Array.from(unitMap.entries())

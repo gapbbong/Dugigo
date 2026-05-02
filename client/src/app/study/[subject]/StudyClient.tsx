@@ -107,7 +107,15 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         const data = await res.json();
         if (data.questions) {
           let filtered = data.questions;
-          if (unitFilter) filtered = data.questions.filter((q: any) => q.sub_unit === unitFilter);
+          const yearFilter = s.year || null;
+          const roundFilter = s.round || null;
+
+          if (unitFilter) {
+            filtered = data.questions.filter((q: any) => q.sub_unit === unitFilter);
+          } else if (yearFilter && roundFilter) {
+            filtered = data.questions.filter((q: any) => q.year?.toString() === yearFilter.toString() && q.round?.toString() === roundFilter.toString());
+          }
+
           if (rStart !== null && rEnd !== null) filtered = filtered.slice(parseInt(rStart), parseInt(rEnd));
           if (setNum && setSize) {
             const startIdx = (parseInt(setNum) - 1) * parseInt(setSize);
