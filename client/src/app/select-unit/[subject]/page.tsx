@@ -44,7 +44,6 @@ export default function SelectUnitPage() {
         setUnits(data.units || []);
         setExams(data.exams || []);
         
-        // 문항수 집계 로직 수정: 모든 단원의 문항수를 합산
         const total = (data.units || []).reduce((acc: number, cur: Unit) => acc + cur.count, 0);
         setTotalQuestions(total);
       } catch (err) {
@@ -56,12 +55,14 @@ export default function SelectUnitPage() {
     fetchData();
   }, [subject]);
 
-  const handleSelectUnit = (unit: Unit, setIdx: number) => {
+  const handleSelectUnit = (unit: Unit, globalSetIdx: number) => {
     const setSize = 30;
     const unitName = unit.originalName || unit.name;
-    let url = `/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unitName)}&set=${setIdx + 1}&size=${setSize}`;
-    if (unit.range) url += `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}`;
-    router.push(url);
+    // URL uses the global set index for display, but logic might need adjustment if it expects 1-based index per unit.
+    // However, the current StudyClient logic uses 'set' param. 
+    // If we want it to be truly continuous, we might need to adjust how StudyClient filters.
+    // Actually, let's keep the URL set index as the global one for consistent UI.
+    router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unitName)}&set=${globalSetIdx}&size=${setSize}${unit.range ? `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}` : ''}`);
   };
 
   const handleSelectExam = (exam: Exam) => {
@@ -90,13 +91,14 @@ export default function SelectUnitPage() {
   }
 
   let globalIndex = 1;
+  let runningSetCount = 1; // 세트 번호 연속 누적용
 
   return (
     <div className="min-h-screen relative text-slate-800 font-sans pb-32">
       <div className="mesh-bg" />
 
       {/* Header */}
-      <nav className="max-w-[1400px] mx-auto px-8 py-8 flex justify-between items-center relative z-10">
+      <nav className="max-w-6xl mx-auto px-8 py-8 flex justify-between items-center relative z-10">
         <button 
           onClick={() => router.push('/select-subject')}
           className="w-12 h-12 flex items-center justify-center bg-white/50 hover:bg-white rounded-2xl transition-all shadow-sm border border-white/40"
@@ -109,8 +111,8 @@ export default function SelectUnitPage() {
         </div>
       </nav>
 
-      <main className="max-w-[1400px] mx-auto px-8 relative z-10">
-        <div className="mb-16 text-center md:text-left">
+      <main className="max-w-6xl mx-auto px-8 relative z-10">
+        <div className="mb-16">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -131,40 +133,52 @@ export default function SelectUnitPage() {
             <h2 className="text-3xl font-black text-slate-900">단원별 핵심 공략 <span className="text-sm font-bold text-slate-400 ml-2">(매 세트별 해설 슬라이드 포함)</span></h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
             <AnimatePresence>
               {units.map((unit, idx) => {
                 const setSize = 30;
-                const setCount = Math.ceil(unit.count / setSize);
+                const unitSetCount = Math.ceil(unit.count / setSize);
                 const currentIndex = globalIndex++;
                 
+                // 이번 단어 시작 세트 번호
+                const startSetIdx = runningSetCount;
+                // 다음 단원을 위해 누적 세트 번호 업데이트
+                runningSetCount += unitSetCount;
+
                 return (
                   <motion.div
                     key={unit.name}
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: idx * 0.05 }}
-                    className="glass-card p-8 rounded-[2.5rem] border border-white/60 hover:shadow-2xl hover:shadow-brand-500/5 transition-all group flex flex-col h-full"
+                    className="glass-card p-8 rounded-[2.5rem] border border-white/60 hover:shadow-2xl hover:shadow-brand-500/5 transition-all group flex flex-col min-h-[320px]"
                   >
                     <div className="flex items-center gap-4 mb-6">
                       <div className="w-12 h-12 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 font-black text-sm border-2 border-brand-100/50 shrink-0">
                         {currentIndex.toString().padStart(2, '0')}
                       </div>
-                      <h4 className="text-xl font-black text-slate-800 leading-snug line-clamp-2">
+                      <h4 className="text-lg font-black text-slate-800 leading-snug line-clamp-2">
                         {unit.name}
                       </h4>
                     </div>
-                    <div className="grid grid-cols-3 gap-3 mt-auto">
-                      {Array.from({ length: setCount }).map((_, sIdx) => (
-                        <button
-                          key={sIdx}
-                          onClick={() => handleSelectUnit(unit, sIdx)}
-                          className="py-2 bg-white border-2 border-slate-50 rounded-2xl text-slate-500 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50/50 transition-all shadow-sm flex flex-col items-center justify-center leading-none gap-0.5"
-                        >
-                          <span className="text-xl font-black">{sIdx + 1}</span>
-                          <span className="text-[9px] font-bold text-slate-400 uppercase">세트</span>
-                        </button>
-                      ))}
+                    
+                    {/* 세트 버튼 컨테이너: 상하좌우 가운데 정렬 */}
+                    <div className="flex-1 flex items-center justify-center">
+                      <div className="grid grid-cols-3 gap-3 w-full">
+                        {Array.from({ length: unitSetCount }).map((_, sIdx) => {
+                          const currentSetNumber = startSetIdx + sIdx;
+                          return (
+                            <button
+                              key={sIdx}
+                              onClick={() => handleSelectUnit(unit, currentSetNumber)}
+                              className="py-2.5 bg-white border-2 border-slate-50 rounded-2xl text-slate-500 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50/50 transition-all shadow-sm flex flex-col items-center justify-center leading-none gap-1"
+                            >
+                              <span className="text-xl font-black">{currentSetNumber}</span>
+                              <span className="text-[9px] font-bold text-slate-400 uppercase">세트</span>
+                            </button>
+                          );
+                        })}
+                      </div>
                     </div>
                   </motion.div>
                 );
@@ -192,7 +206,7 @@ export default function SelectUnitPage() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.1 + idx * 0.03 }}
                   onClick={() => handleSelectExam(exam)}
-                  className="glass-card p-8 rounded-[2.5rem] cursor-pointer hover:bg-indigo-50/50 hover:border-indigo-300 hover:shadow-xl transition-all group flex flex-col items-center text-center gap-4 border border-white/60"
+                  className="glass-card p-8 rounded-[2rem] cursor-pointer hover:bg-indigo-50/50 hover:border-indigo-300 hover:shadow-xl transition-all group flex flex-col items-center text-center gap-4 border border-white/60"
                 >
                   <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 font-black text-sm border-2 border-indigo-100/50">
                     {currentIndex.toString().padStart(2, '0')}
