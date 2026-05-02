@@ -124,7 +124,7 @@ export async function GET(req: NextRequest) {
       }
     });
 
-    return NextResponse.json({ units: finalUnits });
+    return NextResponse.json({ units: finalUnits, exams: sortedExams });
   } catch (err) {
     console.error('Failed to get units:', err);
     return NextResponse.json({ error: 'Failed to load units' }, { status: 500 });
