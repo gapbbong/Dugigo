@@ -133,7 +133,7 @@ export default function SelectUnitPage() {
             <h2 className="text-3xl font-black text-slate-900">단원별 핵심 공략 <span className="text-sm font-bold text-slate-400 ml-2">(매 세트별 해설 슬라이드 포함)</span></h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
             <AnimatePresence>
               {units.map((unit, idx) => {
                 const setSize = 30;
@@ -157,7 +157,7 @@ export default function SelectUnitPage() {
                       <div className="w-12 h-12 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 font-black text-sm border-2 border-brand-100/50 shrink-0">
                         {currentIndex.toString().padStart(2, '0')}
                       </div>
-                      <h4 className="text-lg font-black text-slate-800 leading-snug line-clamp-2">
+                      <h4 className="text-lg font-black text-slate-800 leading-snug whitespace-nowrap overflow-hidden text-ellipsis">
                         {unit.name}
                       </h4>
                     </div>
