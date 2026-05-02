@@ -199,7 +199,7 @@ export default function SelectUnitPage() {
                   </div>
                   <div className="space-y-1">
                     <h4 className="text-xl font-black text-slate-800">{exam.name}</h4>
-                    <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">{exam.count}문항 완비</p>
+                    <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">{exam.count}문항</p>
                   </div>
                 </motion.div>
               );
