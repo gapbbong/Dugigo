@@ -44,7 +44,8 @@ export default function SelectUnitPage() {
         setUnits(data.units || []);
         setExams(data.exams || []);
         
-        const total = (data.units || []).reduce((acc: number, cur: any) => acc + (cur.isPart ? 0 : cur.count), 0);
+        // 문항수 집계 로직 수정: 모든 단원의 문항수를 합산
+        const total = (data.units || []).reduce((acc: number, cur: Unit) => acc + cur.count, 0);
         setTotalQuestions(total);
       } catch (err) {
         console.error('Failed to fetch data:', err);
@@ -95,7 +96,7 @@ export default function SelectUnitPage() {
       <div className="mesh-bg" />
 
       {/* Header */}
-      <nav className="max-w-6xl mx-auto px-8 py-8 flex justify-between items-center relative z-10">
+      <nav className="max-w-[1400px] mx-auto px-8 py-8 flex justify-between items-center relative z-10">
         <button 
           onClick={() => router.push('/select-subject')}
           className="w-12 h-12 flex items-center justify-center bg-white/50 hover:bg-white rounded-2xl transition-all shadow-sm border border-white/40"
@@ -108,8 +109,8 @@ export default function SelectUnitPage() {
         </div>
       </nav>
 
-      <main className="max-w-6xl mx-auto px-8 relative z-10">
-        <div className="mb-16">
+      <main className="max-w-[1400px] mx-auto px-8 relative z-10">
+        <div className="mb-16 text-center md:text-left">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -118,7 +119,7 @@ export default function SelectUnitPage() {
             두껍고 딱딱한 <span className="text-brand-600">기능사 책 대신</span><br />
             고민말고 <span className="text-brand-600 font-black">두 기 고</span> 하세요!
           </motion.h1>
-          <p className="text-slate-500 text-lg font-medium">단원별 요약부터 실전 기출까지, 완벽한 합격 커리큘럼입니다.</p>
+          <p className="text-slate-500 text-lg font-medium">단원별 해설부터 실전 기출까지, 완벽한 합격 커리큘럼입니다.</p>
         </div>
 
         {/* 1. 소단원 핵심 공략 Section */}
@@ -130,8 +131,7 @@ export default function SelectUnitPage() {
             <h2 className="text-3xl font-black text-slate-900">단원별 핵심 공략 <span className="text-sm font-bold text-slate-400 ml-2">(매 세트별 해설 슬라이드 포함)</span></h2>
           </div>
 
-          {/* 그리드 크기 복구: 기존처럼 시원하게 보여주기 위해 lg:grid-cols-2/3 정도로 조정 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <AnimatePresence>
               {units.map((unit, idx) => {
                 const setSize = 30;
@@ -150,7 +150,7 @@ export default function SelectUnitPage() {
                       <div className="w-12 h-12 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 font-black text-sm border-2 border-brand-100/50 shrink-0">
                         {currentIndex.toString().padStart(2, '0')}
                       </div>
-                      <h4 className="text-xl font-black text-slate-800 leading-snug">
+                      <h4 className="text-xl font-black text-slate-800 leading-snug line-clamp-2">
                         {unit.name}
                       </h4>
                     </div>
@@ -159,9 +159,9 @@ export default function SelectUnitPage() {
                         <button
                           key={sIdx}
                           onClick={() => handleSelectUnit(unit, sIdx)}
-                          className="py-3 bg-white border-2 border-slate-50 rounded-2xl text-xs font-black text-slate-500 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50/50 transition-all shadow-sm"
+                          className="py-3 bg-white border-2 border-slate-50 rounded-2xl text-[11px] font-black text-slate-500 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50/50 transition-all shadow-sm"
                         >
-                          {sIdx + 1}세트
+                          {sIdx + 1}
                         </button>
                       ))}
                     </div>
@@ -181,7 +181,7 @@ export default function SelectUnitPage() {
             <h2 className="text-3xl font-black text-slate-900">연도별 기출 정복</h2>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
             {exams.map((exam, idx) => {
               const currentIndex = globalIndex++;
               return (
@@ -191,14 +191,14 @@ export default function SelectUnitPage() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.1 + idx * 0.03 }}
                   onClick={() => handleSelectExam(exam)}
-                  className="glass-card p-6 rounded-[2rem] cursor-pointer hover:bg-indigo-50/50 hover:border-indigo-300 hover:shadow-xl transition-all group flex flex-col items-center text-center gap-3 border border-white/60"
+                  className="glass-card p-8 rounded-[2.5rem] cursor-pointer hover:bg-indigo-50/50 hover:border-indigo-300 hover:shadow-xl transition-all group flex flex-col items-center text-center gap-4 border border-white/60"
                 >
-                  <div className="w-10 h-10 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 font-black text-xs border border-indigo-100">
+                  <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 font-black text-sm border-2 border-indigo-100/50">
                     {currentIndex.toString().padStart(2, '0')}
                   </div>
                   <div className="space-y-1">
-                    <h4 className="text-lg font-black text-slate-800">{exam.name}</h4>
-                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{exam.count}문항</p>
+                    <h4 className="text-xl font-black text-slate-800">{exam.name}</h4>
+                    <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">{exam.count}문항 완비</p>
                   </div>
                 </motion.div>
               );
