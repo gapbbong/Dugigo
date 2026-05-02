@@ -159,9 +159,10 @@ export default function SelectUnitPage() {
                         <button
                           key={sIdx}
                           onClick={() => handleSelectUnit(unit, sIdx)}
-                          className="py-3 bg-white border-2 border-slate-50 rounded-2xl text-[11px] font-black text-slate-500 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50/50 transition-all shadow-sm"
+                          className="py-2 bg-white border-2 border-slate-50 rounded-2xl text-slate-500 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50/50 transition-all shadow-sm flex flex-col items-center justify-center leading-none gap-0.5"
                         >
-                          {sIdx + 1}
+                          <span className="text-xl font-black">{sIdx + 1}</span>
+                          <span className="text-[9px] font-bold text-slate-400 uppercase">세트</span>
                         </button>
                       ))}
                     </div>
