@@ -1,13 +1,15 @@
 import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
+import dotenv from 'dotenv';
 
-const keys = [
-  'AIzaSyDznL1UlJrBFqZLKotoLW9NiQVs_zxk5OU',
-  'AIzaSyDXSHR17sV3ZfOJ7YLImi8m-IkkX9qh5xc',
-  'AIzaSyDuWHZc6MQkW2Fu0hlmRBj-D7j7vev1G-M',
-  'AIzaSyAEJqMiihrxK0mGA1Y4GWSpZERDfXX02U4'
-];
+dotenv.config({ path: '.env.local' });
+
+const keys = process.env.GEMINI_API_KEYS ? process.env.GEMINI_API_KEYS.split(',') : [];
+if (keys.length === 0) {
+  console.error("No API keys found in .env.local (GEMINI_API_KEYS)");
+  process.exit(1);
+}
 
 let keyIndex = 0;
 function getNextKey() {
@@ -18,113 +20,90 @@ function getNextKey() {
 
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-async function generateImage(prompt, outputPath) {
-  for (let attempt = 0; attempt < keys.length; attempt++) {
-    const apiKey = getNextKey();
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict`;
-    
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-goog-api-key': apiKey
-        },
-        body: JSON.stringify({
-          instances: [
-            {
-              prompt: `Highly detailed photorealistic educational real-life photograph of: ${prompt}. Studio lighting, professional product shot, premium quality, ultra-high resolution, isolated clean background.`
-            }
-          ],
-          parameters: {
-            sampleCount: 1
-          }
-        })
-      });
-      
-      if (!response.ok) {
-        const errorText = await response.text();
-        console.warn(`Key attempt ${attempt + 1} failed. HTTP ${response.status}: ${errorText}`);
-        continue;
-      }
-      
-      const data = await response.json();
-      if (data.predictions && data.predictions[0] && data.predictions[0].bytesBase64Encoded) {
-        const base64Data = data.predictions[0].bytesBase64Encoded;
-        const buffer = Buffer.from(base64Data, 'base64');
-        
-        await sharp(buffer)
-          .webp({ quality: 80, lossless: false })
-          .toFile(outputPath);
-
-        console.log(`Successfully optimized & saved WebP image to ${outputPath}`);
-        return true;
-      } else {
-        console.warn(`Key attempt ${attempt + 1} invalid payload.`);
-        continue;
-      }
-    } catch (error) {
-      console.warn(`Key attempt ${attempt + 1} error: ${error.message}`);
-      continue;
-    }
+async function generateImage(prompt, outputPath, attempt = 1) {
+  if (attempt > keys.length) {
+    console.error(`  [!] All ${keys.length} keys failed for this prompt. Skipping.`);
+    return false;
   }
-  return false;
+
+  const apiKey = getNextKey();
+  // Using Imagen 4.0 via Gemini API
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`;
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-goog-api-key': apiKey
+      },
+      body: JSON.stringify({
+        instances: [{ prompt: `Highly detailed photorealistic educational real-life photograph of: ${prompt}. Studio lighting, professional product shot, premium quality, ultra-high resolution, isolated clean background.` }],
+        parameters: { sampleCount: 1 }
+      })
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.warn(`  [!] Key attempt ${attempt} failed (HTTP ${response.status}). Retrying...`);
+      return await generateImage(prompt, outputPath, attempt + 1);
+    }
+
+    const data = await response.json();
+    if (data.predictions && data.predictions[0] && data.predictions[0].bytesBase64Encoded) {
+      const buffer = Buffer.from(data.predictions[0].bytesBase64Encoded, 'base64');
+      await sharp(buffer).webp({ quality: 80 }).toFile(outputPath);
+      console.log(`Successfully saved: ${path.basename(outputPath)}`);
+      return true;
+    }
+    return await generateImage(prompt, outputPath, attempt + 1);
+  } catch (error) {
+    console.warn(`  [!] Error: ${error.message}. Retrying...`);
+    return await generateImage(prompt, outputPath, attempt + 1);
+  }
 }
 
-async function processSets() {
-  const sets = [1, 2, 3, 4, 5, 6, 7, 8];
+async function processAllSummaries() {
   const summariesDir = 'e:/DugiGo/client/src/summaries/승강기기능사';
   const publicDir = 'e:/DugiGo/client/public/summaries/승강기기능사';
 
-  for (const setNum of sets) {
-    const filePath = path.join(summariesDir, `기계일반_${setNum}세트.json`);
-    if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      continue;
-    }
-    
-    const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-    let updated = false;
+  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 
-    console.log(`\n==========================================`);
-    console.log(`Processing Set ${setNum}...`);
-    console.log(`==========================================`);
+  const files = fs.readdirSync(summariesDir).filter(f => f.endsWith('.json'));
+  console.log(`\n[Daemon] Found ${files.length} summary files. Checking for missing images...`);
+
+  for (const file of files) {
+    const filePath = path.join(summariesDir, file);
+    const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    const unitName = data.unit;
+    const setNum = data.set;
 
     for (const slide of data.slides) {
-      const outputFilename = `slide_${setNum}_${slide.id}.webp`;
+      // Handle both old and new image path formats
+      // Format: slide_UnitName_SetNum_SlideId.webp
+      const outputFilename = `slide_${unitName}_${setNum}_${slide.id}.webp`;
       const outputPath = path.join(publicDir, outputFilename);
       
-      if (fs.existsSync(outputPath)) {
-        console.log(`[Slide ${slide.id}] WebP already exists, skipping.`);
-        continue;
-      }
+      if (fs.existsSync(outputPath)) continue;
       
-      console.log(`[Slide ${slide.id}] Generating image for: ${slide.title}...`);
+      console.log(`[Slide ${unitName}_${setNum}_${slide.id}] Generating image...`);
       const success = await generateImage(slide.title + ". " + slide.content, outputPath);
-      
-      if (success) {
-        slide.image = `/summaries/승강기기능사/${outputFilename}`;
-        updated = true;
-        await sleep(5000); 
-      } else {
-        console.log(`[Slide ${slide.id}] Generation failed. Pausing for 10s...`);
-        await sleep(10000);
-      }
-    }
-    
-    if (updated) {
-      fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
-      console.log(`Successfully updated JSON file: ${filePath}`);
+      if (success) await sleep(15000); // Increase to 15s for Imagen quota
+      else await sleep(10000);
     }
   }
 }
 
 async function startDaemon() {
+  console.log("Starting Image Generation Daemon (Unit-aware)...");
   while (true) {
-    console.log(`[Daemon] Starting image generation pass at ${new Date().toLocaleString()}...`);
-    await processSets();
-    console.log(`[Daemon] Pass finished. Sleeping for 1 hour before checking for missing images...`);
-    await sleep(1 * 60 * 60 * 1000); 
+    try {
+      await processAllSummaries();
+    } catch (err) {
+      console.error("Daemon error:", err.message);
+    }
+    console.log("[Daemon] Completed scan. Sleeping for 5 minutes...");
+    await sleep(5 * 60 * 1000); 
   }
 }
 

@@ -5,10 +5,10 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 
 // 제공된 4개의 API 키 로테이션
 const API_KEYS = [
-  'AIzaSyC7eSC6oHybcq4Ur4iXeNcFOPksgu9B8Ws',
-  'AIzaSyBmOXFE5M24K8ZcYFjT03TllLTMVW3IZro',
-  'AIzaSyBYJGLkcxh4JlmtiJanqVz-Jn4GNNpP2zY',
-  'AIzaSyCdSeRWrIsuMgMhTNRCAJSXf7ZSxZLCvAk'
+  'AIzaSyAm-cbD26-Kw6D7jw_kRWwMbmSX5kdkCEA',
+  'AIzaSyCJrEEApCqBKVNQkkljxg9MavVMzg7iSls',
+  'AIzaSyC6eIBZxj-oCL4myZNpHmmINe0UWAoyVAc',
+  'AIzaSyDm1ui58wpXnGWJWnxPmo3ZsMYMyRBqX9c'
 ];
 
 function getApiKey() {

@@ -1,0 +1,87 @@
+{
+  "subject": "정보처리기능사",
+  "unit": "데이터베이스 활용",
+  "set": 3,
+  "slides": [
+    {
+      "id": 1,
+      "title": "데이터 정렬의 마법사, ORDER BY!",
+      "content": "도서관의 책들이 제목 순서대로 꽂혀 있듯이, 검색 결과를 가나다순이나 숫자순으로 정렬하고 싶을 때 사용합니다. '오름차순(ASC)'과 '내림차순(DESC)'이라는 길을 정해주는 가이드와 같습니다.",
+      "visual": "🔢 [정렬] ASC(오름차순) / DESC(내림차순)",
+      "exam_point": "결과를 특정 순서대로 출력할 때 필수이며, 기본값은 오름차순(ASC)입니다.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_3_1.webp"
+    },
+    {
+      "id": 2,
+      "title": "흩어진 데이터를 하나로! 합집합 UNION",
+      "content": "서로 다른 두 반의 명부를 하나로 합쳐서 전체 명단을 만드는 것과 같습니다. 두 테이블의 레코드를 통합하며, 중복된 데이터는 자동으로 제거하여 깔끔하게 보여줍니다.",
+      "visual": "➕ [통합] 테이블 A ∪ 테이블 B = UNION",
+      "exam_point": "두 테이블의 레코드를 통합(합집합)할 때 사용하며 중복을 제거합니다.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_3_2.webp"
+    },
+    {
+      "id": 3,
+      "title": "데이터 찾기의 3단계 공식, S.F.W!",
+      "content": "'어느 서랍(FROM)에서 어떤 물건(SELECT)을 꺼내는데, 빨간색만(WHERE) 보여줘!'라고 요청하는 기본 규칙입니다. 이 세 단어의 순서만 기억하면 데이터 조회의 절반은 끝난 셈입니다.",
+      "visual": "🔍 [조회] SELECT(필드) - FROM(테이블) - WHERE(조건)",
+      "exam_point": "SELECT문의 기본 구문 순서(SELECT-FROM-WHERE)를 묻는 빈칸 채우기 단골 문제입니다.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_3_3.webp"
+    },
+    {
+      "id": 4,
+      "title": "테이블 철거 주의사항, CASCADE & RESTRICT",
+      "content": "테이블을 삭제(DROP)할 때 연결된 다른 데이터들도 함께 삭제하려면 CASCADE를 사용합니다. 반대로 다른 곳에서 쓰고 있다면 삭제되지 않게 막는 안전장치는 RESTRICT입니다.",
+      "visual": "💣 [삭제] DROP / 🔗 [연쇄] CASCADE / ⛔ [제한] RESTRICT",
+      "exam_point": "CASCADE는 '연쇄적으로 함께 삭제', RESTRICT는 '참조 중이면 삭제 거부'를 의미합니다.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_3_4.webp"
+    },
+    {
+      "id": 5,
+      "title": "데이터의 입학과 퇴학, INSERT & DELETE",
+      "content": "명부에 새로운 데이터를 한 줄 추가하는 것은 INSERT, 필요 없어진 데이터를 한 줄 지우는 것은 DELETE입니다. DELETE는 테이블이라는 건물은 놔두고 그 안의 내용물만 비우는 명령입니다.",
+      "visual": "📥 [삽입] INSERT INTO / 📤 [삭제] DELETE FROM",
+      "exam_point": "DELETE 문에는 SET 절을 쓰지 않습니다. (SET은 UPDATE 문에서 값을 수정할 때 사용)",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_3_5.webp"
+    },
+    {
+      "id": 6,
+      "title": "데이터 수정과 범위 검색의 꿀팁",
+      "content": "이사를 가서 주소가 바뀌었을 때는 UPDATE로 정보만 슥삭 고쳐줍니다. '90점부터 100점 사이'처럼 범위를 정해 데이터를 찾고 싶을 때는 BETWEEN 연산자가 가장 편리합니다.",
+      "visual": "✏️ [수정] UPDATE SET / 📏 [범위] BETWEEN A AND B",
+      "exam_point": "BETWEEN A AND B는 'A 이상 B 이하'를 의미하며 부등호(>=, <=) 조합과 같습니다.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_3_6.webp"
+    },
+    {
+      "id": 7,
+      "title": "잘못된 작업은 '되돌리기', ROLLBACK!",
+      "content": "문서 작업을 하다 실수했을 때 'Ctrl+Z'를 누르는 것과 같습니다. 트랜잭션 수행 중 문제가 생기면 ROLLBACK을 통해 데이터베이스를 이전의 안전한 상태로 원상 복구합니다.",
+      "visual": "⏪ [복구] ROLLBACK / 💾 [확정] COMMIT",
+      "exam_point": "실패한 작업을 취소하고 원래 상태로 되돌리는 연산자의 이름을 고르는 문제가 출제됩니다.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_3_7.webp"
+    },
+    {
+      "id": 8,
+      "title": "중복은 빼고 종류만 보기, DISTINCT",
+      "content": "'우리 학교에 어떤 학과들이 있지?'라고 물었을 때, 같은 학과 이름을 여러 번 말하지 않고 한 번씩만 말해주는 것이 DISTINCT입니다. 중복을 제거하고 유일한 값만 골라내죠.",
+      "visual": "🚫 [중복제거] DISTINCT / 🔢 [개수] COUNT",
+      "exam_point": "DISTINCT는 SELECT절 바로 뒤에 위치하며, 중복된 결과값을 제거할 때 사용합니다.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_3_8.webp"
+    },
+    {
+      "id": 9,
+      "title": "권한을 주고 뺏는 관리자의 손길, DCL",
+      "content": "데이터베이스의 총책임자인 DBA는 아무나 데이터를 만지지 못하게 권한을 부여(GRANT)하거나 이미 준 권한을 회수(REVOKE)합니다. 이것이 데이터 제어어(DCL)의 핵심 역할입니다.",
+      "visual": "🔑 [부여] GRANT / 🔓 [취소] REVOKE / 👤 [책임자] DBA",
+      "exam_point": "GRANT는 권한 부여, REVOKE는 권한 취소입니다. DDL/DML/DCL 분류 문제를 주의하세요.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_3_9.webp"
+    },
+    {
+      "id": 10,
+      "title": "표의 기둥 개수, 차수(Degree)를 찾아라!",
+      "content": "데이터베이스 표에서 가로줄은 레코드(튜플), 세로 기둥은 속성(필드)입니다. 이때 세로 기둥인 속성의 전체 개수를 멋진 용어로 '차수(Degree)'라고 부릅니다.",
+      "visual": "🏛️ [기둥 수] 차수(Degree) = 속성(Attribute) 개수",
+      "exam_point": "차수(Degree)는 속성의 수, 카디널리티(Cardinality)는 튜플(행)의 수임을 구분하세요.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_3_10.webp"
+    }
+  ]
+}

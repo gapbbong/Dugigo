@@ -21,10 +21,9 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const classifyQuestion = (q) => {
   const text = ((q.question || '') + ' ' + (q.explanation || '')).toLowerCase();
-  if (/저항|전류|전압|직류|교류|콘덴서|인덕턴스|전자기|자계|전동기|발전기|브리지|오옴|플레밍/.test(text)) return "전기이론";
-  if (/응력|하중|모멘트|볼트|너트|베어링|기어|풀리|재료역학|압축|인장/.test(text)) return "기계일반";
-  if (/안전관리|일상점검|정기검사|유지관리|비상벨|안전장치|보수|점검/.test(text)) return "승강기 점검 및 보수";
-  return "승강기 개론";
+  if (/저항|전류|전압|직류|교류|콘덴서|인덕턴스|전자기|자계|오옴|플레밍|키르히호프|정전기|전력|전력량/.test(text)) return "전기이론";
+  if (/변압기|전동기|발전기|정류기|제어|동기기|유도기|직류기|슬립|토크|권선|브러시|슬립링/.test(text)) return "전기기기";
+  return "전기설비";
 };
 
 async function generateSummaries(questionsChunk, unitName, setNum) {
@@ -32,15 +31,15 @@ async function generateSummaries(questionsChunk, unitName, setNum) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`;
 
   const promptText = `
-너는 20년 경력의 승강기 유지보수 및 기계 설계 전문가야.
-승강기기능사 시험 중 [${unitName}] 단원의 다음 기출문항 데이터를 읽고, 수험생들이 개념을 쉽게 이해하고 암기할 수 있도록 '총 10장의 교육용 학습 카드 슬라이드 자료'를 만들어줘.
+너는 대한민국 최고의 전기 교육 전문가이자 공학 박사야.
+전기기능사 시험 중 [${unitName}] 단원의 기출문항 데이터를 읽고, 수험생들이 눈을 떼지 못할 만큼 쉽고 재미있는 '교육용 학습 카드 슬라이드 10장'을 만들어줘.
 
-[데이터 조건]
-- title: 수험생의 이목을 끄는 흥미롭고 명쾌한 제목
-- content: 승강기 부품 원리를 초등학생도 알기 쉽게 비유를 들어 설명하는 핵심 내용 (2~3문장)
-- visual: 이해를 직관적으로 돕는 핵심 부품/키워드 이모지 및 키워드 요약
-- exam_point: 기출문제 보기에 자주 등장하는 오답 함정 또는 필수 암기 조건
-- image: "/summaries/승강기기능사/slide_${unitName}_${setNum}_{id}.webp" 형식으로 지정 (id는 1~10)
+[슬라이드 구성 규칙]
+- title: 눈에 쏙 들어오는 직관적인 핵심 개념 제목
+- content: 보이지 않는 전기의 흐름을 물의 흐름, 고속도로, 택배 배달 등 일상적인 상황에 비유해서 설명 (매우 친절하게 2~3문장)
+- visual: 개념을 형상화한 이모지와 핵심 부품 키워드 (예: ⚡ 저항 R, 💡 옴의 법칙)
+- exam_point: 시험 문제에서 정답을 찾아내는 비법이나 꼭 외워야 할 공식 암기 팁
+- image: "/summaries/전기기능사/slide_${unitName}_${setNum}_{id}.webp" 형식으로 지정 (id는 1~10)
 
 문항 데이터:
 ${JSON.stringify(questionsChunk.map(q => ({ q: q.question, e: q.explanation })), null, 2)}
@@ -98,19 +97,19 @@ ${JSON.stringify(questionsChunk.map(q => ({ q: q.question, e: q.explanation })),
 }
 
 async function processAll() {
-  const dbPath = 'e:/DugiGo/client/src/data/승강기기능사/MASTER_DB.json';
-  const targetDir = 'e:/DugiGo/client/src/summaries/승강기기능사';
+  const dbPath = 'e:/DugiGo/client/src/data/전기기능사/MASTER_DB.json';
+  const targetDir = 'e:/DugiGo/client/src/summaries/전기기능사';
   
   if (!fs.existsSync(dbPath)) return;
-  const db = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
-  const allQuestions = db.questions || [];
+  const rawDb = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+  const allQuestions = Array.isArray(rawDb) ? rawDb : (rawDb.questions || []);
 
-  // Group by unit
+  if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir, { recursive: true });
+
   const units = {
-    "기계일반": [],
     "전기이론": [],
-    "승강기 점검 및 보수": [],
-    "승강기 개론": []
+    "전기기기": [],
+    "전기설비": []
   };
 
   allQuestions.forEach(q => {
@@ -140,20 +139,21 @@ async function processAll() {
 
       if (slides) {
         const finalOutput = {
-          subject: "승강기기능사",
+          subject: "전기기능사",
           unit: unitName,
           set: setNum,
           slides: slides
         };
         fs.writeFileSync(outputPath, JSON.stringify(finalOutput, null, 2), 'utf8');
         console.log(`  [Saved] ${unitName} Set ${setNum}`);
-        await sleep(5000); // 5s gap
+        await sleep(3000); // 3s gap
       } else {
         console.error(`  [Failed] ${unitName} Set ${setNum}. Pausing 10s...`);
         await sleep(10000);
       }
     }
   }
+  console.log("\n[Done] All Electrician sets generated!");
 }
 
 processAll();

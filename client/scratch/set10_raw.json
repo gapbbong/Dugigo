@@ -1,0 +1,482 @@
+[
+  {
+    "answer": "2",
+    "choices": [
+      "Y",
+      "1",
+      "0",
+      "X+Y"
+    ],
+    "explanation": "논리식의 간소화\n$X + \\overline{X} = 1$이고, $1 + Y = 1$이다.\n<img src='/images/21_24/Elevator_22_02_01_E1.png' />",
+    "number": "01",
+    "page": 64,
+    "pdf_file": "Elevator_21_24.pdf",
+    "question": "논리식 $L = X + \\overline{X} + Y$를 불 대수의 정리를 이용하여 간단히 하면?",
+    "round": "02",
+    "year": "2022"
+  },
+  {
+    "answer": "2",
+    "choices": [
+      "A",
+      "B",
+      "AB",
+      "A + B"
+    ],
+    "explanation": "논리식의 간소화\n$X = (A+B)(\\overline{A}+B)$ \n$= A\\overline{A} + AB + B\\overline{A} + BB$ \n$= 0 + B(A+\\overline{A}) + BB$ \n$= 0 + B\\cdot 1 + BB$ \n$= B + B$ \n$= B$",
+    "number": "59",
+    "page": 48,
+    "pdf_file": "Elevator_21_24.pdf",
+    "question": "논리식 $X=(A+B)(\\overline{A}+B)$를 간단히 하면?",
+    "round": "01",
+    "year": "2022"
+  },
+  {
+    "answer": "2",
+    "choices": [
+      "OR회로",
+      "NOT회로",
+      "AND회로",
+      "X-OR회로"
+    ],
+    "explanation": "인버터(Inverter)는 입력 신호를 반전하여 출력하는 논리회로로, NOT회로라고 한다. NOT회로의 진리표는 입력 A가 0일 때 출력 X는 1이 되고, 입력 A가 1일 때 출력 X는 0이 된다. 논리식으로는 $X = \\bar{A}$로 표현된다.",
+    "number": "53",
+    "page": 92,
+    "pdf_file": "Elevator_11_16.pdf",
+    "question": "논리회로에 사용되는 인버터(inverter)란?",
+    "round": "02",
+    "year": "2016"
+  },
+  {
+    "answer": "1",
+    "choices": [
+      "2차 저항법",
+      "전전압 기동법",
+      "Y-△기동법",
+      "기동 보상기법"
+    ],
+    "explanation": "① 2차 저항법은 권선형 유도 전동기의 기동법으로 쓰인다. \\n농형 유도 전동기의 기동법에는 전전압 기동법, Y-△기동법, 리액터 기동법, 기동 보상기법 등이 있다.",
+    "number": "60",
+    "page": 80,
+    "pdf_file": "Elevator_21_24.pdf",
+    "question": "농형 유도 전동기의 기동법으로 **맞지 않는** 것은?",
+    "round": "01",
+    "year": "2023"
+  },
+  {
+    "answer": "3",
+    "choices": [
+      "니스(도료)를 칠한 사다리",
+      "셸락(shellac)을 칠한 사다리",
+      "도전성이 있는 금속제 사다리",
+      "미끄럼방지 장치가 있는 사다리"
+    ],
+    "explanation": "전기작업을 하고 있으므로 고소작업용 사다리는 추락방지를 위한 미끄럼방지 장치 및 전기적 절연성이 높은 재질로 되어 있어야 하며, 니스, 도료, 셸락(shellac) 등을 통해 절연성을 확보할 수 있다.",
+    "number": "24",
+    "page": 68,
+    "pdf_file": "Elevator_11_16.pdf",
+    "question": "높은 곳에서 전기작업을 위한 사다리작업을 할 때 안전을 위하여 절대 사용해서는 **안 되는** 사다리는?",
+    "round": "01",
+    "year": "2016"
+  },
+  {
+    "answer": "2",
+    "choices": [
+      "고무",
+      "석면",
+      "종이",
+      "PVC"
+    ],
+    "explanation": "석면(石綿)\n절연성과 내열성을 지닌 부드럽고 질긴 광물질로 섬유로는 약하나 화학약품이나 열에 강해 건축자재, 방화재(防火材)ㆍ내화재(耐火材)ㆍ보온재ㆍ단열재ㆍ전기절연재 등에 주로 활용된다.",
+    "number": "21",
+    "page": 35,
+    "pdf_file": "Elevator_11_16.pdf",
+    "question": "높은 열로 전선의 피복이 연소되는 것을 방지하기 위해 사용되는 재료는?",
+    "round": "04",
+    "year": "2015"
+  },
+  {
+    "answer": "1",
+    "choices": [
+      "49.80",
+      "49.90",
+      "49.98",
+      "48.99"
+    ],
+    "explanation": "압축 변형률(가로 변형률)\n물체가 응력에 반응하여 단위 길이당 줄어든 양을 나타낸 것\n$\text{압축 변형률} = \frac{\text{압축된 길이}}{\text{원래의 길이}}$\n$0.004 = \frac{\text{압축된 길이}}{50[\text{mm}]}$\n$\text{압축된 길이} = 0.004 \times 50 = 0.2[\text{mm}]$\n따라서 변형된 봉의 높이는 원래의 높이 $50[\text{mm}]$에서 압축된 길이 $0.2[\text{mm}]$를 뺀 $49.8[\text{mm}]$이다.",
+    "number": "50",
+    "page": 74,
+    "pdf_file": "Elevator_11_16.pdf",
+    "question": "높이 50[mm]의 둥근 봉이 압축하중을 받아 0.004의 변형률이 생겼다고 하면, 이 봉의 높이는 몇 [mm] 인가?",
+    "round": "01",
+    "year": "2016"
+  },
+  {
+    "answer": "4",
+    "choices": [
+      "Ⓐ 1.5, Ⓑ 2",
+      "Ⓐ 1.5, Ⓑ 1.8",
+      "Ⓐ 2, Ⓑ 2",
+      "Ⓐ 2, Ⓑ 1.8"
+    ],
+    "explanation": "카 내부의 유효 높이\n카 내부의 유효 높이는 $2\text{m}$ 이상이어야 한다. 다만, 주택용 엘리베이터의 경우에는 $1.8\text{m}$ 이상으로 할 수 있으며, 자동차용 엘리베이터의 경우에는 제외한다.",
+    "number": "12",
+    "page": 122,
+    "pdf_file": "Elevator_17_20.pdf",
+    "question": "다음 ( ) 안에 들어갈 내용으로 맞는 것을 묶은 것은?\n카 내부의 유효 높이는 ( Ⓐ )[m] 이상이어야 한다. 다만, 주택용 엘리베이터의 경우에는 ( Ⓑ )[m] 이상으로 할 수 있으며, 자동차용 엘리베이터의 경우에는 제외한다.",
+    "round": "02",
+    "year": "2020"
+  },
+  {
+    "answer": "4",
+    "choices": [
+      "㉮ 800, ㉯ 1,200",
+      "㉮ 4,000, ㉯ 6,000",
+      "㉮ 5,000, ㉯ 1,200",
+      "㉮ 6,000, ㉯ 9,000"
+    ],
+    "explanation": "난간 폭에 따른 분류\n\n- 800형 : 수송능력 6,000[명/h]\n- 1,200형 : 수송능력 9,000[명/h]",
+    "number": "05",
+    "page": 88,
+    "pdf_file": "Elevator_17_20.pdf",
+    "question": "다음 ( ㉮ ), ( ㉯ )에 들어갈 내용으로 옳은 것은?\n\n에스컬레이터는 난간 폭에 따라 800형과 1,200형이 있다. 시간당 수송능력은 800형은 ( ㉮ )명, 1,200형은 ( ㉯ )명이다.",
+    "round": "01",
+    "year": "2020"
+  },
+  {
+    "answer": "4",
+    "choices": [
+      "파괴강도",
+      "극한강도",
+      "항복응력",
+      "허용응력"
+    ],
+    "explanation": "파괴강도, 극한강도, 항복응력은 재료에 가해지는 최댓값인 반면 허용응력은 안전율을 고려한 값으로 상대적으로 그 값이 작다.\n① 파괴강도(breaking strength) : 재료시험을 하였을 때 시험편이 파괴되기까지 나타나는 공칭응력의 최댓값을 말한다.\n② 극한강도(ultimate strength) : 재료가 감당할 수 있는 최대의 응력을 가리키는 것으로 인장강도라고도 하며, 재료가 파괴될 때의 응력인 파단강도와는 다르다.\n③ 항복응력(yield stress) : 응력이 어떤 한계를 넘었을 때 변형이 급격히 증대하는 현상으로 그 한계응력을 그 물질의 항복응력이라고 한다.\n④ 허용응력(allowable stress) : 어떤 물체에 작용하는 응력은 탄성한계 이하의 값으로, 이때 안전상 허용하는 값의 응력을 허용응력이라고 한다.",
+    "number": "55",
+    "page": 15,
+    "pdf_file": "Elevator_11_16.pdf",
+    "question": "다음 강도 중 상대적으로 그 값이 가장 **작은** 것은?",
+    "round": "01",
+    "year": "2015"
+  },
+  {
+    "answer": "1",
+    "choices": [
+      "비상용 스피커",
+      "비상용 소화기",
+      "비상용 전화기",
+      "비상용 경보기"
+    ],
+    "explanation": "승강로, 기계실 · 기계류 공간 및 풀리실은 엘리베이터 전용으로 사용되어야 한다. 엘리베이터와 관계없는 배관, 전선 또는 그 밖에 다른 용도의 설비는 승강로, 기계실 · 기계류 공간 및 풀리실에 설치되어서는 안 된다.\n엘리베이터의 안전한 운행에 지장을 주지 않는 범위에서 설치가능한 설비\n• 증기난방 및 고압 온수난방을 제외한 엘리베이터를 위한 냉 · 난방설비\n• 카에 설치되는 영상정보처리기기의 전선 등 관련 설비\n• 카에 설치되는 모니터의 전선 등 관련 설비\n• 환기를 위한 덕트\n• 소방 관련 법령에 따라 기계실 천장에 설치되는 화재감지기 본체, 비상용 스피커 및 가스계 소화설비\n• 피트 침수를 대비한 배수 관련 설비",
+    "number": "10",
+    "page": 3,
+    "pdf_file": "Elevator_21_24.pdf",
+    "question": "다음 괄호 안의 내용으로 **옳은 것은**?\n승강로는 엘리베이터 전용으로 사용되어야 한다. 엘리베이터와 관계없는 배관, 전선 또는 그 밖에 다른 용도의 설비는 승강로에 설치되어서는 안 된다. 다만, 엘리베이터의 안전한 운행에 지장을 주지 않는다면 소방 관련 법령에 따라 기계실 천장에 설치되는 화재감지기 본체, ( ) 및 가스계 소화설비는 설치될 수 있다.",
+    "round": "01",
+    "year": "2021"
+  },
+  {
+    "answer": "2",
+    "choices": [
+      "랙과 피니언",
+      "베벨 기어",
+      "스퍼 기어",
+      "헬리컬 기어"
+    ],
+    "explanation": "베벨 기어 : 두 축이 교차하는 경우\n• 교차되는 두 축 간에 운동을 전달하는 원추 형 기어\n• 일반적으로 직각 방향의 동력 전달",
+    "number": "24",
+    "page": 64,
+    "pdf_file": "Elevator_17_20.pdf",
+    "question": "다음 그림과 같은 기어는?",
+    "round": "01",
+    "year": "2019"
+  },
+  {
+    "answer": "2",
+    "choices": [
+      "AND회로",
+      "OR회로",
+      "NOT회로",
+      "NAND회로"
+    ],
+    "explanation": "논리회로 및 논리기호\n\n회로구분: AND\n시퀀스회로: 입력 A, B가 직렬 연결된 후 출력 X로 연결.\n진리표: A=0, B=0, X=0; A=0, B=1, X=0; A=1, B=0, X=0; A=1, B=1, X=1\n논리식: $X = A \\cdot B$\n\n회로구분: OR\n시퀀스회로: 입력 A, B가 병렬 연결된 후 출력 X로 연결.\n진리표: A=0, B=0, X=0; A=0, B=1, X=1; A=1, B=0, X=1; A=1, B=1, X=1\n논리식: $X = A + B$\n\n회로구분: NOT\n시퀀스회로: A가 Normally Closed(NC) 접점으로 연결된 후 출력 X로 연결.\n진리표: A=0, X=1; A=1, X=0\n논리식: $X = \\bar{A}$\n\n회로구분: NAND\n시퀀스회로: 입력 A, B가 직렬 연결된 후 $X_a$로 연결되고, $X_a$가 인버터($X_b$)를 통해 출력 X로 연결.\n진리표: A=0, B=0, X=1; A=0, B=1, X=1; A=1, B=0, X=1; A=1, B=1, X=0\n논리식: $X = \\overline{(A \\cdot B)} = \\overline{AB} = \\bar{A} + \\bar{B}$ (드모르간 정리)\n<img src=\"images/17_20/Q_2017_01_3_exp.png\">\n<img src=\"images/17_20/Q_2017_01_3_exp.png\">",
+    "number": "03",
+    "page": 1,
+    "pdf_file": "Elevator_17_20.pdf",
+    "question": "다음 그림과 같은 논리회로는?",
+    "round": "01",
+    "year": "2017"
+  },
+  {
+    "answer": "2",
+    "choices": [
+      "AND회로",
+      "OR회로",
+      "NOT회로",
+      "NAND회로"
+    ],
+    "explanation": "논리회로 및 논리기호\n\n회로구분: AND\n시퀀스회로: A와 B 접점이 직렬 연결되어 출력 X로 이어지는 회로.\n진리표:\n입력 A B | 출력 X\n0 0 | 0\n0 1 | 0\n1 0 | 0\n1 1 | 1\n논리식: $X = A \\cdot B$\n\n회로구분: OR\n시퀀스회로: A와 B 접점이 병렬 연결되어 출력 X로 이어지는 회로.\n진리표:\n입력 A B | 출력 X\n0 0 | 0\n0 1 | 1\n1 0 | 1\n1 1 | 1\n논리식: $X = A + B$\n\n회로구분: NOT\n시퀀스회로: A 접점이 상시 폐로(normally closed) 상태로 연결되어 출력 X로 이어지는 회로.\n진리표:\n입력 A | 출력 X\n0 | 1\n1 | 0\n논리식: $X = \\bar{A}$\n\n회로구분: NAND\n시퀀스회로: A와 B 접점이 직렬 연결되고, 출력 X가 이 접점들의 반대(inverted) 상태로 동작하는 회로.\n진리표:\n입력 A B | 출력 X\n0 0 | 1\n0 1 | 1\n1 0 | 1\n1 1 | 0\n논리식: $X = \\overline{(A \\cdot B)} = \\overline{AB} = \\bar{A} + \\bar{B}$ (드모르간 정리)",
+    "number": "18",
+    "page": 1,
+    "pdf_file": "Elevator_17_20.pdf",
+    "question": "다음 그림과 같은 논리회로는?",
+    "round": "01",
+    "year": "2017"
+  },
+  {
+    "answer": "2",
+    "choices": [
+      "AND회로",
+      "OR회로",
+      "NOT회로",
+      "NAND회로"
+    ],
+    "explanation": "논리회로 및 논리기호는 다음과 같다.\n\nAND회로:\n시퀀스회로: 두 개의 스위치 A, B가 직렬로 연결되어 출력 X로 이어진다.\n진리표:\n입력 A | 입력 B | 출력 X\n0 | 0 | 0\n0 | 1 | 0\n1 | 0 | 0\n1 | 1 | 1\n논리식: $X = A \\cdot B$\n\nOR회로:\n시퀀스회로: 두 개의 스위치 A, B가 병렬로 연결되어 출력 X로 이어진다.\n진리표:\n입력 A | 입력 B | 출력 X\n0 | 0 | 0\n0 | 1 | 1\n1 | 0 | 1\n1 | 1 | 1\n논리식: $X = A + B$\n\nNOT회로:\n시퀀스회로: 하나의 스위치 A가 연결된 반전 회로.\n진리표:\n입력 A | 출력 X\n0 | 1\n1 | 0\n논리식: $X = \\overline{A}$\n\nNAND회로:\n시퀀스회로: 두 개의 스위치 A, B가 직렬로 연결되어 출력 반전 X로 이어진다.\n진리표:\n입력 A | 입력 B | 출력 X\n0 | 0 | 1\n0 | 1 | 1\n1 | 0 | 1\n1 | 1 | 0\n논리식: $X = \\overline{(A \\cdot B)} = \\overline{AB} = \\overline{A} + \\overline{B}$ (드모르간 정리)\n\n문제의 그림은 두 개의 스위치가 병렬로 연결된 형태이므로 OR회로이다.",
+    "number": "21",
+    "page": 1,
+    "pdf_file": "Elevator_17_20.pdf",
+    "question": "다음 그림과 같은 논리회로는?",
+    "round": "01",
+    "year": "2017"
+  },
+  {
+    "answer": "2",
+    "choices": [
+      "1 : 1 로핑",
+      "2 : 1 로핑",
+      "3 : 1 로핑",
+      "4 : 1 로핑"
+    ],
+    "explanation": "로핑(ropping) : 권상기에 로프를 거는 방법\n• 1:1 로핑 : 일반적인 승객용에 사용되며 로프에 걸리는 장력은 카 또는 균형추의 중량과 로프의 중량을 합한 것(로프장력은 부하 측의 중력과 동일)\n• 2:1 로핑 : 로프를 직접 부하 측에 걸어 정지시키지 않고 도르래를 통하여 끌어올리면, 로프장력은 부하 측 중력의 \\$1/2\\$이 되며, 부하 측의 속도는 로프속도의 \\$1/2\\$(카의 정격속도의 2배의 속도로 로프를 구동)",
+    "number": "07",
+    "page": 106,
+    "pdf_file": "Elevator_17_20.pdf",
+    "question": "다음 그림과 같은 로핑 방법은?",
+    "round": "02",
+    "year": "2020"
+  },
+  {
+    "answer": "3",
+    "choices": [
+      "$\\frac{1}{G(s)}$",
+      "$\\frac{1}{1+G(s)}$",
+      "$\\frac{G(s)}{1+G(s)}$",
+      "$\\frac{G(s)}{1-G(s)}$"
+    ],
+    "explanation": "블록선도와 신호흐름선도\n전달함수(transfer function)란 선형 특성을 갖는 대상의 입력과 출력 사이의 관계를 나타내는 함수로서 위 제어계와 같이 블록 단위로 표현하여 입력과 출력 사이의 관계를 보기 쉽게 나타낸 경우를 블록선도라고 한다.\n\n블록선도 (이미지 참조)\n편차, 오차\n$E(s) = R(s) - B(s)$\n$C(s) = E(s) \\cdot G(s)$\n$B(s) = C(s) \\cdot H(s)$\n\n$E=R-CH$\n$C=(R-CH)G$\n$C=RG-CGH$\n$C+CGH=RG$\n$C(1+GH)=RG$\n$\\frac{C(s)}{R(s)} = \\frac{G(s)}{1+G(s)H(s)} = T(s)$\n\n$G(s)$ : 순방향 전달함수\n$G(s)H(s)$ : 개루프 전달함수\n$T(s)$ : 폐루프 전달함수\n\n$H(s)=1$인 경우\n$\\frac{C(s)}{R(s)} = \\frac{G(s)}{1+G(s)}$",
+    "number": "50",
+    "page": 106,
+    "pdf_file": "Elevator_11_16.pdf",
+    "question": "다음 그림과 같은 제어계의 전체 전달함수는?(단, $H(s)=1$이다)",
+    "round": "04",
+    "year": "2016"
+  },
+  {
+    "answer": "3",
+    "choices": [
+      "$\\frac{1}{G(s)}$",
+      "$\\frac{1}{1+G(s)}$",
+      "$\\frac{G(s)}{1+G(s)}$",
+      "$\\frac{G(s)}{1-G(s)}$"
+    ],
+    "explanation": "전달함수(傳達函數, transfer function)\n- 선형 특성을 갖는 대상의 입력과 출력 사이의 관계를 나타내는 함수로써 제어계와 같이 블록 단위로 표현하여 입력과 출력 사이의 관계를 보기 쉽게 나타낸 경우를 말함\n- 블록선도\n\n블록선도\n$C(s) = E(s) \\cdot G(s)$\n$B(s) = C(s) \\cdot H(s)$\n$E(s) = R(s) - B(s)$\n$E = R - CH$\n$C = (R - CH)G$\n$C = RG - CGH$\n$C + CGH = RG$\n$C(1 + GH) = RG$\n$\\frac{C(s)}{R(s)} = \\frac{G(s)}{1 + G(s)H(s)} = T(s)$\n$H(s)=1$인 경우\n$\\frac{C(s)}{R(s)} = \\frac{G(s)}{1 + G(s)}$\n여기서, $G(s)$ : 순방향 전달함수\n$G(s)H(s)$ : 개루프 전달함수\n$T(s)$ : 폐루프 전달함수",
+    "number": "10",
+    "page": 60,
+    "pdf_file": "Elevator_17_20.pdf",
+    "question": "다음 그림과 같은 제어계의 전체 전달함수는?(단, $H(s)=1$이다)",
+    "round": "01",
+    "year": "2019"
+  },
+  {
+    "answer": "4",
+    "choices": [
+      "$\\\\frac{3}{10}$",
+      "$\\\\frac{10}{3}$",
+      "3",
+      "10"
+    ],
+    "explanation": "\n<img src=\"images/17_20/Q_2019_02_2_exp.png\">",
+    "number": "20",
+    "page": 78,
+    "pdf_file": "Elevator_17_20.pdf",
+    "question": "다음 그림과 같은 회로의 합성저항 $R$은 몇 [$\\Omega$]인가?",
+    "round": "02",
+    "year": "2019"
+  },
+  {
+    "answer": "2",
+    "choices": [
+      "$P = W$",
+      "$P = \\frac{1}{2}W$",
+      "$P = \\frac{1}{3}W$",
+      "$P = \\frac{1}{4}W$"
+    ],
+    "explanation": "로프의 한 끝을 고정 물체에 고정한 조합 도르래 장치에서의 잡아 당기는 힘\n$P = \\frac{1}{2^n}W$(단, $W$: 무게) $\\rightarrow W = P \\times 2^n$",
+    "number": "22",
+    "page": 79,
+    "pdf_file": "Elevator_17_20.pdf",
+    "question": "다음 그림과 같이 무게 $W$가 움직이는 도르래에 매달려 있다. 물체를 끌어 올리는 힘을 $P$라고 했을 때 $P$와 $W$의 관계식으로 **옳은** 것은?(단, 도르래와 로프의 무게는 없다고 본다)\n<img src=\"images/17_20/Q_2019_02_4_ques.png\">",
+    "round": "02",
+    "year": "2019"
+  },
+  {
+    "answer": "4",
+    "choices": [
+      "전기적 a접점",
+      "전기적 b접점",
+      "기계적 a접점",
+      "기계적 b접점"
+    ],
+    "explanation": "은 수동 조작 자동복귀 접점(a접점), 수동 조작 자동복귀 접점(b접점), 기계적 접점 (리밋 스위치, a접점), 기계적 접점 (리밋 스위치, b접점)에 대한 심볼을 보여준다. 문제에서 주어진 그림은 기계적 접점 중 리밋 스위치의 b접점(상시 닫힘)에 해당한다.\n<img src=\"images/17_20/Q_2019_02_33_exp.png\">",
+    "number": "51",
+    "page": 85,
+    "pdf_file": "Elevator_17_20.pdf",
+    "question": "다음 그림의 리밋 스위치 접점 명칭은?\n<img src=\"images/17_20/Q_2019_02_33_ques.png\">",
+    "round": "02",
+    "year": "2019"
+  },
+  {
+    "answer": "4",
+    "choices": [
+      "$\\overline{A \\\\cdot B} = \\\\overline{A} + \\\\overline{B}$",
+      "$\\overline{A + B} = \\\\overline{A} \\\\cdot \\\\overline{B}$",
+      "$A + \\\\overline{A} = A$",
+      "$A + \\\\overline{A} \\\\cdot B = A + \\\\overline{B}$"
+    ],
+    "explanation": "④ $A + \\\\overline{A} \\\\cdot B = A \\\\cdot 1 + \\\\overline{A} \\\\cdot B = A(1+B) + \\\\overline{A} \\\\cdot B = A + AB + \\\\overline{A} \\\\cdot B = A + B(A+\\\\overline{A}) = A + B(1) = A + B$",
+    "number": "51",
+    "page": 29,
+    "pdf_file": "Elevator_21_24.pdf",
+    "question": "다음 논리식 중 **틀린** 것은?",
+    "round": "02",
+    "year": "2021"
+  },
+  {
+    "answer": "4",
+    "choices": [
+      "A + A = A",
+      "A ⋅ A = A",
+      "A + Ā = 1",
+      "A ⋅ Ā = 1"
+    ],
+    "explanation": "불 대수의 특징\n$A \\cdot \\overline{A} = 0$이다.",
+    "number": "55",
+    "page": 95,
+    "pdf_file": "Elevator_21_24.pdf",
+    "question": "다음 논리식 중 맞지 **않는** 것은 어느 것인가?",
+    "round": "02",
+    "year": "2023"
+  },
+  {
+    "answer": "2",
+    "choices": [
+      "$\\overline{A \\cdot B} \\cdot \\overline{C \\cdot D}$",
+      "$A \\cdot B + C \\cdot D$",
+      "$A \\cdot B \\cdot C \\cdot D$",
+      "$(A+B) \\cdot (C+D)$"
+    ],
+    "explanation": "[논리회로 그림]\nA, B가 NAND 게이트를 통과하면 $\\overline{(A \\cdot B)}$이 되고,\nC, D가 NAND 게이트를 통과하면 $\\overline{(C \\cdot D)}$이 된다.\n이 두 값이 다시 NAND 게이트를 통과하여 E가 된다.\n$\\overline{\\{\\overline{(A \\cdot B)}\\} \\cdot \\{\\overline{(C \\cdot D)}\\}} = \\overline{(\\overline{A} + \\overline{B})} + \\overline{(\\overline{C} + \\overline{D})}$\n$= \\overline{\\overline{(A+B)} + \\overline{(C+D)}}$\n$= (A \\cdot B) + (C \\cdot D)$",
+    "number": "51",
+    "page": 107,
+    "pdf_file": "Elevator_11_16.pdf",
+    "question": "다음 논리회로의 출력값 E는?",
+    "round": "04",
+    "year": "2016"
+  },
+  {
+    "answer": "2",
+    "choices": [
+      "$\\overline{A \\cdot B} + C \\cdot D$",
+      "$\\overline{A \\cdot B + C \\cdot D}$",
+      "$A \\cdot B + C \\cdot D$",
+      "$(A+B) \\cdot (C+D)$"
+    ],
+    "explanation": "[A, B, C, D 입력과 E 출력의 세 NAND 게이트로 구성된 논리회로도]\n$E = \\overline{(\\overline{A \\cdot B}) \\cdot (\\overline{C \\cdot D})}$\n$= \\overline{\\overline{A \\cdot B}} + \\overline{\\overline{C \\cdot D}}$\n$= (A+B) + (C+D)$\n$= (A \\cdot B) + (C \\cdot D)$",
+    "number": "07",
+    "page": 42,
+    "pdf_file": "Elevator_17_20.pdf",
+    "question": "다음 논리회로의 출력값 E는?",
+    "round": "02",
+    "year": "2018"
+  },
+  {
+    "answer": "1",
+    "choices": [
+      "$Y = A\\bar{B} + \\bar{A}B$",
+      "$Y = A\\bar{B} + AB$",
+      "$Y = \\bar{A}B + \\bar{A}\\bar{B}$",
+      "$Y = \\bar{A} + \\bar{B}$"
+    ],
+    "explanation": "논리회로의 출력\n$Y = A\\bar{B} + \\bar{A}B$\n(논리회로 그림)",
+    "number": "60",
+    "page": 31,
+    "pdf_file": "Elevator_21_24.pdf",
+    "question": "다음 논리회로의 출력은?",
+    "round": "02",
+    "year": "2021"
+  },
+  {
+    "answer": "2",
+    "choices": [
+      "V 홈 – 가공이 쉽고 초기 마찰력도 우수하다.",
+      "포지티브 홈(나선형 홈) – 로프를 권동에 감기 때문에 고양정으로 사용하기에 유리하다.",
+      "언더컷 형 – 트랙션 능력이 커서 가장 많이 사용된다.",
+      "U 홈 – 로프와의 면압이 적으므로 로프의 수명이 길어진다."
+    ],
+    "explanation": "엘리베이터 로프 홈\n승객용 엘리베이터에는 미끄러짐을 줄이기 위해 로프와 도르래의 마찰계수가 낮은 U형의 홈이 아닌 홈의 밑을 도려내어 마찰계수를 높인 언더컷(under cut) 홈을 사용한다.\n\n주로 권동식 엘리베이터에서 사용되는 로프 홈은 V형, U형, 언더컷형 등이 있으며, 이들은 로프와 시브(Sheave) 간의 마찰력을 이용하여 운행한다. 포지티브 홈(나선형 홈)은 주로 권동기식 엘리베이터(Winding Drum Type)에서 사용되며, 로프를 권동에 직접 감아 올리는 방식이다. 이는 트랙션 엘리베이터의 로프 홈과는 다른 방식이므로, 트랙션 엘리베이터의 로프 홈에 대한 설명으로 가장 옳지 않다.",
+    "number": "22",
+    "page": 54,
+    "pdf_file": "Elevator_21_24.pdf",
+    "question": "다음 로프 홈에 대한 설명으로 가장 옳지 **않은** 것은?",
+    "round": "02",
+    "year": "2022"
+  },
+  {
+    "answer": "3",
+    "choices": [
+      "안전대",
+      "안전화",
+      "안전모",
+      "보안경"
+    ],
+    "explanation": "보호구\n작업자가 신체에 직접 착용하여 각종 물리적 · 기계적 · 화학적 위험요소로부터 몸을 보호하기 위한 보호장구\n· 안전모 : 낙하물에 의한 피해 방지, 화상방지, 감전방지, 충격방지, 직사광선방지\n· 안전대 : 높이(깊이) $2[m]$ 이상의 떨어질 위험이 있는 장소에서의 작업\n· 안전화 : 물체에 맞음 · 부딪힘, 물체에의 끼임, 감전 또는 정전기의 대전 위험이 있는 작업\n· 보안경 : 각종 비산물(흩날리는 물체), 유해 액체가 눈에 닿을 위험이 있는 작업\n· 방면(마스크) : 용접 시 발생한 불꽃(불꽃)가 흩날려 얼굴에 닿을 위험이 있는 작업\n· 안전장갑 : 감전의 위험이 있는 작업\n· 방열복 : 고열에 의한 화상의 위험이 있는 작업 시\n· 귀마개 : 보통 $90[dB]$ 이상의 소음에 청력을 보호",
+    "number": "23",
+    "page": 79,
+    "pdf_file": "Elevator_17_20.pdf",
+    "question": "다음 보호구 중에서 머리를 보호하는 것은?",
+    "round": "02",
+    "year": "2019"
+  },
+  {
+    "answer": "1",
+    "choices": [
+      "경쾌한 운동과 동력의 마찰손실이 크다.",
+      "제작이 용이하다.",
+      "전동이 매우 확실하다.",
+      "복잡한 운동을 간단한 장치로 할 수 있다."
+    ],
+    "explanation": "링크장치(link)\n몇 개의 링크(가늘고 긴 막대)를 핀 이음으로 연결하고 일정한 한정(限定) 운동을 하게 한 장치로서, 링크를 조합하는 방법, 구속을 주는 방법 등에 따라서 많은 종류의 운동을 할 수 있다. 기계의 각 부분에 대한 동력의 전달, 운동의 전동 등에 널리 사용되며, 다른 기구에 비해서 마찰손실이 적고 구조가 경쾌한 것이 특징이다.",
+    "number": "53",
+    "page": 43,
+    "pdf_file": "Elevator_11_16.pdf",
+    "question": "다음 설명 중 링크의 특징이 **아닌** 것은?",
+    "round": "04",
+    "year": "2015"
+  },
+  {
+    "answer": "2",
+    "choices": [
+      "카 천장의 비상구출문",
+      "장애인용 승강기 전면의 활동 공간",
+      "카 지붕의 비상구출문",
+      "기계실의 움직이는 부품 점검 수행 면적"
+    ],
+    "explanation": "승강기 각 부의 최소 면적 기준\n② 장애인용 승강기 전면의 활동 공간 : $1.4[\text{m}] \\times 1.4[\text{m}]$\n① 카 천장의 비상구출문 : $0.4[\text{m}] \\times 0.5[\text{m}]$\n③ 카 지붕의 비상구출문 : $0.5[\text{m}] \\times 0.7[\text{m}]$\n④ 기계실의 움직이는 부품 점검 수행 면적 : $0.5[\text{m}] \\times 0.6[\text{m}]$",
+    "number": "08",
+    "page": 67,
+    "pdf_file": "Elevator_21_24.pdf",
+    "question": "다음 승강기 각 부의 최소 면적 기준이 가장 **넓은** 것은?",
+    "round": "01",
+    "year": "2023"
+  }
+]

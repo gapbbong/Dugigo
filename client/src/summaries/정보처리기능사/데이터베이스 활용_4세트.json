@@ -1,0 +1,87 @@
+{
+  "subject": "정보처리기능사",
+  "unit": "데이터베이스 활용",
+  "set": 4,
+  "slides": [
+    {
+      "id": 1,
+      "title": "설계도를 고쳐라! ALTER의 마법",
+      "content": "이미 지어진 건물의 구조를 바꾸듯이, 테이블에 새로운 칸을 추가하거나 설계를 변경할 때 사용합니다. 건물을 허물지 않고 방을 하나 더 만드는 리모델링과 같아요.",
+      "visual": "🛠️ ALTER TABLE, ADD 컬럼, 구조 변경",
+      "exam_point": "이미 생성된 테이블에 필드를 추가하거나 수정할 때는 DDL인 ALTER를 사용합니다.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_4_1.webp"
+    },
+    {
+      "id": 2,
+      "title": "줄을 서시오! ORDER BY 정렬",
+      "content": "도서관의 책들을 가나다순이나 출판일 순으로 정리하는 것처럼, 데이터를 특정 기준에 맞춰 줄 세우는 명령어입니다. 오름차순(ASC)과 내림차순(DESC) 두 가지 옵션이 있습니다.",
+      "visual": "📏 ORDER BY, ASC(오름차순), DESC(내림차순)",
+      "exam_point": "기본은 오름차순(ASC)이며, 내림차순은 DESC를 명시해야 합니다.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_4_2.webp"
+    },
+    {
+      "id": 3,
+      "title": "필요한 것만 쏙! WHERE의 필터링",
+      "content": "수많은 택배 상자 중 내 주소로 온 것만 찾는 것처럼, 특정 조건에 맞는 데이터만 골라낼 때 사용합니다. 데이터를 조회, 수정, 삭제할 때 '누구를?' 결정하는 가장 중요한 관문입니다.",
+      "visual": "🔍 WHERE, 조건식, 데이터 필터링",
+      "exam_point": "특정 조건을 만족하는 레코드를 필터링할 때는 반드시 WHERE 절을 사용합니다.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_4_3.webp"
+    },
+    {
+      "id": 4,
+      "title": "새 식구 맞이하기! INSERT INTO",
+      "content": "회원 명부에 새로운 회원의 이름을 적어 넣는 것과 같습니다. '어디에(INTO)' '어떤 값(VALUES)'을 넣을지 명확하게 지정해야 새 데이터가 저장됩니다.",
+      "visual": "📥 INSERT INTO, VALUES, 데이터 삽입",
+      "exam_point": "INSERT 구문 형식에 WHERE 절은 포함되지 않으며, VALUES 키워드가 필수입니다.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_4_4.webp"
+    },
+    {
+      "id": 5,
+      "title": "지우개 vs 폭탄? DELETE와 DROP",
+      "content": "DELETE는 칠판의 글씨만 지우는 것이고, DROP은 칠판 자체를 떼어버리는 것입니다. DELETE 후에는 빈 테이블이 남지만, DROP 후에는 데이터베이스에서 구조 자체가 사라집니다.",
+      "visual": "🧹 DELETE(내용 삭제) vs 💣 DROP(구조 삭제)",
+      "exam_point": "WHERE 없는 DELETE는 모든 행을 삭제하지만 테이블 구조는 유지됨을 기억하세요.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_4_5.webp"
+    },
+    {
+      "id": 6,
+      "title": "이사 갔어요? 정보 수정은 UPDATE",
+      "content": "학생의 학년이 바뀌거나 전화번호가 바뀌었을 때 기존 정보를 새 정보로 덮어쓰는 과정입니다. '무엇을(SET)' 바꿀지, '누구의(WHERE)' 것을 바꿀지 정하는 것이 핵심입니다.",
+      "visual": "📝 UPDATE, SET, 데이터 수정",
+      "exam_point": "UPDATE 테이블명 SET 컬럼=값 WHERE 조건 형식을 반드시 암기하세요.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_4_6.webp"
+    },
+    {
+      "id": 7,
+      "title": "모두 보여줘 vs 중복은 싫어!",
+      "content": "별표(*)는 테이블의 모든 컬럼을 다 보여달라는 뜻이고, DISTINCT는 똑같은 데이터가 여러 개 있어도 하나씩만 보여주는 깔끔한 중복 제거 기능입니다.",
+      "visual": "🌟 SELECT *(전체), 🆔 DISTINCT(중복 제거)",
+      "exam_point": "SELECT 절의 *는 모든 열을 의미하며, DISTINCT는 결과의 중복을 제거합니다.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_4_7.webp"
+    },
+    {
+      "id": 8,
+      "title": "끼리끼리 묶어라! GROUP BY와 HAVING",
+      "content": "학생들을 반별로 묶어(GROUP BY) 통계를 낸 뒤, 그중 특정 조건(HAVING)을 만족하는 그룹만 골라내는 연계 플레이입니다. HAVING은 그룹화된 결과의 필터입니다.",
+      "visual": "👯 GROUP BY(그룹화), 🎯 HAVING(그룹 조건)",
+      "exam_point": "HAVING 절은 반드시 GROUP BY 절과 함께 사용되어 그룹에 조건을 부여합니다.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_4_8.webp"
+    },
+    {
+      "id": 9,
+      "title": "SQL의 세 가지 성격: 정의, 조작, 제어",
+      "content": "테이블을 만드는 '정의(DDL)', 데이터를 관리하는 '조작(DML)', 권한을 주는 '제어(DCL)'로 나뉩니다. 요리사가 주방을 만들고(DDL), 요리하고(DML), 출입을 관리하는(DCL) 것과 같죠.",
+      "visual": "🏗️ DDL, 🛠️ DML, 🔐 DCL 구분",
+      "exam_point": "SELECT/INSERT/UPDATE/DELETE는 DML이며, GRANT/REVOKE는 DCL입니다.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_4_9.webp"
+    },
+    {
+      "id": 10,
+      "title": "질문 속의 질문! 서브쿼리 활용",
+      "content": "\"가장 비싼 물건(MAX)이 뭐야?\"라고 먼저 물어본 뒤, 그 답을 가지고 다시 정보를 찾는 방식입니다. 괄호 안의 질문 결과가 바깥 질문의 열쇠가 됩니다.",
+      "visual": "🔗 Subquery, MAX(최대값), 중첩 질의",
+      "exam_point": "서브쿼리에서 최대값(MAX)을 구하고 그 값을 외부 쿼리의 조건으로 사용하는 구조를 이해하세요.",
+      "image": "/summaries/정보처리기능사/slide_데이터베이스 활용_4_10.webp"
+    }
+  ]
+}
