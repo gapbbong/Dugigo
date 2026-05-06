@@ -448,9 +448,34 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               {renderQuestionText(currentQuestion.question)}
             </div>
 
-            {currentQuestion.image && (
-              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="bg-white/50 p-4 md:p-6 rounded-[2rem] border border-white/60 shadow-sm flex justify-center"><img src={currentQuestion.image} alt="Question Diagram" className="max-h-[200px] md:max-h-[300px] object-contain rounded-xl"/></motion.div>
-            )}
+            {(() => {
+              const imgName = currentQuestion.image || currentQuestion.question_img;
+              if (!imgName) return null;
+              
+              let imgSrc = imgName;
+              if (!imgName.startsWith('/') && !imgName.startsWith('http')) {
+                if (imgName.startsWith('history_')) {
+                  imgSrc = `/summaries/한국사검정시험/${imgName}`;
+                } else {
+                  imgSrc = `/images/exams/${currentQuestion.year}_${currentQuestion.round}/${imgName}`;
+                }
+              }
+
+              return (
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }} 
+                  animate={{ opacity: 1, y: 0 }} 
+                  className="bg-white/50 p-4 md:p-6 rounded-[2rem] border border-white/60 shadow-sm flex justify-center"
+                >
+                  <img 
+                    src={imgSrc} 
+                    alt="Question Diagram" 
+                    className="max-h-[200px] md:max-h-[300px] object-contain rounded-xl"
+                    onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                  />
+                </motion.div>
+              );
+            })()}
 
             {/* 선택지 */}
             <div className="grid grid-cols-1 gap-4 md:gap-8">
@@ -471,7 +496,18 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                       {isAnswered && isCorrect ? <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5" /> : isAnswered && isSelected && !isCorrect ? <XCircle className="w-4 h-4 md:w-5 md:h-5" /> : idx + 1}
                     </div>
                     <span className="text-base md:text-xl font-bold flex-1 leading-relaxed flex flex-col gap-3">
-                      {renderMath(choice)}
+                      {choice.endsWith('.webp') ? (
+                        <div className="flex justify-center py-2">
+                          <img 
+                            src={choice.startsWith('/') ? choice : (choice.startsWith('history_') ? `/summaries/한국사검정시험/${choice}` : choice)} 
+                            alt={`Choice ${idx + 1}`}
+                            className="max-h-[140px] md:max-h-[250px] object-contain rounded-xl"
+                            onError={(e) => { (e.target as HTMLElement).parentElement!.style.display = 'none'; }}
+                          />
+                        </div>
+                      ) : (
+                        renderMath(choice)
+                      )}
                       {choice.includes('그림') && (
                         <img 
                           src={`/images/exams/${currentQuestion.year}_${currentQuestion.round}/${currentQuestion.year}_${currentQuestion.round}_${currentQuestion.number || currentQuestion.question_num}_choice${(currentQuestion.shuffledOptionsIdx?.[idx] ?? idx) + 1}.webp`} 
