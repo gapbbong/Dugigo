@@ -49,10 +49,16 @@ export async function GET(req: NextRequest) {
           return "승강기 개론";
         }
 
-        if (sub === '전기기능사') {
-          if (/전선|배선|배관|접지|전선로|조명|절연|공사|금속관|가요|케이블/.test(text)) return "[설비] 전기설비";
-          if (/직류기|동기기|변압기|유도기|정류기|전동기|발전기|회전자|슬립|계자/.test(text)) return "[기기] 전기기기";
-          return "[이론] 전기이론";
+        if (sub === '한국사검정시험' || sub === '한국사능력검정시험') {
+          if (q.sub_unit) return q.sub_unit;
+          if (/구석기|신석기|청동기|철기|고조선|부여|고구려|옥저|동예|삼한|빗살무늬|고인돌|주먹도끼/.test(text) && !/백제|신라|고려|조선/.test(text)) return "선사시대 및 국가의 형성";
+          if (/백제|신라|통일신라|발해|가야|어라하|건흥|해동성국|골품|화랑|삼국/.test(text)) return "고대 사회 (삼국~남북국)";
+          if (/고려|광종|성종|공민왕|묘청|무신|몽골|거란|여진|전시과/.test(text)) return "중세 사회 (고려 시대)";
+          if (/조선|세종|정조|영조|임진왜란|병자호란|사화|붕당|대동법/.test(text)) return "근세~근대 태동기 (조선 시대)";
+          if (/강화도|개항|위정척사|동학|갑오개혁|독립협회|대한제국|아관파천/.test(text)) return "근대 사회의 전개 (개항기)";
+          if (/일제|독립|3·1|임시 정부|민족 말살|물산 장려|신간회|광복/.test(text)) return "일제 강점기";
+          if (/정부 수립|6·25|4·19|5·18|6월 민주 항쟁|민주화|통일/.test(text)) return "현대 사회의 발전";
+          return "기타 및 통합";
         }
 
         return "기본 단원";
@@ -78,10 +84,41 @@ export async function GET(req: NextRequest) {
         allQuestions = [...allQuestions, ...fileQuestions];
       });
 
+      const UNIT_ORDER: { [key: string]: number } = {
+        "선사시대 및 국가의 형성": 1,
+        "고대 사회 (삼국~남북국)": 2,
+        "중세 사회 (고려 시대)": 3,
+        "근세~근대 태동기 (조선 시대)": 4,
+        "근대 사회의 전개 (개항기)": 5,
+        "일제 강점기": 6,
+        "현대 사회의 발전": 7,
+        "기타 및 통합": 8,
+        "데이터베이스 활용": 10,
+        "애플리케이션 테스트 관리": 11,
+        "운영체제 및 네트워크 기초": 12,
+        "프로그래밍 언어 활용": 13,
+        "소프트웨어 개발 기초": 14,
+        "[이론] 전기이론": 20,
+        "[기기] 전기기기": 21,
+        "[설비] 전기설비": 22,
+        "전기이론": 30,
+        "기계일반": 31,
+        "승강기 개론": 32,
+        "승강기 점검 및 보수": 33
+      };
+
       const sorted = allQuestions.sort((a, b) => {
-        const textA = (a.question || '').toString();
-        const textB = (b.question || '').toString();
-        return textA.localeCompare(textB);
+        const orderA = UNIT_ORDER[a.sub_unit] || 99;
+        const orderB = UNIT_ORDER[b.sub_unit] || 99;
+        
+        if (orderA !== orderB) return orderA - orderB;
+        
+        // 같은 단원 내에서는 회차(round) 순서로 정렬
+        const roundA = parseInt(a.round) || 0;
+        const roundB = parseInt(b.round) || 0;
+        if (roundA !== roundB) return roundA - roundB;
+
+        return (a.number || 0) - (b.number || 0);
       });
 
       return NextResponse.json({
