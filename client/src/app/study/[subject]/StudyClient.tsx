@@ -557,6 +557,14 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   if (imgName.startsWith('history_')) {
                     imgSrc = `/summaries/한국사검정시험/${imgName}`;
                   } else if (imgName.startsWith('lit2_')) {
+                    // 컴퓨터활용능력 2급: 텍스트 중복 스캔 이미지 필터링
+                    const text = (currentQuestion.question || '').toLowerCase();
+                    const isDiagramNeeded = /그림|표|다음과 같이|아래와 같이|화면|설정|대화 상자|차트/.test(text);
+                    const isSubject2 = currentQuestion.subject === "스프레드시트 일반";
+                    
+                    if (!isDiagramNeeded && !isSubject2) {
+                      return null; // 불필요한 스캔 이미지 숨김
+                    }
                     imgSrc = `/summaries/컴퓨터활용능력 2급/${imgName}`;
                   } else {
                     imgSrc = `/images/exams/${currentQuestion.year}_${currentQuestion.round}/${imgName}`;
