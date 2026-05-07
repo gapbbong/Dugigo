@@ -17,7 +17,9 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ units: [] });
     }
 
-    const files = fs.readdirSync(dataDir).filter(f => f.endsWith('.json'));
+    const files = fs.readdirSync(dataDir).filter(f => 
+      f.endsWith('.json') && !f.includes('_CLEAN')
+    );
     const unitMap = new Map<string, number>();
 
     const classifyQuestion = (sub: string, q: any): string => {
@@ -110,6 +112,10 @@ export async function GET(req: NextRequest) {
       if (name.includes('[이론]')) return 10;
       if (name.includes('[기기]')) return 11;
       if (name.includes('[설비]')) return 12;
+
+      if (name.includes('컴퓨터 일반')) return 40;
+      if (name.includes('스프레드시트 일반')) return 41;
+
       return 99;
     };
 

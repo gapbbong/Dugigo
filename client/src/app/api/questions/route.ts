@@ -27,7 +27,9 @@ export async function GET(req: NextRequest) {
       }
 
       // 폴더 내 모든 JSON 파일 읽기
-      const files = fs.readdirSync(dataDir).filter(file => file.endsWith('.json'));
+      const files = fs.readdirSync(dataDir).filter(file => 
+        file.endsWith('.json') && !file.includes('_CLEAN')
+      );
       let allQuestions: any[] = [];
 
       const classifyQuestion = (sub: string, q: any): string => {
@@ -114,7 +116,9 @@ export async function GET(req: NextRequest) {
         "전기이론": 30,
         "기계일반": 31,
         "승강기 개론": 32,
-        "승강기 점검 및 보수": 33
+        "승강기 점검 및 보수": 33,
+        "컴퓨터 일반": 40,
+        "스프레드시트 일반": 41
       };
 
       const sorted = allQuestions.sort((a, b) => {
