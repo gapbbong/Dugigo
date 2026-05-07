@@ -565,10 +565,17 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     const isSubject2 = currentQuestion.subject?.includes('스프레드시트') || currentQuestion.sub_unit?.includes('2과목') || currentQuestion.sub_unit?.startsWith('2');
                     const isPlaceholder = text.includes('이미지') && (text.includes('없음') || text.includes('불가') || text.includes('지문')) || text.length < 10 || text.trim() === '';
                     
-                    // 핵심 로직: 2과목이 아니고, 그림이 필요 없으며, 텍스트가 정상적인 경우에만 이미지를 숨김
-                    if (!isSubject2 && !isDiagramNeeded && !isPlaceholder) {
-                      return null;
+                    // 선택지 기호(①, ② 등)가 텍스트에 이미 잘 있으면, 그림에 선택지가 포함된 스캔본은 숨김
+                    const hasChoicesInText = currentQuestion.choices && currentQuestion.choices.length > 0;
+                    
+                    // 핵심 로직: 
+                    // 1. 2과목이더라도 그림/표 키워드가 없으면 일단 의심
+                    // 2. 텍스트가 멀쩡한데 굳이 스캔본을 보여줄 필요 없음 (단, 진짜 다이어그램은 제외)
+                    if (!isDiagramNeeded && !isPlaceholder) {
+                      if (!isSubject2) return null; // 1과목은 무조건 숨김
+                      if (hasChoicesInText) return null; // 2과목도 텍스트 선택지가 있으면 스캔본은 숨김
                     }
+                    
                     imgSrc = `/summaries/컴퓨터활용능력 2급/${imgName}`;
                   } else {
                     imgSrc = `/images/exams/${currentQuestion.year}_${currentQuestion.round}/${imgName}`;
