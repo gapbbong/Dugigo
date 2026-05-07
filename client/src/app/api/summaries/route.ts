@@ -51,17 +51,51 @@ export async function GET(req: NextRequest) {
     const dataDir = path.join(process.cwd(), 'src', 'data', subject);
     let dbPath = path.join(dataDir, 'MASTER_DB.json');
     if (!fs.existsSync(dbPath)) {
+      dbPath = path.join(dataDir, 'Literacy2_MASTER_DB.json');
+    }
+    if (!fs.existsSync(dbPath)) {
       dbPath = path.join(dataDir, 'history_master.json');
     }
 
     let contextQuestions = "";
     if (fs.existsSync(dbPath)) {
       const dbContent = JSON.parse(fs.readFileSync(dbPath, 'utf-8'));
-      const allQuestions = Array.isArray(dbContent) ? dbContent : (dbContent.questions || []);
+      let allQuestions = Array.isArray(dbContent) ? dbContent : (dbContent.questions || []);
       
-      // 해당 단원 문제 필터링 (간략화를 위해 상위 10개 정도만 컨텍스트로 사용)
+      // 재분류 로직 (Iron Wall Classification과 동기화)
+      const classify = (q: any) => {
+        const text = ((q.question || '') + ' ' + (q.explanation || '')).toLowerCase();
+        const isSubject1 = q.subject === "컴퓨터 일반" || (q.round_info && q.round_info.includes('컴'));
+        if (subject === '컴퓨터활용능력 2급') {
+          if (isSubject1) {
+            if (/윈도우|windows|바로 가기|제어판|탐색기|작업 표시줄|부팅|레지스트리/.test(text)) return "[1과목] 운영체제(Windows) 활용";
+            if (/폴더|파일|휴지통|속성|검색/.test(text)) return "[1과목] 폴더 및 파일 관리";
+            if (/cpu|중앙처리장치|메모리|ram|rom|보조기억|ssd|hdd|usb|바이오스|bios|메인보드|입출력/.test(text)) return "[1과목] 컴퓨터 하드웨어 시스템";
+            if (/비트|바이트|워드|진법|자료|코드|ascii|unicode|유니코드/.test(text)) return "[1과목] 소프트웨어 및 데이터 표현";
+            if (/멀티미디어|그래픽|이미지|동영상|사운드|오디오|코덱|비선형/.test(text)) return "[1과목] 멀티미디어 활용";
+            if (/인터넷|url|ip|tcp|프로토콜|osi|브라우저|도메인|인트라넷|ftp/.test(text)) return "[1과목] 인터넷 및 네트워크";
+            if (/보안|바이러스|침해|암호|해킹|방화벽|변조|위조/.test(text)) return "[1과목] 정보 보안 및 ICT 기술";
+            return "[1과목] 컴퓨터 일반 기타";
+          } else {
+            if (/셀 서식|사용자 정의|보호|시트|워크시트|통합 문서|데이터 입력/.test(text)) return "[2과목] 워크시트 및 기본 작업";
+            if (/조건부 서식|필터|정렬|유효성/.test(text)) return "[2과목] 서식 및 데이터 제어";
+            if (/함수|수식|연산자|계산|sum|average|count|max|min|if|rank|today|now/.test(text)) return "[2과목] 계산 함수 활용";
+            if (/vlookup|hlookup|match|index|choose|dsum|daverage|left|right|mid/.test(text)) return "[2과목] 찾기 및 데이터베이스 함수";
+            if (/부분합|피벗|시나리오|목표값|통합/.test(text)) return "[2과목] 데이터 분석 및 도구";
+            if (/차트|그래프|구성 요소|추세선/.test(text)) return "[2과목] 차트 활용 및 편집";
+            if (/페이지 설정|인쇄|머리글|바닥글|매크로|vba|모듈|프로시저/.test(text)) return "[2과목] 출력 및 매크로/VBA";
+            return "[2과목] 스프레드시트 기타";
+          }
+        }
+        return q.sub_unit || "";
+      };
+
+      // 해당 단원 문제 필터링
       const filtered = allQuestions
-        .filter((q: any) => q.sub_unit === unit || !unit)
+        .filter((q: any) => {
+          const qUnit = classify(q);
+          return qUnit === unit || !unit;
+        })
         .slice((parseInt(set) - 1) * 10, parseInt(set) * 10);
       contextQuestions = JSON.stringify(filtered);
     }
@@ -69,7 +103,7 @@ export async function GET(req: NextRequest) {
     const genAI = new GoogleGenerativeAI(getApiKey());
     const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
 
-    // 전기기능사 전용 고도화 프롬프트
+    // 컴활 2급 전용 프롬프트 추가
     const subjectPrompt = subject.includes('전기') ? `
       [전기기능사 특화 규칙]
       1. **단원별 스타일 적용**:
@@ -78,6 +112,11 @@ export async function GET(req: NextRequest) {
          - '전기설비': 시공과 안전 중심의 'Process' 스타일. 체크리스트나 단계별 가이드를 제공하세요.
       2. **수식 표현**: 반드시 KaTeX 형식(예: $V=IR$)을 사용하고, 복잡한 식은 변수별로 색상이나 비유를 들어 해부하세요.
       3. **직관적 비유**: 전압은 수압, 전류는 물의 양처럼 전기가 눈에 보이듯 설명하세요.
+    ` : subject.includes('컴퓨터활용능력') ? `
+      [컴활 2급 특화 규칙]
+      1. **시각적 가이드**: 엑셀의 메뉴 경로나 단축키는 'Step-by-Step'으로 명확히 설명하세요.
+      2. **비유와 예시**: 함수 설명 시 실생활 예시(예: VLOOKUP은 도서관에서 책 찾기)를 들어 이해를 돕습니다.
+      3. **핵심 암기**: 1과목은 '두문자 암기법'이나 '비교표'를, 2과목은 '함수 구조도'를 적극 활용하세요.
     ` : '';
 
     const prompt = `

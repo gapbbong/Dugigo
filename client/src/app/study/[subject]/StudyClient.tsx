@@ -89,10 +89,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     const fetchSummary = async () => {
       try {
         let fetchUnit = unitFilter;
-        // 컴퓨터활용능력 2급의 경우 세부 단원명이 바뀌었으므로 요약은 과목 단위로 가져옴
-        if (subject === '컴퓨터활용능력 2급') {
-          fetchUnit = unitFilter.includes('1과목') ? '컴퓨터 일반' : '스프레드시트 일반';
-        }
+        // 컴퓨터활용능력 2급도 이제 정밀 단원별로 요약을 가져옴
         
         const res = await fetch(`/api/summaries?subject=${encodeURIComponent(subject)}&unit=${encodeURIComponent(fetchUnit)}&set=${setNum}`);
         if (res.ok) {
