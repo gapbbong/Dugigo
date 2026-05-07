@@ -191,6 +191,56 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     fetchQuestions();
   }, [subject, unitFilter, rStart, rEnd, setNum, setSize, paramsReady]);
 
+  const remapExplanation = (text: string, mapping: number[]) => {
+    if (!text || !mapping) return text;
+    
+    // originalIndex -> newIndex 매핑 생성
+    const origToNew: { [key: number]: number } = {};
+    mapping.forEach((origIdx, newIdx) => {
+      origToNew[origIdx] = newIdx;
+    });
+
+    const circledNumbers = ['①', '②', '③', '④', '⑤'];
+    let result = text;
+
+    // ① -> __NEW__0__ 형태로 임시 치환 (중복 치환 방지)
+    circledNumbers.forEach((char, origIdx) => {
+      const newIdx = origToNew[origIdx];
+      if (newIdx !== undefined) {
+        result = result.replace(new RegExp(char, 'g'), `__NEW__${newIdx}__`);
+      }
+    });
+
+    // 1번 -> __NEWNUM__1__ 형태로 임시 치환
+    [1, 2, 3, 4, 5].forEach((num, idx) => {
+      const origIdx = idx;
+      const newIdx = origToNew[origIdx];
+      if (newIdx !== undefined) {
+        result = result.replace(new RegExp(`${num}번`, 'g'), `__NEWNUM__${newIdx + 1}__`);
+      }
+    });
+
+    // 정답: 1 -> __ANSWER__1__ 형태로 임시 치환
+    [1, 2, 3, 4, 5].forEach((num, idx) => {
+      const origIdx = idx;
+      const newIdx = origToNew[origIdx];
+      if (newIdx !== undefined) {
+        result = result.replace(new RegExp(`정답\\s*:\\s*${num}`, 'g'), `__ANSWER__${newIdx + 1}__`);
+      }
+    });
+
+    // 최종적으로 새 번호로 확정
+    circledNumbers.forEach((char, newIdx) => {
+      result = result.replace(new RegExp(`__NEW__${newIdx}__`, 'g'), char);
+      result = result.replace(new RegExp(`__NEWNUM__${newIdx + 1}__`, 'g'), `${newIdx + 1}번`);
+    });
+    [1, 2, 3, 4, 5].forEach((num) => {
+      result = result.replace(new RegExp(`__ANSWER__${num}__`, 'g'), `정답: ${num}`);
+    });
+
+    return result;
+  };
+
   const currentQuestion = questions[currentIndex];
   const isAnswered = currentQuestion?.selectedIndex !== null && currentQuestion?.selectedIndex !== undefined;
   const isLastQuestion = currentIndex === questions.length - 1;
@@ -633,8 +683,14 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                       <div className="p-6 md:p-8 bg-white border-t border-slate-100">
                         <p className="text-xs md:text-base font-black uppercase tracking-widest text-slate-900 mb-1.5">해설</p>
                         <div className="space-y-0.5 explanation-table">
-                          {currentQuestion.explanation.includes('<table') ? (<div dangerouslySetInnerHTML={{ __html: currentQuestion.explanation }} />) : (
-                            currentQuestion.explanation.split('\n').map((line: string, i: number) => (<p key={i} className="leading-relaxed text-sm md:text-xl font-bold">{renderMath(line)}</p>))
+                          {currentQuestion.explanation.includes('<table') ? (
+                            <div dangerouslySetInnerHTML={{ __html: remapExplanation(currentQuestion.explanation, currentQuestion.shuffledOptionsIdx) }} />
+                          ) : (
+                            remapExplanation(currentQuestion.explanation, currentQuestion.shuffledOptionsIdx)
+                              .split('\n')
+                              .map((line: string, i: number) => (
+                                <p key={i} className="leading-relaxed text-sm md:text-xl font-bold">{renderMath(line)}</p>
+                              ))
                           )}
                         </div>
                       </div>
