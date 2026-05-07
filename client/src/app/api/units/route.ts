@@ -72,11 +72,11 @@ export async function GET(req: NextRequest) {
           const subUnit = classifyQuestion(subject, q);
           unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
 
-          // 연도별 기출 집계 추가 (year와 round가 있는 경우)
+          // 연도별 기출 집계 추가 (연도가 없으면 회차만이라도 표시)
           const y = q.year || data.year;
-          const r = q.round || data.round;
-          if (y && r) {
-            const examKey = `${y}년 ${r}회`;
+          const r = q.round || data.round || q.id?.split('_')[1];
+          if (r) {
+            const examKey = y ? `${y}년 ${r}회` : `${r}회 기출`;
             examsMap.set(examKey, (examsMap.get(examKey) || 0) + 1);
           }
         });
@@ -85,12 +85,14 @@ export async function GET(req: NextRequest) {
       }
     });
 
-    // 연도별 기출 정렬 (최신순)
     const sortedExams = Array.from(examsMap.entries())
       .map(([name, count]) => ({ name, count }))
-      .sort((a, b) => b.name.localeCompare(a.name));
+      .sort((a, b) => {
+        const numA = parseInt(a.name.replace(/\D/g, '')) || 0;
+        const numB = parseInt(b.name.replace(/\D/g, '')) || 0;
+        return numB - numA;
+      });
 
-    // 시대별/단원별 가중치 부여하여 정렬
     const getWeight = (name: string): number => {
       if (name === "선사시대 및 국가의 형성") return 1;
       if (name === "고대 사회 (삼국~남북국)") return 2;
@@ -114,8 +116,8 @@ export async function GET(req: NextRequest) {
       return a[0].localeCompare(b[0]);
     });
 
-    // 150문항(5세트) 초과 단원 쪼개기 로직
-    const MAX_PER_UNIT = 150;
+    // 단원 쪼개기 로직 (한국사는 쪼개지 않고 전체 노출)
+    const MAX_PER_UNIT = (subject === '한국사검정시험' || subject === '한국사능력검정시험') ? 9999 : 150;
     const finalUnits: { 
       name: string; 
       count: number; 
