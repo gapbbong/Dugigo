@@ -120,8 +120,9 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             });
           }
 
-          if (rStart !== null && rEnd !== null) filtered = filtered.slice(parseInt(rStart), parseInt(rEnd));
-          if (setNum && setSize) {
+          if (rStart !== null && rEnd !== null) {
+            filtered = filtered.slice(parseInt(rStart), parseInt(rEnd));
+          } else if (setNum && setSize) {
             const startIdx = (parseInt(setNum) - 1) * parseInt(setSize);
             filtered = filtered.slice(startIdx, startIdx + parseInt(setSize));
           }

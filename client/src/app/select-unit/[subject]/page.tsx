@@ -167,14 +167,19 @@ export default function SelectUnitPage() {
                     <div className="flex-1 flex items-center justify-center">
                       <div className="grid grid-cols-3 gap-3 w-full">
                         {Array.from({ length: unitSetCount }).map((_, sIdx) => {
-                          const localSetNumber = sIdx + 1;
+                          const currentSetNumber = runningSetCount++;
+                          const localStart = sIdx * setSize;
+                          const localEnd = (sIdx + 1) * setSize;
                           return (
                             <button
                               key={sIdx}
-                              onClick={() => handleSelectUnit(unit, localSetNumber)}
+                              onClick={() => {
+                                const unitName = unit.originalName || unit.name;
+                                router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unitName)}&set=${currentSetNumber}&size=${setSize}&rStart=${localStart}&rEnd=${localEnd}`);
+                              }}
                               className="py-2.5 bg-white border-2 border-slate-50 rounded-2xl text-slate-500 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50/50 transition-all shadow-sm flex flex-col items-center justify-center leading-none gap-1"
                             >
-                              <span className="text-xl font-black">{localSetNumber}</span>
+                              <span className="text-xl font-black">{currentSetNumber}</span>
                               <span className="text-[9px] font-bold text-slate-400 uppercase">세트</span>
                             </button>
                           );
