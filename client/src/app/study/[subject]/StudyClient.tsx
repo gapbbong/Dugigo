@@ -111,7 +111,13 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           const roundFilter = searchParamsProps?.round || null;
 
           if (unitFilter) {
-            filtered = data.questions.filter((q: any) => q.sub_unit === unitFilter);
+            // 전기기능사 등의 UI 접두사([이론] 등) 제거 후 필터링
+            const cleanUnitFilter = unitFilter.replace(/^\[.*?\]\s*/, '');
+            filtered = data.questions.filter((q: any) => {
+              // 질문 데이터의 sub_unit이 정제된 필터와 맞는지 확인
+              const qSubUnit = q.sub_unit?.replace(/^\[.*?\]\s*/, '') || '';
+              return qSubUnit === cleanUnitFilter || q.sub_unit === unitFilter;
+            });
           } else if (roundFilter) {
             // 연도(year) 필터가 없어도 회차(round)만으로도 필터링 가능하게 수정
             filtered = data.questions.filter((q: any) => {
