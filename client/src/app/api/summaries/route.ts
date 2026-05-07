@@ -69,14 +69,27 @@ export async function GET(req: NextRequest) {
     const genAI = new GoogleGenerativeAI(getApiKey());
     const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
 
+    // 전기기능사 전용 고도화 프롬프트
+    const subjectPrompt = subject.includes('전기') ? `
+      [전기기능사 특화 규칙]
+      1. **단원별 스타일 적용**:
+         - '전기이론': 수식과 회로도가 중심인 'Formula' 스타일. SVG 코드로 간략한 회로도를 표현하세요.
+         - '전기기기': 구조와 원리 중심의 'Structure' 스타일. 부품별 역할을 'Component Breakdown'으로 설명하세요.
+         - '전기설비': 시공과 안전 중심의 'Process' 스타일. 체크리스트나 단계별 가이드를 제공하세요.
+      2. **수식 표현**: 반드시 KaTeX 형식(예: $V=IR$)을 사용하고, 복잡한 식은 변수별로 색상이나 비유를 들어 해부하세요.
+      3. **직관적 비유**: 전압은 수압, 전류는 물의 양처럼 전기가 눈에 보이듯 설명하세요.
+    ` : '';
+
     const prompt = `
-      당신은 자격증 학습을 돕는 전문 교육 콘텐츠 제작자입니다.
+      당신은 전기/기술 자격증 학습을 돕는 국내 최고의 교육 콘텐츠 제작자입니다.
       제공된 문제를 바탕으로 '${subject}' 과목의 '${unit}' 단원 '${set}세트'를 위한 핵심 요약 슬라이드 10장 내외를 생성하세요.
 
+      ${subjectPrompt}
+
       [반드시 준수해야 할 규칙]
-      1. **비유(Metaphor) 활용**: 어려운 개념을 일상적인 상황에 비유하여 설명하세요.
-      2. **이미지 경로**: 'image' 필드는 "/summaries/${subject}/${safeUnitName}_${set}_slide_{id}.png" 형식으로 지정하세요.
-      3. **구조**: 반드시 유효한 JSON 형식으로만 응답하세요. 다른 설명은 하지 마세요.
+      1. **이미지 경로**: 'image' 필드는 "/summaries/${subject}/${safeUnitName}_${set}_slide_{id}.png" 형식으로 지정하세요.
+      2. **SVG 지원**: 'svg_overlay' 필드에 학습 내용과 관련된 간단한 회로도나 다이어그램을 나타내는 SVG 코드를 포함할 수 있습니다.
+      3. **구조**: 반드시 유효한 JSON 형식으로만 응답하세요.
 
       [입력 데이터 (기출문제)]
       ${contextQuestions}
@@ -89,11 +102,16 @@ export async function GET(req: NextRequest) {
         "slides": [
           {
             "id": 1,
+            "style": "Formula | Structure | Process",
             "image": "/summaries/${subject}/${safeUnitName}_${set}_slide_1.png",
+            "svg_overlay": "<svg>...</svg>",
             "title": "슬라이드 제목",
             "content": "비유를 섞은 친절한 설명",
             "visual": "이미지 생성용 상세 묘사 (실사 풍)",
-            "exam_point": "시험 출제 포인트 및 풀이 팁"
+            "exam_point": "시험 출제 포인트 및 풀이 팁",
+            "components": [
+               { "name": "변수/부품명", "desc": "설명/비유" }
+            ]
           }
         ]
       }
