@@ -66,11 +66,12 @@ export default function SelectUnitPage() {
   };
 
   const handleSelectExam = (exam: Exam) => {
-    const match = exam.name.match(/(\d+)년\s+(\d+)회/);
+    // '2024년 77회' 또는 '63회 기출'에서 숫자만 추출
+    const match = exam.name.match(/(\d+)/g);
     if (match) {
-      const year = match[1];
-      const round = match[2];
-      router.push(`/study/${encodeURIComponent(subject)}?year=${year}&round=${round}`);
+      // 가장 마지막에 나오는 숫자를 회차(round)로 간주
+      const round = match[match.length - 1];
+      router.push(`/study/${encodeURIComponent(subject)}?round=${round}`);
     }
   };
 
@@ -204,15 +205,17 @@ export default function SelectUnitPage() {
                   key={exam.name}
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  whileTap={{ scale: 0.95 }}
                   transition={{ delay: 0.1 + idx * 0.03 }}
                   onClick={() => handleSelectExam(exam)}
-                  className="glass-card p-8 rounded-[2rem] cursor-pointer hover:bg-indigo-50/50 hover:border-indigo-300 hover:shadow-xl transition-all group flex flex-col items-center text-center gap-4 border border-white/60"
+                  className="glass-card p-8 rounded-[2rem] cursor-pointer hover:bg-brand-50/50 hover:border-brand-300 hover:shadow-xl transition-all group flex flex-col items-center text-center gap-4 border border-white/60"
                 >
-                  <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 font-black text-sm border-2 border-indigo-100/50">
+                  <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 font-black text-sm border-2 border-indigo-100/50 group-hover:bg-brand-600 group-hover:text-white transition-colors">
                     {currentIndex.toString().padStart(2, '0')}
                   </div>
                   <div className="space-y-1">
-                    <h4 className="text-xl font-black text-slate-800">{exam.name}</h4>
+                    <h4 className="text-xl font-black text-slate-800 group-hover:text-brand-600 transition-colors">{exam.name}</h4>
                     <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">{exam.count}문항</p>
                   </div>
                 </motion.div>
