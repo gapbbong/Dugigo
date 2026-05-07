@@ -562,16 +562,12 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     // 컴퓨터활용능력 2급: 텍스트 중복 스캔 이미지 필터링
                     const text = (currentQuestion.question || '').toLowerCase();
                     const isDiagramNeeded = /그림|표|다음과 같이|아래와 같이|화면|설정|대화 상자|차트/.test(text);
-                    const isSubject2 = currentQuestion.subject?.includes('스프레드시트') || currentQuestion.sub_unit?.includes('2과목');
-                    const isPlaceholder = text.includes('이미지') && (text.includes('없음') || text.includes('불가') || text.includes('지문'));
+                    const isSubject2 = currentQuestion.subject?.includes('스프레드시트') || currentQuestion.sub_unit?.includes('2과목') || currentQuestion.sub_unit?.startsWith('2');
+                    const isPlaceholder = text.includes('이미지') && (text.includes('없음') || text.includes('불가') || text.includes('지문')) || text.length < 10 || text.trim() === '';
                     
-                    // 1과목(컴퓨터 일반)은 이미지 미스매치가 많으므로 다이어그램이 확실히 필요한 경우 외엔 숨김
+                    // 핵심 로직: 2과목이 아니고, 그림이 필요 없으며, 텍스트가 정상적인 경우에만 이미지를 숨김
                     if (!isSubject2 && !isDiagramNeeded && !isPlaceholder) {
                       return null;
-                    }
-                    
-                    if (!isDiagramNeeded && !isSubject2 && !isPlaceholder) {
-                      return null; // 텍스트가 잘 나온 문제는 스캔 이미지 숨김
                     }
                     imgSrc = `/summaries/컴퓨터활용능력 2급/${imgName}`;
                   } else {
