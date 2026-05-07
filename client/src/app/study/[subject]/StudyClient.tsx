@@ -342,7 +342,9 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const handleNextSet = () => {
     if (!setNum) return;
     const nextSet = parseInt(setNum) + 1;
-    router.push(`/study/${params.subject}?unit=${unitFilter || ''}&set=${nextSet}&size=${setSize || '30'}`);
+    // URL 변경 후 강제 새로고침으로 데이터 리로드 보장
+    const nextUrl = `/study/${params.subject}?unit=${encodeURIComponent(unitFilter || '')}&set=${nextSet}&size=${setSize || '30'}`;
+    window.location.href = nextUrl;
   };
 
   const handleNext = () => {
@@ -561,10 +563,15 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     const text = (currentQuestion.question || '').toLowerCase();
                     const isDiagramNeeded = /그림|표|다음과 같이|아래와 같이|화면|설정|대화 상자|차트/.test(text);
                     const isSubject2 = currentQuestion.subject?.includes('스프레드시트') || currentQuestion.sub_unit?.includes('2과목');
-                    const isPlaceholder = text.includes('이미지에 지문이 없습니다') || text.trim() === '';
+                    const isPlaceholder = text.includes('이미지') && (text.includes('없음') || text.includes('불가') || text.includes('지문'));
+                    
+                    // 1과목(컴퓨터 일반)은 이미지 미스매치가 많으므로 다이어그램이 확실히 필요한 경우 외엔 숨김
+                    if (!isSubject2 && !isDiagramNeeded && !isPlaceholder) {
+                      return null;
+                    }
                     
                     if (!isDiagramNeeded && !isSubject2 && !isPlaceholder) {
-                      return null; // 텍스트가 잘 나온 1과목 문제는 스캔 이미지 숨김
+                      return null; // 텍스트가 잘 나온 문제는 스캔 이미지 숨김
                     }
                     imgSrc = `/summaries/컴퓨터활용능력 2급/${imgName}`;
                   } else {
