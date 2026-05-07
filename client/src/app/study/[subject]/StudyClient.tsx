@@ -137,8 +137,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               .trim();
               
             filtered = data.questions.filter((q: any) => {
-              const qSubUnit = q.sub_unit?.replace(/^\[.*?\]\s*/, '').trim() || '';
-              return qSubUnit === cleanUnitFilter || q.sub_unit === unitFilter;
+              const qSubUnit = (q.subject || q.sub_unit || '').replace(/^\[.*?\]\s*/, '').trim();
+              return qSubUnit === cleanUnitFilter || q.sub_unit === unitFilter || q.subject === unitFilter;
             });
           } else if (roundFilter) {
             // 연도(year) 필터가 없어도 회차(round)만으로도 필터링 가능하게 수정
