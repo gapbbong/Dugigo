@@ -16,7 +16,8 @@ import {
   Home,
   Flag,
   X,
-  RotateCcw
+  RotateCcw,
+  BookOpen
 } from 'lucide-react';
 import 'katex/dist/katex.min.css';
 import { InlineMath as _InlineMath } from 'react-katex';
@@ -35,8 +36,24 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [answers, setAnswers] = useState<{questionId: string, isCorrect: boolean}[]>([]);
   const [startTime] = useState(Date.now());
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
-  const [showSummary, setShowSummary] = useState(true); // 처음 입장 시 요약 슬라이드 자동 표시
+  const [showSummary, setShowSummary] = useState(false); // 초기값은 false
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  // 처음 입장 시 '더 이상 보지 않기' 설정 확인 후 자동 표시
+  useEffect(() => {
+    const dontShow = localStorage.getItem(`dontShowSummary_${subject}`);
+    if (dontShow !== 'true') {
+      setShowSummary(true);
+    }
+  }, [subject]);
+
+  const toggleDontShow = (checked: boolean) => {
+    if (checked) {
+      localStorage.setItem(`dontShowSummary_${subject}`, 'true');
+    } else {
+      localStorage.removeItem(`dontShowSummary_${subject}`);
+    }
+  };
   const [isFinished, setIsFinished] = useState(false);
   const [direction, setDirection] = useState(0); // 1 for next, -1 for prev
 
@@ -447,7 +464,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                 }} 
                 className="px-3 py-1 md:px-5 md:py-2 bg-gradient-to-r from-brand-600 to-indigo-600 text-white text-[10px] md:text-sm font-black rounded-full shadow-lg shadow-brand-500/20 hover:scale-105 transition-all flex items-center gap-1.5 shrink-0"
               >
-                ✨ 요약
+                <BookOpen className="w-3 h-3 md:w-4 md:h-4" />
+                학습
               </button>
             )}
           </div>
@@ -791,29 +809,40 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
               {/* 하단 페이지네이션 인디케이터 */}
               <div className="px-6 py-4 md:px-10 md:py-8 border-t border-slate-100 bg-white flex items-center justify-between">
-                <div className="flex gap-1.5 md:gap-2">
-                  {slideData.map((_, i) => (
-                    <div 
-                      key={i} 
-                      onClick={() => setCurrentSlideIdx(i)}
-                      className={`h-1.5 md:h-2 rounded-full transition-all cursor-pointer ${i === currentSlideIdx ? 'w-6 md:w-10 bg-brand-600' : 'w-1.5 md:w-2 bg-slate-200 hover:bg-slate-300'}`}
-                    />
-                  ))}
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="text-xs md:text-sm font-bold text-slate-400">
+                <div className="flex items-center gap-6">
+                  <div className="flex gap-1.5 md:gap-2">
+                    {slideData.map((_, i) => (
+                      <div 
+                        key={i} 
+                        onClick={() => setCurrentSlideIdx(i)}
+                        className={`h-1.5 md:h-2 rounded-full transition-all cursor-pointer ${i === currentSlideIdx ? 'w-6 md:w-10 bg-brand-600' : 'w-1.5 md:w-2 bg-slate-200 hover:bg-slate-300'}`}
+                      />
+                    ))}
+                  </div>
+                  <div className="hidden md:block text-xs font-bold text-slate-400">
                     <span className="text-slate-900 font-black">{currentSlideIdx + 1}</span> / {slideData.length}
                   </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <label className="flex items-center gap-2 cursor-pointer group">
+                    <input 
+                      type="checkbox" 
+                      className="w-4 h-4 rounded border-slate-300 text-brand-600 focus:ring-brand-500 cursor-pointer"
+                      checked={hideAutoSummary}
+                      onChange={(e) => {
+                        const hideKey = `dugigo_hide_summary_${subject}_${unitFilter}_${setNum}`;
+                        localStorage.setItem(hideKey, e.target.checked ? 'true' : 'false');
+                        setHideAutoSummary(e.target.checked);
+                      }}
+                    />
+                    <span className="text-xs font-bold text-slate-500 group-hover:text-slate-700 transition-colors">공부 시작 시 자동으로 열지 않기</span>
+                  </label>
                   <button 
-                    onClick={() => {
-                      const hideKey = `dugigo_hide_summary_${subject}_${unitFilter}_${setNum}`;
-                      localStorage.setItem(hideKey, 'true');
-                      setHideAutoSummary(true);
-                      setAiSliderOpen(false);
-                    }}
-                    className="text-[10px] md:text-xs font-black text-slate-400 hover:text-slate-600 underline underline-offset-4"
+                    onClick={() => setAiSliderOpen(false)}
+                    className="px-6 py-3 bg-brand-600 text-white font-black rounded-xl hover:bg-brand-700 transition-all active:scale-95 text-sm"
                   >
-                    다시 보지 않기
+                    공부 시작하기
                   </button>
                 </div>
               </div>
