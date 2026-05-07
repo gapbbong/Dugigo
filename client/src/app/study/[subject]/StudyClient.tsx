@@ -35,6 +35,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [answers, setAnswers] = useState<{questionId: string, isCorrect: boolean}[]>([]);
   const [startTime] = useState(Date.now());
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const [showSummary, setShowSummary] = useState(true); // 처음 입장 시 요약 슬라이드 자동 표시
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
   const [direction, setDirection] = useState(0); // 1 for next, -1 for prev
 
