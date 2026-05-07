@@ -105,10 +105,12 @@ export async function GET(req: NextRequest) {
           fileQuestions = jsonData.questions;
         }
 
-        fileQuestions = fileQuestions.map(q => ({
-          ...q,
-          sub_unit: classifyQuestion(subject, q)
-        }));
+        fileQuestions = fileQuestions
+          .filter(q => (q.question && q.question.trim() !== '') || q.question_img || q.image)
+          .map(q => ({
+            ...q,
+            sub_unit: classifyQuestion(subject, q)
+          }));
 
         allQuestions = [...allQuestions, ...fileQuestions];
       });

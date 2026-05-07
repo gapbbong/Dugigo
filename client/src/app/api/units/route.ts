@@ -92,7 +92,7 @@ export async function GET(req: NextRequest) {
         const data = JSON.parse(fileContent);
         const questions = Array.isArray(data) ? data : (data.questions || []);
         
-        questions.forEach((q: any) => {
+        questions.filter((q: any) => (q.question && q.question.trim() !== '') || q.question_img || q.image).forEach((q: any) => {
           const subUnit = classifyQuestion(subject, q);
           unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
 
