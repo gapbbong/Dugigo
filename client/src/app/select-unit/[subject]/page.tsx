@@ -162,15 +162,26 @@ export default function SelectUnitPage() {
                     <div className="flex-1 flex items-center justify-center">
                       <div className="grid grid-cols-3 gap-3 w-full">
                         {Array.from({ length: unitSetCount }).map((_, sIdx) => {
-                          const currentSetNumber = runningSetCount++;
-                          const localStart = sIdx * setSize;
-                          const localEnd = (sIdx + 1) * setSize;
+                          const isHistory = subject === '한국사검정시험' || subject === '한국사능력검정시험';
+                          const currentSetNumber = isHistory ? runningSetCount++ : sIdx + 1;
+                          
                           return (
                             <button
                               key={sIdx}
                               onClick={() => {
                                 const unitName = unit.originalName || unit.name;
-                                router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unitName)}&set=${currentSetNumber}&size=${setSize}&rStart=${localStart}&rEnd=${localEnd}`);
+                                const baseParams = `unit=${encodeURIComponent(unitName)}&set=${currentSetNumber}&size=${setSize}`;
+                                
+                                if (isHistory) {
+                                  // 한국사는 전체 일련번호 매핑을 위해 rStart/rEnd 사용
+                                  const localStart = sIdx * setSize;
+                                  const localEnd = (sIdx + 1) * setSize;
+                                  router.push(`/study/${encodeURIComponent(subject)}?${baseParams}&rStart=${localStart}&rEnd=${localEnd}`);
+                                } else {
+                                  // 다른 과목은 기존 단원별 필터링 방식 유지
+                                  const rangeParams = unit.range ? `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}` : '';
+                                  router.push(`/study/${encodeURIComponent(subject)}?${baseParams}${rangeParams}`);
+                                }
                               }}
                               className="py-2.5 bg-white border-2 border-slate-50 rounded-2xl text-slate-500 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50/50 transition-all shadow-sm flex flex-col items-center justify-center leading-none gap-1"
                             >
