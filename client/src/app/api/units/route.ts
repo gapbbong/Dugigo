@@ -45,6 +45,18 @@ export async function GET(req: NextRequest) {
         return "[이론] 전기이론";
       }
 
+      if (sub === '한국사검정시험' || sub === '한국사능력검정시험') {
+        if (q.sub_unit) return q.sub_unit;
+        if (/구석기|신석기|청동기|철기|고조선|부여|고구려|옥저|동예|삼한|빗살무늬|고인돌|주먹도끼/.test(text) && !/백제|신라|고려|조선/.test(text)) return "선사시대 및 국가의 형성";
+        if (/백제|신라|통일신라|발해|가야|어라하|건흥|해동성국|골품|화랑|삼국/.test(text)) return "고대 사회 (삼국~남북국)";
+        if (/고려|광종|성종|공민왕|묘청|무신|몽골|거란|여진|전시과/.test(text)) return "중세 사회 (고려 시대)";
+        if (/조선|세종|정조|영조|임진왜란|병자호란|사화|붕당|대동법/.test(text)) return "근세~근대 태동기 (조선 시대)";
+        if (/강화도|개항|위정척사|동학|갑오개혁|독립협회|대한제국|아관파천/.test(text)) return "근대 사회의 전개 (개항기)";
+        if (/일제|독립|3·1|임시 정부|민족 말살|물산 장려|신간회|광복/.test(text)) return "일제 강점기";
+        if (/정부 수립|6·25|4·19|5·18|6월 민주 항쟁|민주화|통일/.test(text)) return "현대 사회의 발전";
+        return "기타 및 통합";
+      }
+
       return "기본 단원";
     };
 
@@ -60,9 +72,11 @@ export async function GET(req: NextRequest) {
           const subUnit = classifyQuestion(subject, q);
           unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
 
-          // 연도별 기출 집계 추가
-          if (q.year && q.round) {
-            const examKey = `${q.year}년 ${q.round}회`;
+          // 연도별 기출 집계 추가 (year와 round가 있는 경우)
+          const y = q.year || data.year;
+          const r = q.round || data.round;
+          if (y && r) {
+            const examKey = `${y}년 ${r}회`;
             examsMap.set(examKey, (examsMap.get(examKey) || 0) + 1);
           }
         });
@@ -76,19 +90,24 @@ export async function GET(req: NextRequest) {
       .map(([name, count]) => ({ name, count }))
       .sort((a, b) => b.name.localeCompare(a.name));
 
-    // 가나다 순으로 먼저 정렬
-    const sortedEntries = Array.from(unitMap.entries())
-      .sort((a, b) => a[0].localeCompare(b[0]));
-
-    // [이론] -> [기기] -> [설비] 순서로 가중치 부여하여 재정렬
+    // 시대별/단원별 가중치 부여하여 정렬
     const getWeight = (name: string): number => {
-      if (name.includes('[이론]')) return 1;
-      if (name.includes('[기기]')) return 2;
-      if (name.includes('[설비]')) return 3;
-      return 4;
+      if (name === "선사시대 및 국가의 형성") return 1;
+      if (name === "고대 사회 (삼국~남북국)") return 2;
+      if (name === "중세 사회 (고려 시대)") return 3;
+      if (name === "근세~근대 태동기 (조선 시대)") return 4;
+      if (name === "근대 사회의 전개 (개항기)") return 5;
+      if (name === "일제 강점기") return 6;
+      if (name === "현대 사회의 발전") return 7;
+      if (name === "기타 및 통합") return 8;
+
+      if (name.includes('[이론]')) return 10;
+      if (name.includes('[기기]')) return 11;
+      if (name.includes('[설비]')) return 12;
+      return 99;
     };
 
-    const prioritizedUnits = sortedEntries.sort((a, b) => {
+    const prioritizedUnits = Array.from(unitMap.entries()).sort((a, b) => {
       const wa = getWeight(a[0]);
       const wb = getWeight(b[0]);
       if (wa !== wb) return wa - wb;
