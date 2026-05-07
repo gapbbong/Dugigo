@@ -184,9 +184,9 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (['1', '2', '3', '4'].includes(e.key)) {
+      if (['1', '2', '3', '4', '5'].includes(e.key)) {
         const idx = parseInt(e.key) - 1;
-        if (!isAnswered && currentQuestion?.choices?.[idx] !== "") {
+        if (!isAnswered && currentQuestion?.shuffledOptions?.[idx]) {
           handleAnswer(idx);
         }
       }
@@ -484,215 +484,131 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   </motion.div>
                 );
               })()}
-            </motion.div>
-          )}
 
-            {/* 선택지 */}
-            <div className="grid grid-cols-1 gap-4 md:gap-8">
-              {currentQuestion.shuffledOptions.map((choice: string, idx: number) => {
-                const isSelected = currentQuestion.selectedIndex === idx;
-                const isCorrect = idx === currentQuestion.correctShuffledIndex;
-                const isAnswered = currentQuestion.selectedIndex !== null;
-                if (choice === "" && idx > 0) return null;
-                let styleStr = "glass-card bg-white/50 hover:bg-white text-slate-700 hover:text-brand-600 cursor-pointer";
-                if (isAnswered) {
-                  if (isCorrect) styleStr = "bg-emerald-50 text-emerald-700 border-emerald-300 shadow-[0_0_20px_rgba(16,185,129,0.15)] ring-1 ring-emerald-400 scale-[1.01]";
-                  else if (isSelected) styleStr = "bg-rose-50 text-rose-600 border-rose-200 ring-1 ring-rose-400 opacity-80";
-                  else styleStr = "opacity-35 grayscale pointer-events-none";
-                }
-                return (
-                  <motion.button key={idx} whileTap={!isAnswered ? { scale: 0.98 } : {}} disabled={isAnswered} onClick={() => handleAnswer(idx)} className={`group w-full px-3 py-2 md:px-8 md:py-5 rounded-2xl md:rounded-[2rem] border-2 flex items-center gap-3 md:gap-6 transition-all duration-300 text-left relative overflow-hidden ${styleStr}`}>
-                    <div className={`w-7 h-7 md:w-10 md:h-10 shrink-0 rounded-xl md:rounded-2xl flex items-center justify-center font-black text-sm md:text-base transition-all shadow-sm ${isAnswered ? (isCorrect ? 'bg-emerald-500 text-white' : isSelected ? 'bg-rose-500 text-white' : 'bg-slate-100 text-slate-400') : 'bg-brand-50 text-brand-600 group-hover:bg-brand-600 group-hover:text-white'}`}>
-                      {isAnswered && isCorrect ? <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5" /> : isAnswered && isSelected && !isCorrect ? <XCircle className="w-4 h-4 md:w-5 md:h-5" /> : idx + 1}
-                    </div>
-                    <span className="text-base md:text-xl font-bold flex-1 leading-relaxed flex flex-col gap-3">
-                      {choice.endsWith('.webp') ? (
-                        <div className="flex justify-center py-2">
+              {/* 선택지 */}
+              <div className="grid grid-cols-1 gap-4 md:gap-8 mt-8">
+                {currentQuestion.shuffledOptions.map((choice: string, idx: number) => {
+                  const isSelected = currentQuestion.selectedIndex === idx;
+                  const isCorrect = idx === currentQuestion.correctShuffledIndex;
+                  const isAnswered = currentQuestion.selectedIndex !== null;
+                  if (choice === "" && idx > 0) return null;
+                  let styleStr = "glass-card bg-white/50 hover:bg-white text-slate-700 hover:text-brand-600 cursor-pointer";
+                  if (isAnswered) {
+                    if (isCorrect) styleStr = "bg-emerald-50 text-emerald-700 border-emerald-300 shadow-[0_0_20px_rgba(16,185,129,0.15)] ring-1 ring-emerald-400 scale-[1.01]";
+                    else if (isSelected) styleStr = "bg-rose-50 text-rose-600 border-rose-200 ring-1 ring-rose-400 opacity-80";
+                    else styleStr = "opacity-35 grayscale pointer-events-none";
+                  }
+                  return (
+                    <motion.button key={idx} whileTap={!isAnswered ? { scale: 0.98 } : {}} disabled={isAnswered} onClick={() => handleAnswer(idx)} className={`group w-full px-3 py-2 md:px-8 md:py-5 rounded-2xl md:rounded-[2rem] border-2 flex items-center gap-3 md:gap-6 transition-all duration-300 text-left relative overflow-hidden ${styleStr}`}>
+                      <div className={`w-7 h-7 md:w-10 md:h-10 shrink-0 rounded-xl md:rounded-2xl flex items-center justify-center font-black text-sm md:text-base transition-all shadow-sm ${isAnswered ? (isCorrect ? 'bg-emerald-500 text-white' : isSelected ? 'bg-rose-500 text-white' : 'bg-slate-100 text-slate-400') : 'bg-brand-50 text-brand-600 group-hover:bg-brand-600 group-hover:text-white'}`}>
+                        {isAnswered && isCorrect ? <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5" /> : isAnswered && isSelected && !isCorrect ? <XCircle className="w-4 h-4 md:w-5 md:h-5" /> : idx + 1}
+                      </div>
+                      <span className="text-base md:text-xl font-bold flex-1 leading-relaxed flex flex-col gap-3">
+                        {choice.endsWith('.webp') ? (
+                          <div className="flex justify-center py-2">
+                            <img 
+                              src={choice.startsWith('/') ? choice : (choice.startsWith('history_') ? `/summaries/한국사검정시험/${choice}` : choice)} 
+                              alt={`Choice ${idx + 1}`}
+                              className="max-h-[140px] md:max-h-[250px] object-contain rounded-xl"
+                              onError={(e) => { (e.target as HTMLElement).parentElement!.style.display = 'none'; }}
+                            />
+                          </div>
+                        ) : (
+                          renderMath(choice)
+                        )}
+                        {choice.includes('그림') && (
                           <img 
-                            src={choice.startsWith('/') ? choice : (choice.startsWith('history_') ? `/summaries/한국사검정시험/${choice}` : choice)} 
+                            src={`/images/exams/${currentQuestion.year}_${currentQuestion.round}/${currentQuestion.year}_${currentQuestion.round}_${currentQuestion.number || currentQuestion.question_num}_choice${(currentQuestion.shuffledOptionsIdx?.[idx] ?? idx) + 1}.webp`} 
                             alt={`Choice ${idx + 1}`}
-                            className="max-h-[140px] md:max-h-[250px] object-contain rounded-xl"
-                            onError={(e) => { (e.target as HTMLElement).parentElement!.style.display = 'none'; }}
+                            className="max-h-[140px] md:max-h-[180px] object-contain rounded-xl border border-slate-200/60 p-2 bg-white/80 shadow-sm"
+                            onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
                           />
-                        </div>
-                      ) : (
-                        renderMath(choice)
-                      )}
-                      {choice.includes('그림') && (
-                        <img 
-                          src={`/images/exams/${currentQuestion.year}_${currentQuestion.round}/${currentQuestion.year}_${currentQuestion.round}_${currentQuestion.number || currentQuestion.question_num}_choice${(currentQuestion.shuffledOptionsIdx?.[idx] ?? idx) + 1}.webp`} 
-                          alt={`Choice ${idx + 1}`}
-                          className="max-h-[140px] md:max-h-[180px] object-contain rounded-xl border border-slate-200/60 p-2 bg-white/80 shadow-sm"
-                          onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
-                        />
-                      )}
-                    </span>
-                  </motion.button>
-                );
-              })}
-            </div>
+                        )}
+                      </span>
+                    </motion.button>
+                  );
+                })}
+              </div>
 
-            {/* 모바일 하단 이동 버튼 (선택지 바로 밑) */}
-            <div className="flex md:hidden items-center justify-between gap-4 mt-3 px-2">
-              {currentIndex > 0 ? (
-                <button 
-                  onClick={handlePrev} 
-                  className="w-14 h-14 rounded-full flex items-center justify-center bg-white border-2 border-slate-200 text-slate-400 active:scale-90 transition-all shadow-sm"
-                >
-                  <ChevronLeft className="w-6 h-6" />
-                </button>
-              ) : <div className="w-14 h-14" />}
+              {/* 모바일 하단 이동 버튼 (선택지 바로 밑) */}
+              <div className="flex md:hidden items-center justify-between gap-4 mt-3 px-2">
+                {currentIndex > 0 ? (
+                  <button 
+                    onClick={handlePrev} 
+                    className="w-14 h-14 rounded-full flex items-center justify-center bg-white border-2 border-slate-200 text-slate-400 active:scale-90 transition-all shadow-sm"
+                  >
+                    <ChevronLeft className="w-6 h-6" />
+                  </button>
+                ) : <div className="w-14 h-14" />}
+                <AnimatePresence>
+                  {currentQuestion.selectedIndex !== null && (
+                    <motion.button initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} onClick={handleNext} className="w-14 h-14 rounded-full bg-brand-600 text-white flex items-center justify-center shadow-lg shadow-brand-500/30 active:scale-95 transition-all">
+                      <ChevronRight className="w-7 h-7" />
+                    </motion.button>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* 정오 결과 + 해설 배너 */}
               <AnimatePresence>
                 {currentQuestion.selectedIndex !== null && (
-                  <motion.button initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} onClick={handleNext} className="w-14 h-14 rounded-full bg-brand-600 text-white flex items-center justify-center shadow-lg shadow-brand-500/30 active:scale-95 transition-all">
-                    <ChevronRight className="w-7 h-7" />
-                  </motion.button>
+                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={`mt-3 md:mt-4 rounded-3xl overflow-hidden border-2 ${currentQuestion.isCurrentCorrect ? 'border-emerald-200' : 'border-rose-200'} bg-white shadow-xl shadow-black/5`}>
+                    <div className={`px-6 py-4 md:px-8 md:py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 ${currentQuestion.isCurrentCorrect ? 'bg-emerald-50/50' : 'bg-rose-50/50'}`}>
+                      <div className="flex items-center gap-4">
+                        {currentQuestion.isCurrentCorrect && (
+                          <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center shrink-0 bg-emerald-100 text-emerald-600">
+                            <CheckCircle2 className="w-8 h-8 md:w-10 md:h-10" />
+                          </div>
+                        )}
+                        <div>
+                          {currentQuestion.isCurrentCorrect ? (
+                            (() => {
+                              const praises = [
+                                "완벽하게 이해하셨네요 👏",
+                                "대단해요! 아주 정확합니다 🎯",
+                                "훌륭합니다! 💯",
+                                "정확해요! 이 기세로 계속 가봐요 🚀",
+                                "정말 잘하셨어요! 🌟",
+                                "완벽해요! 핵심을 찌르셨네요 ✨",
+                                "대정답! 찰떡같이 맞추셨네요 🎉",
+                                "아주 좋아요! 개념이 꽉 잡혀있네요 👍",
+                                "최고예요! 폼 미쳤다 🤩",
+                                "정답입니다! 승강기 마스터가 눈앞에 🏆"
+                              ];
+                              const praiseText = praises[currentIndex % praises.length];
+                              return (
+                                <>
+                                  <h4 className="text-xl md:text-2xl font-black mb-1 text-emerald-700">정답입니다!</h4>
+                                  <p className="text-sm md:text-base font-bold text-emerald-600">{praiseText}</p>
+                                </>
+                              );
+                            })()
+                          ) : (
+                            <p className="text-xl md:text-3xl font-black text-rose-700 py-1 md:py-2 leading-relaxed word-break-keep-all">
+                              정답은 [ {currentQuestion.shuffledOptions[currentQuestion.correctShuffledIndex]} ] 입니다. 💪
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                    {currentQuestion.explanation && (
+                      <div className="p-6 md:p-8 bg-white border-t border-slate-100">
+                        <p className="text-xs md:text-base font-black uppercase tracking-widest text-slate-900 mb-1.5">해설</p>
+                        <div className="space-y-0.5 explanation-table">
+                          {currentQuestion.explanation.includes('<table') ? (<div dangerouslySetInnerHTML={{ __html: currentQuestion.explanation }} />) : (
+                            currentQuestion.explanation.split('\n').map((line: string, i: number) => (<p key={i} className="leading-relaxed text-sm md:text-xl font-bold">{renderMath(line)}</p>))
+                          )}
+                        </div>
+                      </div>
+                    )}
+                    <div className={`px-4 py-2 flex justify-end ${currentQuestion.isCurrentCorrect ? 'bg-emerald-50' : 'bg-rose-50'} border-t ${currentQuestion.isCurrentCorrect ? 'border-emerald-100' : 'border-rose-100'}`}>
+                      <button onClick={() => setReportOpen(true)} className="flex items-center gap-1.5 text-xs md:text-base font-black text-slate-500 hover:text-rose-500 transition-colors"><Flag className="w-3.5 h-3.5 md:w-4 h-4" /> 문항 오류 신고</button>
+                    </div>
+                  </motion.div>
                 )}
               </AnimatePresence>
-            </div>
-
-            {/* 정오 결과 + 해설 배너 */}
-            <AnimatePresence>
-              {currentQuestion.selectedIndex !== null && (
-                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={`mt-3 md:mt-4 rounded-3xl overflow-hidden border-2 ${currentQuestion.isCurrentCorrect ? 'border-emerald-200' : 'border-rose-200'} bg-white shadow-xl shadow-black/5`}>
-                  <div className={`px-6 py-4 md:px-8 md:py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 ${currentQuestion.isCurrentCorrect ? 'bg-emerald-50/50' : 'bg-rose-50/50'}`}>
-                    <div className="flex items-center gap-4">
-                      {currentQuestion.isCurrentCorrect && (
-                        <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center shrink-0 bg-emerald-100 text-emerald-600">
-                          <CheckCircle2 className="w-8 h-8 md:w-10 md:h-10" />
-                        </div>
-                      )}
-                      <div>
-                        {currentQuestion.isCurrentCorrect ? (
-                          (() => {
-                                                        const praises = [
-  "완벽하게 이해하셨네요 👏",
-  "대단해요! 아주 정확합니다 🎯",
-  "훌륭합니다! 💯",
-  "정확해요! 이 기세로 계속 가봐요 🚀",
-  "정말 잘하셨어요! 🌟",
-  "완벽해요! 핵심을 찌르셨네요 ✨",
-  "대정답! 찰떡같이 맞추셨네요 🎉",
-  "아주 좋아요! 개념이 꽉 잡혀있네요 👍",
-  "최고예요! 폼 미쳤다 🤩",
-  "정답입니다! 승강기 마스터가 눈앞에 🏆",
-  "기가 막힌 정답입니다 👏",
-  "이해력이 쏙쏙! 완벽해요 💡",
-  "틀림없는 정답! 훌륭해요 🎯",
-  "아주 똑똑한 선택이네요 🧠",
-  "감탄이 절로 나옵니다 🎇",
-  "정답 요정 강림! 🧚",
-  "이 기세면 합격은 문제없어요 🚀",
-  "정답! 개념 정리가 완벽하네요 📚",
-  "놀라운 실력입니다 😲",
-  "명쾌한 정답! 최고예요 ✨",
-  "정답입니다! 오늘의 에이스 🥇",
-  "퍼펙트! 빈틈이 없네요 🛡️",
-  "확실하게 아시는군요 🎯",
-  "정답! 공부한 보람이 있네요 📝",
-  "정답의 기운이 팍팍 느껴져요 🌟",
-  "정확한 판단력! 훌륭합니다 ⚖️",
-  "이 구역의 정답왕 👑",
-  "스펀지 같은 흡수력! 대단해요 🧽",
-  "정답! 정말 대단한 집중력이에요 🔍",
-  "백점 만점에 만점 💯",
-  "멋진 정답! 박수를 보냅니다 👏",
-  "정답! 실력이 일취월장하네요 📈",
-  "맞습니다! 개념을 꿰뚫고 계시네요 🎯",
-  "정답! 오늘의 베스트 플레이어 🏅",
-  "이해가 깊군요! 대단해요 🌊",
-  "정답! 자신감을 가지셔도 좋습니다 💪",
-  "아주 깔끔한 정답입니다 🧼",
-  "정답! 두뇌 회전이 엄청나네요 🌪️",
-  "대단해요! 아주 스마트한 선택 🎓",
-  "정답! 흠잡을 데가 없어요 🔍",
-  "완벽한 정답! 칭찬 스티커 꾹 💮",
-  "정답! 빛나는 실력입니다 💫",
-  "놀라운 정답! 감동했어요 🥺",
-  "정답! 천재 아니신가요? 🤯",
-  "아주 정확해요! 나이스 샷 🏌️",
-  "정답! 실력이 보통이 아니네요 🏋️",
-  "맞습니다! 개념 장인 인정 🛠️",
-  "정답! 정말 매끄러운 풀이네요 🧊",
-  "완벽 그 자체! 💯",
-  "정답! 훌륭한 통찰력입니다 🔭",
-  "맞아요! 어떻게 알았죠? 🕵️",
-  "정답! 당신의 지식에 건배 🥂",
-  "정답! 지식이 차곡차곡 쌓이네요 🧱",
-  "아주 좋아요! 정답의 달인 🌙",
-  "정답! 실력 발휘 제대로 하시네요 🎆",
-  "맞습니다! 정말 자랑스러워요 🏆",
-  "정답! 뇌가 번뜩이는 순간 ⚡",
-  "아주 정확합니다! 정답! 🎯",
-  "정답! 오늘 무슨 날인가요? 🎉",
-  "훌륭해요! 정답 제조기 🏭",
-  "정답! 지식의 샘이 마르지 않네요 ⛲",
-  "맞습니다! 개념 폭발 🌋",
-  "정답! 아주 예리한 선택이네요 🗡️",
-  "정답! 눈부신 정답 행진 ☀️",
-  "완벽합니다! 정답 사냥꾼 🏹",
-  "정답! 아주 속 시원한 정답 🧊",
-  "맞아요! 실력이 금메달 감 🥇",
-  "정답! 당신은 정답 자판기 📠",
-  "아주 좋아요! 정답 릴레이 🏃",
-  "정답! 멈추지 않는 정답 본능 🐅",
-  "정답! 개념이 머릿속에 쏙쏙 🧠",
-  "훌륭해요! 정답률 100% 도전 📈",
-  "정답! 아주 든든한 실력입니다 🏰",
-  "맞습니다! 훌륭한 기본기 🧱",
-  "정답! 흔들림 없는 실력 🏔️",
-  "정답! 정말 나이스합니다 👍",
-  "아주 정확해요! 백발백중 🎯",
-  "정답! 멋진 정답 감사합니다 💐",
-  "맞아요! 정답의 스페셜리스트 🕵️",
-  "정답! 오늘도 빛나는 실력 ✨"
-];
-                            const praiseText = praises[currentIndex % praises.length];
-                            return (
-                              <>
-                                <h4 className="text-xl md:text-2xl font-black mb-1 text-emerald-700">정답입니다!</h4>
-                                <p className="text-sm md:text-base font-bold text-emerald-600">{praiseText}</p>
-                              </>
-                            );
-                          })()
-                        ) : (
-                          <p className="text-xl md:text-3xl font-black text-rose-700 py-1 md:py-2 leading-relaxed word-break-keep-all">
-                            정답은 [ {currentQuestion.shuffledOptions[currentQuestion.correctShuffledIndex]} ] 입니다. 💪
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                  {currentQuestion.explanation && (
-                    <div className="p-6 md:p-8 bg-white border-t border-slate-100">
-                      <p className="text-xs md:text-base font-black uppercase tracking-widest text-slate-900 mb-1.5">해설</p>
-                      <div className="space-y-0.5 explanation-table">
-                        {currentQuestion.explanation.includes('<table') ? (<div dangerouslySetInnerHTML={{ __html: currentQuestion.explanation }} />) : (
-                          currentQuestion.explanation.split('\n').map((line: string, i: number) => (<p key={i} className="leading-relaxed text-sm md:text-xl font-bold">{renderMath(line)}</p>))
-                        )}
-                        {(() => {
-                          const expImgSrc = `/images/exams/${currentQuestion.year}_${currentQuestion.round}/${currentQuestion.year}_${currentQuestion.round}_${currentQuestion.number || currentQuestion.question_num}_explanation.webp`;
-                          return (
-                            <div className="mt-6 flex justify-center">
-                              <img 
-                                src={expImgSrc} 
-                                alt="Explanation Diagram" 
-                                className="max-h-[350px] object-contain rounded-2xl border border-slate-200/60 p-3 bg-white/80 shadow-sm"
-                                onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
-                              />
-                            </div>
-                          );
-                        })()}
-                      </div>
-                    </div>
-                  )}
-                  <div className={`px-4 py-2 flex justify-end ${currentQuestion.isCurrentCorrect ? 'bg-emerald-50' : 'bg-rose-50'} border-t ${currentQuestion.isCurrentCorrect ? 'border-emerald-100' : 'border-rose-100'}`}>
-                    <button onClick={() => setReportOpen(true)} className="flex items-center gap-1.5 text-xs md:text-base font-black text-slate-500 hover:text-rose-500 transition-colors"><Flag className="w-3.5 h-3.5 md:w-4 h-4" /> 문항 오류 신고</button>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
+            </motion.div>
+          )}
         </AnimatePresence>
       </main>
 
@@ -844,10 +760,11 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
                   </button>
                 )}
-                {currentSlideIdx < slideData.length - 1 && (
+
+                {slideData && currentSlideIdx < slideData.length - 1 && (
                   <button 
                     onClick={() => setCurrentSlideIdx(prev => prev + 1)}
-                    className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 rounded-full bg-slate-900 hover:bg-slate-800 text-white flex items-center justify-center transition-all shadow-lg shadow-slate-900/20"
+                    className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 rounded-full bg-brand-600 hover:bg-brand-700 text-white flex items-center justify-center transition-all shadow-lg shadow-brand-500/30"
                   >
                     <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
                   </button>
@@ -855,34 +772,31 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               </div>
 
               {/* 하단 페이지네이션 인디케이터 */}
-              <div className="px-6 py-4 md:px-10 md:py-6 border-t border-slate-100 bg-slate-50/50 flex items-center justify-between">
-                <label className="flex items-center gap-2 cursor-pointer select-none">
-                  <input 
-                    type="checkbox"
-                    checked={hideAutoSummary}
-                    onChange={(e) => {
-                      const checked = e.target.checked;
-                      setHideAutoSummary(checked);
-                      const hideKey = `dugigo_hide_summary_${subject}_${unitFilter}_${setNum}`;
-                      if (checked) {
-                        localStorage.setItem(hideKey, 'true');
-                      } else {
-                        localStorage.removeItem(hideKey);
-                      }
-                    }}
-                    className="w-4 h-4 rounded border-slate-300 text-brand-600 focus:ring-brand-500 cursor-pointer"
-                  />
-                  <span className="text-xs md:text-sm font-bold text-slate-500">다음부터 이 세트 요약 안 보기</span>
-                </label>
-
-                <div className="flex items-center gap-2 pr-4">
-                  {slideData.map((_: any, idx: number) => (
-                    <button
-                      key={idx}
-                      onClick={() => setCurrentSlideIdx(idx)}
-                      className={`h-2 rounded-full transition-all duration-300 ${idx === currentSlideIdx ? 'w-8 bg-brand-600 shadow-[0_0_10px_rgba(99,91,255,0.3)]' : 'w-2 bg-slate-300 hover:bg-slate-400'}`}
+              <div className="px-6 py-4 md:px-10 md:py-8 border-t border-slate-100 bg-white flex items-center justify-between">
+                <div className="flex gap-1.5 md:gap-2">
+                  {slideData.map((_, i) => (
+                    <div 
+                      key={i} 
+                      onClick={() => setCurrentSlideIdx(i)}
+                      className={`h-1.5 md:h-2 rounded-full transition-all cursor-pointer ${i === currentSlideIdx ? 'w-6 md:w-10 bg-brand-600' : 'w-1.5 md:w-2 bg-slate-200 hover:bg-slate-300'}`}
                     />
                   ))}
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="text-xs md:text-sm font-bold text-slate-400">
+                    <span className="text-slate-900 font-black">{currentSlideIdx + 1}</span> / {slideData.length}
+                  </div>
+                  <button 
+                    onClick={() => {
+                      const hideKey = `dugigo_hide_summary_${subject}_${unitFilter}_${setNum}`;
+                      localStorage.setItem(hideKey, 'true');
+                      setHideAutoSummary(true);
+                      setAiSliderOpen(false);
+                    }}
+                    className="text-[10px] md:text-xs font-black text-slate-400 hover:text-slate-600 underline underline-offset-4"
+                  >
+                    다시 보지 않기
+                  </button>
                 </div>
               </div>
             </motion.div>
