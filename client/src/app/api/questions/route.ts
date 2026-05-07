@@ -55,6 +55,10 @@ export async function GET(req: NextRequest) {
           return "[이론] 전기이론";
         }
 
+        if (sub === '컴퓨터활용능력 2급') {
+          return q.subject || q.sub_unit || "기본 단원";
+        }
+
         if (sub === '한국사검정시험' || sub === '한국사능력검정시험') {
           if (q.sub_unit) return q.sub_unit;
           if (/구석기|신석기|청동기|철기|고조선|부여|고구려|옥저|동예|삼한|빗살무늬|고인돌|주먹도끼/.test(text) && !/백제|신라|고려|조선/.test(text)) return "선사시대 및 국가의 형성";

@@ -500,6 +500,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                 if (!imgName.startsWith('/') && !imgName.startsWith('http')) {
                   if (imgName.startsWith('history_')) {
                     imgSrc = `/summaries/한국사검정시험/${imgName}`;
+                  } else if (imgName.startsWith('lit2_')) {
+                    imgSrc = `/summaries/컴퓨터활용능력 2급/${imgName}`;
                   } else {
                     imgSrc = `/images/exams/${currentQuestion.year}_${currentQuestion.round}/${imgName}`;
                   }
@@ -543,7 +545,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                         {choice.endsWith('.webp') ? (
                           <div className="flex justify-center py-2">
                             <img 
-                              src={choice.startsWith('/') ? choice : (choice.startsWith('history_') ? `/summaries/한국사검정시험/${choice}` : choice)} 
+                              src={choice.startsWith('/') ? choice : (choice.startsWith('history_') ? `/summaries/한국사검정시험/${choice}` : (choice.startsWith('lit2_') ? `/summaries/컴퓨터활용능력 2급/${choice}` : choice))} 
                               alt={`Choice ${idx + 1}`}
                               className="max-h-[140px] md:max-h-[250px] object-contain rounded-xl"
                               onError={(e) => { (e.target as HTMLElement).parentElement!.style.display = 'none'; }}
