@@ -108,9 +108,12 @@ export async function GET(req: NextRequest) {
         fileQuestions = fileQuestions
           .filter(q => {
             const text = (q.question || '').trim();
-            const isPlaceholder = text === '' || text.includes('이미지에 지문이 없습니다');
+            // 지문 없음, 본문 없음 등 다양한 실패 메시지 감지
+            const isPlaceholder = text === '' || 
+                                 text.includes('이미지에 지문이 없습니다') || 
+                                 text.includes('이미지에 문제 본문 없음') ||
+                                 text.includes('내용을 확인할 수 없습니다');
             const hasImage = !!(q.question_img || q.image);
-            // 텍스트가 없거나 플레이스홀더인데 이미지조차 없으면 유령 문항으로 간주하여 제외
             return !isPlaceholder || hasImage;
           })
           .map(q => ({

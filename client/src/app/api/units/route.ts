@@ -94,7 +94,10 @@ export async function GET(req: NextRequest) {
         
         questions.filter((q: any) => {
           const text = (q.question || '').trim();
-          const isPlaceholder = text === '' || text.includes('이미지에 지문이 없습니다');
+          const isPlaceholder = text === '' || 
+                               text.includes('이미지에 지문이 없습니다') || 
+                               text.includes('이미지에 문제 본문 없음') ||
+                               text.includes('내용을 확인할 수 없습니다');
           const hasImage = !!(q.question_img || q.image);
           return !isPlaceholder || hasImage;
         }).forEach((q: any) => {
