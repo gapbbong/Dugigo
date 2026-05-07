@@ -112,8 +112,12 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
           if (unitFilter) {
             filtered = data.questions.filter((q: any) => q.sub_unit === unitFilter);
-          } else if (yearFilter && roundFilter) {
-            filtered = data.questions.filter((q: any) => q.year?.toString() === yearFilter.toString() && q.round?.toString() === roundFilter.toString());
+          } else if (roundFilter) {
+            // 연도(year) 필터가 없어도 회차(round)만으로도 필터링 가능하게 수정
+            filtered = data.questions.filter((q: any) => {
+              const r = q.round || q.id?.split('_')[1];
+              return r?.toString() === roundFilter.toString();
+            });
           }
 
           if (rStart !== null && rEnd !== null) filtered = filtered.slice(parseInt(rStart), parseInt(rEnd));
