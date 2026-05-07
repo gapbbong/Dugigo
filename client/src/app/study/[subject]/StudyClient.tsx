@@ -455,36 +455,37 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                 <div className="flex items-center gap-3"><span className="px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 text-brand-600 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase">Q. {currentQuestion.year || '0000'}-{currentQuestion.round || '00'}-{currentQuestion.question_num || currentQuestion.number || '0'}</span><div className="h-px flex-1 bg-brand-100/50" /></div>
                 {renderQuestionText(currentQuestion.question)}
               </div>
-          )}
 
-            {(() => {
-              const imgName = currentQuestion.image || currentQuestion.question_img;
-              if (!imgName) return null;
-              
-              let imgSrc = imgName;
-              if (!imgName.startsWith('/') && !imgName.startsWith('http')) {
-                if (imgName.startsWith('history_')) {
-                  imgSrc = `/summaries/한국사검정시험/${imgName}`;
-                } else {
-                  imgSrc = `/images/exams/${currentQuestion.year}_${currentQuestion.round}/${imgName}`;
+              {(() => {
+                const imgName = currentQuestion.image || currentQuestion.question_img;
+                if (!imgName) return null;
+                
+                let imgSrc = imgName;
+                if (!imgName.startsWith('/') && !imgName.startsWith('http')) {
+                  if (imgName.startsWith('history_')) {
+                    imgSrc = `/summaries/한국사검정시험/${imgName}`;
+                  } else {
+                    imgSrc = `/images/exams/${currentQuestion.year}_${currentQuestion.round}/${imgName}`;
+                  }
                 }
-              }
 
-              return (
-                <motion.div 
-                  initial={{ opacity: 0, y: 10 }} 
-                  animate={{ opacity: 1, y: 0 }} 
-                  className="bg-white/50 p-4 md:p-6 rounded-[2rem] border border-white/60 shadow-sm flex justify-center"
-                >
-                  <img 
-                    src={imgSrc} 
-                    alt="Question Diagram" 
-                    className="max-h-[200px] md:max-h-[300px] object-contain rounded-xl"
-                    onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
-                  />
-                </motion.div>
-              );
-            })()}
+                return (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }} 
+                    animate={{ opacity: 1, y: 0 }} 
+                    className="bg-white/50 p-4 md:p-6 rounded-[2rem] border border-white/60 shadow-sm flex justify-center"
+                  >
+                    <img 
+                      src={imgSrc} 
+                      alt="Question Diagram" 
+                      className="max-h-[200px] md:max-h-[300px] object-contain rounded-xl"
+                      onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                    />
+                  </motion.div>
+                );
+              })()}
+            </motion.div>
+          )}
 
             {/* 선택지 */}
             <div className="grid grid-cols-1 gap-4 md:gap-8">
