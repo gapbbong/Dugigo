@@ -92,7 +92,12 @@ export async function GET(req: NextRequest) {
         const data = JSON.parse(fileContent);
         const questions = Array.isArray(data) ? data : (data.questions || []);
         
-        questions.filter((q: any) => (q.question && q.question.trim() !== '') || q.question_img || q.image).forEach((q: any) => {
+        questions.filter((q: any) => {
+          const text = (q.question || '').trim();
+          const isPlaceholder = text === '' || text.includes('이미지에 지문이 없습니다');
+          const hasImage = !!(q.question_img || q.image);
+          return !isPlaceholder || hasImage;
+        }).forEach((q: any) => {
           const subUnit = classifyQuestion(subject, q);
           unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
 

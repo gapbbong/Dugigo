@@ -106,7 +106,13 @@ export async function GET(req: NextRequest) {
         }
 
         fileQuestions = fileQuestions
-          .filter(q => (q.question && q.question.trim() !== '') || q.question_img || q.image)
+          .filter(q => {
+            const text = (q.question || '').trim();
+            const isPlaceholder = text === '' || text.includes('이미지에 지문이 없습니다');
+            const hasImage = !!(q.question_img || q.image);
+            // 텍스트가 없거나 플레이스홀더인데 이미지조차 없으면 유령 문항으로 간주하여 제외
+            return !isPlaceholder || hasImage;
+          })
           .map(q => ({
             ...q,
             sub_unit: classifyQuestion(subject, q)
