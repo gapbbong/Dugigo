@@ -143,11 +143,26 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               const qSubUnit = (q.subject || q.sub_unit || '').replace(/^\[.*?\]\s*/, '').trim();
               return qSubUnit === cleanUnitFilter || q.sub_unit === unitFilter || q.subject === unitFilter;
             });
-          } else if (roundFilter) {
-            // 연도(year) 필터가 없어도 회차(round)만으로도 필터링 가능하게 수정
+          } else if (roundFilter || yearFilter) {
+            // 연도(year)와 회차(round) 필터를 사용한 정밀 필터링
             filtered = data.questions.filter((q: any) => {
-              const r = q.round || q.id?.split('_')[1];
-              return r?.toString() === roundFilter.toString();
+              const r = q.round || q.id?.split('_')[1] || '';
+              const y = q.year || '';
+              const info = (q.round_info || '').toLowerCase();
+              
+              // 컴퓨터활용능력 2급: round_info를 활용한 강력한 매칭
+              if (subject === '컴퓨터활용능력 2급' && info) {
+                const matchesYear = !yearFilter || info.includes(`${yearFilter}년`);
+                const matchesRound = !roundFilter || 
+                                   info.includes(`${roundFilter}회`) || 
+                                   (roundFilter.toString().includes('상시') && info.includes(roundFilter.toString()));
+                return matchesYear && matchesRound;
+              }
+
+              // 기본 필터링 로직
+              const matchYear = !yearFilter || y.toString() === yearFilter.toString() || info.includes(yearFilter.toString());
+              const matchRound = !roundFilter || r.toString() === roundFilter.toString() || info.includes(roundFilter.toString());
+              return matchYear && matchRound;
             });
           }
 

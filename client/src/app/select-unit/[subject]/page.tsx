@@ -66,13 +66,22 @@ export default function SelectUnitPage() {
   };
 
   const handleSelectExam = (exam: Exam) => {
-    // '2024년 77회' 또는 '63회 기출'에서 숫자만 추출
-    const match = exam.name.match(/(\d+)/g);
-    if (match) {
-      // 가장 마지막에 나오는 숫자를 회차(round)로 간주
-      const round = match[match.length - 1];
-      router.push(`/study/${encodeURIComponent(subject)}?round=${round}`);
+    // "2020년 1회" 또는 "2021년 상시01" 형태 분석
+    const yearMatch = exam.name.match(/(\d{4})년/);
+    const roundMatch = exam.name.match(/(\d+)회/);
+    const sangsiMatch = exam.name.match(/상시\s*(\d+)/);
+    
+    let query = `/study/${encodeURIComponent(subject)}?`;
+    if (yearMatch) query += `year=${yearMatch[1]}&`;
+    if (roundMatch) query += `round=${roundMatch[1]}`;
+    else if (sangsiMatch) query += `round=상시${sangsiMatch[1]}`;
+    else {
+      // 숫자만 있는 경우 기존 로직 유지
+      const match = exam.name.match(/(\d+)/g);
+      if (match) query += `round=${match[match.length - 1]}`;
     }
+    
+    router.push(query.endsWith('&') ? query.slice(0, -1) : query);
   };
 
   const handleRandom = () => {

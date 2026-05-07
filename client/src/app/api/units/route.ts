@@ -107,10 +107,24 @@ export async function GET(req: NextRequest) {
           unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
 
           // 연도별 기출 집계 추가 (연도가 없으면 회차만이라도 표시)
-          const y = q.year || data.year;
-          const r = q.round || data.round || q.id?.split('_')[1];
+          let y = q.year || data.year;
+          let r = q.round || data.round;
+          
+          if (subject === '컴퓨터활용능력 2급' && q.round_info) {
+            // "2020년 1회 컴활2급 필기_A형" -> "2020" / "1" 추출
+            const yearMatch = q.round_info.match(/(\d{4})년/);
+            const roundMatch = q.round_info.match(/(\d+)회/);
+            const sangsiMatch = q.round_info.match(/상시\s*(\d+)/);
+            
+            if (yearMatch) y = yearMatch[1];
+            if (roundMatch) r = roundMatch[1];
+            else if (sangsiMatch) r = `상시${sangsiMatch[1]}`;
+          }
+
+          if (!r) r = q.id?.split('_')[1];
+
           if (r) {
-            const examKey = y ? `${y}년 ${r}회` : `${r}회 기출`;
+            const examKey = y ? `${y}년 ${r}${r.includes('상시') ? '' : '회'}` : `${r}회 기출`;
             examsMap.set(examKey, (examsMap.get(examKey) || 0) + 1);
           }
         });
