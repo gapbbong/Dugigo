@@ -561,9 +561,10 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     const text = (currentQuestion.question || '').toLowerCase();
                     const isDiagramNeeded = /그림|표|다음과 같이|아래와 같이|화면|설정|대화 상자|차트/.test(text);
                     const isSubject2 = currentQuestion.subject === "스프레드시트 일반";
+                    const isPlaceholder = text.includes('이미지에 지문이 없습니다') || text.trim() === '';
                     
-                    if (!isDiagramNeeded && !isSubject2) {
-                      return null; // 불필요한 스캔 이미지 숨김
+                    if (!isDiagramNeeded && !isSubject2 && !isPlaceholder) {
+                      return null; // 진짜 텍스트가 잘 나온 경우만 스캔 이미지 숨김
                     }
                     imgSrc = `/summaries/컴퓨터활용능력 2급/${imgName}`;
                   } else {
