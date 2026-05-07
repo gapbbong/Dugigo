@@ -141,11 +141,6 @@ export default function SelectUnitPage() {
                 const unitSetCount = Math.ceil(unit.count / setSize);
                 const currentIndex = globalIndex++;
                 
-                // 이번 단어 시작 세트 번호
-                const startSetIdx = runningSetCount;
-                // 다음 단원을 위해 누적 세트 번호 업데이트
-                runningSetCount += unitSetCount;
-
                 return (
                   <motion.div
                     key={unit.name}
