@@ -49,6 +49,12 @@ export async function GET(req: NextRequest) {
           return "승강기 개론";
         }
 
+        if (sub === '전기기능사') {
+          if (/전선|배선|배관|접지|전선로|조명|절연|공사|금속관|가요|케이블/.test(text)) return "[설비] 전기설비";
+          if (/직류기|동기기|변압기|유도기|정류기|전동기|발전기|회전자|슬립|계자/.test(text)) return "[기기] 전기기기";
+          return "[이론] 전기이론";
+        }
+
         if (sub === '한국사검정시험' || sub === '한국사능력검정시험') {
           if (q.sub_unit) return q.sub_unit;
           if (/구석기|신석기|청동기|철기|고조선|부여|고구려|옥저|동예|삼한|빗살무늬|고인돌|주먹도끼/.test(text) && !/백제|신라|고려|조선/.test(text)) return "선사시대 및 국가의 형성";
