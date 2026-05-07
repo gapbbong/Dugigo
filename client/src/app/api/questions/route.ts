@@ -58,20 +58,20 @@ export async function GET(req: NextRequest) {
         }
 
         if (sub === '컴퓨터활용능력 2급') {
-          if (q.sub_unit) return q.sub_unit;
-          const isSubject1 = q.subject === "컴퓨터 일반";
+          // 과거의 잘못된 분류 기록은 무시하고 실시간 재분류 (정밀도 향상)
+          const isSubject1 = q.subject === "컴퓨터 일반" || (q.round_info && q.round_info.includes('컴'));
           
           if (isSubject1) {
             if (/윈도우|windows|바로 가기|폴더|파일|표시줄|레지스트리|부팅|제어판|탐색기/.test(text)) return "[1과목] 운영체제 활용";
-            if (/cpu|중앙처리장치|메모리|ram|rom|보조기억|ssd|hdd|usb|바이오스|bios|메인보드|입출력/.test(text)) return "[1과목] 컴퓨터 시스템 설정";
+            if (/cpu|중앙처리장치|메모리|ram|rom|보조기억|ssd|hdd|usb|바이오스|bios|메인보드|입출력|펌웨어/.test(text)) return "[1과목] 컴퓨터 시스템 설정";
             if (/멀티미디어|비트|바이트|그래픽|이미지|동영상|사운드|오디오|코덱|비선형|bmp|jpg|png|gif/.test(text)) return "[1과목] 컴퓨터 멀티미디어/데이터";
             if (/인터넷|url|ip|tcp|프로토콜|osi|브라우저|전자우편|이메일|도메인|인트라넷|ftp/.test(text)) return "[1과목] 인터넷 및 네트워크";
             if (/보안|바이러스|침해|암호|해킹|방화벽|변조|위조|iot|클라우드|인공지능|모바일/.test(text)) return "[1과목] 정보 보안 및 ICT 기술";
             return "[1과목] 컴퓨터 일반 기타";
           } else {
             if (/셀 서식|데이터 입력|조건부 서식|사용자 정의|보호|시트|통합 문서/.test(text)) return "[2과목] 기본 작업 및 서식";
-            if (/함수|수식|sum|average|if|vlookup|hlookup|match|index|연산자/.test(text)) return "[2과목] 수식 및 함수 활용";
-            if (/필터|정렬|부분합|피벗|시나리오|목표값|통합|유효성/.test(text)) return "[2과목] 데이터 분석 및 관리";
+            if (/함수|수식|sum|average|if|vlookup|hlookup|match|index|연산자|계산/.test(text)) return "[2과목] 수식 및 함수 활용";
+            if (/필터|정렬|부분합|피벗|시나리오|목표값|통합|유효성|데이터 관리/.test(text)) return "[2과목] 데이터 분석 및 관리";
             if (/차트|그래프|페이지 설정|인쇄|머리글|바닥글/.test(text)) return "[2과목] 차트 및 출력 설정";
             if (/매크로|vba|모듈|프로시저/.test(text)) return "[2과목] 매크로 및 VBA";
             return "[2과목] 스프레드시트 기타";
