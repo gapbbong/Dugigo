@@ -88,7 +88,13 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     if (!paramsReady || !subject || !unitFilter || !setNum) return;
     const fetchSummary = async () => {
       try {
-        const res = await fetch(`/api/summaries?subject=${encodeURIComponent(subject)}&unit=${encodeURIComponent(unitFilter)}&set=${setNum}`);
+        let fetchUnit = unitFilter;
+        // 컴퓨터활용능력 2급의 경우 세부 단원명이 바뀌었으므로 요약은 과목 단위로 가져옴
+        if (subject === '컴퓨터활용능력 2급') {
+          fetchUnit = unitFilter.includes('1과목') ? '컴퓨터 일반' : '스프레드시트 일반';
+        }
+        
+        const res = await fetch(`/api/summaries?subject=${encodeURIComponent(subject)}&unit=${encodeURIComponent(fetchUnit)}&set=${setNum}`);
         if (res.ok) {
           const data = await res.json();
           setSlideData(data.slides || null);
