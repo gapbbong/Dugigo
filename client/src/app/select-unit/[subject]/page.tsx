@@ -93,19 +93,23 @@ export default function SelectUnitPage() {
     fetchData();
   }, [subject]);
 
-  const getSetStats = (unitName: string, setNum: number) => {
+  const getSetStats = (unitName: string, setNum: number, expectedTotal: number) => {
     const relevantLogs = studyLogs.filter(log => log.unit === unitName && log.set_num === setNum);
     if (relevantLogs.length === 0) return null;
 
     const count = relevantLogs.length;
     const bestScore = Math.max(...relevantLogs.map(log => log.correct_questions));
-    const total = relevantLogs[0].total_questions || 30;
+    // 각 로그별로 저장된 total_questions를 우선 사용하고, 없으면 전달받은 expectedTotal 사용
+    const total = relevantLogs[0].total_questions || expectedTotal;
     const accuracy = Math.round((bestScore / total) * 100);
     
-    // 시도별 정답률 목록 (최신순 또는 과거순 - 여기선 과거순으로 해서 좌측부터 쌓이게 함)
+    // 시도별 정답률 목록
     const allScores = relevantLogs
       .sort((a, b) => new Date(a.end_time || 0).getTime() - new Date(b.end_time || 0).getTime())
-      .map(log => Math.round(((log.correct_questions || 0) / (log.total_questions || 30)) * 100));
+      .map(log => {
+        const logTotal = log.total_questions || expectedTotal;
+        return Math.round(((log.correct_questions || 0) / logTotal) * 100);
+      });
 
     return { count, bestScore, total, accuracy, allScores };
   };
@@ -273,11 +277,17 @@ export default function SelectUnitPage() {
                         
                         <div className="flex-1 flex items-center justify-center">
                           <div className="grid grid-cols-3 gap-4 w-full">
-                            {Array.from({ length: unitSetCount }).map((_, sIdx) => {
-                              const localSetNum = sIdx + 1;
-                              const displaySetNumber = runningSetCount++; // 전역 번호
-                              const unitName = unit.originalName || unit.name;
-                              const stats = getSetStats(unitName, localSetNum);
+                              {Array.from({ length: unitSetCount }).map((_, sIdx) => {
+                                const localSetNum = sIdx + 1;
+                                const displaySetNumber = runningSetCount++; // 전역 번호
+                                const unitName = unit.originalName || unit.name;
+                                
+                                // 마지막 세트는 남은 문항수만큼만 (기본 30)
+                                const setTotalCount = (sIdx === unitSetCount - 1) 
+                                  ? (unit.count % setSize || setSize) 
+                                  : setSize;
+                                
+                                const stats = getSetStats(unitName, localSetNum, setTotalCount);
                               const isMastered = stats && stats.accuracy >= 80;
                               const isStarted = stats && stats.count > 0;
                               
