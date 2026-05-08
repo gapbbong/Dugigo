@@ -19,12 +19,20 @@ import {
   RotateCcw,
   BookOpen,
   Sparkles,
-  Zap
+  Zap,
+  Thermometer,
+  ShieldCheck
 } from 'lucide-react';
 import 'katex/dist/katex.min.css';
 import { InlineMath as _InlineMath } from 'react-katex';
 
 const InlineMath = _InlineMath as any;
+
+const LEVEL_TITLES = [
+  "입문자", "초보자", "수련자", "숙련자", 
+  "전문가", "달인", "명인", "현자", 
+  "영웅", "전설", "신화", "초월자"
+];
 
 export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) {
   const params = useParams();
@@ -733,7 +741,22 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             </div>
           </div>
         </div>
-        <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-brand-50 rounded-xl text-brand-600 font-black text-[10px] md:text-xs shadow-sm">{Math.round(((currentIndex + 1) / questions.length) * 100)}%</div>
+        <div className="flex items-center gap-2 md:gap-3">
+          <div className="flex flex-col items-end">
+            <div className="flex items-center gap-1 bg-brand-50 px-2 py-0.5 md:px-3 md:py-1 rounded-lg border border-brand-100 shadow-sm">
+              <ShieldCheck className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-brand-600" />
+              <span className="text-[10px] md:text-xs font-black text-brand-700">
+                {userProfile ? (LEVEL_TITLES[Math.min(11, Math.floor((userProfile.exp_points || 0) / 1000))] || "입문자") : "입문자"}
+              </span>
+            </div>
+            <div className="flex items-center gap-1 mt-0.5 md:mt-1">
+              <Thermometer className="w-2.5 h-2.5 md:w-3 md:h-3 text-rose-500" />
+              <span className="text-[10px] md:text-xs font-black text-slate-500">
+                {userProfile ? Math.min(100, (userProfile.current_temp || 0) + 36.5).toFixed(1) : "36.5"}°C
+              </span>
+            </div>
+          </div>
+        </div>
       </nav>
       <div className="w-full h-1 bg-white/20">
         <motion.div animate={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }} className="h-full bg-gradient-to-r from-brand-600 to-cyan-400 shadow-[0_0_10px_rgba(99,91,255,0.4)]" />
