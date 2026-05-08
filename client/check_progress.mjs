@@ -9,7 +9,7 @@ const subjects = [
 
 function checkProgress() {
   console.log("==========================================");
-  console.log("📊 DugiGo+ 학습 데이터 생성 종합 리포트");
+  console.log("📊 DugiGo 학습 데이터 생성 종합 리포트");
   console.log("==========================================\n");
 
   subjects.forEach(subject => {
