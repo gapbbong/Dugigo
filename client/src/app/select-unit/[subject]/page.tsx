@@ -101,8 +101,13 @@ export default function SelectUnitPage() {
     const bestScore = Math.max(...relevantLogs.map(log => log.correct_questions));
     const total = relevantLogs[0].total_questions || 30;
     const accuracy = Math.round((bestScore / total) * 100);
+    
+    // 시도별 정답률 목록 (최신순 또는 과거순 - 여기선 과거순으로 해서 좌측부터 쌓이게 함)
+    const allScores = relevantLogs
+      .sort((a, b) => new Date(a.end_time || 0).getTime() - new Date(b.end_time || 0).getTime())
+      .map(log => Math.round(((log.correct_questions || 0) / (log.total_questions || 30)) * 100));
 
-    return { count, bestScore, total, accuracy };
+    return { count, bestScore, total, accuracy, allScores };
   };
 
   // 과목 온도(Heat) 계산 (최근 3일간의 학습 횟수 기준)
@@ -315,14 +320,20 @@ export default function SelectUnitPage() {
                                   <span className={`text-3xl font-black tracking-tighter leading-none ${isStarted && showProgress ? '' : ''}`}>{displaySetNumber}</span>
                                   <span className="text-[10px] font-black uppercase text-slate-400 tracking-widest">세트</span>
                                   
-                                  {/* 통합형 하단 게이지 */}
-                                  {isStarted && showProgress && (
-                                    <div className="absolute bottom-0 left-0 w-full h-2.5 bg-slate-200/50">
-                                      <motion.div 
-                                        initial={{ width: 0 }}
-                                        animate={{ width: `${stats.accuracy}%` }}
-                                        className={`h-full ${isMastered ? 'bg-emerald-500' : 'bg-brand-600'}`}
-                                      />
+                                  {/* 시도별 정답률 막대 그래프 */}
+                                  {isStarted && showProgress && stats && stats.allScores && (
+                                    <div className="absolute bottom-0 left-0 w-full h-5 flex items-end gap-[1px] px-2 pb-1 overflow-hidden bg-slate-50/50">
+                                      {stats.allScores.slice(-10).map((score, idx) => (
+                                        <motion.div 
+                                          key={idx}
+                                          initial={{ height: 0 }}
+                                          animate={{ height: `${Math.max(15, score)}%` }}
+                                          className={`flex-1 rounded-t-sm ${
+                                            score >= 80 ? 'bg-emerald-500' : 
+                                            score >= 60 ? 'bg-brand-500' : 'bg-rose-400'
+                                          }`}
+                                        />
+                                      ))}
                                     </div>
                                   )}
                                 </button>
