@@ -489,7 +489,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         // 4. DB 업데이트 (로그 저장 & 경험치 추가 & 오답 저장)
         const wrongQuestions = answers.filter(a => !a.isCorrect).map(a => ({
           user_id: userData.user.id,
-          question_id: a.id,
+          question_id: a.questionId,
           subject: subject,
           unit: unitFilter,
           set_num: setNum ? parseInt(setNum) : null,
