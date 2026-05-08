@@ -86,6 +86,22 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [currentSlideIdx, setCurrentSlideIdx] = useState(0);
   const [isSummaryError, setIsSummaryError] = useState(false);
   const [retryCount, setRetryCount] = useState(0);
+  const [userProfile, setUserProfile] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        const { data: profile } = await supabase
+          .from('dukigo_profiles')
+          .select('*')
+          .eq('id', user.id)
+          .single();
+        if (profile) setUserProfile(profile);
+      }
+    };
+    fetchProfile();
+  }, []);
 
   useEffect(() => {
     const s = searchParamsProps || {};
