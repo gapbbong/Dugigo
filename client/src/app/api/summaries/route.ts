@@ -60,6 +60,8 @@ export async function GET(req: NextRequest) {
       dbPath = path.join(dataDir, 'history_master.json');
     }
 
+    const size = parseInt(searchParams.get('size') || '30');
+
     let contextQuestions = "";
     if (fs.existsSync(dbPath)) {
       const dbContent = JSON.parse(fs.readFileSync(dbPath, 'utf-8'));
@@ -93,14 +95,14 @@ export async function GET(req: NextRequest) {
         return q.sub_unit || "";
       };
 
-      // 해당 단원 문제 필터링
-      const filtered = allQuestions
-        .filter((q: any) => {
-          const qUnit = classify(q);
-          return qUnit === cleanUnit || !unit;
-        })
-        .slice((parseInt(set) - 1) * 10, parseInt(set) * 10);
-      contextQuestions = JSON.stringify(filtered);
+      // 해당 단원 문제 필터링 및 중복 제거
+      const filteredByUnit = allQuestions.filter((q: any) => classify(q) === cleanUnit || !unit);
+      const setQuestions = filteredByUnit.slice((parseInt(set) - 1) * size, parseInt(set) * size);
+      
+      // 질문 텍스트 기준 중복 제거
+      const uniqueQuestions = Array.from(new Map(setQuestions.map((q: any) => [q.question, q])).values());
+      
+      contextQuestions = JSON.stringify(uniqueQuestions);
     }
 
     const genAI = new GoogleGenerativeAI(getApiKey());
