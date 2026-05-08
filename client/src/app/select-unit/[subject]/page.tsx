@@ -35,10 +35,29 @@ export default function SelectUnitPage() {
   const [exams, setExams] = useState<Exam[]>([]);
   const [loading, setLoading] = useState(true);
   const [totalQuestions, setTotalQuestions] = useState(0);
+  const [studyLogs, setStudyLogs] = useState<any[]>([]); // 학습 기록 저장
+  const [userRole, setUserRole] = useState<string>('student'); // 사용자 역할 저장
+  const [userProfile, setUserProfile] = useState<any>(null); // 프로필 정보 (레벨, 경험치)
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const { data: { user } } = await supabase.auth.getUser();
+        
+        // 0. 사용자 프로필 확인
+        if (user) {
+          const { data: profile } = await supabase
+            .from('dukigo_profiles')
+            .select('*')
+            .eq('id', user.id)
+            .single();
+          if (profile) {
+            setUserProfile(profile);
+            setUserRole(profile.role?.toLowerCase() || 'student');
+          }
+        }
+
+        // 1. 단원 데이터 가져오기
         const res = await fetch(`/api/units?subject=${subject}`);
         const data = await res.json();
         setUnits(data.units || []);
@@ -46,6 +65,16 @@ export default function SelectUnitPage() {
         
         const total = (data.units || []).reduce((acc: number, cur: Unit) => acc + cur.count, 0);
         setTotalQuestions(total);
+
+        // 2. 학습 기록 가져오기 (단원별/세트별 요약용)
+        if (user) {
+          const { data: logs } = await supabase
+            .from('dukigo_study_logs')
+            .select('unit, set_num, correct_questions, total_questions, end_time')
+            .eq('user_id', user.id)
+            .eq('subject', subject);
+          setStudyLogs(logs || []);
+        }
       } catch (err) {
         console.error('Failed to fetch data:', err);
       } finally {
@@ -55,15 +84,32 @@ export default function SelectUnitPage() {
     fetchData();
   }, [subject]);
 
-  const handleSelectUnit = (unit: Unit, globalSetIdx: number) => {
-    const setSize = 30;
-    const unitName = unit.originalName || unit.name;
-    // URL uses the global set index for display, but logic might need adjustment if it expects 1-based index per unit.
-    // However, the current StudyClient logic uses 'set' param. 
-    // If we want it to be truly continuous, we might need to adjust how StudyClient filters.
-    // Actually, let's keep the URL set index as the global one for consistent UI.
-    router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unitName)}&set=${globalSetIdx}&size=${setSize}${unit.range ? `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}` : ''}`);
+  const getSetStats = (unitName: string, setNum: number) => {
+    const relevantLogs = studyLogs.filter(log => log.unit === unitName && log.set_num === setNum);
+    if (relevantLogs.length === 0) return null;
+
+    const count = relevantLogs.length;
+    const bestScore = Math.max(...relevantLogs.map(log => log.correct_questions));
+    const total = relevantLogs[0].total_questions || 30;
+    const accuracy = Math.round((bestScore / total) * 100);
+
+    return { count, bestScore, total, accuracy };
   };
+
+  // 과목 온도(Heat) 계산 (최근 3일간의 학습 횟수 기준)
+  const getSubjectHeat = () => {
+    const threeDaysAgo = new Date();
+    threeDaysAgo.setDate(threeDaysAgo.getDate() - 3);
+    const recentLogs = studyLogs.filter(log => log.end_time && new Date(log.end_time) > threeDaysAgo);
+    
+    if (recentLogs.length >= 10) return { label: '활활', color: 'text-rose-600', icon: '🔥', bg: 'bg-rose-50' };
+    if (recentLogs.length >= 3) return { label: '따끈', color: 'text-amber-600', icon: '☀️', bg: 'bg-amber-50' };
+    return { label: '냉정', color: 'text-blue-600', icon: '❄️', bg: 'bg-blue-50' };
+  };
+
+  const heat = getSubjectHeat();
+  const level = userProfile ? Math.floor((userProfile.exp_points || 0) / 1000) + 1 : 1;
+  const expProgress = userProfile ? ((userProfile.exp_points || 0) % 1000) / 10 : 0;
 
   const handleSelectExam = (exam: Exam) => {
     // "2020년 1회" 또는 "2021년 상시01" 형태 분석
@@ -104,23 +150,46 @@ export default function SelectUnitPage() {
   }
 
   let globalIndex = 1;
-  let runningSetCount = 1; // 세트 번호 연속 누적용
+  let runningSetCount = 1; // 모든 세트에 대해 일련번호 적용
 
   return (
     <div className="min-h-screen relative text-slate-800 font-sans pb-32">
       <div className="mesh-bg" />
 
-      {/* Header */}
-      <nav className="max-w-6xl mx-auto px-8 py-8 flex justify-between items-center relative z-10">
-        <button 
-          onClick={() => router.push('/select-subject')}
-          className="w-12 h-12 flex items-center justify-center bg-white/50 hover:bg-white rounded-2xl transition-all shadow-sm border border-white/40"
-        >
-          <ChevronLeft size={24} className="text-slate-600" />
-        </button>
-        <div className="flex flex-col items-end">
-          <span className="text-[11px] font-black tracking-[0.2em] text-brand-600 uppercase">Step 02</span>
-          <span className="text-lg font-black text-slate-900">{subject}</span>
+      {/* Header with Level & EXP */}
+      <nav className="max-w-6xl mx-auto px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-6 relative z-10 border-b border-white/20 bg-white/30 backdrop-blur-md sticky top-0 shadow-sm mb-12">
+        <div className="flex items-center gap-6 w-full md:w-auto">
+          <button 
+            onClick={() => router.push('/select-subject')}
+            className="w-12 h-12 flex items-center justify-center bg-white/50 hover:bg-white rounded-2xl transition-all shadow-sm border border-white/40 shrink-0"
+          >
+            <ChevronLeft size={24} className="text-slate-600" />
+          </button>
+          
+          <div className="flex flex-col gap-1 flex-1 md:w-64">
+            <div className="flex justify-between items-end">
+              <span className="text-sm font-black text-brand-700">Lv.{level} {userProfile?.level_title || '열혈 학습자'}</span>
+              <span className="text-[10px] font-bold text-slate-400">{(userProfile?.exp_points || 0) % 1000} / 1000 XP</span>
+            </div>
+            <div className="h-2.5 bg-slate-200/50 rounded-full overflow-hidden border border-white shadow-inner">
+              <motion.div 
+                initial={{ width: 0 }}
+                animate={{ width: `${expProgress}%` }}
+                className="h-full bg-gradient-to-r from-brand-500 to-indigo-500 shadow-[0_0_10px_rgba(124,58,237,0.3)]"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+          <div className={`flex items-center gap-2 px-4 py-2 rounded-2xl border-2 ${heat.bg} ${heat.color.replace('text', 'border')} shadow-sm`}>
+            <span className="text-lg">{heat.icon}</span>
+            <span className={`text-sm font-black uppercase tracking-widest`}>학습 열기: {heat.label}</span>
+          </div>
+          <div className="flex flex-col items-end">
+            <span className="text-[11px] font-black tracking-[0.2em] text-brand-600 uppercase">Step 02</span>
+            <span className="text-lg font-black text-slate-900">{subject}</span>
+          </div>
         </div>
       </nav>
 
@@ -144,7 +213,7 @@ export default function SelectUnitPage() {
               <div className="w-12 h-12 bg-brand-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-brand-500/20">
                 <Sparkles size={24} />
               </div>
-              <h2 className="text-3xl font-black text-slate-900">단원별 핵심 공략 <span className="hidden sm:inline text-sm font-bold text-slate-400 ml-2">(매 세트별 해설 슬라이드 포함)</span></h2>
+              <h2 className="text-3xl font-black text-slate-900">단원별 핵심 공략 <span className="hidden sm:inline text-sm font-bold text-slate-400 ml-2">(전 세트 해설 슬라이드 포함)</span></h2>
             </div>
             <button 
               onClick={() => setIsUnitsCollapsed(!isUnitsCollapsed)}
@@ -163,7 +232,7 @@ export default function SelectUnitPage() {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 pt-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
                   {units.map((unit, idx) => {
                     const setSize = 30;
                     const unitSetCount = Math.ceil(unit.count / setSize);
@@ -175,29 +244,36 @@ export default function SelectUnitPage() {
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.05 }}
-                        className="glass-card p-8 rounded-[2.5rem] border border-white/60 hover:shadow-2xl hover:shadow-brand-500/5 transition-all group flex flex-col min-h-[320px]"
+                        className="glass-card p-6 rounded-[2.5rem] border border-white/60 hover:shadow-2xl hover:shadow-brand-500/5 transition-all group flex flex-col"
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <div className="w-12 h-12 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 font-black text-sm border-2 border-brand-100/50 shrink-0">
+                          <div className="w-10 h-10 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 font-black text-sm border-2 border-brand-100/50 shrink-0">
                             {currentIndex.toString().padStart(2, '0')}
                           </div>
-                          <h4 className="text-lg font-black text-slate-800 leading-snug whitespace-nowrap overflow-hidden text-ellipsis">
+                          <h4 className="text-base font-black text-slate-800 leading-snug whitespace-nowrap overflow-hidden text-ellipsis">
                             {unit.name}
                           </h4>
                         </div>
                         
                         <div className="flex-1 flex items-center justify-center">
-                          <div className="grid grid-cols-3 gap-3 w-full">
+                          <div className="grid grid-cols-3 gap-4 w-full">
                             {Array.from({ length: unitSetCount }).map((_, sIdx) => {
-                              const isHistory = subject === '한국사검정시험' || subject === '한국사능력검정시험';
-                              const currentSetNumber = isHistory ? runningSetCount++ : sIdx + 1;
+                              const localSetNum = sIdx + 1;
+                              const displaySetNumber = runningSetCount++; // 전역 번호
+                              const unitName = unit.originalName || unit.name;
+                              const stats = getSetStats(unitName, localSetNum);
+                              const isMastered = stats && stats.accuracy >= 80;
+                              const isStarted = stats && stats.count > 0;
+                              
+                              // 진도 표시 여부 결정 (학생은 항상, 교사는 설정에 따라)
+                              const showProgress = userRole === 'student' || localStorage.getItem('dukigo_show_teacher_progress') !== 'false';
                               
                               return (
                                 <button
                                   key={sIdx}
                                   onClick={() => {
-                                    const unitName = unit.originalName || unit.name;
-                                    const baseParams = `unit=${encodeURIComponent(unitName)}&set=${currentSetNumber}&size=${setSize}`;
+                                    const baseParams = `unit=${encodeURIComponent(unitName)}&set=${localSetNum}&size=${setSize}`;
+                                    const isHistory = subject.includes('한국사');
                                     
                                     if (isHistory) {
                                       const localStart = sIdx * setSize;
@@ -208,10 +284,36 @@ export default function SelectUnitPage() {
                                       router.push(`/study/${encodeURIComponent(subject)}?${baseParams}${rangeParams}`);
                                     }
                                   }}
-                                  className="py-2.5 bg-white border-2 border-slate-50 rounded-2xl text-slate-500 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50/50 transition-all shadow-sm flex flex-col items-center justify-center leading-none gap-1"
+                                  className={`group/btn relative h-24 md:h-28 rounded-3xl border-2 transition-all flex flex-col items-center justify-center gap-1 overflow-hidden shadow-sm hover:scale-105 hover:shadow-xl active:scale-95 ${
+                                    isMastered && showProgress
+                                      ? 'bg-emerald-50/80 border-emerald-200 text-emerald-700 hover:border-emerald-400' 
+                                      : isStarted && showProgress
+                                        ? 'bg-brand-50/80 border-brand-200 text-brand-700 hover:border-brand-400'
+                                        : 'bg-white border-slate-100 text-slate-400 hover:border-brand-300'
+                                  }`}
                                 >
-                                  <span className="text-xl font-black">{currentSetNumber}</span>
-                                  <span className="text-[9px] font-bold text-slate-400 uppercase">세트</span>
+                                  {/* 학습 횟수 뱃지 (우측 상단) */}
+                                  {isStarted && showProgress && (
+                                    <div className={`absolute top-2 right-2 px-2 py-0.5 rounded-lg text-[9px] font-black shadow-sm ${
+                                      isMastered ? 'bg-emerald-500 text-white' : 'bg-brand-600 text-white'
+                                    }`}>
+                                      {stats.count}회
+                                    </div>
+                                  )}
+
+                                  <span className={`text-3xl font-black tracking-tighter leading-none ${isStarted && showProgress ? '' : 'opacity-60'}`}>{displaySetNumber}</span>
+                                  <span className="text-[10px] font-black uppercase opacity-60 tracking-widest">세트</span>
+                                  
+                                  {/* 통합형 하단 게이지 */}
+                                  {isStarted && showProgress && (
+                                    <div className="absolute bottom-0 left-0 w-full h-2.5 bg-slate-200/50">
+                                      <motion.div 
+                                        initial={{ width: 0 }}
+                                        animate={{ width: `${stats.accuracy}%` }}
+                                        className={`h-full ${isMastered ? 'bg-emerald-500' : 'bg-brand-600'}`}
+                                      />
+                                    </div>
+                                  )}
                                 </button>
                               );
                             })}

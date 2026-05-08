@@ -5,10 +5,12 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 
 // 제공된 4개의 API 키 로테이션
 const API_KEYS = [
-  'AIzaSyAm-cbD26-Kw6D7jw_kRWwMbmSX5kdkCEA',
-  'AIzaSyCJrEEApCqBKVNQkkljxg9MavVMzg7iSls',
-  'AIzaSyC6eIBZxj-oCL4myZNpHmmINe0UWAoyVAc',
-  'AIzaSyDm1ui58wpXnGWJWnxPmo3ZsMYMyRBqX9c'
+  'AIzaSyBFKk8tiIMu5fu4mCmGg0dHo0IE-OEMh5g',
+  'AIzaSyDQKO3BM_8P9MIILGPEpMgL5mtHAngJLu4',
+  'AIzaSyAMeQoWonLHNNetmgbv-N4vz2dqyA1JTrA',
+  'AIzaSyB_EXOVSxRqqFX7hXJagmY3TCrX9EthVmk',
+  'AIzaSyD9nZQf9BUuSo1bvX0DZbUPgeqjvCswL-o',
+  'AIzaSyA9QKrkNztFZaAka3sdlsbCo2FjTDGUh3I'
 ];
 
 function getApiKey() {
@@ -106,7 +108,7 @@ export async function GET(req: NextRequest) {
     }
 
     const genAI = new GoogleGenerativeAI(getApiKey());
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
     // 컴활 2급 전용 프롬프트 추가
     const subjectPrompt = subject.includes('전기') ? `

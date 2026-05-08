@@ -18,7 +18,8 @@ import {
   X,
   RotateCcw,
   BookOpen,
-  Sparkles
+  Sparkles,
+  Zap
 } from 'lucide-react';
 import 'katex/dist/katex.min.css';
 import { InlineMath as _InlineMath } from 'react-katex';
@@ -68,6 +69,14 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [setSize, setSetSize] = useState<string | null>(null);
   const [rStart, setRStart] = useState<string | null>(null);
   const [rEnd, setREnd] = useState<string | null>(null);
+  const [isFinished, setIsFinished] = useState(false);
+  const [showResultModal, setShowResultModal] = useState(false); // 결과 모달
+  const [showLevelUp, setShowLevelUp] = useState(false); // 레벨업 모달
+  const [lastGainedExp, setLastGainedExp] = useState(0);
+  const [praiseMessage, setPraiseMessage] = useState('');
+  const [accuracyScore, setAccuracyScore] = useState(0);
+  const [prevLevel, setPrevLevel] = useState(1);
+  const [currentLevel, setCurrentLevel] = useState(1);
   const [paramsReady, setParamsReady] = useState(false);
 
   const [aiSliderOpen, setAiSliderOpen] = useState(false);
@@ -396,19 +405,123 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     }
   };
 
+  // 축포 효과 (도파민 유도)
+  const triggerConfetti = () => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js';
+    script.onload = () => {
+      const confetti = (window as any).confetti;
+      const count = 200;
+      const defaults = { origin: { y: 0.7 } };
+
+      function fire(particleRatio: number, opts: any) {
+        confetti({
+          ...defaults,
+          ...opts,
+          particleCount: Math.floor(count * particleRatio)
+        });
+      }
+
+      fire(0.25, { spread: 26, startVelocity: 55 });
+      fire(0.2, { spread: 60 });
+      fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
+      fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 });
+      fire(0.1, { spread: 120, startVelocity: 45 });
+    };
+    document.head.appendChild(script);
+  };
+
   const handleFinish = async () => {
     setIsFinished(true);
     try {
       const { data: userData } = await supabase.auth.getUser();
       if (userData.user) {
         const correctCount = answers.filter(a => a.isCorrect).length;
-        await supabase.from('dukigo_study_logs').insert({
+        const accuracy = Math.round((correctCount / questions.length) * 100);
+        
+        // 1. 가변적 보상 멘트 선정 (도파민 유도)
+        const praises = [
+          "와우! 뇌가 실시간으로 섹시해지고 있어요! 🔥",
+          "당신은 천재인가요? 이 기세면 무조건 합격입니다! 🏆",
+          "합격의 기운이 여기까지 느껴집니다! 웅장해지네요... ✨",
+          "이건 사람이 아니라 AI 아닌가요? 완벽합니다! 🤖",
+          "오늘 공부량 실화인가요? 역사에 기록될 열정입니다! 📚",
+          "전설적인 집중력입니다! 집중력의 화신이시네요! 🧘",
+          "미친 속도! 미친 정답률! 당신이 바로 듀기고의 주인공! 🌟"
+        ];
+        const discouragements = [
+          "아까워요! 하지만 이 실패가 당신을 더 강하게 만들 거예요! 💪",
+          "함정에 살짝 빠졌을 뿐입니다. 실제 시험에선 절대 안 틀리겠네요! 🛡️",
+          "오답은 '지식의 비료'입니다. 지금 당신의 뇌가 무럭무럭 자라는 중! 🌱",
+          "괜찮아요! 에디슨도 수만 번 틀렸답니다. 한 걸음 더 전진! 🚶",
+          "오히려 좋아! 이 문제를 정복하면 당신의 실력은 2배가 됩니다! ⚡"
+        ];
+
+        const isGoodJob = accuracy >= 60;
+        const randomPraise = isGoodJob 
+          ? praises[Math.floor(Math.random() * praises.length)]
+          : discouragements[Math.floor(Math.random() * discouragements.length)];
+        
+        // 2. 경험치 계산 (문제당 10XP + 틀려도 3XP 보상)
+        const wrongCount = questions.length - correctCount;
+        const gainedExp = (correctCount * 10) + (wrongCount * 3) + (accuracy >= 80 ? 100 : 50);
+        
+        // 3. 레벨 계산용 이전 정보
+        const currentExp = userProfile?.exp_points || 0;
+        const oldLevel = Math.floor(currentExp / 1000) + 1;
+        const newLevel = Math.floor((currentExp + gainedExp) / 1000) + 1;
+        
+        // 4. DB 업데이트 (로그 저장 & 경험치 추가 & 오답 저장)
+        const wrongQuestions = answers.filter(a => !a.isCorrect).map(a => ({
           user_id: userData.user.id,
+          question_id: a.id,
           subject: subject,
-          total_questions: questions.length,
-          correct_questions: correctCount,
-          end_time: new Date().toISOString()
-        });
+          unit: unitFilter,
+          set_num: setNum ? parseInt(setNum) : null,
+          created_at: new Date().toISOString()
+        }));
+
+        await Promise.all([
+          supabase.from('dukigo_study_logs').insert({
+            user_id: userData.user.id,
+            subject: subject,
+            unit: unitFilter,
+            set_num: setNum ? parseInt(setNum) : null,
+            total_questions: questions.length,
+            correct_questions: correctCount,
+            end_time: new Date().toISOString()
+          }),
+          // 오답 저장
+          wrongQuestions.length > 0 ? supabase.from('dukigo_wrong_answers').upsert(wrongQuestions) : Promise.resolve(),
+          // 경험치 누적
+          supabase.rpc('increment_exp', { user_id: userData.user.id, amount: gainedExp })
+            .then(({ error }) => {
+              if (error) {
+                return supabase.from('dukigo_profiles')
+                  .update({ exp_points: currentExp + gainedExp })
+                  .eq('id', userData.user.id);
+              }
+            })
+        ]);
+
+        // 5. 모달 상태 설정
+        setLastGainedExp(gainedExp);
+        setPraiseMessage(randomPraise);
+        setAccuracyScore(accuracy);
+        setPrevLevel(oldLevel);
+        setCurrentLevel(newLevel);
+        
+        if (accuracy >= 60) {
+          triggerConfetti();
+        }
+
+        // 레벨업 여부에 따라 순차적으로 모달 표시
+        setIsFinished(true);
+        if (newLevel > oldLevel) {
+          setShowLevelUp(true);
+        } else {
+          setShowResultModal(true);
+        }
       }
     } catch (err) {
       console.error('Failed to save study log:', err);

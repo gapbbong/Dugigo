@@ -83,6 +83,14 @@ export async function GET(req: NextRequest) {
         return "기타 및 통합";
       }
 
+      if (sub === '시각디자인산업기사') {
+        if (q.subject) return q.subject;
+        if (/색채|색상|명도|채도|먼셀|오스트발트|배색|조화|대비|색명|현색계|계시/.test(text)) return "색채학";
+        if (/인쇄|사진|필름|현상|제판|제책|잉크|카메라|노출|광선|렌즈|망점|오프셋|감광|잠상/.test(text)) return "인쇄 및 사진기법";
+        if (/디자인|기호|광고|마케팅|바우하우스|조형|공간|매니지먼트|아이덴티티|퍼스|게슈탈트/.test(text)) return "시각디자인론";
+        return "시각디자인 일반";
+      }
+
       return "기본 단원";
     };
 
@@ -157,6 +165,11 @@ export async function GET(req: NextRequest) {
 
       if (name.includes('[1과목]')) return 40;
       if (name.includes('[2과목]')) return 50;
+
+      if (name === "시각디자인론") return 60;
+      if (name === "색채학") return 61;
+      if (name === "인쇄 및 사진기법") return 62;
+      if (name === "시각디자인 일반") return 69;
 
       return 99;
     };

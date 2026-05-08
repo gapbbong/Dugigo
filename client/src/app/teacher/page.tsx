@@ -158,9 +158,25 @@ export default function TeacherDashboard() {
             </div>
             <p className="text-slate-500 font-bold text-lg">학생들의 전체 학습 현황과 성취도를 한눈에 파악하세요.</p>
           </div>
-          <button onClick={fetchData} className="px-6 py-3 bg-white border-2 border-slate-200 rounded-xl font-black text-slate-600 shadow-sm hover:border-brand-400 hover:text-brand-600 hover:shadow-md transition-all active:scale-95">
-            데이터 새로고침
-          </button>
+          <div className="flex items-center gap-4">
+            <label className="flex items-center gap-3 bg-white px-5 py-3 rounded-2xl border-2 border-slate-100 cursor-pointer hover:border-brand-300 transition-all shadow-sm">
+              <span className="text-sm font-black text-slate-600">나의 진도 표시</span>
+              <div className="relative">
+                <input 
+                  type="checkbox" 
+                  className="sr-only peer"
+                  defaultChecked={localStorage.getItem('dukigo_show_teacher_progress') !== 'false'}
+                  onChange={(e) => {
+                    localStorage.setItem('dukigo_show_teacher_progress', e.target.checked ? 'true' : 'false');
+                  }}
+                />
+                <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-brand-600"></div>
+              </div>
+            </label>
+            <button onClick={fetchData} className="px-6 py-3 bg-white border-2 border-slate-200 rounded-xl font-black text-slate-600 shadow-sm hover:border-brand-400 hover:text-brand-600 hover:shadow-md transition-all active:scale-95">
+              데이터 새로고침
+            </button>
+          </div>
         </header>
 
         {/* 요약 카드 */}
