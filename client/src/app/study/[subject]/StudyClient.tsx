@@ -76,6 +76,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [hideAutoSummary, setHideAutoSummary] = useState(false);
   const [slideData, setSlideData] = useState<any[] | null>(null);
   const [currentSlideIdx, setCurrentSlideIdx] = useState(0);
+  const [isSummaryError, setIsSummaryError] = useState(false);
+  const [retryCount, setRetryCount] = useState(0);
 
   useEffect(() => {
     const s = searchParamsProps || {};
@@ -90,47 +92,53 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   useEffect(() => {
     if (!paramsReady || !subject || !unitFilter || !setNum) return;
     const fetchSummary = async () => {
+      if (!subject || !unitFilter || !setNum) return;
+      
       setIsGenerating(true);
+      setIsSummaryError(false);
       setSummaryProgress(0);
       
-      // 가상 프로그래스 시작 (약 15초 동안 95%까지 상승)
+      // 가상 프로그래스 시작
       const progressInterval = setInterval(() => {
         setSummaryProgress(prev => {
-          if (prev >= 95) {
-            clearInterval(progressInterval);
-            return 95;
-          }
-          return prev + (95 - prev) * 0.1; // 서서히 느려지는 곡선
+          if (prev >= 95) return 95;
+          return prev + (95 - prev) * 0.1;
         });
       }, 1000);
 
       try {
-        let fetchUnit = unitFilter;
-        const res = await fetch(`/api/summaries?subject=${encodeURIComponent(subject)}&unit=${encodeURIComponent(fetchUnit)}&set=${setNum}`);
+        const fetchUnit = unitFilter;
+        const sizeParam = setSize ? `&size=${setSize}` : '';
+        const res = await fetch(`/api/summaries?subject=${encodeURIComponent(subject)}&unit=${encodeURIComponent(fetchUnit)}&set=${setNum}${sizeParam}`);
+        
         if (res.ok) {
           const data = await res.json();
-          setSlideData(data.slides || null);
-          setSummaryProgress(100);
-          
-          const hideKey = `dugigo_hide_summary_${subject}_${unitFilter}_${setNum}`;
-          const isHidden = localStorage.getItem(hideKey) === 'true';
-          setHideAutoSummary(isHidden);
+          if (data.slides && data.slides.length > 0) {
+            setSlideData(data.slides);
+            setSummaryProgress(100);
+            
+            const hideKey = `dugigo_hide_summary_${subject}_${unitFilter}_${setNum}`;
+            const isHidden = localStorage.getItem(hideKey) === 'true';
+            setHideAutoSummary(isHidden);
 
-          if (!isHidden && data.slides && data.slides.length > 0) {
-            setAiSliderOpen(true);
+            if (!isHidden) setAiSliderOpen(true);
+          } else {
+            throw new Error('No slides generated');
           }
         } else {
-          setSlideData(null);
+          throw new Error('API request failed');
         }
       } catch (e) {
-        console.error('Failed to load summary slides:', e);
+        console.error('Summary generation failed:', e);
+        setIsSummaryError(true);
       } finally {
         clearInterval(progressInterval);
         setIsGenerating(false);
       }
     };
+
     fetchSummary();
-  }, [subject, unitFilter, setNum, paramsReady, searchParamsProps]);
+  }, [subject, unitFilter, setNum, paramsReady, searchParamsProps, retryCount]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -549,6 +557,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   if (slideData && slideData.length > 0) {
                     setCurrentSlideIdx(0);
                     setAiSliderOpen(true);
+                  } else if (isSummaryError) {
+                    setRetryCount(prev => prev + 1);
                   } else if (isGenerating) {
                     alert('AI 선생님이 30문항을 꼼꼼히 분석 중입니다. 잠시만 더 기다려 주세요! ✨');
                   }
@@ -573,9 +583,11 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                 <span className="relative z-10">
                   {slideData && slideData.length > 0 
                     ? '학습 슬라이드' 
-                    : isGenerating 
-                      ? `요약 생성 중 (${Math.round(summaryProgress)}%)` 
-                      : 'AI 요약 준비 중...'}
+                    : isSummaryError
+                      ? '생성 실패 (다시 시도)'
+                      : isGenerating 
+                        ? `요약 생성 중 (${Math.round(summaryProgress)}%)` 
+                        : 'AI 요약 준비 중...'}
                 </span>
               </button>
             )}
