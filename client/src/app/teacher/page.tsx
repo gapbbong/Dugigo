@@ -107,9 +107,14 @@ export default function TeacherDashboard() {
       // 정답률 순으로 정렬 (높은 순)
       studentStats.sort((a, b) => b.accuracy - a.accuracy);
 
-      setStudents(studentStats);
+      // 종목 선택 시 해당 종목을 한 번이라도 푼 학생만 표시
+      const filteredStudents = selectedSubject === '전체' 
+        ? studentStats 
+        : studentStats.filter(s => s.totalQuestions > 0);
+
+      setStudents(filteredStudents);
       setStats({
-        totalStudents: profiles?.length || 0,
+        totalStudents: filteredStudents.length,
         avgAccuracy: totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0,
         todayActive: todayActiveSet.size,
         suspiciousCount: 0
@@ -165,17 +170,7 @@ export default function TeacherDashboard() {
             </div>
           </div>
           <div className="flex items-center gap-4 w-full md:w-auto">
-            <select 
-              value={selectedSubject}
-              onChange={(e) => setSelectedSubject(e.target.value)}
-              className="px-6 py-3 bg-white border-2 border-slate-200 rounded-xl font-black text-slate-600 shadow-sm hover:border-brand-400 focus:outline-none transition-all appearance-none cursor-pointer min-w-[180px]"
-            >
-              <option value="전체">전체 종목 보기</option>
-              {subjects.map(sub => (
-                <option key={sub} value={sub}>{sub}</option>
-              ))}
-            </select>
-            <label className="hidden md:flex items-center gap-3 bg-white px-5 py-3 rounded-2xl border-2 border-slate-100 cursor-pointer hover:border-brand-300 transition-all shadow-sm">
+            <label className="flex items-center gap-3 bg-white px-5 py-3 rounded-2xl border-2 border-slate-100 cursor-pointer hover:border-brand-300 transition-all shadow-sm">
               <span className="text-sm font-black text-slate-600">나의 진도 표시</span>
               <div className="relative">
                 <input 
@@ -189,7 +184,7 @@ export default function TeacherDashboard() {
                 <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-brand-600"></div>
               </div>
             </label>
-            <button onClick={fetchData} className="px-6 py-3 bg-white border-2 border-slate-200 rounded-xl font-black text-slate-600 shadow-sm hover:border-brand-400 hover:text-brand-600 hover:shadow-md transition-all active:scale-95">
+            <button onClick={fetchData} className="px-6 py-3 bg-brand-600 text-white rounded-xl font-black shadow-lg shadow-brand-500/20 hover:bg-brand-700 transition-all active:scale-95">
               새로고침
             </button>
           </div>
@@ -206,12 +201,24 @@ export default function TeacherDashboard() {
         {/* 학생 목록 테이블 */}
         <div className="bg-white/80 backdrop-blur-xl rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-white overflow-hidden">
           <div className="p-6 md:p-8 border-b border-slate-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white/50">
-            <h2 className="text-2xl font-black text-slate-800 flex items-center gap-2">
-              학생 상세 현황 <span className="text-brand-500 bg-brand-50 px-3 py-1 rounded-full text-sm">{students.length}</span>
-            </h2>
-            <div className="relative w-full md:w-auto">
+            <div className="flex flex-col md:flex-row md:items-center gap-4">
+              <h2 className="text-2xl font-black text-slate-800 flex items-center gap-2">
+                학생 상세 현황 <span className="text-brand-500 bg-brand-50 px-3 py-1 rounded-full text-sm">{students.length}</span>
+              </h2>
+              <select 
+                value={selectedSubject}
+                onChange={(e) => setSelectedSubject(e.target.value)}
+                className="px-4 py-2 bg-slate-50 border-2 border-slate-100 rounded-xl font-black text-slate-600 shadow-sm hover:border-brand-300 focus:outline-none transition-all cursor-pointer text-sm"
+              >
+                <option value="전체">전체 종목</option>
+                {subjects.map(sub => (
+                  <option key={sub} value={sub}>{sub}</option>
+                ))}
+              </select>
+            </div>
+            <div className="relative w-full md:w-64">
               <Search className="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-              <input type="text" placeholder="이름으로 검색..." className="w-full md:w-64 pl-12 pr-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:outline-none focus:border-brand-400 focus:bg-white font-bold text-sm transition-all" />
+              <input type="text" placeholder="이름으로 검색..." className="w-full pl-12 pr-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:outline-none focus:border-brand-400 focus:bg-white font-bold text-sm transition-all" />
             </div>
           </div>
           <div className="overflow-x-auto">

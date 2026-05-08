@@ -204,7 +204,7 @@ export default function SelectUnitPage() {
                   const threeDaysAgo = new Date();
                   threeDaysAgo.setDate(threeDaysAgo.getDate() - 3);
                   const recentCount = studyLogs.filter(log => log.end_time && new Date(log.end_time) > threeDaysAgo).length;
-                  const temp = Math.min(100, 36.5 + recentCount * 2.5);
+                  const temp = Math.min(100, 36.5 + recentCount * 1.0);
                   return temp.toFixed(1);
                 })()}°C
               </span>
