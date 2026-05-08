@@ -76,6 +76,7 @@ export default function TeacherDashboard() {
 
       const studentStats = profiles?.map(student => {
         const studentLogs = logs?.filter(l => l.user_id === student.id) || [];
+        const studentSubjects = Array.from(new Set(studentLogs.map(l => l.subject))).filter(Boolean);
         
         let sTotalQ = 0;
         let sCorrect = 0;
@@ -107,6 +108,7 @@ export default function TeacherDashboard() {
           accuracy,
           totalDuration: sDuration,
           lastActive,
+          subjectsStudied: studentSubjects.length > 0 ? studentSubjects.join(', ') : '기록 없음',
           guessingCount: 0 // 현재 스키마에서는 세션 요약만 제공하므로 0으로 설정
         };
       }) || [];
@@ -222,7 +224,10 @@ export default function TeacherDashboard() {
               </h2>
               <select 
                 value={selectedSubject}
-                onChange={(e) => setSelectedSubject(e.target.value)}
+                onChange={(e) => {
+                  setSelectedSubject(e.target.value);
+                  setSearchTerm('');
+                }}
                 className="px-4 py-2 bg-slate-50 border-2 border-slate-100 rounded-xl font-black text-slate-600 shadow-sm hover:border-brand-300 focus:outline-none transition-all cursor-pointer text-sm"
               >
                 <option value="전체">전체 종목</option>
@@ -248,6 +253,7 @@ export default function TeacherDashboard() {
                 <tr className="bg-slate-50/80 text-slate-400 font-black text-xs uppercase tracking-widest border-b border-slate-100">
                   <th className="p-6 font-black">학생 정보</th>
                   <th className="p-6 font-black">최근 접속일</th>
+                  <th className="p-6 font-black">학습 종목</th>
                   <th className="p-6 font-black">총 푼 문제수</th>
                   <th className="p-6 font-black w-64">종합 정답률</th>
                   <th className="p-6 font-black">총 학습 시간</th>
@@ -280,6 +286,11 @@ export default function TeacherDashboard() {
                       </div>
                     </td>
                     <td className="p-6 font-bold text-slate-500">{student.lastActive}</td>
+                    <td className="p-6">
+                      <span className="px-3 py-1 bg-slate-100 text-slate-600 rounded-lg font-bold text-xs">
+                        {selectedSubject === '전체' ? student.subjectsStudied : selectedSubject}
+                      </span>
+                    </td>
                     <td className="p-6 font-black text-slate-800 text-lg">{student.totalQuestions}<span className="text-sm font-bold text-slate-400 ml-1">문제</span></td>
                     <td className="p-6">
                       <div className="flex items-center gap-3">
