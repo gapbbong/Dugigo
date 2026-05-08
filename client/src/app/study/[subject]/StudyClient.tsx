@@ -520,6 +520,13 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             correct_questions: correctCount,
             duration_seconds: Math.max(1, Math.floor((lastActionTime - startTime) / 1000)),
             end_time: new Date().toISOString()
+          }).then(({ error }) => {
+            if (error) {
+              console.error('❌ Study log insert error:', JSON.stringify(error));
+              alert('학습 기록 저장 실패: ' + error.message);
+            } else {
+              console.log('✅ Study log saved successfully');
+            }
           }),
           // 오답 저장
           wrongQuestions.length > 0 ? supabase.from('dukigo_wrong_answers').upsert(wrongQuestions) : Promise.resolve(),
