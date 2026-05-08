@@ -24,7 +24,7 @@ export default function TeacherDashboard() {
     try {
       // 0. 현재 사용자 정보 확인
       const { data: { user } } = await supabase.auth.getUser();
-      const ownerFlag = user?.email === 'serv@kakao.com';
+      const ownerFlag = user?.email?.toLowerCase() === 'serv@kakao.com';
       setIsOwner(ownerFlag);
 
       let profileQuery = supabase.from('dukigo_profiles').select('*');
@@ -35,20 +35,12 @@ export default function TeacherDashboard() {
       }
       
       const { data: profiles, error: profileErr } = await profileQuery;
-      
       if (profileErr) throw profileErr;
 
-      // 2. 세션(학습 기록) 가져오기
-      const { data: sessions, error: sessionErr } = await supabase
-        .from('dukigo_study_sessions')
-        .select('*');
-      
-      if (sessionErr) throw sessionErr;
-
-      // 3. 로그(개별 문제 풀이 기록 - 찍기 감지용) 가져오기
+      // 1. 학습 로그(세션 기록) 가져오기
       const { data: logs, error: logErr } = await supabase
         .from('dukigo_study_logs')
-        .select('student_id, is_correct, time_spent_seconds, timestamp');
+        .select('*');
       
       if (logErr) throw logErr;
 
@@ -56,54 +48,40 @@ export default function TeacherDashboard() {
       let totalCorrect = 0;
       let totalQuestions = 0;
       let todayActiveSet = new Set();
-      let suspiciousSet = new Set();
 
       const todayStr = new Date().toISOString().split('T')[0];
 
-      // 찍기 감지 (3초 이내에 푼 문제 수)
-      const suspiciousThreshold = 3; 
-
-      logs?.forEach(log => {
-        if (log.time_spent_seconds < suspiciousThreshold) {
-          suspiciousSet.add(log.student_id);
-        }
-      });
-
       const studentStats = profiles?.map(student => {
-        const studentSessions = sessions?.filter(s => s.student_id === student.id) || [];
-        const studentLogs = logs?.filter(l => l.student_id === student.id) || [];
+        const studentLogs = logs?.filter(l => l.user_id === student.id) || [];
         
         let sTotalQ = 0;
         let sCorrect = 0;
-        let sDuration = 0;
         let lastActive = '기록 없음';
 
-        studentSessions.forEach(s => {
-          sTotalQ += s.total_questions || 0;
-          sCorrect += s.correct_count || 0;
-          sDuration += s.duration_seconds || 0;
+        studentLogs.forEach(log => {
+          sTotalQ += log.total_questions || 0;
+          sCorrect += log.correct_questions || 0;
           
-          totalQuestions += s.total_questions || 0;
-          totalCorrect += s.correct_count || 0;
+          totalQuestions += log.total_questions || 0;
+          totalCorrect += log.correct_questions || 0;
 
-          if (s.session_date?.startsWith(todayStr)) {
+          if (log.end_time?.startsWith(todayStr)) {
             todayActiveSet.add(student.id);
           }
-          if (lastActive === '기록 없음' || new Date(s.session_date) > new Date(lastActive)) {
-            lastActive = s.session_date?.split('T')[0] || lastActive;
+          if (lastActive === '기록 없음' || new Date(log.end_time) > new Date(lastActive)) {
+            lastActive = log.end_time?.split('T')[0] || lastActive;
           }
         });
 
         const accuracy = sTotalQ > 0 ? Math.round((sCorrect / sTotalQ) * 100) : 0;
-        const guessingCount = studentLogs.filter(l => l.time_spent_seconds < suspiciousThreshold).length;
 
         return {
           ...student,
+          username: student.display_name || '이름 없음',
           totalQuestions: sTotalQ,
           accuracy,
-          totalDuration: sDuration,
           lastActive,
-          guessingCount
+          guessingCount: 0 // 현재 스키마에서는 세션 요약만 제공하므로 0으로 설정
         };
       }) || [];
 
@@ -115,7 +93,7 @@ export default function TeacherDashboard() {
         totalStudents: profiles?.length || 0,
         avgAccuracy: totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0,
         todayActive: todayActiveSet.size,
-        suspiciousCount: suspiciousSet.size
+        suspiciousCount: 0
       });
 
     } catch (err) {
