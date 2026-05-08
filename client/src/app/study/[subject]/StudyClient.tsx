@@ -87,6 +87,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [isSummaryError, setIsSummaryError] = useState(false);
   const [retryCount, setRetryCount] = useState(0);
   const [userProfile, setUserProfile] = useState<any>(null);
+  const [lastActionTime, setLastActionTime] = useState(Date.now());
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -334,6 +335,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       const filtered = prev.filter(a => a.questionId !== qId);
       return [...filtered, { questionId: qId, isCorrect }];
     });
+    setLastActionTime(Date.now());
   };
   
   useEffect(() => {
@@ -397,6 +399,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
   const handlePrev = () => {
     if (currentIndex > 0) {
+      setLastActionTime(Date.now());
       setDirection(-1);
       setCurrentIndex(prev => prev - 1);
     }
@@ -412,6 +415,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
   const handleNext = () => {
     if (!isAnswered) return;
+    setLastActionTime(Date.now());
     if (currentIndex < questions.length - 1) {
       setDirection(1);
       setCurrentIndex(prev => prev + 1);
@@ -504,7 +508,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             set_num: setNum ? parseInt(setNum) : null,
             total_questions: questions.length,
             correct_questions: correctCount,
-            duration_seconds: elapsedSeconds,
+            duration_seconds: Math.max(1, Math.floor((lastActionTime - startTime) / 1000)),
             end_time: new Date().toISOString()
           }),
           // 오답 저장
