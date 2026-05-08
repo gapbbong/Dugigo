@@ -17,7 +17,8 @@ import {
   Flag,
   X,
   RotateCcw,
-  BookOpen
+  BookOpen,
+  Sparkles
 } from 'lucide-react';
 import 'katex/dist/katex.min.css';
 import { InlineMath as _InlineMath } from 'react-katex';
