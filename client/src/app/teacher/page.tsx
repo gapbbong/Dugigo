@@ -1,13 +1,15 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
-import { Users, Target, Clock, AlertTriangle, TrendingUp, Search, ChevronRight, Award } from 'lucide-react';
+import { Users, Target, Clock, AlertTriangle, TrendingUp, Search, ChevronRight, ChevronLeft, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function TeacherDashboard() {
   const [students, setStudents] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [isOwner, setIsOwner] = useState(false);
+  const [subjects, setSubjects] = useState<string[]>([]);
+  const [selectedSubject, setSelectedSubject] = useState<string>('전체');
   const [stats, setStats] = useState({
     totalStudents: 0,
     avgAccuracy: 0,
@@ -17,7 +19,18 @@ export default function TeacherDashboard() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+    fetchSubjects();
+  }, [selectedSubject]);
+
+  const fetchSubjects = async () => {
+    try {
+      const res = await fetch('/api/subjects');
+      const data = await res.json();
+      setSubjects(data.subjects || []);
+    } catch (err) {
+      console.error('Failed to fetch subjects:', err);
+    }
+  };
 
   const fetchData = async () => {
     setLoading(true);
@@ -38,9 +51,12 @@ export default function TeacherDashboard() {
       if (profileErr) throw profileErr;
 
       // 1. 학습 로그(세션 기록) 가져오기
-      const { data: logs, error: logErr } = await supabase
-        .from('dukigo_study_logs')
-        .select('*');
+      let logQuery = supabase.from('dukigo_study_logs').select('*');
+      if (selectedSubject !== '전체') {
+        logQuery = logQuery.eq('subject', selectedSubject);
+      }
+      
+      const { data: logs, error: logErr } = await logQuery;
       
       if (logErr) throw logErr;
 
@@ -128,19 +144,38 @@ export default function TeacherDashboard() {
       
       <div className="max-w-7xl mx-auto space-y-8 relative z-10">
         <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-10">
-          <div>
-            <div className="flex items-center gap-3 mb-2">
-              <span className="px-3 py-1 bg-brand-100 text-brand-700 font-black text-xs uppercase tracking-widest rounded-full">
-                {isOwner ? 'Owner' : 'Admin'}
-              </span>
-              <h1 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
-                {isOwner ? '관리자 대시보드' : '교사 대시보드'}
-              </h1>
+          <div className="flex items-center gap-6 w-full md:w-auto">
+            <button 
+              onClick={() => window.location.href = '/select-subject'} 
+              className="w-12 h-12 bg-white border-2 border-slate-100 rounded-2xl flex items-center justify-center text-slate-500 hover:border-brand-300 hover:text-brand-600 transition-all shadow-sm shrink-0"
+              title="과목 선택으로 돌아가기"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <div>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="px-3 py-1 bg-brand-100 text-brand-700 font-black text-xs uppercase tracking-widest rounded-full">
+                  {isOwner ? 'Owner' : 'Admin'}
+                </span>
+                <h1 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
+                  {isOwner ? '관리자 대시보드' : '교사 대시보드'}
+                </h1>
+              </div>
+              <p className="text-slate-500 font-bold text-lg">학생들의 전체 학습 현황과 성취도를 한눈에 파악하세요.</p>
             </div>
-            <p className="text-slate-500 font-bold text-lg">학생들의 전체 학습 현황과 성취도를 한눈에 파악하세요.</p>
           </div>
-          <div className="flex items-center gap-4">
-            <label className="flex items-center gap-3 bg-white px-5 py-3 rounded-2xl border-2 border-slate-100 cursor-pointer hover:border-brand-300 transition-all shadow-sm">
+          <div className="flex items-center gap-4 w-full md:w-auto">
+            <select 
+              value={selectedSubject}
+              onChange={(e) => setSelectedSubject(e.target.value)}
+              className="px-6 py-3 bg-white border-2 border-slate-200 rounded-xl font-black text-slate-600 shadow-sm hover:border-brand-400 focus:outline-none transition-all appearance-none cursor-pointer min-w-[180px]"
+            >
+              <option value="전체">전체 종목 보기</option>
+              {subjects.map(sub => (
+                <option key={sub} value={sub}>{sub}</option>
+              ))}
+            </select>
+            <label className="hidden md:flex items-center gap-3 bg-white px-5 py-3 rounded-2xl border-2 border-slate-100 cursor-pointer hover:border-brand-300 transition-all shadow-sm">
               <span className="text-sm font-black text-slate-600">나의 진도 표시</span>
               <div className="relative">
                 <input 
@@ -155,7 +190,7 @@ export default function TeacherDashboard() {
               </div>
             </label>
             <button onClick={fetchData} className="px-6 py-3 bg-white border-2 border-slate-200 rounded-xl font-black text-slate-600 shadow-sm hover:border-brand-400 hover:text-brand-600 hover:shadow-md transition-all active:scale-95">
-              데이터 새로고침
+              새로고침
             </button>
           </div>
         </header>
@@ -213,7 +248,7 @@ export default function TeacherDashboard() {
                       </div>
                     </td>
                     <td className="p-6 font-bold text-slate-500">{student.lastActive}</td>
-                    <td className="p-6 font-black text-slate-800 text-lg">{student.totalQuestions}<span className="text-sm font-bold text-slate-400 ml-1">제</span></td>
+                    <td className="p-6 font-black text-slate-800 text-lg">{student.totalQuestions}<span className="text-sm font-bold text-slate-400 ml-1">문제</span></td>
                     <td className="p-6">
                       <div className="flex items-center gap-3">
                         <span className={`font-black text-xl w-12 ${student.accuracy >= 60 ? 'text-emerald-500' : 'text-rose-500'}`}>
