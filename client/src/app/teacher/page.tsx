@@ -61,6 +61,7 @@ export default function TeacherDashboard() {
         studentLogs.forEach(log => {
           sTotalQ += log.total_questions || 0;
           sCorrect += log.correct_questions || 0;
+          sDuration += log.duration_seconds || 0;
           
           totalQuestions += log.total_questions || 0;
           totalCorrect += log.correct_questions || 0;
@@ -80,6 +81,7 @@ export default function TeacherDashboard() {
           username: student.display_name || '이름 없음',
           totalQuestions: sTotalQ,
           accuracy,
+          totalDuration: sDuration,
           lastActive,
           guessingCount: 0 // 현재 스키마에서는 세션 요약만 제공하므로 0으로 설정
         };

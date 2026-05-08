@@ -504,6 +504,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             set_num: setNum ? parseInt(setNum) : null,
             total_questions: questions.length,
             correct_questions: correctCount,
+            duration_seconds: elapsedSeconds,
             end_time: new Date().toISOString()
           }),
           // 오답 저장
