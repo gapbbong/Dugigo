@@ -575,7 +575,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     ? '학습 슬라이드' 
                     : isGenerating 
                       ? `요약 생성 중 (${Math.round(summaryProgress)}%)` 
-                      : '학습 대기 중'}
+                      : 'AI 요약 준비 중...'}
                 </span>
               </button>
             )}
