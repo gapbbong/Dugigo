@@ -675,6 +675,23 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mt-6">
             <button onClick={handleRetry} className="py-5 rounded-2xl bg-white border-2 border-slate-100 text-slate-600 font-black text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-2"><RotateCcw className="w-5 h-5" /> 다시 풀기</button>
+            {answers.filter(a => !a.isCorrect).length > 0 && (
+              <button 
+                onClick={() => {
+                  const wrongIds = new Set(answers.filter(a => !a.isCorrect).map(a => a.questionId));
+                  const wrongQuestions = questions.filter(q => wrongIds.has(q.id || ''));
+                  if (wrongQuestions.length === 0) return;
+                  setQuestions(wrongQuestions.map(q => ({ ...q, selectedIndex: null, isCurrentCorrect: undefined })));
+                  setAnswers([]);
+                  setCurrentIndex(0);
+                  setIsFinished(false);
+                  setLastActionTime(Date.now());
+                }} 
+                className="py-5 rounded-2xl bg-rose-50 border-2 border-rose-200 text-rose-600 font-black text-lg hover:bg-rose-100 transition-all flex items-center justify-center gap-2"
+              >
+                <XCircle className="w-5 h-5" /> 틀린 문제 다시 풀기 ({answers.filter(a => !a.isCorrect).length}문제)
+              </button>
+            )}
             {setNum && <button onClick={handleNextSet} className="py-5 rounded-2xl bg-brand-600 text-white font-black text-lg hover:bg-brand-700 shadow-lg shadow-brand-500/20 transition-all flex items-center justify-center gap-2">다음 세트 <ChevronRight className="w-5 h-5" /></button>}
             <button onClick={() => router.push('/select-subject')} className={`py-5 rounded-2xl border-2 border-slate-100 text-slate-400 font-bold text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-2 ${!setNum ? 'col-span-1' : 'md:col-span-2'}`}><Home className="w-5 h-5" /> 메인으로</button>
           </div>

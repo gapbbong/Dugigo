@@ -11,8 +11,16 @@ import {
   Sparkles,
   LayoutGrid,
   Calendar,
-  Zap
+  Zap,
+  Thermometer,
+  ShieldCheck
 } from 'lucide-react';
+
+const LEVEL_TITLES = [
+  "입문자", "초보자", "수련자", "숙련자", 
+  "전문가", "달인", "명인", "현자", 
+  "영웅", "전설", "신화", "초월자"
+];
 
 interface Unit {
   name: string;
@@ -158,38 +166,40 @@ export default function SelectUnitPage() {
       <div className="mesh-bg" />
 
       {/* Header with Level & EXP */}
-      <nav className="max-w-6xl mx-auto px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-6 relative z-10 border-b border-white/20 bg-white/30 backdrop-blur-md sticky top-0 shadow-sm mb-12">
-        <div className="flex items-center gap-6 w-full md:w-auto">
+      <nav className="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center relative z-10 border-b border-white/20 bg-white/40 backdrop-blur-md sticky top-0 shadow-sm mb-12">
+        <div className="flex items-center gap-4">
           <button 
             onClick={() => router.push('/select-subject')}
-            className="w-12 h-12 flex items-center justify-center bg-white/50 hover:bg-white rounded-2xl transition-all shadow-sm border border-white/40 shrink-0"
+            className="w-10 h-10 flex items-center justify-center bg-white/50 hover:bg-white rounded-xl transition-all shadow-sm border border-white/40 shrink-0"
           >
-            <ChevronLeft size={24} className="text-slate-600" />
+            <ChevronLeft size={20} className="text-slate-600" />
           </button>
-          
-          <div className="flex flex-col gap-1 flex-1 md:w-64">
-            <div className="flex justify-between items-end">
-              <span className="text-sm font-black text-brand-700">Lv.{level} {userProfile?.level_title || '열혈 학습자'}</span>
-              <span className="text-[10px] font-bold text-slate-400">{(userProfile?.exp_points || 0) % 1000} / 1000 XP</span>
-            </div>
-            <div className="h-2.5 bg-slate-200/50 rounded-full overflow-hidden border border-white shadow-inner">
-              <motion.div 
-                initial={{ width: 0 }}
-                animate={{ width: `${expProgress}%` }}
-                className="h-full bg-gradient-to-r from-brand-500 to-indigo-500 shadow-[0_0_10px_rgba(124,58,237,0.3)]"
-              />
-            </div>
+          <div>
+            <span className="text-xs font-black tracking-[0.2em] text-brand-600 uppercase">Step 02</span>
+            <h2 className="text-xl font-black text-slate-900 leading-tight">{subject}</h2>
           </div>
         </div>
 
-        <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
-          <div className={`flex items-center gap-2 px-4 py-2 rounded-2xl border-2 ${heat.bg} ${heat.color.replace('text', 'border')} shadow-sm`}>
-            <span className="text-lg">{heat.icon}</span>
-            <span className={`text-sm font-black uppercase tracking-widest`}>학습 열기: {heat.label}</span>
-          </div>
+        <div className="flex items-center gap-3">
           <div className="flex flex-col items-end">
-            <span className="text-[11px] font-black tracking-[0.2em] text-brand-600 uppercase">Step 02</span>
-            <span className="text-lg font-black text-slate-900">{subject}</span>
+            <div className="flex items-center gap-1 bg-brand-50 px-3 py-1 rounded-lg border border-brand-100 shadow-sm">
+              <ShieldCheck className="w-3.5 h-3.5 text-brand-600" />
+              <span className="text-xs font-black text-brand-700">
+                {userProfile ? (LEVEL_TITLES[Math.min(11, Math.floor((userProfile.exp_points || 0) / 1000))] || "입문자") : "입문자"}
+              </span>
+            </div>
+            <div className="flex items-center gap-1 mt-1">
+              <Thermometer className="w-3 h-3 text-rose-500" />
+              <span className="text-xs font-black text-slate-500">
+                {(() => {
+                  const threeDaysAgo = new Date();
+                  threeDaysAgo.setDate(threeDaysAgo.getDate() - 3);
+                  const recentCount = studyLogs.filter(log => log.end_time && new Date(log.end_time) > threeDaysAgo).length;
+                  const temp = Math.min(100, 36.5 + recentCount * 2.5);
+                  return temp.toFixed(1);
+                })()}°C
+              </span>
+            </div>
           </div>
         </div>
       </nav>
