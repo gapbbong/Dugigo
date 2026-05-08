@@ -300,7 +300,7 @@ export default function SelectUnitPage() {
                                       ? 'bg-emerald-50/80 border-emerald-200 text-emerald-700 hover:border-emerald-400' 
                                       : isStarted && showProgress
                                         ? 'bg-brand-50/80 border-brand-200 text-brand-700 hover:border-brand-400'
-                                        : 'bg-white border-slate-100 text-slate-400 hover:border-brand-300'
+                                        : 'bg-white border-slate-200 text-slate-600 hover:border-brand-300'
                                   }`}
                                 >
                                   {/* 학습 횟수 뱃지 (우측 상단) */}
@@ -312,8 +312,8 @@ export default function SelectUnitPage() {
                                     </div>
                                   )}
 
-                                  <span className={`text-3xl font-black tracking-tighter leading-none ${isStarted && showProgress ? '' : 'opacity-60'}`}>{displaySetNumber}</span>
-                                  <span className="text-[10px] font-black uppercase opacity-60 tracking-widest">세트</span>
+                                  <span className={`text-3xl font-black tracking-tighter leading-none ${isStarted && showProgress ? '' : ''}`}>{displaySetNumber}</span>
+                                  <span className="text-[10px] font-black uppercase text-slate-400 tracking-widest">세트</span>
                                   
                                   {/* 통합형 하단 게이지 */}
                                   {isStarted && showProgress && (

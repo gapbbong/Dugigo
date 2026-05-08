@@ -696,7 +696,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               </button>
             )}
             {setNum && <button onClick={handleNextSet} className="py-5 rounded-2xl bg-brand-600 text-white font-black text-lg hover:bg-brand-700 shadow-lg shadow-brand-500/20 transition-all flex items-center justify-center gap-2">다음 세트 <ChevronRight className="w-5 h-5" /></button>}
-            <button onClick={() => router.push('/select-subject')} className={`py-5 rounded-2xl border-2 border-slate-100 text-slate-400 font-bold text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-2 ${!setNum ? 'col-span-1' : 'md:col-span-2'}`}><Home className="w-5 h-5" /> 메인으로</button>
+            <button onClick={() => router.push(`/select-unit/${encodeURIComponent(subject)}`)} className={`py-5 rounded-2xl border-2 border-slate-100 text-slate-400 font-bold text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-2 ${!setNum ? 'col-span-1' : 'md:col-span-2'}`}><Home className="w-5 h-5" /> 단원 선택으로</button>
           </div>
         </motion.div>
       </div>
@@ -707,7 +707,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     <div className="min-h-screen relative flex flex-col text-slate-800">
       <div className="mesh-bg" />
       <nav className="sticky top-0 z-50 px-4 py-2 glass-card border-none bg-white/40 backdrop-blur-md flex justify-between items-center h-12 md:h-20 md:px-8 md:py-4">
-        <button onClick={() => router.push(`/select-unit/${params.subject}`)} className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/50 rounded-xl hover:bg-white active:scale-90 active:bg-brand-50 transition-all text-slate-600 shadow-sm"><ChevronLeft size={16} /></button>
+        <button onClick={() => router.push(`/select-unit/${params.subject}`)} className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/50 rounded-xl hover:bg-white hover:border-2 hover:border-brand-300 hover:text-brand-600 active:scale-90 active:bg-brand-50 transition-all text-slate-600 shadow-sm border border-transparent"><ChevronLeft size={16} /></button>
         <div className="flex items-center gap-3 md:gap-6 flex-1 justify-center">
           <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
             <span className="text-[10px] md:text-lg font-black tracking-[0.05em] text-brand-600 uppercase whitespace-nowrap overflow-hidden text-ellipsis max-w-[150px] md:max-w-none">
