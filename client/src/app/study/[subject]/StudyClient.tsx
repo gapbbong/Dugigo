@@ -512,6 +512,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         await Promise.all([
           supabase.from('dukigo_study_logs').insert({
             user_id: userData.user.id,
+            action_type: 'set_complete',
             subject: subject,
             unit: unitFilter,
             set_num: setNum ? parseInt(setNum) : null,
