@@ -685,7 +685,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             <span className="text-[10px] md:text-lg font-black tracking-[0.05em] text-brand-600 uppercase whitespace-nowrap overflow-hidden text-ellipsis max-w-[150px] md:max-w-none">
               {unitFilter ? `${unitFilter}${setNum ? ` · 세트 ${setNum}` : ''}` : `${subject} 기출학습`}
             </span>
-            {(unitFilter && setNum) && (
+            {(unitFilter && setNum && !isSummaryError) && (
               <button 
                 onClick={() => {
                   if (slideData && slideData.length > 0) {
