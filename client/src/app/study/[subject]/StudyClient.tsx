@@ -316,7 +316,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const isLastQuestion = currentIndex === questions.length - 1;
 
   const handleAnswer = (choiceIndex: number) => {
-    if (currentQuestion?.selectedIndex !== null) return;
+    // 이미 답을 선택한 경우(최초 응답)에는 어떤 동작도 하지 않음 (수정 불가)
+    if (currentQuestion?.selectedIndex !== null && currentQuestion?.selectedIndex !== undefined) return;
     
     const isCorrect = choiceIndex === currentQuestion.correctShuffledIndex;
     
