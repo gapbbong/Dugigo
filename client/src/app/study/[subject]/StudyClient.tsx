@@ -71,9 +71,11 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [paramsReady, setParamsReady] = useState(false);
 
   const [aiSliderOpen, setAiSliderOpen] = useState(false);
+  const [summaryProgress, setSummaryProgress] = useState(0);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [hideAutoSummary, setHideAutoSummary] = useState(false);
   const [slideData, setSlideData] = useState<any[] | null>(null);
   const [currentSlideIdx, setCurrentSlideIdx] = useState(0);
-  const [hideAutoSummary, setHideAutoSummary] = useState(false);
 
   useEffect(() => {
     const s = searchParamsProps || {};
@@ -88,14 +90,27 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   useEffect(() => {
     if (!paramsReady || !subject || !unitFilter || !setNum) return;
     const fetchSummary = async () => {
+      setIsGenerating(true);
+      setSummaryProgress(0);
+      
+      // 가상 프로그래스 시작 (약 15초 동안 95%까지 상승)
+      const progressInterval = setInterval(() => {
+        setSummaryProgress(prev => {
+          if (prev >= 95) {
+            clearInterval(progressInterval);
+            return 95;
+          }
+          return prev + (95 - prev) * 0.1; // 서서히 느려지는 곡선
+        });
+      }, 1000);
+
       try {
         let fetchUnit = unitFilter;
-        // 컴퓨터활용능력 2급도 이제 정밀 단원별로 요약을 가져옴
-        
         const res = await fetch(`/api/summaries?subject=${encodeURIComponent(subject)}&unit=${encodeURIComponent(fetchUnit)}&set=${setNum}`);
         if (res.ok) {
           const data = await res.json();
           setSlideData(data.slides || null);
+          setSummaryProgress(100);
           
           const hideKey = `dugigo_hide_summary_${subject}_${unitFilter}_${setNum}`;
           const isHidden = localStorage.getItem(hideKey) === 'true';
@@ -109,6 +124,9 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         }
       } catch (e) {
         console.error('Failed to load summary slides:', e);
+      } finally {
+        clearInterval(progressInterval);
+        setIsGenerating(false);
       }
     };
     fetchSummary();
@@ -531,19 +549,34 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   if (slideData && slideData.length > 0) {
                     setCurrentSlideIdx(0);
                     setAiSliderOpen(true);
-                  } else {
-                    // 데이터가 없을 때 클릭하면 재호출 시도 혹은 알림
-                    alert('AI 선생님이 슬라이드를 준비 중입니다. 잠시만 기다려 주세요! ✨');
+                  } else if (isGenerating) {
+                    alert('AI 선생님이 30문항을 꼼꼼히 분석 중입니다. 잠시만 더 기다려 주세요! ✨');
                   }
                 }} 
-                className={`px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[10px] md:text-xs font-black transition-all flex items-center gap-1.5 shrink-0 shadow-lg ${
+                className={`relative px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[10px] md:text-xs font-black transition-all flex items-center gap-1.5 shrink-0 shadow-lg overflow-hidden ${
                   slideData && slideData.length > 0 
                   ? 'bg-gradient-to-r from-brand-600 to-indigo-600 text-white shadow-brand-500/20 hover:scale-105' 
                   : 'bg-slate-100 text-slate-400 cursor-wait'
                 }`}
               >
-                <Sparkles className={`w-3 h-3 ${slideData && slideData.length > 0 ? 'animate-pulse' : ''}`} />
-                {slideData && slideData.length > 0 ? '학습 슬라이드' : '요약 생성 중...'}
+                {/* 프로그래스 배경 애니메이션 */}
+                {isGenerating && !slideData && (
+                  <motion.div 
+                    initial={{ width: 0 }}
+                    animate={{ width: `${summaryProgress}%` }}
+                    className="absolute inset-0 bg-brand-500/20"
+                    transition={{ ease: "linear" }}
+                  />
+                )}
+                
+                <Sparkles className={`relative z-10 w-3 h-3 ${slideData && slideData.length > 0 ? 'animate-pulse' : ''}`} />
+                <span className="relative z-10">
+                  {slideData && slideData.length > 0 
+                    ? '학습 슬라이드' 
+                    : isGenerating 
+                      ? `요약 생성 중 (${Math.round(summaryProgress)}%)` 
+                      : '학습 대기 중'}
+                </span>
               </button>
             )}
           </div>
