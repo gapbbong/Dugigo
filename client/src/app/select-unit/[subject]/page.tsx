@@ -330,15 +330,15 @@ export default function SelectUnitPage() {
                                   <span className={`text-3xl font-black tracking-tighter leading-none ${isStarted && showProgress ? '' : ''}`}>{displaySetNumber}</span>
                                   <span className="text-[10px] font-black uppercase text-slate-400 tracking-widest">세트</span>
                                   
-                                  {/* 시도별 정답률 막대 그래프 */}
+                                  {/* 시도별 정답률 세로 막대 그래프 */}
                                   {isStarted && showProgress && stats && stats.allScores && (
-                                    <div className="absolute bottom-0 left-0 w-full h-5 flex items-end gap-[1px] px-2 pb-1 overflow-hidden bg-slate-50/50">
-                                      {stats.allScores.slice(-10).map((score, idx) => (
+                                    <div className="absolute bottom-0 left-0 w-full h-6 flex items-end gap-1 px-3 pb-1 overflow-hidden bg-slate-50/30">
+                                      {stats.allScores.slice(-12).map((score, idx) => (
                                         <motion.div 
                                           key={idx}
                                           initial={{ height: 0 }}
-                                          animate={{ height: `${Math.max(15, score)}%` }}
-                                          className={`flex-1 rounded-t-sm ${
+                                          animate={{ height: `${Math.max(10, score)}%` }}
+                                          className={`w-1.5 rounded-t-[2px] shadow-[0_-1px_2px_rgba(0,0,0,0.05)] ${
                                             score >= 80 ? 'bg-emerald-500' : 
                                             score >= 60 ? 'bg-brand-500' : 'bg-rose-400'
                                           }`}
