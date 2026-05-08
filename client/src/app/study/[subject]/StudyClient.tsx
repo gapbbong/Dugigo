@@ -765,6 +765,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     imgSrc = `/summaries/한국사검정시험/${imgName}`;
                   } else if (imgName.startsWith('lit2_')) {
                     imgSrc = `/summaries/컴퓨터활용능력 2급/${imgName}`;
+                  } else if (imgName.startsWith('vis_') || subject.includes('시각디자인') || subject.includes('색채학')) {
+                    imgSrc = `/summaries/시각디자인산업기사/${imgName}`;
                   } else {
                     imgSrc = `/images/exams/${currentQuestion.year}_${currentQuestion.round}/${imgName}`;
                   }
@@ -774,13 +776,18 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   <motion.div 
                     initial={{ opacity: 0, y: 10 }} 
                     animate={{ opacity: 1, y: 0 }} 
-                    className="bg-white/50 p-4 md:p-6 rounded-[2rem] border border-white/60 shadow-sm flex justify-center"
+                    className="bg-white/50 p-4 md:p-6 rounded-[2rem] border border-white/60 shadow-sm flex justify-center empty:hidden"
+                    id={`img-container-${currentIndex}`}
                   >
                     <img 
                       src={imgSrc} 
                       alt="Question Diagram" 
                       className="max-h-[200px] md:max-h-[300px] object-contain rounded-xl"
-                      onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                      onError={(e) => { 
+                        (e.target as HTMLElement).style.display = 'none'; 
+                        const container = document.getElementById(`img-container-${currentIndex}`);
+                        if (container) container.style.display = 'none';
+                      }}
                     />
                   </motion.div>
                 );
