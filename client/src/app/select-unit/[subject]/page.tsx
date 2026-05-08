@@ -88,6 +88,9 @@ export default function SelectUnitPage() {
     router.push(`/study/${encodeURIComponent(subject)}`);
   };
 
+  const [isUnitsCollapsed, setIsUnitsCollapsed] = useState(false);
+  const [isExamsCollapsed, setIsExamsCollapsed] = useState(false);
+
   if (loading) {
     return (
       <div className="min-h-screen relative flex flex-col items-center justify-center">
@@ -136,112 +139,147 @@ export default function SelectUnitPage() {
 
         {/* 1. 소단원 핵심 공략 Section */}
         <section className="mb-24">
-          <div className="flex items-center gap-3 mb-10">
-            <div className="w-12 h-12 bg-brand-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-brand-500/20">
-              <Sparkles size={24} />
+          <div className="flex items-center justify-between mb-10">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-brand-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-brand-500/20">
+                <Sparkles size={24} />
+              </div>
+              <h2 className="text-3xl font-black text-slate-900">단원별 핵심 공략 <span className="hidden sm:inline text-sm font-bold text-slate-400 ml-2">(매 세트별 해설 슬라이드 포함)</span></h2>
             </div>
-            <h2 className="text-3xl font-black text-slate-900">단원별 핵심 공략 <span className="text-sm font-bold text-slate-400 ml-2">(매 세트별 해설 슬라이드 포함)</span></h2>
+            <button 
+              onClick={() => setIsUnitsCollapsed(!isUnitsCollapsed)}
+              className="px-6 py-2.5 bg-white/50 hover:bg-brand-600 hover:text-white rounded-xl font-black text-sm transition-all border border-brand-100 shadow-sm"
+            >
+              {isUnitsCollapsed ? '펼치기' : '접기'}
+            </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
-            <AnimatePresence>
-              {units.map((unit, idx) => {
-                const setSize = 30;
-                const unitSetCount = Math.ceil(unit.count / setSize);
-                const currentIndex = globalIndex++;
-                
-                return (
-                  <motion.div
-                    key={unit.name}
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: idx * 0.05 }}
-                    className="glass-card p-8 rounded-[2.5rem] border border-white/60 hover:shadow-2xl hover:shadow-brand-500/5 transition-all group flex flex-col min-h-[320px]"
-                  >
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 font-black text-sm border-2 border-brand-100/50 shrink-0">
-                        {currentIndex.toString().padStart(2, '0')}
-                      </div>
-                      <h4 className="text-lg font-black text-slate-800 leading-snug whitespace-nowrap overflow-hidden text-ellipsis">
-                        {unit.name}
-                      </h4>
-                    </div>
+          <AnimatePresence>
+            {!isUnitsCollapsed && (
+              <motion.div 
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 pt-2">
+                  {units.map((unit, idx) => {
+                    const setSize = 30;
+                    const unitSetCount = Math.ceil(unit.count / setSize);
+                    const currentIndex = globalIndex++;
                     
-                    {/* 세트 버튼 컨테이너: 상하좌우 가운데 정렬 */}
-                    <div className="flex-1 flex items-center justify-center">
-                      <div className="grid grid-cols-3 gap-3 w-full">
-                        {Array.from({ length: unitSetCount }).map((_, sIdx) => {
-                          const isHistory = subject === '한국사검정시험' || subject === '한국사능력검정시험';
-                          const currentSetNumber = isHistory ? runningSetCount++ : sIdx + 1;
-                          
-                          return (
-                            <button
-                              key={sIdx}
-                              onClick={() => {
-                                const unitName = unit.originalName || unit.name;
-                                const baseParams = `unit=${encodeURIComponent(unitName)}&set=${currentSetNumber}&size=${setSize}`;
-                                
-                                if (isHistory) {
-                                  // 한국사는 전체 일련번호 매핑을 위해 rStart/rEnd 사용
-                                  const localStart = sIdx * setSize;
-                                  const localEnd = (sIdx + 1) * setSize;
-                                  router.push(`/study/${encodeURIComponent(subject)}?${baseParams}&rStart=${localStart}&rEnd=${localEnd}`);
-                                } else {
-                                  // 다른 과목은 기존 단원별 필터링 방식 유지
-                                  const rangeParams = unit.range ? `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}` : '';
-                                  router.push(`/study/${encodeURIComponent(subject)}?${baseParams}${rangeParams}`);
-                                }
-                              }}
-                              className="py-2.5 bg-white border-2 border-slate-50 rounded-2xl text-slate-500 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50/50 transition-all shadow-sm flex flex-col items-center justify-center leading-none gap-1"
-                            >
-                              <span className="text-xl font-black">{currentSetNumber}</span>
-                              <span className="text-[9px] font-bold text-slate-400 uppercase">세트</span>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </AnimatePresence>
-          </div>
+                    return (
+                      <motion.div
+                        key={unit.name}
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: idx * 0.05 }}
+                        className="glass-card p-8 rounded-[2.5rem] border border-white/60 hover:shadow-2xl hover:shadow-brand-500/5 transition-all group flex flex-col min-h-[320px]"
+                      >
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="w-12 h-12 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 font-black text-sm border-2 border-brand-100/50 shrink-0">
+                            {currentIndex.toString().padStart(2, '0')}
+                          </div>
+                          <h4 className="text-lg font-black text-slate-800 leading-snug whitespace-nowrap overflow-hidden text-ellipsis">
+                            {unit.name}
+                          </h4>
+                        </div>
+                        
+                        <div className="flex-1 flex items-center justify-center">
+                          <div className="grid grid-cols-3 gap-3 w-full">
+                            {Array.from({ length: unitSetCount }).map((_, sIdx) => {
+                              const isHistory = subject === '한국사검정시험' || subject === '한국사능력검정시험';
+                              const currentSetNumber = isHistory ? runningSetCount++ : sIdx + 1;
+                              
+                              return (
+                                <button
+                                  key={sIdx}
+                                  onClick={() => {
+                                    const unitName = unit.originalName || unit.name;
+                                    const baseParams = `unit=${encodeURIComponent(unitName)}&set=${currentSetNumber}&size=${setSize}`;
+                                    
+                                    if (isHistory) {
+                                      const localStart = sIdx * setSize;
+                                      const localEnd = (sIdx + 1) * setSize;
+                                      router.push(`/study/${encodeURIComponent(subject)}?${baseParams}&rStart=${localStart}&rEnd=${localEnd}`);
+                                    } else {
+                                      const rangeParams = unit.range ? `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}` : '';
+                                      router.push(`/study/${encodeURIComponent(subject)}?${baseParams}${rangeParams}`);
+                                    }
+                                  }}
+                                  className="py-2.5 bg-white border-2 border-slate-50 rounded-2xl text-slate-500 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50/50 transition-all shadow-sm flex flex-col items-center justify-center leading-none gap-1"
+                                >
+                                  <span className="text-xl font-black">{currentSetNumber}</span>
+                                  <span className="text-[9px] font-bold text-slate-400 uppercase">세트</span>
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </section>
 
         {/* 2. 연도별 기출문제 Section */}
         <section className="mb-24">
-          <div className="flex items-center gap-3 mb-10">
-            <div className="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-indigo-500/20">
-              <Calendar size={24} />
+          <div className="flex items-center justify-between mb-10">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-indigo-500/20">
+                <Calendar size={24} />
+              </div>
+              <h2 className="text-3xl font-black text-slate-900">연도별 기출 정복</h2>
             </div>
-            <h2 className="text-3xl font-black text-slate-900">연도별 기출 정복</h2>
+            <button 
+              onClick={() => setIsExamsCollapsed(!isExamsCollapsed)}
+              className="px-6 py-2.5 bg-white/50 hover:bg-indigo-600 hover:text-white rounded-xl font-black text-sm transition-all border border-indigo-100 shadow-sm"
+            >
+              {isExamsCollapsed ? '펼치기' : '접기'}
+            </button>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
-            {exams.map((exam, idx) => {
-              const currentIndex = globalIndex++;
-              return (
-                <motion.div
-                  key={exam.name}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ delay: 0.1 + idx * 0.03 }}
-                  onClick={() => handleSelectExam(exam)}
-                  className="glass-card p-8 rounded-[2rem] cursor-pointer hover:bg-brand-50/50 hover:border-brand-300 hover:shadow-xl transition-all group flex flex-col items-center text-center gap-4 border border-white/60"
-                >
-                  <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 font-black text-sm border-2 border-indigo-100/50 group-hover:bg-brand-600 group-hover:text-white transition-colors">
-                    {currentIndex.toString().padStart(2, '0')}
-                  </div>
-                  <div className="space-y-1">
-                    <h4 className="text-xl font-black text-slate-800 group-hover:text-brand-600 transition-colors">{exam.name}</h4>
-                    <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">{exam.count}문항</p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
+          <AnimatePresence>
+            {!isExamsCollapsed && (
+              <motion.div 
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 pt-2">
+                  {exams.map((exam, idx) => {
+                    const currentIndex = globalIndex++;
+                    return (
+                      <motion.div
+                        key={exam.name}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        whileHover={{ scale: 1.05, y: -5 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ delay: 0.1 + idx * 0.03 }}
+                        onClick={() => handleSelectExam(exam)}
+                        className="glass-card p-8 rounded-[2rem] cursor-pointer hover:bg-brand-50/50 hover:border-brand-300 hover:shadow-xl transition-all group flex flex-col items-center text-center gap-4 border border-white/60"
+                      >
+                        <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 font-black text-sm border-2 border-indigo-100/50 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                          {currentIndex.toString().padStart(2, '0')}
+                        </div>
+                        <div className="space-y-1">
+                          <h4 className="text-xl font-black text-slate-800 group-hover:text-brand-600 transition-colors">{exam.name}</h4>
+                          <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">{exam.count}문항</p>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </section>
 
         {/* 3. 전체 랜덤 학습 Section */}
