@@ -69,7 +69,6 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [setSize, setSetSize] = useState<string | null>(null);
   const [rStart, setRStart] = useState<string | null>(null);
   const [rEnd, setREnd] = useState<string | null>(null);
-  const [isFinished, setIsFinished] = useState(false);
   const [showResultModal, setShowResultModal] = useState(false); // 결과 모달
   const [showLevelUp, setShowLevelUp] = useState(false); // 레벨업 모달
   const [lastGainedExp, setLastGainedExp] = useState(0);
