@@ -173,8 +173,12 @@ export async function GET(req: NextRequest) {
     
     const generatedData = JSON.parse(jsonMatch[0]);
 
-    // 파일 저장
-    fs.writeFileSync(summaryPath, JSON.stringify(generatedData, null, 2));
+    // 파일 저장 (서버 환경에 따라 실패할 수 있으므로 try-catch 처리)
+    try {
+      fs.writeFileSync(summaryPath, JSON.stringify(generatedData, null, 2));
+    } catch (e) {
+      console.warn('Failed to cache summary file (expected on some serverless envs):', e);
+    }
 
     return NextResponse.json(generatedData);
   } catch (error: any) {
