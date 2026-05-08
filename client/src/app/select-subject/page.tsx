@@ -2,50 +2,50 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookOpen, GraduationCap, ChevronRight, Loader2, Sparkles, LogOut, LayoutDashboard, Zap, Terminal, ArrowUpDown } from 'lucide-react';
+import { 
+  BookOpen, 
+  GraduationCap, 
+  ChevronRight, 
+  Loader2, 
+  Sparkles, 
+  LogOut, 
+  LayoutDashboard, 
+  Zap, 
+  Terminal, 
+  ArrowUpDown,
+  Palette,
+  Monitor,
+  History,
+  Globe,
+  Settings
+} from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
 
 const getSubjectStyle = (name: string) => {
   if (name.includes('전기')) {
-    return {
-      icon: Zap,
-      color: 'text-amber-500',
-      bg: 'bg-amber-50',
-      hoverBg: 'group-hover:bg-amber-500',
-      hoverText: 'group-hover:text-amber-600',
-      glow: 'bg-amber-500/5 group-hover:bg-amber-500/10'
-    };
+    return { icon: Zap, color: 'text-amber-500', bg: 'bg-amber-50', hoverBg: 'group-hover:bg-amber-500', hoverText: 'group-hover:text-amber-600', glow: 'bg-amber-500/5 group-hover:bg-amber-500/10' };
   }
   if (name.includes('정보처리')) {
-    return {
-      icon: Terminal,
-      color: 'text-emerald-500',
-      bg: 'bg-emerald-50',
-      hoverBg: 'group-hover:bg-emerald-500',
-      hoverText: 'group-hover:text-emerald-600',
-      glow: 'bg-emerald-500/5 group-hover:bg-emerald-500/10'
-    };
+    return { icon: Terminal, color: 'text-emerald-500', bg: 'bg-emerald-50', hoverBg: 'group-hover:bg-emerald-500', hoverText: 'group-hover:text-emerald-600', glow: 'bg-emerald-500/5 group-hover:bg-emerald-500/10' };
   }
   if (name.includes('승강기')) {
-    return {
-      icon: ArrowUpDown,
-      color: 'text-violet-500',
-      bg: 'bg-violet-50',
-      hoverBg: 'group-hover:bg-violet-500',
-      hoverText: 'group-hover:text-violet-600',
-      glow: 'bg-violet-500/5 group-hover:bg-violet-500/10'
-    };
+    return { icon: ArrowUpDown, color: 'text-violet-500', bg: 'bg-violet-50', hoverBg: 'group-hover:bg-violet-500', hoverText: 'group-hover:text-violet-600', glow: 'bg-violet-500/5 group-hover:bg-violet-500/10' };
   }
-  return {
-    icon: BookOpen,
-    color: 'text-brand-600',
-    bg: 'bg-brand-50',
-    hoverBg: 'group-hover:bg-brand-600',
-    hoverText: 'group-hover:text-brand-600',
-    glow: 'bg-brand-500/5 group-hover:bg-brand-500/10'
-  };
+  if (name.includes('디자인')) {
+    return { icon: Palette, color: 'text-pink-500', bg: 'bg-pink-50', hoverBg: 'group-hover:bg-pink-500', hoverText: 'group-hover:text-pink-600', glow: 'bg-pink-500/5 group-hover:bg-pink-500/10' };
+  }
+  if (name.includes('컴퓨터') || name.includes('컴활')) {
+    return { icon: Monitor, color: 'text-blue-500', bg: 'bg-blue-50', hoverBg: 'group-hover:bg-blue-500', hoverText: 'group-hover:text-blue-600', glow: 'bg-blue-500/5 group-hover:bg-blue-500/10' };
+  }
+  if (name.includes('한국사')) {
+    return { icon: History, color: 'text-rose-500', bg: 'bg-rose-50', hoverBg: 'group-hover:bg-rose-500', hoverText: 'group-hover:text-rose-600', glow: 'bg-rose-500/5 group-hover:bg-rose-500/10' };
+  }
+  if (name.includes('지게차') || name.includes('운전')) {
+    return { icon: Settings, color: 'text-orange-500', bg: 'bg-orange-50', hoverBg: 'group-hover:bg-orange-500', hoverText: 'group-hover:text-orange-600', glow: 'bg-orange-500/5 group-hover:bg-orange-500/10' };
+  }
+  return { icon: BookOpen, color: 'text-brand-600', bg: 'bg-brand-50', hoverBg: 'group-hover:bg-brand-600', hoverText: 'group-hover:text-brand-600', glow: 'bg-brand-500/5 group-hover:bg-brand-500/10' };
 };
 
 export default function SelectSubjectPage() {

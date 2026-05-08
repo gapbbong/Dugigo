@@ -179,9 +179,9 @@ export default function SelectUnitPage() {
         <div className="flex items-center gap-4">
           <button 
             onClick={() => router.push('/select-subject')}
-            className="w-10 h-10 flex items-center justify-center bg-white/50 hover:bg-white rounded-xl transition-all shadow-sm border border-white/40 shrink-0"
+            className="w-10 h-10 flex items-center justify-center bg-white/50 hover:bg-white hover:border-brand-400 hover:text-brand-600 active:scale-90 active:bg-brand-50 transition-all shadow-sm border-2 border-slate-100 rounded-xl shrink-0"
           >
-            <ChevronLeft size={20} className="text-slate-600" />
+            <ChevronLeft size={20} className="transition-colors" />
           </button>
           <div>
             <span className="text-xs font-black tracking-[0.2em] text-brand-600 uppercase">Step 02</span>

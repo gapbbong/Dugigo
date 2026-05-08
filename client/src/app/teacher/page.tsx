@@ -16,6 +16,13 @@ export default function TeacherDashboard() {
     todayActive: 0,
     suspiciousCount: 0
   });
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const LEVEL_TITLES = [
+    "입문자", "초보자", "수련자", "숙련자", 
+    "전문가", "달인", "명인", "현자", 
+    "영웅", "전설", "신화", "초월자"
+  ];
 
   useEffect(() => {
     fetchData();
@@ -112,7 +119,15 @@ export default function TeacherDashboard() {
         ? studentStats 
         : studentStats.filter(s => s.totalQuestions > 0);
 
-      setStudents(filteredStudents);
+      // 이름/아이디 검색 필터링
+      const searchedStudents = filteredStudents.filter(s => {
+        const lowerName = s.username.toLowerCase();
+        const lowerId = (s.id || '').toLowerCase();
+        const lowerSearch = searchTerm.toLowerCase();
+        return lowerName.includes(lowerSearch) || lowerId.includes(lowerSearch);
+      });
+
+      setStudents(searchedStudents);
       setStats({
         totalStudents: filteredStudents.length,
         avgAccuracy: totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0,
@@ -152,7 +167,7 @@ export default function TeacherDashboard() {
           <div className="flex items-center gap-6 w-full md:w-auto">
             <button 
               onClick={() => window.location.href = '/select-subject'} 
-              className="w-12 h-12 bg-white border-2 border-slate-100 rounded-2xl flex items-center justify-center text-slate-500 hover:border-brand-300 hover:text-brand-600 transition-all shadow-sm shrink-0"
+              className="w-12 h-12 bg-white border-2 border-slate-100 rounded-2xl flex items-center justify-center text-slate-500 hover:border-brand-400 hover:text-brand-600 active:scale-90 active:bg-brand-50 transition-all shadow-sm shrink-0 hover:shadow-md"
               title="과목 선택으로 돌아가기"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -218,7 +233,13 @@ export default function TeacherDashboard() {
             </div>
             <div className="relative w-full md:w-64">
               <Search className="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-              <input type="text" placeholder="이름으로 검색..." className="w-full pl-12 pr-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:outline-none focus:border-brand-400 focus:bg-white font-bold text-sm transition-all" />
+              <input 
+                type="text" 
+                placeholder="이름 또는 ID로 검색..." 
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:outline-none focus:border-brand-400 focus:bg-white font-bold text-sm transition-all" 
+              />
             </div>
           </div>
           <div className="overflow-x-auto">
@@ -244,12 +265,16 @@ export default function TeacherDashboard() {
                         <div>
                           <div className="font-black text-slate-900 text-lg mb-0.5 flex items-center gap-2">
                             {student.username}
-                            {student.role?.toLowerCase() === 'teacher' && (
+                            {student.role?.toLowerCase() === 'teacher' ? (
                               <span className="px-2 py-0.5 bg-brand-500 text-white text-[10px] rounded-md border border-brand-600 shadow-sm leading-none pt-1">교사</span>
+                            ) : (
+                              <span className="px-2 py-0.5 bg-blue-500 text-white text-[10px] rounded-md border border-blue-600 shadow-sm leading-none pt-1">학생</span>
                             )}
                           </div>
                           <div className="text-xs font-bold text-slate-400 flex items-center gap-1.5 bg-slate-100 w-fit px-2 py-0.5 rounded-md">
-                            <Award className="w-3 h-3 text-amber-500" /> {student.level_title || 'Lv.1 초보자'} ({student.exp_points || 0} EXP)
+                            <Award className="w-3 h-3 text-amber-500" /> 
+                            Lv.{Math.floor((student.exp_points || 0) / 1000) + 1} {LEVEL_TITLES[Math.min(11, Math.floor((student.exp_points || 0) / 1000))] || '입문자'} 
+                            ({student.exp_points || 0} EXP)
                           </div>
                         </div>
                       </div>
