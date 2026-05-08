@@ -519,25 +519,38 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       <div className="mesh-bg" />
       <nav className="sticky top-0 z-50 px-4 py-2 glass-card border-none bg-white/40 backdrop-blur-md flex justify-between items-center h-12 md:h-20 md:px-8 md:py-4">
         <button onClick={() => router.push(`/select-unit/${params.subject}`)} className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/50 rounded-xl hover:bg-white active:scale-90 active:bg-brand-50 transition-all text-slate-600 shadow-sm"><ChevronLeft size={16} /></button>
-        <div className="flex items-center gap-4 md:gap-10">
-          <span className="text-xs md:text-lg font-black tracking-[0.05em] text-brand-600 uppercase">{unitFilter ? `${unitFilter}${setNum ? ` · 세트 ${setNum}` : ''}` : `${subject} 기출학습`}</span>
-          <div className="hidden md:block w-px h-6 bg-slate-200" />
-          <div className="flex items-center gap-2 md:gap-4">
-            <div className="flex items-center gap-2 text-base md:text-2xl font-black text-slate-900">
-              <BarChart3 className="w-4 h-4 md:w-6 md:h-6 text-brand-500" /> {currentIndex + 1} / {questions.length}
-            </div>
-            {slideData && slideData.length > 0 && (
+        <div className="flex items-center gap-3 md:gap-6 flex-1 justify-center">
+          <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
+            <span className="text-[10px] md:text-lg font-black tracking-[0.05em] text-brand-600 uppercase whitespace-nowrap overflow-hidden text-ellipsis max-w-[150px] md:max-w-none">
+              {unitFilter ? `${unitFilter}${setNum ? ` · 세트 ${setNum}` : ''}` : `${subject} 기출학습`}
+            </span>
+            {(unitFilter && setNum) && (
               <button 
                 onClick={() => {
-                  setCurrentSlideIdx(0);
-                  setAiSliderOpen(true);
+                  if (slideData && slideData.length > 0) {
+                    setCurrentSlideIdx(0);
+                    setAiSliderOpen(true);
+                  } else {
+                    // 데이터가 없을 때 클릭하면 재호출 시도 혹은 알림
+                    alert('AI 선생님이 슬라이드를 준비 중입니다. 잠시만 기다려 주세요! ✨');
+                  }
                 }} 
-                className="px-3 py-1 md:px-5 md:py-2 bg-gradient-to-r from-brand-600 to-indigo-600 text-white text-[10px] md:text-sm font-black rounded-full shadow-lg shadow-brand-500/20 hover:scale-105 transition-all flex items-center gap-1.5 shrink-0"
+                className={`px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[10px] md:text-xs font-black transition-all flex items-center gap-1.5 shrink-0 shadow-lg ${
+                  slideData && slideData.length > 0 
+                  ? 'bg-gradient-to-r from-brand-600 to-indigo-600 text-white shadow-brand-500/20 hover:scale-105' 
+                  : 'bg-slate-100 text-slate-400 cursor-wait'
+                }`}
               >
-                <BookOpen className="w-3 h-3 md:w-4 md:h-4" />
-                학습
+                <Sparkles className={`w-3 h-3 ${slideData && slideData.length > 0 ? 'animate-pulse' : ''}`} />
+                {slideData && slideData.length > 0 ? '학습 슬라이드' : '요약 생성 중...'}
               </button>
             )}
+          </div>
+          <div className="hidden md:block w-px h-6 bg-slate-200" />
+          <div className="flex items-center gap-2 md:gap-4">
+            <div className="flex items-center gap-1.5 md:gap-2 text-sm md:text-2xl font-black text-slate-900">
+              <BarChart3 className="w-3.5 h-3.5 md:w-6 md:h-6 text-brand-500" /> {currentIndex + 1} / {questions.length}
+            </div>
           </div>
         </div>
         <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-brand-50 rounded-xl text-brand-600 font-black text-[10px] md:text-xs shadow-sm">{Math.round(((currentIndex + 1) / questions.length) * 100)}%</div>
