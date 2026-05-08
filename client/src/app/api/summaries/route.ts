@@ -65,7 +65,7 @@ export async function GET(req: NextRequest) {
       // 재분류 로직 (Iron Wall Classification과 동기화)
       const classify = (q: any) => {
         const text = ((q.question || '') + ' ' + (q.explanation || '')).toLowerCase();
-        const isSubject1 = q.subject === "컴퓨터 일반" || (q.round_info && q.round_info.includes('컴'));
+        const isSubject1 = q.subject === "컴퓨터 일반";
         if (subject === '컴퓨터활용능력 2급') {
           if (isSubject1) {
             if (/윈도우|windows|바로 가기|제어판|탐색기|작업 표시줄|부팅|레지스트리|시스템 도구|스풀링|인터럽트|포맷/.test(text)) return "[1과목] Windows OS 환경 설정 및 시스템 관리";
