@@ -26,6 +26,9 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'Missing parameters' }, { status: 400 });
   }
 
+  // 단원명 정화 ( (1부), (2부) 등 접미사 제거 )
+  const cleanUnit = unit.replace(/\s*\(\d+부\)$/, '').trim();
+
   const summaryDir = path.join(process.cwd(), 'public', 'summaries', subject);
   const safeUnitName = unit.replace(/[^a-z0-9가-힣]/gi, '_');
   const summaryFileName = `${safeUnitName}_${set}세트.json`;
@@ -94,7 +97,7 @@ export async function GET(req: NextRequest) {
       const filtered = allQuestions
         .filter((q: any) => {
           const qUnit = classify(q);
-          return qUnit === unit || !unit;
+          return qUnit === cleanUnit || !unit;
         })
         .slice((parseInt(set) - 1) * 10, parseInt(set) * 10);
       contextQuestions = JSON.stringify(filtered);
