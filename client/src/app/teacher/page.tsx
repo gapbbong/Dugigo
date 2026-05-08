@@ -56,6 +56,7 @@ export default function TeacherDashboard() {
         
         let sTotalQ = 0;
         let sCorrect = 0;
+        let sDuration = 0;
         let lastActive = '기록 없음';
 
         studentLogs.forEach(log => {
