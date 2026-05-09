@@ -20,7 +20,8 @@ export async function GET(req: NextRequest) {
 
     // Remote incoming logic for study
     if (subject) {
-      const dataDir = path.join(process.cwd(), "src", "data", subject);
+      const sanitizedSubject = subject.replace(/\s/g, '');
+      const dataDir = path.join(process.cwd(), "src", "data", sanitizedSubject);
 
       if (!fs.existsSync(dataDir)) {
         return NextResponse.json({ error: 'Subject folder not found' }, { status: 404 });
@@ -92,7 +93,6 @@ export async function GET(req: NextRequest) {
           if (/정부 수립|6·25|4·19|5·18|6월 민주 항쟁|민주화|통일/.test(text)) return "현대 사회의 발전";
           return "기타 및 통합";
         }
-
         if (sub === '전기공사산업기사') {
           if (/조명|광도|럭스|루멘|전열|조도|광속|칸델라|글로브|휘도|램프|반사율|투과율/.test(text)) return "01. 조명 및 전열";
           if (/전지|배터리|축전지|전기화학|패러데이|전해|금속막대|도금|이온/.test(text)) return "02. 전기화학 및 배터리";
@@ -143,7 +143,7 @@ export async function GET(req: NextRequest) {
           })
           .map(q => ({
             ...q,
-            sub_unit: classifyQuestion(subject, q)
+            sub_unit: classifyQuestion(subject.replace(/\s/g, ''), q)
           }));
 
         allQuestions = [...allQuestions, ...fileQuestions];
