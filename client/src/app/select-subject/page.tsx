@@ -127,9 +127,9 @@ export default function SelectSubjectPage() {
             </div>
             <div className="flex items-center gap-1.5 md:gap-2">
               <h2 className="text-xl md:text-2xl font-black tracking-tighter text-slate-900">DugiGo</h2>
-              <div className="hidden sm:flex items-center gap-2">
-                <div className="w-px h-3 bg-slate-300 mx-1" />
-                <span className="text-xs md:text-sm font-black text-slate-500 tracking-tight">경성전자고등학교</span>
+              <div className="hidden sm:flex items-center gap-3">
+                <div className="w-px h-4 bg-slate-300 mx-1" />
+                <span className="text-lg md:text-2xl font-black text-brand-600 tracking-tight">경성전자고등학교</span>
               </div>
               <span className="text-[10px] text-slate-400 font-medium bg-slate-100 px-1.5 py-0.5 rounded-full">v2.0.2</span>
             </div>

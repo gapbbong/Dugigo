@@ -215,6 +215,13 @@ export default function SelectUnitPage() {
 
       <main className="max-w-6xl mx-auto px-8 relative z-10">
         <div className="mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-block bg-brand-50 px-4 py-1.5 rounded-full mb-6 border border-brand-100 shadow-sm"
+          >
+            <span className="text-sm md:text-lg font-black text-brand-600 tracking-widest">경성전자고등학교 공식 학습 플랫폼</span>
+          </motion.div>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
