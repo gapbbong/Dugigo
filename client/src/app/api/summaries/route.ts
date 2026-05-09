@@ -30,10 +30,15 @@ export async function GET(req: NextRequest) {
   // 단원명 정화 ( (1부), (2부) 등 접미사 제거 )
   const cleanUnit = unit.replace(/\s*\(\d+부\)$/, '').trim();
 
-  const summaryDir = path.join(process.cwd(), 'public', 'summaries', subject);
   const safeUnitName = unit.replace(/[^a-z0-9가-힣]/gi, '_');
   const summaryFileName = `${safeUnitName}_${set}세트.json`;
-  const summaryPath = path.join(process.cwd(), 'src', 'summaries', subject, summaryFileName);
+
+  // 1. public 폴더 우선 확인 (배포 환경에서 가장 확실함)
+  const publicPath = path.join(process.cwd(), 'public', 'summaries', subject, summaryFileName);
+  // 2. src 폴더 확인 (로컬 개발 환경용 하위 호환)
+  const srcPath = path.join(process.cwd(), 'src', 'summaries', subject, summaryFileName);
+  
+  const summaryPath = fs.existsSync(publicPath) ? publicPath : srcPath;
 
   // 1. 이미 파일이 있으면 반환
   if (fs.existsSync(summaryPath)) {
