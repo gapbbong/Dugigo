@@ -452,6 +452,11 @@ export default function SelectUnitPage() {
           </motion.div>
         </section>
       </main>
+
+      <footer className="max-w-6xl mx-auto mt-20 pb-12 text-center text-slate-400 text-sm font-medium flex flex-col gap-2">
+        <p>© 2026 DugiGo Smart License Solution.</p>
+        <p className="text-[12px] md:text-sm font-black text-slate-600 tracking-widest uppercase">경성전자고등학교 전용 학습 서비스</p>
+      </footer>
     </div>
   );
 }
