@@ -95,7 +95,7 @@ export default function TeacherDashboard() {
             todayActiveSet.add(student.id);
           }
           if (lastActive === '기록 없음' || new Date(log.end_time) > new Date(lastActive)) {
-            lastActive = log.end_time?.split('T')[0] || lastActive;
+            lastActive = log.end_time?.replace('T', ' ').split('.')[0] || lastActive;
           }
         });
 
