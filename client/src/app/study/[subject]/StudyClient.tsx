@@ -1072,10 +1072,22 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                           <img 
                             src={slideData[currentSlideIdx].image} 
                             alt={slideData[currentSlideIdx].title}
+                            onError={(e) => {
+                              // 이미지 로드 실패 시 이미지 필드를 제거하여 이모지가 나오도록 함
+                              const target = e.target as HTMLImageElement;
+                              target.style.display = 'none';
+                              const parent = target.parentElement;
+                              if (parent) {
+                                const emojiSpan = document.createElement('span');
+                                emojiSpan.className = "text-8xl md:text-[10rem]";
+                                emojiSpan.innerText = slideData[currentSlideIdx].emoji || "✨";
+                                parent.appendChild(emojiSpan);
+                              }
+                            }}
                             className="max-h-[180px] md:max-h-[300px] max-w-full object-cover rounded-[2rem] shadow-2xl border-4 border-white/80"
                           />
                         ) : (
-                          <span className="text-8xl md:text-[10rem]">{slideData[currentSlideIdx].emoji}</span>
+                          <span className="text-8xl md:text-[10rem]">{slideData[currentSlideIdx].emoji || "✨"}</span>
                         )}
                       </div>
                     </div>
