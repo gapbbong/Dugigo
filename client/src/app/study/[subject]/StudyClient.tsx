@@ -439,7 +439,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     script.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js';
     script.onload = () => {
       const confetti = (window as any).confetti;
-      const count = 200;
+      const count = 500;
       const defaults = { origin: { y: 0.7 } };
 
       function fire(particleRatio: number, opts: any) {
