@@ -27,10 +27,14 @@ export async function GET(req: NextRequest) {
         return NextResponse.json({ error: 'Subject folder not found' }, { status: 404 });
       }
 
-      // 폴더 내 모든 JSON 파일 읽기
-      const files = fs.readdirSync(dataDir).filter(file => 
-        file.endsWith('.json') && !file.includes('_CLEAN')
-      );
+      // 폴더 내 모든 JSON 파일 읽기 (MASTER_DB가 있으면 그것만, 없으면 개별 파일)
+      const allFiles = fs.readdirSync(dataDir).filter(file => file.endsWith('.json') && !file.includes('_CLEAN'));
+      const masterFile = allFiles.find(f => f.toLowerCase().includes('master_db'));
+      
+      // 개별 단원 파일들이 있으면 (01. xxx.json 형태), 마스터 DB는 중복이므로 제외
+      const unitFiles = allFiles.filter(f => /^\d+\./.test(f));
+      const filesToLoad = unitFiles.length > 0 ? unitFiles : (masterFile ? [masterFile] : allFiles);
+
       let allQuestions: any[] = [];
 
       const classifyQuestion = (sub: string, q: any): string => {
@@ -118,11 +122,16 @@ export async function GET(req: NextRequest) {
         return "기본 단원";
       };
 
-      files.forEach(file => {
+      const questionMap = new Map<string, any>();
+
+      filesToLoad.forEach(file => {
         const filePath = path.join(dataDir, file);
         const fileContent = fs.readFileSync(filePath, 'utf-8');
         const jsonData = JSON.parse(fileContent);
         
+        const fileNameUnit = file.replace(/\.json$/, '').trim();
+        const isStandardUnitFile = /^\d+\./.test(fileNameUnit);
+
         let fileQuestions: any[] = [];
         if (Array.isArray(jsonData)) {
           fileQuestions = jsonData;
@@ -130,24 +139,30 @@ export async function GET(req: NextRequest) {
           fileQuestions = jsonData.questions;
         }
 
-        fileQuestions = fileQuestions
-          .filter(q => {
-            const text = (q.question || '').trim();
-            // 지문 없음, 본문 없음 등 다양한 실패 메시지 감지
-            const isPlaceholder = text === '' || 
-                                 text.includes('이미지에 지문이 없습니다') || 
-                                 text.includes('이미지에 문제 본문 없음') ||
-                                 text.includes('내용을 확인할 수 없습니다');
-            const hasImage = !!(q.question_img || q.image);
-            return !isPlaceholder || hasImage;
-          })
-          .map(q => ({
-            ...q,
-            sub_unit: classifyQuestion(subject.replace(/\s/g, ''), q)
-          }));
+        fileQuestions.forEach(q => {
+          const text = (q.question || '').trim();
+          const isPlaceholder = text === '' || 
+                               text.includes('이미지에 지문이 없습니다') || 
+                               text.includes('이미지에 문제 본문 없음') ||
+                               text.includes('내용을 확인할 수 없습니다');
+          const hasImage = !!(q.question_img || q.image);
+          if (isPlaceholder && !hasImage) return;
 
-        allQuestions = [...allQuestions, ...fileQuestions];
+          const qId = q.id || `${q.round_info}_${q.number}`;
+          
+          // 이미 등록된 문제가 있고, 현재 파일이 표준 단원 파일이 아니면 패스 (단원 파일 우선순위)
+          if (questionMap.has(qId) && !isStandardUnitFile) return;
+
+          const subUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
+          
+          questionMap.set(qId, {
+            ...q,
+            sub_unit: subUnit
+          });
+        });
       });
+
+      const allQuestions = Array.from(questionMap.values());
 
       const UNIT_ORDER: { [key: string]: number } = {
         "선사시대 및 국가의 형성": 1,

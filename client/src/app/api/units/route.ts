@@ -11,16 +11,20 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const dataDir = path.join(process.cwd(), 'src/data', subject);
+    const sanitizedSubject = subject.replace(/\s/g, '');
+    const dataDir = path.join(process.cwd(), 'src/data', sanitizedSubject);
     
     if (!fs.existsSync(dataDir)) {
       return NextResponse.json({ units: [] });
     }
 
-    const files = fs.readdirSync(dataDir).filter(f => 
-      f.endsWith('.json') && !f.includes('_CLEAN')
-    );
+    const allFiles = fs.readdirSync(dataDir).filter(f => f.endsWith('.json') && !f.includes('_CLEAN'));
+    const masterFile = allFiles.find(f => f.toLowerCase().includes('master_db'));
+    const unitFiles = allFiles.filter(f => /^\d+\./.test(f));
+    const filesToLoad = unitFiles.length > 0 ? unitFiles : (masterFile ? [masterFile] : allFiles);
+
     const unitMap = new Map<string, number>();
+    const questionMap = new Map<string, boolean>(); // 중복 체크용 ID 맵
 
     const classifyQuestion = (sub: string, q: any): string => {
       const text = ((q.question || '') + ' ' + (q.explanation || '')).toLowerCase();
@@ -128,41 +132,46 @@ export async function GET(req: NextRequest) {
 
     const examsMap = new Map<string, number>();
 
-    files.forEach(file => {
+    filesToLoad.forEach(file => {
       try {
         const fileContent = fs.readFileSync(path.join(dataDir, file), 'utf-8');
         const data = JSON.parse(fileContent);
         const questions = Array.isArray(data) ? data : (data.questions || []);
         
-        questions.filter((q: any) => {
+        const fileNameUnit = file.replace(/\.json$/, '').trim();
+        const isStandardUnitFile = /^\d+\./.test(fileNameUnit);
+
+        questions.forEach((q: any) => {
           const text = (q.question || '').trim();
           const isPlaceholder = text === '' || 
                                text.includes('이미지에 지문이 없습니다') || 
                                text.includes('이미지에 문제 본문 없음') ||
                                text.includes('내용을 확인할 수 없습니다');
           const hasImage = !!(q.question_img || q.image);
-          return !isPlaceholder || hasImage;
-        }).forEach((q: any) => {
-          const subUnit = classifyQuestion(subject, q);
-          unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
+          if (isPlaceholder && !hasImage) return;
 
-          // 연도별 기출 집계 추가 (연도가 없으면 회차만이라도 표시)
+          const qId = q.id || `${q.round_info}_${q.number}`;
+          
+          if (questionMap.has(qId) && !isStandardUnitFile) return;
+          if (questionMap.has(qId)) return;
+
+          const subUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
+          unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
+          questionMap.set(qId, true);
+
+          // 연도별 기출 집계 추가
           let y = q.year || data.year;
           let r = q.round || data.round;
           
           if (subject === '컴퓨터활용능력 2급' && q.round_info) {
-            // "2020년 1회 컴활2급 필기_A형" -> "2020" / "1" 추출
             const yearMatch = q.round_info.match(/(\d{4})년/);
             const roundMatch = q.round_info.match(/(\d+)회/);
             const sangsiMatch = q.round_info.match(/상시\s*(\d+)/);
-            
             if (yearMatch) y = yearMatch[1];
             if (roundMatch) r = roundMatch[1];
             else if (sangsiMatch) r = `상시${sangsiMatch[1]}`;
           }
-
           if (!r) r = q.id?.split('_')[1];
-
           if (r) {
             const examKey = y ? `${y}년 ${r}${r.includes('상시') ? '' : '회'}` : `${r}회 기출`;
             examsMap.set(examKey, (examsMap.get(examKey) || 0) + 1);
