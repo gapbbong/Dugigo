@@ -35,7 +35,6 @@ export async function GET(req: NextRequest) {
       const unitFiles = allFiles.filter(f => /^\d+\./.test(f));
       const filesToLoad = unitFiles.length > 0 ? unitFiles : (masterFile ? [masterFile] : allFiles);
 
-      let allQuestions: any[] = [];
 
       const classifyQuestion = (sub: string, q: any): string => {
         const text = ((q.question || '') + ' ' + (q.explanation || '')).toLowerCase();
