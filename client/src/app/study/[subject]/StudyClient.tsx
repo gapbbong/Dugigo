@@ -707,71 +707,75 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     <div className="min-h-screen relative flex flex-col text-slate-800">
       <div className="mesh-bg" />
       <nav className="sticky top-0 z-50 px-4 py-2 glass-card border-none bg-white/40 backdrop-blur-md flex justify-between items-center h-12 md:h-20 md:px-8 md:py-4">
-        <button onClick={() => router.push(`/select-unit/${params.subject}`)} className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/50 rounded-xl hover:bg-white hover:border-2 hover:border-brand-300 hover:text-brand-600 active:scale-90 active:bg-brand-50 transition-all text-slate-600 shadow-sm border border-transparent"><ChevronLeft size={16} /></button>
-        <div className="flex items-center gap-3 md:gap-6 flex-1 justify-center">
-          <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
-            <span className="text-[10px] md:text-lg font-black tracking-[0.05em] text-brand-600 uppercase whitespace-nowrap overflow-hidden text-ellipsis max-w-[150px] md:max-w-none">
-              {unitFilter ? `${unitFilter}${setNum ? ` · 세트 ${setNum}` : ''}` : `${subject} 기출학습`}
-            </span>
-            {(unitFilter && setNum && !isSummaryError) && (
-              <button 
-                onClick={() => {
-                  if (slideData && slideData.length > 0) {
-                    setCurrentSlideIdx(0);
-                    setAiSliderOpen(true);
-                  } else if (isSummaryError) {
-                    setRetryCount(prev => prev + 1);
-                  } else if (isGenerating) {
-                    alert('AI 선생님이 30문항을 꼼꼼히 분석 중입니다. 잠시만 더 기다려 주세요! ✨');
-                  }
-                }} 
-                className={`relative px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[10px] md:text-xs font-black transition-all flex items-center gap-1.5 shrink-0 shadow-lg overflow-hidden ${
-                  slideData && slideData.length > 0 
-                  ? 'bg-gradient-to-r from-brand-600 to-indigo-600 text-white shadow-brand-500/20 hover:scale-105' 
-                  : 'bg-slate-100 text-slate-400 cursor-wait'
-                }`}
-              >
-                {/* 프로그래스 배경 애니메이션 */}
-                {isGenerating && !slideData && (
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    animate={{ width: `${summaryProgress}%` }}
-                    className="absolute inset-0 bg-brand-500/20"
-                    transition={{ ease: "linear" }}
-                  />
-                )}
-                
-                <Sparkles className={`relative z-10 w-3 h-3 ${slideData && slideData.length > 0 ? 'animate-pulse' : ''}`} />
-                <span className="relative z-10">
-                  {slideData && slideData.length > 0 
-                    ? '학습 슬라이드' 
-                    : isSummaryError
-                      ? '생성 실패 (다시 시도)'
-                      : isGenerating 
-                        ? `요약 생성 중 (${Math.round(summaryProgress)}%)` 
-                        : 'AI 요약 준비 중...'}
-                </span>
-              </button>
-            )}
-          </div>
-          <div className="hidden md:block w-px h-6 bg-slate-200" />
-          <div className="flex items-center gap-2 md:gap-4">
-            <div className="flex items-center gap-1.5 md:gap-2 text-sm md:text-2xl font-black text-slate-900">
-              <BarChart3 className="w-3.5 h-3.5 md:w-6 md:h-6 text-brand-500" /> {currentIndex + 1} / {questions.length}
-            </div>
-          </div>
+        <div className="flex items-center gap-2 md:gap-4 shrink-0">
+          <button 
+            onClick={() => router.push(`/select-unit/${params.subject}`)} 
+            className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center bg-white/40 backdrop-blur-md rounded-2xl hover:bg-white hover:text-brand-600 active:scale-90 transition-all text-slate-600 shadow-sm border border-white/40"
+          >
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
+          
+          {(unitFilter && setNum && !isSummaryError) && (
+            <button 
+              onClick={() => {
+                if (slideData && slideData.length > 0) {
+                  setCurrentSlideIdx(0);
+                  setAiSliderOpen(true);
+                } else if (isSummaryError) {
+                  setRetryCount(prev => prev + 1);
+                } else if (isGenerating) {
+                  alert('AI 선생님이 30문항을 꼼꼼히 분석 중입니다. 잠시만 더 기다려 주세요! ✨');
+                }
+              }} 
+              className={`group relative px-3 py-1.5 md:px-6 md:py-2.5 rounded-2xl text-xs md:text-base font-black transition-all flex items-center gap-2 shadow-lg backdrop-blur-xl border border-white/40 overflow-hidden ${
+                slideData && slideData.length > 0 
+                ? 'bg-white/30 text-brand-700 hover:bg-white/50 hover:scale-105 active:scale-95' 
+                : 'bg-slate-100/50 text-slate-400 cursor-wait'
+              }`}
+            >
+              {isGenerating && !slideData && (
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: `${summaryProgress}%` }}
+                  className="absolute inset-0 bg-brand-500/20"
+                  transition={{ ease: "linear" }}
+                />
+              )}
+              <Sparkles className={`w-3.5 h-3.5 md:w-5 md:h-5 ${slideData && slideData.length > 0 ? 'text-brand-600 animate-pulse' : 'text-slate-400'}`} />
+              <span className="relative z-10">
+                {slideData && slideData.length > 0 
+                  ? '학습' 
+                  : isSummaryError
+                    ? '재시도'
+                    : isGenerating 
+                      ? `${Math.round(summaryProgress)}%` 
+                      : '준비중'}
+              </span>
+            </button>
+          )}
         </div>
-        <div className="flex items-center gap-2 md:gap-3">
-          <div className="flex flex-col items-end">
-            <div className="flex items-center gap-1 bg-brand-50 px-2 py-0.5 md:px-3 md:py-1 rounded-lg border border-brand-100 shadow-sm">
-              <ShieldCheck className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-brand-600" />
-              <span className="text-[10px] md:text-xs font-black text-brand-700">
+
+        <div className="flex-1 flex justify-center px-4">
+          <span className="text-[10px] md:text-xl font-black tracking-tight text-slate-800 uppercase whitespace-nowrap overflow-hidden text-ellipsis max-w-[120px] md:max-w-none">
+            {unitFilter ? `${unitFilter}${setNum ? ` · 세트 ${setNum}` : ''}` : `${subject} 기출학습`}
+          </span>
+        </div>
+
+        <div className="flex items-center gap-3 md:gap-8 shrink-0">
+          <div className="hidden md:flex items-center gap-2 text-2xl font-black text-slate-900 bg-white/30 px-4 py-2 rounded-2xl border border-white/40 backdrop-blur-md">
+            <BarChart3 className="w-6 h-6 text-brand-500" /> {currentIndex + 1} / {questions.length}
+          </div>
+          
+          <div className="flex items-center gap-1.5 md:gap-3">
+            <div className="flex items-center gap-1.5 bg-white/40 backdrop-blur-md px-2 py-1 md:px-4 md:py-2 rounded-xl border border-white/40 shadow-sm">
+              <ShieldCheck className="w-3 h-3 md:w-5 md:h-5 text-brand-600" />
+              <span className="text-[10px] md:text-sm font-black text-slate-800">
                 {userProfile ? (LEVEL_TITLES[Math.min(11, Math.floor((userProfile.exp_points || 0) / 1000))] || "입문자") : "입문자"}
               </span>
             </div>
-            <div className="flex items-center gap-1 mt-0.5 md:mt-1">
-              <Thermometer className="w-2.5 h-2.5 md:w-3 md:h-3 text-rose-500" />
-              <span className="text-[10px] md:text-xs font-black text-slate-500">
+            <div className="flex items-center gap-1.5 bg-white/40 backdrop-blur-md px-2 py-1 md:px-4 md:py-2 rounded-xl border border-white/40 shadow-sm">
+              <Thermometer className="w-3 h-3 md:w-5 md:h-5 text-rose-500" />
+              <span className="text-[10px] md:text-sm font-black text-slate-800">
                 {userProfile ? Math.min(100, (userProfile.current_temp || 0) + 36.5).toFixed(1) : "36.5"}°C
               </span>
             </div>
