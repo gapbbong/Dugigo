@@ -1111,11 +1111,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                         </div>
                       )}
 
-                      {slideData[currentSlideIdx].visual && (
-                        <div className="inline-flex px-5 py-2.5 bg-brand-50 rounded-2xl border border-brand-100 text-brand-700 font-black text-xs md:text-base shadow-inner self-center md:self-start items-center gap-1.5">
-                          {slideData[currentSlideIdx].visual}
-                        </div>
-                      )}
+
                     </div>
                   </motion.div>
                 </AnimatePresence>
