@@ -30,7 +30,7 @@ export async function GET(req: NextRequest) {
   // 단원명 정화 ( (1부), (2부) 등 접미사 제거 )
   const cleanUnit = unit.replace(/\s*\(\d+부\)$/, '').trim();
 
-  const safeUnitName = unit.replace(/[^a-z0-9가-힣]/gi, '_');
+  const safeUnitName = cleanUnit.replace(/[^a-z0-9가-힣]/gi, '_');
   const summaryFileName = `${safeUnitName}_${set}세트.json`;
 
   // 1. public 폴더 우선 확인 (배포 환경에서 가장 확실함)

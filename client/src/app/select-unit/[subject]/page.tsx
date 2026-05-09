@@ -284,7 +284,7 @@ export default function SelectUnitPage() {
                               {Array.from({ length: unitSetCount }).map((_, sIdx) => {
                                 const localSetNum = sIdx + 1;
                                 const displaySetNumber = runningSetCount++; // 전역 번호
-                                const unitName = unit.originalName || unit.name;
+                                const unitName = unit.name; // 파트 구분(1부, 2부)을 위해 전체 이름 사용
                                 
                                 // 마지막 세트는 남은 문항수만큼만 (기본 30)
                                 const setTotalCount = (sIdx === unitSetCount - 1) 

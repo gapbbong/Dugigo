@@ -2,12 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
+// 살아있는 정예 키 리스트 (1번, 3번)
 const API_KEYS = [
-  'AIzaSyCqM6VXgXszoN_ICLmATOJ3KZHSSCkS49s',
   'AIzaSyC3PpvfbdMxb3ajXvtP-4m3uLHa-qcDsU0',
-  'AIzaSyDmvjV4-D0WaWxOurP5TuUTjhc_c5ODHwk',
-  'AIzaSyAZIaqtGyf4lIM6A60yJevVW4l-T5gTM_4',
-  'AIzaSyBsWpRqpQA61MW0mFEWLEuvcTk15LNfxfg'
+  'AIzaSyAZIaqtGyf4lIM6A60yJevVW4l-T5gTM_4'
 ];
 
 function getApiKey() {
@@ -31,7 +29,8 @@ async function generateSet(unitName, setNum, questions) {
   }
 
   const genAI = new GoogleGenerativeAI(getApiKey());
-  const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+  // 검증된 모델명 사용
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
   const prompt = `
     당신은 전기공사산업기사 교육 전문가입니다. 
@@ -65,6 +64,11 @@ async function generateSet(unitName, setNum, questions) {
       console.log(`Generated: ${fileName}`);
     }
   } catch (e) {
+    if (e.message.includes('429') || e.message.includes('403')) {
+      console.warn(`Issue with ${fileName} (${e.message}). Waiting 45s...`);
+      await new Promise(r => setTimeout(r, 45000));
+      return generateSet(unitName, setNum, questions); // Retry
+    }
     console.error(`Failed: ${fileName}`, e.message);
   }
 }
@@ -83,8 +87,8 @@ async function main() {
     for (let s = 1; s <= totalSets; s++) {
       const setQuestions = questions.slice((s - 1) * 30, s * 30);
       await generateSet(unitName, s, setQuestions);
-      // API 레이트 리밋 방지
-      await new Promise(r => setTimeout(r, 1000));
+      // 할당량 보존을 위한 넉넉한 대기 시간
+      await new Promise(r => setTimeout(r, 10000));
     }
   }
 }
