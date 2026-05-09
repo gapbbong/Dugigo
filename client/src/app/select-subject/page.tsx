@@ -127,6 +127,10 @@ export default function SelectSubjectPage() {
             </div>
             <div className="flex items-center gap-1.5 md:gap-2">
               <h2 className="text-xl md:text-2xl font-black tracking-tighter text-slate-900">DugiGo</h2>
+              <div className="hidden sm:flex items-center gap-2">
+                <div className="w-px h-3 bg-slate-300 mx-1" />
+                <span className="text-xs md:text-sm font-black text-slate-500 tracking-tight">경성전자고등학교</span>
+              </div>
               <span className="text-[10px] text-slate-400 font-medium bg-slate-100 px-1.5 py-0.5 rounded-full">v2.0.2</span>
             </div>
           </div>
@@ -220,8 +224,9 @@ export default function SelectSubjectPage() {
       </main>
 
       {/* Footer hint */}
-      <footer className="max-w-6xl mx-auto mt-20 pb-12 text-center text-slate-400 text-sm font-medium">
-        © 2026 DugiGo Smart License Solution.
+      <footer className="max-w-6xl mx-auto mt-20 pb-12 text-center text-slate-400 text-sm font-medium flex flex-col gap-2">
+        <p>© 2026 DugiGo Smart License Solution.</p>
+        <p className="text-[11px] md:text-xs font-black text-slate-300 tracking-widest uppercase">경성전자고등학교 전용 학습 서비스</p>
       </footer>
     </div>
   );

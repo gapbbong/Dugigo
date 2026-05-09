@@ -88,6 +88,9 @@ export default function LoginPage() {
             <div className="w-14 h-14 bg-brand-600 rounded-2xl flex items-center justify-center shadow-lg shadow-brand-500/30 mb-6">
               <GraduationCap className="w-8 h-8 text-white" />
             </div>
+            <div className="bg-brand-50 px-3 py-1 rounded-full mb-3">
+              <span className="text-[10px] md:text-xs font-black text-brand-600 tracking-wider">경성전자고등학교 공식 학습 플랫폼</span>
+            </div>
             <h1 className="text-3xl font-black text-slate-900 tracking-tighter mb-2">두기고</h1>
             <p className="text-slate-500 font-bold text-sm tracking-tight text-center"><span className="text-brand-600">두</span>꺼운 <span className="text-brand-600">기</span>능사 책 대신 <span className="text-brand-600">고</span>득점 비결</p>
           </div>
