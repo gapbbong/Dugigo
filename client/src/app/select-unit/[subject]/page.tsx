@@ -183,9 +183,13 @@ export default function SelectUnitPage() {
           >
             <ChevronLeft size={20} className="transition-colors" />
           </button>
-          <div>
-            <span className="text-xs font-black tracking-[0.2em] text-brand-600 uppercase">Step 02</span>
-            <h2 className="text-xl font-black text-slate-900 leading-tight">{subject}</h2>
+          <div className="flex items-center gap-3 md:gap-5">
+            <div>
+              <span className="text-xs font-black tracking-[0.2em] text-brand-600 uppercase">Step 02</span>
+              <h2 className="text-xl font-black text-slate-900 leading-tight">{subject}</h2>
+            </div>
+            <div className="w-px h-6 bg-slate-300 mx-1 md:mx-2" />
+            <span className="text-lg md:text-2xl font-black text-brand-600 tracking-tight">경성전자고등학교</span>
           </div>
         </div>
 
@@ -215,13 +219,6 @@ export default function SelectUnitPage() {
 
       <main className="max-w-6xl mx-auto px-8 relative z-10">
         <div className="mb-16">
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-block bg-brand-50 px-4 py-1.5 rounded-full mb-6 border border-brand-100 shadow-sm"
-          >
-            <span className="text-sm md:text-lg font-black text-brand-600 tracking-widest">경성전자고등학교 공식 학습 플랫폼</span>
-          </motion.div>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
