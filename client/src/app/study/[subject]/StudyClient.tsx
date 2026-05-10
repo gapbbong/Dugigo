@@ -200,7 +200,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               .trim();
               
             filtered = data.questions.filter((q: any) => {
-              const qSubUnit = (q.subject || q.sub_unit || '').replace(/^\[.*?\]\s*/, '').trim();
+              // sub_unit을 최우선으로 사용하여 필터링 (subject 필드와 충돌 방지)
+              const qSubUnit = (q.sub_unit || q.subject || '').replace(/^\[.*?\]\s*/, '').trim();
               return qSubUnit === cleanUnitFilter || q.sub_unit === unitFilter || q.subject === unitFilter;
             });
           } else if (roundFilter || yearFilter) {
