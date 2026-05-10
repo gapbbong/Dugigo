@@ -40,7 +40,15 @@ export async function GET(req: NextRequest) {
 
     const sanitizedSubject = targetSubject.replace(/\s/g, '');
 
-    const filesToLoad = fs.readdirSync(dataDir).filter(f => f.endsWith('.json') && !f.includes('_CLEAN'));
+    const filesToLoad = fs.readdirSync(dataDir)
+      .filter(f => f.endsWith('.json') && !f.includes('_CLEAN'))
+      .sort((a, b) => {
+        const isAStandard = /^\d+\./.test(a);
+        const isBStandard = /^\d+\./.test(b);
+        if (isAStandard && !isBStandard) return -1;
+        if (!isAStandard && isBStandard) return 1;
+        return 0;
+      });
 
     const unitMap = new Map<string, number>();
     const questionMap = new Map<string, boolean>(); // 중복 체크용 ID 맵
@@ -170,10 +178,17 @@ export async function GET(req: NextRequest) {
           const hasImage = !!(q.question_img || q.image);
           if (isPlaceholder && !hasImage) return;
 
-          const qId = q.id || (q.round_info ? `${q.round_info}_${q.number}` : `${q.year || ''}_${q.round || ''}_${q.number}`);
+          // 고유 ID 생성 로직 통일
+          const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
           
-          if (questionMap.has(qId) && !isStandardUnitFile) return;
-          // 이전에 등록된 것이 마스터 DB 것이고 현재가 단원 파일이면 덮어쓰기 위해 여기서 return하지 않음
+          if (questionMap.has(qId)) {
+            // 이미 등록된 문제인데, 현재 파일이 표준 단원 파일이면 '단원명'만 업데이트 (카운트는 이미 됨)
+            // 하지만 정확한 집계를 위해 처음부터 고유하게 처리하는 것이 좋음
+            if (isStandardUnitFile) {
+              // 이전 단원 카운트 차감 (필요시) - 여기서는 단순화를 위해 skip 로직을 아래에서 처리
+            }
+            return;
+          }
 
           const subUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
           unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);

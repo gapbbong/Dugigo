@@ -1109,9 +1109,14 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                           <span className="text-xs md:text-sm font-black text-amber-600 uppercase tracking-widest flex items-center gap-1.5">
                             📌 기출 공략 포인트 (시험 출제 기준)
                           </span>
-                          <span className="text-base md:text-xl font-bold leading-relaxed word-break-keep-all">
-                            {slideData[currentSlideIdx].exam_point?.replaceAll('**', '')}
-                          </span>
+                        <div className="text-base md:text-xl font-bold leading-relaxed word-break-keep-all space-y-2">
+                          {slideData[currentSlideIdx].exam_point?.split('\n').map((line: string, i: number) => {
+                            if (line.trim().startsWith('- ')) {
+                              return <div key={i} className="flex gap-2 pl-2"><span className="text-amber-500">•</span><span>{line.trim().slice(2).replaceAll('**', '')}</span></div>;
+                            }
+                            return <p key={i}>{line.replaceAll('**', '')}</p>;
+                          })}
+                        </div>
                         </div>
                       )}
 

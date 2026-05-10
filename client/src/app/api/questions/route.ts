@@ -49,8 +49,16 @@ export async function GET(req: NextRequest) {
 
       const sanitizedSubject = targetSubject.replace(/\s/g, '');
 
-      // 모든 JSON 파일 읽기 (Deduplication 로직이 있으므로 모두 읽어서 단원 파일 우선순위 적용)
-      const filesToLoad = fs.readdirSync(dataDir).filter(file => file.endsWith('.json') && !file.includes('_CLEAN'));
+      // 모든 JSON 파일 읽기 (단원 파일 우선순위 적용을 위해 정렬)
+      const filesToLoad = fs.readdirSync(dataDir)
+        .filter(file => file.endsWith('.json') && !file.includes('_CLEAN'))
+        .sort((a, b) => {
+          const isAStandard = /^\d+\./.test(a);
+          const isBStandard = /^\d+\./.test(b);
+          if (isAStandard && !isBStandard) return -1;
+          if (!isAStandard && isAStandard) return 1;
+          return 0;
+        });
 
       const classifyQuestion = (sub: string, q: any): string => {
         const text = ((q.question || '') + ' ' + (q.explanation || '')).toLowerCase();
@@ -172,7 +180,8 @@ export async function GET(req: NextRequest) {
           const hasImage = !!(q.question_img || q.image);
           if (isPlaceholder && !hasImage) return;
 
-          const qId = q.id || (q.round_info ? `${q.round_info}_${q.number}` : `${q.year || ''}_${q.round || ''}_${q.number}`);
+          // 고유 ID 생성 로직 최적화 (year, round, number 조합 우선)
+          const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
           
           // 이미 등록된 문제가 있고, 현재 파일이 표준 단원 파일이 아니면 패스 (단원 파일 우선순위)
           if (questionMap.has(qId) && !isStandardUnitFile) return;
