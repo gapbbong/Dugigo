@@ -170,10 +170,10 @@ export async function GET(req: NextRequest) {
           const hasImage = !!(q.question_img || q.image);
           if (isPlaceholder && !hasImage) return;
 
-          const qId = q.id || `${q.round_info}_${q.number}`;
+          const qId = q.id || (q.round_info ? `${q.round_info}_${q.number}` : `${q.year || ''}_${q.round || ''}_${q.number}`);
           
           if (questionMap.has(qId) && !isStandardUnitFile) return;
-          if (questionMap.has(qId)) return;
+          // 이전에 등록된 것이 마스터 DB 것이고 현재가 단원 파일이면 덮어쓰기 위해 여기서 return하지 않음
 
           const subUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
           unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);

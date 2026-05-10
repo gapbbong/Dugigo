@@ -172,7 +172,7 @@ export async function GET(req: NextRequest) {
           const hasImage = !!(q.question_img || q.image);
           if (isPlaceholder && !hasImage) return;
 
-          const qId = q.id || `${q.round_info}_${q.number}`;
+          const qId = q.id || (q.round_info ? `${q.round_info}_${q.number}` : `${q.year || ''}_${q.round || ''}_${q.number}`);
           
           // 이미 등록된 문제가 있고, 현재 파일이 표준 단원 파일이 아니면 패스 (단원 파일 우선순위)
           if (questionMap.has(qId) && !isStandardUnitFile) return;
