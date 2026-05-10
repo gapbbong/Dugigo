@@ -27,14 +27,8 @@ export async function GET(req: NextRequest) {
         return NextResponse.json({ error: 'Subject folder not found' }, { status: 404 });
       }
 
-      // 폴더 내 모든 JSON 파일 읽기 (MASTER_DB가 있으면 그것만, 없으면 개별 파일)
-      const allFiles = fs.readdirSync(dataDir).filter(file => file.endsWith('.json') && !file.includes('_CLEAN'));
-      const masterFile = allFiles.find(f => f.toLowerCase().includes('master_db'));
-      
-      // 개별 단원 파일들이 있으면 (01. xxx.json 형태), 마스터 DB는 중복이므로 제외
-      const unitFiles = allFiles.filter(f => /^\d+\./.test(f));
-      const filesToLoad = unitFiles.length > 0 ? unitFiles : (masterFile ? [masterFile] : allFiles);
-
+      // 모든 JSON 파일 읽기 (Deduplication 로직이 있으므로 모두 읽어서 단원 파일 우선순위 적용)
+      const filesToLoad = fs.readdirSync(dataDir).filter(file => file.endsWith('.json') && !file.includes('_CLEAN'));
 
       const classifyQuestion = (sub: string, q: any): string => {
         const text = ((q.question || '') + ' ' + (q.explanation || '')).toLowerCase();

@@ -18,10 +18,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ units: [] });
     }
 
-    const allFiles = fs.readdirSync(dataDir).filter(f => f.endsWith('.json') && !f.includes('_CLEAN'));
-    const masterFile = allFiles.find(f => f.toLowerCase().includes('master_db'));
-    const unitFiles = allFiles.filter(f => /^\d+\./.test(f));
-    const filesToLoad = unitFiles.length > 0 ? unitFiles : (masterFile ? [masterFile] : allFiles);
+    const filesToLoad = fs.readdirSync(dataDir).filter(f => f.endsWith('.json') && !f.includes('_CLEAN'));
 
     const unitMap = new Map<string, number>();
     const questionMap = new Map<string, boolean>(); // 중복 체크용 ID 맵
