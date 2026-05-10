@@ -84,7 +84,32 @@ export default function SelectSubjectPage() {
       try {
         const res = await fetch('/api/subjects');
         const data = await res.json();
-        setSubjects(data.subjects || []);
+        let fetchedSubjects: string[] = data.subjects || [];
+
+        // 정렬 로직: 일반 과목 -> 산업기사 -> 한국사
+        fetchedSubjects.sort((a, b) => {
+          const aIsHistory = a.includes('한국사');
+          const bIsHistory = b.includes('한국사');
+          const aIsInd = a.includes('산업기사');
+          const bIsInd = b.includes('산업기사');
+
+          // 한국사는 무조건 맨 뒤로
+          if (aIsHistory && !bIsHistory) return 1;
+          if (!aIsHistory && bIsHistory) return -1;
+
+          // 산업기사는 한국사 바로 앞으로
+          if (aIsInd && !bIsInd) {
+            return bIsHistory ? -1 : 1;
+          }
+          if (!aIsInd && bIsInd) {
+            return aIsHistory ? 1 : -1;
+          }
+
+          // 나머지는 가나다순
+          return a.localeCompare(b);
+        });
+
+        setSubjects(fetchedSubjects);
       } catch (err) {
         console.error('Failed to load subjects:', err);
       } finally {
@@ -202,7 +227,7 @@ export default function SelectSubjectPage() {
                       </div>
                       
                       <div className="flex flex-col min-w-0">
-                        <h3 className={`text-lg md:text-2xl font-bold mb-0.5 md:mb-2 text-slate-800 transition-colors tracking-tight truncate ${style.hoverText}`}>{subject}</h3>
+                        <h3 className={`text-lg md:text-2xl font-bold mb-0.5 md:mb-2 text-slate-800 transition-colors tracking-tight truncate ${style.hoverText}`}>{index + 1}. {subject}</h3>
                         <p className="text-slate-400 mb-0 md:mb-8 text-[11px] md:text-sm font-medium line-clamp-1">최신 기출문제 및 오답 분석</p>
                       </div>
                       
