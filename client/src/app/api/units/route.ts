@@ -11,12 +11,34 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const sanitizedSubject = subject.replace(/\s/g, '');
-    const dataDir = path.join(process.cwd(), 'src/data', sanitizedSubject);
-    
+    // 1. 원본 이름으로 시도
+    let targetSubject = subject;
+    let dataDir = path.join(process.cwd(), 'src/data', targetSubject);
+
+    // 2. 없으면 공백 제거 버전으로 시도
+    if (!fs.existsSync(dataDir)) {
+      targetSubject = subject.replace(/\s/g, '');
+      dataDir = path.join(process.cwd(), 'src/data', targetSubject);
+    }
+
+    // 3. 그래도 없으면 전체 폴더를 돌며 공백 무시하고 매칭되는 것 찾기
+    if (!fs.existsSync(dataDir)) {
+      const parentDir = path.join(process.cwd(), "src", "data");
+      if (fs.existsSync(parentDir)) {
+        const allFolders = fs.readdirSync(parentDir).filter(f => fs.statSync(path.join(parentDir, f)).isDirectory());
+        const match = allFolders.find(f => f.replace(/\s/g, '') === subject.replace(/\s/g, ''));
+        if (match) {
+          targetSubject = match;
+          dataDir = path.join(parentDir, targetSubject);
+        }
+      }
+    }
+
     if (!fs.existsSync(dataDir)) {
       return NextResponse.json({ units: [] });
     }
+
+    const sanitizedSubject = targetSubject.replace(/\s/g, '');
 
     const filesToLoad = fs.readdirSync(dataDir).filter(f => f.endsWith('.json') && !f.includes('_CLEAN'));
 
@@ -25,8 +47,9 @@ export async function GET(req: NextRequest) {
 
     const classifyQuestion = (sub: string, q: any): string => {
       const text = ((q.question || '') + ' ' + (q.explanation || '')).toLowerCase();
+      const s = sub.replace(/\s/g, '');
 
-      if (sub === '정보처리기능사') {
+      if (s === '정보처리기능사') {
         if (q.sub_unit) return q.sub_unit;
         if (/sql|릴레이션|테이블|데이터베이스|조인|정규화|뷰|인덱스|트랜잭션|ddl|dml|dcl|select|update|delete|insert|기본키|외래키/.test(text)) return "데이터베이스 활용";
         if (/테스트|블랙박스|화이트박스|오류|결함|디버깅|검사|통합|알파|베타|유지보수|스텁|드라이버|단위|인수/.test(text)) return "애플리케이션 테스트 관리";
@@ -35,20 +58,20 @@ export async function GET(req: NextRequest) {
         return "소프트웨어 개발 기초";
       }
 
-      if (sub === '승강기기능사') {
+      if (s === '승강기기능사') {
         if (/저항|전류|전압|직류|교류|콘덴서|인덕턴스|전자기|자계|전동기|발전기|브리지|오옴|플레밍/.test(text)) return "전기이론";
         if (/응력|하중|모멘트|볼트|너트|베어링|기어|풀리|재료역학|압축|인장/.test(text)) return "기계일반";
         if (/안전관리|일상점검|정기검사|유지관리|비상벨|안전장치|보수|점검/.test(text)) return "승강기 점검 및 보수";
         return "승강기 개론";
       }
 
-      if (sub === '전기기능사') {
+      if (s === '전기기능사') {
         if (/전선|배선|배관|접지|전선로|조명|절연|공사|금속관|가요|케이블/.test(text)) return "[설비] 전기설비";
         if (/직류기|동기기|변압기|유도기|정류기|전동기|발전기|회전자|슬립|계자/.test(text)) return "[기기] 전기기기";
         return "[이론] 전기이론";
       }
 
-      if (sub === '컴퓨터활용능력 2급') {
+      if (s === '컴퓨터활용능력2급') {
         const isSubject1 = q.subject === "컴퓨터 일반";
         
         if (isSubject1) {
@@ -72,7 +95,7 @@ export async function GET(req: NextRequest) {
         }
       }
 
-      if (sub === '한국사검정시험' || sub === '한국사능력검정시험') {
+      if (s === '한국사검정시험' || s === '한국사능력검정시험') {
         if (q.sub_unit) return q.sub_unit;
         if (/구석기|신석기|청동기|철기|고조선|부여|고구려|옥저|동예|삼한|빗살무늬|고인돌|주먹도끼/.test(text) && !/백제|신라|고려|조선/.test(text)) return "선사시대 및 국가의 형성";
         if (/백제|신라|통일신라|발해|가야|어라하|건흥|해동성국|골품|화랑|삼국/.test(text)) return "고대 사회 (삼국~남북국)";
@@ -84,7 +107,7 @@ export async function GET(req: NextRequest) {
         return "기타 및 통합";
       }
 
-      if (sub === '시각디자인산업기사') {
+      if (s === '시각디자인산업기사') {
         if (q.subject) return q.subject;
         if (/색채|색상|명도|채도|먼셀|오스트발트|배색|조화|대비|색명|현색계|계시/.test(text)) return "색채학";
         if (/인쇄|사진|필름|현상|제판|제책|잉크|카메라|노출|광선|렌즈|망점|오프셋|감광|잠상/.test(text)) return "인쇄 및 사진기법";
@@ -92,7 +115,7 @@ export async function GET(req: NextRequest) {
         return "시각디자인 일반";
       }
 
-      if (sub === '전기공사산업기사') {
+      if (s === '전기공사산업기사') {
         if (/조명|광도|럭스|루멘|전열|조도|광속|칸델라|글로브|휘도|램프|반사율|투과율/.test(text)) return "01. 조명 및 전열";
         if (/전지|배터리|축전지|전기화학|패러데이|전해|금속막대|도금|이온/.test(text)) return "02. 전기화학 및 배터리";
         if (/펌프|권상|엘리베이터|에스컬레이터|기중기|용접|가열|건조|공작기계/.test(text)) return "03. 전동기 응용";
