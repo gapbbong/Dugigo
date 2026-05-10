@@ -248,14 +248,18 @@ export default function SelectSubjectPage() {
 
       <main className="max-w-6xl mx-auto relative z-10 px-6 md:px-12">
         <div className="mb-6 md:mb-12">
-          <motion.h1 
+          <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-4xl md:text-5xl font-black mb-4 tracking-tight leading-tight text-slate-900"
+            className="flex flex-col gap-3"
           >
-            환영합니다, <span className="text-brand-600">{user?.email?.split('@')[0]}</span>님!<br />
-            <span className="text-brand-600 text-2xl md:text-3xl font-bold italic">"{randomQuote}"</span>
-          </motion.h1>
+            <h1 className="text-3xl md:text-5xl font-black tracking-tight leading-tight text-slate-900 italic">
+              <span className="text-brand-600">"{randomQuote}"</span>
+            </h1>
+            <p className="text-xl md:text-2xl font-bold text-slate-500">
+              환영합니다, <span className="text-brand-600">{user?.email?.split('@')[0]}</span>님! 👋
+            </p>
+          </motion.div>
           <p className="text-slate-500 max-w-2xl text-lg font-medium">
             선택하신 종목에 따라 최신 기출문제와 오답 분석 리포트가 제공됩니다.
           </p>
