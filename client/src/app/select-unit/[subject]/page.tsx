@@ -228,6 +228,7 @@ export default function SelectUnitPage() {
           >
             <ChevronLeft size={20} className="transition-colors" />
           </button>
+          <div className="flex items-center gap-3 md:gap-5">
             <div className="flex items-center gap-3">
               <span className="text-xs font-black tracking-[0.2em] text-brand-600 uppercase bg-brand-50 px-2 py-1 rounded-md border border-brand-100">Step 02</span>
               <h2 className="text-xl md:text-3xl font-black text-slate-900 leading-tight tracking-tighter">{subject}</h2>
