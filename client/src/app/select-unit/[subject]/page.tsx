@@ -174,8 +174,8 @@ export default function SelectUnitPage() {
     <div className="min-h-screen relative text-slate-800 font-sans pb-32">
       <div className="mesh-bg" />
 
-      {/* Header with Level & EXP */}
-      <nav className="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center relative z-10 border-b border-white/20 bg-white/40 backdrop-blur-md sticky top-0 shadow-sm mb-12">
+      {/* Header with Level & EXP (Floating 제거) */}
+      <nav className="max-w-6xl mx-auto px-8 py-6 flex justify-between items-center relative z-10 border-b border-white/20 bg-white/40 backdrop-blur-md shadow-sm mb-12">
         <div className="flex items-center gap-4">
           <button 
             onClick={() => router.push('/select-subject')}
@@ -184,12 +184,12 @@ export default function SelectUnitPage() {
             <ChevronLeft size={20} className="transition-colors" />
           </button>
           <div className="flex items-center gap-3 md:gap-5">
-            <div>
-              <span className="text-xs font-black tracking-[0.2em] text-brand-600 uppercase">Step 02</span>
-              <h2 className="text-xl font-black text-slate-900 leading-tight">{subject}</h2>
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-black tracking-[0.2em] text-brand-600 uppercase bg-brand-50 px-2 py-1 rounded-md border border-brand-100">Step 02</span>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight tracking-tighter">{subject}</h2>
             </div>
-            <div className="w-px h-6 bg-slate-300 mx-1 md:mx-2" />
-            <span className="text-lg md:text-2xl font-black text-brand-600 tracking-tight">경성전자고등학교</span>
+            <div className="w-px h-8 bg-slate-300 mx-1 md:mx-2" />
+            <span className="text-xl md:text-3xl font-black text-brand-600 tracking-tight">경성전자고등학교</span>
           </div>
         </div>
 
@@ -222,7 +222,7 @@ export default function SelectUnitPage() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-black mb-4 tracking-tight leading-tight"
+            className="text-2xl md:text-3xl font-black mb-4 tracking-tight leading-tight"
           >
             두껍고 딱딱한 <span className="text-brand-600">기능사 책 대신</span><br />
             고민말고 <span className="text-brand-600 font-black">두 기 고</span> 하세요!
