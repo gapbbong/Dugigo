@@ -179,7 +179,7 @@ export default function SelectSubjectPage() {
 
       <main className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 pt-8 md:pt-10">
         <div className="mb-8 md:mb-10 text-center md:text-left">
-          <h1 className="text-2xl md:text-3xl font-black text-slate-900 italic mb-2 leading-tight tracking-tighter">"{randomQuote}"</h1>
+          <h1 className="text-2xl md:text-5xl font-black text-slate-900 italic mb-2 leading-tight tracking-tighter">"{randomQuote}"</h1>
           <p className="text-sm md:text-xl font-bold text-slate-500 italic">환영합니다, <span className="text-brand-600 font-black">{user?.email?.split('@')[0]}</span>님! 👋</p>
         </div>
 
