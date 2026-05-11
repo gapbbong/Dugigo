@@ -280,23 +280,23 @@ export default function SelectSubjectPage() {
           </div>
         </div>
 
-        {/* Bottom Row: Slogan & Install Button */}
-        <div className="w-full flex flex-col md:flex-row md:items-center justify-between gap-4">
+        {/* Bottom Row: Slogan & Install Button (수평 배치 및 우측 정렬) */}
+        <div className="w-full flex items-center justify-between gap-4 mt-2">
           <p className="text-[10px] md:text-xs font-bold text-slate-500 tracking-tight whitespace-nowrap overflow-hidden text-ellipsis uppercase">
             <span className="text-blue-500">두</span>꺼운 <span className="text-emerald-500">기</span>능사 책 대신 <span className="text-rose-500">고</span>민말고 <span className="ml-1 font-black tracking-widest"><span className="text-blue-500">두</span><span className="text-emerald-500">기</span><span className="text-rose-500">고</span></span>
           </p>
 
-          {!isInstalled && (
+          {!isInstalled && (isIOS || deferredPrompt) && (
             <motion.button
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.8)', borderColor: '#7c3aed', color: '#7c3aed' }}
               whileTap={{ scale: 0.95 }}
               onClick={handleInstall}
-              className="flex items-center gap-2 px-4 py-1.5 bg-white/40 text-slate-500 rounded-full border-2 border-slate-200 transition-all self-start md:self-auto group"
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-white/40 text-slate-500 rounded-full border-2 border-slate-200 transition-all flex-shrink-0 group"
             >
               <PlusSquare className="w-3.5 h-3.5 group-hover:text-brand-600" />
-              <span className="text-[10px] md:text-[11px] font-black tracking-tight">홈 화면에 추가</span>
+              <span className="text-[10px] md:text-[11px] font-black tracking-tight whitespace-nowrap">홈 화면에 추가</span>
             </motion.button>
           )}
         </div>
@@ -322,11 +322,11 @@ export default function SelectSubjectPage() {
       )}
 
       <main className="max-w-6xl mx-auto relative z-10 px-6 md:px-12">
-        <div className="mb-6 md:mb-12">
+        <div className="mb-4 md:mb-8">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex flex-col gap-3"
+            className="flex flex-col gap-1 md:gap-2"
           >
             <h1 className="text-3xl md:text-5xl font-black tracking-tight leading-tight text-slate-900 italic">
               <span className="text-brand-600">"{randomQuote}"</span>

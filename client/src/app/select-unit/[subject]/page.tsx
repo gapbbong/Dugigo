@@ -228,12 +228,11 @@ export default function SelectUnitPage() {
           >
             <ChevronLeft size={20} className="transition-colors" />
           </button>
-          <div className="flex items-center gap-3 md:gap-5">
             <div className="flex items-center gap-3">
               <span className="text-xs font-black tracking-[0.2em] text-brand-600 uppercase bg-brand-50 px-2 py-1 rounded-md border border-brand-100">Step 02</span>
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight tracking-tighter">{subject}</h2>
+              <h2 className="text-xl md:text-3xl font-black text-slate-900 leading-tight tracking-tighter">{subject}</h2>
             </div>
-            <div className="w-px h-8 bg-slate-300 mx-1 md:mx-2" />
+            <div className="w-px h-6 bg-slate-300 mx-1 md:mx-2" />
             <span className="text-xl md:text-3xl font-black text-brand-600 tracking-tight">경성전자고등학교</span>
           </div>
         </div>
@@ -282,20 +281,19 @@ export default function SelectUnitPage() {
       )}
 
       <main className="max-w-6xl mx-auto px-8 relative z-10">
-        <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div className="mb-8 flex items-center justify-between gap-4">
           <div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-2xl md:text-3xl font-black mb-4 tracking-tight leading-tight"
+              className="text-lg md:text-2xl font-black tracking-tight leading-tight"
             >
-              두껍고 딱딱한 <span className="text-brand-600">기능사 책 대신</span><br />
+              두껍고 딱딱한 <span className="text-brand-600">기능사 책 대신</span><br className="sm:hidden" />
               고민말고 <span className="text-brand-600 font-black">두 기 고</span> 하세요!
             </motion.h1>
-            <p className="text-slate-500 text-lg font-medium">단원별 해설부터 실전 기출까지, 완벽한 합격 커리큘럼입니다.</p>
           </div>
 
-          {!isInstalled && (
+          {!isInstalled && (isIOS || deferredPrompt) && (
             <motion.button
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -311,17 +309,17 @@ export default function SelectUnitPage() {
         </div>
 
         {/* 1. 소단원 핵심 공략 Section */}
-        <section className="mb-24">
-          <div className="flex items-center justify-between mb-10">
+        <section className="mb-12">
+          <div className="flex items-center justify-between mb-5">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-brand-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-brand-500/20">
-                <Sparkles size={24} />
+              <div className="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-brand-500/20">
+                <Sparkles size={20} />
               </div>
-              <h2 className="text-3xl font-black text-slate-900">단원별 핵심 공략 <span className="hidden sm:inline text-sm font-bold text-slate-400 ml-2">(전 세트 해설 슬라이드 포함)</span></h2>
+              <h2 className="text-xl md:text-3xl font-black text-slate-900">단원별 핵심 공략 <span className="hidden sm:inline text-sm font-bold text-slate-400 ml-2">해설 포함</span></h2>
             </div>
             <button 
               onClick={() => setIsUnitsCollapsed(!isUnitsCollapsed)}
-              className="px-6 py-2.5 bg-white/50 hover:bg-brand-600 hover:text-white rounded-xl font-black text-sm transition-all border border-brand-100 shadow-sm"
+              className="px-3 py-1.5 bg-white/50 hover:bg-brand-600 hover:text-white rounded-lg font-black text-xs transition-all border border-brand-100 shadow-sm whitespace-nowrap"
             >
               {isUnitsCollapsed ? '펼치기' : '접기'}
             </button>
@@ -445,17 +443,17 @@ export default function SelectUnitPage() {
         </section>
 
         {/* 2. 연도별 기출문제 Section */}
-        <section className="mb-24">
-          <div className="flex items-center justify-between mb-10">
+        <section className="mb-12">
+          <div className="flex items-center justify-between mb-5">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-indigo-500/20">
-                <Calendar size={24} />
+              <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-500/20">
+                <Calendar size={20} />
               </div>
-              <h2 className="text-3xl font-black text-slate-900">연도별 기출 정복</h2>
+              <h2 className="text-xl md:text-3xl font-black text-slate-900">연도별 기출 정복</h2>
             </div>
             <button 
               onClick={() => setIsExamsCollapsed(!isExamsCollapsed)}
-              className="px-6 py-2.5 bg-white/50 hover:bg-indigo-600 hover:text-white rounded-xl font-black text-sm transition-all border border-indigo-100 shadow-sm"
+              className="px-3 py-1.5 bg-white/50 hover:bg-indigo-600 hover:text-white rounded-lg font-black text-xs transition-all border border-indigo-100 shadow-sm whitespace-nowrap"
             >
               {isExamsCollapsed ? '펼치기' : '접기'}
             </button>
