@@ -176,15 +176,15 @@ export default function SelectUnitPage() {
           </div>
 
           {/* Bottom Row (Mobile) / Right Row (PC): Info Badges (Right Aligned) */}
-          <div className="flex items-center justify-end gap-2 md:gap-5 border-t border-slate-100/50 md:border-none pt-1.5 md:pt-0">
-            {/* 학교 이름 (우측 정렬 및 온도 옆으로 배치) */}
-            <span className="text-[13px] md:text-[25px] font-black text-brand-600 tracking-tight whitespace-nowrap">경성전자고등학교</span>
+          <div className="flex items-center justify-end gap-1 md:gap-5 border-t border-slate-100/50 md:border-none pt-1.5 md:pt-0">
+            {/* 학교 이름 (글자 크기 상향 및 밀착) */}
+            <span className="text-[14px] md:text-[25px] font-black text-brand-600 tracking-tight whitespace-nowrap">경성전자고등학교</span>
             
-            <div className="flex items-center gap-1.5 md:gap-5">
+            <div className="flex items-center gap-1 md:gap-5">
               {/* 학습 온도 */}
-              <div className="flex items-center gap-1 md:gap-2 bg-rose-50 px-2 py-1 md:px-6 md:py-3 rounded-lg md:rounded-2xl border md:border-2 border-rose-100 shadow-sm flex-shrink-0">
+              <div className="flex items-center gap-1 bg-rose-50 px-1.5 py-1 md:px-6 md:py-3 rounded-lg md:rounded-2xl border md:border-2 border-rose-100 shadow-sm flex-shrink-0">
                 <Thermometer className="w-3.5 h-3.5 md:w-8 md:h-8 text-rose-500" />
-                <span className="text-xs md:text-2xl font-black text-rose-600 whitespace-nowrap">
+                <span className="text-[13px] md:text-2xl font-black text-rose-600 whitespace-nowrap">
                   {(() => {
                     const threeDaysAgo = new Date();
                     threeDaysAgo.setDate(threeDaysAgo.getDate() - 3);
@@ -194,9 +194,9 @@ export default function SelectUnitPage() {
                 </span>
               </div>
               {/* 등급 */}
-              <div className="flex items-center gap-1.5 md:gap-2 bg-brand-50 px-2.5 py-1 md:px-8 md:py-3 rounded-xl md:rounded-2xl border md:border-2 border-brand-100 shadow-sm flex-shrink-0">
-                <ShieldCheck className="w-4 h-4 md:w-10 md:h-10 text-brand-600" />
-                <span className="text-xs md:text-2xl font-black text-brand-700 whitespace-nowrap">
+              <div className="flex items-center gap-1 bg-brand-50 px-1.5 py-1 md:px-8 md:py-3 rounded-lg md:rounded-2xl border md:border-2 border-brand-100 shadow-sm flex-shrink-0">
+                <ShieldCheck className="w-3.5 h-3.5 md:w-10 md:h-10 text-brand-600" />
+                <span className="text-[13px] md:text-2xl font-black text-brand-700 whitespace-nowrap">
                   {userProfile ? (LEVEL_TITLES[Math.min(11, Math.floor((userProfile.exp_points || 0) / 1000))] || "입문자") : "입문자"}
                 </span>
               </div>
