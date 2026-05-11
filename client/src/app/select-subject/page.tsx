@@ -17,7 +17,6 @@ import {
   Monitor,
   History,
   Globe,
-  Globe,
   Settings,
   Download,
   Share,
