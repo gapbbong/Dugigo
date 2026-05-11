@@ -268,15 +268,15 @@ export default function SelectUnitPage() {
           <motion.button
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, borderColor: '#7c3aed' }}
             whileTap={{ scale: 0.95 }}
             onClick={handleInstall}
-            className="flex flex-col items-center gap-3 p-5 bg-white/80 backdrop-blur-xl border-2 border-brand-200 rounded-[2.5rem] shadow-2xl shadow-brand-500/20 group"
+            className="flex flex-col items-center gap-3 p-5 bg-white/60 backdrop-blur-xl border-2 border-slate-200 rounded-[2.5rem] shadow-xl hover:shadow-brand-500/10 group transition-all"
           >
-            <div className="w-12 h-12 bg-brand-600 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:rotate-12 transition-transform">
+            <div className="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-400 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-inner">
               <Download size={24} />
             </div>
-            <span className="text-[10px] font-black text-brand-700 uppercase tracking-widest text-center">앱 설치<br/>PC/바탕화면</span>
+            <span className="text-[10px] font-black text-slate-400 group-hover:text-brand-600 uppercase tracking-widest text-center transition-colors">앱 설치<br/>PC/바탕화면</span>
           </motion.button>
         </div>
       )}
@@ -295,21 +295,17 @@ export default function SelectUnitPage() {
             <p className="text-slate-500 text-lg font-medium">단원별 해설부터 실전 기출까지, 완벽한 합격 커리큘럼입니다.</p>
           </div>
 
-          {/* 모바일/PC 통합 설치 유도 버튼 (슬로건 옆) */}
           {!isInstalled && (
             <motion.button
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.8)', borderColor: '#7c3aed', color: '#7c3aed' }}
               whileTap={{ scale: 0.95 }}
               onClick={handleInstall}
-              className="flex items-center gap-3 px-6 py-4 bg-brand-600 text-white rounded-[2rem] shadow-xl shadow-brand-500/30 hover:bg-brand-700 transition-all border-b-4 border-brand-800"
+              className="flex items-center gap-2.5 px-5 py-2 bg-white/40 text-slate-500 rounded-full border-2 border-slate-200 transition-all group shadow-sm"
             >
-              <PlusSquare className="w-6 h-6" />
-              <div className="text-left">
-                <p className="text-[10px] font-black text-brand-200 uppercase tracking-widest leading-none mb-1">Add to Home</p>
-                <p className="text-sm font-black">홈 화면에 추가하기</p>
-              </div>
+              <PlusSquare className="w-5 h-5 group-hover:text-brand-600" />
+              <span className="text-sm font-black tracking-tight">홈 화면에 추가</span>
             </motion.button>
           )}
         </div>
