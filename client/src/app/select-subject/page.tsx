@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BookOpen, 
   GraduationCap, 
+  ChevronRight,
   Loader2, 
   LogOut, 
   Zap, 
