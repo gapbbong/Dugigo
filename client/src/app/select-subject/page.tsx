@@ -109,23 +109,28 @@ export default function SelectSubjectPage() {
     <div className="min-h-screen relative overflow-hidden font-sans text-slate-900 pb-20">
       <div className="mesh-bg opacity-40" />
       
-      {/* Integrated Header Area */}
+      {/* Integrated Header Area (With Absolute Centering) */}
       <header className="max-w-[1600px] mx-auto pt-6 md:pt-8 px-4 md:px-12 relative z-10">
-        <div className="flex items-center justify-between gap-2 md:gap-6 bg-white/40 backdrop-blur-md p-2 md:p-3 rounded-2xl md:rounded-[2rem] border border-white/60 shadow-sm">
-          {/* Logo & School Name Row */}
-          <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
+        <div className="flex items-center justify-between gap-2 md:gap-6 bg-white/40 backdrop-blur-md p-2 md:p-3 rounded-2xl md:rounded-[2rem] border border-white/60 shadow-sm relative">
+          
+          {/* 1. Left Section: Logo */}
+          <div className="flex items-center gap-2 md:gap-3 flex-shrink-0 relative z-20">
             <div className="w-7 h-7 md:w-10 md:h-10 bg-brand-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/20">
               <GraduationCap size={16} className="text-white md:hidden" />
               <GraduationCap size={22} className="text-white hidden md:block" />
             </div>
             <h2 className="text-[10px] md:text-[21px] font-black tracking-tight text-slate-900">DugiGo</h2>
-            <span className="text-[11px] md:text-[25px] font-black text-brand-600 tracking-tighter whitespace-nowrap">
+          </div>
+
+          {/* 2. Middle Section: School Name (Absolute Center) */}
+          <div className="absolute left-1/2 -translate-x-1/2 flex items-center pointer-events-none md:pointer-events-auto">
+            <span className="text-[10px] md:text-[25px] font-black text-brand-600 tracking-tighter whitespace-nowrap">
               경성전자고등학교
             </span>
           </div>
 
-          {/* Buttons Row */}
-          <div className="flex items-center gap-2 md:gap-6 ml-auto">
+          {/* 3. Right Section: Buttons */}
+          <div className="flex items-center gap-2 md:gap-6 ml-auto relative z-20">
             {isTeacher && (
               <Link 
                 href="/teacher" 
@@ -143,7 +148,7 @@ export default function SelectSubjectPage() {
           </div>
         </div>
 
-        {/* Slogan & Install Row */}
+        {/* Slogan & Install Row (Increased Button Font Size) */}
         <div className="flex items-center justify-between gap-2 border-t border-slate-100 mt-2 md:mt-3 pt-2 md:pt-3 px-2">
           <p className="text-[9px] md:text-xs font-bold text-slate-500 whitespace-nowrap flex-shrink overflow-hidden text-ellipsis uppercase tracking-tight">
             <span className="text-blue-500">두</span>꺼운 <span className="text-emerald-500">기</span>능사 책 대신 <span className="text-rose-500">고</span>민말고 <span className="font-black">두기고</span>
@@ -151,12 +156,12 @@ export default function SelectSubjectPage() {
           {!isInstalled && (
             <motion.button 
               onClick={handleInstall} 
-              className="flex items-center gap-1 px-2 py-1 md:px-4 md:py-1.5 bg-white/60 text-slate-600 rounded-full border border-slate-200 shadow-sm flex-shrink-0"
+              className="flex items-center gap-1.5 px-3 py-1.5 md:px-6 md:py-3 bg-white/60 text-slate-600 rounded-full border border-slate-200 shadow-sm flex-shrink-0"
               whileTap={{ scale: 0.95 }}
             >
               <PlusSquare size={14} className="text-brand-500 md:hidden" />
-              <PlusSquare size={16} className="text-brand-500 hidden md:block" />
-              <span className="text-[10px] md:text-[11px] font-black tracking-tight whitespace-nowrap">홈 화면 추가</span>
+              <PlusSquare size={18} className="text-brand-500 hidden md:block" />
+              <span className="text-[10px] md:text-[17px] font-black tracking-tight whitespace-nowrap">홈 화면 추가</span>
             </motion.button>
           )}
         </div>
