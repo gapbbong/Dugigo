@@ -76,7 +76,7 @@ export default function SelectSubjectPage() {
       const res = await fetch('/api/subjects');
       const data = await res.json();
       let fetchedSubjects = data.subjects || [];
-      fetchedSubjects.sort((a, b) => {
+      fetchedSubjects.sort((a: string, b: string) => {
         if (a.includes('한국사') && !b.includes('한국사')) return 1;
         if (!a.includes('한국사') && b.includes('한국사')) return -1;
         return a.localeCompare(b);
