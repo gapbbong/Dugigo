@@ -109,59 +109,59 @@ export default function SelectSubjectPage() {
     <div className="min-h-screen relative overflow-hidden font-sans text-slate-900 pb-20">
       <div className="mesh-bg opacity-40" />
       
-      {/* Integrated Header Area (With Absolute Centering) */}
-      <header className="max-w-[1600px] mx-auto pt-6 md:pt-8 px-4 md:px-12 relative z-10">
-        <div className="flex items-center justify-between gap-2 md:gap-6 bg-white/40 backdrop-blur-md p-2 md:p-3 rounded-2xl md:rounded-[2rem] border border-white/60 shadow-sm relative">
+      {/* Integrated Header Area (1.5x Larger Mobile Text) */}
+      <header className="max-w-[1600px] mx-auto pt-6 md:pt-8 px-2 md:px-12 relative z-10">
+        <div className="flex items-center justify-between gap-1 md:gap-6 bg-white/40 backdrop-blur-md p-2 md:p-3 rounded-xl md:rounded-[2rem] border border-white/60 shadow-sm relative overflow-hidden">
           
           {/* 1. Left Section: Logo */}
-          <div className="flex items-center gap-2 md:gap-3 flex-shrink-0 relative z-20">
-            <div className="w-7 h-7 md:w-10 md:h-10 bg-brand-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/20">
-              <GraduationCap size={16} className="text-white md:hidden" />
+          <div className="flex items-center gap-1 md:gap-3 flex-shrink-0 relative z-20">
+            <div className="w-6 h-6 md:w-10 md:h-10 bg-brand-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/20">
+              <GraduationCap size={14} className="text-white md:hidden" />
               <GraduationCap size={22} className="text-white hidden md:block" />
             </div>
-            <h2 className="text-[10px] md:text-[21px] font-black tracking-tight text-slate-900">DugiGo</h2>
+            <h2 className="text-[15px] md:text-[21px] font-black tracking-tight text-slate-900">DugiGo</h2>
           </div>
 
-          {/* 2. Middle Section: School Name (Absolute Center) */}
-          <div className="absolute left-1/2 -translate-x-1/2 flex items-center pointer-events-none md:pointer-events-auto">
-            <span className="text-[10px] md:text-[25px] font-black text-brand-600 tracking-tighter whitespace-nowrap">
+          {/* 2. Middle Section: School Name (Absolute Center, 1.5x Larger) */}
+          <div className="absolute left-1/2 -translate-x-1/2 flex items-center pointer-events-none md:pointer-events-auto w-full justify-center px-2">
+            <span className="text-[16px] md:text-[25px] font-black text-brand-600 tracking-tighter whitespace-nowrap">
               경성전자고등학교
             </span>
           </div>
 
-          {/* 3. Right Section: Buttons */}
+          {/* 3. Right Section: Buttons (1.5x Larger) */}
           <div className="flex items-center gap-2 md:gap-6 ml-auto relative z-20">
             {isTeacher && (
               <Link 
                 href="/teacher" 
-                className="text-[10px] md:text-[17px] px-2 py-1 md:px-6 md:py-2.5 bg-brand-600 text-white font-black rounded-lg md:rounded-xl shadow-lg hover:bg-brand-700 transition-all whitespace-nowrap"
+                className="text-[15px] md:text-[17px] px-2 py-1 md:px-6 md:py-2.5 bg-brand-600 text-white font-black rounded-lg md:rounded-xl shadow-lg hover:bg-brand-700 transition-all whitespace-nowrap"
               >
                 Dashboard
               </Link>
             )}
             <button 
               onClick={() => supabase.auth.signOut().then(() => router.push('/login'))} 
-              className="text-[10px] md:text-[17px] text-slate-400 hover:text-rose-500 font-black transition-colors whitespace-nowrap"
+              className="text-[15px] md:text-[17px] text-slate-400 hover:text-rose-500 font-black transition-colors whitespace-nowrap"
             >
               Logout
             </button>
           </div>
         </div>
 
-        {/* Slogan & Install Row (Increased Button Font Size) */}
-        <div className="flex items-center justify-between gap-2 border-t border-slate-100 mt-2 md:mt-3 pt-2 md:pt-3 px-2">
-          <p className="text-[9px] md:text-xs font-bold text-slate-500 whitespace-nowrap flex-shrink overflow-hidden text-ellipsis uppercase tracking-tight">
+        {/* Slogan & Install Row (1.5x Larger Mobile Text) */}
+        <div className="flex items-center justify-between gap-2 border-t border-slate-100 mt-3 md:mt-3 pt-3 md:pt-3 px-2">
+          <p className="text-[13px] md:text-xs font-bold text-slate-500 whitespace-nowrap flex-shrink overflow-hidden text-ellipsis uppercase tracking-tight">
             <span className="text-blue-500">두</span>꺼운 <span className="text-emerald-500">기</span>능사 책 대신 <span className="text-rose-500">고</span>민말고 <span className="font-black">두기고</span>
           </p>
           {!isInstalled && (
             <motion.button 
               onClick={handleInstall} 
-              className="flex items-center gap-1.5 px-3 py-1.5 md:px-6 md:py-3 bg-white/60 text-slate-600 rounded-full border border-slate-200 shadow-sm flex-shrink-0"
+              className="flex items-center gap-1.5 px-3 py-2 md:px-6 md:py-3 bg-white/60 text-slate-600 rounded-full border border-slate-200 shadow-sm flex-shrink-0"
               whileTap={{ scale: 0.95 }}
             >
               <PlusSquare size={14} className="text-brand-500 md:hidden" />
               <PlusSquare size={18} className="text-brand-500 hidden md:block" />
-              <span className="text-[10px] md:text-[17px] font-black tracking-tight whitespace-nowrap">홈 화면 추가</span>
+              <span className="text-[15px] md:text-[17px] font-black tracking-tight whitespace-nowrap">홈 화면 추가</span>
             </motion.button>
           )}
         </div>
@@ -201,7 +201,7 @@ export default function SelectSubjectPage() {
                 </div>
                 <div className="flex items-center gap-2 md:gap-4 overflow-hidden">
                   <span className="text-slate-900 font-black italic text-base md:text-xl">{index + 1}.</span>
-                  <h3 className="text-sm md:text-xl font-black text-slate-900 tracking-tight whitespace-nowrap">
+                  <h3 className="text-base md:text-xl font-black text-slate-900 tracking-tight whitespace-nowrap">
                     {subject}
                   </h3>
                 </div>
@@ -214,7 +214,7 @@ export default function SelectSubjectPage() {
 
       <footer className="text-center py-10 text-slate-400 text-[10px] md:text-sm font-medium border-t border-slate-100 mt-16">
         <p>© 2026 DugiGo Smart License Solution.</p>
-        <p className="font-black uppercase tracking-widest text-slate-500 mt-1 text-xs md:text-[17px]">경성전자고등학교 전용 학습 서비스</p>
+        <p className="font-black uppercase tracking-widest text-slate-500 mt-1 text-[13px] md:text-[17px]">경성전자고등학교 전용 학습 서비스</p>
       </footer>
 
       {/* iOS Popup */}
