@@ -118,8 +118,8 @@ export default function SelectSubjectPage() {
               <GraduationCap size={16} className="text-white md:hidden" />
               <GraduationCap size={22} className="text-white hidden md:block" />
             </div>
-            <h2 className="text-xs md:text-xl font-black tracking-tight text-slate-900 hidden sm:block">DugiGo</h2>
-            <span className="text-[10px] md:text-2xl font-black text-brand-600 tracking-tighter whitespace-nowrap">
+            <h2 className="text-[10px] md:text-[21px] font-black tracking-tight text-slate-900">DugiGo</h2>
+            <span className="text-[11px] md:text-[25px] font-black text-brand-600 tracking-tighter whitespace-nowrap">
               경성전자고등학교
             </span>
           </div>
@@ -129,14 +129,14 @@ export default function SelectSubjectPage() {
             {isTeacher && (
               <Link 
                 href="/teacher" 
-                className="text-[9px] md:text-base px-2 py-1 md:px-6 md:py-2.5 bg-brand-600 text-white font-black rounded-lg md:rounded-xl shadow-lg hover:bg-brand-700 transition-all whitespace-nowrap"
+                className="text-[10px] md:text-[17px] px-2 py-1 md:px-6 md:py-2.5 bg-brand-600 text-white font-black rounded-lg md:rounded-xl shadow-lg hover:bg-brand-700 transition-all whitespace-nowrap"
               >
                 Dashboard
               </Link>
             )}
             <button 
               onClick={() => supabase.auth.signOut().then(() => router.push('/login'))} 
-              className="text-[9px] md:text-base text-slate-400 hover:text-rose-500 font-black transition-colors whitespace-nowrap"
+              className="text-[10px] md:text-[17px] text-slate-400 hover:text-rose-500 font-black transition-colors whitespace-nowrap"
             >
               Logout
             </button>
@@ -156,7 +156,7 @@ export default function SelectSubjectPage() {
             >
               <PlusSquare size={14} className="text-brand-500 md:hidden" />
               <PlusSquare size={16} className="text-brand-500 hidden md:block" />
-              <span className="text-[9px] md:text-[10px] font-black tracking-tight whitespace-nowrap">홈 화면 추가</span>
+              <span className="text-[10px] md:text-[11px] font-black tracking-tight whitespace-nowrap">홈 화면 추가</span>
             </motion.button>
           )}
         </div>
@@ -178,7 +178,7 @@ export default function SelectSubjectPage() {
           <p className="text-sm md:text-xl font-bold text-slate-500 italic">환영합니다, <span className="text-brand-600 font-black">{user?.email?.split('@')[0]}</span>님! 👋</p>
         </div>
 
-        {/* Subject Grid - Wider Layout and Reduced Font Size */}
+        {/* Subject Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {subjects.map((subject, index) => {
             const style = getSubjectStyle(subject);
@@ -209,7 +209,7 @@ export default function SelectSubjectPage() {
 
       <footer className="text-center py-10 text-slate-400 text-[10px] md:text-sm font-medium border-t border-slate-100 mt-16">
         <p>© 2026 DugiGo Smart License Solution.</p>
-        <p className="font-black uppercase tracking-widest text-slate-500 mt-1 text-xs md:text-base">경성전자고등학교 전용 학습 서비스</p>
+        <p className="font-black uppercase tracking-widest text-slate-500 mt-1 text-xs md:text-[17px]">경성전자고등학교 전용 학습 서비스</p>
       </footer>
 
       {/* iOS Popup */}
