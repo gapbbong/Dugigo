@@ -5,19 +5,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BookOpen, 
   GraduationCap, 
-  ChevronRight, 
   Loader2, 
-  Sparkles, 
   LogOut, 
-  LayoutDashboard, 
   Zap, 
   Terminal, 
   ArrowUpDown,
   Palette,
   Monitor,
   History,
-  Globe,
-  Settings,
   Download,
   Share,
   PlusSquare
@@ -27,13 +22,13 @@ import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
 
 const getSubjectStyle = (name: string) => {
-  if (name.includes('전기')) return { icon: Zap, color: 'text-amber-500', bg: 'bg-amber-50', hoverBg: 'group-hover:bg-amber-500', glow: 'bg-amber-500/5' };
-  if (name.includes('정보처리')) return { icon: Terminal, color: 'text-emerald-500', bg: 'bg-emerald-50', hoverBg: 'group-hover:bg-emerald-500', glow: 'bg-emerald-500/5' };
-  if (name.includes('승강기')) return { icon: ArrowUpDown, color: 'text-violet-500', bg: 'bg-violet-50', hoverBg: 'group-hover:bg-violet-500', glow: 'bg-violet-500/5' };
-  if (name.includes('디자인')) return { icon: Palette, color: 'text-pink-500', bg: 'bg-pink-50', hoverBg: 'group-hover:bg-pink-500', glow: 'bg-pink-500/5' };
-  if (name.includes('컴퓨터') || name.includes('컴활')) return { icon: Monitor, color: 'text-blue-500', bg: 'bg-blue-50', hoverBg: 'group-hover:bg-blue-500', glow: 'bg-blue-500/5' };
-  if (name.includes('한국사')) return { icon: History, color: 'text-rose-500', bg: 'bg-rose-50', hoverBg: 'group-hover:bg-rose-500', glow: 'bg-rose-500/5' };
-  return { icon: BookOpen, color: 'text-brand-600', bg: 'bg-brand-50', hoverBg: 'group-hover:bg-brand-600', glow: 'bg-brand-500/5' };
+  if (name.includes('전기')) return { icon: Zap, color: 'text-amber-500', bg: 'bg-amber-50', hoverBg: 'group-hover:bg-amber-500' };
+  if (name.includes('정보처리')) return { icon: Terminal, color: 'text-emerald-500', bg: 'bg-emerald-50', hoverBg: 'group-hover:bg-emerald-500' };
+  if (name.includes('승강기')) return { icon: ArrowUpDown, color: 'text-violet-500', bg: 'bg-violet-50', hoverBg: 'group-hover:bg-violet-500' };
+  if (name.includes('디자인')) return { icon: Palette, color: 'text-pink-500', bg: 'bg-pink-50', hoverBg: 'group-hover:bg-pink-500' };
+  if (name.includes('컴퓨터') || name.includes('컴활')) return { icon: Monitor, color: 'text-blue-500', bg: 'bg-blue-50', hoverBg: 'group-hover:bg-blue-500' };
+  if (name.includes('한국사')) return { icon: History, color: 'text-rose-500', bg: 'bg-rose-50', hoverBg: 'group-hover:bg-rose-500' };
+  return { icon: BookOpen, color: 'text-brand-600', bg: 'bg-brand-50', hoverBg: 'group-hover:bg-brand-600' };
 };
 
 export default function SelectSubjectPage() {
@@ -105,74 +100,91 @@ export default function SelectSubjectPage() {
     setRandomQuote(quotes[Math.floor(Math.random() * quotes.length)]);
   }, []);
 
-  if (loading) return <div className="min-h-screen flex items-center justify-center bg-black"><Loader2 className="w-10 h-10 text-blue-500 animate-spin" /></div>;
+  if (loading) return <div className="min-h-screen flex items-center justify-center bg-white"><Loader2 className="w-10 h-10 text-brand-600 animate-spin" /></div>;
 
   return (
-    <div className="min-h-screen relative overflow-hidden font-sans text-white">
-      <div className="mesh-bg" />
+    <div className="min-h-screen relative overflow-hidden font-sans text-slate-900 pb-20">
+      <div className="mesh-bg opacity-40" />
       
-      <header className="max-w-6xl mx-auto pt-12 px-12 relative z-10 flex flex-col gap-6">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center shadow-lg"><GraduationCap className="text-white" /></div>
-            <h2 className="text-2xl font-black text-slate-900">DugiGo</h2>
-            <div className="w-px h-4 bg-slate-300 mx-2" />
-            <span className="text-2xl font-black text-brand-600">경성전자고등학교</span>
-          </div>
+      {/* Header Area */}
+      <header className="max-w-6xl mx-auto pt-6 px-6 relative z-10">
+        <div className="flex justify-between items-start mb-4">
           <div className="flex items-center gap-2">
-            {isTeacher && <Link href="/teacher" className="px-3 py-1.5 bg-white rounded-lg text-brand-600 font-bold border-2 border-brand-100 text-sm">Dashboard</Link>}
-            <button onClick={() => supabase.auth.signOut().then(() => router.push('/login'))} className="px-3 py-1.5 text-slate-500 font-bold text-sm">Logout</button>
+            <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center shadow-lg shadow-brand-500/20"><GraduationCap size={18} className="text-white" /></div>
+            <h2 className="text-xl font-black tracking-tight text-slate-900">DugiGo</h2>
+          </div>
+          <div className="flex flex-col items-end gap-1">
+            <span className="text-[11px] md:text-sm font-black text-brand-600 tracking-tight whitespace-nowrap">경성전자고등학교</span>
+            <div className="flex items-center gap-2">
+              {isTeacher && <Link href="/teacher" className="text-[10px] md:text-xs px-2 py-1 bg-brand-50 text-brand-600 font-bold rounded-md border border-brand-100">Admin</Link>}
+              <button onClick={() => supabase.auth.signOut().then(() => router.push('/login'))} className="text-[10px] md:text-xs text-slate-400 font-bold">Logout</button>
+            </div>
           </div>
         </div>
-        <div className="flex items-center justify-between gap-4">
-          <p className="text-xs font-bold text-slate-500 uppercase">
+
+        {/* Slogan & Install Row (Horizontal One Line) */}
+        <div className="flex items-center justify-between gap-2 border-t border-slate-100 pt-4 px-1">
+          <p className="text-[10px] md:text-xs font-bold text-slate-500 whitespace-nowrap flex-shrink overflow-hidden text-ellipsis">
             <span className="text-blue-500">두</span>꺼운 <span className="text-emerald-500">기</span>능사 책 대신 <span className="text-rose-500">고</span>민말고 <span className="font-black">두기고</span>
           </p>
           {!isInstalled && (
-            <motion.button onClick={handleInstall} className="flex items-center gap-2 px-3 py-1.5 bg-white/40 text-slate-500 rounded-full border-2 border-slate-200 shadow-sm">
-              <PlusSquare size={16} />
-              <span className="text-[10px] md:text-xs font-black">홈 화면에 추가</span>
+            <motion.button 
+              onClick={handleInstall} 
+              className="flex items-center gap-1 px-2.5 py-1.5 bg-white/60 text-slate-600 rounded-full border border-slate-200 shadow-sm flex-shrink-0"
+              whileTap={{ scale: 0.95 }}
+            >
+              <PlusSquare size={14} className="text-brand-500" />
+              <span className="text-[9px] md:text-[11px] font-black tracking-tight whitespace-nowrap">홈 화면 추가</span>
             </motion.button>
           )}
         </div>
       </header>
 
-      {/* PC Install Button */}
+      {/* PC Install Button (Floating) */}
       {!isInstalled && !isIOS && deferredPrompt && (
-        <div className="hidden lg:block fixed left-8 top-1/2 -translate-y-1/2 z-50">
-          <motion.button onClick={handleInstall} className="flex flex-col items-center gap-3 p-5 bg-white/60 border-2 border-slate-200 rounded-[2.5rem] shadow-xl group">
-            <div className="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-400 group-hover:bg-brand-600 group-hover:text-white transition-all"><Download size={24} /></div>
-            <span className="text-[10px] font-black text-slate-400 group-hover:text-brand-600 uppercase text-center">앱 설치</span>
+        <div className="hidden lg:block fixed left-6 top-1/2 -translate-y-1/2 z-50">
+          <motion.button onClick={handleInstall} className="flex flex-col items-center gap-3 p-4 bg-white/80 border border-slate-200 rounded-[2rem] shadow-xl group transition-all hover:border-brand-300">
+            <div className="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-brand-600 group-hover:text-white transition-all"><Download size={20} /></div>
+            <span className="text-[10px] font-black text-slate-400 group-hover:text-brand-600 uppercase text-center">설치</span>
           </motion.button>
         </div>
       )}
 
-      <main className="max-w-6xl mx-auto px-12 relative z-10 pt-8">
-        <div className="mb-8">
-          <h1 className="text-3xl md:text-5xl font-black text-slate-900 italic mb-2">"{randomQuote}"</h1>
-          <p className="text-xl md:text-2xl font-bold text-slate-500">환영합니다, <span className="text-brand-600">{user?.email?.split('@')[0]}</span>님! 👋</p>
+      <main className="max-w-6xl mx-auto px-6 relative z-10 pt-10">
+        <div className="mb-10 text-center md:text-left">
+          <h1 className="text-2xl md:text-4xl font-black text-slate-900 italic mb-2 leading-tight">"{randomQuote}"</h1>
+          <p className="text-sm md:text-lg font-bold text-slate-500 italic">환영합니다, <span className="text-brand-600">{user?.email?.split('@')[0]}</span>님! 👋</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Subject Grid - Horizontal Item Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {subjects.map((subject, index) => {
             const style = getSubjectStyle(subject);
             const Icon = style.icon;
             return (
-              <motion.div key={subject} onClick={() => router.push(`/select-unit/${encodeURIComponent(subject)}`)} className="group glass-card p-8 rounded-[2.5rem] cursor-pointer relative overflow-hidden">
-                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all ${style.bg} ${style.color} ${style.hoverBg} group-hover:text-white`}>
-                  <Icon size={28} />
+              <motion.div 
+                key={subject} 
+                onClick={() => router.push(`/select-unit/${encodeURIComponent(subject)}`)} 
+                className="group glass-card px-5 py-4 rounded-[1.5rem] cursor-pointer relative overflow-hidden flex items-center gap-4 hover:shadow-lg transition-all border border-white/60 active:scale-[0.98]"
+                whileHover={{ y: -2 }}
+              >
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-all ${style.bg} ${style.color} group-hover:bg-brand-600 group-hover:text-white`}>
+                  <Icon size={20} />
                 </div>
-                <h3 className="text-2xl font-bold mb-2 text-slate-800">{index + 1}. {subject}</h3>
-                <p className="text-slate-400 font-medium">최신 기출문제 및 오답 분석</p>
+                <div className="flex items-center gap-2 overflow-hidden">
+                  <span className="text-slate-300 font-black italic text-lg">{index + 1}.</span>
+                  <h3 className="text-base md:text-lg font-black text-slate-800 truncate tracking-tight">{subject}</h3>
+                </div>
+                <ChevronRight className="ml-auto text-slate-200 group-hover:text-brand-400 transition-colors" size={20} />
               </motion.div>
             );
           })}
         </div>
       </main>
 
-      <footer className="text-center py-12 text-slate-400 text-sm font-medium">
+      <footer className="text-center py-10 text-slate-400 text-[10px] font-medium border-t border-slate-100 mt-10">
         <p>© 2026 DugiGo Smart License Solution.</p>
-        <p className="text-xs font-black uppercase tracking-widest text-slate-600">경성전자고등학교 전용 학습 서비스</p>
+        <p className="font-black uppercase tracking-widest text-slate-500 mt-1">경성전자고등학교 전용 학습 서비스</p>
       </footer>
 
       {/* iOS Popup */}
@@ -180,14 +192,17 @@ export default function SelectSubjectPage() {
         {showIOSPopup && (
           <>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setShowIOSPopup(false)} className="fixed inset-0 z-[100] bg-slate-900/60 backdrop-blur-sm" />
-            <motion.div initial={{ y: "100%" }} animate={{ y: 0 }} exit={{ y: "100%" }} className="fixed bottom-0 left-0 right-0 z-[101] bg-white rounded-t-[3rem] p-8 shadow-2xl flex flex-col items-center text-center gap-6 text-slate-900">
-              <div className="w-16 h-1.5 bg-slate-200 rounded-full" />
-              <div className="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600"><PlusSquare size={32} /></div>
+            <motion.div initial={{ y: "100%" }} animate={{ y: 0 }} exit={{ y: "100%" }} className="fixed bottom-0 left-0 right-0 z-[101] bg-white rounded-t-[2.5rem] p-8 shadow-2xl flex flex-col items-center text-center gap-6 text-slate-900 border-t border-brand-100">
+              <div className="w-12 h-1.5 bg-slate-100 rounded-full" />
+              <div className="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 shadow-inner"><PlusSquare size={28} /></div>
               <div className="space-y-2">
-                <h3 className="text-xl font-black">홈 화면에 추가</h3>
-                <p className="text-slate-500 font-bold leading-relaxed">사파리 브라우저 하단의 공유 버튼을 누른 뒤,<br/>홈 화면에 추가를 선택해 주세요!</p>
+                <h3 className="text-lg font-black">홈 화면에 추가</h3>
+                <p className="text-sm text-slate-500 font-bold leading-relaxed px-4">
+                  사파리 브라우저 하단의 <Share size={16} className="inline align-text-bottom mx-0.5" /> 공유 버튼을 누른 뒤,<br/>
+                  <PlusSquare size={16} className="inline align-text-bottom mx-0.5" /> 홈 화면에 추가를 선택해 주세요!
+                </p>
               </div>
-              <button onClick={() => setShowIOSPopup(false)} className="w-full py-4 bg-slate-100 font-black rounded-xl">알겠습니다</button>
+              <button onClick={() => setShowIOSPopup(false)} className="w-full py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-black rounded-xl transition-colors">알겠습니다</button>
             </motion.div>
           </>
         )}
