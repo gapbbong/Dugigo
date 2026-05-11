@@ -234,14 +234,36 @@ export default function SelectUnitPage() {
                     <div className="grid grid-cols-3 gap-3">
                       {Array.from({ length: unitSetCount }).map((_, sIdx) => {
                         const setNum = runningSetCount++;
+                        const stats = getSetStats(unit.name, sIdx + 1, 30);
+
                         return (
                           <button 
                             key={sIdx} 
                             onClick={() => router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unit.name)}&set=${sIdx+1}&size=30${unit.range ? `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}` : ''}`)}
-                            className="h-20 bg-white border border-slate-100 rounded-2xl flex flex-col items-center justify-center hover:border-brand-300 transition-all"
+                            className="h-24 bg-white border border-slate-100 rounded-2xl flex flex-col items-center justify-center hover:border-brand-300 transition-all relative group overflow-hidden"
                           >
-                            <span className="text-2xl font-black tracking-tighter">{setNum}</span>
+                            {/* 횟수 뱃지 */}
+                            {stats && (
+                              <div className="absolute top-1.5 right-1.5 px-1.5 py-0.5 bg-brand-600 text-white text-[8px] font-black rounded-md shadow-sm">
+                                {stats.count}회
+                              </div>
+                            )}
+
+                            <span className="text-2xl font-black tracking-tighter text-slate-800">{setNum}</span>
                             <span className="text-[9px] font-black uppercase text-slate-400">세트</span>
+
+                            {/* 미니 막대 그래프 */}
+                            {stats && (
+                              <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-slate-50 flex items-end gap-0.5 px-1">
+                                {stats.allScores.slice(-5).map((score, i) => (
+                                  <div 
+                                    key={i} 
+                                    className="flex-1 bg-brand-500 rounded-t-sm transition-all"
+                                    style={{ height: `${Math.max(20, score)}%` }}
+                                  />
+                                ))}
+                              </div>
+                            )}
                           </button>
                         );
                       })}
