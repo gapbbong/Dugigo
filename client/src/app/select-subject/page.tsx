@@ -109,17 +109,17 @@ export default function SelectSubjectPage() {
     <div className="min-h-screen relative overflow-hidden font-sans text-slate-900 pb-20">
       <div className="mesh-bg opacity-40" />
       
-      {/* Integrated Header Area (All in One Line) */}
-      <header className="max-w-7xl mx-auto pt-6 md:pt-10 px-4 md:px-12 relative z-10">
-        <div className="flex items-center justify-between gap-2 md:gap-6 bg-white/40 backdrop-blur-md p-2 md:p-4 rounded-2xl md:rounded-[2rem] border border-white/60 shadow-sm">
+      {/* Integrated Header Area */}
+      <header className="max-w-[1600px] mx-auto pt-6 md:pt-8 px-4 md:px-12 relative z-10">
+        <div className="flex items-center justify-between gap-2 md:gap-6 bg-white/40 backdrop-blur-md p-2 md:p-3 rounded-2xl md:rounded-[2rem] border border-white/60 shadow-sm">
           {/* Logo & School Name Row */}
           <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
-            <div className="w-7 h-7 md:w-12 md:h-12 bg-brand-600 rounded-lg md:rounded-2xl flex items-center justify-center shadow-lg shadow-brand-500/20">
+            <div className="w-7 h-7 md:w-10 md:h-10 bg-brand-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/20">
               <GraduationCap size={16} className="text-white md:hidden" />
-              <GraduationCap size={24} className="text-white hidden md:block" />
+              <GraduationCap size={22} className="text-white hidden md:block" />
             </div>
-            <h2 className="text-xs md:text-2xl font-black tracking-tight text-slate-900 hidden sm:block">DugiGo</h2>
-            <span className="text-[10px] md:text-3xl font-black text-brand-600 tracking-tighter whitespace-nowrap">
+            <h2 className="text-xs md:text-xl font-black tracking-tight text-slate-900 hidden sm:block">DugiGo</h2>
+            <span className="text-[10px] md:text-2xl font-black text-brand-600 tracking-tighter whitespace-nowrap">
               경성전자고등학교
             </span>
           </div>
@@ -129,34 +129,34 @@ export default function SelectSubjectPage() {
             {isTeacher && (
               <Link 
                 href="/teacher" 
-                className="text-[9px] md:text-lg px-2 py-1 md:px-8 md:py-3 bg-brand-600 text-white font-black rounded-lg md:rounded-2xl shadow-lg hover:bg-brand-700 transition-all whitespace-nowrap"
+                className="text-[9px] md:text-base px-2 py-1 md:px-6 md:py-2.5 bg-brand-600 text-white font-black rounded-lg md:rounded-xl shadow-lg hover:bg-brand-700 transition-all whitespace-nowrap"
               >
                 Dashboard
               </Link>
             )}
             <button 
               onClick={() => supabase.auth.signOut().then(() => router.push('/login'))} 
-              className="text-[9px] md:text-lg text-slate-400 hover:text-rose-500 font-black transition-colors whitespace-nowrap"
+              className="text-[9px] md:text-base text-slate-400 hover:text-rose-500 font-black transition-colors whitespace-nowrap"
             >
               Logout
             </button>
           </div>
         </div>
 
-        {/* Slogan & Install Row (Half Margins) */}
-        <div className="flex items-center justify-between gap-2 border-t border-slate-100 mt-2 md:mt-4 pt-2 md:pt-4 px-2">
-          <p className="text-[9px] md:text-sm font-bold text-slate-500 whitespace-nowrap flex-shrink overflow-hidden text-ellipsis uppercase tracking-tight">
+        {/* Slogan & Install Row */}
+        <div className="flex items-center justify-between gap-2 border-t border-slate-100 mt-2 md:mt-3 pt-2 md:pt-3 px-2">
+          <p className="text-[9px] md:text-xs font-bold text-slate-500 whitespace-nowrap flex-shrink overflow-hidden text-ellipsis uppercase tracking-tight">
             <span className="text-blue-500">두</span>꺼운 <span className="text-emerald-500">기</span>능사 책 대신 <span className="text-rose-500">고</span>민말고 <span className="font-black">두기고</span>
           </p>
           {!isInstalled && (
             <motion.button 
               onClick={handleInstall} 
-              className="flex items-center gap-1 px-2 py-1 md:px-5 md:py-2 bg-white/60 text-slate-600 rounded-full border border-slate-200 shadow-sm flex-shrink-0"
+              className="flex items-center gap-1 px-2 py-1 md:px-4 md:py-1.5 bg-white/60 text-slate-600 rounded-full border border-slate-200 shadow-sm flex-shrink-0"
               whileTap={{ scale: 0.95 }}
             >
               <PlusSquare size={14} className="text-brand-500 md:hidden" />
-              <PlusSquare size={18} className="text-brand-500 hidden md:block" />
-              <span className="text-[9px] md:text-xs font-black tracking-tight whitespace-nowrap">홈 화면 추가</span>
+              <PlusSquare size={16} className="text-brand-500 hidden md:block" />
+              <span className="text-[9px] md:text-[10px] font-black tracking-tight whitespace-nowrap">홈 화면 추가</span>
             </motion.button>
           )}
         </div>
@@ -172,14 +172,14 @@ export default function SelectSubjectPage() {
         </div>
       )}
 
-      <main className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 pt-8 md:pt-12">
-        <div className="mb-8 md:mb-12 text-center md:text-left">
-          <h1 className="text-2xl md:text-6xl font-black text-slate-900 italic mb-3 leading-tight tracking-tighter">"{randomQuote}"</h1>
-          <p className="text-sm md:text-2xl font-bold text-slate-500 italic">환영합니다, <span className="text-brand-600 font-black">{user?.email?.split('@')[0]}</span>님! 👋</p>
+      <main className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 pt-8 md:pt-10">
+        <div className="mb-8 md:mb-10 text-center md:text-left">
+          <h1 className="text-2xl md:text-3xl font-black text-slate-900 italic mb-2 leading-tight tracking-tighter">"{randomQuote}"</h1>
+          <p className="text-sm md:text-xl font-bold text-slate-500 italic">환영합니다, <span className="text-brand-600 font-black">{user?.email?.split('@')[0]}</span>님! 👋</p>
         </div>
 
-        {/* Subject Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+        {/* Subject Grid - Wider Layout and Reduced Font Size */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {subjects.map((subject, index) => {
             const style = getSubjectStyle(subject);
             const Icon = style.icon;
@@ -187,25 +187,27 @@ export default function SelectSubjectPage() {
               <motion.div 
                 key={subject} 
                 onClick={() => router.push(`/select-unit/${encodeURIComponent(subject)}`)} 
-                className="group glass-card px-5 py-4 md:px-10 md:py-12 rounded-2xl md:rounded-[3rem] cursor-pointer relative overflow-hidden flex items-center gap-4 md:gap-8 hover:shadow-2xl transition-all border border-white/60 active:scale-[0.98]"
+                className="group glass-card px-5 py-4 md:px-8 md:py-10 rounded-2xl md:rounded-[2.5rem] cursor-pointer relative overflow-hidden flex items-center gap-4 md:gap-6 hover:shadow-2xl transition-all border border-white/60 active:scale-[0.98]"
                 whileHover={{ y: -5 }}
               >
-                <div className={`w-10 h-10 md:w-20 md:h-20 rounded-xl md:rounded-[2rem] flex items-center justify-center flex-shrink-0 transition-all ${style.bg} ${style.color} group-hover:bg-brand-600 group-hover:text-white shadow-inner`}>
+                <div className={`w-10 h-10 md:w-16 md:h-16 rounded-xl md:rounded-[1.5rem] flex items-center justify-center flex-shrink-0 transition-all ${style.bg} ${style.color} group-hover:bg-brand-600 group-hover:text-white shadow-inner`}>
                   <Icon size={20} className="md:hidden" />
-                  <Icon size={32} className="hidden md:block" />
+                  <Icon size={28} className="hidden md:block" />
                 </div>
-                <div className="flex items-center gap-2 md:gap-5 overflow-hidden">
-                  <span className="text-slate-900 font-black italic text-base md:text-3xl">{index + 1}.</span>
-                  <h3 className="text-sm md:text-3xl font-black text-slate-900 truncate tracking-tight">{subject}</h3>
+                <div className="flex items-center gap-2 md:gap-4 overflow-hidden">
+                  <span className="text-slate-900 font-black italic text-base md:text-xl">{index + 1}.</span>
+                  <h3 className="text-sm md:text-xl font-black text-slate-900 tracking-tight whitespace-nowrap">
+                    {subject}
+                  </h3>
                 </div>
-                <ChevronRight className="ml-auto text-slate-200 group-hover:text-brand-400 group-hover:translate-x-2 transition-all" size={20} />
+                <ChevronRight className="ml-auto text-slate-200 group-hover:text-brand-400 group-hover:translate-x-2 transition-all flex-shrink-0" size={20} />
               </motion.div>
             );
           })}
         </div>
       </main>
 
-      <footer className="text-center py-12 text-slate-400 text-[10px] md:text-sm font-medium border-t border-slate-100 mt-16">
+      <footer className="text-center py-10 text-slate-400 text-[10px] md:text-sm font-medium border-t border-slate-100 mt-16">
         <p>© 2026 DugiGo Smart License Solution.</p>
         <p className="font-black uppercase tracking-widest text-slate-500 mt-1 text-xs md:text-base">경성전자고등학교 전용 학습 서비스</p>
       </footer>
