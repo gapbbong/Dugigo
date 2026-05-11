@@ -86,17 +86,12 @@ export default function SelectSubjectPage() {
   }, [router]);
 
   const handleInstall = async () => {
-    if (isIOS) {
-      setShowIOSPopup(true);
-    } else if (deferredPrompt) {
+    if (isIOS) setShowIOSPopup(true);
+    else if (deferredPrompt) {
       deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') {
-        setDeferredPrompt(null);
-        setIsInstalled(true);
-      }
+      if (outcome === 'accepted') { setDeferredPrompt(null); setIsInstalled(true); }
     } else {
-      // 안드로이드나 PC에서 설치 준비가 안 된 경우 (아이폰 안내가 아님)
       alert('브라우저 우측 상단/하단 메뉴(⋮)에서 "홈 화면에 추가" 또는 "앱 설치"를 선택해 주세요!');
     }
   };
@@ -114,56 +109,54 @@ export default function SelectSubjectPage() {
     <div className="min-h-screen relative overflow-hidden font-sans text-slate-900 pb-20">
       <div className="mesh-bg opacity-40" />
       
-      {/* Header Area */}
-      <header className="max-w-7xl mx-auto pt-10 px-6 md:px-12 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-center gap-6 mb-8">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-brand-600 rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/20">
-              <GraduationCap size={24} className="text-white" />
+      {/* Integrated Header Area (All in One Line) */}
+      <header className="max-w-7xl mx-auto pt-6 md:pt-10 px-4 md:px-12 relative z-10">
+        <div className="flex items-center justify-between gap-2 md:gap-6 bg-white/40 backdrop-blur-md p-2 md:p-4 rounded-2xl md:rounded-[2rem] border border-white/60 shadow-sm">
+          {/* Logo & School Name Row */}
+          <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
+            <div className="w-7 h-7 md:w-12 md:h-12 bg-brand-600 rounded-lg md:rounded-2xl flex items-center justify-center shadow-lg shadow-brand-500/20">
+              <GraduationCap size={16} className="text-white md:hidden" />
+              <GraduationCap size={24} className="text-white hidden md:block" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900">DugiGo</h2>
-          </div>
-
-          {/* School Name (Centered on PC, Big Size) */}
-          <div className="md:absolute md:left-1/2 md:-translate-x-1/2">
-            <span className="text-[14px] md:text-4xl font-black text-brand-600 tracking-tighter whitespace-nowrap">
+            <h2 className="text-xs md:text-2xl font-black tracking-tight text-slate-900 hidden sm:block">DugiGo</h2>
+            <span className="text-[10px] md:text-3xl font-black text-brand-600 tracking-tighter whitespace-nowrap">
               경성전자고등학교
             </span>
           </div>
 
           {/* Buttons Row */}
-          <div className="flex items-center gap-4 md:gap-8">
+          <div className="flex items-center gap-2 md:gap-6 ml-auto">
             {isTeacher && (
               <Link 
                 href="/teacher" 
-                className="text-[10px] md:text-lg px-3 py-1.5 md:px-8 md:py-4 bg-brand-600 text-white font-black rounded-xl md:rounded-2xl shadow-lg shadow-brand-500/20 hover:bg-brand-700 transition-all"
+                className="text-[9px] md:text-lg px-2 py-1 md:px-8 md:py-3 bg-brand-600 text-white font-black rounded-lg md:rounded-2xl shadow-lg hover:bg-brand-700 transition-all whitespace-nowrap"
               >
                 Dashboard
               </Link>
             )}
             <button 
               onClick={() => supabase.auth.signOut().then(() => router.push('/login'))} 
-              className="text-[10px] md:text-lg text-slate-400 hover:text-rose-500 font-black transition-colors"
+              className="text-[9px] md:text-lg text-slate-400 hover:text-rose-500 font-black transition-colors whitespace-nowrap"
             >
               Logout
             </button>
           </div>
         </div>
 
-        {/* Slogan & Install Row */}
-        <div className="flex items-center justify-between gap-2 border-t border-slate-100 pt-6">
-          <p className="text-[10px] md:text-sm font-bold text-slate-500 whitespace-nowrap flex-shrink overflow-hidden text-ellipsis uppercase tracking-tight">
+        {/* Slogan & Install Row (Half Margins) */}
+        <div className="flex items-center justify-between gap-2 border-t border-slate-100 mt-2 md:mt-4 pt-2 md:pt-4 px-2">
+          <p className="text-[9px] md:text-sm font-bold text-slate-500 whitespace-nowrap flex-shrink overflow-hidden text-ellipsis uppercase tracking-tight">
             <span className="text-blue-500">두</span>꺼운 <span className="text-emerald-500">기</span>능사 책 대신 <span className="text-rose-500">고</span>민말고 <span className="font-black">두기고</span>
           </p>
           {!isInstalled && (
             <motion.button 
               onClick={handleInstall} 
-              className="flex items-center gap-2 px-3 py-2 md:px-5 md:py-2.5 bg-white/60 text-slate-600 rounded-full border-2 border-slate-200 shadow-sm flex-shrink-0"
+              className="flex items-center gap-1 px-2 py-1 md:px-5 md:py-2 bg-white/60 text-slate-600 rounded-full border border-slate-200 shadow-sm flex-shrink-0"
               whileTap={{ scale: 0.95 }}
             >
-              <PlusSquare size={16} className="text-brand-500" />
-              <span className="text-[10px] md:text-xs font-black tracking-tight whitespace-nowrap">홈 화면 추가</span>
+              <PlusSquare size={14} className="text-brand-500 md:hidden" />
+              <PlusSquare size={18} className="text-brand-500 hidden md:block" />
+              <span className="text-[9px] md:text-xs font-black tracking-tight whitespace-nowrap">홈 화면 추가</span>
             </motion.button>
           )}
         </div>
@@ -172,21 +165,21 @@ export default function SelectSubjectPage() {
       {/* PC Install Button (Floating) */}
       {!isInstalled && !isIOS && deferredPrompt && (
         <div className="hidden lg:block fixed left-10 top-1/2 -translate-y-1/2 z-50">
-          <motion.button onClick={handleInstall} className="flex flex-col items-center gap-4 p-6 bg-white/80 border-2 border-slate-200 rounded-[2.5rem] shadow-xl group transition-all hover:border-brand-300">
+          <motion.button onClick={handleInstall} className="flex flex-col items-center gap-4 p-6 bg-white/80 border border-slate-200 rounded-[2.5rem] shadow-xl group transition-all hover:border-brand-300">
             <div className="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-400 group-hover:bg-brand-600 group-hover:text-white transition-all"><Download size={28} /></div>
             <span className="text-xs font-black text-slate-400 group-hover:text-brand-600 uppercase text-center tracking-widest">설치</span>
           </motion.button>
         </div>
       )}
 
-      <main className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 pt-12">
-        <div className="mb-12 text-center md:text-left">
-          <h1 className="text-3xl md:text-6xl font-black text-slate-900 italic mb-4 leading-tight tracking-tighter">"{randomQuote}"</h1>
-          <p className="text-base md:text-2xl font-bold text-slate-500 italic">환영합니다, <span className="text-brand-600 font-black">{user?.email?.split('@')[0]}</span>님! 👋</p>
+      <main className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 pt-8 md:pt-12">
+        <div className="mb-8 md:mb-12 text-center md:text-left">
+          <h1 className="text-2xl md:text-6xl font-black text-slate-900 italic mb-3 leading-tight tracking-tighter">"{randomQuote}"</h1>
+          <p className="text-sm md:text-2xl font-bold text-slate-500 italic">환영합니다, <span className="text-brand-600 font-black">{user?.email?.split('@')[0]}</span>님! 👋</p>
         </div>
 
-        {/* Subject Grid - Larger Height for PC */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {/* Subject Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {subjects.map((subject, index) => {
             const style = getSubjectStyle(subject);
             const Icon = style.icon;
@@ -194,26 +187,27 @@ export default function SelectSubjectPage() {
               <motion.div 
                 key={subject} 
                 onClick={() => router.push(`/select-unit/${encodeURIComponent(subject)}`)} 
-                className="group glass-card px-6 py-6 md:px-10 md:py-12 rounded-[2rem] md:rounded-[3rem] cursor-pointer relative overflow-hidden flex items-center gap-4 md:gap-8 hover:shadow-2xl transition-all border border-white/60 active:scale-[0.98]"
+                className="group glass-card px-5 py-4 md:px-10 md:py-12 rounded-2xl md:rounded-[3rem] cursor-pointer relative overflow-hidden flex items-center gap-4 md:gap-8 hover:shadow-2xl transition-all border border-white/60 active:scale-[0.98]"
                 whileHover={{ y: -5 }}
               >
-                <div className={`w-12 h-12 md:w-20 md:h-20 rounded-2xl md:rounded-[2rem] flex items-center justify-center flex-shrink-0 transition-all ${style.bg} ${style.color} group-hover:bg-brand-600 group-hover:text-white shadow-inner`}>
-                  <Icon size={32} />
+                <div className={`w-10 h-10 md:w-20 md:h-20 rounded-xl md:rounded-[2rem] flex items-center justify-center flex-shrink-0 transition-all ${style.bg} ${style.color} group-hover:bg-brand-600 group-hover:text-white shadow-inner`}>
+                  <Icon size={20} className="md:hidden" />
+                  <Icon size={32} className="hidden md:block" />
                 </div>
-                <div className="flex items-center gap-3 md:gap-5 overflow-hidden">
-                  <span className="text-slate-900 font-black italic text-xl md:text-3xl opacity-100">{index + 1}.</span>
-                  <h3 className="text-lg md:text-3xl font-black text-slate-900 truncate tracking-tight">{subject}</h3>
+                <div className="flex items-center gap-2 md:gap-5 overflow-hidden">
+                  <span className="text-slate-900 font-black italic text-base md:text-3xl">{index + 1}.</span>
+                  <h3 className="text-sm md:text-3xl font-black text-slate-900 truncate tracking-tight">{subject}</h3>
                 </div>
-                <ChevronRight className="ml-auto text-slate-200 group-hover:text-brand-400 group-hover:translate-x-2 transition-all" size={28} />
+                <ChevronRight className="ml-auto text-slate-200 group-hover:text-brand-400 group-hover:translate-x-2 transition-all" size={20} />
               </motion.div>
             );
           })}
         </div>
       </main>
 
-      <footer className="text-center py-16 text-slate-400 text-sm font-medium border-t border-slate-100 mt-20">
+      <footer className="text-center py-12 text-slate-400 text-[10px] md:text-sm font-medium border-t border-slate-100 mt-16">
         <p>© 2026 DugiGo Smart License Solution.</p>
-        <p className="font-black uppercase tracking-widest text-slate-500 mt-2 text-base">경성전자고등학교 전용 학습 서비스</p>
+        <p className="font-black uppercase tracking-widest text-slate-500 mt-1 text-xs md:text-base">경성전자고등학교 전용 학습 서비스</p>
       </footer>
 
       {/* iOS Popup */}
