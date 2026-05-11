@@ -161,25 +161,30 @@ export default function SelectUnitPage() {
       <div className="mesh-bg" />
 
       {/* Header */}
-      <nav className="max-w-6xl mx-auto px-8 py-6 flex justify-between items-center relative z-10 border-b border-white/20 bg-white/40 backdrop-blur-md shadow-sm mb-8">
-        <div className="flex items-center gap-4">
-          <button onClick={() => router.push('/select-subject')} className="w-10 h-10 flex items-center justify-center bg-white/50 hover:bg-white border-2 border-slate-100 rounded-xl">
-            <ChevronLeft size={20} />
-          </button>
+      <nav className="max-w-6xl mx-auto px-4 md:px-8 py-4 md:py-6 relative z-10 border-b border-white/20 bg-white/40 backdrop-blur-md shadow-sm mb-8">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          
+          {/* Top Row: Back Button + Subject Name */}
           <div className="flex items-center gap-3">
-            <span className="text-xs font-black text-brand-600 uppercase bg-brand-50 px-2 py-1 rounded-md border border-brand-100">Step 02</span>
-            <h2 className="text-xl md:text-3xl font-black text-slate-900 leading-tight">{subject}</h2>
-            <div className="w-px h-6 bg-slate-300 mx-1" />
-            <span className="text-xl md:text-3xl font-black text-brand-600">경성전자고등학교</span>
+            <button onClick={() => router.push('/select-subject')} className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-white/50 hover:bg-white border-2 border-slate-100 rounded-xl shrink-0">
+              <ChevronLeft size={20} />
+            </button>
+            <div className="flex items-center gap-2 overflow-hidden">
+              <span className="text-[10px] md:text-xs font-black text-brand-600 uppercase bg-brand-50 px-2 py-0.5 rounded-md border border-brand-100 whitespace-nowrap">Step 02</span>
+              <h2 className="text-base md:text-3xl font-black text-slate-900 leading-tight whitespace-nowrap overflow-hidden text-ellipsis">{subject}</h2>
+            </div>
           </div>
-        </div>
-        <div className="flex items-center gap-3">
-          <div className="flex flex-col items-end">
-            <div className="flex items-center gap-3 md:gap-5">
+
+          {/* Bottom Row (Mobile) / Right Row (PC): Info Badges */}
+          <div className="flex items-center justify-between md:justify-end gap-2 md:gap-5 border-t border-slate-100 md:border-none pt-3 md:pt-0">
+            {/* 학교 이름 */}
+            <span className="text-sm md:text-[25px] font-black text-brand-600 tracking-tight whitespace-nowrap mr-auto md:mr-0">경성전자고등학교</span>
+            
+            <div className="flex items-center gap-2 md:gap-5">
               {/* 학습 온도 */}
-              <div className="flex items-center gap-2 bg-rose-50 px-4 py-2 md:px-6 md:py-3 rounded-2xl border-2 border-rose-100 shadow-sm">
-                <Thermometer className="w-5 h-5 md:w-8 md:h-8 text-rose-500" />
-                <span className="text-lg md:text-2xl font-black text-rose-600">
+              <div className="flex items-center gap-1.5 md:gap-2 bg-rose-50 px-2.5 py-1 md:px-6 md:py-3 rounded-xl md:rounded-2xl border md:border-2 border-rose-100 shadow-sm flex-shrink-0">
+                <Thermometer className="w-4 h-4 md:w-8 md:h-8 text-rose-500" />
+                <span className="text-xs md:text-2xl font-black text-rose-600 whitespace-nowrap">
                   {(() => {
                     const threeDaysAgo = new Date();
                     threeDaysAgo.setDate(threeDaysAgo.getDate() - 3);
@@ -189,9 +194,9 @@ export default function SelectUnitPage() {
                 </span>
               </div>
               {/* 등급 */}
-              <div className="flex items-center gap-2 bg-brand-50 px-5 py-2 md:px-8 md:py-3 rounded-2xl border-2 border-brand-100 shadow-sm">
-                <ShieldCheck className="w-6 h-6 md:w-10 md:h-10 text-brand-600" />
-                <span className="text-lg md:text-2xl font-black text-brand-700">
+              <div className="flex items-center gap-1.5 md:gap-2 bg-brand-50 px-2.5 py-1 md:px-8 md:py-3 rounded-xl md:rounded-2xl border md:border-2 border-brand-100 shadow-sm flex-shrink-0">
+                <ShieldCheck className="w-4 h-4 md:w-10 md:h-10 text-brand-600" />
+                <span className="text-xs md:text-2xl font-black text-brand-700 whitespace-nowrap">
                   {userProfile ? (LEVEL_TITLES[Math.min(11, Math.floor((userProfile.exp_points || 0) / 1000))] || "입문자") : "입문자"}
                 </span>
               </div>
