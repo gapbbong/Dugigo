@@ -112,7 +112,8 @@ export default function SelectUnitPage() {
         setIsInstalled(true);
       }
     } else {
-      setShowIOSPopup(true);
+      // 안드로이드/PC용 범용 안내
+      alert('브라우저 우측 상단/하단 메뉴(⋮)에서 "홈 화면에 추가" 또는 "앱 설치"를 선택해 주세요!');
     }
   };
 

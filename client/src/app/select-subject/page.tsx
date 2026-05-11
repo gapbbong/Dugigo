@@ -86,12 +86,19 @@ export default function SelectSubjectPage() {
   }, [router]);
 
   const handleInstall = async () => {
-    if (isIOS) setShowIOSPopup(true);
-    else if (deferredPrompt) {
+    if (isIOS) {
+      setShowIOSPopup(true);
+    } else if (deferredPrompt) {
       deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') { setDeferredPrompt(null); setIsInstalled(true); }
-    } else { setShowIOSPopup(true); }
+      if (outcome === 'accepted') {
+        setDeferredPrompt(null);
+        setIsInstalled(true);
+      }
+    } else {
+      // 안드로이드나 PC에서 설치 준비가 안 된 경우 (아이폰 안내가 아님)
+      alert('브라우저 우측 상단/하단 메뉴(⋮)에서 "홈 화면에 추가" 또는 "앱 설치"를 선택해 주세요!');
+    }
   };
 
   const quotes = ["성공은 결과가 아니라 과정이다.", "오늘의 수고가 내일의 보석이 된다.", "노력은 결코 배신하지 않는다."];
