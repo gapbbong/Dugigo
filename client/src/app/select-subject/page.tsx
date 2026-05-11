@@ -17,7 +17,11 @@ import {
   Monitor,
   History,
   Globe,
-  Settings
+  Globe,
+  Settings,
+  Download,
+  Share,
+  PlusSquare
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -54,6 +58,45 @@ export default function SelectSubjectPage() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<any>(null);
   const [isTeacher, setIsTeacher] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [isIOS, setIsIOS] = useState(false);
+  const [showIOSPopup, setShowIOSPopup] = useState(false);
+  const [isInstalled, setIsInstalled] = useState(false);
+
+  useEffect(() => {
+    // 1. PWA 설치 프롬프트 이벤트 리스너
+    const handleBeforeInstallPrompt = (e: any) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    };
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+
+    // 2. iOS 여부 및 설치 상태 확인
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    const isIOSDevice = /iphone|ipad|ipod/.test(userAgent);
+    setIsIOS(isIOSDevice);
+
+    if (window.matchMedia('(display-mode: standalone)').matches || (window.navigator as any).standalone) {
+      setIsInstalled(true);
+    }
+
+    return () => window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+  }, []);
+
+  const handleInstall = async () => {
+    if (isIOS) {
+      setShowIOSPopup(true);
+    } else if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        setDeferredPrompt(null);
+        setIsInstalled(true);
+      }
+    } else {
+      alert('브라우저 메뉴에서 "홈 화면에 추가" 또는 "앱 설치"를 선택해 주세요.');
+    }
+  };
 
   useEffect(() => {
     async function init() {
@@ -238,13 +281,46 @@ export default function SelectSubjectPage() {
           </div>
         </div>
 
-        {/* Bottom Row: Slogan */}
-        <div className="w-full">
-          <p className="text-xs md:text-sm font-bold text-slate-500 tracking-tight whitespace-nowrap overflow-hidden text-ellipsis">
+        {/* Bottom Row: Slogan & Install Button */}
+        <div className="w-full flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <p className="text-[10px] md:text-xs font-bold text-slate-500 tracking-tight whitespace-nowrap overflow-hidden text-ellipsis uppercase">
             <span className="text-blue-500">두</span>꺼운 <span className="text-emerald-500">기</span>능사 책 대신 <span className="text-rose-500">고</span>민말고 <span className="ml-1 font-black tracking-widest"><span className="text-blue-500">두</span><span className="text-emerald-500">기</span><span className="text-rose-500">고</span></span>
           </p>
+
+          {!isInstalled && (
+            <motion.button
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={handleInstall}
+              className="flex items-center gap-2.5 px-4 py-2 bg-brand-600 text-white rounded-full shadow-lg shadow-brand-500/20 hover:bg-brand-700 transition-all border-b-2 border-brand-800 self-start md:self-auto"
+            >
+              <PlusSquare className="w-4 h-4" />
+              <span className="text-[11px] font-black uppercase tracking-tight">홈 화면에 추가</span>
+            </motion.button>
+          )}
         </div>
       </header>
+
+      {/* PC 전용: 좌측 고정 설치 버튼 */}
+      {!isInstalled && !isIOS && deferredPrompt && (
+        <div className="hidden lg:block fixed left-8 top-1/2 -translate-y-1/2 z-50">
+          <motion.button
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={handleInstall}
+            className="flex flex-col items-center gap-3 p-5 bg-white/80 backdrop-blur-xl border-2 border-brand-200 rounded-[2.5rem] shadow-2xl shadow-brand-500/20 group"
+          >
+            <div className="w-12 h-12 bg-brand-600 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:rotate-12 transition-transform">
+              <Download size={24} />
+            </div>
+            <span className="text-[10px] font-black text-brand-700 uppercase tracking-widest text-center">앱 설치<br/>PC/바탕화면</span>
+          </motion.button>
+        </div>
+      )}
 
       <main className="max-w-6xl mx-auto relative z-10 px-6 md:px-12">
         <div className="mb-6 md:mb-12">
@@ -317,6 +393,51 @@ export default function SelectSubjectPage() {
         <p>© 2026 DugiGo Smart License Solution.</p>
         <p className="text-[12px] md:text-sm font-black text-slate-600 tracking-widest uppercase">경성전자고등학교 전용 학습 서비스</p>
       </footer>
+
+      {/* iOS 설치 안내 팝업 (Bottom Sheet) */}
+      <AnimatePresence>
+        {showIOSPopup && (
+          <>
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowIOSPopup(false)}
+              className="fixed inset-0 z-[100] bg-slate-900/60 backdrop-blur-sm"
+            />
+            <motion.div 
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed bottom-0 left-0 right-0 z-[101] bg-white rounded-t-[3rem] p-8 shadow-2xl flex flex-col items-center text-center gap-6"
+            >
+              <div className="w-16 h-1.5 bg-slate-200 rounded-full mb-2" />
+              <div className="w-20 h-20 bg-brand-50 rounded-[2rem] flex items-center justify-center text-brand-600 shadow-inner">
+                <PlusSquare size={40} />
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-2xl font-black text-slate-900">홈 화면에 추가하기</h3>
+                <p className="text-slate-500 font-bold leading-relaxed">
+                  사파리(Safari) 브라우저 하단의 <br/>
+                  <span className="text-brand-600 flex items-center justify-center gap-1 inline-flex">
+                    <Share size={18} /> 공유 버튼
+                  </span>을 누른 뒤, <br/>
+                  <span className="text-brand-600 flex items-center justify-center gap-1 inline-flex">
+                    <PlusSquare size={18} /> 홈 화면에 추가
+                  </span>를 선택해 주세요!
+                </p>
+              </div>
+              <button 
+                onClick={() => setShowIOSPopup(false)}
+                className="w-full py-5 bg-slate-100 hover:bg-slate-200 text-slate-600 font-black rounded-[1.5rem] transition-all"
+              >
+                알겠습니다
+              </button>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
