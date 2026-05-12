@@ -815,6 +815,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     imgSrc = `/summaries/컴퓨터활용능력 2급/${imgName}`;
                   } else if (imgName.startsWith('vis_') || subject.includes('시각디자인') || subject.includes('색채학')) {
                     imgSrc = `/summaries/시각디자인산업기사/${imgName}`;
+                  } else if (imgName.startsWith('ae_') || subject.includes('자동화설비') || subject.includes('생산자동화')) {
+                    imgSrc = `/summaries/자동화설비(생산자동화)기능사/${imgName}`;
                   } else {
                     imgSrc = `/images/exams/${currentQuestion.year}_${currentQuestion.round}/${imgName}`;
                   }

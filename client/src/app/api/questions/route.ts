@@ -20,7 +20,59 @@ export async function GET(req: NextRequest) {
 
     // Remote incoming logic for study
     if (subject) {
-      // 1. 원본 이름으로 시도
+      // 1. 자동화설비(생산자동화)기능사 - 슈파베이스 우선 처리
+      if (subject.includes('자동화설비') || subject.includes('생산자동화')) {
+        const supabaseUrl = "http://10.128.49.91:8000";
+        const SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyAgCiAgICAicm9sZSI6ICJzZXJ2aWNlX3JvbGUiLAogICAgImlzcyI6ICJzdXBhYmFzZS1kZW1vIiwKICAgICJpYXQiOiAxNjQxNzY5MjAwLAogICAgImV4cCI6IDE3OTk1MzU2MDAKfQ.DaYlNEoUrrEn2Ig7tqibS-PHK5vgusbcbo7X36XVt4Q";
+        
+        const customFetch = (url: any, options: any) => {
+          const headers = new Headers(options?.headers);
+          headers.set('ngrok-skip-browser-warning', 'true');
+          return fetch(url, { ...options, headers });
+        };
+
+        const { createClient } = await import('@supabase/supabase-js');
+        const supabase = createClient(supabaseUrl, SERVICE_ROLE_KEY, {
+          global: { fetch: customFetch }
+        });
+
+        const { data, error } = await supabase
+          .from('dukigo_exam_questions')
+          .select('*')
+          .eq('subject_id', 'PRODUCTION_AUTO');
+
+        if (!error && data) {
+          const mappedQuestions = data.map(q => ({
+            id: q.metadata?.id || `${q.exam_year}_${q.exam_round}_${q.question_no}`,
+            year: q.exam_year.toString(),
+            round: q.exam_round.toString(),
+            number: q.question_no,
+            question: q.question_text,
+            choices: q.options,
+            answer: q.correct_answer,
+            explanation: q.explanation,
+            sub_unit: q.metadata?.sub_unit || "4.3 자동화 시스템",
+            question_img: q.metadata?.question_img || null,
+            visual_coords: q.metadata?.visual_coords || null,
+            round_info: `${q.exam_year}년 ${q.exam_round}회`
+          }));
+
+          const sorted = mappedQuestions.sort((a, b) => {
+            if (a.sub_unit !== b.sub_unit) return a.sub_unit.localeCompare(b.sub_unit);
+            if (a.year !== b.year) return parseInt(b.year) - parseInt(a.year);
+            if (a.round !== b.round) return parseInt(b.round) - parseInt(a.round);
+            return a.number - b.number;
+          });
+
+          return NextResponse.json({
+            subject,
+            total: sorted.length,
+            questions: sorted
+          });
+        }
+      }
+
+      // 2. 원본 이름으로 시도
       let targetSubject = subject;
       let dataDir = path.join(process.cwd(), "src", "data", targetSubject);
 
