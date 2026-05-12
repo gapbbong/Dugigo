@@ -3,6 +3,17 @@ import fs from "fs";
 import fsPromises from "fs/promises";
 import path from "path";
 
+const supabaseUrl = "http://10.128.49.91:8000";
+const SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyAgCiAgICAicm9sZSI6ICJzZXJ2aWNlX3JvbGUiLAogICAgImlzcyI6ICJzdXBhYmFzZS1kZW1vIiwKICAgICJpYXQiOiAxNjQxNzY5MjAwLAogICAgImV4cCI6IDE3OTk1MzU2MDAKfQ.DaYlNEoUrrEn2Ig7tqibS-PHK5vgusbcbo7X36XVt4Q";
+
+const customFetch = (url: any, options: any) => {
+  const headers = new Headers(options?.headers);
+  headers.set('ngrok-skip-browser-warning', 'true');
+  return fetch(url, { ...options, headers });
+};
+
+let supabase: any = null;
+
 export async function GET(req: NextRequest) {
   try {
     const searchParams = req.nextUrl.searchParams;
@@ -22,19 +33,12 @@ export async function GET(req: NextRequest) {
     if (subject) {
       // 1. 자동화설비(생산자동화)기능사 - 슈파베이스 우선 처리
       if (subject.includes('자동화설비') || subject.includes('생산자동화')) {
-        const supabaseUrl = "http://10.128.49.91:8000";
-        const SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyAgCiAgICAicm9sZSI6ICJzZXJ2aWNlX3JvbGUiLAogICAgImlzcyI6ICJzdXBhYmFzZS1kZW1vIiwKICAgICJpYXQiOiAxNjQxNzY5MjAwLAogICAgImV4cCI6IDE3OTk1MzU2MDAKfQ.DaYlNEoUrrEn2Ig7tqibS-PHK5vgusbcbo7X36XVt4Q";
-        
-        const customFetch = (url: any, options: any) => {
-          const headers = new Headers(options?.headers);
-          headers.set('ngrok-skip-browser-warning', 'true');
-          return fetch(url, { ...options, headers });
-        };
-
-        const { createClient } = await import('@supabase/supabase-js');
-        const supabase = createClient(supabaseUrl, SERVICE_ROLE_KEY, {
-          global: { fetch: customFetch }
-        });
+        if (!supabase) {
+          const { createClient } = await import('@supabase/supabase-js');
+          supabase = createClient(supabaseUrl, SERVICE_ROLE_KEY, {
+            global: { fetch: customFetch }
+          });
+        }
 
         const start = parseInt(searchParams.get("start") || "0");
         const limit = parseInt(searchParams.get("limit") || "30");
