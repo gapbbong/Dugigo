@@ -241,9 +241,24 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           // 각 문제의 선택지를 한 번만 섞어서 고정
           const questionsWithChoices = shuffledQuestions.map((q: any) => {
             const originalOptions = q.options || q.choices || [];
-            const correctIdx = parseInt(q.answer) - 1;
+            const originalChoiceImgs = q.choice_imgs || [];
             
-            const optionsWithIndex = originalOptions.map((opt: string, i: number) => ({ opt, originalIdx: i }));
+            // 정답 파싱 로직 강화 (원문자 ①-⑨ 등 처리)
+            const parseAnswer = (ans: any) => {
+              if (typeof ans === 'number') return ans;
+              const s = String(ans || '').trim();
+              if (/^\d+$/.test(s)) return parseInt(s);
+              const circled = { '①': 1, '②': 2, '③': 3, '④': 4, '⑤': 5, '⑥': 6, '⑦': 7, '⑧': 8, '⑨': 9 };
+              return (circled as any)[s] || parseInt(s) || 0;
+            };
+            const correctIdx = parseAnswer(q.answer) - 1;
+            
+            const optionsWithIndex = originalOptions.map((opt: string, i: number) => ({ 
+              opt, 
+              originalIdx: i,
+              choiceImg: originalChoiceImgs[i] || null
+            }));
+
             for (let i = optionsWithIndex.length - 1; i > 0; i--) {
               const j = Math.floor(Math.random() * (i + 1));
               [optionsWithIndex[i], optionsWithIndex[j]] = [optionsWithIndex[j], optionsWithIndex[i]];
@@ -253,6 +268,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               ...q,
               shuffledOptions: optionsWithIndex.map((item: any) => item.opt),
               shuffledOptionsIdx: optionsWithIndex.map((item: any) => item.originalIdx),
+              shuffledChoiceImgs: optionsWithIndex.map((item: any) => item.choiceImg),
               correctShuffledIndex: optionsWithIndex.findIndex((item: any) => item.originalIdx === correctIdx),
               selectedIndex: null,
               isCurrentCorrect: null
@@ -816,9 +832,25 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   } else if (imgName.startsWith('vis_') || subject.includes('시각디자인') || subject.includes('색채학')) {
                     imgSrc = `/summaries/시각디자인산업기사/${imgName}`;
                   } else if (imgName.startsWith('ae_') || subject.includes('자동화설비') || subject.includes('생산자동화')) {
-                    imgSrc = `/summaries/자동화설비(생산자동화)기능사/${imgName}`;
+                    imgSrc = `/images/subjects/자동화설비(생산자동화)기능사/${imgName}`;
                   } else {
-                    imgSrc = `/images/exams/${currentQuestion.year}_${currentQuestion.round}/${imgName}`;
+                    // 정보처리기능사 모의고사(2026년) 및 Mock 폴더 처리
+                    const year = currentQuestion.year;
+                    const round = currentQuestion.round;
+                    
+                    if (year === 2026 || imgName.includes('_Mock_')) {
+                      const mockRound = round || (imgName.match(/Mock_(\d+)/) || [])[1] || '01';
+                      imgSrc = `/images/exams/Mock_${mockRound}/${imgName}`;
+                    } else if (year && round) {
+                      imgSrc = `/images/exams/${year}_${round}/${imgName}`;
+                    } else {
+                      // 연도/회차 정보가 없는 경우 이미지 이름에서 유추 시도
+                      const match = imgName.match(/(\d{4})_(\d{2})/) || imgName.match(/Mock_(\d+)/);
+                      if (match) {
+                        const folder = match[0].includes('Mock') ? match[0] : `${match[1]}_${match[2]}`;
+                        imgSrc = `/images/exams/${folder}/${imgName}`;
+                      }
+                    }
                   }
                 }
 
@@ -872,7 +904,19 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                             />
                           </div>
                         ) : (
-                          renderMath(choice)
+                          <div className="flex flex-col gap-2">
+                            {currentQuestion.shuffledChoiceImgs?.[idx] && (
+                              <div className="flex justify-center py-1">
+                                <img 
+                                  src={`/images/subjects/자동화설비(생산자동화)기능사/${currentQuestion.shuffledChoiceImgs[idx]}`}
+                                  alt={`Choice Image ${idx + 1}`}
+                                  className="max-h-[120px] md:max-h-[200px] object-contain rounded-lg border border-slate-100 p-1 bg-white"
+                                  onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                                />
+                              </div>
+                            )}
+                            {renderMath(choice)}
+                          </div>
                         )}
                         {choice.includes('그림') && (
                           <img 
