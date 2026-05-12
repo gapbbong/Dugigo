@@ -41,6 +41,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const subject = decodeURIComponent(params.subject as string);
   
   const [questions, setQuestions] = useState<any[]>([]);
+  const [totalQuestions, setTotalQuestions] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   const [answers, setAnswers] = useState<{questionId: string, isCorrect: boolean}[]>([]);
