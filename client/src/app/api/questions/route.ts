@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
       if (subject.includes('자동화설비') || subject.includes('생산자동화')) {
         if (!supabase) {
           const { createClient } = await import('@supabase/supabase-js');
-          supabase = createClient(supabaseUrl, SERVICE_ROLE_KEY, {
+          supabase = createClient(supabaseUrl!, SERVICE_ROLE_KEY!, {
             global: { fetch: customFetch }
           });
         }
