@@ -3,8 +3,8 @@ import fs from "fs";
 import fsPromises from "fs/promises";
 import path from "path";
 
-const supabaseUrl = "http://10.128.49.91:8000";
-const SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyAgCiAgICAicm9sZSI6ICJzZXJ2aWNlX3JvbGUiLAogICAgImlzcyI6ICJzdXBhYmFzZS1kZW1vIiwKICAgICJpYXQiOiAxNjQxNzY5MjAwLAogICAgImV4cCI6IDE3OTk1MzU2MDAKfQ.DaYlNEoUrrEn2Ig7tqibS-PHK5vgusbcbo7X36XVt4Q";
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 const customFetch = (url: any, options: any) => {
   const headers = new Headers(options?.headers);
@@ -66,7 +66,7 @@ export async function GET(req: NextRequest) {
           .range(start, start + limit - 1);
 
         if (!error && data) {
-          const mappedQuestions = data.map(q => ({
+          const mappedQuestions = data.map((q: any) => ({
             id: q.metadata?.id || `${q.exam_year}_${q.exam_round}_${q.question_no}`,
             year: q.exam_year.toString(),
             round: q.exam_round.toString(),
