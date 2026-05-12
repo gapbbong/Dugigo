@@ -180,111 +180,92 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     return () => clearInterval(timer);
   }, [startTime, isFinished]);
 
+  const fetchQuestions = useCallback(async (startIdx: number, limitCount: number, isPrefetch = false) => {
+    try {
+      const yearFilter = searchParamsProps?.year || '';
+      const roundFilter = searchParamsProps?.round || '';
+      const unit = unitFilter || '';
+      
+      const url = `/api/questions?subject=${subject}&start=${startIdx}&limit=${limitCount}&unit=${encodeURIComponent(unit)}&year=${yearFilter}&round=${roundFilter}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      
+      if (data.questions) {
+        const questionsWithChoices = data.questions.map((q: any) => {
+          const originalOptions = q.options || q.choices || [];
+          const originalChoiceImgs = q.choice_imgs || [];
+          
+          const parseAnswer = (ans: any) => {
+            if (typeof ans === 'number') return ans;
+            const s = String(ans || '').trim();
+            if (/^\d+$/.test(s)) return parseInt(s);
+            const circled = { '①': 1, '②': 2, '③': 3, '④': 4, '⑤': 5, '⑥': 6, '⑦': 7, '⑧': 8, '⑨': 9 };
+            return (circled as any)[s] || parseInt(s) || 0;
+          };
+          const correctIdx = parseAnswer(q.answer) - 1;
+          
+          const optionsWithIndex = originalOptions.map((opt: string, i: number) => ({ 
+            opt, 
+            originalIdx: i,
+            choiceImg: originalChoiceImgs[i] || null
+          }));
+
+          for (let i = optionsWithIndex.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [optionsWithIndex[i], optionsWithIndex[j]] = [optionsWithIndex[j], optionsWithIndex[i]];
+          }
+          
+          return {
+            ...q,
+            shuffledOptions: optionsWithIndex.map((item: any) => item.opt),
+            shuffledOptionsIdx: optionsWithIndex.map((item: any) => item.originalIdx),
+            shuffledChoiceImgs: optionsWithIndex.map((item: any) => item.choiceImg),
+            correctShuffledIndex: optionsWithIndex.findIndex((item: any) => item.originalIdx === correctIdx),
+            selectedIndex: null,
+            isCurrentCorrect: null
+          };
+        });
+
+        if (isPrefetch) {
+          setQuestions(prev => {
+            const existingIds = new Set(prev.map(p => p.id));
+            const uniqueNew = questionsWithChoices.filter((q: any) => !existingIds.has(q.id));
+            return [...prev, ...uniqueNew];
+          });
+        } else {
+          setQuestions(questionsWithChoices);
+          setTotalQuestions(data.total || questionsWithChoices.length);
+        }
+      }
+    } catch (err) {
+      console.error('Failed to fetch questions:', err);
+    } finally {
+      if (!isPrefetch) setLoading(false);
+    }
+  }, [subject, unitFilter, searchParamsProps]);
+
   useEffect(() => {
     if (!paramsReady) return;
+    const initialStart = (parseInt(setNum || '1') - 1) * parseInt(setSize || '30');
+    const initialLimit = parseInt(setSize || '30');
+    setLoading(true);
+    fetchQuestions(initialStart, initialLimit);
+  }, [paramsReady, setNum, setSize, fetchQuestions]);
 
-    const fetchQuestions = async () => {
-      try {
-        const res = await fetch(`/api/questions?subject=${subject}`);
-        const data = await res.json();
-        if (data.questions) {
-          let filtered = data.questions;
-          const yearFilter = searchParamsProps?.year || null;
-          const roundFilter = searchParamsProps?.round || null;
-
-          if (unitFilter) {
-            // UI 접두사([이론] 등) 및 분할 접미사((1부) 등) 모두 제거 후 필터링
-            const cleanUnitFilter = unitFilter
-              .replace(/^\[.*?\]\s*/, '')
-              .replace(/\s*\(\d+부\)$/, '')
-              .trim();
-              
-            filtered = data.questions.filter((q: any) => {
-              // sub_unit을 최우선으로 사용하여 필터링 (subject 필드와 충돌 방지)
-              const qSubUnit = (q.sub_unit || q.subject || '').replace(/^\[.*?\]\s*/, '').trim();
-              return qSubUnit === cleanUnitFilter || q.sub_unit === unitFilter || q.subject === unitFilter;
-            });
-          } else if (roundFilter || yearFilter) {
-            // 연도(year)와 회차(round) 필터를 사용한 정밀 필터링
-            filtered = data.questions.filter((q: any) => {
-              const r = q.round || q.id?.split('_')[1] || '';
-              const y = q.year || '';
-              const info = (q.round_info || '').toLowerCase();
-              
-              // 컴퓨터활용능력 2급: round_info를 활용한 강력한 매칭
-              if (subject === '컴퓨터활용능력 2급' && info) {
-                const matchesYear = !yearFilter || info.includes(`${yearFilter}년`);
-                const matchesRound = !roundFilter || 
-                                   info.includes(`${roundFilter}회`) || 
-                                   (roundFilter.toString().includes('상시') && info.includes(roundFilter.toString()));
-                return matchesYear && matchesRound;
-              }
-
-              // 기본 필터링 로직
-              const matchYear = !yearFilter || y.toString() === yearFilter.toString() || info.includes(yearFilter.toString());
-              const matchRound = !roundFilter || r.toString() === roundFilter.toString() || info.includes(roundFilter.toString());
-              return matchYear && matchRound;
-            });
-          }
-
-          if (rStart !== null && rEnd !== null) {
-            filtered = filtered.slice(parseInt(rStart), parseInt(rEnd));
-          }
-          
-          if (setNum && setSize) {
-            const startIdx = (parseInt(setNum) - 1) * parseInt(setSize);
-            filtered = filtered.slice(startIdx, startIdx + parseInt(setSize));
-          }
-          // 문제 자체를 섞음 (세트 내 랜덤화)
-          const shuffledQuestions = filtered.sort(() => Math.random() - 0.5);
-          
-          // 각 문제의 선택지를 한 번만 섞어서 고정
-          const questionsWithChoices = shuffledQuestions.map((q: any) => {
-            const originalOptions = q.options || q.choices || [];
-            const originalChoiceImgs = q.choice_imgs || [];
-            
-            // 정답 파싱 로직 강화 (원문자 ①-⑨ 등 처리)
-            const parseAnswer = (ans: any) => {
-              if (typeof ans === 'number') return ans;
-              const s = String(ans || '').trim();
-              if (/^\d+$/.test(s)) return parseInt(s);
-              const circled = { '①': 1, '②': 2, '③': 3, '④': 4, '⑤': 5, '⑥': 6, '⑦': 7, '⑧': 8, '⑨': 9 };
-              return (circled as any)[s] || parseInt(s) || 0;
-            };
-            const correctIdx = parseAnswer(q.answer) - 1;
-            
-            const optionsWithIndex = originalOptions.map((opt: string, i: number) => ({ 
-              opt, 
-              originalIdx: i,
-              choiceImg: originalChoiceImgs[i] || null
-            }));
-
-            for (let i = optionsWithIndex.length - 1; i > 0; i--) {
-              const j = Math.floor(Math.random() * (i + 1));
-              [optionsWithIndex[i], optionsWithIndex[j]] = [optionsWithIndex[j], optionsWithIndex[i]];
-            }
-            
-            return {
-              ...q,
-              shuffledOptions: optionsWithIndex.map((item: any) => item.opt),
-              shuffledOptionsIdx: optionsWithIndex.map((item: any) => item.originalIdx),
-              shuffledChoiceImgs: optionsWithIndex.map((item: any) => item.choiceImg),
-              correctShuffledIndex: optionsWithIndex.findIndex((item: any) => item.originalIdx === correctIdx),
-              selectedIndex: null,
-              isCurrentCorrect: null
-            };
-          });
-
-          setQuestions(questionsWithChoices);
-        }
-      } catch (err) {
-        console.error('Failed to fetch questions:', err);
-      } finally {
-        setLoading(false);
+  // 백그라운드 프리페칭 로직
+  useEffect(() => {
+    if (questions.length > 0 && currentIndex > questions.length - 8 && !loading) {
+      // 다음 세트 번호 계산
+      const currentLoadedCount = questions.length;
+      const totalAvailable = totalQuestions;
+      
+      if (currentLoadedCount < totalAvailable) {
+        const nextStart = currentLoadedCount;
+        const limit = parseInt(setSize || '30');
+        fetchQuestions(nextStart, limit, true);
       }
-    };
-    fetchQuestions();
-  }, [subject, unitFilter, rStart, rEnd, setNum, setSize, paramsReady]);
+    }
+  }, [currentIndex, questions.length, totalQuestions, loading, setSize, fetchQuestions]);
 
   const remapExplanation = (text: string, mapping: number[]) => {
     if (!text || !mapping) return text;
@@ -987,7 +968,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                             })()
                           ) : (
                             <p className="text-xl md:text-3xl font-black text-rose-700 py-1 md:py-2 leading-relaxed word-break-keep-all">
-                              정답은 [ {currentQuestion.shuffledOptions[currentQuestion.correctShuffledIndex]} ] 입니다. 💪
+                              정답은 [ {currentQuestion.correctShuffledIndex !== -1 ? `${currentQuestion.correctShuffledIndex + 1}번. ${currentQuestion.shuffledOptions[currentQuestion.correctShuffledIndex]}` : '데이터 오류'} ] 입니다. 💪
                             </p>
                           )}
                         </div>

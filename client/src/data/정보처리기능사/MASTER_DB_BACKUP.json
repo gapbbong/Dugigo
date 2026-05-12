@@ -188,7 +188,7 @@
   {
     "number": 16,
     "question": "릴레이션에 있는 모든 튜플에 대해 유일성은 만족시키지만 최소성은 만족시키지 못하는 키는?",
-    "answer": 3,
+    "answer": "3",
     "explanation": "슈퍼키(Super Key)는 릴레이션 내에서 유일성은 보장하지만, 속성의 집합을 더 줄일 수 없는 성질인 최소성은 만족하지 못할 수 있는 키입니다.",
     "choices": [
       "후보키",
@@ -200,19 +200,19 @@
   {
     "number": "16",
     "question": "OSI 7계층 중 다음과 같은 특징을 갖는 계층은 무엇인가?\n- 개방 시스템들 간의 네트워크 연결을 관리하는 기능과 데이터의 교환 및 중계 기능을 한다.\n- 데이터의 안전한 전송을 위해 논리적 링크(가상 회로)를 설정한다.",
-    "answer": 3,
+    "answer": "③",
     "explanation": "네트워크 계층(Network Layer)은 송신 측과 수신 측 사이의 논리적 연결(가상 회로)을 설정하고, 데이터 패킷의 경로 선택(Routing) 및 중계 기능을 담당합니다.",
     "choices": [
-      "물리 계층",
-      "데이터 링크 계층",
-      "네트워크 계층",
-      "응용 계층"
+      "① 물리 계층",
+      "② 데이터 링크 계층",
+      "③ 네트워크 계층",
+      "④ 응용 계층"
     ]
   },
   {
     "number": 17,
     "question": "다음 중 전송 계층 프로토콜에 해당하는 것은?",
-    "answer": 1,
+    "answer": "1",
     "explanation": "UDP와 TCP는 OSI 7계층 중 전송 계층(Transport Layer)에서 동작하는 대표적인 프로토콜입니다. 나머지는 응용 계층 프로토콜입니다.",
     "choices": [
       "UDP",
@@ -224,19 +224,19 @@
   {
     "number": "17",
     "question": "데이터 통신에서 정보의 전송을 수행하는 두 개의 컴퓨터 시스템 사이에서 상호 간에 전달되는 정보의 형식, 정보 교환을 위하여 사용되는 제어 정보의 의미와 전달 방식 등과 같은 정보 교환을 위하여 사용되는 규칙을 의미하는 것은?",
-    "answer": 3,
+    "answer": "③",
     "explanation": "프로토콜(Protocol)은 서로 다른 통신 장치 간에 원활하게 정보를 주고받기 위해 약속된 일련의 통신 규칙이나 규약을 의미합니다.",
     "choices": [
-      "통신 절차",
-      "전송 제어",
-      "프로토콜",
-      "제어 표준"
+      "① 통신 절차",
+      "② 전송 제어",
+      "③ 프로토콜",
+      "④ 제어 표준"
     ]
   },
   {
     "number": 18,
     "question": "이진 트리의 레코드 R = (90, 85, 70, 65, 60, 55, 50, 45, 40, 35, 25)에 대하여 힙(Heap) 정렬을 만들 때, 70의 왼쪽과 오른쪽의 자노드(Child Node)의 값은?",
-    "answer": 4,
+    "answer": "4",
     "explanation": "완전 이진 트리 형태의 배열에서 인덱스 i의 자식은 2i(왼쪽)와 2i+1(오른쪽)입니다. 70은 배열의 3번째 요소이므로 자식은 6번째(55)와 7번째(50) 요소입니다.",
     "choices": [
       "45, 40",
@@ -248,206 +248,206 @@
   {
     "number": "18",
     "question": "데이터베이스의 설계 단계를 순서적으로 바르게 기술한 것은?",
-    "answer": 4,
+    "answer": "④",
     "explanation": "데이터베이스 설계의 일반적인 순서는 사용자 요구사항 분석 → 개념적 설계(E-R 모델 등) → 논리적 설계(데이터 모델링) → 물리적 설계 → 구현 순입니다.",
     "choices": [
-      "개념적 설계 → 물리적 설계 → 논리적 설계 → 요구조건 분석 → 구현",
-      "요구조건 분석 → 물리적 설계 → 개념적 설계 → 논리적 설계 → 구현",
-      "요구조건 분석 → 개념적 설계 → 물리적 설계 → 논리적 설계 → 구현",
-      "요구조건 분석 → 개념적 설계 → 논리적 설계 → 물리적 설계 → 구현"
+      "① 개념적 설계 → 물리적 설계 → 논리적 설계 → 요구조건 분석 → 구현",
+      "② 요구조건 분석 → 물리적 설계 → 개념적 설계 → 논리적 설계 → 구현",
+      "③ 요구조건 분석 → 개념적 설계 → 물리적 설계 → 논리적 설계 → 구현",
+      "④ 요구조건 분석 → 개념적 설계 → 논리적 설계 → 물리적 설계 → 구현"
     ]
   },
   {
     "number": "19",
     "question": "E-R 모델의 표현 방법으로 옳지 않은 것은?",
-    "answer": 3,
+    "answer": "③",
     "explanation": "E-R 모델에서 속성(Attribute)은 타원(Ellipse)으로 표현하며, 오각형은 표준 기호에 해당하지 않습니다.",
     "choices": [
-      "개체 타입 : 사각형",
-      "관계 타입 : 마름모",
-      "속성 : 오각형",
-      "연결 : 선"
+      "① 개체 타입 : 사각형",
+      "② 관계 타입 : 마름모",
+      "③ 속성 : 오각형",
+      "④ 연결 : 선"
     ]
   },
   {
     "number": "20",
     "question": "TCP/IP 기반 네트워크에서 동작하는 발행-구독 기반의 메시징 프로토콜로 최근 IoT 환경에서 자주 사용되고 있는 프로토콜은?",
-    "answer": 2,
+    "answer": "②",
     "explanation": "MQTT(Message Queuing Telemetry Transport)는 발행/구독 모델을 기반으로 하는 가벼운 메시징 프로토콜로, 저전력 및 불안정한 네트워크 환경의 IoT 기기 통신에 적합합니다.",
     "choices": [
-      "MLFQ",
-      "MQTT",
-      "Zigbee",
-      "MTSP"
+      "① MLFQ",
+      "② MQTT",
+      "③ Zigbee",
+      "④ MTSP"
     ]
   },
   {
     "number": "21",
     "question": "다음 그림에서 트리의 차수는?",
-    "answer": 2,
+    "answer": "②",
     "explanation": "트리의 차수(Degree of a Tree)는 해당 트리 내 노드들이 가진 자식 노드 수 중 최대값을 의미합니다. 그림에서 노드 A, C, E가 각각 2개의 자식 노드를 가지며 이것이 최대이므로 트리의 차수는 2입니다.",
     "choices": [
-      "1",
-      "2",
-      "3",
-      "8"
+      "① 1",
+      "② 2",
+      "③ 3",
+      "④ 8"
     ]
   },
   {
     "number": "22",
     "question": "분산된 터미널 또는 여러 컴퓨터들이 중앙의 호스트 컴퓨터와 집중 연결되어 있는 정보통신망의 구성 형태는?",
-    "answer": 2,
+    "answer": "②",
     "explanation": "중앙에 호스트 컴퓨터가 있고 이를 중심으로 각 단말기들이 1:1로 연결된 방사형 구조는 스타형(Star, 성형) 구성 방식입니다.",
     "choices": [
-      "루프형",
-      "스타형",
-      "그물형",
-      "나무형"
+      "① 루프형",
+      "② 스타형",
+      "③ 그물형",
+      "④ 나무형"
     ]
   },
   {
     "number": "23",
     "question": "다음 중 기본키는 NULL 값을 가져서는 안되며, 릴레이션 내에 오직 하나의 값만 존재해야 한다는 조건을 무엇이라 하는가?",
-    "answer": 1,
+    "answer": "①",
     "explanation": "개체 무결성(Entity Integrity)은 기본키(Primary Key)가 중복될 수 없고 NULL 값을 가질 수 없음을 규정하는 데이터베이스 제약 조건입니다.",
     "choices": [
-      "개체 무결성 제약조건",
-      "참조 무결성 제약조건",
-      "도메인 무결성 제약조건",
-      "속성 무결성 제약조건"
+      "① 개체 무결성 제약조건",
+      "② 참조 무결성 제약조건",
+      "③ 도메인 무결성 제약조건",
+      "④ 속성 무결성 제약조건"
     ]
   },
   {
     "number": "24",
     "question": "다음과 같이 레코드가 구성되어 있을 때, 이진 검색 방법으로 F를 찾을 경우 비교되는 횟수는?\n[ A B C D E F G H I J K L M N ]",
-    "answer": 1,
+    "answer": "①",
     "explanation": "이진 검색(Binary Search) 수행 과정:\n1. 14개 데이터의 중간 위치인 7번째 값 G와 비교 (F < G, 왼쪽 범위 탐색)\n2. 1~6번째 데이터의 중간인 3번째 값 C와 비교 (F > C, 오른쪽 범위 탐색)\n3. 4~6번째 데이터의 중간인 5번째 값 E와 비교 (F > E, 오른쪽 범위 탐색)\n4. 6번째 데이터인 F와 비교하여 일치 확인\n총 4번의 비교가 필요합니다.",
     "choices": [
-      "4",
-      "5",
-      "6",
-      "7"
+      "① 4",
+      "② 5",
+      "③ 6",
+      "④ 7"
     ]
   },
   {
     "number": "25",
     "question": "스택에서 순서가 A, B, C, D로 정해진 입력 자료를, push → push → pop → push → push → pop → pop → pop으로 연산 했을 때 출력은?",
-    "answer": 3,
+    "answer": "③",
     "explanation": "스택 연산 순서:\n1. push(A), push(B) → [A, B]\n2. pop → 'B' 출력, [A]\n3. push(C), push(D) → [A, C, D]\n4. pop → 'D' 출력, [A, C]\n5. pop → 'C' 출력, [A]\n6. pop → 'A' 출력, []\n출력 결과는 B, D, C, A입니다.",
     "choices": [
-      "C, B, D, A",
-      "B, C, D, A",
-      "B, D, C, A",
-      "C, B, A, D"
+      "① C, B, D, A",
+      "② B, C, D, A",
+      "③ B, D, C, A",
+      "④ C, B, A, D"
     ]
   },
   {
     "number": "26",
     "question": "데이터베이스 테이블의 기본키(Primary Key) 로 가장 부적합한 항목은?",
-    "answer": 3,
+    "answer": "③",
     "explanation": "기본키는 튜플을 유일하게 식별할 수 있어야 합니다. 생년월일은 중복될 가능성이 매우 높기 때문에 유일성을 보장하기 어려워 기본키로 부적합합니다.",
     "choices": [
-      "차량 등록번호",
-      "사원번호",
-      "고객 생년월일",
-      "고객 ID"
+      "① 차량 등록번호",
+      "② 사원번호",
+      "③ 고객 생년월일",
+      "④ 고객 ID"
     ]
   },
   {
     "number": 27,
     "question": "27. 다음 중 패킷 교환 방식의 특징으로 옳지 않은 것은?",
-    "answer": 3,
+    "answer": "③",
     "choices": [
-      "전송 속도와 코드 변환이 가능하다.",
-      "장애 발생 시 우회 경로를 선택할 수 있어 신뢰성이 높다.",
-      "데이터 전송 시 지연 시간이 거의 없다.",
-      "통신 회선의 이용 효율이 높다."
+      "① 전송 속도와 코드 변환이 가능하다.",
+      "② 장애 발생 시 우회 경로를 선택할 수 있어 신뢰성이 높다.",
+      "③ 데이터 전송 시 지연 시간이 거의 없다.",
+      "④ 통신 회선의 이용 효율이 높다."
     ]
   },
   {
     "number": 28,
     "question": "28. 다음 중 응용 계층의 프로토콜로 옳지 않은 것은?",
-    "answer": 1,
+    "answer": "①",
     "choices": [
-      "TCP",
-      "FTP",
-      "HTTP",
-      "SMTP"
+      "① TCP",
+      "② FTP",
+      "③ HTTP",
+      "④ SMTP"
     ]
   },
   {
     "number": 29,
     "question": "29. 다음 중 운영체제의 성능을 평가하는 요소로 거리가 먼 것은?",
-    "answer": 4,
+    "answer": "④",
     "choices": [
-      "처리 능력(Throughput)",
-      "반환 시간(Turn-around Time)",
-      "사용 가능도(Availability)",
-      "비용(Cost)"
+      "① 처리 능력(Throughput)",
+      "② 반환 시간(Turn-around Time)",
+      "③ 사용 가능도(Availability)",
+      "④ 비용(Cost)"
     ]
   },
   {
     "number": 30,
     "question": "30. 다음 중 중앙처리장치의 제어 장치에 있는 레지스터로, 다음에 실행할 명령어의 주소를 기억하는 것은?",
-    "answer": 3,
+    "answer": "③",
     "choices": [
-      "명령어 레지스터(Instruction Register)",
-      "누산기(Accumulator)",
-      "프로그램 카운터(Program Counter)",
-      "메모리 주소 레지스터(MAR)"
+      "① 명령어 레지스터(Instruction Register)",
+      "② 누산기(Accumulator)",
+      "③ 프로그램 카운터(Program Counter)",
+      "④ 메모리 주소 레지스터(MAR)"
     ]
   },
   {
     "number": "31",
     "question": "다음 중 운영체제의 목적으로 거리가 먼 것은?",
-    "answer": 2,
+    "answer": "2",
     "explanation": "운영체제의 성능 평가 기준(목적)은 처리 능력(Throughput)의 증대, 반환 시간(Turnaround Time)의 단축, 사용 가능도(Availability)의 증대, 신뢰도(Reliability)의 향상입니다. 반환 시간은 짧을수록 좋은 성능으로 평가됩니다.",
     "choices": [
-      "처리 능력의 증대",
-      "반환 시간의 증대",
-      "사용 가능도의 증대",
-      "신뢰도의 향상"
+      "① 처리 능력의 증대",
+      "② 반환 시간의 증대",
+      "③ 사용 가능도의 증대",
+      "④ 신뢰도의 향상"
     ]
   },
   {
     "number": 31,
     "question": "31. 다음 중 기억 장치의 접근 속도가 빠른 것에서 느린 순서대로 바르게 나열한 것은?",
-    "answer": 2,
+    "answer": "②",
     "choices": [
-      "레지스터 → 주기억장치 → 캐시 메모리 → 보조기억장치",
-      "레지스터 → 캐시 메모리 → 주기억장치 → 보조기억장치",
-      "캐시 메모리 → 레지스터 → 주기억장치 → 보조기억장치",
-      "보조기억장치 → 주기억장치 → 캐시 메모리 → 레지스터"
+      "① 레지스터 → 주기억장치 → 캐시 메모리 → 보조기억장치",
+      "② 레지스터 → 캐시 메모리 → 주기억장치 → 보조기억장치",
+      "③ 캐시 메모리 → 레지스터 → 주기억장치 → 보조기억장치",
+      "④ 보조기억장치 → 주기억장치 → 캐시 메모리 → 레지스터"
     ]
   },
   {
     "number": 38,
     "question": "트랜잭션의 특성 중 성공적으로 완료된 트랜잭션의 결과는 시스템에 고장이 발생하더라도 영구적으로 반영되어야 한다는 성질은?",
-    "answer": 4,
+    "answer": "4",
     "explanation": "영속성(Durability)은 성공적으로 완료된 트랜잭션의 결과가 시스템의 어떠한 고장에도 영구적으로 데이터베이스에 반영되어야 함을 의미합니다.",
     "choices": [
-      "원자성(Atomicity)",
-      "일관성(Consistency)",
-      "독립성(Isolation)",
-      "영속성(Durability)"
+      "① 원자성(Atomicity)",
+      "② 일관성(Consistency)",
+      "③ 독립성(Isolation)",
+      "④ 영속성(Durability)"
     ]
   },
   {
     "number": 39,
     "question": "SQL 명령 중 데이터 정의어(DDL)에 해당하지 않는 것은?",
-    "answer": 1,
+    "answer": "1",
     "explanation": "SELECT는 데이터를 조회하는 명령어로 데이터 조작어(DML) 또는 데이터 질의어(DQL)에 해당합니다. CREATE, ALTER, DROP은 데이터 정의어(DDL)입니다.",
     "choices": [
-      "SELECT",
-      "CREATE",
-      "ALTER",
-      "DROP"
+      "① SELECT",
+      "② CREATE",
+      "③ ALTER",
+      "④ DROP"
     ]
   },
   {
     "number": "40",
     "question": "다음은 SQL문의 기본 형식이다. ㉠에 들어갈 알맞은 명령어는 무엇인가?\n\nSELECT [DISTINCT] 필드이름\n( ㉠ ) 테이블이름\n[WHERE 조건식];",
-    "answer": 4,
+    "answer": "4",
     "explanation": "SQL SELECT 문의 기본 문법 구조는 'SELECT 필드이름 FROM 테이블이름 WHERE 조건식'입니다. 따라서 ㉠ 자리에는 테이블의 이름을 지정하는 키워드인 FROM이 들어가야 합니다.",
     "choices": [
       "ORDER",
@@ -459,7 +459,7 @@
   {
     "number": "41",
     "question": "다음 SQL 명령의 의미는?\n\nSELECT 성명 FROM 학급;",
-    "answer": 2,
+    "answer": "2",
     "explanation": "SELECT 절은 검색하고자 하는 필드(성명)를 지정하고, FROM 절은 해당 데이터가 저장된 테이블(학급)을 지정합니다. 따라서 '학급 테이블에서 성명 필드 값을 검색하라'는 의미입니다.",
     "choices": [
       "성명 테이블에서 학급을 검색한다.",
@@ -471,37 +471,37 @@
   {
     "number": 49,
     "question": "분산 운영체제의 구조 중 각 노드가 인접한 두 노드와 직접 연결된 폐쇄 루프(Closed Loop) 형태인 것은?",
-    "answer": 4,
+    "answer": "④",
     "explanation": "링형(Ring) 구조는 인접한 두 노드를 서로 연결하여 원형(루프)을 이루는 형태를 의미한다.",
     "choices": [
-      "성형(Star)",
-      "버스형(Bus)",
-      "트리형(Tree)",
-      "링형(Ring)"
+      "① 성형(Star)",
+      "② 버스형(Bus)",
+      "③ 트리형(Tree)",
+      "④ 링형(Ring)"
     ]
   },
   {
     "number": 50,
     "question": "UNIX에서 새로운 프로세스를 생성하는 명령어는?",
-    "answer": 1,
+    "answer": "①",
     "explanation": "fork는 현재 실행 중인 프로세스를 복제하여 새로운 프로세스를 생성하는 명령어이다.",
     "choices": [
-      "fork",
-      "ls",
-      "cat",
-      "chmod"
+      "① fork",
+      "② ls",
+      "③ cat",
+      "④ chmod"
     ]
   },
   {
     "number": 51,
     "question": "UNIX에서 현재 작업 중인 디렉터리의 절대 경로를 화면에 출력하는 명령어는?",
-    "answer": 1,
+    "answer": "①",
     "explanation": "pwd(Print Working Directory)는 현재 사용자가 위치한 디렉터리의 절대 경로를 표시해 주는 명령어이다.",
     "choices": [
-      "pwd",
-      "cd",
-      "ls",
-      "mkdir"
+      "① pwd",
+      "② cd",
+      "③ ls",
+      "④ mkdir"
     ]
   },
   {
@@ -509,7 +509,7 @@
     "round": "01",
     "number": "01",
     "question": "JAVA에서 파일 입출력과 관련된 기능을 제공하는 패키지와 그 안에 포함된 클래스가 올바르게 짝지어진 것은?",
-    "answer": 2,
+    "answer": "2",
     "explanation": "파일 입출력 관련 패키지는 java.io이며, InputStream은 대표적인 입력 클래스입니다.",
     "choices": [
       "java.net - Socket",
@@ -523,7 +523,7 @@
     "round": "01",
     "number": "02",
     "question": "다음 중 객체지향 프로그래밍 언어의 특징으로 옳지 않은 것은?",
-    "answer": 4,
+    "answer": "4",
     "explanation": "객체지향 언어는 절차지향 언어에 비해 설계가 복잡하고 실행 속도가 상대적으로 느릴 수 있습니다.",
     "choices": [
       "상속을 통해 코드의 재사용과 확장이 용이하다.",
@@ -537,7 +537,7 @@
     "round": "01",
     "number": "03",
     "question": "다음 중 상속성(Inheritance)과 다형성(Polymorphism)에 대한 설명이 모두 올바른 것은?",
-    "answer": 2,
+    "answer": "2",
     "explanation": "상속은 상위 클래스의 특성을 물려받는 것이고, 다형성은 같은 메시지에 대해 객체마다 다르게 반응하는 성질입니다.",
     "choices": [
       "상속성 : 코드를 재사용하여 개발 비용을 절감한다. 다형성 : 하나의 클래스가 여러 종류의 메소드를 가질 수 있는 능력이다.",
@@ -551,7 +551,7 @@
     "round": "01",
     "number": "04",
     "question": "다음 중 자바스크립트(JavaScript)에 대한 설명으로 옳은 것을 모두 고른 것은?",
-    "answer": 4,
+    "answer": "4",
     "explanation": "자바스크립트는 웹 페이지 제어, 객체지향 성격 보유, 프로토타입 개념 활용 등 설명된 모든 특징을 가집니다.",
     "question_img": "Programming_Mock_01_Q04.png",
     "choices": [
@@ -566,7 +566,7 @@
     "round": "01",
     "number": "05",
     "question": "다음 변수 선언 문장에서 '3.1415927'의 역할에 대한 설명으로 올바른 것은?",
-    "answer": 4,
+    "answer": "4",
     "explanation": "코드에 직접 작성된 고정된 값 자체를 리터럴(Literal)이라고 합니다.",
     "question_img": "Programming_Mock_01_Q05.png",
     "choices": [
@@ -581,7 +581,7 @@
     "round": "01",
     "number": "06",
     "question": "다음 중 관계 연산자의 사용이 올바른 것은?",
-    "answer": 4,
+    "answer": "4",
     "explanation": "<= 연산자는 '작거나 같다'를 의미합니다.",
     "choices": [
       "if (a == 5) { ... } - 변수 a가 5와 같지 않을 때",
@@ -595,14 +595,14 @@
     "round": "01",
     "number": "07",
     "question": "다음 JAVA 프로그램이 실행되었을 때, 실행 결과는?",
-    "answer": 1,
+    "answer": "1",
     "explanation": "(int)2.9는 2가 되고, 여기에 1.7을 더하면 3.7이 됩니다.",
     "question_img": "Programming_Mock_01_Q07.png",
     "choices": [
-      "7",
-      "7",
+      "3.7",
+      "4.7",
       "3",
-      "6"
+      "4.6"
     ]
   },
   {
@@ -610,7 +610,7 @@
     "round": "01",
     "number": "08",
     "question": "다음 JAVA 코드의 실행 결과는?",
-    "answer": 2,
+    "answer": "2",
     "explanation": "\\n은 개행 문자로, Hello 출력 후 다음 줄에 World가 출력됩니다.",
     "question_img": "Programming_Mock_01_Q08.png",
     "choices": [
@@ -625,7 +625,7 @@
     "round": "01",
     "number": "09",
     "question": "다음 JAVA 코드의 실행 결과는?",
-    "answer": 1,
+    "answer": "1",
     "explanation": "i가 0부터 4까지 증가하며 sum에 누적되므로 0+1+2+3+4 = 10이 됩니다.",
     "question_img": "Programming_Mock_01_Q09.png",
     "choices": [
@@ -640,7 +640,7 @@
     "round": "01",
     "number": "10",
     "question": "다음 중 JAVA에서 배열을 선언, 생성, 초기화하는 방법으로 올바르지 않은 것은?",
-    "answer": 4,
+    "answer": "4",
     "explanation": "배열을 생성할 때는 반드시 크기를 지정하거나 초기화 값을 제공해야 합니다.",
     "choices": [
       "int[] arr = new int[5];",
@@ -654,7 +654,7 @@
     "round": "01",
     "number": "11",
     "question": "다음 파이썬(Python) 프로그램이 실행되었을 때의 결과는?\n\n```python\ninList = [1,2,3,4,5]\nanswer = inList[:3]\nprint(answer)\n```",
-    "answer": 3,
+    "answer": "3",
     "explanation": "[:3] 슬라이싱은 인덱스 0부터 2까지(3 전까지)의 요소를 가져옵니다.",
     "choices": [
       "[1]",
@@ -668,7 +668,7 @@
     "round": "01",
     "number": "12",
     "question": "다음 파이썬(Python) 코드의 실행 결과는?\n\n```python\nfruits = ['apple', 'banana', 'cherry', 'kiwi']\nfruits.remove('banana')\nfruits.append('grape')\nfruits.insert(1, 'melon')\nprint(fruits)\n```",
-    "answer": 1,
+    "answer": "1",
     "explanation": "banana 삭제 -> grape 추가 -> 인덱스 1에 melon 삽입 결과입니다.",
     "choices": [
       "['apple', 'melon', 'cherry', 'kiwi', 'grape']",
@@ -682,7 +682,7 @@
     "round": "01",
     "number": "13",
     "question": "다음 파이썬(Python) 코드의 실행 결과는?",
-    "answer": 1,
+    "answer": "1",
     "explanation": "range(1, 5)는 1, 2, 3, 4를 반환하며 그 합은 10입니다.",
     "question_img": "Programming_Mock_01_Q13.png",
     "choices": [
@@ -697,7 +697,7 @@
     "round": "01",
     "number": "14",
     "question": "다음 중 HTML의 테이블 태그와 기능에 대한 설명으로 옳지 않은 것은?",
-    "answer": 4,
+    "answer": "4",
     "explanation": "<td>는 표의 개별 셀(Data Cell)을 정의합니다.",
     "choices": [
       "<table>은 표를 생성하는 데 사용한다.",
@@ -711,7 +711,7 @@
     "round": "01",
     "number": "15",
     "question": "다음 중 JavaScript의 배열 속성 및 메소드에 대한 설명으로 옳지 않은 것은?",
-    "answer": 3,
+    "answer": "3",
     "explanation": "pop()은 배열의 마지막 요소를 삭제합니다. 첫 번째 요소 삭제는 shift()입니다.",
     "choices": [
       "length 속성은 배열의 요소 개수를 반환한다.",
@@ -725,7 +725,7 @@
     "round": "01",
     "number": "16",
     "question": "다음 트리에 대한 중위 순회 운행 결과는?",
-    "answer": 4,
+    "answer": "4",
     "explanation": "중위 순회(Inorder) 순서는 Left -> Root -> Right 입니다.",
     "question_img": "Programming_Mock_01_Q16.png",
     "choices": [
@@ -1112,10 +1112,10 @@
     "answer": 3,
     "explanation": "표준 SQL의 UPDATE 문은 'UPDATE 테이블명 SET 컬럼=값 WHERE 조건' 형식을 사용합니다. 3번의 FROM 절은 일반적인 DML 표준 형식이 아닙니다.",
     "choices": [
-      "SELECT ~ FROM ~ WHERE ~",
-      "INSERT INTO ~ VALUES ~",
-      "UPDATE ~ FROM ~ WHERE ~",
-      "DELETE ~ FROM ~ WHERE ~"
+      "① SELECT ~ FROM ~ WHERE ~",
+      "② INSERT INTO ~ VALUES ~",
+      "③ UPDATE ~ FROM ~ WHERE ~",
+      "④ DELETE ~ FROM ~ WHERE ~"
     ]
   },
   {
@@ -1126,10 +1126,10 @@
     "answer": 3,
     "explanation": "테이블, 뷰, 인덱스 등 데이터베이스 개체를 삭제할 때는 DROP 명령을 사용합니다.",
     "choices": [
-      "ERASE",
-      "KILL",
-      "DROP",
-      "DELETE"
+      "① ERASE",
+      "② KILL",
+      "③ DROP",
+      "④ DELETE"
     ]
   },
   {
@@ -1141,10 +1141,10 @@
     "explanation": "DROP TABLE 명령은 지정된 테이블 전체를 삭제하는 명령입니다.",
     "question_img": "Programming_Mock_01_Q45.png",
     "choices": [
-      "부서명 테이블을 검색하라.",
-      "부서명 테이블을 삭제하라.",
-      "부서명 필드를 생성하라.",
-      "부서명 필드를 검색하라."
+      "① 부서명 테이블을 검색하라.",
+      "② 부서명 테이블을 삭제하라.",
+      "③ 부서명 필드를 생성하라.",
+      "④ 부서명 필드를 검색하라."
     ]
   },
   {
@@ -1155,10 +1155,10 @@
     "answer": 4,
     "explanation": "둘 이상의 프로세스가 서로 상대방이 가진 자원을 무한정 기다리는 상태를 교착상태(DeadLock)라고 합니다.",
     "choices": [
-      "Swapping",
-      "Overlay",
-      "Pipelining",
-      "DeadLock"
+      "① Swapping",
+      "② Overlay",
+      "③ Pipelining",
+      "④ DeadLock"
     ]
   },
   {
@@ -1169,10 +1169,10 @@
     "answer": 4,
     "explanation": "준비(Ready) 상태에 있는 프로세스들 중 하나가 CPU를 할당받아 실행(Running) 상태로 바뀌는 것을 디스패치(Dispatch)라고 합니다.",
     "choices": [
-      "웨이크 업",
-      "타이머 종료",
-      "블록",
-      "디스패치"
+      "① 웨이크 업",
+      "② 타이머 종료",
+      "③ 블록",
+      "④ 디스패치"
     ]
   },
   {
@@ -1183,10 +1183,10 @@
     "answer": 2,
     "explanation": "Windows는 그래픽 사용자 인터페이스(GUI) 기반의 시스템입니다. CUI는 텍스트 중심의 인터페이스(예: DOS)를 말합니다.",
     "choices": [
-      "다중 작업 환경 지원",
-      "32Bit 환경의 CUI 시스템",
-      "파일 이름을 255자까지 지원",
-      "Plug & Play 기능 지원"
+      "① 다중 작업 환경 지원",
+      "② 32Bit 환경의 CUI 시스템",
+      "③ 파일 이름을 255자까지 지원",
+      "④ Plug & Play 기능 지원"
     ]
   },
   {
@@ -1197,10 +1197,10 @@
     "answer": 1,
     "explanation": "FORMAT 명령에 /S 옵션을 사용하면 시스템 파일을 함께 전송하여 해당 디스크로 부팅이 가능하게 만듭니다.",
     "choices": [
-      "FORMAT C: /S",
-      "FORMAT C: /B",
-      "FORMAT C: /T",
-      "FORMAT C: /Q"
+      "① FORMAT C: /S",
+      "② FORMAT C: /B",
+      "③ FORMAT C: /T",
+      "④ FORMAT C: /Q"
     ]
   },
   {
@@ -1211,10 +1211,10 @@
     "answer": 3,
     "explanation": "휴리스틱 평가는 일반 사용자가 아닌 전문가가 정해진 가이드라인(휴리스틱 원칙)에 따라 UI를 평가하는 기법입니다.",
     "choices": [
-      "페이퍼 프로토타입은 종이로 모형을 만들어 테스트하는 평가 방법이다.",
-      "성능 평가는 제품의 학습성, 효율성, 만족도 등을 평가하여 성능을 개선하는 기법이다.",
-      "휴리스틱 평가는 최소 3명 이상의 사용자가 제품을 평가하는 기법이다.",
-      "선호도 평가는 선호도에 영향을 주는 속성을 파악하고 예측하는 기법이다."
+      "① 페이퍼 프로토타입은 종이로 모형을 만들어 테스트하는 평가 방법이다.",
+      "② 성능 평가는 제품의 학습성, 효율성, 만족도 등을 평가하여 성능을 개선하는 기법이다.",
+      "③ 휴리스틱 평가는 최소 3명 이상의 사용자가 제품을 평가하는 기법이다.",
+      "④ 선호도 평가는 선호도에 영향을 주는 속성을 파악하고 예측하는 기법이다."
     ]
   },
   {
@@ -1225,10 +1225,10 @@
     "answer": 1,
     "explanation": "인터프리터는 별도의 목적 프로그램을 생성하지 않고 소스 코드를 한 줄씩 즉시 해석하여 실행합니다.",
     "choices": [
-      "인터프리터(Interpreter)",
-      "프리프로세서(Preprocessor)",
-      "컴파일러(Compiler)",
-      "어셈블러(Assembler)"
+      "① 인터프리터(Interpreter)",
+      "② 프리프로세서(Preprocessor)",
+      "③ 컴파일러(Compiler)",
+      "④ 어셈블러(Assembler)"
     ]
   },
   {
@@ -1239,10 +1239,10 @@
     "answer": 3,
     "explanation": "운영체제는 시스템 소프트웨어에 해당하며, 사용자가 개발한 소프트웨어는 응용 소프트웨어로 분류됩니다.",
     "choices": [
-      "컴퓨터 시스템 장치를 효율적으로 관리",
-      "컴퓨터를 사용자가 편리하게 이용 가능",
-      "사용자가 개발한 응용 소프트웨어",
-      "사용자와 하드웨어 간의 중간 대화 통로"
+      "① 컴퓨터 시스템 장치를 효율적으로 관리",
+      "② 컴퓨터를 사용자가 편리하게 이용 가능",
+      "③ 사용자가 개발한 응용 소프트웨어",
+      "④ 사용자와 하드웨어 간의 중간 대화 통로"
     ]
   },
   {
@@ -1253,10 +1253,10 @@
     "answer": 1,
     "explanation": "하향식(Top-down) 통합 테스트에서는 미완성된 하위 모듈을 대신하는 가짜 모듈인 스텁(Stub)이 필요합니다.",
     "choices": [
-      "Stub",
-      "Driver",
-      "Procedure",
-      "Function"
+      "① Stub",
+      "② Driver",
+      "③ Procedure",
+      "④ Function"
     ]
   },
   {
@@ -1268,10 +1268,10 @@
     "explanation": "총 용량 = $(300 + 100) \\times 1.1 \\times 1.25 \\times 1.3 = 715$ 입니다.",
     "question_img": "Programming_Mock_01_Q54.png",
     "choices": [
-      "715",
-      "725",
-      "735",
-      "745"
+      "① 715",
+      "② 725",
+      "③ 735",
+      "④ 745"
     ]
   },
   {
@@ -1282,10 +1282,10 @@
     "answer": 4,
     "explanation": "UNIX의 주요 텍스트 편집기에는 ed, vi, ex 등이 있으나 et라는 편집기는 일반적이지 않습니다.",
     "choices": [
-      "ed",
-      "vi",
-      "ex",
-      "et"
+      "① ed",
+      "② vi",
+      "③ ex",
+      "④ et"
     ]
   },
   {
@@ -1495,7 +1495,7 @@
     "round": "02",
     "question_img": "Programming_Mock_02_Q10.png",
     "choices": [
-      "apple banana kiwi",
+      "apple banana kiwi ",
       "applebanana kiwi",
       "apple banana",
       "applebanana"
@@ -1624,10 +1624,10 @@
     "year": 2026,
     "round": "02",
     "choices": [
-      "255.255.0",
-      "255.0.0",
-      "0.0.0",
-      "255.255.255"
+      "255.255.255.0",
+      "255.255.0.0",
+      "255.0.0.0",
+      "255.255.255.255"
     ]
   },
   {
@@ -2429,7 +2429,7 @@
     "year": 2026,
     "round": "03",
     "question": "다음 파이썬(Python) 프로그램이 실행되었을 때, 실행 결과는?\n\ndef sum_many(*args):\n    sum = 0\n    for i in args:\n        sum = sum + i\n    return sum\n\nresult = sum_many(1, 2, 3)\nprint(result)",
-    "answer": 1,
+    "answer": "1",
     "explanation": "이 코드는 가변 인자(*args)를 사용하여 함수에 전달된 모든 인수의 합을 구하는 예제입니다. sum_many(1, 2, 3)을 호출하면 매개변수 args는 (1, 2, 3)이라는 튜플 형태가 됩니다. 함수 내부의 for 루프는 이 튜플의 각 요소를 차례대로 더하므로 1 + 2 + 3 = 6이 계산되어 반환됩니다. 따라서 출력 결과는 6(①번)입니다.",
     "choices": [
       "6",
@@ -3850,10 +3850,10 @@
     "answer": 2,
     "explanation": "SQL의 UPDATE 문은 'UPDATE 테이블명 SET 컬럼명 = 값 WHERE 조건;'의 형식을 가집니다.",
     "choices": [
-      "UPDATE 학년 = “2” FROM 학생 WHERE 학번 = “1144077”;",
-      "UPDATE 학생 SET 학년 = “2” WHERE 학번 = “1144077”;",
-      "REPLACE FROM 학생 SET 학년 = “2” WHERE 학번 = “1144077”;",
-      "REPLACE 학년 = “2” SET 학생 WHEN 학번 = “1144077”;"
+      "① UPDATE 학년 = “2” FROM 학생 WHERE 학번 = “1144077”;",
+      "② UPDATE 학생 SET 학년 = “2” WHERE 학번 = “1144077”;",
+      "③ REPLACE FROM 학생 SET 학년 = “2” WHERE 학번 = “1144077”;",
+      "④ REPLACE 학년 = “2” SET 학생 WHEN 학번 = “1144077”;"
     ]
   },
   {
@@ -3864,10 +3864,10 @@
     "answer": 3,
     "explanation": "ON DELETE NO ACTION 옵션은 참조되는 테이블의 행이 삭제될 때 이를 참조하는 테이블에 아무런 조치를 취하지 않거나(삭제 방지 등) 기본 동작을 유지하도록 설정합니다.",
     "choices": [
-      "ON DELETE CASCASE",
-      "ON DELETE SET NULL",
-      "ON DELETE NO ACTION",
-      "ON DELETE SET DEFAULT"
+      "① ON DELETE CASCASE",
+      "② ON DELETE SET NULL",
+      "③ ON DELETE NO ACTION",
+      "④ ON DELETE SET DEFAULT"
     ]
   },
   {
@@ -3878,10 +3878,10 @@
     "answer": 1,
     "explanation": "SELECT 절에서 애스터리스크(*) 기호는 테이블 내의 모든 열(컬럼)을 선택하겠다는 의미입니다.",
     "choices": [
-      "모든 열을 검색하라.",
-      "INSA 테이블의 기본키 열을 검색하라.",
-      "특수문자 “*”을 포함한 필드명을 검색하라.",
-      "INSA 테이블을 삭제하라."
+      "① 모든 열을 검색하라.",
+      "② INSA 테이블의 기본키 열을 검색하라.",
+      "③ 특수문자 “*”을 포함한 필드명을 검색하라.",
+      "④ INSA 테이블을 삭제하라."
     ]
   },
   {
@@ -3892,10 +3892,10 @@
     "answer": 1,
     "explanation": "HAVING 절은 GROUP BY 절에 의해 그룹화된 결과에 대해 필터링 조건을 부여할 때 사용합니다.",
     "choices": [
-      "GROUP BY",
-      "ORDER BY",
-      "UPDATE",
-      "JOIN"
+      "① GROUP BY",
+      "② ORDER BY",
+      "③ UPDATE",
+      "④ JOIN"
     ]
   },
   {
@@ -3906,10 +3906,10 @@
     "answer": 2,
     "explanation": "DISTINCT 키워드는 검색 결과에서 중복되는 값을 제거하고 고유한 값들만 출력하는 역할을 합니다.",
     "choices": [
-      "제품 테이블의 제품명을 모두 검색하라.",
-      "제품 테이블의 제품명을 중복되지 않게 모두 검색하라.",
-      "제품 테이블의 제품명 중에서 중복된 학과명을 모두 검색하라.",
-      "제품 테이블의 제품명을 구별하지 말고 모두 검색하라."
+      "① 제품 테이블의 제품명을 모두 검색하라.",
+      "② 제품 테이블의 제품명을 중복되지 않게 모두 검색하라.",
+      "③ 제품 테이블의 제품명 중에서 중복된 학과명을 모두 검색하라.",
+      "④ 제품 테이블의 제품명을 구별하지 말고 모두 검색하라."
     ]
   },
   {
@@ -3921,10 +3921,10 @@
     "explanation": "데이터의 검색, 삽입, 삭제, 변경은 DML(데이터 조작어)의 주된 역할입니다.",
     "question_img": "Programming_Mock_05_Q43.png",
     "choices": [
-      "불법적인 사용자로부터 데이터를 보호하기 위한 데이터 보안(Security)",
-      "데이터 정확성을 위한 무결성(Integrity) 유지",
-      "시스템 장애에 대비한 데이터 회복과 병행 수행",
-      "데이터의 검색, 삽입, 삭제, 변경"
+      "① 불법적인 사용자로부터 데이터를 보호하기 위한 데이터 보안(Security)",
+      "② 데이터 정확성을 위한 무결성(Integrity) 유지",
+      "③ 시스템 장애에 대비한 데이터 회복과 병행 수행",
+      "④ 데이터의 검색, 삽입, 삭제, 변경"
     ]
   },
   {
@@ -3935,10 +3935,10 @@
     "answer": 2,
     "explanation": "서브쿼리에서 금액의 최대값인 900,000원을 추출하고, 해당 금액을 가진 상호인 '정금강업'이 결과로 출력됩니다.",
     "choices": [
-      "대명금속",
-      "정금강업",
-      "효신산업",
-      "율촌화학"
+      "① 대명금속",
+      "② 정금강업",
+      "③ 효신산업",
+      "④ 율촌화학"
     ]
   },
   {
@@ -3949,10 +3949,10 @@
     "answer": 4,
     "explanation": "SELECT, UPDATE, INSERT는 데이터 조작어(DML)에 해당하며, GRANT는 권한을 부여하는 데이터 제어어(DCL)에 해당합니다.",
     "choices": [
-      "SELECT",
-      "UPDATE",
-      "INSERT",
-      "GRANT"
+      "① SELECT",
+      "② UPDATE",
+      "③ INSERT",
+      "④ GRANT"
     ]
   },
   {
@@ -3963,10 +3963,10 @@
     "answer": 1,
     "explanation": "pwd(print working directory) 명령은 현재 사용자가 위치한 작업 디렉토리의 절대 경로를 출력합니다.",
     "choices": [
-      "pwd",
-      "rmdir",
-      "chmod",
-      "groups"
+      "① pwd",
+      "② rmdir",
+      "③ chmod",
+      "④ groups"
     ]
   },
   {
@@ -3977,10 +3977,10 @@
     "answer": 3,
     "explanation": "커널(Kernel)은 유닉스 운영체제의 핵심 부분으로 하드웨어 관리와 프로세스 제어 등 핵심적인 시스템 기능을 담당합니다.",
     "choices": [
-      "Shell",
-      "Application Program",
-      "Kernel",
-      "Utility Program"
+      "① Shell",
+      "② Application Program",
+      "③ Kernel",
+      "④ Utility Program"
     ]
   },
   {
@@ -3991,10 +3991,10 @@
     "answer": 3,
     "explanation": "계산식: (100 + 50 + 15) * 1.1 * 1.2 * 1.5 = 165 * 1.98 = 326.7GB 입니다.",
     "choices": [
-      "312.6GB",
-      "322.8GB",
-      "326.7GB",
-      "340.5GB"
+      "① 312.6GB",
+      "② 322.8GB",
+      "③ 326.7GB",
+      "④ 340.5GB"
     ]
   },
   {

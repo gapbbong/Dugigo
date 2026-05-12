@@ -36,10 +36,30 @@ export async function GET(req: NextRequest) {
           global: { fetch: customFetch }
         });
 
-        const { data, error } = await supabase
+        const start = parseInt(searchParams.get("start") || "0");
+        const limit = parseInt(searchParams.get("limit") || "30");
+        const yearFilter = searchParams.get("year");
+        const roundFilter = searchParams.get("round");
+        const unitFilter = searchParams.get("unit");
+
+        let query = supabase
           .from('dukigo_exam_questions')
-          .select('*')
+          .select('*', { count: 'exact' })
           .eq('subject_id', 'PRODUCTION_AUTO');
+
+        if (yearFilter) query = query.eq('exam_year', yearFilter);
+        if (roundFilter) query = query.eq('exam_round', roundFilter);
+        if (unitFilter) {
+          const cleanUnit = unitFilter.replace(/^\[.*?\]\s*/, '').replace(/\s*\(\d+부\)$/, '').trim();
+          // metadata 내의 sub_unit 필드 검색 (Supabase jsonb 검색 활용)
+          query = query.filter('metadata->>sub_unit', 'ilike', `%${cleanUnit}%`);
+        }
+
+        const { data, error, count } = await query
+          .order('exam_year', { ascending: false })
+          .order('exam_round', { ascending: false })
+          .order('question_no', { ascending: true })
+          .range(start, start + limit - 1);
 
         if (!error && data) {
           const mappedQuestions = data.map(q => ({
@@ -54,20 +74,16 @@ export async function GET(req: NextRequest) {
             sub_unit: q.metadata?.sub_unit || "4.3 자동화 시스템",
             question_img: q.metadata?.question_img || null,
             visual_coords: q.metadata?.visual_coords || null,
-            round_info: `${q.exam_year}년 ${q.exam_round}회`
+            round_info: `${q.exam_year}년 ${q.exam_round}회`,
+            choice_imgs: q.metadata?.choice_imgs || []
           }));
-
-          const sorted = mappedQuestions.sort((a, b) => {
-            if (a.sub_unit !== b.sub_unit) return a.sub_unit.localeCompare(b.sub_unit);
-            if (a.year !== b.year) return parseInt(b.year) - parseInt(a.year);
-            if (a.round !== b.round) return parseInt(b.round) - parseInt(a.round);
-            return a.number - b.number;
-          });
 
           return NextResponse.json({
             subject,
-            total: sorted.length,
-            questions: sorted
+            total: count || mappedQuestions.length,
+            questions: mappedQuestions,
+            start,
+            limit
           });
         }
       }
@@ -274,7 +290,7 @@ export async function GET(req: NextRequest) {
         "스프레드시트 일반": 41
       };
 
-      const sorted = allQuestions.sort((a, b) => {
+      let sorted = allQuestions.sort((a, b) => {
         const orderA = UNIT_ORDER[a.sub_unit] || 99;
         const orderB = UNIT_ORDER[b.sub_unit] || 99;
         
@@ -288,10 +304,40 @@ export async function GET(req: NextRequest) {
         return (a.number || 0) - (b.number || 0);
       });
 
+      // --- 서버 사이드 필터링 및 페이징 로직 추가 ---
+      const yearFilter = searchParams.get("year");
+      const roundFilter = searchParams.get("round");
+      const unitFilter = searchParams.get("unit");
+      const start = parseInt(searchParams.get("start") || "0");
+      const limit = parseInt(searchParams.get("limit") || "10000"); // 기본값은 크게 설정
+
+      if (unitFilter) {
+        const cleanUnit = unitFilter.replace(/^\[.*?\]\s*/, '').replace(/\s*\(\d+부\)$/, '').trim();
+        sorted = sorted.filter(q => {
+          const qUnit = (q.sub_unit || q.subject || '').replace(/^\[.*?\]\s*/, '').trim();
+          return qUnit === cleanUnit || q.sub_unit === unitFilter;
+        });
+      }
+
+      if (yearFilter || roundFilter) {
+        sorted = sorted.filter(q => {
+          const r = q.round || q.id?.split('_')[1] || '';
+          const y = q.year || '';
+          const matchYear = !yearFilter || y.toString() === yearFilter.toString();
+          const matchRound = !roundFilter || r.toString() === roundFilter.toString();
+          return matchYear && matchRound;
+        });
+      }
+
+      const totalCount = sorted.length;
+      const paginatedQuestions = sorted.slice(start, start + limit);
+
       return NextResponse.json({
         subject,
-        total: sorted.length,
-        questions: sorted
+        total: totalCount,
+        questions: paginatedQuestions,
+        start,
+        limit
       });
     }
 
