@@ -182,6 +182,17 @@ export default function TeacherDashboard() {
     }
   };
 
+  const deleteStudent = async (studentId: string, studentName: string) => {
+    if (!confirm(`'${studentName}' 학생을 정말로 탈퇴(삭제)시키겠습니까?\n이 작업은 되돌릴 수 없습니다.`)) return;
+    const { error } = await supabase.from('dukigo_profiles').delete().eq('id', studentId);
+    if (!error) {
+      setAllStudents(allStudents.filter(s => s.id !== studentId));
+      alert(`${studentName} 학생이 탈퇴 처리되었습니다.`);
+    } else {
+      alert('탈퇴 처리 중 오류가 발생했습니다.');
+    }
+  };
+
   const formatTime = (seconds: number) => {
     const h = Math.floor(seconds / 3600);
     const m = Math.floor((seconds % 3600) / 60);
@@ -258,6 +269,7 @@ export default function TeacherDashboard() {
                 groups={groups} 
                 levelTitles={LEVEL_TITLES} 
                 onToggleGroup={toggleStudentInGroup} 
+                onDelete={deleteStudent}
                 formatTime={formatTime} 
               />
             ))}
@@ -368,18 +380,19 @@ function GroupTag({ active, label, count, onClick, onDelete }: any) {
   );
 }
 
-function StudentCard({ student, groups, levelTitles, onToggleGroup, formatTime }: any) {
+function StudentCard({ student, groups, levelTitles, onToggleGroup, formatTime, onDelete }: any) {
   const [showGroups, setShowGroups] = useState(false);
   const level = Math.floor((student.exp_points || 0) / 1000) + 1;
   const levelTitle = levelTitles[Math.min(11, level - 1)];
 
   return (
     <motion.div layout initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="bg-white border border-slate-200 rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transition-all group relative overflow-hidden">
-      <div className="absolute top-2 right-2">
+      <div className="absolute top-2 right-2 flex gap-1">
         <button onClick={() => setShowGroups(!showGroups)} className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${showGroups ? 'bg-brand-600 text-white' : 'bg-slate-50 text-slate-400 hover:bg-brand-50'}`}><UserPlus size={16} /></button>
+        <button onClick={() => onDelete(student.id, student.username)} className="w-8 h-8 bg-rose-50 text-rose-400 rounded-full flex items-center justify-center hover:bg-rose-500 hover:text-white transition-all"><Trash2 size={16} /></button>
       </div>
 
-      <div className="flex items-center gap-4 mb-4">
+      <div className="flex items-center gap-4 mb-2">
         <div className="w-12 h-12 bg-slate-100 border border-slate-200 rounded-xl flex items-center justify-center text-slate-400 font-black text-xs text-center px-1">
           {student.username.replace(/[0-9]/g, '')}
         </div>
@@ -389,21 +402,21 @@ function StudentCard({ student, groups, levelTitles, onToggleGroup, formatTime }
         </div>
       </div>
 
-      <div className="space-y-4 border-t border-slate-50 pt-4">
+      <div className="space-y-4 border-t border-slate-50 pt-2">
         {/* 행 1: [자격증 | 총 푼 문제 | 학습 시간] */}
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1">
-            <p className="text-[8px] font-black text-slate-400 uppercase mb-1">학습 자격증</p>
+            <p className="text-[11px] font-black text-slate-500 uppercase mb-1">학습 자격증</p>
             <div className="flex flex-wrap gap-0.5">
               {student.subjectsStudied.length > 0 ? student.subjectsStudied.map((s: string) => <span key={s} className="px-1.5 py-0.5 bg-slate-100 text-slate-500 rounded text-[8px] font-bold">{s}</span>) : <span className="text-[8px] text-slate-300 italic">없음</span>}
             </div>
           </div>
           <div className="text-center">
-            <p className="text-[8px] font-black text-slate-400 uppercase mb-1">총 문제</p>
+            <p className="text-[11px] font-black text-slate-500 uppercase mb-1">총 문제</p>
             <p className="text-sm font-black text-slate-800">{student.totalQuestions}Q</p>
           </div>
           <div className="text-right">
-            <p className="text-[8px] font-black text-slate-400 uppercase mb-1">학습 시간</p>
+            <p className="text-[11px] font-black text-slate-500 uppercase mb-1">학습 시간</p>
             <p className="text-sm font-black text-slate-800">{formatTime(student.totalDuration)}</p>
           </div>
         </div>
@@ -411,7 +424,7 @@ function StudentCard({ student, groups, levelTitles, onToggleGroup, formatTime }
         {/* 행 2: [정답률 | 최근 접속] */}
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <p className="text-[8px] font-black text-slate-400 uppercase mb-1">종합 정답률</p>
+            <p className="text-[11px] font-black text-slate-500 uppercase mb-1">종합 정답률</p>
             <div className="flex items-center gap-2">
               <span className={`font-black text-sm ${student.accuracy >= 60 ? 'text-emerald-500' : 'text-rose-500'}`}>{student.accuracy}%</span>
               <div className="flex-1 h-1 bg-slate-100 rounded-full overflow-hidden">
@@ -420,8 +433,8 @@ function StudentCard({ student, groups, levelTitles, onToggleGroup, formatTime }
             </div>
           </div>
           <div className="text-right">
-            <p className="text-[8px] font-black text-slate-400 uppercase mb-1">최근 접속</p>
-            <p className="text-[9px] font-black text-slate-500 leading-tight">{student.lastActive}</p>
+            <p className="text-[11px] font-black text-slate-500 uppercase mb-1">최근 접속</p>
+            <p className="text-xs font-black text-slate-600 leading-tight">{student.lastActive}</p>
           </div>
         </div>
       </div>
