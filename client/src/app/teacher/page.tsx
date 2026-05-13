@@ -1,15 +1,25 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
-import { Users, Target, Clock, AlertTriangle, TrendingUp, Search, ChevronRight, ChevronLeft, Award } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { 
+  Users, Target, Clock, AlertTriangle, TrendingUp, Search, 
+  ChevronRight, ChevronLeft, Award, PlusCircle, Filter, 
+  FolderPlus, UserPlus, CheckCircle2, MoreVertical, Trash2
+} from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function TeacherDashboard() {
   const [students, setStudents] = useState<any[]>([]);
+  const [allStudents, setAllStudents] = useState<any[]>([]); // 원본 데이터
   const [loading, setLoading] = useState(true);
   const [isOwner, setIsOwner] = useState(false);
   const [subjects, setSubjects] = useState<string[]>([]);
   const [selectedSubject, setSelectedSubject] = useState<string>('전체');
+  const [groups, setGroups] = useState<{name: string, members: string[]}[]>([]);
+  const [selectedGroup, setSelectedGroup] = useState<string>('전체');
+  const [isAddingGroup, setIsAddingGroup] = useState(false);
+  const [newGroupName, setNewGroupName] = useState('');
+  
   const [stats, setStats] = useState({
     totalStudents: 0,
     avgAccuracy: 0,
@@ -25,9 +35,17 @@ export default function TeacherDashboard() {
   ];
 
   useEffect(() => {
+    // 로컬 스토리지에서 그룹 정보 불러오기
+    const savedGroups = localStorage.getItem('dukigo_teacher_groups');
+    if (savedGroups) setGroups(JSON.parse(savedGroups));
+    
     fetchData();
     fetchSubjects();
-  }, [selectedSubject]);
+  }, []);
+
+  useEffect(() => {
+    applyFilters();
+  }, [selectedSubject, selectedGroup, searchTerm, allStudents]);
 
   const fetchSubjects = async () => {
     try {
@@ -42,7 +60,6 @@ export default function TeacherDashboard() {
   const fetchData = async () => {
     setLoading(true);
     try {
-      // 0. 현재 사용자 정보 확인
       const { data: { user } } = await supabase.auth.getUser();
       const ownerFlag = user?.email?.toLowerCase() === 'serv@kakao.com';
       setIsOwner(ownerFlag);
@@ -57,294 +74,439 @@ export default function TeacherDashboard() {
       const { data: profiles, error: profileErr } = await profileQuery;
       if (profileErr) throw profileErr;
 
-      // 1. 학습 로그(세션 기록) 가져오기
       let logQuery = supabase.from('dukigo_study_logs').select('*');
-      if (selectedSubject !== '전체') {
-        logQuery = logQuery.eq('subject', selectedSubject);
-      }
-      
       const { data: logs, error: logErr } = await logQuery;
-      
       if (logErr) throw logErr;
 
-      // 데이터 가공
-      let totalCorrect = 0;
-      let totalQuestions = 0;
-      let todayActiveSet = new Set();
-
       const todayStr = new Date().toISOString().split('T')[0];
+      let tCorrect = 0, tQuestions = 0;
+      let activeSet = new Set();
 
-      const studentStats = profiles?.map(student => {
-        const studentLogs = logs?.filter(l => l.user_id === student.id) || [];
-        const studentSubjects = Array.from(new Set(studentLogs.map(l => l.subject))).filter(Boolean);
+      const processed = profiles?.map(student => {
+        const sLogs = logs?.filter(l => l.user_id === student.id) || [];
+        const sSubs = Array.from(new Set(sLogs.map(l => l.subject))).filter(Boolean);
         
-        let sTotalQ = 0;
-        let sCorrect = 0;
-        let sDuration = 0;
-        let lastActive = '기록 없음';
+        let sTotalQ = 0, sCorrect = 0, sDur = 0, lastA = '기록 없음';
 
-        studentLogs.forEach(log => {
+        sLogs.forEach(log => {
           sTotalQ += log.total_questions || 0;
           sCorrect += log.correct_questions || 0;
-          sDuration += log.duration_seconds || 0;
-          
-          totalQuestions += log.total_questions || 0;
-          totalCorrect += log.correct_questions || 0;
-
-          if (log.end_time?.startsWith(todayStr)) {
-            todayActiveSet.add(student.id);
-          }
-          if (lastActive === '기록 없음' || new Date(log.end_time) > new Date(lastActive)) {
-            lastActive = log.end_time?.replace('T', ' ').split('.')[0] || lastActive;
+          sDur += log.duration_seconds || 0;
+          if (log.end_time?.startsWith(todayStr)) activeSet.add(student.id);
+          if (lastA === '기록 없음' || new Date(log.end_time) > new Date(lastA)) {
+            lastA = log.end_time?.split('T')[0] || lastA;
           }
         });
 
-        const accuracy = sTotalQ > 0 ? Math.round((sCorrect / sTotalQ) * 100) : 0;
+        tQuestions += sTotalQ;
+        tCorrect += sCorrect;
 
         return {
           ...student,
           username: student.display_name || '이름 없음',
           totalQuestions: sTotalQ,
-          accuracy,
-          totalDuration: sDuration,
-          lastActive,
-          subjectsStudied: studentSubjects.length > 0 ? studentSubjects.join(', ') : '기록 없음',
-          guessingCount: 0 // 현재 스키마에서는 세션 요약만 제공하므로 0으로 설정
+          accuracy: sTotalQ > 0 ? Math.round((sCorrect / sTotalQ) * 100) : 0,
+          totalDuration: sDur,
+          lastActive: lastA,
+          subjectsStudied: sSubs,
+          guessingCount: 0
         };
       }) || [];
 
-      // 정답률 순으로 정렬 (높은 순)
-      studentStats.sort((a, b) => b.accuracy - a.accuracy);
-
-      // 종목 선택 시 해당 종목을 한 번이라도 푼 학생만 표시
-      const filteredStudents = selectedSubject === '전체' 
-        ? studentStats 
-        : studentStats.filter(s => s.totalQuestions > 0);
-
-      // 이름/아이디 검색 필터링
-      const searchedStudents = filteredStudents.filter(s => {
-        const lowerName = s.username.toLowerCase();
-        const lowerId = (s.id || '').toLowerCase();
-        const lowerSearch = searchTerm.toLowerCase();
-        return lowerName.includes(lowerSearch) || lowerId.includes(lowerSearch);
-      });
-
-      setStudents(searchedStudents);
+      setAllStudents(processed);
       setStats({
-        totalStudents: filteredStudents.length,
-        avgAccuracy: totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0,
-        todayActive: todayActiveSet.size,
+        totalStudents: processed.length,
+        avgAccuracy: tQuestions > 0 ? Math.round((tCorrect / tQuestions) * 100) : 0,
+        todayActive: activeSet.size,
         suspiciousCount: 0
       });
 
     } catch (err) {
-      console.error('Error fetching dashboard data:', err);
+      console.error('Error fetching data:', err);
     } finally {
       setLoading(false);
     }
   };
 
+  const applyFilters = () => {
+    let filtered = [...allStudents];
+
+    // 1. 종목 필터
+    if (selectedSubject !== '전체') {
+      filtered = filtered.filter(s => s.subjectsStudied.includes(selectedSubject));
+    }
+
+    // 2. 그룹 필터
+    if (selectedGroup !== '전체') {
+      const group = groups.find(g => g.name === selectedGroup);
+      if (group) {
+        filtered = filtered.filter(s => group.members.includes(s.id));
+      }
+    }
+
+    // 3. 검색 필터
+    if (searchTerm) {
+      const lower = searchTerm.toLowerCase();
+      filtered = filtered.filter(s => s.username.toLowerCase().includes(lower) || (s.id || '').toLowerCase().includes(lower));
+    }
+
+    setStudents(filtered);
+  };
+
+  const createGroup = () => {
+    if (!newGroupName.trim()) return;
+    if (groups.find(g => g.name === newGroupName)) {
+      alert('이미 존재하는 그룹명입니다.');
+      return;
+    }
+    const newGroups = [...groups, { name: newGroupName, members: [] }];
+    setGroups(newGroups);
+    localStorage.setItem('dukigo_teacher_groups', JSON.stringify(newGroups));
+    setNewGroupName('');
+    setIsAddingGroup(false);
+  };
+
+  const toggleStudentInGroup = (studentId: string, groupName: string) => {
+    const updated = groups.map(g => {
+      if (g.name === groupName) {
+        const exists = g.members.includes(studentId);
+        return {
+          ...g,
+          members: exists ? g.members.filter(id => id !== studentId) : [...g.members, studentId]
+        };
+      }
+      return g;
+    });
+    setGroups(updated);
+    localStorage.setItem('dukigo_teacher_groups', JSON.stringify(updated));
+  };
+
+  const deleteGroup = (name: string) => {
+    if (!confirm(`'${name}' 그룹을 삭제하시겠습니까?`)) return;
+    const updated = groups.filter(g => g.name !== name);
+    setGroups(updated);
+    localStorage.setItem('dukigo_teacher_groups', JSON.stringify(updated));
+    if (selectedGroup === name) setSelectedGroup('전체');
+  };
+
   const formatTime = (seconds: number) => {
     const h = Math.floor(seconds / 3600);
     const m = Math.floor((seconds % 3600) / 60);
-    return h > 0 ? `${h}시간 ${m}분` : `${m}분`;
+    return h > 0 ? `${h}h ${m}m` : `${m}m`;
   };
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50">
-        <div className="glass-card p-12 rounded-[3rem] text-center shadow-xl animate-pulse">
-          <p className="text-2xl font-black text-brand-600 tracking-tight">학생 데이터 분석 중...</p>
+  return (
+    <div className="min-h-screen bg-[#F8FAFC] text-slate-800 font-sans pb-20">
+      {/* Header Overlay */}
+      <div className="bg-white border-b border-slate-200 sticky top-0 z-40 px-4 py-3 md:px-10 md:py-6 flex flex-col md:flex-row justify-between items-center gap-4 shadow-sm">
+        <div className="flex items-center gap-4 w-full md:w-auto">
+          <button 
+            onClick={() => window.location.href = '/select-subject'} 
+            className="w-10 h-10 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center text-slate-500 hover:text-brand-600 active:scale-95 transition-all"
+          >
+            <ChevronLeft size={20} />
+          </button>
+          <div>
+            <h1 className="text-xl md:text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
+              {isOwner ? '관리자 대시보드' : '교사 대시보드'}
+              <span className="text-[10px] bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full uppercase">Beta</span>
+            </h1>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2 w-full md:w-auto">
+          <div className="relative flex-1 md:w-64">
+            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+            <input 
+              type="text" 
+              placeholder="학생 검색..." 
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500/20 font-bold text-sm" 
+            />
+          </div>
+          <button onClick={fetchData} className="p-2.5 bg-brand-600 text-white rounded-xl shadow-lg shadow-brand-600/20 hover:bg-brand-700">
+            <TrendingUp size={18} />
+          </button>
         </div>
       </div>
-    );
-  }
 
-  return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 p-6 md:p-12 font-sans relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-500/5 blur-[120px] rounded-full pointer-events-none" />
-      
-      <div className="max-w-7xl mx-auto space-y-8 relative z-10">
-        <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-10">
-          <div className="flex items-center gap-6 w-full md:w-auto">
+      <main className="max-w-7xl mx-auto p-4 md:p-10 space-y-8">
+        {/* 요약 대시보드 (수평 스크롤 모바일 대응) */}
+        <div className="flex overflow-x-auto pb-4 gap-4 no-scrollbar -mx-4 px-4 md:grid md:grid-cols-4 md:mx-0 md:px-0">
+          <StatCard label="전체 학생" value={stats.totalStudents} sub="누적 등록" icon={<Users />} color="text-blue-600" bg="bg-blue-50" />
+          <StatCard label="평균 정답률" value={`${stats.avgAccuracy}%`} sub="전체 학습 기준" icon={<Target />} color="text-emerald-600" bg="bg-emerald-50" />
+          <StatCard label="오늘 접속" value={stats.todayActive} sub="학습 진행 중" icon={<TrendingUp />} color="text-brand-600" bg="bg-brand-50" />
+          <StatCard label="이상 징후" value={stats.suspiciousCount} sub="집중 관리 필요" icon={<AlertTriangle />} color="text-rose-600" bg="bg-rose-50" />
+        </div>
+
+        {/* 필터 섹션 */}
+        <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+          <div className="flex items-center gap-2 overflow-x-auto w-full no-scrollbar">
+            <Filter size={16} className="text-slate-400 shrink-0" />
+            <FilterTab active={selectedSubject === '전체'} label="전체" onClick={() => setSelectedSubject('전체')} />
+            {subjects.map(s => (
+              <FilterTab key={s} active={selectedSubject === s} label={s} onClick={() => setSelectedSubject(s)} />
+            ))}
+          </div>
+        </div>
+
+        {/* 그룹 관리 섹션 */}
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-black text-slate-800 flex items-center gap-2">
+              <FolderPlus size={20} className="text-brand-600" />
+              내 그룹 관리
+            </h3>
             <button 
-              onClick={() => window.location.href = '/select-subject'} 
-              className="w-12 h-12 bg-white border-2 border-slate-100 rounded-2xl flex items-center justify-center text-slate-500 hover:border-brand-400 hover:text-brand-600 active:scale-90 active:bg-brand-50 transition-all shadow-sm shrink-0 hover:shadow-md"
-              title="과목 선택으로 돌아가기"
+              onClick={() => setIsAddingGroup(true)}
+              className="text-xs font-black text-brand-600 flex items-center gap-1 hover:underline"
             >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <div>
-              <div className="flex items-center gap-3 mb-2">
-                <span className="px-3 py-1 bg-brand-100 text-brand-700 font-black text-xs uppercase tracking-widest rounded-full">
-                  {isOwner ? 'Owner' : 'Admin'}
-                </span>
-                <h1 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
-                  {isOwner ? '관리자 대시보드' : '교사 대시보드'}
-                </h1>
-              </div>
-              <p className="text-slate-500 font-bold text-lg">학생들의 전체 학습 현황과 성취도를 한눈에 파악하세요.</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-4 w-full md:w-auto">
-            <label className="flex items-center gap-3 bg-white px-5 py-3 rounded-2xl border-2 border-slate-100 cursor-pointer hover:border-brand-300 transition-all shadow-sm">
-              <span className="text-sm font-black text-slate-600">나의 진도 표시</span>
-              <div className="relative">
-                <input 
-                  type="checkbox" 
-                  className="sr-only peer"
-                  defaultChecked={localStorage.getItem('dukigo_show_teacher_progress') !== 'false'}
-                  onChange={(e) => {
-                    localStorage.setItem('dukigo_show_teacher_progress', e.target.checked ? 'true' : 'false');
-                  }}
-                />
-                <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-brand-600"></div>
-              </div>
-            </label>
-            <button onClick={fetchData} className="px-6 py-3 bg-brand-600 text-white rounded-xl font-black shadow-lg shadow-brand-500/20 hover:bg-brand-700 transition-all active:scale-95">
-              새로고침
+              <PlusCircle size={14} /> 새 그룹 추가
             </button>
           </div>
-        </header>
-
-        {/* 요약 카드 */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <StatCard icon={<Users />} label="전체 등록 학생" value={`${stats.totalStudents}명`} color="bg-blue-50 text-blue-600" />
-          <StatCard icon={<Target />} label="전체 평균 정답률" value={`${stats.avgAccuracy}%`} color="bg-emerald-50 text-emerald-600" />
-          <StatCard icon={<TrendingUp />} label="오늘 학습한 학생" value={`${stats.todayActive}명`} color="bg-brand-50 text-brand-600" />
-          <StatCard icon={<AlertTriangle />} label="불성실(찍기) 의심 학생" value={`${stats.suspiciousCount}명`} color="bg-rose-50 text-rose-600" />
-        </div>
-
-        {/* 학생 목록 테이블 */}
-        <div className="bg-white/80 backdrop-blur-xl rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-white overflow-hidden">
-          <div className="p-6 md:p-8 border-b border-slate-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white/50">
-            <div className="flex flex-col md:flex-row md:items-center gap-4">
-              <h2 className="text-2xl font-black text-slate-800 flex items-center gap-2">
-                학생 상세 현황 <span className="text-brand-500 bg-brand-50 px-3 py-1 rounded-full text-sm">{students.length}</span>
-              </h2>
-              <select 
-                value={selectedSubject}
-                onChange={(e) => {
-                  setSelectedSubject(e.target.value);
-                  setSearchTerm('');
-                }}
-                className="px-4 py-2 bg-slate-50 border-2 border-slate-100 rounded-xl font-black text-slate-600 shadow-sm hover:border-brand-300 focus:outline-none transition-all cursor-pointer text-sm"
-              >
-                <option value="전체">전체 종목</option>
-                {subjects.map(sub => (
-                  <option key={sub} value={sub}>{sub}</option>
-                ))}
-              </select>
-            </div>
-            <div className="relative w-full md:w-64">
-              <Search className="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-              <input 
-                type="text" 
-                placeholder="이름 또는 ID로 검색..." 
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:outline-none focus:border-brand-400 focus:bg-white font-bold text-sm transition-all" 
+          
+          <div className="flex gap-2 overflow-x-auto no-scrollbar py-1">
+            <GroupTag 
+              active={selectedGroup === '전체'} 
+              label="모든 학생" 
+              count={allStudents.length} 
+              onClick={() => setSelectedGroup('전체')} 
+            />
+            {groups.map(g => (
+              <GroupTag 
+                key={g.name} 
+                active={selectedGroup === g.name} 
+                label={g.name} 
+                count={g.members.length} 
+                onClick={() => setSelectedGroup(g.name)}
+                onDelete={() => deleteGroup(g.name)}
               />
-            </div>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse min-w-[800px]">
-              <thead>
-                <tr className="bg-slate-50/80 text-slate-400 font-black text-xs uppercase tracking-widest border-b border-slate-100">
-                  <th className="p-6 font-black">학생 정보</th>
-                  <th className="p-6 font-black">최근 접속일</th>
-                  <th className="p-6 font-black">학습 종목</th>
-                  <th className="p-6 font-black">총 푼 문제수</th>
-                  <th className="p-6 font-black w-64">종합 정답률</th>
-                  <th className="p-6 font-black">총 학습 시간</th>
-                  <th className="p-6 font-black text-right">학습 상태 분석</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100">
-                {students.map((student, idx) => (
-                  <tr key={idx} className="hover:bg-slate-50/50 transition-colors group">
-                    <td className="p-6">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-100 to-brand-50 text-brand-600 flex items-center justify-center font-black text-xl shadow-inner border border-brand-200/50">
-                          {student.username.charAt(0)}
-                        </div>
-                        <div>
-                          <div className="font-black text-slate-900 text-lg mb-0.5 flex items-center gap-2">
-                            {student.username}
-                            {student.role?.toLowerCase() === 'teacher' ? (
-                              <span className="px-2 py-0.5 bg-brand-500 text-white text-[10px] rounded-md border border-brand-600 shadow-sm leading-none pt-1">교사</span>
-                            ) : (
-                              <span className="px-2 py-0.5 bg-blue-500 text-white text-[10px] rounded-md border border-blue-600 shadow-sm leading-none pt-1">학생</span>
-                            )}
-                          </div>
-                          <div className="text-xs font-bold text-slate-400 flex items-center gap-1.5 bg-slate-100 w-fit px-2 py-0.5 rounded-md">
-                            <Award className="w-3 h-3 text-amber-500" /> 
-                            Lv.{Math.floor((student.exp_points || 0) / 1000) + 1} {LEVEL_TITLES[Math.min(11, Math.floor((student.exp_points || 0) / 1000))] || '입문자'} 
-                            ({student.exp_points || 0} EXP)
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td className="p-6 font-bold text-slate-500">{student.lastActive}</td>
-                    <td className="p-6">
-                      <span className="px-3 py-1 bg-slate-100 text-slate-600 rounded-lg font-bold text-xs">
-                        {selectedSubject === '전체' ? student.subjectsStudied : selectedSubject}
-                      </span>
-                    </td>
-                    <td className="p-6 font-black text-slate-800 text-lg">{student.totalQuestions}<span className="text-sm font-bold text-slate-400 ml-1">문제</span></td>
-                    <td className="p-6">
-                      <div className="flex items-center gap-3">
-                        <span className={`font-black text-xl w-12 ${student.accuracy >= 60 ? 'text-emerald-500' : 'text-rose-500'}`}>
-                          {student.accuracy}%
-                        </span>
-                        <div className="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                          <div className={`h-full rounded-full ${student.accuracy >= 60 ? 'bg-emerald-400' : 'bg-rose-400'}`} style={{ width: `${student.accuracy}%` }} />
-                        </div>
-                      </div>
-                    </td>
-                    <td className="p-6 font-bold text-slate-500">{formatTime(student.totalDuration)}</td>
-                    <td className="p-6 text-right">
-                      <div className="flex gap-2 justify-end">
-                        {student.accuracy >= 60 ? (
-                          <span className="px-3 py-1.5 bg-emerald-50 text-emerald-600 border border-emerald-100 rounded-full text-xs font-black">합격 안정권</span>
-                        ) : (
-                          <span className="px-3 py-1.5 bg-rose-50 text-rose-600 border border-rose-100 rounded-full text-xs font-black">집중 지도 요망</span>
-                        )}
-                        {student.guessingCount > 0 && (
-                          <span className="px-3 py-1.5 bg-amber-50 text-amber-600 border border-amber-100 rounded-full text-xs font-black flex items-center gap-1">
-                            <AlertTriangle className="w-3 h-3" /> 찍기 의심 ({student.guessingCount}건)
-                          </span>
-                        )}
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            {students.length === 0 && (
-              <div className="p-20 flex flex-col items-center justify-center text-center">
-                <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mb-4"><Users className="w-8 h-8 text-slate-300" /></div>
-                <div className="text-xl font-black text-slate-800 mb-2">등록된 학생이 없습니다</div>
-                <div className="text-slate-400 font-bold">학생들이 학습을 시작하면 이곳에 데이터가 표시됩니다.</div>
-              </div>
-            )}
+            ))}
           </div>
         </div>
+
+        {/* 학생 목록 (카드형 레이아웃) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <AnimatePresence>
+            {students.map((student, idx) => (
+              <StudentCard 
+                key={student.id || idx} 
+                student={student} 
+                groups={groups}
+                levelTitles={LEVEL_TITLES}
+                onToggleGroup={toggleStudentInGroup}
+                formatTime={formatTime}
+              />
+            ))}
+          </AnimatePresence>
+        </div>
+
+        {students.length === 0 && (
+          <div className="bg-white border-2 border-dashed border-slate-200 rounded-[2rem] p-20 text-center">
+            <Users size={48} className="mx-auto text-slate-200 mb-4" />
+            <p className="text-slate-400 font-bold">조건에 맞는 학생 데이터가 없습니다.</p>
+          </div>
+        )}
+      </main>
+
+      {/* 그룹 생성 팝업 */}
+      <AnimatePresence>
+        {isAddingGroup && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-slate-900/40 backdrop-blur-sm">
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-white rounded-[2rem] p-8 w-full max-w-md shadow-2xl">
+              <h3 className="text-xl font-black mb-6">새로운 스터디 그룹</h3>
+              <input 
+                autoFocus
+                type="text" 
+                placeholder="그룹명을 입력하세요 (예: 1-4반 방과후)" 
+                className="w-full px-6 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-brand-500 outline-none mb-6 font-bold"
+                value={newGroupName}
+                onChange={e => setNewGroupName(e.target.value)}
+                onKeyPress={e => e.key === 'Enter' && createGroup()}
+              />
+              <div className="flex gap-3">
+                <button onClick={() => setIsAddingGroup(false)} className="flex-1 py-4 bg-slate-100 text-slate-500 font-black rounded-xl hover:bg-slate-200">취소</button>
+                <button onClick={createGroup} className="flex-1 py-4 bg-brand-600 text-white font-black rounded-xl shadow-lg shadow-brand-600/20">생성하기</button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+function StatCard({ label, value, sub, icon, color, bg }: any) {
+  return (
+    <div className="bg-white p-5 md:p-6 rounded-[1.5rem] border border-slate-100 shadow-sm min-w-[160px] flex flex-col gap-3">
+      <div className={`w-10 h-10 ${bg} ${color} rounded-xl flex items-center justify-center`}>
+        {React.cloneElement(icon, { size: 20 })}
+      </div>
+      <div>
+        <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{label}</div>
+        <div className="text-2xl font-black text-slate-900">{value}</div>
+        <div className="text-[10px] font-bold text-slate-400">{sub}</div>
       </div>
     </div>
   );
 }
 
-function StatCard({ icon, label, value, color }: any) {
+function FilterTab({ active, label, onClick }: any) {
   return (
-    <div className="bg-white/80 backdrop-blur-md p-6 md:p-8 rounded-[2rem] shadow-lg shadow-slate-200/40 border border-white flex flex-col justify-between hover:-translate-y-1 transition-transform cursor-default">
-      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-inner ${color}`}>
-        {React.cloneElement(icon, { className: 'w-7 h-7' })}
-      </div>
-      <div>
-        <div className="text-slate-400 font-black text-xs uppercase tracking-widest mb-2">{label}</div>
-        <div className="text-4xl font-black text-slate-800 tracking-tight">{value}</div>
-      </div>
+    <button 
+      onClick={onClick}
+      className={`px-4 py-1.5 rounded-full text-xs font-black whitespace-nowrap transition-all border ${
+        active 
+        ? 'bg-brand-600 text-white border-brand-600 shadow-md shadow-brand-600/20' 
+        : 'bg-white text-slate-500 border-slate-200 hover:border-brand-300'
+      }`}
+    >
+      {label}
+    </button>
+  );
+}
+
+function GroupTag({ active, label, count, onClick, onDelete }: any) {
+  return (
+    <div 
+      onClick={onClick}
+      className={`group px-4 py-2 rounded-xl flex items-center gap-2 cursor-pointer transition-all border ${
+        active ? 'bg-brand-50 border-brand-200' : 'bg-white border-slate-100'
+      }`}
+    >
+      <span className={`text-sm font-black ${active ? 'text-brand-700' : 'text-slate-600'}`}>{label}</span>
+      <span className={`text-[10px] px-1.5 py-0.5 rounded-md font-black ${active ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-400'}`}>
+        {count}
+      </span>
+      {onDelete && (
+        <button 
+          onClick={(e) => { e.stopPropagation(); onDelete(); }} 
+          className="ml-1 opacity-0 group-hover:opacity-100 text-slate-300 hover:text-rose-500"
+        >
+          <Trash2 size={12} />
+        </button>
+      )}
     </div>
+  );
+}
+
+function StudentCard({ student, groups, levelTitles, onToggleGroup, formatTime }: any) {
+  const [showGroups, setShowGroups] = useState(false);
+  const level = Math.floor((student.exp_points || 0) / 1000) + 1;
+  const levelTitle = levelTitles[Math.min(11, level - 1)];
+
+  return (
+    <motion.div 
+      layout
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+      className="bg-white border border-slate-200 rounded-[2rem] p-6 shadow-sm hover:shadow-xl hover:border-brand-200 transition-all group relative overflow-hidden"
+    >
+      <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+        <button 
+          onClick={() => setShowGroups(!showGroups)}
+          className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${showGroups ? 'bg-brand-600 text-white' : 'bg-slate-50 text-slate-400 hover:bg-brand-50'}`}
+        >
+          <UserPlus size={18} />
+        </button>
+      </div>
+
+      <div className="flex items-start gap-4 mb-6">
+        <div className="w-14 h-14 bg-gradient-to-br from-slate-100 to-slate-50 border border-slate-200 rounded-2xl flex items-center justify-center text-slate-400 group-hover:from-brand-600 group-hover:to-brand-500 group-hover:text-white transition-all shadow-inner">
+          <span className="font-black text-xl">{student.username.charAt(0)}</span>
+        </div>
+        <div className="flex-1 pr-6">
+          <div className="flex items-center gap-2 mb-1">
+            <h4 className="font-black text-slate-900 text-lg">{student.username}</h4>
+            {student.role?.toLowerCase() === 'teacher' && (
+              <span className="text-[10px] font-black text-brand-600 bg-brand-50 px-2 py-0.5 rounded-md">교사</span>
+            )}
+          </div>
+          <div className="flex items-center gap-1.5 text-[10px] font-bold text-slate-400">
+            <Award size={12} className="text-amber-500" />
+            Lv.{level} {levelTitle} ({student.exp_points || 0} EXP)
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-y-6 gap-x-2 border-t border-slate-50 pt-6">
+        <div>
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-tighter mb-1">총 푼 문제</p>
+          <p className="text-xl font-black text-slate-800">{student.totalQuestions}<span className="text-xs ml-1">Q</span></p>
+        </div>
+        <div>
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-tighter mb-1">학습 시간</p>
+          <p className="text-xl font-black text-slate-800">{formatTime(student.totalDuration)}</p>
+        </div>
+        <div>
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-tighter mb-1">종합 정답률</p>
+          <div className="flex items-center gap-2">
+            <span className={`font-black text-lg ${student.accuracy >= 60 ? 'text-emerald-500' : 'text-rose-500'}`}>{student.accuracy}%</span>
+            <div className="flex-1 h-1.5 bg-slate-100 rounded-full">
+              <div className={`h-full rounded-full ${student.accuracy >= 60 ? 'bg-emerald-400' : 'bg-rose-400'}`} style={{ width: `${student.accuracy}%` }} />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-tighter mb-1">최근 접속</p>
+          <p className="text-[11px] font-black text-slate-500">{student.lastActive}</p>
+        </div>
+      </div>
+
+      <div className="mt-6">
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-tighter mb-2">학습 중인 자격증</p>
+        <div className="flex flex-wrap gap-1">
+          {student.subjectsStudied.length > 0 ? (
+            student.subjectsStudied.map((s: string) => (
+              <span key={s} className="px-2 py-1 bg-slate-100 text-slate-500 rounded-md text-[10px] font-bold">{s}</span>
+            ))
+          ) : (
+            <span className="text-[10px] text-slate-300 italic">기록 없음</span>
+          )}
+        </div>
+      </div>
+
+      {/* 그룹 할당 오버레이 */}
+      <AnimatePresence>
+        {showGroups && (
+          <motion.div 
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 100 }}
+            className="absolute inset-0 bg-white z-10 p-6 flex flex-col"
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h5 className="font-black text-slate-900 flex items-center gap-2">
+                <UserPlus size={16} /> 그룹 지정
+              </h5>
+              <button onClick={() => setShowGroups(false)} className="text-slate-400 hover:text-slate-600 font-bold text-xs">닫기</button>
+            </div>
+            <div className="flex-1 overflow-y-auto space-y-2 no-scrollbar">
+              {groups.length === 0 ? (
+                <p className="text-[11px] text-slate-400 py-4 text-center italic">먼저 그룹을 생성해 주세요.</p>
+              ) : (
+                groups.map(g => {
+                  const isIn = g.members.includes(student.id);
+                  return (
+                    <button 
+                      key={g.name}
+                      onClick={() => onToggleGroup(student.id, g.name)}
+                      className={`w-full p-3 rounded-xl flex items-center justify-between border-2 transition-all ${
+                        isIn ? 'bg-brand-50 border-brand-500 text-brand-700' : 'bg-slate-50 border-slate-100 text-slate-500'
+                      }`}
+                    >
+                      <span className="text-xs font-black">{g.name}</span>
+                      {isIn ? <CheckCircle2 size={16} /> : <PlusCircle size={16} className="opacity-30" />}
+                    </button>
+                  );
+                })
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 }
