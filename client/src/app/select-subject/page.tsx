@@ -92,23 +92,9 @@ export default function SelectSubjectPage() {
       setLoading(false);
     }
     init();
-
-    return () => window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
   }, [router]);
 
-  const handleInstall = async () => {
-    if (isIOS) setShowIOSPopup(true);
-    else if (deferredPrompt) {
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') { setDeferredPrompt(null); setIsInstalled(true); }
-    } else {
-      alert('브라우저 우측 상단/하단 메뉴(⋮)에서 "홈 화면에 추가" 또는 "앱 설치"를 선택해 주세요!');
-    }
-  };
-
   const quotes = ["성공은 결과가 아니라 과정이다.", "오늘의 수고가 내일의 보석이 된다.", "노력은 결코 배신하지 않는다."];
-  const [randomQuote, setRandomQuote] = useState("");
 
   useEffect(() => {
     setRandomQuote(quotes[Math.floor(Math.random() * quotes.length)]);
@@ -120,95 +106,56 @@ export default function SelectSubjectPage() {
     <div className="min-h-screen relative overflow-hidden font-sans text-slate-900 pb-20">
       <div className="mesh-bg opacity-40" />
       
-      {/* Integrated Header Area (1.5x Larger Mobile Text) */}
-      <header className="max-w-[1600px] mx-auto pt-6 md:pt-8 px-2 md:px-12 relative z-10">
-        <div className="flex items-center justify-between gap-1 md:gap-6 bg-white/40 backdrop-blur-md p-2 md:p-3 rounded-xl md:rounded-[2rem] border border-white/60 shadow-sm relative overflow-hidden">
-          
-          {/* 1. Left Section: Logo */}
-          <div className="flex items-center gap-1 md:gap-3 flex-shrink-0 relative z-20">
-            <div className="w-6 h-6 md:w-10 md:h-10 bg-brand-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/20">
-              <GraduationCap size={14} className="text-white md:hidden" />
-              <GraduationCap size={22} className="text-white hidden md:block" />
+      {/* Header Area */}
+      <header className="max-w-[1600px] mx-auto pt-6 md:pt-8 px-4 md:px-12 relative z-10">
+        <div className="flex items-center justify-between bg-white/40 backdrop-blur-md p-3 md:p-4 rounded-xl md:rounded-[2rem] border border-white/60 shadow-sm relative">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 md:w-10 md:h-10 bg-brand-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg">
+              <GraduationCap size={20} className="text-white" />
             </div>
-            <h2 className="text-[15px] md:text-[21px] font-black tracking-tight text-slate-900">DugiGo</h2>
+            <h2 className="text-lg md:text-xl font-black tracking-tight">DugiGo</h2>
           </div>
 
-          {/* 2. Middle Section: School Name (Absolute Center, 1.5x Larger) */}
-          <div className="absolute left-1/2 -translate-x-1/2 flex items-center pointer-events-none md:pointer-events-auto w-full justify-center px-2">
-            <span className="text-[16px] md:text-[25px] font-black text-brand-600 tracking-tighter whitespace-nowrap">
-              경성전자고등학교
-            </span>
+          <div className="absolute left-1/2 -translate-x-1/2 flex items-center">
+            <span className="text-lg md:text-2xl font-black text-brand-600 tracking-tighter">경성전자고등학교</span>
           </div>
 
-          {/* 3. Right Section: Buttons (1.5x Larger) */}
-          <div className="flex items-center gap-2 md:gap-6 ml-auto relative z-20">
-            {isTeacher && (
-              <Link 
-                href="/teacher" 
-                className="text-[15px] md:text-[17px] px-2 py-1 md:px-6 md:py-2.5 bg-brand-600 text-white font-black rounded-lg md:rounded-xl shadow-lg hover:bg-brand-700 transition-all whitespace-nowrap"
-              >
-                Dashboard
-              </Link>
-            )}
+          <div className="flex items-center gap-4">
             <button 
               onClick={() => supabase.auth.signOut().then(() => router.push('/login'))} 
-              className="text-[15px] md:text-[17px] text-slate-400 hover:text-rose-500 font-black transition-colors whitespace-nowrap"
+              className="text-sm md:text-base text-slate-400 hover:text-rose-500 font-black transition-colors"
             >
               Logout
             </button>
           </div>
         </div>
 
-        {/* Slogan & Install Row (1.5x Larger Mobile Text) */}
-        <div className="flex items-center justify-between gap-2 border-t border-slate-100 mt-3 md:mt-3 pt-3 md:pt-3 px-2">
-          <p className="text-[13px] md:text-xs font-bold text-slate-500 whitespace-nowrap flex-shrink overflow-hidden text-ellipsis uppercase tracking-tight">
-            <span className="text-blue-500">두</span>꺼운 <span className="text-emerald-500">기</span>능사 책 대신 <span className="text-rose-500">고</span>민말고 <span className="font-black">두기고</span>
+        {/* Slogan & Group Tags Row */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mt-6 px-2">
+          <p className="text-xs md:text-sm font-bold text-slate-500 uppercase tracking-tight">
+            <span className="text-blue-500">두</span>꺼운 <span className="text-emerald-500">기</span>능사 책 대신 <span className="text-rose-500">고</span>민말고 <span className="font-black text-slate-900">두기고</span>
           </p>
-          {!isInstalled && (
-            <motion.button 
-              onClick={handleInstall} 
-              className="flex items-center gap-1.5 px-3 py-2 md:px-6 md:py-3 bg-white/60 text-slate-600 rounded-full border border-slate-200 shadow-sm flex-shrink-0"
-              whileTap={{ scale: 0.95 }}
+          
+          <div className="flex flex-wrap items-center gap-2">
+            {isTeacher && groups.map(g => (
+              <Link 
+                key={g.id} 
+                href="/teacher" 
+                className="px-3 py-1.5 bg-white border border-slate-200 text-slate-600 text-xs font-black rounded-xl hover:border-brand-500 hover:text-brand-600 transition-all shadow-sm"
+              >
+                {g.name}
+              </Link>
+            ))}
+            <button 
+              onClick={() => setShowGuide(true)}
+              className="text-xs font-black text-brand-600 underline underline-offset-4 hover:text-brand-700 transition-all ml-2"
             >
-              <PlusSquare size={14} className="text-brand-500 md:hidden" />
-              <PlusSquare size={18} className="text-brand-500 hidden md:block" />
-              <span className="text-[15px] md:text-[17px] font-black tracking-tight whitespace-nowrap">홈 화면 추가</span>
-            </motion.button>
-          )}
+              홈 화면에 추가 방법
+            </button>
+          </div>
         </div>
       </header>
 
-      {/* PC Install Button (Floating) */}
-      {!isInstalled && !isIOS && deferredPrompt && (
-        <div className="hidden lg:block fixed left-10 top-1/2 -translate-y-1/2 z-50">
-          <motion.button onClick={handleInstall} className="flex flex-col items-center gap-4 p-6 bg-white/80 border border-slate-200 rounded-[2.5rem] shadow-xl group transition-all hover:border-brand-300">
-            <div className="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-400 group-hover:bg-brand-600 group-hover:text-white transition-all"><Download size={28} /></div>
-            <span className="text-xs font-black text-slate-400 group-hover:text-brand-600 uppercase text-center tracking-widest">설치</span>
-          </motion.button>
-        </div>
-      )}
-
-      <main className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 pt-8 md:pt-10">
-        <div className="mb-8 md:mb-10 text-center md:text-left">
-          <h1 className="text-2xl md:text-5xl font-black text-slate-900 italic mb-2 leading-tight tracking-tighter">"{randomQuote}"</h1>
-          <p className="text-sm md:text-xl font-bold text-slate-500 italic">
-            환영합니다, <span className="text-brand-600 font-black">{user?.display_name || user?.email?.split('@')[0]}</span>님! 👋
-          </p>
-
-          {/* 선생님 그룹 표시 */}
-          {isTeacher && groups.length > 0 && (
-            <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-3">
-              {groups.map(g => (
-                <Link 
-                  key={g.id} 
-                  href="/teacher" 
-                  className="px-5 py-2.5 bg-white border-2 border-slate-100 text-slate-700 text-sm md:text-lg font-black rounded-2xl hover:border-brand-500 hover:text-brand-600 transition-all shadow-md flex items-center gap-2"
-                >
-                  {g.name}
-                  <span className="text-[10px] md:text-xs bg-brand-50 text-brand-600 px-2 py-0.5 rounded-lg border border-brand-100">{g.members?.length || 0}</span>
-                </Link>
-              ))}
-            </div>
           )}
         </div>
 
