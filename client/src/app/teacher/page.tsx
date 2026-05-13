@@ -460,8 +460,8 @@ function StudentCard({ student, groups, levelTitles, onToggleGroup, formatTime }
 
       {/* 이름 섹션 - 마진 축소 */}
       <div className="flex items-start gap-4 mb-2">
-        <div className="w-14 h-14 bg-slate-100 border border-slate-200 rounded-2xl flex items-center justify-center text-slate-400 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-inner">
-          <span className="font-black text-xl">{student.username.charAt(0)}</span>
+        <div className="w-14 h-14 bg-slate-100 border border-slate-200 rounded-2xl flex items-center justify-center text-slate-400 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-inner px-1 overflow-hidden">
+          <span className="font-black text-[10px] text-center break-keep leading-tight">{student.username}</span>
         </div>
         <div className="flex-1 pr-6">
           <div className="flex items-center gap-2">
