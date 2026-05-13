@@ -15,7 +15,7 @@ export default function TeacherDashboard() {
   const [isOwner, setIsOwner] = useState(false);
   const [subjects, setSubjects] = useState<string[]>([]);
   const [selectedSubject, setSelectedSubject] = useState<string>('전체');
-  const [groups, setGroups] = useState<{name: string, members: string[]}[]>([]);
+  const [groups, setGroups] = useState<any[]>([]);
   const [selectedGroup, setSelectedGroup] = useState<string>('전체');
   const [isAddingGroup, setIsAddingGroup] = useState(false);
   const [newGroupName, setNewGroupName] = useState('');
@@ -35,17 +35,13 @@ export default function TeacherDashboard() {
   ];
 
   useEffect(() => {
-    // 로컬 스토리지에서 그룹 정보 불러오기
-    const savedGroups = localStorage.getItem('dukigo_teacher_groups');
-    if (savedGroups) setGroups(JSON.parse(savedGroups));
-    
     fetchData();
     fetchSubjects();
   }, []);
 
   useEffect(() => {
     applyFilters();
-  }, [selectedSubject, selectedGroup, searchTerm, allStudents]);
+  }, [selectedSubject, selectedGroup, searchTerm, allStudents, groups]);
 
   const fetchSubjects = async () => {
     try {
@@ -61,9 +57,22 @@ export default function TeacherDashboard() {
     setLoading(true);
     try {
       const { data: { user } } = await supabase.auth.getUser();
+      if (!user) {
+        window.location.href = '/login';
+        return;
+      }
       const ownerFlag = user?.email?.toLowerCase() === 'serv@kakao.com';
       setIsOwner(ownerFlag);
 
+      // 1. 그룹 정보 가져오기 (DB에서)
+      const { data: dbGroups, error: groupErr } = await supabase
+        .from('dukigo_teacher_groups')
+        .select('*')
+        .eq('teacher_id', user.id);
+      
+      if (!groupErr) setGroups(dbGroups || []);
+
+      // 2. 학생 프로필 가져오기
       let profileQuery = supabase.from('dukigo_profiles').select('*');
       if (!ownerFlag) {
         profileQuery = profileQuery.in('role', ['student', 'STUDENT']);
@@ -74,8 +83,8 @@ export default function TeacherDashboard() {
       const { data: profiles, error: profileErr } = await profileQuery;
       if (profileErr) throw profileErr;
 
-      let logQuery = supabase.from('dukigo_study_logs').select('*');
-      const { data: logs, error: logErr } = await logQuery;
+      // 3. 학습 로그 가져오기
+      const { data: logs, error: logErr } = await supabase.from('dukigo_study_logs').select('*');
       if (logErr) throw logErr;
 
       const todayStr = new Date().toISOString().split('T')[0];
@@ -153,40 +162,70 @@ export default function TeacherDashboard() {
     setStudents(filtered);
   };
 
-  const createGroup = () => {
+  const createGroup = async () => {
     if (!newGroupName.trim()) return;
     if (groups.find(g => g.name === newGroupName)) {
       alert('이미 존재하는 그룹명입니다.');
       return;
     }
-    const newGroups = [...groups, { name: newGroupName, members: [] }];
-    setGroups(newGroups);
-    localStorage.setItem('dukigo_teacher_groups', JSON.stringify(newGroups));
-    setNewGroupName('');
-    setIsAddingGroup(false);
+    
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) return;
+
+    const { data, error } = await supabase
+      .from('dukigo_teacher_groups')
+      .insert([{ 
+        name: newGroupName, 
+        members: [], 
+        teacher_id: user.id 
+      }])
+      .select();
+
+    if (error) {
+      alert('그룹 생성 중 오류가 발생했습니다.');
+      console.error(error);
+    } else {
+      setGroups([...groups, data[0]]);
+      setNewGroupName('');
+      setIsAddingGroup(false);
+    }
   };
 
-  const toggleStudentInGroup = (studentId: string, groupName: string) => {
-    const updated = groups.map(g => {
-      if (g.name === groupName) {
-        const exists = g.members.includes(studentId);
-        return {
-          ...g,
-          members: exists ? g.members.filter(id => id !== studentId) : [...g.members, studentId]
-        };
-      }
-      return g;
-    });
-    setGroups(updated);
-    localStorage.setItem('dukigo_teacher_groups', JSON.stringify(updated));
+  const toggleStudentInGroup = async (studentId: string, groupName: string) => {
+    const group = groups.find(g => g.name === groupName);
+    if (!group) return;
+
+    const exists = group.members.includes(studentId);
+    const newMembers = exists 
+      ? group.members.filter((id: string) => id !== studentId) 
+      : [...group.members, studentId];
+
+    const { error } = await supabase
+      .from('dukigo_teacher_groups')
+      .update({ members: newMembers })
+      .eq('id', group.id);
+
+    if (error) {
+      alert('학생 그룹 상태 업데이트 실패');
+    } else {
+      setGroups(groups.map(g => g.id === group.id ? { ...g, members: newMembers } : g));
+    }
   };
 
-  const deleteGroup = (name: string) => {
+  const deleteGroup = async (id: string, name: string) => {
     if (!confirm(`'${name}' 그룹을 삭제하시겠습니까?`)) return;
-    const updated = groups.filter(g => g.name !== name);
-    setGroups(updated);
-    localStorage.setItem('dukigo_teacher_groups', JSON.stringify(updated));
-    if (selectedGroup === name) setSelectedGroup('전체');
+    
+    const { error } = await supabase
+      .from('dukigo_teacher_groups')
+      .delete()
+      .eq('id', id);
+
+    if (error) {
+      alert('그룹 삭제 실패');
+    } else {
+      setGroups(groups.filter(g => g.id !== id));
+      if (selectedGroup === name) setSelectedGroup('전체');
+    }
   };
 
   const formatTime = (seconds: number) => {
@@ -275,12 +314,12 @@ export default function TeacherDashboard() {
             />
             {groups.map(g => (
               <GroupTag 
-                key={g.name} 
+                key={g.id} 
                 active={selectedGroup === g.name} 
                 label={g.name} 
                 count={g.members.length} 
                 onClick={() => setSelectedGroup(g.name)}
-                onDelete={() => deleteGroup(g.name)}
+                onDelete={() => deleteGroup(g.id, g.name)}
               />
             ))}
           </div>
