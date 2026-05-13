@@ -190,7 +190,12 @@ export async function GET(req: NextRequest) {
             return;
           }
 
-          const subUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
+          const mainUnit = q.subject || "";
+          const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
+          
+          // 대단원이 있으면 [대단원] 소단원 형식으로, 없으면 소단원만 노출
+          const subUnit = mainUnit ? `[${mainUnit}] ${baseSubUnit}` : baseSubUnit;
+
           unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
           questionMap.set(qId, true);
 
