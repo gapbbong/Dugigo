@@ -5,15 +5,7 @@ import fs from 'fs';
 const supabaseUrl = "http://10.128.49.91:8000";
 const SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyAgCiAgICAicm9sZSI6ICJzZXJ2aWNlX3JvbGUiLAogICAgImlzcyI6ICJzdXBhYmFzZS1kZW1vIiwKICAgICJpYXQiOiAxNjQxNzY5MjAwLAogICAgImV4cCI6IDE3OTk1MzU2MDAKfQ.DaYlNEoUrrEn2Ig7tqibS-PHK5vgusbcbo7X36XVt4Q";
 
-const customFetch = (url, options) => {
-  const headers = new Headers(options?.headers);
-  headers.set('ngrok-skip-browser-warning', 'true');
-  return fetch(url, { ...options, headers });
-};
-
-const supabase = createClient(supabaseUrl, SERVICE_ROLE_KEY, {
-  global: { fetch: customFetch }
-});
+const supabase = createClient(supabaseUrl, SERVICE_ROLE_KEY);
 
 function classify(q) {
   const text = ((q.question || '') + ' ' + (q.explanation || '')).toLowerCase();

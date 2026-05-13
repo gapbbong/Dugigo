@@ -6,11 +6,6 @@ import path from "path";
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-const customFetch = (url: any, options: any) => {
-  const headers = new Headers(options?.headers);
-  headers.set('ngrok-skip-browser-warning', 'true');
-  return fetch(url, { ...options, headers });
-};
 
 let supabase: any = null;
 
@@ -35,9 +30,7 @@ export async function GET(req: NextRequest) {
       if (subject.includes('자동화설비') || subject.includes('생산자동화')) {
         if (!supabase) {
           const { createClient } = await import('@supabase/supabase-js');
-          supabase = createClient(supabaseUrl!, SERVICE_ROLE_KEY!, {
-            global: { fetch: customFetch }
-          });
+          supabase = createClient(supabaseUrl!, SERVICE_ROLE_KEY!);
         }
 
         const start = parseInt(searchParams.get("start") || "0");
