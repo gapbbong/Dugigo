@@ -197,19 +197,15 @@ export default function SelectSubjectPage() {
 
           {/* 선생님 그룹 표시 */}
           {isTeacher && groups.length > 0 && (
-            <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-2">
-              <div className="flex items-center gap-2 mr-2">
-                <FolderPlus size={14} className="text-slate-400" />
-                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">내 그룹</span>
-              </div>
+            <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-3">
               {groups.map(g => (
                 <Link 
                   key={g.id} 
                   href="/teacher" 
-                  className="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] md:text-xs font-black rounded-xl hover:border-brand-500 hover:text-brand-600 transition-all shadow-sm flex items-center gap-1.5"
+                  className="px-5 py-2.5 bg-white border-2 border-slate-100 text-slate-700 text-sm md:text-lg font-black rounded-2xl hover:border-brand-500 hover:text-brand-600 transition-all shadow-md flex items-center gap-2"
                 >
                   {g.name}
-                  <span className="text-[9px] bg-slate-100 text-slate-400 px-1 rounded">{g.members?.length || 0}</span>
+                  <span className="text-[10px] md:text-xs bg-brand-50 text-brand-600 px-2 py-0.5 rounded-lg border border-brand-100">{g.members?.length || 0}</span>
                 </Link>
               ))}
             </div>
