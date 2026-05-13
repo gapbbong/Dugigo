@@ -247,11 +247,12 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
   useEffect(() => {
     if (!paramsReady) return;
+    const isYearMode = !!searchParamsProps?.year;
     const initialStart = (parseInt(setNum || '1') - 1) * parseInt(setSize || '30');
-    const initialLimit = parseInt(setSize || '30');
+    const initialLimit = isYearMode ? 1000 : parseInt(setSize || '30');
     setLoading(true);
     fetchQuestions(initialStart, initialLimit);
-  }, [paramsReady, setNum, setSize, fetchQuestions]);
+  }, [paramsReady, setNum, setSize, fetchQuestions, searchParamsProps]);
 
   // 백그라운드 프리페칭 로직
   useEffect(() => {
