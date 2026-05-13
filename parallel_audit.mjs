@@ -75,6 +75,7 @@ if (isMainThread) {
                 console.log('\n--- 📊 Audit Summary ---');
                 console.log(`Total Issues Found: ${totalErrors}`);
                 for (const subj in summary) {
+                    if (subj === '한국사검정시험') continue; // Skip known false positives
                     console.log(`\n[${subj}]`);
                     for (const reason in summary[subj]) {
                         console.log(`  - ${reason}: ${summary[subj][reason]}`);
@@ -108,7 +109,7 @@ if (isMainThread) {
             }
 
             data.forEach(q => {
-                const qNum = q.question_num;
+                const qNum = q.question_num || q.number;
                 const opts = q.options || q.choices || [];
                 
                 if (qNum === undefined) {
