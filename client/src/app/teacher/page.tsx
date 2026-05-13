@@ -487,7 +487,7 @@ function StudentCard({ student, groups, levelTitles, onToggleGroup, formatTime }
               {groups.length === 0 ? (
                 <p className="text-[11px] text-slate-400 py-4 text-center italic">먼저 그룹을 생성해 주세요.</p>
               ) : (
-                groups.map(g => {
+                groups.map((g: any) => {
                   const isIn = g.members.includes(student.id);
                   return (
                     <button 
