@@ -45,6 +45,7 @@ export default function SelectSubjectPage() {
   const [isIOS, setIsIOS] = useState(false);
   const [showIOSPopup, setShowIOSPopup] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
+  const [randomQuote, setRandomQuote] = useState("");
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (e: any) => {
