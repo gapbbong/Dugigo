@@ -158,7 +158,19 @@ export default function SelectSubjectPage() {
         </div>
       </header>
 
-          )}
+      <main className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 pt-12 md:pt-16">
+        <div className="mb-10 md:mb-14 text-center md:text-left">
+          <h1 className="text-3xl md:text-6xl font-black text-slate-900 italic mb-4 leading-tight tracking-tighter">"{randomQuote}"</h1>
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
+            <p className="text-lg md:text-2xl font-bold text-slate-500 italic">
+              환영합니다, <span className="text-brand-600 font-black">{user?.display_name || user?.email?.split('@')[0]}</span>님! 👋
+            </p>
+            {isTeacher && (
+              <Link href="/teacher" className="text-sm md:text-lg font-black text-slate-400 hover:text-brand-600 hover:underline transition-all">
+                [교사 대시보드]
+              </Link>
+            )}
+          </div>
         </div>
 
         {/* Subject Grid */}
@@ -195,22 +207,45 @@ export default function SelectSubjectPage() {
         <p className="font-black uppercase tracking-widest text-slate-500 mt-1 text-[13px] md:text-[17px]">경성전자고등학교 전용 학습 서비스</p>
       </footer>
 
-      {/* iOS Popup */}
+      {/* Guide Modal */}
       <AnimatePresence>
-        {showIOSPopup && (
+        {showGuide && (
           <>
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setShowIOSPopup(false)} className="fixed inset-0 z-[100] bg-slate-900/60 backdrop-blur-sm" />
-            <motion.div initial={{ y: "100%" }} animate={{ y: 0 }} exit={{ y: "100%" }} className="fixed bottom-0 left-0 right-0 z-[101] bg-white rounded-t-[3rem] p-10 shadow-2xl flex flex-col items-center text-center gap-8 text-slate-900 border-t border-brand-100">
-              <div className="w-16 h-2 bg-slate-100 rounded-full" />
-              <div className="w-20 h-20 bg-brand-50 rounded-[2rem] flex items-center justify-center text-brand-600 shadow-inner"><PlusSquare size={40} /></div>
-              <div className="space-y-3">
-                <h3 className="text-2xl font-black">홈 화면에 추가</h3>
-                <p className="text-lg text-slate-500 font-bold leading-relaxed px-4">
-                  사파리 브라우저 하단의 <Share size={20} className="inline align-text-bottom mx-1" /> 공유 버튼을 누른 뒤,<br/>
-                  <PlusSquare size={20} className="inline align-text-bottom mx-1" /> 홈 화면에 추가를 선택해 주세요!
-                </p>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setShowGuide(false)} className="fixed inset-0 z-[100] bg-slate-900/60 backdrop-blur-sm" />
+            <motion.div initial={{ y: "100%" }} animate={{ y: 0 }} exit={{ y: "100%" }} className="fixed bottom-0 left-0 right-0 z-[101] bg-white rounded-t-[3rem] p-8 md:p-12 shadow-2xl flex flex-col gap-6 text-slate-900 border-t border-brand-100 max-h-[90vh] overflow-y-auto">
+              <div className="w-16 h-2 bg-slate-100 rounded-full self-center mb-4" />
+              <div className="text-center space-y-2">
+                <h3 className="text-2xl md:text-3xl font-black text-brand-600">홈 화면에 추가 가이드</h3>
+                <p className="text-slate-500 font-bold">앱처럼 편하게 접속해 보세요!</p>
               </div>
-              <button onClick={() => setShowIOSPopup(false)} className="w-full py-5 bg-slate-100 hover:bg-slate-200 text-slate-600 font-black rounded-2xl transition-colors text-lg">알겠습니다</button>
+
+              <div className="space-y-8 mt-4">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-black">1</div>
+                    <h4 className="text-xl font-black">안드로이드 (크롬 브라우저)</h4>
+                  </div>
+                  <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-3 font-bold text-slate-600">
+                    <p>1. 브라우저 우측 상단의 <span className="text-slate-900">점 3개(⋮)</span> 메뉴를 누릅니다.</p>
+                    <p>2. <span className="text-brand-600">"홈 화면에 추가"</span> 또는 <span className="text-brand-600">"앱 설치"</span>를 선택합니다.</p>
+                    <p>3. 팝업창에서 '추가'를 누르면 완료!</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center font-black">2</div>
+                    <h4 className="text-xl font-black">아이폰 (사파리 브라우저)</h4>
+                  </div>
+                  <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-3 font-bold text-slate-600">
+                    <p>1. 브라우저 하단 중앙의 <span className="text-slate-900">공유(Square with arrow)</span> 아이콘을 누릅니다.</p>
+                    <p>2. 리스트를 아래로 내려 <span className="text-brand-600">"홈 화면에 추가"</span>를 선택합니다.</p>
+                    <p>3. 우측 상단의 '추가'를 누르면 완료!</p>
+                  </div>
+                </div>
+              </div>
+
+              <button onClick={() => setShowGuide(false)} className="w-full py-5 bg-brand-600 hover:bg-brand-700 text-white font-black rounded-2xl transition-all text-xl mt-6 shadow-lg shadow-brand-600/20">확인했습니다</button>
             </motion.div>
           </>
         )}
