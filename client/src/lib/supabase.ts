@@ -15,4 +15,16 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     autoRefreshToken: true,
     detectSessionInUrl: false,
   },
+  global: {
+    fetch: (url, options) => {
+      const headers = new Headers(options?.headers);
+      if (supabaseUrl.includes('ngrok-free.dev')) {
+        headers.set('ngrok-skip-browser-warning', '1');
+      }
+      return fetch(url, {
+        ...options,
+        headers,
+      });
+    },
+  },
 });

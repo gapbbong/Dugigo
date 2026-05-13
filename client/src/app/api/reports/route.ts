@@ -3,7 +3,18 @@ import { createClient } from '@supabase/supabase-js';
 
 const supabaseAdmin = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  {
+    global: {
+      fetch: (url, options) => {
+        const headers = new Headers(options?.headers);
+        if (process.env.NEXT_PUBLIC_SUPABASE_URL?.includes('ngrok-free.dev')) {
+          headers.set('ngrok-skip-browser-warning', '1');
+        }
+        return fetch(url, { ...options, headers });
+      }
+    }
+  }
 );
 
 // POST /api/reports — 문항 오류 제보 등록
