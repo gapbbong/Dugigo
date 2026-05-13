@@ -80,7 +80,7 @@ export async function GET(req: NextRequest) {
       }
 
       if (s === '컴퓨터활용능력2급') {
-        const isSubject1 = q.subject === "컴퓨터 일반";
+        const isSubject1 = q.subject && q.subject.includes("컴퓨터 일반");
         
         if (isSubject1) {
           if (/윈도우|windows|바로 가기|제어판|탐색기|작업 표시줄|부팅|레지스트리|시스템 도구|스풀링|인터럽트|포맷/.test(text)) return "[1과목] Windows OS 환경 설정 및 시스템 관리";
