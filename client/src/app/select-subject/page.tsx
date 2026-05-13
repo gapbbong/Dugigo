@@ -109,15 +109,17 @@ export default function SelectSubjectPage() {
       {/* Header Area */}
       <header className="max-w-[1600px] mx-auto pt-6 md:pt-8 px-4 md:px-12 relative z-10">
         <div className="flex items-center justify-between bg-white/40 backdrop-blur-md p-3 md:p-4 rounded-xl md:rounded-[2rem] border border-white/60 shadow-sm relative">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-brand-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg">
-              <GraduationCap size={20} className="text-white" />
+          <div className="flex items-center gap-2 md:gap-4">
+            <div className="flex items-center gap-2 md:gap-3">
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-brand-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg">
+                <GraduationCap size={20} className="text-white" />
+              </div>
+              <h2 className="text-lg md:text-xl font-black tracking-tight">DugiGo</h2>
             </div>
-            <h2 className="text-lg md:text-xl font-black tracking-tight">DugiGo</h2>
-          </div>
-
-          <div className="absolute left-1/2 -translate-x-1/2 flex items-center">
-            <span className="text-lg md:text-2xl font-black text-brand-600 tracking-tighter">경성전자고등학교</span>
+            <div className="w-px h-4 bg-slate-200 mx-1 md:mx-2" />
+            <span className="text-sm md:text-xl font-black text-brand-600 tracking-tighter whitespace-nowrap">
+              경성전자고등학교
+            </span>
           </div>
 
           <div className="flex items-center gap-4">
