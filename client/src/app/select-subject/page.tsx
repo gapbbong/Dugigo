@@ -36,6 +36,7 @@ const getSubjectStyle = (name: string) => {
 export default function SelectSubjectPage() {
   const router = useRouter();
   const [subjects, setSubjects] = useState<string[]>([]);
+  const [groups, setGroups] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<any>(null);
   const [isTeacher, setIsTeacher] = useState(false);
@@ -65,10 +66,18 @@ export default function SelectSubjectPage() {
         router.push('/login');
         return;
       }
-      setUser(currentUser);
 
-      const { data: profile } = await supabase.from('dukigo_profiles').select('role').eq('id', currentUser.id).single();
-      if (profile?.role?.toLowerCase() === 'teacher' || currentUser.email === 'serv@kakao.com') setIsTeacher(true);
+      const { data: profile } = await supabase.from('dukigo_profiles').select('*').eq('id', currentUser.id).single();
+      setUser({ ...currentUser, ...profile });
+
+      if (profile?.role?.toLowerCase() === 'teacher' || currentUser.email === 'serv@kakao.com') {
+        setIsTeacher(true);
+        const { data: dbGroups } = await supabase
+          .from('dukigo_teacher_groups')
+          .select('*')
+          .eq('teacher_id', currentUser.id);
+        setGroups(dbGroups || []);
+      }
 
       const res = await fetch('/api/subjects');
       const data = await res.json();
@@ -181,7 +190,29 @@ export default function SelectSubjectPage() {
       <main className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 pt-8 md:pt-10">
         <div className="mb-8 md:mb-10 text-center md:text-left">
           <h1 className="text-2xl md:text-5xl font-black text-slate-900 italic mb-2 leading-tight tracking-tighter">"{randomQuote}"</h1>
-          <p className="text-sm md:text-xl font-bold text-slate-500 italic">환영합니다, <span className="text-brand-600 font-black">{user?.email?.split('@')[0]}</span>님! 👋</p>
+          <p className="text-sm md:text-xl font-bold text-slate-500 italic">
+            환영합니다, <span className="text-brand-600 font-black">{user?.display_name || user?.email?.split('@')[0]}</span>님! 👋
+          </p>
+
+          {/* 선생님 그룹 표시 */}
+          {isTeacher && groups.length > 0 && (
+            <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-2">
+              <div className="flex items-center gap-2 mr-2">
+                <FolderPlus size={14} className="text-slate-400" />
+                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">내 그룹</span>
+              </div>
+              {groups.map(g => (
+                <Link 
+                  key={g.id} 
+                  href="/teacher" 
+                  className="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] md:text-xs font-black rounded-xl hover:border-brand-500 hover:text-brand-600 transition-all shadow-sm flex items-center gap-1.5"
+                >
+                  {g.name}
+                  <span className="text-[9px] bg-slate-100 text-slate-400 px-1 rounded">{g.members?.length || 0}</span>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Subject Grid */}
