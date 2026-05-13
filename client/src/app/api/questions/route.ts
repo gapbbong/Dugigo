@@ -335,8 +335,18 @@ export async function GET(req: NextRequest) {
 
       if (yearFilter || roundFilter) {
         sorted = sorted.filter(q => {
-          const r = q.round || q.id?.split('_')[1] || '';
-          const y = q.year || '';
+          let y = q.year || '';
+          let r = q.round || q.id?.split('_')[1] || '';
+
+          if (subject === '컴퓨터활용능력 2급' && q.round_info) {
+            const yearMatch = q.round_info.match(/(\d{4})년/);
+            const roundMatch = q.round_info.match(/(\d+)회/);
+            const sangsiMatch = q.round_info.match(/상시\s*(\d+)/);
+            if (yearMatch) y = yearMatch[1];
+            if (roundMatch) r = roundMatch[1];
+            else if (sangsiMatch) r = `상시${sangsiMatch[1]}`;
+          }
+
           const matchYear = !yearFilter || y.toString() === yearFilter.toString();
           const matchRound = !roundFilter || r.toString() === roundFilter.toString();
           return matchYear && matchRound;
