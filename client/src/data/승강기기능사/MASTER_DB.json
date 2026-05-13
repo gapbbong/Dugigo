@@ -1086,7 +1086,9 @@
       "round": "01",
       "year": "2015",
       "subject": "기계전기기초",
-      "sub_unit": "기계 요소 및 역학 기초"
+      "sub_unit": "기계 요소 및 역학 기초",
+      "question_img": "Elevator_2015_01_60.png",
+      "has_image": true
     },
     {
       "answer": "3",
@@ -2098,7 +2100,9 @@
       "round": "02",
       "year": "2015",
       "subject": "기계전기기초",
-      "sub_unit": "기계 요소 및 역학 기초"
+      "sub_unit": "기계 요소 및 역학 기초",
+      "question_img": "Elevator_2015_02_56.png",
+      "has_image": true
     },
     {
       "answer": "2",
@@ -2856,7 +2860,9 @@
       "round": "04",
       "year": "2015",
       "subject": "승강기보수",
-      "sub_unit": "주요 부품의 보수 및 교체"
+      "sub_unit": "주요 부품의 보수 및 교체",
+      "question_img": "Elevator_2015_04_38.png",
+      "has_image": true
     },
     {
       "answer": "4",
@@ -3306,7 +3312,9 @@
       "round": "05",
       "year": "2015",
       "subject": "승강기보수",
-      "sub_unit": "검사 기준 및 법규"
+      "sub_unit": "검사 기준 및 법규",
+      "question_img": "Elevator_2015_05_03.png",
+      "has_image": true
     },
     {
       "answer": "3",
@@ -3684,7 +3692,9 @@
       "round": "05",
       "year": "2015",
       "subject": "승강기보수",
-      "sub_unit": "주요 부품의 보수 및 교체"
+      "sub_unit": "주요 부품의 보수 및 교체",
+      "question_img": "Elevator_2015_05_32.png",
+      "has_image": true
     },
     {
       "answer": "2",
@@ -3882,7 +3892,9 @@
       "round": "05",
       "year": "2015",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "Elevator_2015_05_48.png",
+      "has_image": true
     },
     {
       "answer": "2",
@@ -3936,7 +3948,9 @@
       "round": "05",
       "year": "2015",
       "subject": "기계전기기초",
-      "sub_unit": "기계 요소 및 역학 기초"
+      "sub_unit": "기계 요소 및 역학 기초",
+      "question_img": "Elevator_2015_05_52.png",
+      "has_image": true
     },
     {
       "answer": "2",
@@ -4008,7 +4022,9 @@
       "round": "05",
       "year": "2015",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "Elevator_2015_05_56.png",
+      "has_image": true
     },
     {
       "answer": "4",
@@ -5017,7 +5033,9 @@
       "round": "01",
       "year": "2016",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "Elevator_2016_01_53.png",
+      "has_image": true
     },
     {
       "answer": "3",
@@ -5071,7 +5089,9 @@
       "round": "01",
       "year": "2016",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "Elevator_2016_01_56.png",
+      "has_image": true
     },
     {
       "answer": "3",
@@ -6133,7 +6153,9 @@
       "round": "02",
       "year": "2016",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "Elevator_2016_02_55.png",
+      "has_image": true
     },
     {
       "answer": "4",
@@ -7123,7 +7145,9 @@
       "round": "04",
       "year": "2016",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "Elevator_2016_04_50.png",
+      "has_image": true
     },
     {
       "answer": "2",
@@ -7195,7 +7219,9 @@
       "round": "04",
       "year": "2016",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "Elevator_2016_04_54.png",
+      "has_image": true
     },
     {
       "answer": "3",
@@ -7285,7 +7311,9 @@
       "round": "04",
       "year": "2016",
       "subject": "기계전기기초",
-      "sub_unit": "기계 요소 및 역학 기초"
+      "sub_unit": "기계 요소 및 역학 기초",
+      "question_img": "Elevator_2016_04_60.png",
+      "has_image": true
     },
     {
       "answer": "1",
@@ -8311,7 +8339,9 @@
       "round": "05",
       "year": "2016",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "Elevator_2016_05_57.png",
+      "has_image": true
     },
     {
       "answer": "3",
@@ -8419,7 +8449,9 @@
       "round": "01",
       "year": "2017",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "Elevator_2017_01_03.png",
+      "has_image": true
     },
     {
       "answer": "1",
@@ -8689,7 +8721,9 @@
       "round": "01",
       "year": "2017",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "Elevator_2017_01_18.png",
+      "has_image": true
     },
     {
       "answer": "3",
@@ -8743,7 +8777,9 @@
       "round": "01",
       "year": "2017",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "Elevator_2017_01_21.png",
+      "has_image": true
     },
     {
       "answer": "1",
@@ -8955,11 +8991,12 @@
       "number": "33",
       "page": 4,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "승객용 엘리베이터의 적재하중 및 최대정원을 계산할 때 1인당 하중의 기준은 몇 [kg]인가?\n<img src=\"images/17_20/Q_2017_01_33_ques.png\">",
+      "question": "승객용 엘리베이터의 적재하중 및 최대정원을 계산할 때 1인당 하중의 기준은 몇 [kg]인가?",
       "round": "01",
       "year": "2017",
       "subject": "승강기보수",
-      "sub_unit": "검사 기준 및 법규"
+      "sub_unit": "검사 기준 및 법규",
+      "question_img": "images/17_20/Q_2017_01_33_ques.png"
     },
     {
       "answer": "3",
@@ -9279,11 +9316,12 @@
       "number": "51",
       "page": 9,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "간접식 유압엘리베이터의 특징이 **아닌** 것은?\n<img src=\"images/17_20/Q_2017_01_33_ques.png\">",
+      "question": "간접식 유압엘리베이터의 특징이 **아닌** 것은?",
       "round": "01",
       "year": "2017",
       "subject": "승강기개론",
-      "sub_unit": "유압 승강기 기초"
+      "sub_unit": "유압 승강기 기초",
+      "question_img": "images/17_20/Q_2017_01_33_ques.png"
     },
     {
       "answer": "2",
@@ -9513,11 +9551,12 @@
       "number": "04",
       "page": 12,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "접지저항계를 이용한 접지저항 측정방법으로 **틀린** 것은?\n<img src=\"images/17_20/Q_2017_02_4_ques.png\">",
+      "question": "접지저항계를 이용한 접지저항 측정방법으로 **틀린** 것은?",
       "round": "02",
       "year": "2017",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "images/17_20/Q_2017_02_4_ques.png"
     },
     {
       "answer": "4",
@@ -9837,11 +9876,12 @@
       "number": "22",
       "page": 17,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "가변전압 가변주파수(VVVF) 제어 방식에 관한 설명 중 **틀린** 것은?\n<img src=\"images/17_20/Q_2017_02_4_ques.png\">",
+      "question": "가변전압 가변주파수(VVVF) 제어 방식에 관한 설명 중 **틀린** 것은?",
       "round": "02",
       "year": "2017",
       "subject": "승강기개론",
-      "sub_unit": "주요 장치(카, 권상기, 제어반)"
+      "sub_unit": "주요 장치(카, 권상기, 제어반)",
+      "question_img": "images/17_20/Q_2017_02_4_ques.png"
     },
     {
       "answer": "4",
@@ -10021,7 +10061,9 @@
       "round": "02",
       "year": "2017",
       "subject": "승강기개론",
-      "sub_unit": "주요 장치(카, 권상기, 제어반)"
+      "sub_unit": "주요 장치(카, 권상기, 제어반)",
+      "question_img": "Elevator_2017_02_32.png",
+      "has_image": true
     },
     {
       "answer": "3",
@@ -10795,7 +10837,9 @@
       "round": "01",
       "year": "2018",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "Elevator_2018_01_15.png",
+      "has_image": true
     },
     {
       "answer": "4",
@@ -10831,7 +10875,9 @@
       "round": "01",
       "year": "2018",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "Elevator_2018_01_17.png",
+      "has_image": true
     },
     {
       "answer": "1",
@@ -11533,7 +11579,9 @@
       "round": "01",
       "year": "2018",
       "subject": "승강기개론",
-      "sub_unit": "유압 승강기 기초"
+      "sub_unit": "유압 승강기 기초",
+      "question_img": "Elevator_2018_01_56.png",
+      "has_image": true
     },
     {
       "answer": "4",
@@ -11673,11 +11721,12 @@
       "number": "04",
       "page": 41,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "$RLC$ 소자의 교류회로에 대한 설명 중 **틀린** 것은?\n<img src=\"images/17_20/Q_2018_02_4_ques.png\">",
+      "question": "$RLC$ 소자의 교류회로에 대한 설명 중 **틀린** 것은?",
       "round": "02",
       "year": "2018",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "images/17_20/Q_2018_02_4_ques.png"
     },
     {
       "answer": "2",
@@ -11997,11 +12046,12 @@
       "number": "22",
       "page": 47,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "에스컬레이터 디딤판 체인의 안전율은 얼마 이상 이어야 하는가?\n<img src=\"images/17_20/Q_2018_02_4_ques.png\">",
+      "question": "에스컬레이터 디딤판 체인의 안전율은 얼마 이상 이어야 하는가?",
       "round": "02",
       "year": "2018",
       "subject": "승강기보수",
-      "sub_unit": "검사 기준 및 법규"
+      "sub_unit": "검사 기준 및 법규",
+      "question_img": "images/17_20/Q_2018_02_4_ques.png"
     },
     {
       "answer": "4",
@@ -12865,7 +12915,9 @@
       "round": "01",
       "year": "2019",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "Elevator_2019_01_10.png",
+      "has_image": true
     },
     {
       "answer": "1",
@@ -12955,7 +13007,9 @@
       "round": "01",
       "year": "2019",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "Elevator_2019_01_15.png",
+      "has_image": true
     },
     {
       "answer": "2",
@@ -12991,7 +13045,9 @@
       "round": "01",
       "year": "2019",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "Elevator_2019_01_17.png",
+      "has_image": true
     },
     {
       "answer": "3",
@@ -13117,7 +13173,9 @@
       "round": "01",
       "year": "2019",
       "subject": "기계전기기초",
-      "sub_unit": "기계 요소 및 역학 기초"
+      "sub_unit": "기계 요소 및 역학 기초",
+      "question_img": "Elevator_2019_01_24.png",
+      "has_image": true
     },
     {
       "answer": "2",
@@ -13779,11 +13837,12 @@
       "number": "01",
       "page": 73,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "에스컬레이터의 스커트 가드판과 디딤판 사이에 인체의 일부나 옷, 신발 등이 끼었을 때 동작하여 에스컬레이터를 정지시키는 안전장치는?\n<img src=\"images/17_20/Q_2019_02_1_ques.png\">",
+      "question": "에스컬레이터의 스커트 가드판과 디딤판 사이에 인체의 일부나 옷, 신발 등이 끼었을 때 동작하여 에스컬레이터를 정지시키는 안전장치는?",
       "round": "02",
       "year": "2019",
       "subject": "승강기개론",
-      "sub_unit": "에스컬레이터 기초"
+      "sub_unit": "에스컬레이터 기초",
+      "question_img": "images/17_20/Q_2019_02_1_ques.png"
     },
     {
       "answer": "2",
@@ -13837,7 +13896,9 @@
       "round": "02",
       "year": "2019",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "Elevator_2019_02_04.png",
+      "has_image": true
     },
     {
       "answer": "2",
@@ -13999,7 +14060,9 @@
       "round": "02",
       "year": "2019",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "Elevator_2019_02_13.png",
+      "has_image": true
     },
     {
       "answer": "1",
@@ -14103,11 +14166,12 @@
       "number": "19",
       "page": 78,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "그림과 같은 회로에서 A-B단자에서의 등가저항은 몇 [$\\Omega$]인가?\n<img src=\"images/17_20/Q_2019_02_1_ques.png\">",
+      "question": "그림과 같은 회로에서 A-B단자에서의 등가저항은 몇 [$\\Omega$]인가?",
       "round": "02",
       "year": "2019",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "images/17_20/Q_2019_02_1_ques.png"
     },
     {
       "answer": "4",
@@ -14125,7 +14189,9 @@
       "round": "02",
       "year": "2019",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "Elevator_2019_02_20.png",
+      "has_image": true
     },
     {
       "answer": "2",
@@ -14157,11 +14223,12 @@
       "number": "22",
       "page": 79,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "다음 그림과 같이 무게 $W$가 움직이는 도르래에 매달려 있다. 물체를 끌어 올리는 힘을 $P$라고 했을 때 $P$와 $W$의 관계식으로 **옳은** 것은?(단, 도르래와 로프의 무게는 없다고 본다)\n<img src=\"images/17_20/Q_2019_02_4_ques.png\">",
+      "question": "다음 그림과 같이 무게 $W$가 움직이는 도르래에 매달려 있다. 물체를 끌어 올리는 힘을 $P$라고 했을 때 $P$와 $W$의 관계식으로 **옳은** 것은?(단, 도르래와 로프의 무게는 없다고 본다)",
       "round": "02",
       "year": "2019",
       "subject": "기계전기기초",
-      "sub_unit": "기계 요소 및 역학 기초"
+      "sub_unit": "기계 요소 및 역학 기초",
+      "question_img": "images/17_20/Q_2019_02_4_ques.png"
     },
     {
       "answer": "3",
@@ -14355,11 +14422,12 @@
       "number": "33",
       "page": 81,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "승강기의 자체점검 항목이 **아닌** 것은?\n<img src=\"images/17_20/Q_2019_02_33_ques.png\">",
+      "question": "승강기의 자체점검 항목이 **아닌** 것은?",
       "round": "02",
       "year": "2019",
       "subject": "승강기보수",
-      "sub_unit": "자체점검 및 유지관리"
+      "sub_unit": "자체점검 및 유지관리",
+      "question_img": "images/17_20/Q_2019_02_33_ques.png"
     },
     {
       "answer": "1",
@@ -14679,11 +14747,12 @@
       "number": "51",
       "page": 85,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "다음 그림의 리밋 스위치 접점 명칭은?\n<img src=\"images/17_20/Q_2019_02_33_ques.png\">",
+      "question": "다음 그림의 리밋 스위치 접점 명칭은?",
       "round": "02",
       "year": "2019",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "images/17_20/Q_2019_02_33_ques.png"
     },
     {
       "answer": "3",
@@ -14805,11 +14874,12 @@
       "number": "58",
       "page": 87,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "유압식 엘리베이터에 있어서 정상적인 작동을 위하여 유지하여야 할 오일의 온도 범위는?\n<img src=\"images/17_20/Q_2019_02_58_ques.png\">\n<img src=\"images/17_20/Q_2019_02_58_ques.png\">",
+      "question": "유압식 엘리베이터에 있어서 정상적인 작동을 위하여 유지하여야 할 오일의 온도 범위는?",
       "round": "02",
       "year": "2019",
       "subject": "승강기개론",
-      "sub_unit": "유압 승강기 기초"
+      "sub_unit": "유압 승강기 기초",
+      "question_img": "images/17_20/Q_2019_02_58_ques.png"
     },
     {
       "answer": "3",
@@ -14895,11 +14965,12 @@
       "number": "03",
       "page": 88,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "엘리베이터로 인하여 인명 사고가 발생했을 경우 안전관리자의 대처사항으로 **부적합한** 것은?\n<img src=\"images/17_20/Q_2020_01_3_ques.png\">",
+      "question": "엘리베이터로 인하여 인명 사고가 발생했을 경우 안전관리자의 대처사항으로 **부적합한** 것은?",
       "round": "01",
       "year": "2020",
       "subject": "안전관리",
-      "sub_unit": "사고 사례 및 비상 조치"
+      "sub_unit": "사고 사례 및 비상 조치",
+      "question_img": "images/17_20/Q_2020_01_3_ques.png"
     },
     {
       "answer": "4",
@@ -14913,11 +14984,12 @@
       "number": "04",
       "page": 88,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "전기에 의한 발화의 원인으로 볼 **수 없는** 것은?\n<img src=\"images/17_20/Q_2020_01_4_ques.png\">",
+      "question": "전기에 의한 발화의 원인으로 볼 **수 없는** 것은?",
       "round": "01",
       "year": "2020",
       "subject": "안전관리",
-      "sub_unit": "소방 및 작업 안전"
+      "sub_unit": "소방 및 작업 안전",
+      "question_img": "images/17_20/Q_2020_01_4_ques.png"
     },
     {
       "answer": "4",
@@ -15075,11 +15147,12 @@
       "number": "13",
       "page": 90,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "불 대수식 $Y=ABC+AC$를 간소화시키면?\n<img src=\"images/17_20/Q_2020_01_13_ques.png\">",
+      "question": "불 대수식 $Y=ABC+AC$를 간소화시키면?",
       "round": "01",
       "year": "2020",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "images/17_20/Q_2020_01_13_ques.png"
     },
     {
       "answer": "1",
@@ -15129,11 +15202,12 @@
       "number": "16",
       "page": 91,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "그림의 회로와 같은 내용의 논리기호는?\n<img src=\"images/17_20/Q_2019_02_58_ques.png\">\n<img src=\"images/17_20/Q_2019_02_58_ques.png\">",
+      "question": "그림의 회로와 같은 내용의 논리기호는?",
       "round": "01",
       "year": "2020",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "images/17_20/Q_2019_02_58_ques.png"
     },
     {
       "answer": "4",
@@ -15219,11 +15293,12 @@
       "number": "21",
       "page": 93,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "A-B 사이 콘덴서의 합성정전용량은 얼마인가?\n<img src=\"images/17_20/Q_2020_01_3_ques.png\">",
+      "question": "A-B 사이 콘덴서의 합성정전용량은 얼마인가?",
       "round": "01",
       "year": "2020",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "images/17_20/Q_2020_01_3_ques.png"
     },
     {
       "answer": "3",
@@ -15237,11 +15312,12 @@
       "number": "22",
       "page": 93,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "다음 회로에서 a, b 간의 합성저항은?\n<img src=\"images/17_20/Q_2020_01_4_ques.png\">",
+      "question": "다음 회로에서 a, b 간의 합성저항은?",
       "round": "01",
       "year": "2020",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "images/17_20/Q_2020_01_4_ques.png"
     },
     {
       "answer": "4",
@@ -15669,11 +15745,12 @@
       "number": "46",
       "page": 100,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "작업 내용에 따라 지급해야 할 보호구로 **옳지 않은** 것은?\n<img src=\"images/17_20/Q_2020_01_46_ques.png\">",
+      "question": "작업 내용에 따라 지급해야 할 보호구로 **옳지 않은** 것은?",
       "round": "01",
       "year": "2020",
       "subject": "안전관리",
-      "sub_unit": "소방 및 작업 안전"
+      "sub_unit": "소방 및 작업 안전",
+      "question_img": "images/17_20/Q_2020_01_46_ques.png"
     },
     {
       "answer": "1",
@@ -15723,11 +15800,12 @@
       "number": "49",
       "page": 100,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "반도체에서 공유결합을 할 때 과잉전자를 발생시키는 반도체는?\n<img src=\"images/17_20/Q_2020_01_49_ques.png\">",
+      "question": "반도체에서 공유결합을 할 때 과잉전자를 발생시키는 반도체는?",
       "round": "01",
       "year": "2020",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "images/17_20/Q_2020_01_49_ques.png"
     },
     {
       "answer": "1",
@@ -15907,7 +15985,9 @@
       "round": "01",
       "year": "2020",
       "subject": "승강기개론",
-      "sub_unit": "주요 장치(카, 권상기, 제어반)"
+      "sub_unit": "주요 장치(카, 권상기, 제어반)",
+      "question_img": "Elevator_2020_01_59.png",
+      "has_image": true
     },
     {
       "answer": "4",
@@ -15993,11 +16073,12 @@
       "number": "04",
       "page": 105,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "그림과 같은 유압회로의 설명이 **아닌** 것은?\n<img src=\"images/17_20/Q_2020_01_46_ques.png\">",
+      "question": "그림과 같은 유압회로의 설명이 **아닌** 것은?",
       "round": "02",
       "year": "2020",
       "subject": "승강기개론",
-      "sub_unit": "유압 승강기 기초"
+      "sub_unit": "유압 승강기 기초",
+      "question_img": "images/17_20/Q_2020_01_46_ques.png"
     },
     {
       "answer": "1",
@@ -16051,7 +16132,9 @@
       "round": "02",
       "year": "2020",
       "subject": "승강기개론",
-      "sub_unit": "주요 장치(카, 권상기, 제어반)"
+      "sub_unit": "주요 장치(카, 권상기, 제어반)",
+      "question_img": "Elevator_2020_02_07.png",
+      "has_image": true
     },
     {
       "answer": "4",
@@ -16479,11 +16562,12 @@
       "number": "31",
       "page": 112,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "기계실에 설치되지 **않는** 것은?\n<img src=\"images/17_20/Q_2020_02_31_ques.png\">",
+      "question": "기계실에 설치되지 **않는** 것은?",
       "round": "02",
       "year": "2020",
       "subject": "승강기개론",
-      "sub_unit": "주요 장치(카, 권상기, 제어반)"
+      "sub_unit": "주요 장치(카, 권상기, 제어반)",
+      "question_img": "images/17_20/Q_2020_02_31_ques.png"
     },
     {
       "answer": "3",
@@ -16515,11 +16599,12 @@
       "number": "33",
       "page": 113,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "카 측의 총중량이 $3,600[\text{kgf}]$이고, 카 주 2본의 단면적이 $12[\text{cm}^2]$일 때, 카 주의 안전율은?(단, 파단 강도는 $4,800[\text{kgf}/\text{cm}^2]$이다)\n<img src=\"images/17_20/Q_2020_02_33_ques.png\">",
+      "question": "카 측의 총중량이 $3,600[\text{kgf}]$이고, 카 주 2본의 단면적이 $12[\text{cm}^2]$일 때, 카 주의 안전율은?(단, 파단 강도는 $4,800[\text{kgf}/\text{cm}^2]$이다)",
       "round": "02",
       "year": "2020",
       "subject": "기계전기기초",
-      "sub_unit": "기계 요소 및 역학 기초"
+      "sub_unit": "기계 요소 및 역학 기초",
+      "question_img": "images/17_20/Q_2020_02_33_ques.png"
     },
     {
       "answer": "1",
@@ -16659,11 +16744,12 @@
       "number": "41",
       "page": 115,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "유압완충기에서 완전히 압축한 상태에서 완전히 복귀할 때까지 요하는 플런저의 복귀시간은 몇 초 이내이어야 하는가?\n<img src=\"images/17_20/Q_2020_02_41_ques.png\">",
+      "question": "유압완충기에서 완전히 압축한 상태에서 완전히 복귀할 때까지 요하는 플런저의 복귀시간은 몇 초 이내이어야 하는가?",
       "round": "02",
       "year": "2020",
       "subject": "승강기보수",
-      "sub_unit": "검사 기준 및 법규"
+      "sub_unit": "검사 기준 및 법규",
+      "question_img": "images/17_20/Q_2020_02_41_ques.png"
     },
     {
       "answer": "3",
@@ -16803,11 +16889,12 @@
       "number": "49",
       "page": 117,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "그림의 회로에서 전체의 저항 $R$을 구하는 공식은?\n<img src=\"images/17_20/Q_2020_02_31_ques.png\">",
+      "question": "그림의 회로에서 전체의 저항 $R$을 구하는 공식은?",
       "round": "02",
       "year": "2020",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "images/17_20/Q_2020_02_31_ques.png"
     },
     {
       "answer": "4",
@@ -16839,11 +16926,12 @@
       "number": "51",
       "page": 117,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "그림과 같은 회로의 역률은 약 얼마인가?\n<img src=\"images/17_20/Q_2020_02_33_ques.png\">",
+      "question": "그림과 같은 회로의 역률은 약 얼마인가?",
       "round": "02",
       "year": "2020",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "images/17_20/Q_2020_02_33_ques.png"
     },
     {
       "answer": "3",
@@ -16983,11 +17071,12 @@
       "number": "59",
       "page": 119,
       "pdf_file": "Elevator_17_20.pdf",
-      "question": "다음과 같은 그림기호를 의미하는 것은?\n(문제 이미지에 주어진 시퀀스 기호)\n<img src=\"images/17_20/Q_2020_02_41_ques.png\">\n<img src=\"images/17_20/Q_2020_02_59_ques.png\">",
+      "question": "다음과 같은 그림기호를 의미하는 것은?\n(문제 이미지에 주어진 시퀀스 기호)",
       "round": "02",
       "year": "2020",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "images/17_20/Q_2020_02_41_ques.png"
     },
     {
       "answer": 2,
@@ -17005,7 +17094,9 @@
       "round": "02",
       "year": "2020",
       "subject": "승강기개론",
-      "sub_unit": "유압 승강기 기초"
+      "sub_unit": "유압 승강기 기초",
+      "question_img": "Elevator_2020_02_60.png",
+      "has_image": true
     },
     {
       "answer": "1",
@@ -17131,7 +17222,9 @@
       "round": "02",
       "year": "2020",
       "subject": "승강기보수",
-      "sub_unit": "자체점검 및 유지관리"
+      "sub_unit": "자체점검 및 유지관리",
+      "question_img": "Elevator_2020_02_07.png",
+      "has_image": true
     },
     {
       "answer": "1",
@@ -17433,11 +17526,12 @@
       "number": "06",
       "page": 2,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_21_01_06_Q1.png' />\n즉시 작동형 추락방지 안전장치가 작동할 때 정지력과 거리에 대한 그래프로 옳은 것은?",
+      "question": "즉시 작동형 추락방지 안전장치가 작동할 때 정지력과 거리에 대한 그래프로 옳은 것은?",
       "round": "01",
       "year": "2021",
       "subject": "승강기개론",
-      "sub_unit": "주요 장치(카, 권상기, 제어반)"
+      "sub_unit": "주요 장치(카, 권상기, 제어반)",
+      "question_img": "/images/21_24/Elevator_21_01_06_Q1.png"
     },
     {
       "answer": "3",
@@ -18315,11 +18409,12 @@
       "number": "55",
       "page": 14,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_21_01_55_Q1.png' />\n다음 논리기호의 논리식은?",
+      "question": "다음 논리기호의 논리식은?",
       "round": "01",
       "year": "2021",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "/images/21_24/Elevator_21_01_55_Q1.png"
     },
     {
       "answer": "4",
@@ -18405,11 +18500,12 @@
       "number": "60",
       "page": 15,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_21_01_60_Q1.png' />\n$R_1=100[\\Omega]$, $R_2=1,000[\\Omega]$, $R_3=800[\\Omega]$일 때 전류계의 지시가 $0$이 되었다. 이때 저항 $R_4$는 몇 $[\\Omega]$인가?",
+      "question": "$R_1=100[\\Omega]$, $R_2=1,000[\\Omega]$, $R_3=800[\\Omega]$일 때 전류계의 지시가 $0$이 되었다. 이때 저항 $R_4$는 몇 $[\\Omega]$인가?",
       "round": "01",
       "year": "2021",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "/images/21_24/Elevator_21_01_60_Q1.png"
     },
     {
       "answer": "2",
@@ -18589,7 +18685,9 @@
       "round": "02",
       "year": "2021",
       "subject": "승강기보수",
-      "sub_unit": "검사 기준 및 법규"
+      "sub_unit": "검사 기준 및 법규",
+      "question_img": "Elevator_2021_02_10.png",
+      "has_image": true
     },
     {
       "answer": "3",
@@ -19129,7 +19227,9 @@
       "round": "02",
       "year": "2021",
       "subject": "기계전기기초",
-      "sub_unit": "기계 요소 및 역학 기초"
+      "sub_unit": "기계 요소 및 역학 기초",
+      "question_img": "Elevator_2021_02_40.png",
+      "has_image": true
     },
     {
       "answer": "3",
@@ -19417,7 +19517,9 @@
       "round": "02",
       "year": "2021",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "Elevator_2021_02_56.png",
+      "has_image": true
     },
     {
       "answer": "3",
@@ -19831,7 +19933,9 @@
       "round": "01",
       "year": "2022",
       "subject": "승강기보수",
-      "sub_unit": "검사 기준 및 법규"
+      "sub_unit": "검사 기준 및 법규",
+      "question_img": "Elevator_2022_01_19.png",
+      "has_image": true
     },
     {
       "answer": "4",
@@ -19881,11 +19985,12 @@
       "number": "22",
       "page": 37,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_22_01_22_Q1.png' />\n와이어로프 안전율의 산출 공식으로 옳은 것은?\n(단, $F$ : 안전율, $S$ : 로프 1가닥에 대한 제작사 정격 파단강도, $N$ : 부하를 받는 와이어로프의 가닥수, $W$ : 카와 정격하중을 승강로 안의 어떤 위치에 두고 모든 카 로프에 걸리는 최대정지부하)",
+      "question": "와이어로프 안전율의 산출 공식으로 옳은 것은?\n(단, $F$ : 안전율, $S$ : 로프 1가닥에 대한 제작사 정격 파단강도, $N$ : 부하를 받는 와이어로프의 가닥수, $W$ : 카와 정격하중을 승강로 안의 어떤 위치에 두고 모든 카 로프에 걸리는 최대정지부하)",
       "round": "01",
       "year": "2022",
       "subject": "승강기개론",
-      "sub_unit": "주요 장치(카, 권상기, 제어반)"
+      "sub_unit": "주요 장치(카, 권상기, 제어반)",
+      "question_img": "/images/21_24/Elevator_22_01_22_Q1.png"
     },
     {
       "answer": "4",
@@ -20151,11 +20256,12 @@
       "number": "37",
       "page": 42,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_22_01_37_Q1.png' />\n다음 그림과 같은 4절 링크 기구의 운동 변환 방식은?",
+      "question": "다음 그림과 같은 4절 링크 기구의 운동 변환 방식은?",
       "round": "01",
       "year": "2022",
       "subject": "기계전기기초",
-      "sub_unit": "기계 요소 및 역학 기초"
+      "sub_unit": "기계 요소 및 역학 기초",
+      "question_img": "/images/21_24/Elevator_22_01_37_Q1.png"
     },
     {
       "answer": "3",
@@ -20169,11 +20275,12 @@
       "number": "38",
       "page": 42,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_22_01_38_Q1.png' />\n그림의 마이크로미터의 판독값으로 옳은 것은?",
+      "question": "그림의 마이크로미터의 판독값으로 옳은 것은?",
       "round": "01",
       "year": "2022",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "/images/21_24/Elevator_22_01_38_Q1.png"
     },
     {
       "answer": "3",
@@ -20403,11 +20510,12 @@
       "number": "51",
       "page": 46,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_22_01_51_Q1.png' />\nNAND 게이트 3개로 구성된 다음 논리회로의 출력값 E는?",
+      "question": "NAND 게이트 3개로 구성된 다음 논리회로의 출력값 E는?",
       "round": "01",
       "year": "2022",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "/images/21_24/Elevator_22_01_51_Q1.png"
     },
     {
       "answer": "1",
@@ -20493,11 +20601,12 @@
       "number": "56",
       "page": 47,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_22_01_56_Q1.png' />\n분류기의 저항($R_S$)은?(단, $n = \\frac{I_0}{I_A}$ 이다)",
+      "question": "분류기의 저항($R_S$)은?(단, $n = \\frac{I_0}{I_A}$ 이다)",
       "round": "01",
       "year": "2022",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "/images/21_24/Elevator_22_01_56_Q1.png"
     },
     {
       "answer": "3",
@@ -20605,7 +20714,9 @@
       "round": "02",
       "year": "2022",
       "subject": "승강기보수",
-      "sub_unit": "검사 기준 및 법규"
+      "sub_unit": "검사 기준 및 법규",
+      "question_img": "Elevator_2022_02_02.png",
+      "has_image": true
     },
     {
       "answer": "3",
@@ -20623,7 +20734,9 @@
       "round": "02",
       "year": "2022",
       "subject": "승강기보수",
-      "sub_unit": "검사 기준 및 법규"
+      "sub_unit": "검사 기준 및 법규",
+      "question_img": "Elevator_2022_02_03.png",
+      "has_image": true
     },
     {
       "answer": "4",
@@ -20749,7 +20862,9 @@
       "round": "02",
       "year": "2022",
       "subject": "승강기개론",
-      "sub_unit": "에스컬레이터 기초"
+      "sub_unit": "에스컬레이터 기초",
+      "question_img": "Elevator_2022_02_10.png",
+      "has_image": true
     },
     {
       "answer": "1",
@@ -21253,7 +21368,9 @@
       "round": "02",
       "year": "2022",
       "subject": "안전관리",
-      "sub_unit": "소방 및 작업 안전"
+      "sub_unit": "소방 및 작업 안전",
+      "question_img": "Elevator_2022_02_38.png",
+      "has_image": true
     },
     {
       "answer": "2",
@@ -21573,11 +21690,12 @@
       "number": "56",
       "page": 63,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_22_02_56_Q1.png' />\n다음 그림의 논리회로와 같은 진리값을 NAND소자만으로 구성하여 나타내려면 NAND소자는 최소 몇 개가 필요한가?",
+      "question": "다음 그림의 논리회로와 같은 진리값을 NAND소자만으로 구성하여 나타내려면 NAND소자는 최소 몇 개가 필요한가?",
       "round": "02",
       "year": "2022",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "/images/21_24/Elevator_22_02_56_Q1.png"
     },
     {
       "answer": "2",
@@ -21613,7 +21731,9 @@
       "round": "02",
       "year": "2022",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "Elevator_2022_02_02.png",
+      "has_image": true
     },
     {
       "answer": "3",
@@ -21631,7 +21751,9 @@
       "round": "02",
       "year": "2022",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "Elevator_2022_02_03.png",
+      "has_image": true
     },
     {
       "answer": "2",
@@ -21649,7 +21771,9 @@
       "round": "02",
       "year": "2022",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "Elevator_2022_02_60.png",
+      "has_image": true
     },
     {
       "answer": "2",
@@ -21685,7 +21809,9 @@
       "round": "01",
       "year": "2023",
       "subject": "안전관리",
-      "sub_unit": "승강기 운행 안전"
+      "sub_unit": "승강기 운행 안전",
+      "question_img": "Elevator_2023_01_02.png",
+      "has_image": true
     },
     {
       "answer": "4",
@@ -22171,7 +22297,9 @@
       "round": "01",
       "year": "2023",
       "subject": "승강기개론",
-      "sub_unit": "주요 장치(카, 권상기, 제어반)"
+      "sub_unit": "주요 장치(카, 권상기, 제어반)",
+      "question_img": "Elevator_2023_01_29.png",
+      "has_image": true
     },
     {
       "answer": "1",
@@ -22585,7 +22713,9 @@
       "round": "01",
       "year": "2023",
       "subject": "승강기보수",
-      "sub_unit": "검사 기준 및 법규"
+      "sub_unit": "검사 기준 및 법규",
+      "question_img": "Elevator_2023_01_52.png",
+      "has_image": true
     },
     {
       "answer": "4",
@@ -22635,11 +22765,12 @@
       "number": "55",
       "page": 79,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_23_01_55_Q1.png' />\na, b 간의 합성 정전 용량은?",
+      "question": "a, b 간의 합성 정전 용량은?",
       "round": "01",
       "year": "2023",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "/images/21_24/Elevator_23_01_55_Q1.png"
     },
     {
       "answer": "3",
@@ -22653,11 +22784,12 @@
       "number": "56",
       "page": 80,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_23_01_56_Q1.png' />\n그림에서 $3[\\Omega]$ 저항에 흐르는 전류가 $12[\\text{A}]$라면, $4[\\Omega]$에 흐르는 전류는 몇 $[\\text{A}]$인가?",
+      "question": "그림에서 $3[\\Omega]$ 저항에 흐르는 전류가 $12[\\text{A}]$라면, $4[\\Omega]$에 흐르는 전류는 몇 $[\\text{A}]$인가?",
       "round": "01",
       "year": "2023",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "/images/21_24/Elevator_23_01_56_Q1.png"
     },
     {
       "answer": "2",
@@ -22689,11 +22821,12 @@
       "number": "57",
       "page": 80,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_23_01_57_Q1.png' />\n그림과 같은 접점 회로의 논리식을 간소화한 것은?",
+      "question": "그림과 같은 접점 회로의 논리식을 간소화한 것은?",
       "round": "01",
       "year": "2023",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "/images/21_24/Elevator_23_01_57_Q1.png"
     },
     {
       "answer": "1",
@@ -23499,11 +23632,12 @@
       "number": "43",
       "page": 91,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_23_02_43_Q1.png' />\n마이크로미터로 측정한 결과가 다음과 같을 때 측정값으로 **옳은** 것은?",
+      "question": "마이크로미터로 측정한 결과가 다음과 같을 때 측정값으로 **옳은** 것은?",
       "round": "02",
       "year": "2023",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "/images/21_24/Elevator_23_02_43_Q1.png"
     },
     {
       "answer": "2",
@@ -23593,7 +23727,9 @@
       "round": "02",
       "year": "2023",
       "subject": "기계전기기초",
-      "sub_unit": "기계 요소 및 역학 기초"
+      "sub_unit": "기계 요소 및 역학 기초",
+      "question_img": "Elevator_2023_02_48.png",
+      "has_image": true
     },
     {
       "answer": "1",
@@ -23661,11 +23797,12 @@
       "number": "52",
       "page": 94,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_23_02_52_Q1.png' />\n다음 시퀀스 기호의 명칭으로 옳은 것은?",
+      "question": "다음 시퀀스 기호의 명칭으로 옳은 것은?",
       "round": "02",
       "year": "2023",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "/images/21_24/Elevator_23_02_52_Q1.png"
     },
     {
       "answer": "3",
@@ -23697,11 +23834,12 @@
       "number": "54",
       "page": 94,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_23_02_54_Q1.png' />\n그림에서 $a$, $b$ 간의 합성저항은 몇 $[\\Omega]$인가?",
+      "question": "그림에서 $a$, $b$ 간의 합성저항은 몇 $[\\Omega]$인가?",
       "round": "02",
       "year": "2023",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "/images/21_24/Elevator_23_02_54_Q1.png"
     },
     {
       "answer": "4",
@@ -23773,7 +23911,9 @@
       "round": "02",
       "year": "2023",
       "subject": "기계전기기초",
-      "sub_unit": "전기 이론 및 회로 기초"
+      "sub_unit": "전기 이론 및 회로 기초",
+      "question_img": "Elevator_2023_02_58.png",
+      "has_image": true
     },
     {
       "answer": "4",
@@ -24097,7 +24237,9 @@
       "round": "01",
       "year": "2024",
       "subject": "승강기보수",
-      "sub_unit": "자체점검 및 유지관리"
+      "sub_unit": "자체점검 및 유지관리",
+      "question_img": "Elevator_2024_01_16.png",
+      "has_image": true
     },
     {
       "answer": "4",
@@ -24457,7 +24599,9 @@
       "round": "01",
       "year": "2024",
       "subject": "승강기개론",
-      "sub_unit": "유압 승강기 기초"
+      "sub_unit": "유압 승강기 기초",
+      "question_img": "Elevator_2024_01_36.png",
+      "has_image": true
     },
     {
       "answer": "1",
@@ -24849,11 +24993,12 @@
       "number": "58",
       "page": 111,
       "pdf_file": "Elevator_21_24.pdf",
-      "question": "<img src='/images/21_24/Elevator_24_01_58_Q1.png' />\n그림과 같은 회로와 원리가 같은 논리기호는?",
+      "question": "그림과 같은 회로와 원리가 같은 논리기호는?",
       "round": "01",
       "year": "2024",
       "subject": "기계전기기초",
-      "sub_unit": "제어 시스템 및 측정"
+      "sub_unit": "제어 시스템 및 측정",
+      "question_img": "/images/21_24/Elevator_24_01_58_Q1.png"
     },
     {
       "answer": "1",
