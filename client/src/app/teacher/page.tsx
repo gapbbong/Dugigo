@@ -18,6 +18,7 @@ export default function TeacherDashboard() {
   const [groups, setGroups] = useState<any[]>([]);
   const [selectedGroup, setSelectedGroup] = useState<string>('전체');
   const [isAddingGroup, setIsAddingGroup] = useState(false);
+  const [isMemberModalOpen, setIsMemberModalOpen] = useState(false);
   const [newGroupName, setNewGroupName] = useState('');
   
   const [stats, setStats] = useState({
@@ -27,6 +28,7 @@ export default function TeacherDashboard() {
     suspiciousCount: 0
   });
   const [searchTerm, setSearchTerm] = useState('');
+  const [modalSearch, setModalSearch] = useState('');
 
   const LEVEL_TITLES = [
     "입문자", "초보자", "수련자", "숙련자", 
@@ -228,7 +230,17 @@ export default function TeacherDashboard() {
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-black text-slate-800 flex items-center gap-2"><FolderPlus size={16} className="text-brand-600" /> 그룹 관리</h3>
-            <button onClick={() => setIsAddingGroup(true)} className="text-[10px] font-black text-brand-600 hover:underline flex items-center gap-1"><PlusCircle size={12} /> 새 그룹</button>
+            <div className="flex gap-3">
+              {selectedGroup !== '전체' && (
+                <button 
+                  onClick={() => setIsMemberModalOpen(true)}
+                  className="text-[10px] font-black text-white bg-brand-600 px-3 py-1 rounded-lg shadow-sm flex items-center gap-1"
+                >
+                  <UserPlus size={12} /> 학생 추가
+                </button>
+              )}
+              <button onClick={() => setIsAddingGroup(true)} className="text-[10px] font-black text-brand-600 hover:underline flex items-center gap-1"><PlusCircle size={12} /> 새 그룹</button>
+            </div>
           </div>
           <div className="flex flex-wrap gap-2">
             <GroupTag active={selectedGroup === '전체'} label="모든 학생" count={allStudents.length} onClick={() => setSelectedGroup('전체')} />
@@ -262,6 +274,63 @@ export default function TeacherDashboard() {
               <div className="flex gap-3">
                 <button onClick={() => setIsAddingGroup(false)} className="flex-1 py-4 bg-slate-100 text-slate-500 font-black rounded-xl hover:bg-slate-200">취소</button>
                 <button onClick={createGroup} className="flex-1 py-4 bg-brand-600 text-white font-black rounded-xl">생성</button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* 학생 추가 모달 */}
+      <AnimatePresence>
+        {isMemberModalOpen && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 bg-slate-900/60 backdrop-blur-sm">
+            <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="bg-white rounded-[2rem] p-6 md:p-8 w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl">
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <h3 className="text-xl font-black text-slate-900">[{selectedGroup}] 학생 추가</h3>
+                  <p className="text-xs font-bold text-slate-400 mt-1">그룹에 포함할 학생을 선택해 주세요.</p>
+                </div>
+                <button onClick={() => setIsMemberModalOpen(false)} className="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-200 transition-all"><PlusCircle className="rotate-45" size={20} /></button>
+              </div>
+
+              <div className="relative mb-6">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                <input 
+                  type="text" 
+                  placeholder="추가할 학생 이름 검색..." 
+                  className="w-full pl-12 pr-6 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-brand-500 outline-none font-bold"
+                  value={modalSearch}
+                  onChange={(e) => setModalSearch(e.target.value)}
+                />
+              </div>
+
+              <div className="flex-1 overflow-y-auto pr-2 space-y-2 no-scrollbar">
+                {allStudents
+                  .filter(s => s.username.includes(modalSearch))
+                  .map(s => {
+                    const isIn = groups.find(g => g.name === selectedGroup)?.members.includes(s.id);
+                    return (
+                      <div key={s.id} className="flex items-center justify-between p-4 bg-slate-50 border border-slate-100 rounded-2xl hover:border-brand-200 transition-all">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-xs font-black text-slate-400 border border-slate-200">{s.username.replace(/[0-9]/g, '')}</div>
+                          <div>
+                            <p className="text-sm font-black text-slate-800">{s.username}</p>
+                            <p className="text-[10px] font-bold text-slate-400">{s.id}</p>
+                          </div>
+                        </div>
+                        <button 
+                          onClick={() => toggleStudentInGroup(s.id, selectedGroup)}
+                          className={`px-4 py-2 rounded-xl text-xs font-black transition-all ${isIn ? 'bg-brand-600 text-white shadow-lg shadow-brand-600/20' : 'bg-white text-slate-500 border border-slate-200 hover:bg-slate-50'}`}
+                        >
+                          {isIn ? '삭제' : '추가'}
+                        </button>
+                      </div>
+                    );
+                  })}
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-slate-100">
+                <button onClick={() => setIsMemberModalOpen(false)} className="w-full py-4 bg-slate-900 text-white font-black rounded-2xl hover:bg-slate-800 transition-all">완료</button>
               </div>
             </motion.div>
           </div>
