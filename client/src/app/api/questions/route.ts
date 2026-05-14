@@ -321,8 +321,8 @@ export async function GET(req: NextRequest) {
       const limit = parseInt(searchParams.get("limit") || "10000"); // 기본값은 크게 설정
 
       if (unitFilter) {
-        // [🔥 빈출 문제 TOP 100] 특수 처리
-        if (unitFilter.includes("빈출 문제 TOP 100")) {
+        // [🔥 자주 나왔던 문항] 특수 처리
+        if (unitFilter.includes("자주 나왔던 문항") || unitFilter.includes("자주나왔던문항")) {
           const masterFile = filesToLoad.find(f => f.toLowerCase().includes('master_db') || f.toLowerCase().includes('master') || f.includes('Literacy2') || f.includes('history_master'));
           if (masterFile) {
             const masterPath = path.join(dataDir, masterFile);
@@ -330,10 +330,12 @@ export async function GET(req: NextRequest) {
             const masterData = JSON.parse(masterContent);
             let masterQuestions = Array.isArray(masterData) ? masterData : (masterData.questions || []);
             
-            // 빈도수 높은 순으로 정렬 후 상위 100개 추출
+            // 빈도수 2회 이상인 것들만 모아서 정렬 후 범위만큼 추출
             sorted = masterQuestions
-              .sort((a: any, b: any) => (b.frequency || 0) - (a.frequency || 0))
-              .slice(0, 100);
+              .filter((q: any) => (q.frequency || 0) >= 2)
+              .sort((a: any, b: any) => (b.frequency || 0) - (a.frequency || 0));
+            
+            // 이미 sorted에 담았으므로 아래에서 slice 처리됨
           }
         } else {
           const baseUnitFilter = unitFilter.replace(/\s*\(\d+부\)$/, '').trim();

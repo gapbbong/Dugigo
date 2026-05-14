@@ -213,7 +213,43 @@ export default function SelectUnitPage() {
           </motion.h1>
         </div>
 
-        {/* Sections */}
+        {/* 🔥 자주 나왔던 문항 섹션 */}
+        {units.some(u => u.originalName === "자주나왔던문항") && (
+          <section className="mb-12">
+            <div className="flex items-center justify-between mb-5">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-orange-600 rounded-xl flex items-center justify-center text-white"><Zap size={20} /></div>
+                <h2 className="text-xl md:text-3xl font-black text-slate-900">자주 나왔던 문항 공략</h2>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="glass-card p-6 rounded-[2rem] border border-white/60 col-span-full">
+                <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-3">
+                  {units.filter(u => u.originalName === "자주나왔던문항").map((unit, idx) => {
+                    const stats = getSetStats(unit.name, 1, unit.count); // 자주 문항은 세트 번호 1로 고정
+                    return (
+                      <button 
+                        key={unit.name} 
+                        onClick={() => router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unit.name)}&set=1&size=${unit.count}${unit.range ? `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}` : ''}`)}
+                        className="h-24 bg-white border border-slate-100 rounded-2xl flex flex-col items-center justify-center hover:border-orange-300 transition-all relative group overflow-hidden"
+                      >
+                        {stats && (
+                          <div className="absolute top-1.5 right-1.5 px-1.5 py-0.5 bg-orange-600 text-white text-[8px] font-black rounded-md shadow-sm">
+                            {stats.count}회
+                          </div>
+                        )}
+                        <span className="text-2xl font-black tracking-tighter text-slate-800">{String(idx + 1).padStart(2, '0')}</span>
+                        <span className="text-[9px] font-black uppercase text-slate-400">공략</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* 단원별 핵심 공략 섹션 */}
         <section className="mb-12">
           <div className="flex items-center justify-between mb-5">
             <div className="flex items-center gap-3">
@@ -224,8 +260,8 @@ export default function SelectUnitPage() {
           </div>
           {!isUnitsCollapsed && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {units.map((unit, idx) => {
-                const unitIndex = globalIndex++;
+              {units.filter(u => u.originalName !== "자주나왔던문항").map((unit, idx) => {
+                const unitIndex = idx + 1;
                 const unitSetCount = Math.ceil(unit.count / 30);
                 return (
                   <div key={unit.name} className="glass-card p-6 rounded-[2rem] border border-white/60">
