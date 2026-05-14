@@ -265,8 +265,8 @@ export async function GET(req: NextRequest) {
 
     // 1. [🔥 자주 나왔던 문항] 섹션 구성 (2회 이상 모든 문제)
     const frequentQuestions = Array.from(questionMap.values())
-      .filter(q => (q.frequency || 0) >= 2)
-      .sort((a, b) => (b.frequency || 0) - (a.frequency || 0));
+      .filter((q: any) => (q.frequency || 0) >= 2)
+      .sort((a: any, b: any) => (b.frequency || 0) - (a.frequency || 0));
 
     const finalUnits: { 
       name: string; 
