@@ -240,24 +240,6 @@ export default function TeacherDashboard() {
       </div>
 
       {/* Admin Role Tabs */}
-      {isOwner && (
-        <div className="max-w-7xl mx-auto px-4 md:px-10 pt-6">
-          <div className="bg-white p-1.5 rounded-2xl border border-slate-200 inline-flex items-center gap-1 shadow-sm">
-            <button 
-              onClick={() => { setActiveRole('student'); }}
-              className={`px-6 py-2.5 rounded-xl text-sm font-black transition-all flex items-center gap-2 ${activeRole === 'student' ? 'bg-brand-600 text-white shadow-lg shadow-brand-600/20' : 'text-slate-400 hover:text-slate-600'}`}
-            >
-              <Users size={16} /> 학생 관리
-            </button>
-            <button 
-              onClick={() => { setActiveRole('teacher'); }}
-              className={`px-6 py-2.5 rounded-xl text-sm font-black transition-all flex items-center gap-2 ${activeRole === 'teacher' ? 'bg-brand-600 text-white shadow-lg shadow-brand-600/20' : 'text-slate-400 hover:text-slate-600'}`}
-            >
-              <Award size={16} /> 교사 관리
-            </button>
-          </div>
-        </div>
-      )}
 
       <main className="max-w-7xl mx-auto p-4 md:p-10 space-y-6">
         {/* 요약 카드 한 줄 */}
@@ -292,8 +274,30 @@ export default function TeacherDashboard() {
             </div>
           </div>
           <div className="flex flex-wrap gap-2">
-            <GroupTag active={selectedGroup === '전체'} label="모든 학생" count={allStudents.filter(s => s.role?.toLowerCase() === activeRole).length} onClick={() => setSelectedGroup('전체')} />
-            {groups.map(g => <GroupTag key={g.id} active={selectedGroup === g.name} label={g.name} count={g.members.length} onClick={() => setSelectedGroup(g.name)} onDelete={() => deleteGroup(g.id, g.name)} />)}
+            {isOwner && (
+              <GroupTag 
+                active={selectedGroup === '전체' && activeRole === 'teacher'} 
+                label="모든 교사" 
+                count={allStudents.filter(s => s.role?.toLowerCase() === 'teacher').length} 
+                onClick={() => { setActiveRole('teacher'); setSelectedGroup('전체'); }} 
+              />
+            )}
+            <GroupTag 
+              active={selectedGroup === '전체' && activeRole === 'student'} 
+              label="모든 학생" 
+              count={allStudents.filter(s => s.role?.toLowerCase() === 'student').length} 
+              onClick={() => { setActiveRole('student'); setSelectedGroup('전체'); }} 
+            />
+            {groups.map(g => (
+              <GroupTag 
+                key={g.id} 
+                active={selectedGroup === g.name} 
+                label={g.name} 
+                count={g.members.length} 
+                onClick={() => { setActiveRole('student'); setSelectedGroup(g.name); }} 
+                onDelete={() => deleteGroup(g.id, g.name)} 
+              />
+            ))}
           </div>
         </div>
 
@@ -404,10 +408,10 @@ export default function TeacherDashboard() {
 
 function StatCard({ label, value, icon, color, bg }: any) {
   return (
-    <div className="bg-white p-3 md:p-5 rounded-2xl border border-slate-100 shadow-sm flex flex-col gap-1 items-center md:items-start">
-      <div className={`w-8 h-8 ${bg} ${color} rounded-lg flex items-center justify-center mb-1`}>{React.cloneElement(icon, { size: 14 })}</div>
-      <div className="text-[8px] md:text-[10px] font-black text-slate-400 uppercase text-center md:text-left">{label}</div>
-      <div className="text-sm md:text-xl font-black text-slate-900">{value}</div>
+    <div className="bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col gap-1.5 items-center md:items-start">
+      <div className={`w-10 h-10 ${bg} ${color} rounded-lg flex items-center justify-center mb-1`}>{React.cloneElement(icon, { size: 18 })}</div>
+      <div className="text-[10px] md:text-xs font-black text-slate-400 uppercase text-center md:text-left">{label}</div>
+      <div className="text-base md:text-2xl font-black text-slate-900">{value}</div>
     </div>
   );
 }
@@ -447,8 +451,8 @@ function StudentCard({ student, groups, levelTitles, onToggleGroup, formatTime, 
           {student.username.replace(/[0-9]/g, '')}
         </div>
         <div>
-          <h4 className="font-black text-slate-900 text-base leading-tight">{student.username}</h4>
-          <div className="text-[10px] font-bold text-slate-400">Lv.{level} {levelTitle}</div>
+          <h4 className="font-black text-slate-900 text-lg leading-tight">{student.username}</h4>
+          <div className="text-xs font-bold text-slate-400">Lv.{level} {levelTitle}</div>
         </div>
       </div>
 
@@ -456,35 +460,35 @@ function StudentCard({ student, groups, levelTitles, onToggleGroup, formatTime, 
         {/* 행 1: [자격증 | 총 푼 문제 | 학습 시간] */}
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1">
-            <p className="text-[11px] font-black text-slate-500 uppercase mb-1">학습 자격증</p>
-            <div className="flex flex-wrap gap-0.5">
-              {student.subjectsStudied.length > 0 ? student.subjectsStudied.map((s: string) => <span key={s} className="px-1.5 py-0.5 bg-slate-100 text-slate-500 rounded text-[8px] font-bold">{s}</span>) : <span className="text-[8px] text-slate-300 italic">없음</span>}
+            <p className="text-xs font-black text-slate-500 uppercase mb-1">학습 자격증</p>
+            <div className="flex flex-wrap gap-1">
+              {student.subjectsStudied.length > 0 ? student.subjectsStudied.map((s: string) => <span key={s} className="px-2 py-0.5 bg-slate-100 text-slate-500 rounded text-[10px] font-bold">{s}</span>) : <span className="text-[10px] text-slate-300 italic">없음</span>}
             </div>
           </div>
           <div className="text-center">
-            <p className="text-[11px] font-black text-slate-500 uppercase mb-1">총 문제</p>
-            <p className="text-sm font-black text-slate-800">{student.totalQuestions}Q</p>
+            <p className="text-xs font-black text-slate-500 uppercase mb-1">총 문제</p>
+            <p className="text-base font-black text-slate-800">{student.totalQuestions}Q</p>
           </div>
           <div className="text-right">
-            <p className="text-[11px] font-black text-slate-500 uppercase mb-1">학습 시간</p>
-            <p className="text-sm font-black text-slate-800">{formatTime(student.totalDuration)}</p>
+            <p className="text-xs font-black text-slate-500 uppercase mb-1">학습 시간</p>
+            <p className="text-base font-black text-slate-800">{formatTime(student.totalDuration)}</p>
           </div>
         </div>
 
         {/* 행 2: [정답률 | 최근 접속] */}
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <p className="text-[11px] font-black text-slate-500 uppercase mb-1">종합 정답률</p>
+            <p className="text-xs font-black text-slate-500 uppercase mb-1">종합 정답률</p>
             <div className="flex items-center gap-2">
-              <span className={`font-black text-sm ${student.accuracy >= 60 ? 'text-emerald-500' : 'text-rose-500'}`}>{student.accuracy}%</span>
-              <div className="flex-1 h-1 bg-slate-100 rounded-full overflow-hidden">
+              <span className={`font-black text-base ${student.accuracy >= 60 ? 'text-emerald-500' : 'text-rose-500'}`}>{student.accuracy}%</span>
+              <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
                 <div className={`h-full rounded-full ${student.accuracy >= 60 ? 'bg-emerald-400' : 'bg-rose-400'}`} style={{ width: `${student.accuracy}%` }} />
               </div>
             </div>
           </div>
           <div className="text-right">
-            <p className="text-[11px] font-black text-slate-500 uppercase mb-1">최근 접속</p>
-            <p className="text-xs font-black text-slate-600 leading-tight">{student.lastActive}</p>
+            <p className="text-xs font-black text-slate-500 uppercase mb-1">최근 접속</p>
+            <p className="text-sm font-black text-slate-600 leading-tight">{student.lastActive}</p>
           </div>
         </div>
       </div>
