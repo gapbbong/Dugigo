@@ -197,7 +197,7 @@ export async function GET(req: NextRequest) {
           const subUnit = mainUnit ? `[${mainUnit}] ${baseSubUnit}` : baseSubUnit;
 
           unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
-          questionMap.set(qId, true);
+          questionMap.set(qId, { ...q, subUnit: subUnit });
 
           // 연도별 기출 집계 추가
           let y = q.year || data.year;
