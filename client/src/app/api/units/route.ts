@@ -213,7 +213,8 @@ export async function GET(req: NextRequest) {
           }
           if (!r) r = q.id?.split('_')[1];
           if (r) {
-            const examKey = y ? `${y}년 ${r}${r.includes('상시') ? '' : '회'}` : `${r}회 기출`;
+            const roundStr = String(r);
+            const examKey = y ? `${y}년 ${roundStr}${roundStr.includes('상시') ? '' : '회'}` : `${roundStr}회 기출`;
             examsMap.set(examKey, (examsMap.get(examKey) || 0) + 1);
           }
         });
