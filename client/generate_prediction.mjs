@@ -25,7 +25,19 @@ const pickQuestions = (pool, count) => {
     // 2. 전략적 배분
     const selected = [];
     const usedContentKeys = new Set();
-    const getContentKey = (q) => `${q.question}_${(q.choices || []).join('|')}`;
+    
+    const normalize = (text) => {
+        return (text || "")
+            .toLowerCase()
+            .replace(/[^a-z0-9가-힣]/g, "")
+            .trim();
+    };
+
+    const getContentKey = (q) => {
+        const cleanQ = normalize(q.question);
+        const cleanC = (q.choices || []).map(c => normalize(c)).join("|");
+        return `${cleanQ}_${cleanC}`;
+    };
 
     // A. 초고빈도 (TOP 8) - 무조건 나오는 문제
     for (const q of sorted) {

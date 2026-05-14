@@ -459,7 +459,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     script.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js';
     script.onload = () => {
       const confetti = (window as any).confetti;
-      const count = isCombo ? 150 : 500; // 콤보일 때는 가볍게, 완료 시엔 화려하게
+      const count = isCombo ? 300 : 1250; // 화력 2.5배 강화
       const defaults = { origin: { y: 0.7 } };
 
       function fire(particleRatio: number, opts: any) {
@@ -471,16 +471,18 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       }
 
       if (isCombo) {
-        // 콤보용 심플 폭죽
-        fire(0.25, { spread: 40, startVelocity: 35 });
-        fire(0.2, { spread: 80 });
+        // 콤보용 풍성한 폭죽
+        fire(0.25, { spread: 50, startVelocity: 40 });
+        fire(0.2, { spread: 90 });
+        fire(0.35, { spread: 120, scalar: 1.2 });
       } else {
-        // 세트 완료용 화려한 폭죽
-        fire(0.25, { spread: 26, startVelocity: 55 });
-        fire(0.2, { spread: 60 });
-        fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
-        fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 });
-        fire(0.1, { spread: 120, startVelocity: 45 });
+        // 세트 완료용 압도적 폭죽 (화면을 가득 채움)
+        fire(0.25, { spread: 30, startVelocity: 65 });
+        fire(0.2, { spread: 70 });
+        fire(0.35, { spread: 110, decay: 0.91, scalar: 1.0 });
+        fire(0.15, { spread: 130, startVelocity: 35, decay: 0.92, scalar: 1.4 });
+        fire(0.1, { spread: 150, startVelocity: 55 });
+        fire(0.2, { spread: 180, startVelocity: 45, scalar: 1.2 });
       }
     };
     document.head.appendChild(script);

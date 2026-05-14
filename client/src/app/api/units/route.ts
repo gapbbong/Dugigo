@@ -270,13 +270,21 @@ export async function GET(req: NextRequest) {
       return a[0].localeCompare(b[0]);
     });
 
-    // 1. [🔥 자주 나왔던 문항] 섹션 구성 (중복 제거 로직 강화 - 공백 무시)
+    // 1. [🔥 자주 나왔던 문항] 섹션 구성 (초정밀 중복 제거 - 특수문자/공백/대소문자 무시)
     const uniqueFrequentMap = new Map<string, any>();
+    
+    // 텍스트를 아주 엄격하게 정규화하는 함수
+    const normalize = (text: string) => {
+      return (text || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9가-힣]/g, "") // 영문, 숫자, 한글 제외 모든 특수문자/공백 제거
+        .trim();
+    };
+
     Array.from(questionMap.values()).forEach((q: any) => {
       if ((q.frequency || 0) >= 2) {
-        // 공백 무시 비교를 위해 클린 키 생성
-        const cleanQuestion = (q.question || "").replace(/\s+/g, "");
-        const cleanChoices = (q.choices || []).map((c: string) => c.replace(/\s+/g, "")).join("|");
+        const cleanQuestion = normalize(q.question);
+        const cleanChoices = (q.choices || []).map((c: string) => normalize(c)).join("|");
         const contentKey = `${cleanQuestion}_${cleanChoices}`;
         
         if (!uniqueFrequentMap.has(contentKey)) {
