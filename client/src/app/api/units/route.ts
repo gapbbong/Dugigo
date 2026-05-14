@@ -224,8 +224,15 @@ export async function GET(req: NextRequest) {
     });
 
     const sortedExams = Array.from(examsMap.entries())
-      .map(([name, count]) => ({ name, count }))
+      .map(([name, count]) => ({ 
+        name, 
+        count,
+        isAI: name.includes('예상문제')
+      }))
       .sort((a, b) => {
+        // AI 예상 문제는 항상 최상단에 오거나 정렬에서 우선권 부여 가능
+        if (a.isAI && !b.isAI) return -1;
+        if (!a.isAI && b.isAI) return 1;
         const numA = parseInt(a.name.replace(/\D/g, '')) || 0;
         const numB = parseInt(b.name.replace(/\D/g, '')) || 0;
         return numB - numA;
@@ -263,9 +270,21 @@ export async function GET(req: NextRequest) {
       return a[0].localeCompare(b[0]);
     });
 
-    // 1. [🔥 자주 나왔던 문항] 섹션 구성 (2회 이상 모든 문제)
-    const frequentQuestions = Array.from(questionMap.values())
-      .filter((q: any) => (q.frequency || 0) >= 2)
+    // 1. [🔥 자주 나왔던 문항] 섹션 구성 (중복 제거 로직 강화)
+    // 내용(문제+보기) 기반으로 중복을 완전히 제거하여 하나만 남깁니다.
+    const uniqueFrequentMap = new Map<string, any>();
+    Array.from(questionMap.values()).forEach((q: any) => {
+      if ((q.frequency || 0) >= 2) {
+        // 문제 내용과 보기를 합쳐서 고유 키 생성
+        const contentKey = `${q.question}_${(q.choices || []).join('|')}`;
+        // 이미 등록된 문제면 패스, 아니면 등록 (더 최신 정보를 위해 덮어쓰거나 처음 것 유지)
+        if (!uniqueFrequentMap.has(contentKey)) {
+          uniqueFrequentMap.set(contentKey, q);
+        }
+      }
+    });
+
+    const frequentQuestions = Array.from(uniqueFrequentMap.values())
       .sort((a: any, b: any) => (b.frequency || 0) - (a.frequency || 0));
 
     const finalUnits: { 
@@ -275,6 +294,7 @@ export async function GET(req: NextRequest) {
       originalName?: string; 
       range?: [number, number];
       customLabel?: string;
+      isAI?: boolean; // AI 예상 문제용 플래그 추가
     }[] = [];
 
     if (frequentQuestions.length > 0) {

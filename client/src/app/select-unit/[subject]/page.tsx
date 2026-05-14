@@ -36,6 +36,7 @@ interface Unit {
 interface Exam {
   name: string;
   count: number;
+  isAI?: boolean;
 }
 
 export default function SelectUnitPage() {
@@ -313,6 +314,7 @@ export default function SelectUnitPage() {
           )}
         </section>
 
+        {/* 연도별 기출 정복 섹션 */}
         <section className="mb-12">
           <div className="flex items-center justify-between mb-5">
             <div className="flex items-center gap-3">
@@ -322,20 +324,54 @@ export default function SelectUnitPage() {
             <button onClick={() => setIsExamsCollapsed(!isExamsCollapsed)} className="px-3 py-1.5 bg-white/50 border border-indigo-100 rounded-lg text-xs font-black">{isExamsCollapsed ? '펼치기' : '접기'}</button>
           </div>
           {!isExamsCollapsed && (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {exams.map((exam) => (
-                <div key={exam.name} onClick={() => handleSelectExam(exam)} className="glass-card p-6 rounded-[1.5rem] cursor-pointer hover:bg-brand-50 transition-all text-center">
-                  <h4 className="text-lg font-black">{exam.name}</h4>
-                  <p className="text-xs text-slate-400">{exam.count}문항</p>
-                </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {exams.filter(e => !e.isAI).map((exam) => (
+                <button
+                  key={exam.name}
+                  onClick={() => handleSelectExam(exam)}
+                  className="p-5 bg-white border border-slate-100 rounded-[1.5rem] hover:border-indigo-300 transition-all text-left group"
+                >
+                  <h4 className="text-sm font-black text-slate-800 mb-1 group-hover:text-indigo-600 transition-colors">{exam.name}</h4>
+                  <p className="text-[10px] font-black text-slate-400">{exam.count}문항</p>
+                </button>
               ))}
             </div>
           )}
         </section>
 
+        {/* 🔮 AI 적중 예상 문제 섹션 */}
+        {exams.some(e => e.isAI) && (
+          <section className="mb-12">
+            <div className="flex items-center justify-between mb-5">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-fuchsia-600 rounded-xl flex items-center justify-center text-white"><Sparkles size={20} /></div>
+                <h2 className="text-xl md:text-3xl font-black text-slate-900">AI 적중 예상 문제</h2>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {exams.filter(e => e.isAI).map((exam) => (
+                <button
+                  key={exam.name}
+                  onClick={() => handleSelectExam(exam)}
+                  className="glass-card p-6 rounded-[2rem] border-2 border-fuchsia-100 hover:border-fuchsia-400 transition-all flex items-center justify-between group"
+                >
+                  <div className="text-left">
+                    <span className="inline-block px-2 py-0.5 bg-fuchsia-100 text-fuchsia-600 text-[10px] font-black rounded-full mb-2">PROBABILITY 98%</span>
+                    <h4 className="text-lg font-black text-slate-800 group-hover:text-fuchsia-600 transition-colors">{exam.name}</h4>
+                    <p className="text-xs font-black text-slate-400">AI가 엄선한 2025년 적중 족집게</p>
+                  </div>
+                  <div className="w-12 h-12 bg-fuchsia-50 rounded-full flex items-center justify-center text-fuchsia-600 group-hover:scale-110 transition-transform">
+                    <Zap size={24} />
+                  </div>
+                </button>
+              ))}
+            </div>
+          </section>
+        )}
+
         <section onClick={() => router.push(`/study/${encodeURIComponent(subject)}`)} className="glass-card p-10 rounded-[3rem] cursor-pointer hover:shadow-xl transition-all border border-white/80 flex items-center gap-8">
           <div className="w-20 h-20 bg-amber-500 text-white rounded-3xl flex items-center justify-center"><LayoutGrid size={40} /></div>
-          <div>
+          <div className="text-left">
             <h3 className="text-3xl font-black mb-2">전체 랜덤 모의고사</h3>
             <p className="text-slate-500 font-bold">모든 단원과 연도를 무작위로 섞어 실전 감각을 극대화합니다.</p>
           </div>
