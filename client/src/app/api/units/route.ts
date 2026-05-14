@@ -315,13 +315,19 @@ export async function GET(req: NextRequest) {
       isAI?: boolean; 
     }[] = [];
 
-    if (frequentQuestions.length > 0) {
+    // 정보처리기능사는 빈출 섹션 숨김 (사용자 요청)
+    if (frequentQuestions.length > 0 && sanitizedSubject !== '정보처리기능사') {
       const FREQ_PAGE_SIZE = 30;
-      const freqParts = Math.ceil(frequentQuestions.length / FREQ_PAGE_SIZE);
+      // 유령 페이지 방지를 위해 실제 문항이 있는 만큼만 생성
+      const freqParts = Math.floor(frequentQuestions.length / FREQ_PAGE_SIZE) + (frequentQuestions.length % FREQ_PAGE_SIZE > 0 ? 1 : 0);
+      
       for (let i = 0; i < freqParts; i++) {
+        const currentCount = Math.min(FREQ_PAGE_SIZE, frequentQuestions.length - (i * FREQ_PAGE_SIZE));
+        if (currentCount <= 0) continue; // 빈 페이지는 생성 안함
+
         finalUnits.push({
           name: `🔥 자주 나왔던 문항 - 공략 ${String(i + 1).padStart(2, '0')}`,
-          count: Math.min(FREQ_PAGE_SIZE, frequentQuestions.length - (i * FREQ_PAGE_SIZE)),
+          count: currentCount,
           isPart: true,
           originalName: "자주나왔던문항",
           range: [i * FREQ_PAGE_SIZE, (i + 1) * FREQ_PAGE_SIZE],
