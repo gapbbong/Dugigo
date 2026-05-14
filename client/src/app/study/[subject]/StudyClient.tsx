@@ -250,11 +250,14 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   useEffect(() => {
     if (!paramsReady) return;
     const isYearMode = !!searchParamsProps?.year;
-    const initialStart = (parseInt(setNum || '1') - 1) * parseInt(setSize || '30');
+    
+    // rStart가 있으면 그것을 우선 사용, 없으면 setNum 기반 계산
+    const initialStart = rStart ? parseInt(rStart) : (parseInt(setNum || '1') - 1) * parseInt(setSize || '30');
     const initialLimit = isYearMode ? 1000 : parseInt(setSize || '30');
+    
     setLoading(true);
     fetchQuestions(initialStart, initialLimit);
-  }, [paramsReady, setNum, setSize, fetchQuestions, searchParamsProps]);
+  }, [paramsReady, setNum, setSize, rStart, fetchQuestions, searchParamsProps]);
 
   // 백그라운드 프리페칭 로직
   useEffect(() => {

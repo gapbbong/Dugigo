@@ -307,7 +307,7 @@ export async function GET(req: NextRequest) {
     }[] = [];
 
     if (frequentQuestions.length > 0) {
-      const FREQ_PAGE_SIZE = 100;
+      const FREQ_PAGE_SIZE = 30;
       const freqParts = Math.ceil(frequentQuestions.length / FREQ_PAGE_SIZE);
       for (let i = 0; i < freqParts; i++) {
         finalUnits.push({
