@@ -40,15 +40,21 @@ export async function GET(req: NextRequest) {
 
     const sanitizedSubject = targetSubject.replace(/\s/g, '');
 
-    const filesToLoad = fs.readdirSync(dataDir)
-      .filter(f => f.endsWith('.json') && !f.includes('_CLEAN'))
-      .sort((a, b) => {
-        const isAStandard = /^\d+\./.test(a);
-        const isBStandard = /^\d+\./.test(b);
-        if (isAStandard && !isBStandard) return -1;
-        if (!isAStandard && isBStandard) return 1;
-        return 0;
-      });
+    const allFiles = fs.readdirSync(dataDir);
+    const hasMaster = allFiles.includes('MASTER_DB.json');
+    
+    // MASTER_DB.json이 있으면 그것만 읽고, 없으면 기존처럼 모든 파일을 읽음
+    const filesToLoad = hasMaster 
+      ? ['MASTER_DB.json']
+      : allFiles
+          .filter(f => f.endsWith('.json') && !f.includes('_CLEAN') && !f.includes('.bak'))
+          .sort((a, b) => {
+            const isAStandard = /^\d+\./.test(a);
+            const isBStandard = /^\d+\./.test(b);
+            if (isAStandard && !isBStandard) return -1;
+            if (!isAStandard && isBStandard) return 1;
+            return 0;
+          });
 
     const unitMap = new Map<string, number>();
     const questionMap = new Map<string, boolean>(); // 중복 체크용 ID 맵
