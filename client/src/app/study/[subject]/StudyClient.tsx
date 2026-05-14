@@ -832,7 +832,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               <div className="w-20 h-20 bg-slate-100 rounded-3xl flex items-center justify-center mb-6"><X className="w-10 h-10 text-slate-400" /></div>
               <h2 className="text-2xl font-black text-slate-800 mb-2">문제를 찾을 수 없습니다</h2>
               <p className="text-slate-500 mb-8">해당 단원에 등록된 문제가 없거나 분류 중입니다.</p>
-              <button onClick={() => router.push('/select-subject')} className="px-8 py-4 bg-brand-600 text-white font-black rounded-2xl hover:bg-brand-700 transition-all shadow-lg shadow-brand-500/20">과목 선택으로 돌아가기</button>
+              <button onClick={() => router.push(`/select-unit/${encodeURIComponent(subject)}`)} className="px-8 py-4 bg-brand-600 text-white font-black rounded-2xl hover:bg-brand-700 transition-all shadow-lg shadow-brand-500/20">단원 선택으로 돌아가기</button>
             </motion.div>
           ) : (
             <motion.div key={currentIndex} custom={direction} initial={{ opacity: 0, x: direction > 0 ? 50 : -50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: direction > 0 ? -50 : 50 }} transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }} className="flex-1 flex flex-col gap-4 md:gap-6">

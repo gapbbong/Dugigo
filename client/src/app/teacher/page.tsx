@@ -20,6 +20,7 @@ export default function TeacherDashboard() {
   const [isAddingGroup, setIsAddingGroup] = useState(false);
   const [isMemberModalOpen, setIsMemberModalOpen] = useState(false);
   const [newGroupName, setNewGroupName] = useState('');
+  const [activeRole, setActiveRole] = useState<'student' | 'teacher'>('student');
   
   const [stats, setStats] = useState({
     totalStudents: 0,
@@ -43,7 +44,7 @@ export default function TeacherDashboard() {
 
   useEffect(() => {
     applyFilters();
-  }, [selectedSubject, selectedGroup, searchTerm, allStudents, groups]);
+  }, [selectedSubject, selectedGroup, searchTerm, allStudents, groups, activeRole]);
 
   const fetchSubjects = async () => {
     try {
@@ -122,8 +123,12 @@ export default function TeacherDashboard() {
       }) || [];
 
       setAllStudents(processed);
+      
+      const studentsOnly = processed.filter(p => p.role?.toLowerCase() === 'student');
+      const teachersOnly = processed.filter(p => p.role?.toLowerCase() === 'teacher');
+
       setStats({
-        totalStudents: processed.length,
+        totalStudents: ownerFlag ? (activeRole === 'student' ? studentsOnly.length : teachersOnly.length) : processed.length,
         avgAccuracy: tQuestions > 0 ? Math.round((tCorrect / tQuestions) * 100) : 0,
         todayActive: activeSet.size,
         suspiciousCount: 0
@@ -138,6 +143,11 @@ export default function TeacherDashboard() {
 
   const applyFilters = () => {
     let filtered = [...allStudents];
+    
+    if (isOwner) {
+      filtered = filtered.filter(s => s.role?.toLowerCase() === activeRole);
+    }
+
     if (selectedSubject !== '전체') {
       filtered = filtered.filter(s => s.subjectsStudied.includes(selectedSubject));
     }
@@ -150,6 +160,14 @@ export default function TeacherDashboard() {
       filtered = filtered.filter(s => s.username.toLowerCase().includes(lower) || (s.id || '').toLowerCase().includes(lower));
     }
     setStudents(filtered);
+
+    // Update stats whenever filters change to reflect the current view
+    if (isOwner) {
+      setStats(prev => ({
+        ...prev,
+        totalStudents: filtered.length
+      }));
+    }
   };
 
   const createGroup = async () => {
@@ -209,22 +227,42 @@ export default function TeacherDashboard() {
           <button onClick={() => window.location.href = '/select-subject'} className="w-8 h-8 bg-slate-50 border border-slate-200 rounded-lg flex items-center justify-center text-slate-500 hover:text-brand-600 transition-all"><ChevronLeft size={16} /></button>
           <div>
             <h1 className="text-xl font-black text-slate-900 tracking-tight flex items-center gap-2">교사 대시보드 <span className="text-[10px] bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full uppercase">Live</span></h1>
-            <p className="text-[10px] font-bold text-slate-400">환영합니다! 현재 <span className="text-brand-600">[{selectedGroup}]</span> 그룹 확인 중</p>
+            <p className="text-xs md:text-sm font-bold text-slate-400">환영합니다! 현재 <span className="text-brand-600">[{selectedGroup}]</span> 그룹 확인 중</p>
           </div>
         </div>
         <div className="flex items-center gap-2 w-full md:w-auto">
           <div className="relative flex-1 md:w-64">
             <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
-            <input type="text" placeholder="학생 검색..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500/20 font-bold text-sm" />
+            <input type="text" placeholder={isOwner && activeRole === 'teacher' ? "교사 검색..." : "학생 검색..."} value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500/20 font-bold text-sm" />
           </div>
           <button onClick={fetchData} className="p-2.5 bg-brand-600 text-white rounded-xl shadow-lg shadow-brand-600/20 active:scale-95 transition-all"><TrendingUp size={18} /></button>
         </div>
       </div>
 
+      {/* Admin Role Tabs */}
+      {isOwner && (
+        <div className="max-w-7xl mx-auto px-4 md:px-10 pt-6">
+          <div className="bg-white p-1.5 rounded-2xl border border-slate-200 inline-flex items-center gap-1 shadow-sm">
+            <button 
+              onClick={() => { setActiveRole('student'); }}
+              className={`px-6 py-2.5 rounded-xl text-sm font-black transition-all flex items-center gap-2 ${activeRole === 'student' ? 'bg-brand-600 text-white shadow-lg shadow-brand-600/20' : 'text-slate-400 hover:text-slate-600'}`}
+            >
+              <Users size={16} /> 학생 관리
+            </button>
+            <button 
+              onClick={() => { setActiveRole('teacher'); }}
+              className={`px-6 py-2.5 rounded-xl text-sm font-black transition-all flex items-center gap-2 ${activeRole === 'teacher' ? 'bg-brand-600 text-white shadow-lg shadow-brand-600/20' : 'text-slate-400 hover:text-slate-600'}`}
+            >
+              <Award size={16} /> 교사 관리
+            </button>
+          </div>
+        </div>
+      )}
+
       <main className="max-w-7xl mx-auto p-4 md:p-10 space-y-6">
         {/* 요약 카드 한 줄 */}
         <div className="grid grid-cols-4 gap-2 md:gap-6">
-          <StatCard label="학생수" value={stats.totalStudents} icon={<Users />} color="text-blue-600" bg="bg-blue-50" />
+          <StatCard label={isOwner && activeRole === 'teacher' ? "교사수" : "학생수"} value={stats.totalStudents} icon={<Users />} color="text-blue-600" bg="bg-blue-50" />
           <StatCard label="정답률" value={`${stats.avgAccuracy}%`} icon={<Target />} color="text-emerald-600" bg="bg-emerald-50" />
           <StatCard label="오늘" value={stats.todayActive} icon={<Clock />} color="text-brand-600" bg="bg-brand-50" />
           <StatCard label="이상" value={stats.suspiciousCount} icon={<AlertTriangle />} color="text-rose-600" bg="bg-rose-50" />
@@ -254,9 +292,21 @@ export default function TeacherDashboard() {
             </div>
           </div>
           <div className="flex flex-wrap gap-2">
-            <GroupTag active={selectedGroup === '전체'} label="모든 학생" count={allStudents.length} onClick={() => setSelectedGroup('전체')} />
+            <GroupTag active={selectedGroup === '전체'} label="모든 학생" count={allStudents.filter(s => s.role?.toLowerCase() === activeRole).length} onClick={() => setSelectedGroup('전체')} />
             {groups.map(g => <GroupTag key={g.id} active={selectedGroup === g.name} label={g.name} count={g.members.length} onClick={() => setSelectedGroup(g.name)} onDelete={() => deleteGroup(g.id, g.name)} />)}
           </div>
+        </div>
+
+        {/* List Header */}
+        <div className="flex items-center justify-between">
+          <h2 className="text-lg font-black text-slate-900 flex items-center gap-2">
+            {isOwner && activeRole === 'teacher' ? (
+              <><Award className="text-brand-600" /> 교사 목록</>
+            ) : (
+              <><Users className="text-brand-600" /> 학생 목록</>
+            )}
+          </h2>
+          <p className="text-sm font-bold text-slate-400">총 <span className="text-brand-600">{students.length}</span>명</p>
         </div>
 
         {/* 학생 카드 목록 */}

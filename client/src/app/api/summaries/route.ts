@@ -1,9 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
+﻿import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-// 제공된 4개의 API 키 로테이션
 const API_KEYS = [
   'AIzaSyCqM6VXgXszoN_ICLmATOJ3KZHSSCkS49s',
   'AIzaSyC3PpvfbdMxb3ajXvtP-4m3uLHa-qcDsU0',
@@ -27,20 +26,14 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'Missing parameters' }, { status: 400 });
   }
 
-  // 단원명 정화 ( (1부), (2부) 등 접미사 제거 )
   const cleanUnit = unit.replace(/\s*\(\d+부\)$/, '').trim();
-
   const safeUnitName = cleanUnit.replace(/[^a-z0-9가-힣]/gi, '_');
   const summaryFileName = `${safeUnitName}_${set}세트.json`;
 
-  // 1. public 폴더 우선 확인 (배포 환경에서 가장 확실함)
   const publicPath = path.join(process.cwd(), 'public', 'summaries', subject, summaryFileName);
-  // 2. src 폴더 확인 (로컬 개발 환경용 하위 호환)
   const srcPath = path.join(process.cwd(), 'src', 'summaries', subject, summaryFileName);
-  
   const summaryPath = fs.existsSync(publicPath) ? publicPath : srcPath;
 
-  // 1. 이미 파일이 있으면 반환
   if (fs.existsSync(summaryPath)) {
     try {
       const fileContent = fs.readFileSync(summaryPath, 'utf-8');
@@ -50,30 +43,22 @@ export async function GET(req: NextRequest) {
     }
   }
 
-  // 2. 파일이 없으면 생성 로직 시작
   try {
-    // 디렉토리 생성
     const targetDir = path.dirname(summaryPath);
     if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir, { recursive: true });
 
-    // 관련 문제 데이터 가져오기 (컨텍스트용)
     const dataDir = path.join(process.cwd(), 'src', 'data', subject);
     let dbPath = path.join(dataDir, 'MASTER_DB.json');
-    if (!fs.existsSync(dbPath)) {
-      dbPath = path.join(dataDir, 'Literacy2_MASTER_DB.json');
-    }
-    if (!fs.existsSync(dbPath)) {
-      dbPath = path.join(dataDir, 'history_master.json');
-    }
+    if (!fs.existsSync(dbPath)) dbPath = path.join(dataDir, 'Literacy2_MASTER_DB.json');
+    if (!fs.existsSync(dbPath)) dbPath = path.join(dataDir, 'history_master.json');
 
     const size = parseInt(searchParams.get('size') || '30');
-
     let contextQuestions = "";
+
     if (fs.existsSync(dbPath)) {
       const dbContent = JSON.parse(fs.readFileSync(dbPath, 'utf-8'));
       let allQuestions = Array.isArray(dbContent) ? dbContent : (dbContent.questions || []);
       
-      // 재분류 로직 (Iron Wall Classification과 동기화)
       const classify = (q: any) => {
         const text = ((q.question || '') + ' ' + (q.explanation || '')).toLowerCase();
         const isSubject1 = q.subject === "컴퓨터 일반";
@@ -98,7 +83,7 @@ export async function GET(req: NextRequest) {
             return "[2과목] 스프레드시트 일반 기타 심화 분석";
           }
         }
-        if (subject === '전기공사산업기사') {
+        if (subject === '전기공사산업기사' || subject === '승강기기능사' || subject === '전기기능사') {
           if (/조명|광도|럭스|루멘|전열|조도|광속|칸델라|글로브|휘도|램프|반사율|투과율/.test(text)) return "01. 조명 및 전열";
           if (/전지|배터리|축전지|전기화학|패러데이|전해|금속막대|도금|이온/.test(text)) return "02. 전기화학 및 배터리";
           if (/펌프|권상|엘리베이터|에스컬레이터|기중기|용접|가열|건조|공작기계/.test(text)) return "03. 전동기 응용";
@@ -122,43 +107,40 @@ export async function GET(req: NextRequest) {
         return q.sub_unit || q.subject || "";
       };
 
-      // 해당 단원 문제 필터링 및 중복 제거
       const filteredByUnit = allQuestions.filter((q: any) => classify(q) === cleanUnit || !unit);
       const setQuestions = filteredByUnit.slice((parseInt(set) - 1) * size, parseInt(set) * size);
-      
-      // 질문 텍스트 기준 중복 제거
       const uniqueQuestions = Array.from(new Map(setQuestions.map((q: any) => [q.question, q])).values());
-      
       contextQuestions = JSON.stringify(uniqueQuestions);
     }
 
     const genAI = new GoogleGenerativeAI(getApiKey());
     const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
-    // 컴활 2급 전용 프롬프트 추가
-    const subjectPrompt = subject.includes('전기') ? `
-      [전기기능사 특화 규칙]
-      1. **설명 수준**: 초보자도 이해할 수 있도록 쉽게 설명하되, 기술적인 명확성을 유지하세요.
-      2. **구조**: 비유를 통한 도입 -> 구조 분석 -> 핵심 요약 순으로 진행하세요.
+    const subjectPrompt = subject.includes('전기') || subject.includes('승강기') ? `
+      [기술 자격증 특화 규칙]
+      1. **설명 수준**: 복잡한 공식보다는 원리를 일상적인 현상에 비유하여 아주 쉽게 설명하세요.
+      2. **톤앤매너**: 친절하고 명확하게 설명하되, 특정 연령대(초등/중등)를 지칭하는 표현은 절대 쓰지 마세요.
+      3. **구조**: 비유를 통한 도입 -> 구조 분석 -> 핵심 요약 순으로 진행하세요.
     ` : subject.includes('컴퓨터활용능력') ? `
       [컴활 2급 요약 규칙: 슬라이드 최적화]
-      1. **문장 최소화**: "안녕하세요", "환영합니다" 같은 인사말은 절대 사용하지 마세요. 
-      2. **분량 제한**: 'content' 필드는 반드시 **3문장(150자) 이내**로 작성하세요.
-      3. **핵심 위주**: [입문], [심화] 같은 머리말을 쓰지 말고, 바로 핵심 비유나 핵심 기능을 설명하세요.
-      4. **비유 활용**: 어려운 용어는 일상적인 비유(예: CPU = 두뇌, RAM = 책상)를 사용해 한 문장으로 정의하세요.
+      1. **문장 제한**: 'content' 필드는 반드시 **4문장 이내**, **250자 이내**로 작성하세요.
+      2. **비유 활용**: 어려운 용어는 일상적인 비유(예: CPU = 두뇌, RAM = 책상)를 사용해 한 문장으로 정의하세요.
+      3. **톤앤매너**: 누구나 쉽게 이해할 수 있는 친숙한 언어를 사용하되, 대상 연령을 직접 언급하지 마세요.
     ` : '';
 
     const prompt = `
       당신은 국내 최고의 IT 자격증 교육 전문가입니다. 
-      제공된 문제를 바탕으로 '${subject}' 과목의 '${unit}' 단원 '${set}세트'를 위한 학습 슬라이드 10장 내외를 생성하세요.
+      제공된 문제를 바탕으로 '${subject}' 과목의 '${unit}' 단원 '${set}세트'를 위한 학습 슬라이드(최대 30장)를 생성하세요.
+      유사한 개념의 문제는 한 장의 슬라이드로 통합하여 효율을 높이세요.
 
       ${subjectPrompt}
 
       [반드시 준수해야 할 응답 구조]
       1. **이미지 경로**: 'image' 필드는 "/summaries/${subject}/${safeUnitName}_${set}_slide_{id}.png" 형식으로 지정하세요.
-      2. **이모지(emoji)**: 각 슬라이드 주제에 어울리는 거대하고 화려한 이모지를 하나씩 지정하세요 (이미지 로딩 실패 시 사용됨).
-      3. **콘텐츠 구성**: 'content' 필드는 설명글 위주로, 'exam_point' 필드는 시험에 나오는 수치나 키워드 위주로 작성하세요.
-      4. **형식**: 반드시 유효한 JSON 형식으로만 응답하세요.
+      2. **이미지 생성 프롬프트(visual)**: 이미지 내부에 한글이 들어갈 경우 글자가 깨지지 않도록 'Korean text in high quality font' 등의 지시어를 포함하고, 복잡한 텍스트보다는 직관적인 도식과 아이콘 묘사 위주로 작성하세요.
+      3. **이모지(emoji)**: 각 슬라이드 주제에 어울리는 거대하고 화려한 이모지를 하나씩 지정하세요.
+      4. **콘텐츠 구성**: 'content' 필드는 친절한 설명(4문장/250자 이내), 'exam_point' 필드는 시험에 나오는 수치나 키워드 위주로 작성하세요.
+      5. **형식**: 반드시 유효한 JSON 형식으로만 응답하세요.
 
       [입력 데이터 (기출문제)]
       ${contextQuestions}
@@ -175,9 +157,9 @@ export async function GET(req: NextRequest) {
             "image": "/summaries/${subject}/${safeUnitName}_${set}_slide_1.png",
             "emoji": "🚀",
             "title": "슬라이드 제목",
-            "content": "핵심 개념 설명 (3문장 이내)",
+            "content": "친절한 설명 (4문장/250자 이내)",
             "visual": "이미지 생성용 상세 묘사",
-            "exam_point": "시험 출제 포인트 및 오답 노트"
+            "exam_point": "시험 출제 포인트"
           }
         ]
       }
@@ -185,18 +167,15 @@ export async function GET(req: NextRequest) {
 
     const result = await model.generateContent(prompt);
     const text = result.response.text();
-    
-    // JSON 추출 최적화 (정규식 사용)
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     if (!jsonMatch) throw new Error('Failed to extract JSON from AI response');
     
     const generatedData = JSON.parse(jsonMatch[0]);
 
-    // 파일 저장 (서버 환경에 따라 실패할 수 있으므로 try-catch 처리)
     try {
       fs.writeFileSync(summaryPath, JSON.stringify(generatedData, null, 2));
     } catch (e) {
-      console.warn('Failed to cache summary file (expected on some serverless envs):', e);
+      console.warn('Failed to cache summary file:', e);
     }
 
     return NextResponse.json(generatedData);
