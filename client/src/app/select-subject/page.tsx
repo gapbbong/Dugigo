@@ -111,6 +111,7 @@ export default function SelectSubjectPage() {
       {/* Header Area */}
       <header className="max-w-[1600px] mx-auto pt-6 md:pt-8 px-4 md:px-12 relative z-10">
         <div className="flex items-center justify-between bg-white/40 backdrop-blur-md p-3 md:p-4 rounded-xl md:rounded-[2rem] border border-white/60 shadow-sm relative">
+          {/* Left Group */}
           <div className="flex items-center gap-2 md:gap-4">
             <div className="flex items-center gap-2 md:gap-3">
               <div className="w-8 h-8 md:w-10 md:h-10 bg-brand-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg">
@@ -122,7 +123,10 @@ export default function SelectSubjectPage() {
             <span className="text-sm md:text-xl font-black text-brand-600 tracking-tighter whitespace-nowrap">
               경성전자고등학교
             </span>
-            <div className="w-px h-4 bg-slate-200 mx-1 md:mx-2" />
+          </div>
+
+          {/* Right Group */}
+          <div className="flex items-center gap-2 md:gap-4">
             {isTeacher && (
               <Link href="/teacher" className="text-sm md:text-base text-slate-400 hover:text-brand-600 font-black transition-colors whitespace-nowrap">
                 대시보드

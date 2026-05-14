@@ -97,6 +97,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [retryCount, setRetryCount] = useState(0);
   const [userProfile, setUserProfile] = useState<any>(null);
   const [lastActionTime, setLastActionTime] = useState(Date.now());
+  const [currentCombo, setCurrentCombo] = useState(0);
+  const [nextConfettiThreshold, setNextConfettiThreshold] = useState(3);
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -345,6 +347,24 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       return [...filtered, { questionId: qId, isCorrect }];
     });
     setLastActionTime(Date.now());
+
+    // 콤보 및 점진적 축포 로직 (도파민 제어)
+    if (isCorrect) {
+      const newCombo = currentCombo + 1;
+      setCurrentCombo(newCombo);
+      if (newCombo >= nextConfettiThreshold) {
+        triggerConfetti(true); // 미니 폭죽 모드
+        // 임계값 상향: 3 -> 7 -> 12 -> 20 -> 30 ...
+        setNextConfettiThreshold(prev => {
+          if (prev === 3) return 7;
+          if (prev === 7) return 12;
+          if (prev === 12) return 20;
+          return prev + 10;
+        });
+      }
+    } else {
+      setCurrentCombo(0); // 틀리면 콤보 리셋
+    }
   };
   
   useEffect(() => {
@@ -434,12 +454,12 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   };
 
   // 축포 효과 (도파민 유도)
-  const triggerConfetti = () => {
+  const triggerConfetti = (isCombo = false) => {
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js';
     script.onload = () => {
       const confetti = (window as any).confetti;
-      const count = 500;
+      const count = isCombo ? 150 : 500; // 콤보일 때는 가볍게, 완료 시엔 화려하게
       const defaults = { origin: { y: 0.7 } };
 
       function fire(particleRatio: number, opts: any) {
@@ -450,11 +470,18 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         });
       }
 
-      fire(0.25, { spread: 26, startVelocity: 55 });
-      fire(0.2, { spread: 60 });
-      fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
-      fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 });
-      fire(0.1, { spread: 120, startVelocity: 45 });
+      if (isCombo) {
+        // 콤보용 심플 폭죽
+        fire(0.25, { spread: 40, startVelocity: 35 });
+        fire(0.2, { spread: 80 });
+      } else {
+        // 세트 완료용 화려한 폭죽
+        fire(0.25, { spread: 26, startVelocity: 55 });
+        fire(0.2, { spread: 60 });
+        fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
+        fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 });
+        fire(0.1, { spread: 120, startVelocity: 45 });
+      }
     };
     document.head.appendChild(script);
   };
