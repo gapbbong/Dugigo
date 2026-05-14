@@ -170,7 +170,6 @@ export default function SelectUnitPage() {
               <ChevronLeft size={20} />
             </button>
             <div className="flex items-center gap-2 overflow-hidden">
-              <span className="text-[10px] md:text-xs font-black text-brand-600 uppercase bg-brand-50 px-2 py-0.5 rounded-md border border-brand-100 whitespace-nowrap">Step 02</span>
               <h2 className="text-xl md:text-3xl font-black text-slate-900 leading-tight whitespace-nowrap overflow-hidden text-ellipsis">{subject}</h2>
             </div>
           </div>

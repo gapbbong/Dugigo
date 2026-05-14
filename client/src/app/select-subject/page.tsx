@@ -123,6 +123,12 @@ export default function SelectSubjectPage() {
               경성전자고등학교
             </span>
             <div className="w-px h-4 bg-slate-200 mx-1 md:mx-2" />
+            {isTeacher && (
+              <Link href="/teacher" className="text-sm md:text-base text-slate-400 hover:text-brand-600 font-black transition-colors whitespace-nowrap">
+                대시보드
+              </Link>
+            )}
+            <div className="w-px h-4 bg-slate-200 mx-1 md:mx-2" />
             <button 
               onClick={() => supabase.auth.signOut().then(() => router.push('/login'))} 
               className="text-sm md:text-base text-slate-400 hover:text-rose-500 font-black transition-colors"
@@ -138,12 +144,12 @@ export default function SelectSubjectPage() {
             <span className="text-blue-500">두</span>꺼운 <span className="text-emerald-500">기</span>능사 책 대신 <span className="text-rose-500">고</span>민말고 <span className="font-black text-slate-900">두기고</span>
           </p>
           
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
+          <div className="flex items-center gap-2">
             {isTeacher && groups.map(g => (
               <Link 
                 key={g.id} 
                 href="/teacher" 
-                className="px-4 py-2 bg-white border border-slate-200 text-slate-600 text-sm md:text-lg font-black rounded-xl hover:border-brand-500 hover:text-brand-600 transition-all shadow-sm whitespace-nowrap scale-110 md:scale-100"
+                className="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-sm md:text-lg font-black rounded-xl hover:border-brand-500 hover:text-brand-600 transition-all shadow-sm whitespace-nowrap"
               >
                 {g.name}
               </Link>
@@ -152,7 +158,7 @@ export default function SelectSubjectPage() {
         </div>
       </header>
 
-      <main className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 pt-12 md:pt-16">
+      <main className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 pt-6 md:pt-16">
         <div className="mb-10 md:mb-14 text-center md:text-left">
           <h1 className="text-3xl md:text-6xl font-black text-slate-900 italic mb-4 leading-tight tracking-tighter">"{randomQuote}"</h1>
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-2">
@@ -160,11 +166,6 @@ export default function SelectSubjectPage() {
               환영합니다, <span className="text-brand-600 font-black">{user?.display_name || user?.email?.split('@')[0]}</span>님! 👋
             </p>
             <div className="flex items-center gap-3">
-              {isTeacher && (
-                <Link href="/teacher" className="text-sm md:text-lg font-black text-slate-400 hover:text-brand-600 hover:underline transition-all">
-                  [대시보드]
-                </Link>
-              )}
               <button 
                 onClick={() => setShowGuide(true)}
                 className="text-xs md:text-sm font-black text-brand-600 underline underline-offset-4 hover:text-brand-700 transition-all"
