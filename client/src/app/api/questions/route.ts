@@ -330,11 +330,15 @@ export async function GET(req: NextRequest) {
             const masterData = JSON.parse(masterContent);
             let masterQuestions = Array.isArray(masterData) ? masterData : (masterData.questions || []);
             
-            // 내용(문제+보기) 기반으로 중복을 완전히 제거합니다.
+            // 내용(문제+보기) 기반으로 중복을 완전히 제거합니다 (공백 완전 제거 버전)
             const uniqueMap = new Map<string, any>();
             masterQuestions.forEach((q: any) => {
               if ((q.frequency || 0) >= 2) {
-                const contentKey = `${q.question}_${(q.choices || []).join('|')}`;
+                // 공백을 완전히 제거하여 내용만 비교 (매우 강력한 중복 제거)
+                const cleanQuestion = (q.question || "").replace(/\s+/g, "");
+                const cleanChoices = (q.choices || []).map((c: string) => c.replace(/\s+/g, "")).join("|");
+                const contentKey = `${cleanQuestion}_${cleanChoices}`;
+                
                 if (!uniqueMap.has(contentKey)) {
                   uniqueMap.set(contentKey, q);
                 }

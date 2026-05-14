@@ -339,13 +339,13 @@ export default function SelectUnitPage() {
           )}
         </section>
 
-        {/* 🔮 AI 적중 예상 문제 섹션 */}
+        {/* 🔮 족집게 예상 문제 섹션 */}
         {exams.some(e => e.isAI) && (
           <section className="mb-12">
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-fuchsia-600 rounded-xl flex items-center justify-center text-white"><Sparkles size={20} /></div>
-                <h2 className="text-xl md:text-3xl font-black text-slate-900">AI 적중 예상 문제</h2>
+                <h2 className="text-xl md:text-3xl font-black text-slate-900">족집게 예상 문제</h2>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -356,9 +356,9 @@ export default function SelectUnitPage() {
                   className="glass-card p-6 rounded-[2rem] border-2 border-fuchsia-100 hover:border-fuchsia-400 transition-all flex items-center justify-between group"
                 >
                   <div className="text-left">
-                    <span className="inline-block px-2 py-0.5 bg-fuchsia-100 text-fuchsia-600 text-[10px] font-black rounded-full mb-2">PROBABILITY 98%</span>
+                    <span className="inline-block px-2 py-0.5 bg-fuchsia-100 text-fuchsia-600 text-[10px] font-black rounded-full mb-2">높은 적중률 보장</span>
                     <h4 className="text-lg font-black text-slate-800 group-hover:text-fuchsia-600 transition-colors">{exam.name}</h4>
-                    <p className="text-xs font-black text-slate-400">AI가 엄선한 2025년 적중 족집게</p>
+                    <p className="text-xs font-black text-slate-400">데이터가 엄선한 2025년 적중 족집게</p>
                   </div>
                   <div className="w-12 h-12 bg-fuchsia-50 rounded-full flex items-center justify-center text-fuchsia-600 group-hover:scale-110 transition-transform">
                     <Zap size={24} />

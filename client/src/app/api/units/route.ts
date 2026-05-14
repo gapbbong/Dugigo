@@ -270,14 +270,15 @@ export async function GET(req: NextRequest) {
       return a[0].localeCompare(b[0]);
     });
 
-    // 1. [🔥 자주 나왔던 문항] 섹션 구성 (중복 제거 로직 강화)
-    // 내용(문제+보기) 기반으로 중복을 완전히 제거하여 하나만 남깁니다.
+    // 1. [🔥 자주 나왔던 문항] 섹션 구성 (중복 제거 로직 강화 - 공백 무시)
     const uniqueFrequentMap = new Map<string, any>();
     Array.from(questionMap.values()).forEach((q: any) => {
       if ((q.frequency || 0) >= 2) {
-        // 문제 내용과 보기를 합쳐서 고유 키 생성
-        const contentKey = `${q.question}_${(q.choices || []).join('|')}`;
-        // 이미 등록된 문제면 패스, 아니면 등록 (더 최신 정보를 위해 덮어쓰거나 처음 것 유지)
+        // 공백 무시 비교를 위해 클린 키 생성
+        const cleanQuestion = (q.question || "").replace(/\s+/g, "");
+        const cleanChoices = (q.choices || []).map((c: string) => c.replace(/\s+/g, "")).join("|");
+        const contentKey = `${cleanQuestion}_${cleanChoices}`;
+        
         if (!uniqueFrequentMap.has(contentKey)) {
           uniqueFrequentMap.set(contentKey, q);
         }
@@ -294,7 +295,7 @@ export async function GET(req: NextRequest) {
       originalName?: string; 
       range?: [number, number];
       customLabel?: string;
-      isAI?: boolean; // AI 예상 문제용 플래그 추가
+      isAI?: boolean; 
     }[] = [];
 
     if (frequentQuestions.length > 0) {

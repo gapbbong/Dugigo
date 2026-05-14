@@ -72,11 +72,11 @@ const finalQuestions = [
 ].map((q, idx) => ({
     ...q,
     number: idx + 1,
-    id: `ai_pred_2025_${idx + 1}`,
-    round_info: "2025년 AI 족집게 예상문제"
+    id: `pred_2025_${idx + 1}`,
+    round_info: "2025년 족집게 예상문제"
 }));
 
-const outputFile = path.join(dataDir, '2025년 AI 족집게 예상문제.json');
+const outputFile = path.join(dataDir, '2025년 족집게 예상문제.json');
 fs.writeFileSync(outputFile, JSON.stringify(finalQuestions, null, 2));
 
-console.log(`✅ [AI Prediction Engine] Generated 40 predicted questions: ${outputFile}`);
+console.log(`✅ [Prediction Engine] Generated 40 predicted questions: ${outputFile}`);
