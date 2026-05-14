@@ -253,7 +253,7 @@ export default function SelectUnitPage() {
         <section className="mb-12">
           <div className="flex items-center justify-between mb-5">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white"><Sparkles size={20} /></div>
+              <div className="w-10 h-10 bg-violet-600 rounded-xl flex items-center justify-center text-white"><Sparkles size={20} /></div>
               <h2 className="text-xl md:text-3xl font-black text-slate-900">단원별 핵심 공략</h2>
             </div>
             <button onClick={() => setIsUnitsCollapsed(!isUnitsCollapsed)} className="px-3 py-1.5 bg-white/50 border border-brand-100 rounded-lg text-xs font-black">{isUnitsCollapsed ? '펼치기' : '접기'}</button>
@@ -266,7 +266,7 @@ export default function SelectUnitPage() {
                 return (
                   <div key={unit.name} className="glass-card p-6 rounded-[2rem] border border-white/60">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center text-brand-600 font-black text-xs">{unitIndex}</div>
+                      <div className="w-8 h-8 bg-violet-50 rounded-lg flex items-center justify-center text-violet-600 font-black text-xs">{unitIndex}</div>
                       <h4 className="text-sm font-black truncate">{unit.name}</h4>
                     </div>
                     <div className="grid grid-cols-3 gap-3">
@@ -278,11 +278,11 @@ export default function SelectUnitPage() {
                           <button 
                             key={sIdx} 
                             onClick={() => router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unit.name)}&set=${sIdx+1}&size=30${unit.range ? `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}` : ''}`)}
-                            className="h-24 bg-white border border-slate-100 rounded-2xl flex flex-col items-center justify-center hover:border-brand-300 transition-all relative group overflow-hidden"
+                            className="h-24 bg-white border border-slate-100 rounded-2xl flex flex-col items-center justify-center hover:border-violet-300 transition-all relative group overflow-hidden"
                           >
                             {/* 횟수 뱃지 */}
                             {stats && (
-                              <div className="absolute top-1.5 right-1.5 px-1.5 py-0.5 bg-brand-600 text-white text-[8px] font-black rounded-md shadow-sm">
+                              <div className="absolute top-1.5 right-1.5 px-1.5 py-0.5 bg-violet-600 text-white text-[8px] font-black rounded-md shadow-sm">
                                 {stats.count}회
                               </div>
                             )}
@@ -296,7 +296,7 @@ export default function SelectUnitPage() {
                                 {stats.allScores.slice(-5).map((score, i) => (
                                   <div 
                                     key={i} 
-                                    className="flex-1 bg-brand-500 rounded-t-sm transition-all"
+                                    className="flex-1 bg-violet-500 rounded-t-sm transition-all"
                                     style={{ height: `${Math.max(20, score)}%` }}
                                   />
                                 ))}
