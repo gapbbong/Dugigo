@@ -787,8 +787,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           )}
         </div>
 
-        <div className="flex-1 flex justify-center px-4">
-          <span className="text-[10px] md:text-xl font-black tracking-tight text-slate-800 uppercase whitespace-nowrap overflow-hidden text-ellipsis max-w-[120px] md:max-w-none">
+        <div className="flex-1 flex justify-center px-2 md:px-4">
+          <span className="text-[12px] md:text-xl font-black tracking-tight text-slate-800 uppercase whitespace-nowrap overflow-hidden text-ellipsis max-w-[140px] md:max-w-none">
             {unitFilter ? `${unitFilter}${setNum ? ` · 세트 ${setNum}` : ''}` : `${subject} 기출학습`}
           </span>
         </div>
@@ -799,6 +799,13 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           </div>
           
           <div className="flex items-center gap-1.5 md:gap-3">
+            {/* 모바일용 진행률 표시 */}
+            <div className="flex md:hidden items-center gap-1 bg-brand-500/10 px-2 py-1 rounded-xl border border-brand-500/20 shadow-sm">
+              <span className="text-[11px] font-black text-brand-600">
+                {currentIndex + 1} / {questions.length}
+              </span>
+            </div>
+            
             <div className="flex items-center gap-1.5 bg-white/40 backdrop-blur-md px-2 py-1 md:px-4 md:py-2 rounded-xl border border-white/40 shadow-sm">
               <ShieldCheck className="w-3 h-3 md:w-5 md:h-5 text-brand-600" />
               <span className="text-[10px] md:text-sm font-black text-slate-800">
