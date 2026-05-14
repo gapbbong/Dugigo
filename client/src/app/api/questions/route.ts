@@ -26,8 +26,10 @@ export async function GET(req: NextRequest) {
 
     // Remote incoming logic for study
     if (subject) {
-      // 1. 자동화설비(생산자동화)기능사 - 슈파베이스 우선 처리
-      if (subject.includes('자동화설비') || subject.includes('생산자동화')) {
+      // 1. 자동화설비(생산자동화)기능사 - 슈파베이스 처리 (단, 자주 나왔던 문항은 로컬 파일 우선)
+      const isFrequentRequest = searchParams.get("unit")?.includes("자주") || false;
+      
+      if ((subject.includes('자동화설비') || subject.includes('생산자동화')) && !isFrequentRequest) {
         if (!supabase) {
           const { createClient } = await import('@supabase/supabase-js');
           supabase = createClient(supabaseUrl!, SERVICE_ROLE_KEY!, {
@@ -323,20 +325,21 @@ export async function GET(req: NextRequest) {
       if (unitFilter) {
         // [🔥 자주 나왔던 문항] 특수 처리
         if (unitFilter.includes("자주 나왔던 문항") || unitFilter.includes("자주나왔던문항")) {
-          const masterFile = filesToLoad.find(f => f.toLowerCase().includes('master_db') || f.toLowerCase().includes('master') || f.includes('Literacy2') || f.includes('history_master'));
+          const masterFile = filesToLoad.find(f => f.toLowerCase().includes('master') && f.endsWith('.json'));
           if (masterFile) {
             const masterPath = path.join(dataDir, masterFile);
             const masterContent = fs.readFileSync(masterPath, 'utf-8');
             const masterData = JSON.parse(masterContent);
             let masterQuestions = Array.isArray(masterData) ? masterData : (masterData.questions || []);
             
-            // 내용(문제+보기) 기반으로 중복을 완전히 제거합니다 (초정밀 정규화 버전)
             const uniqueMap = new Map<string, any>();
             
             const normalize = (text: string) => {
-              return (text || "")
-                .toLowerCase()
-                .replace(/[^a-z0-9가-힣]/g, "") // 영문, 숫자, 한글 제외 모든 특수문자/공백 제거
+              if (!text) return "";
+              return text.toLowerCase()
+                .replace(/[^a-z0-9가-힣]/g, "")
+                .replace(/[은는이가을를의에와과]/g, "") // Units API와 동일하게 보정
+                .replace(/\s+/g, "")
                 .trim();
             };
 

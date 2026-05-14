@@ -41,11 +41,12 @@ export async function GET(req: NextRequest) {
     const sanitizedSubject = targetSubject.replace(/\s/g, '');
 
     const allFiles = fs.readdirSync(dataDir);
-    const hasMaster = allFiles.includes('MASTER_DB.json');
+    const masterFile = allFiles.find(f => f.toLowerCase().includes('master') && f.endsWith('.json'));
+    const hasMaster = !!masterFile;
     
-    // MASTER_DB.json이 있으면 그것만 읽고, 없으면 기존처럼 모든 파일을 읽음
+    // 마스터 파일이 있으면 그것만 읽고, 없으면 기존처럼 모든 파일을 읽음
     const filesToLoad = hasMaster 
-      ? ['MASTER_DB.json']
+      ? [masterFile]
       : allFiles
           .filter(f => f.endsWith('.json') && !f.includes('_CLEAN') && !f.includes('.bak'))
           .sort((a, b) => {
@@ -281,9 +282,11 @@ export async function GET(req: NextRequest) {
     
     // 텍스트를 아주 엄격하게 정규화하는 함수
     const normalize = (text: string) => {
-      return (text || "")
-        .toLowerCase()
-        .replace(/[^a-z0-9가-힣]/g, "") // 영문, 숫자, 한글 제외 모든 특수문자/공백 제거
+      if (!text) return "";
+      return text.toLowerCase()
+        .replace(/[^a-z0-9가-힣]/g, "")
+        .replace(/[은는이가을를의에와과]/g, "")
+        .replace(/\s+/g, "")
         .trim();
     };
 
