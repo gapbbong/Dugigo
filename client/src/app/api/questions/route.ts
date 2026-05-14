@@ -321,16 +321,32 @@ export async function GET(req: NextRequest) {
       const limit = parseInt(searchParams.get("limit") || "10000"); // 기본값은 크게 설정
 
       if (unitFilter) {
-        const baseUnitFilter = unitFilter.replace(/\s*\(\d+부\)$/, '').trim();
-        const cleanUnit = baseUnitFilter.replace(/^\[.*?\]\s*/g, '').trim();
-        
-        sorted = sorted.filter(q => {
-          const rawQUnit = q.sub_unit || q.subject || '';
-          if (rawQUnit === baseUnitFilter) return true;
+        // [🔥 빈출 문제 TOP 100] 특수 처리
+        if (unitFilter.includes("빈출 문제 TOP 100")) {
+          const masterFile = filesToLoad.find(f => f.toLowerCase().includes('master_db') || f.toLowerCase().includes('master') || f.includes('Literacy2') || f.includes('history_master'));
+          if (masterFile) {
+            const masterPath = path.join(dataDir, masterFile);
+            const masterContent = fs.readFileSync(masterPath, 'utf-8');
+            const masterData = JSON.parse(masterContent);
+            let masterQuestions = Array.isArray(masterData) ? masterData : (masterData.questions || []);
+            
+            // 빈도수 높은 순으로 정렬 후 상위 100개 추출
+            sorted = masterQuestions
+              .sort((a: any, b: any) => (b.frequency || 0) - (a.frequency || 0))
+              .slice(0, 100);
+          }
+        } else {
+          const baseUnitFilter = unitFilter.replace(/\s*\(\d+부\)$/, '').trim();
+          const cleanUnit = baseUnitFilter.replace(/^\[.*?\]\s*/g, '').trim();
           
-          const qCleanUnit = rawQUnit.replace(/^\[.*?\]\s*/g, '').trim();
-          return qCleanUnit === cleanUnit;
-        });
+          sorted = sorted.filter(q => {
+            const rawQUnit = q.sub_unit || q.subject || '';
+            if (rawQUnit === baseUnitFilter) return true;
+            
+            const qCleanUnit = rawQUnit.replace(/^\[.*?\]\s*/g, '').trim();
+            return qCleanUnit === cleanUnit;
+          });
+        }
       }
 
       if (yearFilter || roundFilter) {

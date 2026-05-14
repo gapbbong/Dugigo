@@ -131,7 +131,15 @@ async function processSubject(subject) {
       });
     }
 
-    const updatedMaster = Object.values(categorized).flat().sort((a,b) => (a.number || 0) - (b.number || 0));
+    // 마스터 DB 및 단원별 파일 모두 빈도수 높은 순으로 정렬 (빈도수 같으면 번호순)
+    const sortByFrequency = (a, b) => {
+        if ((b.frequency || 0) !== (a.frequency || 0)) {
+            return (b.frequency || 0) - (a.frequency || 0);
+        }
+        return (a.number || 0) - (b.number || 0);
+    };
+
+    const updatedMaster = Object.values(categorized).flat().sort(sortByFrequency);
     
     if (!Array.isArray(jsonData)) {
         if (jsonData.questions) jsonData.questions = updatedMaster;
@@ -145,6 +153,9 @@ async function processSubject(subject) {
 
     for (const [unitName, items] of Object.entries(categorized)) {
       if (items.length > 0) {
+        // 단원 내에서도 빈도수 높은 순으로 정렬
+        items.sort(sortByFrequency);
+        
         // 파일명에서 / 등 금지된 문자 제거 (윈도우 호환성)
         const safeUnitName = unitName.replace(/\//g, '_');
         const fileName = safeUnitName + '.json';

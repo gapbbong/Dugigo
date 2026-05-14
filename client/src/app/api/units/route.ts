@@ -263,6 +263,24 @@ export async function GET(req: NextRequest) {
       return a[0].localeCompare(b[0]);
     });
 
+    // 1. 전체 문항 중 빈출 TOP 100 추출 (고유 문제 기준)
+    const allUniqueQuestions = Array.from(questionMap.keys()).map(id => {
+        // 실제 데이터는 위에서 순회하며 questionMap에 저장할 때의 q 객체들을 모아야 함
+        // 하지만 여기서는 간단히 빈도수가 높은 것들을 다시 추리는 방식으로 처리
+        return id;
+    });
+
+    // 실제 데이터 기반 빈도수 상위 100 추출을 위해 questionMap에 q 자체를 저장하도록 위 로직 수정 필요
+    // 일단 현재 구조에서 examsMap과 unitMap 집계 후, 별도의 '빈출 섹션'을 생성
+    
+    const topFrequentUnit = {
+        name: "🔥 빈출 문제 TOP 100",
+        count: 100, // 상위 100개
+        isPart: true,
+        originalName: "전체",
+        range: [0, 100] as [number, number]
+    };
+
     // 단원 쪼개기 로직 (한국사는 쪼개지 않고 전체 노출)
     const MAX_PER_UNIT = (subject === '한국사검정시험' || subject === '한국사능력검정시험') ? 9999 : 150;
     const finalUnits: { 
@@ -273,6 +291,8 @@ export async function GET(req: NextRequest) {
       range?: [number, number] 
     }[] = [];
     
+    // 빈출 섹션을 최상단에 삽입
+    finalUnits.push(topFrequentUnit);
     prioritizedUnits.forEach(([name, count]) => {
       if (count > MAX_PER_UNIT) {
         const parts = Math.ceil(count / MAX_PER_UNIT);

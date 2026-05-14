@@ -825,7 +825,28 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           ) : (
             <motion.div key={currentIndex} custom={direction} initial={{ opacity: 0, x: direction > 0 ? 50 : -50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: direction > 0 ? -50 : 50 }} transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }} className="flex-1 flex flex-col gap-4 md:gap-6">
               <div className="space-y-4 md:space-y-8">
-                <div className="flex items-center gap-3"><span className="px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 text-brand-600 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase">Q. {currentQuestion.year || '0000'}-{currentQuestion.round || '00'}-{currentQuestion.question_num || currentQuestion.number || '0'}</span><div className="h-px flex-1 bg-brand-100/50" /></div>
+                <div className="flex items-center gap-3">
+                  <span className="px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 text-brand-600 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase">
+                    Q. {currentQuestion.year || '0000'}-{currentQuestion.round || '00'}-{currentQuestion.question_num || currentQuestion.number || '0'}
+                  </span>
+                  {currentQuestion.frequency > 1 && (
+                    <motion.span 
+                      initial={{ scale: 0, opacity: 0 }} 
+                      animate={{ scale: 1, opacity: 1 }}
+                      className={`px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[10px] md:text-sm font-black flex items-center gap-1.5 shadow-sm border ${
+                        currentQuestion.frequency >= 5 
+                          ? 'bg-amber-500 text-white border-amber-400' 
+                          : currentQuestion.frequency >= 3 
+                            ? 'bg-slate-600 text-white border-slate-500' 
+                            : 'bg-orange-50 text-orange-600 border-orange-200'
+                      }`}
+                    >
+                      <Zap className={`w-3 h-3 md:w-4 md:h-4 ${currentQuestion.frequency >= 5 ? 'animate-pulse' : ''}`} />
+                      {currentQuestion.frequency}회 출제
+                    </motion.span>
+                  )}
+                  <div className="h-px flex-1 bg-brand-100/50" />
+                </div>
                 {renderQuestionText(currentQuestion.question)}
               </div>
 
