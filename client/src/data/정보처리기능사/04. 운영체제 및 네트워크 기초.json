@@ -1,0 +1,586 @@
+[
+  {
+    "number": 3,
+    "question": "다음 중 리눅스/유닉스 계열의 쉘에서 사용되며, 확장자가 '.sh'인 스크립트 언어는?",
+    "answer": 2,
+    "explanation": "리눅스나 유닉스 환경에서 사용하는 명령어 스크립트를 쉘 스크립트라고 하며 주로 .sh 확장자를 가집니다.",
+    "choices": [
+      "파이썬",
+      "쉘 스크립트",
+      "Basic",
+      "VB 스크립트"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "number": 13,
+    "question": "다음 중 HTML의 목록 태그와 기능에 대한 설명으로 옳지 않은 것은?",
+    "answer": 3,
+    "explanation": "<dl>은 정의 목록(Description List)을 만들 때 사용하는 태그로, 용어(<dt>)와 그에 대한 정의/설명(<dd>)을 나열하는 용도입니다.",
+    "question_img": "Programming_Mock_04_Q13.png",
+    "choices": [
+      "<ol>은 순서가 있는 목록을 만들 때 사용한다.",
+      "<ul>은 순서가 없는 목록을 만들 때 사용한다.",
+      "<dl>은 순서가 없는 목록과 순서가 있는 목록 모두를 만들 수 있다.",
+      "<li>는 목록의 각 항목을 정의하는 데 사용하며, <ol> 또는 <ul> 내부에 위치해야 한다."
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "number": "16",
+    "question": "OSI 7계층 중 다음과 같은 특징을 갖는 계층은 무엇인가?\n- 개방 시스템들 간의 네트워크 연결을 관리하는 기능과 데이터의 교환 및 중계 기능을 한다.\n- 데이터의 안전한 전송을 위해 논리적 링크(가상 회로)를 설정한다.",
+    "answer": 3,
+    "explanation": "네트워크 계층(Network Layer)은 송신 측과 수신 측 사이의 논리적 연결(가상 회로)을 설정하고, 데이터 패킷의 경로 선택(Routing) 및 중계 기능을 담당합니다.",
+    "choices": [
+      "물리 계층",
+      "데이터 링크 계층",
+      "네트워크 계층",
+      "응용 계층"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "number": 17,
+    "question": "다음 중 전송 계층 프로토콜에 해당하는 것은?",
+    "answer": 1,
+    "explanation": "UDP와 TCP는 OSI 7계층 중 전송 계층(Transport Layer)에서 동작하는 대표적인 프로토콜입니다. 나머지는 응용 계층 프로토콜입니다.",
+    "choices": [
+      "UDP",
+      "FTP",
+      "SMTP",
+      "SNMP"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "number": 18,
+    "question": "TCP/IP 프로토콜에서 TCP가 해당하는 계층은?",
+    "answer": 3,
+    "explanation": "TCP(Transmission Control Protocol)는 OSI 7계층 중 전송 계층(Transport Layer)에 해당하며 신뢰성 있는 연결형 서비스를 제공합니다.",
+    "year": 2026,
+    "round": "02",
+    "choices": [
+      "데이터 링크 계층",
+      "네트워크 계층",
+      "트랜스포트 계층",
+      "세션 계층"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 18,
+    "question": "프로토콜의 계층 구성은 네트워크 구조에 따라 어떻게 구분하는가?",
+    "answer": 3,
+    "explanation": "프로토콜 계층은 일반적으로 하위 계층(물리, 데이터 링크, 네트워크)과 상위 계층(전송, 세션, 표현, 응용)으로 구분됩니다.",
+    "choices": [
+      "구문 계층과 의미 계층",
+      "비트 계층과 블록 계층",
+      "하위 계층과 상위 계층",
+      "직접 계층과 간접 계층"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "number": 19,
+    "question": "B 클래스에서 사용되는 기본 서브넷 마스크는?",
+    "answer": 2,
+    "explanation": "IP 주소의 B 클래스는 기본적으로 16비트의 네트워크 ID를 가지므로 서브넷 마스크는 255.255.0.0입니다.",
+    "year": 2026,
+    "round": "02",
+    "choices": [
+      "255.255.255.0",
+      "255.255.0.0",
+      "255.0.0.0",
+      "255.255.255.255"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": 20,
+    "question": "인터넷 도메인 네임을 IP Address로 바꿔주는 시스템은?",
+    "answer": 4,
+    "explanation": "DNS(Domain Name System)는 사람이 읽기 쉬운 도메인 이름을 컴퓨터가 인식하는 IP 주소로 변환하는 시스템입니다.",
+    "choices": [
+      "HTTP",
+      "TCP/IP",
+      "URL",
+      "DNS"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 22,
+    "question": "TCP 프로토콜과 관련한 설명으로 틀린 것은?",
+    "answer": 1,
+    "explanation": "인접한 노드 사이의 프레임 전송 및 오류 제어는 데이터 링크 계층(Data Link Layer)의 역할입니다. TCP는 전송 계층 프로토콜입니다.",
+    "choices": [
+      "인접한 노드 사이의 프레임 전송 및 오류를 제어한다.",
+      "흐름 제어(Flow Control)의 기능을 수행한다.",
+      "전이중(Full Duplex) 방식의 양방향 가상회선을 제공한다.",
+      "전송 데이터와 응답 데이터를 함께 전송할 수 있다."
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "04",
+    "number": 22,
+    "question": "7개의 교환국을 망형으로 상호 결선하려면 국간 필요한 최소 통신회선 수는?",
+    "answer": 1,
+    "explanation": "망형 네트워크의 회선 수 공식은 n(n-1)/2입니다. 7(6)/2 = 21입니다.",
+    "choices": [
+      "21",
+      "22",
+      "24",
+      "45"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": 23,
+    "question": "TCP/IP 계층 구조에서 IP의 동작 과정에서의 전송 오류가 발생하는 경우에 대비해 오류 정보를 전송하는 목적으로 사용하는 프로토콜은?",
+    "answer": 3,
+    "explanation": "ICMP(Internet Control Message Protocol)는 IP 네트워크에서 오류 메시지 및 운영 정보를 전송하는 데 사용됩니다.",
+    "choices": [
+      "ECP(Error Checking Protocol)",
+      "ARP(Address Resolution Protocol)",
+      "ICMP(Internet Control Message Protocol)",
+      "PPP(Point-to-Point Protocol)"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "number": 23,
+    "question": "OSI 7계층에서 하위 3계층에 해당하는 것은?",
+    "answer": 2,
+    "explanation": "OSI 7계층의 하위 3계층은 1계층(물리), 2계층(데이터링크), 3계층(네트워크)입니다.",
+    "year": 2026,
+    "round": "02",
+    "choices": [
+      "세션 계층, 표현 계층, 응용 계층",
+      "물리 계층, 데이터링크 계층, 네트워크 계층",
+      "데이터링크 계층, 네트워크 계층, 전송 계층",
+      "물리 계층, 전송 계층, 표현 계층"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 23,
+    "question": "IPv6의 주소는 몇 비트로 이루어져 있나?",
+    "answer": 4,
+    "explanation": "IPv6 주소는 128비트 길이를 가지며, 16비트씩 8부분으로 나누어 16진수로 표기합니다.",
+    "choices": [
+      "16비트",
+      "32비트",
+      "64비트",
+      "128비트"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "04",
+    "number": 23,
+    "question": "IPv6의 주소 체계로 거리가 먼 것은?",
+    "answer": 3,
+    "explanation": "IPv6는 유니캐스트, 애니캐스트, 멀티캐스트 세 가지 주소 체계를 사용하며, IPv4에서 사용하던 브로드캐스트는 사용하지 않습니다.",
+    "choices": [
+      "Unicast",
+      "Anycast",
+      "Broadcast",
+      "Multicast"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "04",
+    "number": 24,
+    "question": "DBMS의 필수 기능으로 옳은 것은?",
+    "answer": 4,
+    "explanation": "DBMS의 3대 필수 기능은 정의(Definition), 조작(Manipulation), 제어(Control) 기능입니다.",
+    "choices": [
+      "조작 기능, 제어 기능, 연산 기능",
+      "정의 기능, 제어 기능, 연산 기능",
+      "정의 기능, 조작 기능, 연산 기능",
+      "정의 기능, 조작 기능, 제어 기능"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": 25,
+    "question": "스택(STACK)의 응용 분야로 거리가 먼 것은?",
+    "answer": 4,
+    "explanation": "운영체제의 작업 스케줄링에는 주로 큐(Queue)가 사용됩니다.",
+    "choices": [
+      "인터럽트의 처리",
+      "수식의 계산",
+      "서브루틴의 복귀 번지 저장",
+      "운영체제의 작업 스케줄링"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "04",
+    "number": 28,
+    "question": "UDP(User Datagram Protocol)에 대한 설명으로 거리가 먼 것은?",
+    "answer": 2,
+    "explanation": "UDP는 신뢰성보다 속도를 중시하는 비연결형 프로토콜이며, 신뢰성 있는 전송은 TCP의 특징입니다.",
+    "choices": [
+      "속도가 빠르다.",
+      "신뢰성 있는 전송이 가능하다.",
+      "오버헤드가 적다.",
+      "비연결형 서비스를 제공한다."
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "number": 29,
+    "question": "29. 다음 중 운영체제의 성능을 평가하는 요소로 거리가 먼 것은?",
+    "answer": 4,
+    "choices": [
+      "처리 능력(Throughput)",
+      "반환 시간(Turn-around Time)",
+      "사용 가능도(Availability)",
+      "비용(Cost)"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "number": "31",
+    "question": "다음 중 운영체제의 목적으로 거리가 먼 것은?",
+    "answer": 2,
+    "explanation": "운영체제의 성능 평가 기준(목적)은 처리 능력(Throughput)의 증대, 반환 시간(Turnaround Time)의 단축, 사용 가능도(Availability)의 증대, 신뢰도(Reliability)의 향상입니다. 반환 시간은 짧을수록 좋은 성능으로 평가됩니다.",
+    "choices": [
+      "처리 능력의 증대",
+      "반환 시간의 증대",
+      "사용 가능도의 증대",
+      "신뢰도의 향상"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": 46,
+    "question": "다중 프로그래밍 환경에서 하나 또는 그 이상의 프로세스가 가능하지 못한 특정 사건(Event)을 무한정 기다리는 상태를 무엇이라고 하는가?",
+    "answer": 4,
+    "explanation": "둘 이상의 프로세스가 서로 상대방이 가진 자원을 무한정 기다리는 상태를 교착상태(DeadLock)라고 합니다.",
+    "choices": [
+      "Swapping",
+      "Overlay",
+      "Pipelining",
+      "DeadLock"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "number": 46,
+    "question": "운영체제(Operating System)의 목적이 아닌 것은?",
+    "answer": 1,
+    "explanation": "운영체제의 목적은 처리 능력 향상, 반환 시간 단축(감소), 사용 가능도 향상, 신뢰도 향상입니다. 반환 시간(Turnaround Time)은 짧을수록 성능이 좋은 것입니다.",
+    "year": 2026,
+    "round": "02",
+    "choices": [
+      "반환 시간 증가",
+      "처리 능력 향상",
+      "사용 가능도 향상",
+      "신뢰도 향상"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 46,
+    "question": "CPU에 의해 처리되는 사용자 프로그램, 즉 실행중인 프로그램을 의미하며, 작업(Job) 또는 태스크(Task)라고도 하는 것은 무엇인가?",
+    "answer": 2,
+    "explanation": "실행 중인 프로그램을 프로세스(Process)라고 정의하며, 이는 운영체제에서 자원 할당의 단위가 됩니다.",
+    "choices": [
+      "인터럽트",
+      "프로세스",
+      "버퍼",
+      "커널"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "04",
+    "number": 46,
+    "question": "UNIX에서 시스템 내에 동작중인 프로세스 관련 정보를 표시하는 명령어는?",
+    "answer": 1,
+    "explanation": "ps(process status) 명령어는 시스템에서 현재 실행 중인 프로세스의 정보를 표시할 때 사용합니다.",
+    "choices": [
+      "ps",
+      "cd",
+      "rm",
+      "cat"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": 47,
+    "question": "프로세스의 상태 변화 중 우선순위가 가장 높은 프로세스가 준비 상태에서 실행 상태로 전환되는 것은?",
+    "answer": 4,
+    "explanation": "준비(Ready) 상태에 있는 프로세스들 중 하나가 CPU를 할당받아 실행(Running) 상태로 바뀌는 것을 디스패치(Dispatch)라고 합니다.",
+    "choices": [
+      "웨이크 업",
+      "타이머 종료",
+      "블록",
+      "디스패치"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "04",
+    "number": 47,
+    "question": "다음 중 운영체제가 아닌 것은?",
+    "answer": 4,
+    "explanation": "윈도우, 유닉스, 리눅스는 운영체제(OS)의 한 종류이지만, 인텔(Intel)은 CPU를 제조하는 하드웨어 회사 브랜드 이름입니다.",
+    "choices": [
+      "윈도우",
+      "유닉스",
+      "리눅스",
+      "인텔"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "05",
+    "number": 47,
+    "question": "UNIX에서 프로세스 관리, 기억장치 관리, 파일 관리, 입·출력 관리, 데이터 전송 및 변환 등의 일을 수행하는 부분은?",
+    "answer": 3,
+    "explanation": "커널(Kernel)은 유닉스 운영체제의 핵심 부분으로 하드웨어 관리와 프로세스 제어 등 핵심적인 시스템 기능을 담당합니다.",
+    "choices": [
+      "Shell",
+      "Application Program",
+      "Kernel",
+      "Utility Program"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 48,
+    "question": "다음은 프로세스 스케줄링에 대한 설명이다. 옳은 것은?",
+    "answer": 4,
+    "explanation": "다단계 피드백 큐(MFQ)는 여러 개의 큐를 사용하며, 프로세스가 큐 사이를 이동할 수 있도록 설계하여 다단계 큐의 단점을 보완한 스케줄링 기법입니다.",
+    "choices": [
+      "SRT는 가장 긴 실행 시간을 요구하는 프로세스에게 CPU를 할당하는 기법이다.",
+      "우선순위는 각 프로세스마다 우선순위를 부여하여 그 중 가장 낮은 프로세스에게 먼저 CPU를 할당하는 기법이다.",
+      "FIFO는 가장 나중에 CPU를 요청한 프로세스에게 가장 먼저 CPU를 할당하여 실행한다.",
+      "다단계 피드백 큐는 특정 그룹의 준비상태 큐에 들어간 프로세스가 다른 준비상태 큐로 이동할 수 없는 다단계 큐 기법을 준비상태 큐 사이를 이동할 수 있도록 개선한 기법이다."
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "number": 49,
+    "question": "분산 운영체제의 구조 중 각 노드가 인접한 두 노드와 직접 연결된 폐쇄 루프(Closed Loop) 형태인 것은?",
+    "answer": 4,
+    "explanation": "링형(Ring) 구조는 인접한 두 노드를 서로 연결하여 원형(루프)을 이루는 형태를 의미한다.",
+    "choices": [
+      "성형(Star)",
+      "버스형(Bus)",
+      "트리형(Tree)",
+      "링형(Ring)"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "number": 49,
+    "question": "UNIX에서 태스크 스케줄링(Task-Scheduling) 및 기억장치 관리(Memory Management) 등의 일을 수행하는 부분은?",
+    "answer": 1,
+    "explanation": "커널(Kernel)은 운영체제의 핵심으로 프로세스 관리, 기억장치 관리, 파일 시스템 관리 등 하드웨어 보호 및 제어 기능을 수행합니다.",
+    "year": 2026,
+    "round": "02",
+    "choices": [
+      "Kernel",
+      "Shell",
+      "Utility Program",
+      "Application Program"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "number": 50,
+    "question": "UNIX에서 새로운 프로세스를 생성하는 명령어는?",
+    "answer": 1,
+    "explanation": "fork는 현재 실행 중인 프로세스를 복제하여 새로운 프로세스를 생성하는 명령어이다.",
+    "choices": [
+      "fork",
+      "ls",
+      "cat",
+      "chmod"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 50,
+    "question": "UNIX에서 앞의 출력 결과가 뒤에 실행하는 명령의 입력이 되는 것은?",
+    "answer": 1,
+    "explanation": "파이프(pipe, |)는 둘 이상의 명령을 연결하여 앞 명령의 표준 출력을 뒤 명령의 표준 입력으로 전달하는 기능을 수행합니다.",
+    "choices": [
+      "pipe",
+      "more",
+      "filter",
+      "link"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "04",
+    "number": 52,
+    "question": "기억장치에 저장된 여러 개의 프로세스가 수행 상태, 대기 상태, 준비 상태와 같은 변환 과정을 반복할 때, 각 프로세스에게 중앙처리장치의 사용 시간을 할당하는 것을 무엇이라 하는가?",
+    "answer": 2,
+    "explanation": "프로세스들에게 CPU 사용 시간을 배분하고 관리하는 과정을 스케줄링(Scheduling)이라고 합니다.",
+    "choices": [
+      "Partition",
+      "Scheduling",
+      "Fragmentation",
+      "Optimize"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "05",
+    "number": 53,
+    "question": "운영체제를 구성하는 프로그램 중 제어 프로그램에 해당하는 것은?",
+    "answer": 2,
+    "explanation": "운영체제는 제어 프로그램(감시, 작업 관리, 데이터 관리)과 처리 프로그램(언어 번역, 서비스, 문제 프로그램)으로 나뉩니다. 작업 관리 프로그램은 제어 프로그램에 해당합니다.",
+    "choices": [
+      "서비스 프로그램",
+      "작업 관리 프로그램",
+      "언어 번역 프로그램",
+      "문제 프로그램"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "05",
+    "number": 55,
+    "question": "운영체제의 구성 요소 중 프로세서를 생성, 실행, 중단, 소멸시키는 것은?",
+    "answer": 1,
+    "explanation": "스케줄러는 프로세스의 상태 전이를 관리하고 CPU 자원을 어떤 프로세스에 할당할지 결정하는 역할을 수행합니다.",
+    "choices": [
+      "스케줄러(Scheduler)",
+      "드라이버(Driver)",
+      "에디터(Editor)",
+      "스풀러(Spooler)"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "04",
+    "number": 58,
+    "question": "운영체제의 프로세스 정의로 가장 거리가 먼 것은?",
+    "answer": 4,
+    "explanation": "데이터 저장 공간은 메모리나 저장 장치를 의미하며, 동적인 실행 주체인 프로세스의 정의와는 직접적인 관련이 없습니다.",
+    "choices": [
+      "실행중인 프로그램",
+      "프로그램을 실행하는 처리단위",
+      "프로세서가 할당되는 객체",
+      "데이터 저장 공간"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "02",
+    "number": 59,
+    "question": "운영체제의 스케줄링 기법 중 선점(Preemptive) 스케줄링에 해당하는 것은?",
+    "answer": 1,
+    "explanation": "SRT(Shortest Remaining Time)는 선점형 스케줄링 기법입니다. SJF, FIFO, HRN은 비선점형 스케줄링 기법에 해당합니다.",
+    "choices": [
+      "SRT",
+      "SJF",
+      "FIFO",
+      "HRN"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 59,
+    "question": "UNIX 시스템의 명령어 해석기인 셸(Shell)의 종류로 옳지 않은 것은?",
+    "answer": 1,
+    "explanation": "UNIX의 주요 쉘은 Bourne Shell(sh), C Shell(csh), Korn Shell(ksh) 등이 있습니다. System Shell은 표준적인 쉘의 이름이 아닙니다.",
+    "choices": [
+      "System Shell",
+      "Bourne Shell",
+      "C Shell",
+      "Korn Shell"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "04",
+    "number": 59,
+    "question": "로더(Loader)의 기능이 아닌 것은?",
+    "answer": 4,
+    "explanation": "로더의 주요 기능은 할당, 연결(링킹), 재배치, 적재(Loading)이며, 스케줄링은 프로세스 관리자의 영역입니다.",
+    "choices": [
+      "할당(Allocation)",
+      "링킹(Linking)",
+      "재배치(Relocation)",
+      "스케줄링(Scheduling)"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "05",
+    "number": 59,
+    "question": "Windows 10의 플러그 앤 플레이(Plug & Play) 방식에 대한 설명으로 옳은 것은?",
+    "answer": 1,
+    "explanation": "플러그 앤 플레이(PnP)는 하드웨어 장치를 연결했을 때 운영체제가 자동으로 이를 감지하고 필요한 설정을 진행하는 기능을 말합니다.",
+    "choices": [
+      "주변장치를 장착하면 스스로 장치를 인식하는 방식이다.",
+      "동영상과 음향을 동시에 실행하는 방식이다.",
+      "여러 개의 프로그램을 동시에 실행하는 방식이다.",
+      "전화를 이용한 통신을 위해 사용하는 방식이다."
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  },
+  {
+    "year": 2026,
+    "round": "05",
+    "number": 60,
+    "question": "프로세스 스케줄링 방식 중 시분할(Time Sharing) 시스템에 가장 적절한 방식은?",
+    "answer": 4,
+    "explanation": "라운드 로빈(RR, Round Robin)은 시분할 시스템을 위해 고안된 방식으로, 각 프로세스에 동일한 CPU 할당 시간을 순환하며 배정합니다.",
+    "choices": [
+      "FIFO",
+      "SJF",
+      "HRN",
+      "RR"
+    ],
+    "sub_unit": "04. 운영체제 및 네트워크 기초"
+  }
+]

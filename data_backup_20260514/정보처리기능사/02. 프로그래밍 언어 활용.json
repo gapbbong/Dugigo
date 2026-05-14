@@ -1,0 +1,794 @@
+[
+  {
+    "number": 4,
+    "question": "다음 중 변수명을 작성할 때의 규칙으로 올바른 것은?",
+    "answer": 4,
+    "explanation": "식별자(변수명)는 대소문자를 엄격히 구분하며, 숫자로 시작할 수 없고 공백이나 특수문자(일부 예외 제외), 예약어는 사용할 수 없습니다.",
+    "choices": [
+      "첫 글자에 숫자를 사용할 수 있다.",
+      "공백이나 특수문자 +, - 등을 포함할 수 있다.",
+      "final과 같은 예약어를 변수명으로 사용할 수 있다.",
+      "대문자와 소문자를 구분하여 사용할 수 있다."
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 5,
+    "question": "다음 JAVA 프로그램이 실행되었을 때, 실행 결과는?\n\npublic class Main {\n  public static void main(String[] args) {\n    int i = 0;\n    int j;\n    j = ++i;\n    System.out.println(j++);\n  }\n}",
+    "answer": 2,
+    "explanation": "j = ++i에서 i가 1이 되고 j에 1이 저장됩니다. j++는 후위 연산자이므로 현재 j값인 1을 먼저 출력한 후 j를 1 증가시킵니다.",
+    "question_img": "Programming_Mock_05_Q05.png",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 6,
+    "question": "다음 JAVA 코드의 실행 결과는?\n\npublic class Main {\n  public static void main(String[] args) {\n    int a = 10;\n    int b = 5;\n    int result = (a > b) ? a : b;\n    System.out.println(result);\n  }\n}",
+    "answer": 2,
+    "explanation": "조건식 (a > b)가 참(10 > 5)이므로 삼항 연산자의 결과값은 콜론(:) 앞의 값인 a(10)가 됩니다.",
+    "question_img": "Programming_Mock_05_Q06.png",
+    "choices": [
+      "5",
+      "10",
+      "true",
+      "false"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 7,
+    "question": "다음 중 JAVA에서 printf 메소드를 사용하여 정수형 변수 num에 저장된 값을 16진수로 출력하기 위해 사용해야 하는 서식 문자열은?",
+    "answer": 3,
+    "explanation": "%d는 10진수 정수, %o는 8진수, %x는 16진수, %f는 실수형 출력을 의미합니다.",
+    "choices": [
+      "%d",
+      "%o",
+      "%x",
+      "%f"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 8,
+    "question": "다음 JAVA 코드의 실행 결과는?\n\npublic class Main {\n  public static void main(String[] args) {\n    int[] numbers = {10, 20, 30};\n    int sum = 0;\n    for (int num : numbers) {\n      sum += num;\n    }\n    System.out.println(sum);\n  }\n}",
+    "answer": 4,
+    "explanation": "향상된 for문을 통해 배열 {10, 20, 30}의 모든 요소를 순차적으로 sum에 더하므로 결과는 10+20+30 = 60입니다.",
+    "question_img": "Programming_Mock_05_Q08.png",
+    "choices": [
+      "10",
+      "20",
+      "30",
+      "60"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 9,
+    "question": "다음 JAVA 코드의 실행 결과는?\n\n```java\npublic class ArrayLoopTest {\n    public static void main(String[] args) {\n        int[] numbers = {10, 20, 30, 40, 50};\n        int sum = 0;\n        for (int i = 0; i < numbers.length; i++) {\n            sum += numbers[i];\n        }\n        System.out.println(sum);\n    }\n}\n```",
+    "answer": 3,
+    "explanation": "배열 numbers의 모든 요소인 10, 20, 30, 40, 50을 모두 더한 값인 150이 출력됩니다.",
+    "choices": [
+      "50",
+      "100",
+      "150",
+      "200"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 11,
+    "question": "다음 파이썬(Python) 코드의 실행 결과는?\n\n```python\nlist_data = ['a', 'b', 'c', 'd']\nindex_b = list_data.index('b')\nprint(index_b)\n```",
+    "answer": 2,
+    "explanation": "index() 함수는 리스트에서 특정 값의 인덱스(순서)를 반환합니다. 'a'는 0번, 'b'는 1번 인덱스이므로 결과는 1입니다.",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "-1"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 12,
+    "question": "다음 파이썬(Python) 코드의 실행 결과가 [실행결과]와 같을 때, 빈칸에 들어갈 코드로 올바른 것은?\n\n```python\na = sum = 0\nwhile a < 10:\n    a += 1\n    if (      ):\n        continue\n    sum += a\nprint(sum)\n```\n\n[실행결과]\n30",
+    "answer": 2,
+    "explanation": "1부터 10까지의 수 중 짝수의 합(2+4+6+8+10)이 30입니다. 따라서 홀수인 경우 continue를 통해 합산 과정(sum += a)을 건너뛰어야 하므로 빈칸에는 'a % 2 == 1'이 적절합니다.",
+    "question_img": "Programming_Mock_04_Q12.png",
+    "choices": [
+      "a == 0",
+      "a % 2 == 1",
+      "a % 2 == 0",
+      "a < 5"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 14,
+    "question": "다음 JavaScript 프로그램이 실행되었을 때, 실행 결과는?\n\n```javascript\n<script>\n    var i = 0, sum = 0;\n    while (i <= 5) {\n        sum += i;\n        i++;\n    }\n    document.write(sum);\n</script>\n```",
+    "answer": 3,
+    "explanation": "변수 i가 0부터 5까지 증가하며 sum에 누적됩니다. 0+1+2+3+4+5 = 15가 최종 결과입니다.",
+    "choices": [
+      "25",
+      "20",
+      "15",
+      "10"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 18,
+    "question": "이진 트리의 레코드 R = (90, 85, 70, 65, 60, 55, 50, 45, 40, 35, 25)에 대하여 힙(Heap) 정렬을 만들 때, 70의 왼쪽과 오른쪽의 자노드(Child Node)의 값은?",
+    "answer": 4,
+    "explanation": "완전 이진 트리 형태의 배열에서 인덱스 i의 자식은 2i(왼쪽)와 2i+1(오른쪽)입니다. 70은 배열의 3번째 요소이므로 자식은 6번째(55)와 7번째(50) 요소입니다.",
+    "choices": [
+      "45, 40",
+      "65, 60",
+      "35, 30",
+      "55, 50"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": "04",
+    "question": "다음 중 자바스크립트(JavaScript)에 대한 설명으로 옳은 것을 모두 고른 것은?",
+    "answer": 4,
+    "explanation": "자바스크립트는 웹 페이지 제어, 객체지향 성격 보유, 프로토타입 개념 활용 등 설명된 모든 특징을 가집니다.",
+    "question_img": "Programming_Mock_01_Q04.png",
+    "choices": [
+      "가",
+      "가, 나",
+      "가, 다",
+      "가, 나, 다"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": "05",
+    "question": "다음 변수 선언 문장에서 '3.1415927'의 역할에 대한 설명으로 올바른 것은?",
+    "answer": 4,
+    "explanation": "코드에 직접 작성된 고정된 값 자체를 리터럴(Literal)이라고 합니다.",
+    "question_img": "Programming_Mock_01_Q05.png",
+    "choices": [
+      "변수명",
+      "예약어",
+      "데이터 타입",
+      "리터럴"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": "06",
+    "question": "다음 중 관계 연산자의 사용이 올바른 것은?",
+    "answer": 4,
+    "explanation": "<= 연산자는 '작거나 같다'를 의미합니다.",
+    "choices": [
+      "if (a == 5) { ... } - 변수 a가 5와 같지 않을 때",
+      "if (b != 10) { ... } - 변수 b가 10과 같을 때",
+      "if (c > 3) { ... } - 변수 c가 3보다 크거나 같을 때",
+      "if (d <= 7) { ... } - 변수 d가 7보다 작거나 같을 때"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": "10",
+    "question": "다음 중 JAVA에서 배열을 선언, 생성, 초기화하는 방법으로 올바르지 않은 것은?",
+    "answer": 4,
+    "explanation": "배열을 생성할 때는 반드시 크기를 지정하거나 초기화 값을 제공해야 합니다.",
+    "choices": [
+      "int[] arr = new int[5];",
+      "int[] arr = {1, 2, 3, 4, 5};",
+      "int[] arr; arr = new int[] {1, 2, 3};",
+      "int[] arr = new int[];"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": "11",
+    "question": "다음 파이썬(Python) 프로그램이 실행되었을 때의 결과는?\n\n```python\ninList = [1,2,3,4,5]\nanswer = inList[:3]\nprint(answer)\n```",
+    "answer": 3,
+    "explanation": "[:3] 슬라이싱은 인덱스 0부터 2까지(3 전까지)의 요소를 가져옵니다.",
+    "choices": [
+      "[1]",
+      "[1, 2]",
+      "[1, 2, 3]",
+      "[1, 2, 3, 4, 5]"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": "12",
+    "question": "다음 파이썬(Python) 코드의 실행 결과는?\n\n```python\nfruits = ['apple', 'banana', 'cherry', 'kiwi']\nfruits.remove('banana')\nfruits.append('grape')\nfruits.insert(1, 'melon')\nprint(fruits)\n```",
+    "answer": 1,
+    "explanation": "banana 삭제 -> grape 추가 -> 인덱스 1에 melon 삽입 결과입니다.",
+    "choices": [
+      "['apple', 'melon', 'cherry', 'kiwi', 'grape']",
+      "['apple', 'banana', 'melon', 'cherry', 'kiwi', 'grape']",
+      "['apple', 'grape', 'melon', 'cherry', 'kiwi']",
+      "['apple', 'melon', 'grape', 'cherry', 'kiwi']"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": "13",
+    "question": "다음 파이썬(Python) 코드의 실행 결과는?",
+    "answer": 1,
+    "explanation": "range(1, 5)는 1, 2, 3, 4를 반환하며 그 합은 10입니다.",
+    "question_img": "Programming_Mock_01_Q13.png",
+    "choices": [
+      "10",
+      "15",
+      "20",
+      "25"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": "15",
+    "question": "다음 중 JavaScript의 배열 속성 및 메소드에 대한 설명으로 옳지 않은 것은?",
+    "answer": 3,
+    "explanation": "pop()은 배열의 마지막 요소를 삭제합니다. 첫 번째 요소 삭제는 shift()입니다.",
+    "choices": [
+      "length 속성은 배열의 요소 개수를 반환한다.",
+      "push() 메소드는 배열의 끝에 새로운 요소를 추가한다.",
+      "pop() 메소드는 배열의 첫 번째 요소를 삭제한다.",
+      "splice() 메소드는 배열의 요소를 추가, 삭제, 교체하는 데 사용한다."
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": 38,
+    "question": "다음 SQL문을 올바르게 설명한 것은?\n<pre>SELECT * \nFROM STUDENT \nWHERE SNAME LIKE '홍%';</pre>",
+    "answer": 2,
+    "explanation": "LIKE 연산자와 와일드카드 '%'는 부분 일치 검색을 수행합니다. '홍%'는 '홍'으로 시작하는 모든 문자열을 의미합니다.",
+    "question_img": "Programming_Mock_01_Q38.png",
+    "choices": [
+      "SNAME이 '홍'씨로 시작하면 삭제한다.",
+      "SNAME이 '홍'씨로 시작되는 튜플을 찾는다.",
+      "SNAME이 '홍'씨로 시작하면 0으로 치환한다.",
+      "SNAME이 '홍'씨로 시작되는 튜플을 삭제한다."
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "01",
+    "number": 39,
+    "question": "SQL의 논리 연산자가 아닌 것은?",
+    "answer": 2,
+    "explanation": "SQL의 표준 논리 연산자는 AND, OR, NOT입니다. OTHER는 논리 연산자가 아닙니다.",
+    "choices": [
+      "AND",
+      "OTHER",
+      "OR",
+      "NOT"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "02",
+    "number": 1,
+    "question": "Python에서 통계값을 계산하기 위해 사용하는 클래스와 그 안에 포함된 함수가 올바르게 짝지어진 것은?",
+    "answer": 4,
+    "explanation": "Python의 statistics 모듈은 산술 평균을 계산하는 mean() 함수를 제공합니다. datetime은 날짜/시간, random은 난수, math는 일반 수학 함수 모듈입니다.",
+    "choices": [
+      "datetime - today()",
+      "random - choice()",
+      "math - log()",
+      "statistics - mean()"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "02",
+    "number": 5,
+    "question": "다음 중 변수 PI를 프로그램 실행 중 변경되지 않는 상수로 만들기 위한 JAVA 예약어는?",
+    "answer": 2,
+    "explanation": "JAVA에서 상수를 선언할 때는 final 키워드를 사용하여 값이 한 번 할당되면 변경될 수 없도록 지정합니다.",
+    "choices": [
+      "const",
+      "final",
+      "static",
+      "void"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "02",
+    "number": 6,
+    "question": "다음 비트 연산자 중, 모든 비트가 1일 때만 1을 결과로 반환하는 것은?",
+    "answer": 3,
+    "explanation": "& (AND) 연산자는 비교하는 두 비트가 모두 1인 경우에만 결과로 1을 반환합니다.",
+    "choices": [
+      "^ (xor)",
+      "| (or)",
+      "& (and)",
+      "~ (not)"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "02",
+    "number": 7,
+    "question": "다음 중 연산자 우선순위가 가장 높은 것은?",
+    "answer": 1,
+    "explanation": "일반적으로 단항 연산자가 이항 연산자(산술, 관계, 논리 등)보다 우선순위가 높습니다.",
+    "choices": [
+      "단항 연산자 (++, --, !)",
+      "산술 연산자 (*, /, %)",
+      "관계 연산자 (==, !=)",
+      "논리 연산자 (&&, ||)"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "02",
+    "number": 8,
+    "question": "다음 JAVA 코드의 실행 결과는?\n<pre>\npublic class Main {\n    public static void main(String[] args) {\n        int score = 85;\n        if (score >= 90) {\n            System.out.println(\"A학점\");\n        }\n        System.out.println(\"프로그램 종료\");\n    }\n}\n</pre>",
+    "answer": 2,
+    "explanation": "score 변수가 85이므로 if문의 조건(score >= 90)이 거짓이 됩니다. 따라서 if 블록 안의 \"A학점\"은 출력되지 않고, 그 아래의 \"프로그램 종료\"만 출력됩니다.",
+    "question_img": "Programming_Mock_02_Q08.png",
+    "choices": [
+      "A학점",
+      "프로그램 종료",
+      "A학점\n프로그램 종료",
+      "(아무것도 출력되지 않음)"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 10,
+    "question": "다음 JAVA 코드의 실행 결과는?\n<pre>\npublic class Main {\n    public static void main(String[] args) {\n        String[] fruits = {\"apple\", \"banana\", \"kiwi\"};\n        String result = \"\";\n        for (String fruit : fruits) {\n            result += fruit + \" \";\n        }\n        System.out.println(result);\n    }\n}\n</pre>",
+    "answer": 1,
+    "explanation": "JAVA 코드에서 배열의 각 요소를 순회하며 뒤에 공백(\" \")을 추가하여 문자열을 결합하고 있습니다. 따라서 출력 결과는 \"apple banana kiwi \"입니다.",
+    "year": 2026,
+    "round": "02",
+    "question_img": "Programming_Mock_02_Q10.png",
+    "choices": [
+      "apple banana kiwi",
+      "applebanana kiwi",
+      "apple banana",
+      "applebanana"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 12,
+    "question": "다음 중 파이썬(Python) 코드의 실행 결과는?\n<pre>\nnumbers = list(range(1, 11))\nresult = numbers[::2]\nprint(result)\n</pre>",
+    "answer": 2,
+    "explanation": "range(1, 11)은 [1, 2, ..., 10]의 리스트를 생성합니다. 슬라이싱 [::2]는 처음부터 끝까지 2씩 건너뛰며 요소를 추출하므로 [1, 3, 5, 7, 9]가 결과가 됩니다.",
+    "year": 2026,
+    "round": "02",
+    "question_img": "Programming_Mock_02_Q12.png",
+    "choices": [
+      "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+      "[1, 3, 5, 7, 9]",
+      "[2, 4, 6, 8, 10]",
+      "[1, 2, 3, 4, 5]"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 13,
+    "question": "사용자가 gilbut sinagong q-net를 입력했을 때, 다음 파이썬(Python) 코드의 실행 결과는?\n<pre>\ndata = input()\nwords = data.split()\nresult = words[1]\nprint(result.upper())\n</pre>",
+    "answer": 2,
+    "explanation": "입력받은 문자열을 공백으로 분리(split)하면 ['gilbut', 'sinagong', 'q-net'] 리스트가 생성됩니다. 인덱스 1번 요소인 'sinagong'을 대문자로 변환(upper)하면 'SINAGONG'이 됩니다.",
+    "year": 2026,
+    "round": "02",
+    "question_img": "Programming_Mock_02_Q13.png",
+    "choices": [
+      "GILBUT",
+      "SINAGONG",
+      "Q-NET",
+      "GILBUT SINAGONG Q-NET"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 15,
+    "question": "다음 JavaScript 프로그램이 실행되었을 때, 실행 결과는?\n<pre>\nvar a = [10, 20, 30];\na.push(40);\nvar b = a.shift();\nvar c = a.pop();\ndocument.write(b + c);\n</pre>",
+    "answer": 1,
+    "explanation": "배열 [10, 20, 30]에 push(40)을 하면 [10, 20, 30, 40]이 됩니다. shift()는 배열의 첫 번째 요소인 10을 제거하고 반환하여 b=10이 되고, pop()은 마지막 요소인 40을 제거하고 반환하여 c=40이 됩니다. b + c = 10 + 40 = 50입니다.",
+    "year": 2026,
+    "round": "02",
+    "question_img": "Programming_Mock_02_Q15.png",
+    "choices": [
+      "50",
+      "60",
+      "70",
+      "80"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "02",
+    "number": 34,
+    "question": "‘학생’ 테이블에서 3학년이고 컴퓨터공학과인 학생의 이름만 조회하는 SQL문으로 올바른 것은?",
+    "answer": 1,
+    "explanation": "SQL의 기본 조회 구문은 'SELECT 필드명 FROM 테이블명 WHERE 조건'이며, 두 조건을 모두 만족해야 하므로 AND 연산자를 사용해야 합니다.",
+    "choices": [
+      "SELECT 이름 FROM 학생 WHERE 학년 = 3 AND 학과 = \"컴퓨터공학\";",
+      "SELECT 이름 FROM 학생 WHERE 학년 = 3 OR 학과 = \"컴퓨터공학\";",
+      "SELECT 이름 WHEN 학생 WHERE 학년 = 3 AND 학과 = \"컴퓨터공학\";",
+      "SELECT 이름 WHEN 학생 WHERE 학년 = 3 OR 학과 = \"컴퓨터공학\";"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 3,
+    "question": "다음 중 클라이언트용 스크립트 언어와 서버용 스크립트 언어가 올바르게 묶인 것은?",
+    "answer": 2,
+    "explanation": "자바스크립트와 VB 스크립트는 클라이언트(웹 브라우저) 측에서 동작하는 언어이며, PHP, ASP, JSP, 파이썬 등은 서버 측에서 동작하는 언어입니다.",
+    "choices": [
+      "클라이언트용 : PHP, 파이썬",
+      "클라이언트용 : 자바스크립트, VB 스크립트",
+      "서버용 : ASP, VB 스크립트",
+      "서버용 : JSP, 자바스크립트"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 5,
+    "question": "다음 중 변수명 작성 규칙에 위배되는 변수명은?",
+    "answer": 3,
+    "explanation": "'class'는 프로그래밍 언어(자바 등)에서 클래스 선언을 위해 미리 정의된 예약어이므로 변수명으로 사용할 수 없습니다.",
+    "choices": [
+      "_variable_name",
+      "user123",
+      "class",
+      "a_long_variable_name"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 7,
+    "question": "JAVA에서 키보드로 입력받은 값을 정수형 변수 score에 저장하기 위한 코드로 올바른 것은? (단, Scanner 객체 변수명은 input으로 한다.)",
+    "answer": 3,
+    "explanation": "Scanner 클래스에서 정수형 값을 입력받기 위해서는 nextInt() 메소드를 사용해야 합니다.",
+    "choices": [
+      "int score = input.nextFloat();",
+      "String score = input.nextLine();",
+      "int score = input.nextInt();",
+      "float score = input.next();"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 8,
+    "question": "다음 JAVA 코드의 실행 결과는?\n\npublic class Main {\n  public static void main(String[] args) {\n    char grade = 'B';\n    String result;\n    if (grade == 'A')\n      result = \"Excellent\";\n    else if (grade == 'B')\n      result = \"Good\";\n    else if (grade == 'C')\n      result = \"Pass\";\n    else\n      result = \"Fail\";\n    System.out.println(result);\n  }\n}",
+    "answer": 2,
+    "explanation": "grade 변수의 값이 'B'이므로 두 번째 조건문인 else if (grade == 'B')가 참이 되어 result에 \"Good\"이 저장되고 출력됩니다.",
+    "choices": [
+      "Excellent",
+      "Good",
+      "Pass",
+      "Fail"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 11,
+    "question": "다음 파이썬(Python) 프로그램이 실행되었을 때, 실행 결과는?\n\n```python\ndef sum_many(*args):\n    sum = 0\n    for i in args:\n        sum = sum + i\n    return sum\nresult = sum_many(1,2,3)\nprint(result)\n```",
+    "answer": 1,
+    "explanation": "가변 인자 *args를 사용하여 (1, 2, 3)을 튜플로 받고, 반복문을 통해 모든 요소의 합인 6을 계산하여 반환합니다.",
+    "question_img": "Programming_Mock_03_Q11.png",
+    "choices": [
+      "6",
+      "1",
+      "2",
+      "3"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 12,
+    "question": "다음 중 파이썬(Python) 코드의 실행 결과는?\n\n```python\nclass Calculator:\n    def __init__(self, a, b):\n        self.a = a\n        self.b = b\n    def add(self):\n        return self.a + self.b\n    def subtract(self):\n        return self.a - self.b\ncalc = Calculator(10, 5)\nresult_add = calc.add()\nresult_subtract = calc.subtract()\nprint(result_add + result_subtract)\n```",
+    "answer": 4,
+    "explanation": "Calculator 객체 생성 시 a=10, b=5가 저장됩니다. add()는 15를, subtract()는 5를 반환하므로 result_add + result_subtract는 15 + 5 = 20이 됩니다.",
+    "question_img": "Programming_Mock_03_Q12.png",
+    "choices": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": "16",
+    "year": 2026,
+    "round": "03",
+    "question": "다음 파이썬(Python) 프로그램이 실행되었을 때, 실행 결과는?\n\ndef sum_many(*args):\n    sum = 0\n    for i in args:\n        sum = sum + i\n    return sum\n\nresult = sum_many(1, 2, 3)\nprint(result)",
+    "answer": 1,
+    "explanation": "이 코드는 가변 인자(*args)를 사용하여 함수에 전달된 모든 인수의 합을 구하는 예제입니다. sum_many(1, 2, 3)을 호출하면 매개변수 args는 (1, 2, 3)이라는 튜플 형태가 됩니다. 함수 내부의 for 루프는 이 튜플의 각 요소를 차례대로 더하므로 1 + 2 + 3 = 6이 계산되어 반환됩니다. 따라서 출력 결과는 6(①번)입니다.",
+    "choices": [
+      "6",
+      "1",
+      "2",
+      "3"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 21,
+    "question": "양방향에서 입·출력이 가능한 선형 자료 구조로 2개의 포인터를 이용하여 리스트의 양쪽 끝 모두에서 삽입과 삭제가 가능한 것은?",
+    "answer": 3,
+    "explanation": "데크(Deque)는 'Double-Ended Queue'의 약자로, 리스트의 양쪽 끝에서 삽입과 삭제가 모두 가능한 자료구조입니다.",
+    "choices": [
+      "Stack",
+      "Queue",
+      "Deque",
+      "Tree"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 24,
+    "question": "분할 정복(Divide and Conquer)에 기반한 알고리즘으로 피봇(pivot)을 사용하며 최악의 경우 n(n-1)/2회의 비교를 수행해야 하는 정렬(Sort)은?",
+    "answer": 4,
+    "explanation": "퀵 정렬(Quick Sort)은 분할 정복 알고리즘을 사용하며, 기준이 되는 피봇값을 통해 데이터를 분할하여 정렬합니다.",
+    "choices": [
+      "Selection Sort",
+      "Bubble Sort",
+      "Insertion Sort",
+      "Quick Sort"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 32,
+    "question": "[상반기진급] 테이블과 [하반기진급] 테이블은 모두 '사번', '이름', '부서' 필드로 구성되어 있다. 다음 중 두 테이블의 레코드를 통합하려고 할 때 쿼리문으로 올바른 것은?",
+    "answer": 4,
+    "explanation": "두 테이블의 레코드를 통합(합집합)하기 위해서는 UNION 연산자를 사용합니다.",
+    "year": 2026,
+    "round": "03",
+    "choices": [
+      "Select 사번, 이름, 부서 From 상반기진급, 하반기진급 Where 상반기진급.사번 = 하반기진급.사번;",
+      "Select 사번, 이름, 부서 From 상반기진급 JOIN Select 사번, 이름, 부서 From 하반기진급;",
+      "Select 사번, 이름, 부서 From 상반기진급 OR Select 사번, 이름, 부서 From 하반기진급;",
+      "Select 사번, 이름, 부서 From 상반기진급 UNION Select 사번, 이름, 부서 From 하반기진급;"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "number": 36,
+    "question": "트랜잭션의 실행이 실패하였음을 알리는 연산자로 트랜잭션이 수행한 결과를 원래의 상태로 원상 복귀 시키는 연산은?",
+    "answer": 4,
+    "explanation": "ROLLBACK 연산은 트랜잭션 처리가 비정상적으로 종료되어 데이터베이스의 일관성이 깨졌을 때, 트랜잭션이 행한 모든 변경 작업을 취소하고 이전 상태로 되돌리는 연산입니다.",
+    "year": 2026,
+    "round": "03",
+    "choices": [
+      "COMMIT 연산",
+      "BACKUP 연산",
+      "LOG 연산",
+      "ROLLBACK 연산"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "03",
+    "number": 41,
+    "question": "다음 SQL문에서 사용된 BETWEEN 연산의 의미와 동일한 것은?\n\nSELECT * FROM 성적\nWHERE (점수 BETWEEN 90 AND 95) AND 학과 = '컴퓨터공학과';",
+    "answer": 1,
+    "explanation": "BETWEEN A AND B 연산자는 A와 B를 모두 포함하는 범위(A 이상 B 이하)를 의미하므로 '>= 90 AND <= 95'와 동일합니다.",
+    "question_img": "Programming_Mock_03_Q41.png",
+    "choices": [
+      "점수 >= 90 AND 점수 <= 95",
+      "점수 > 90 AND 점수 < 95",
+      "점수 > 90 AND 점수 <= 95",
+      "점수 >= 90 AND 점수 < 95"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "04",
+    "number": 2,
+    "question": "다음 중 캡슐화(Encapsulation)에 대한 설명으로 가장 올바른 것은?",
+    "answer": 1,
+    "explanation": "캡슐화는 데이터와 함수를 하나로 묶어 외부에서 직접 접근하지 못하도록 은폐(정보 은닉)하는 것이 주된 특징입니다.",
+    "choices": [
+      "객체의 세부 내용이 외부에서 은폐(정보 은닉)되어 오류의 파급 효과가 적다.",
+      "불필요한 부분을 생략하고 가장 중요한 것에 중점을 두어 모델화하는 것이다.",
+      "이미 정의된 상위 클래스의 속성과 연산을 하위 클래스가 물려받는 것이다.",
+      "하나의 메시지에 대해 각 객체가 고유한 방법으로 응답하는 능력이다."
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "04",
+    "number": 4,
+    "question": "다음 중 Python의 시퀀스 자료형에 대한 설명으로 옳은 것은?",
+    "answer": 3,
+    "explanation": "range는 연속된 정수를 생성하는 파이썬의 대표적인 시퀀스 자료형입니다. 리스트는 변경 가능(mutable)하고 튜플은 변경 불가능(immutable)하며, 문자열 또한 시퀀스 자료형에 속합니다.",
+    "choices": [
+      "리스트(List)는 값이 연속적으로 저장되지만, 값의 추가나 삭제가 불가능하다.",
+      "튜플(Tuple)은 리스트와 달리 필요에 따라 개수를 늘리거나 줄일 수 있다.",
+      "range는 연속된 숫자를 생성하는 자료형이다.",
+      "문자열(String)은 시퀀스 자료형에 포함되지 않는다."
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "04",
+    "number": 5,
+    "question": "변수 선언 시 변수명에 데이터 타입을 명시하는 표기법으로, 변수의 자료형을 쉽게 알 수 있도록 하는 것은?",
+    "answer": 1,
+    "explanation": "헝가리안 표기법은 변수명 앞에 자료형을 나타내는 약어를 접두어로 붙여 명명하는 방식입니다.",
+    "choices": [
+      "헝가리안 표기법",
+      "카멜 케이스 표기법",
+      "파스칼 표기법",
+      "스네이크 케이스 표기법"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "04",
+    "number": 6,
+    "question": "다음 중 JAVA 코드의 실행 결과로 올바른 것은?\n\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int a = 10;\n        int b = 5;\n        a += b;\n        System.out.println(a);\n    }\n}\n```",
+    "answer": 3,
+    "explanation": "복합 대입 연산자 `a += b`는 `a = a + b`와 동일하므로 10 + 5의 결과인 15가 변수 a에 저장되어 출력됩니다.",
+    "question_img": "Programming_Mock_04_Q06.png",
+    "choices": [
+      "5",
+      "10",
+      "15",
+      "50"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "04",
+    "number": 7,
+    "question": "다음 중 JAVA에서 System.out.println( )을 사용하여 출력했을 때, 결과가 1020이 되는 코드는?",
+    "answer": 2,
+    "explanation": "자바에서 문자열 간의 더하기(+) 연산은 두 문자열을 물리적으로 연결하므로 \"10\"과 \"20\"을 합쳐 \"1020\"이 됩니다.",
+    "choices": [
+      "System.out.println(10 + 20);",
+      "System.out.println(\"10\" + \"20\");",
+      "System.out.println(10 * \"20\");",
+      "System.out.println(10 * 20);"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": "2026",
+    "round": "04",
+    "number": 37,
+    "question": "데이터베이스에서 두 릴레이션을 합병할 때 사용하는 연산자는?",
+    "answer": 1,
+    "explanation": "합집합(Union), 교집합(Intersection), 차집합(Difference) 등 두 릴레이션을 합치거나 연산할 때 사용하는 연산자는 집합 연산자입니다.",
+    "choices": [
+      "집합 연산자",
+      "관계 연산자",
+      "비교 연산자",
+      "논리 연산자"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "05",
+    "number": 9,
+    "question": "다음 JAVA 코드의 실행 결과는?\n\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int[][] matrix = {{1, 2}, {3, 4}, {5, 6}};\n        int i = 0;\n        int sum = 0;\n        while (i < matrix.length) {\n            int j = 0;\n            while (j < matrix[i].length) {\n                sum += matrix[i][j];\n                j++;\n            }\n            i++;\n        }\n        System.out.println(sum);\n    }\n}\n```",
+    "answer": 4,
+    "explanation": "이 코드는 2차원 배열 matrix의 모든 원소를 더하는 과정을 수행합니다. matrix는 {{1, 2}, {3, 4}, {5, 6}}이므로 모든 원소의 합은 1+2+3+4+5+6 = 21입니다.",
+    "choices": [
+      "6",
+      "10",
+      "15",
+      "21"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "05",
+    "number": 11,
+    "question": "다음 파이썬(Python) 코드의 실행 결과는?\n\n```python\nsentence = \"python programming is fun\"\nresult = sentence.replace(\"fun\", \"easy\").split()\nprint(result)\n```",
+    "answer": 1,
+    "explanation": "sentence.replace(\"fun\", \"easy\")에 의해 문자열이 \"python programming is easy\"로 바뀌고, .split() 메서드에 의해 공백을 기준으로 나누어져 ['python', 'programming', 'is', 'easy'] 리스트가 생성됩니다.",
+    "choices": [
+      "['python', 'programming', 'is', 'easy']",
+      "['python', 'programming', 'is', 'fun']",
+      "python programming is easy",
+      "python programming is fun"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "05",
+    "number": 12,
+    "question": "다음 중 파이썬(Python) 코드의 실행 결과는?\n\n```python\nhap = 0\nfor i in range(1, 11):\n    hap += i\nprint(i, hap)\n```",
+    "answer": 3,
+    "explanation": "range(1, 11)은 1부터 10까지의 숫자를 생성합니다. 루프를 돌며 hap에는 1부터 10까지의 합인 55가 저장됩니다. 루프 종료 후 i 값은 마지막으로 할당된 10이 유지되므로 print(i, hap)은 10 55를 출력합니다.",
+    "choices": [
+      "1 11",
+      "9 45",
+      "10 55",
+      "11 66"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "05",
+    "number": 14,
+    "question": "다음 중 JavaScript의 대화상자 관련 함수에 대한 설명으로 옳은 것은?",
+    "answer": 4,
+    "explanation": "prompt() 함수는 사용자에게 텍스트 입력 필드가 있는 대화상자를 표시하여 입력을 받는 용도로 사용됩니다. alert()은 단순 경고창, confirm()은 확인/취소 선택창입니다.",
+    "choices": [
+      "화면에 대화상자가 표시되어 있어도 웹 페이지 조작이 가능하다.",
+      "alert()는 사용자로부터 값을 입력받는다.",
+      "confirm()은 사용자에게 메시지를 보여주고 확인(OK) 버튼만 제공한다.",
+      "prompt()는 사용자로부터 텍스트를 입력받을 수 있다."
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  },
+  {
+    "year": 2026,
+    "round": "05",
+    "number": 15,
+    "question": "다음 중 JAVA의 예외 객체와 예외 발생 원인이 올바르게 연결된 것은?",
+    "answer": 4,
+    "explanation": "FileNotFoundException은 지정된 경로에 파일이 존재하지 않을 때 발생하는 예외입니다. ArithmeticException은 0으로 나누기 등의 산술 오류 시 발생하며, 배열 범위 초과는 ArrayIndexOutOfBoundsException입니다.",
+    "choices": [
+      "ArithmeticException - 배열 범위를 벗어난 경우",
+      "InterruptedIOException - 0으로 나누는 등의 산술 연산에 대한 예외가 발생한 경우",
+      "NoSuchMethodException - 클래스를 찾지 못한 경우",
+      "FileNotFoundException - 파일을 찾지 못한 경우"
+    ],
+    "sub_unit": "02. 프로그래밍 언어 활용"
+  }
+]

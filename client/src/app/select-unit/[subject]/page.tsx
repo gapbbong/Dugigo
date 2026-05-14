@@ -205,17 +205,6 @@ export default function SelectUnitPage() {
         </div>
       </nav>
 
-      {/* PC Install Button */}
-      {!isInstalled && !isIOS && deferredPrompt && (
-        <div className="hidden lg:block fixed left-8 top-1/2 -translate-y-1/2 z-50">
-          <motion.button onClick={handleInstall} className="flex flex-col items-center gap-3 p-5 bg-white/60 backdrop-blur-xl border-2 border-slate-200 rounded-[2.5rem] shadow-xl group">
-            <div className="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-400 group-hover:bg-brand-600 group-hover:text-white transition-all">
-              <Download size={24} />
-            </div>
-            <span className="text-[10px] font-black text-slate-400 group-hover:text-brand-600 uppercase text-center">앱 설치<br/>PC/바탕화면</span>
-          </motion.button>
-        </div>
-      )}
 
       <main className="max-w-6xl mx-auto px-8 relative z-10">
         <div className="mb-8 flex items-center justify-between gap-4">
@@ -223,12 +212,6 @@ export default function SelectUnitPage() {
             두껍고 딱딱한 <span className="text-brand-600">기능사 책 대신</span><br className="sm:hidden" />
             고민말고 <span className="text-brand-600 font-black">두 기 고</span> 하세요!
           </motion.h1>
-          {!isInstalled && (
-            <motion.button onClick={handleInstall} className="flex items-center gap-2 px-3 py-1.5 bg-white/40 text-slate-500 rounded-full border-2 border-slate-200 shadow-sm">
-              <PlusSquare size={16} />
-              <span className="text-[10px] md:text-xs font-black">홈 화면에 추가</span>
-            </motion.button>
-          )}
         </div>
 
         {/* Sections */}
