@@ -47,6 +47,7 @@ export default function SelectSubjectPage() {
   const [isInstalled, setIsInstalled] = useState(false);
   const [randomQuote, setRandomQuote] = useState("");
   const [showGuide, setShowGuide] = useState(false);
+  const [studentRank, setStudentRank] = useState<{ groupName: string, rank: number, total: number } | null>(null);
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (e: any) => {
@@ -80,6 +81,37 @@ export default function SelectSubjectPage() {
           .select('*')
           .eq('teacher_id', currentUser.id);
         setGroups(dbGroups || []);
+      } else {
+        // 학생인 경우 소속 그룹 찾기 및 랭킹 계산
+        const { data: myGroups } = await supabase
+          .from('dukigo_teacher_groups')
+          .select('*')
+          .contains('members', [currentUser.id]);
+        
+        if (myGroups && myGroups.length > 0) {
+          setGroups(myGroups);
+          
+          // 첫 번째 그룹 기준으로 랭킹 계산
+          const targetGroup = myGroups[0];
+          const memberIds = targetGroup.members || [];
+          
+          if (memberIds.length > 0) {
+            const { data: membersProfiles } = await supabase
+              .from('dukigo_profiles')
+              .select('id, exp_points')
+              .in('id', memberIds)
+              .order('exp_points', { ascending: false });
+            
+            if (membersProfiles) {
+              const myRank = membersProfiles.findIndex(p => p.id === currentUser.id) + 1;
+              setStudentRank({
+                groupName: targetGroup.name,
+                rank: myRank,
+                total: membersProfiles.length
+              });
+            }
+          }
+        }
       }
 
       const res = await fetch('/api/subjects');
@@ -148,16 +180,29 @@ export default function SelectSubjectPage() {
             <span className="text-blue-500">두</span>꺼운 <span className="text-emerald-500">기</span>능사 책 대신 <span className="text-rose-500">고</span>민말고 <span className="font-black text-slate-900">두기고</span>
           </p>
           
-          <div className="flex items-center gap-2">
-            {isTeacher && groups.map(g => (
-              <Link 
-                key={g.id} 
-                href="/teacher" 
-                className="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-sm md:text-lg font-black rounded-xl hover:border-brand-500 hover:text-brand-600 transition-all shadow-sm whitespace-nowrap"
-              >
-                {g.name}
-              </Link>
-            ))}
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+            {isTeacher ? (
+              groups.map(g => (
+                <Link 
+                  key={g.id} 
+                  href="/teacher" 
+                  className="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[10px] md:text-sm font-black rounded-xl hover:border-brand-500 hover:text-brand-600 transition-all shadow-sm whitespace-nowrap"
+                >
+                  {g.name}
+                </Link>
+              ))
+            ) : (
+              studentRank && (
+                <div className="flex items-center gap-2">
+                  <span className="px-3 py-1 bg-brand-50 border border-brand-100 text-brand-700 text-[10px] md:text-sm font-black rounded-xl shadow-sm whitespace-nowrap">
+                    📍 {studentRank.groupName}
+                  </span>
+                  <span className="px-3 py-1 bg-amber-50 border border-amber-100 text-amber-700 text-[10px] md:text-sm font-black rounded-xl shadow-sm whitespace-nowrap">
+                    🏆 그룹 랭킹: {studentRank.rank}위 / {studentRank.total}명
+                  </span>
+                </div>
+              )
+            )}
           </div>
         </div>
       </header>
