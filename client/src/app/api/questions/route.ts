@@ -330,12 +330,19 @@ export async function GET(req: NextRequest) {
             const masterData = JSON.parse(masterContent);
             let masterQuestions = Array.isArray(masterData) ? masterData : (masterData.questions || []);
             
-            // 빈도수 2회 이상인 것들만 모아서 정렬 후 범위만큼 추출
-            sorted = masterQuestions
-              .filter((q: any) => (q.frequency || 0) >= 2)
+            // 내용(문제+보기) 기반으로 중복을 완전히 제거합니다.
+            const uniqueMap = new Map<string, any>();
+            masterQuestions.forEach((q: any) => {
+              if ((q.frequency || 0) >= 2) {
+                const contentKey = `${q.question}_${(q.choices || []).join('|')}`;
+                if (!uniqueMap.has(contentKey)) {
+                  uniqueMap.set(contentKey, q);
+                }
+              }
+            });
+
+            sorted = Array.from(uniqueMap.values())
               .sort((a: any, b: any) => (b.frequency || 0) - (a.frequency || 0));
-            
-            // 이미 sorted에 담았으므로 아래에서 slice 처리됨
           }
         } else {
           const baseUnitFilter = unitFilter.replace(/\s*\(\d+부\)$/, '').trim();

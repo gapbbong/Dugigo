@@ -24,31 +24,44 @@ const pickQuestions = (pool, count) => {
     
     // 2. 전략적 배분
     const selected = [];
-    const usedIds = new Set();
+    const usedContentKeys = new Set();
+    const getContentKey = (q) => `${q.question}_${(q.choices || []).join('|')}`;
 
     // A. 초고빈도 (TOP 8) - 무조건 나오는 문제
-    const highFreq = sorted.slice(0, 8);
-    highFreq.forEach(q => {
-        selected.push(q);
-        usedIds.add(q.id);
-    });
+    for (const q of sorted) {
+        const key = getContentKey(q);
+        if (!usedContentKeys.has(key)) {
+            selected.push(q);
+            usedContentKeys.add(key);
+        }
+        if (selected.length >= 8) break;
+    }
 
     // B. 최신 경향 (2023~2024) - 최근 핫한 문제 7개
-    const recent = sorted.filter(q => !usedIds.has(q.id) && (q.round_info?.includes('2023') || q.round_info?.includes('2024')))
-                         .slice(0, 7);
-    recent.forEach(q => {
-        selected.push(q);
-        usedIds.add(q.id);
-    });
+    let recentCount = 0;
+    for (const q of sorted) {
+        const key = getContentKey(q);
+        if (!usedContentKeys.has(key) && (q.round_info?.includes('2023') || q.round_info?.includes('2024'))) {
+            selected.push(q);
+            usedContentKeys.add(key);
+            recentCount++;
+        }
+        if (recentCount >= 7) break;
+    }
 
     // C. 변별력/패턴 (빈도 2 이상 중 랜덤) - 함정용 5개
-    const patterns = sorted.filter(q => !usedIds.has(q.id) && (q.frequency || 0) >= 2)
-                           .sort(() => Math.random() - 0.5)
-                           .slice(0, 5);
-    patterns.forEach(q => {
-        selected.push(q);
-        usedIds.add(q.id);
-    });
+    let patternCount = 0;
+    const shuffled = sorted.filter(q => !usedContentKeys.has(getContentKey(q)) && (q.frequency || 0) >= 2)
+                           .sort(() => Math.random() - 0.5);
+    for (const q of shuffled) {
+        const key = getContentKey(q);
+        if (!usedContentKeys.has(key)) {
+            selected.push(q);
+            usedContentKeys.add(key);
+            patternCount++;
+        }
+        if (patternCount >= 5) break;
+    }
 
     return selected;
 };
