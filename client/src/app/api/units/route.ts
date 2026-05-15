@@ -52,10 +52,8 @@ export async function GET(req: NextRequest) {
     const masterFile = allFiles.find(f => f.toLowerCase().includes('master') && f.endsWith('.json'));
     const hasMaster = !!masterFile;
     
-    // 마스터 파일이 있으면 그것만 읽고, 없으면 기존처럼 모든 파일을 읽음
-    const filesToLoad = hasMaster 
-      ? [masterFile]
-      : allFiles
+    // 모든 JSON 파일 읽기 (단원 파일 우선순위 적용을 위해 정렬)
+    const filesToLoad = allFiles
           .filter(f => f.endsWith('.json') && !f.includes('_CLEAN') && !f.includes('.bak'))
           .sort((a, b) => {
             const isAStandard = /^\d+\./.test(a);
@@ -220,11 +218,7 @@ export async function GET(req: NextRequest) {
             return;
           }
 
-          const mainUnit = q.subject || "";
-          const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
-          
-          // 대단원이 있으면 [대단원] 소단원 형식으로, 없으면 소단원만 노출
-          const subUnit = mainUnit ? `[${mainUnit}] ${baseSubUnit}` : baseSubUnit;
+          const subUnit = baseSubUnit;
 
           unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
           questionMap.set(qId, { ...q, subUnit: subUnit });

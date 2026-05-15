@@ -383,11 +383,12 @@ export async function GET(req: NextRequest) {
           const cleanUnit = baseUnitFilter.replace(/^\[.*?\]\s*/g, '').trim();
           
           sorted = sorted.filter(q => {
-            const rawQUnit = q.sub_unit || q.subject || '';
+            const rawQUnit = q.sub_unit || q.subject || classifyQuestion(subject, q);
             if (rawQUnit === baseUnitFilter) return true;
             
             const qCleanUnit = rawQUnit.replace(/^\[.*?\]\s*/g, '').trim();
-            return qCleanUnit === cleanUnit;
+            const filterCleanUnit = baseUnitFilter.replace(/^\[.*?\]\s*/g, '').trim();
+            return qCleanUnit === filterCleanUnit;
           });
         }
       }
