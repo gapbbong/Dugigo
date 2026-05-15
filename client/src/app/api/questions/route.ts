@@ -363,14 +363,24 @@ export async function GET(req: NextRequest) {
                 .trim();
             };
 
+            // 빈도 측정을 위해 모든 문항 먼저 스캔
+            const freqCountMap = new Map<string, number>();
             masterQuestions.forEach((q: any) => {
-              if ((q.frequency || 0) >= 2) {
+              const normText = normalize(q.question || "").substring(0, 100);
+              freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
+            });
+
+            masterQuestions.forEach((q: any) => {
+              const normText = normalize(q.question || "").substring(0, 100);
+              const freq = Math.max(Number(q.frequency) || 0, freqCountMap.get(normText) || 1);
+              
+              if (freq >= 2) {
                 const cleanQuestion = normalize(q.question);
                 const cleanChoices = (q.choices || []).map((c: string) => normalize(c)).join("|");
                 const contentKey = `${cleanQuestion}_${cleanChoices}`;
                 
                 if (!uniqueMap.has(contentKey)) {
-                  uniqueMap.set(contentKey, q);
+                  uniqueMap.set(contentKey, { ...q, frequency: freq });
                 }
               }
             });
@@ -407,8 +417,8 @@ export async function GET(req: NextRequest) {
             else if (sangsiMatch) r = `상시${sangsiMatch[1]}`;
           }
 
-          const matchYear = !yearFilter || y.toString() === yearFilter.toString();
-          const matchRound = !roundFilter || r.toString() === roundFilter.toString();
+          const matchYear = !yearFilter || y.toString().replace(/\s/g, '').includes(yearFilter.toString());
+          const matchRound = !roundFilter || r.toString().replace(/\s/g, '').includes(roundFilter.toString());
           return matchYear && matchRound;
         });
       }
