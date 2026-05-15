@@ -1,0 +1,1762 @@
+[
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 1,
+    "question": "평등 전계 중에 유전체 구에 의한 전속 분포가 그림과 같이 되었을 때 $\\epsilon_1$과 $\\epsilon_2$의 크기 관계는?",
+    "choices": [
+      "$\\epsilon_1 > \\epsilon_2$",
+      "$\\epsilon_1 < \\epsilon_2$",
+      "$\\epsilon_1 = \\epsilon_2$",
+      "$\\epsilon_1 \\leq \\epsilon_2$"
+    ],
+    "answer": 1,
+    "explanation": "유전체 내의 경계조건\n유전율이 서로 다른 유전체가 경계면을 이루고 있을 때 유전체 내의 전속선은 유전율이 큰 쪽으로 모이려는 성질이 있으며 전기력선은 유전율이 작은 쪽으로 모이려는 성질이 있다.\n따라서 유전속의 분포가 $\\epsilon_2$에서 $\\epsilon_1$으로 향하고 있으며 $\\epsilon_1$쪽으로 모이려 하기 때문에 유전율은 $\\epsilon_1$이 $\\epsilon_2$보다 큰 값임을 알 수 있다.\n$\\therefore \\epsilon_1 > \\epsilon_2$",
+    "image_needed": true,
+    "source_page": "page_005",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 2,
+    "question": "커패시터를 제조하는데 4가지(A, B, C, D)의 유전재료가 있다. 커패시터 내의 전계를 일정하게 하였을 때, 단위체적당 가장 큰 에너지 밀도를 나타내는 재료부터 순서대로 나열한 것은? (단, 유전재료 A, B, C, D의 비유전율은 각각 $\\epsilon_{rA}=8$, $\\epsilon_{rB}=10$, $\\epsilon_{rC}=2$, $\\epsilon_{rD}=40$이다.)",
+    "choices": [
+      "C > D > A > B",
+      "B > A > D > C",
+      "D > A > C > B",
+      "A > B > D > C"
+    ],
+    "answer": 2,
+    "explanation": "유전체 내의 정전에너지 밀도(w)\n$w = \\frac{\\rho_s^2}{2\\epsilon} = \\frac{D^2}{2\\epsilon} = \\frac{1}{2} ED = \\frac{1}{2}\\epsilon E^2 \\,[\\text{J/m}^3]$ 식에서\n전계($E$)가 일정할 경우 정전에너지 밀도의 공식은\n$w = \\frac{1}{2}\\epsilon E^2 \\,[\\text{J/m}^3]$이므로 $w \\propto \\epsilon$임을 알 수 있다.\n$\\therefore$ 정전에너지 밀도는 유전율에 비례하므로 큰 재료부터의 순서는 D > B > A > C이다.",
+    "image_needed": false,
+    "source_page": "page_005",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 7,
+    "question": "연료의 발열량이 430 [kcal/kg] 일 때, 화력발전소의 열효율[%]은? (단, 발전기 출력은 $P_G$[kW], 시간당 연료의 소비량은 $B$[kg/h]이다.)",
+    "choices": [
+      "$\\frac{P_G}{B} \\times 100$",
+      "$\\frac{\\sqrt{2} P_G}{B} \\times 100$",
+      "$\\frac{\\sqrt{3} P_G}{B} \\times 100$",
+      "$2 \\times \\frac{P_G}{B} \\times 100$"
+    ],
+    "answer": 4,
+    "explanation": "화력발전소의 열효율($\\eta$)\n$\\eta = \\frac{\\text{발전기 출력}[kW] \\times 860}{\\text{연료 소비량}[kg/h] \\times \\text{발열량}} \\times 100 [\\%]$ 식에서\n$\\therefore \\eta = \\frac{P_G \\times 860}{B \\times 430} \\times 100 = 2 \\times \\frac{P_G}{B} \\times 100 [\\%]$",
+    "image_needed": false,
+    "source_page": "page_012",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 8,
+    "question": "수용가의 수용률을 나타낸 식은?",
+    "choices": [
+      "$\\frac{\\text{합성 최대수용전력}[kW]}{\\text{평균전력}[kW]} \\times 100\\%$",
+      "$\\frac{\\text{평균전력}[kW]}{\\text{합성 최대수용전력}[kW]} \\times 100\\%$",
+      "$\\frac{\\text{부하설비합계}[kW]}{\\text{최대수용전력}[kW]} \\times 100\\%$",
+      "$\\frac{\\text{최대수용전력}[kW]}{\\text{부하설비합계}[kW]} \\times 100\\%$"
+    ],
+    "answer": 4,
+    "explanation": "부하율, 수용률, 부등률\n부하율 = $\\frac{\\text{평균전력}}{\\text{최대전력}} \\times 100 [\\%]$\n수용률 = $\\frac{\\text{최대수용전력}}{\\text{부하설비용량}} \\times 100 [\\%]$\n부등률 = $\\frac{\\text{개개의 최대수용전력의 합}}{\\text{합성최대수용전력}}$",
+    "image_needed": false,
+    "source_page": "page_012",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 9,
+    "question": "발전기 회전자에 유도자를 주로 사용하는 발전기는?",
+    "choices": [
+      "수차발전기",
+      "엔진발전기",
+      "터빈발전기",
+      "고주파발전기"
+    ],
+    "answer": 4,
+    "explanation": "동기기의 회전자에 의한 분류\n(1) 회전계자형: 전기자를 고정자로 하고, 계자극을 회전자로 한 것. 동기발전기는 대부분 회전계자형을 채용한다.\n(2) 회전전기자형: 계자극을 고정자로 하고, 전기자를 회전자로 한 것. 소용량의 특수한 것 이외에는 사용되지 않는다.\n(3) 유도자형: 계자극과 전기자를 모두 고정시키고 유도자라고 하는 권선이 없는 회전자를 가진 것. 주로 수백~20,000[Hz] 정도의 고주파발전기에 사용된다.",
+    "image_needed": false,
+    "source_page": "page_018",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 2회 전기기사",
+    "number": 3,
+    "question": "송전단 전압을 $V_S$, 수전단 전압을 $V_R$, 선로의 리액턴스를 $X$라 할 때 정상 시의 최대 송전전력의 개략적인 값은?",
+    "choices": [
+      "① $\\frac{V_S - V_R}{X}$",
+      "② $\\frac{V_S^2 - V_R^2}{X}$",
+      "③ $\\frac{V_S(V_S - V_R)}{X}$",
+      "④ $\\frac{V_S V_R}{X}$"
+    ],
+    "answer": 4,
+    "explanation": "정태안정극한전력\n정태안정극한전력에 의한 송전용량은 $P = \\frac{V_S V_R}{X} \\sin\\delta[\\text{W}]$이므로 최대 송전전력의 개략적인 값은 $\\sin\\delta = 1$일 때 나타난다.\n$\\therefore P_m = \\frac{V_S V_R}{X}[\\text{W}]$",
+    "image_needed": false,
+    "source_page": "page_040",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 2회 전기기사",
+    "number": 4,
+    "question": "망상(network)배전방식의 장점이 아닌 것은?",
+    "choices": [
+      "① 전압변동이 적다.",
+      "② 인축의 접지사고가 적어진다.",
+      "③ 부하의 증가에 대한 융통성이 크다.",
+      "④ 무정전 공급이 가능하다."
+    ],
+    "answer": 2,
+    "explanation": "망상식(=네트워크식)\n(1) 무정전 공급이 가능해서 공급 신뢰도가 높다.\n(2) 플리커 및 전압변동이 작고 전력손실과 전압강하가 작다.\n(3) 기기의 이용률이 향상되고 부하증가에 대한 적응성이 좋다.\n(4) 변전소의 수를 줄일 수 있다.\n(5) 가격이 비싸고 대도시에 적합하다.\n(6) 인축의 감전사고가 빈번하게 발생한다.",
+    "image_needed": false,
+    "source_page": "page_040",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 2회 전기기사",
+    "number": 5,
+    "question": "일반적인 DC 서보모터의 제어에 속하지 않는 것은?",
+    "choices": [
+      "역률제어",
+      "토크제어",
+      "속도제어",
+      "위치제어"
+    ],
+    "answer": 1,
+    "explanation": "DC 서보모터의 기능\n(1) 전압을 가변 할 수 있어야 한다. - 전압제어 및 전류 제어\n(2) 최대토크에서 견디는 능력이 커야 한다.\n(3) 고도의 속응성을 갖추어야 한다. - 위치제어와 속도 제어 및 토크제어\n(4) 안정성과 강인성이 있어야 한다.\n(5) Servo-lock 기능을 가져야 한다.",
+    "image_needed": false,
+    "source_page": "page_046",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 2회 전기기사",
+    "number": 6,
+    "question": "극수가 4극이고 전기자권선이 단중 중권인 직류발전기의 전기자전류가 40[A]이면 전기자권선의 각 병렬회로에 흐르는 전류[A]는?",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "answer": 4,
+    "explanation": "단중 중권 직류발전기의 각 권선의 전기자전류\n전기자권선이 중권이면 병렬회로수($a$)는 극수($p$)와 같기 때문에 전기자권선의 각 병렬회로에 흐르는 전류는 전전류의 $\\frac{1}{p}$배로 분배되어 흐르게 된다.\n따라서 각 권선(병렬회로)에 흐르는 전류는 $I_a / p = 40 / 4 = 10 [A]$",
+    "image_needed": false,
+    "source_page": "page_046",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 2회 전기기사",
+    "number": 19,
+    "question": "원점에 1 [μC]의 전하가 있을 때 점 P(2, -2, 4) [m]에서의 전계의 세기에 대한 단위 벡터는 약 얼마인가?",
+    "choices": [
+      "① 0.41a_x - 0.41a_y + 0.82a_z",
+      "② -0.33a_x + 0.33a_y - 0.66a_z",
+      "③ -0.41a_x + 0.41a_y - 0.82a_z",
+      "④ 0.33a_x - 0.33a_y + 0.66a_z"
+    ],
+    "answer": 1,
+    "explanation": "단위벡터(n̂)\n원점에서 P점을 향한 벡터 성분 R은\nR = 2a_x - 2a_y + 4a_z 이므로 단위벡터 n̂은\nn̂ = R/|R| 식에서\n|R| = √(2² + (-2)² + 4²) = √(4+4+16) = √24 = 2√6 일 때\nn̂ = (2a_x - 2a_y + 4a_z) / (2√6)\n= a_x/√6 - a_y/√6 + 2a_z/√6\n= 0.41a_x - 0.41a_y + 0.82a_z",
+    "image_needed": false,
+    "source_page": "page_038",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 3회 기출문제",
+    "number": 20,
+    "question": "선로고장 발생 시 고장전류를 차단할 수 없어 리클로저와 같이 차단 기능이 있는 후비보호장치와 함께 설치되어야 하는 장치는?",
+    "choices": [
+      "배선용차단기",
+      "유입개폐기",
+      "컷아웃스위치",
+      "섹셔널라이저"
+    ],
+    "answer": 4,
+    "explanation": "섹셔널라이저\n섹셔널라이저는 선로 고장시 후비보호장치인 리클로저나 재폐로 계전기가 장치된 차단기의 고장차단으로 선로가 정전상태일 때 자동으로 개방되어 고장구간을 분리시키는 선로개폐기로서 반드시 리클로저와 조합해서 사용해야 한다. 이것은 고장전류를 차단할 수 없으므로 반드시 차단기능이 있는 후비보호장치와 직렬로 설치되어야 한다.",
+    "image_needed": false,
+    "source_page": "page_072",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 1,
+    "question": "자기 인덕턴스가 각각 $L_1$, $L_2$인 두 코일의 상호 인덕턴스가 $M$일 때 결합 계수는?",
+    "choices": [
+      "$\\frac{M}{L_1L_2}$",
+      "$\\frac{L_1L_2}{M}$",
+      "$\\frac{M}{\\sqrt{L_1L_2}}$",
+      "$\\frac{\\sqrt{L_1L_2}}{M}$"
+    ],
+    "answer": 1,
+    "explanation": "결합계수 $k = \\frac{M}{\\sqrt{L_1L_2}} = \\sqrt{\\frac{\\phi_{12}\\phi_{21}}{\\phi_1\\phi_2}}",
+    "image_needed": false,
+    "source_page": "page_062",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 2,
+    "question": "정상 전류계에서 $J$는 전류밀도, $\\sigma$는 도전율, $\\rho$는 고유저항, $E$는 전계의 세기일 때, 옴의 법칙의 미분형은?",
+    "choices": [
+      "$J = \\sigma E$",
+      "$J = \\frac{E}{\\sigma}$",
+      "$J = \\rho E$",
+      "$J = \\rho \\sigma E$"
+    ],
+    "answer": 2,
+    "explanation": "도체의 옴의 법칙\n전계의 세기 $E$, 도전율 $k$, 고유저항 $\\rho$라 할 때 전류밀도 $J$는\n$\\therefore J = kE = \\frac{E}{\\rho}$ [A/m$^2$]",
+    "image_needed": false,
+    "source_page": "page_062",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 17,
+    "question": "그림과 같이 단면적 S[m²]가 균일한 환상철심에 권수 $N_1$인 A코일과 권수 $N_2$인 B코일이 있을 때, A코일의 자기 인덕턴스가 $L_1$[H]이라면 두 코일의 상호 인덕턴스 M[H]는? (단, 누설자속은 0이다.) [그림]",
+    "choices": [
+      "$L_1 N_2 / N_1$",
+      "$N_2 / (L_1 N_1)$",
+      "$L_1 N_1 / N_2$",
+      "$N_1 / (L_1 N_2)$"
+    ],
+    "answer": 1,
+    "explanation": "상호인덕턴스(M)\nM = $N_1 N_2 / R_m = μ S N_1 N_2 / l = (L_1 N_2) / N_1$\n  = $k \\sqrt{L_1 L_2}$ [H]",
+    "image_needed": true,
+    "source_page": "page_066",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 19,
+    "question": "동일한 저항 R[Ω] 6개를 그림과 같이 결선하고 대칭 3상 전압 V[V]를 가하였을 때 전류 I[A]의 크기는?",
+    "choices": [
+      "$\frac{V}{R}$",
+      "$\frac{V}{2R}$",
+      "$\frac{V}{4R}$",
+      "$\frac{V}{5R}$"
+    ],
+    "answer": 3,
+    "explanation": "△결선으로 이루어진 저항 R을 Y결선으로 변환하면 저항은 $\\frac{1}{3}$배로 감소하므로 각 상의 합성저항($R_0$)은\n$R_0 = R + \\frac{R}{3} = \\frac{4}{3} R[\\Omega]$이다.\nY결선의 선전류를 유도하면 $I_L$을 계산할 수 있다.\n$I_L = \\frac{V}{\\sqrt{3}R_0} = \\frac{V}{\\sqrt{3} \\times \\frac{4}{3}R} = \\frac{\\sqrt{3}V}{4R} [A]$\n△결선의 상전류는 선전류의 $\\frac{1}{\\sqrt{3}}$배 이므로\n$\\therefore I_P = \\frac{I_L}{\\sqrt{3}} = \\frac{V}{4R} [A]$",
+    "image_needed": true,
+    "source_page": "page_084",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 20,
+    "question": "어떤 선형 회로망의 4단자 정수가 A=8, B=j2, D=1.625+j일 때, 이 회로망의 4단자 정수 C는?",
+    "choices": [
+      "$24-j14$",
+      "$8-j11.5$",
+      "$4-j6$",
+      "$3-j4$"
+    ],
+    "answer": 3,
+    "explanation": "4단자 정수의 특성\n4단자 정수 A, B, C, D 는 AD-BC=1을 만족하여야 하므로\n$\\therefore C = \\frac{AD-1}{B} = \\frac{8 \\times (1.625+j2)-1}{j2} = 4-j6$",
+    "image_needed": false,
+    "source_page": "page_084",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 1회 기출문제",
+    "number": 13,
+    "question": "그림의 회로에서 120[V]와 30[V]의 전압원(능동소자)에서의 전력은 각각 몇 [W]인가? (단, 전압원(능동소자)에서 공급 또는 발생하는 전력은 양수(+)이고, 소비 또는 흡수하는 전력은 음수(-)이다.) [그림]",
+    "choices": [
+      "240[W], 60[W]",
+      "240[W], -60[W]",
+      "-240[W], 60[W]",
+      "-240[W], -60[W]"
+    ],
+    "answer": 2,
+    "explanation": "회로해석\n그림의 회로에서 전압원 120[V]와 30[V]는 각각 회로 내에 흐르는 전류를 기준으로 보았을 때 120[V]는 공급, 30[V]는 흡수하는 것을 알 수 있다.\n그리고 저항 30[Ω]과 15[Ω]은 전력을 소비하는 성질을 갖기 때문에 전압원과 저항에서 나타나는 전력을 각각 표현해 보면 다음과 같다.\n$I = \\frac{V}{R} = \\frac{120-30}{30+15} = 2[A]$ 이므로\n(1) 120[V] 전원 : $120 \\times 2 = 240[W]$\n(2) 30[V] 전원 : $-30 \\times 2 = -60[W]$\n(3) 30[Ω] 저항 : $-2^2 \\times 30 = -120[W]$\n(4) 15[Ω] 저항 : $-2^2 \\times 15 = -60[W]$",
+    "image_needed": true,
+    "source_page": "page_112",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 1회 기출문제",
+    "number": 14,
+    "question": "각 상의 전압이 다음과 같을 때 영상분 전압 $V_0[V]$의 순시치는?(단, 3상 전압의 상순은 a-b-c이다.)\n$v_a(t) = 40sin \\omega t [V]$\n$v_b(t) = 40sin(\\omega t - \\frac{\\pi}{2}) [V]$\n$v_c(t) = 40sin(\\omega t + \\frac{\\pi}{2}) [V]$",
+    "choices": [
+      "$40sin \\omega t$",
+      "$\\frac{40}{3}sin \\omega t$",
+      "$\\frac{40}{3}sin(\\omega t - \\frac{\\pi}{2})$",
+      "$\\frac{40}{3}sin(\\omega t + \\frac{\\pi}{2})$"
+    ],
+    "answer": 2,
+    "explanation": "영상분의 순시치 계산($V_0$)\n각 상전압의 위상이 $a$상은 $0°$, $b$상은 $-90°$, $c$상은 $+90°$이므로 $b$상과 $c$상의 위상차가 $180°$임을 알 수 있다.\n$v_b = 40sin(\\omega t + 90°)$, $v_c = 40sin(\\omega t - 90°)$에서\n최대치가 모두 40 이므로 $v_a + v_b + v_c = 0$이 된다.\n$V_0 = \\frac{1}{3}(v_a + v_b + v_c) = \\frac{1}{3} \\times 0$이므로\n∴ $V_0 = \\frac{1}{3} \\times 40sin \\omega t = \\frac{40}{3}sin \\omega t[V]$",
+    "image_needed": false,
+    "source_page": "page_112",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 1회 전기기사",
+    "number": 1,
+    "question": "면적이 0.02[m²], 간격이 0.03[m]이고, 공기로 채워진 평행평판의 커패시터에 1.0×10⁻⁶[C]의 전하를 충전시킬 때, 두 판 사이에 작용하는 힘의 크기는 약 몇 [N]인가?",
+    "choices": [
+      "1.13",
+      "1.41",
+      "1.89",
+      "2.83"
+    ],
+    "answer": 4,
+    "explanation": "도체 내의 정전력(F)\n$F = \\frac{Q^2}{2\\epsilon_0 S}$ [N] 식에서\n$S=0.02 [m^2]$, $d=0.03 [m]$, $Q=1.0\\times 10^{-6} [C]$ 일 때\n$\\therefore F = \\frac{Q^2}{2\\epsilon_0 S} = \\frac{(1\\times 10^{-6})^2}{2\\times 8.855\\times 10^{-12}\\times 0.02}$\n$= 2.83 [N]$",
+    "image_needed": false,
+    "source_page": "page_091",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 1회 전기기사",
+    "number": 2,
+    "question": "자극의 세기가 7.4×10^{-5}[Wb], 길이가 10[cm]인 막대자석이 100[AT/m]의 평등자계 내에 자계의 방향과 30°로 놓여 있을 때 이 자석에 작용하는 회전력[N·m]은?",
+    "choices": [
+      "2.5×10⁻³",
+      "3.7×10⁻⁴",
+      "5.3×10^{-5}",
+      "6.2×10⁻⁶"
+    ],
+    "answer": 2,
+    "explanation": "막대자석의 회전력(토크)\n$T=mlH\\sin\\theta$ [N·m] 식에서\n$m=7.4\\times 10^{-5}$ [Wb], $l=10$ [cm],\n$H=100$ [AT/m], $\\theta=30^{\\circ}$ 일 때\n$\\therefore T=mlH\\sin\\theta$\n$= 7.4\\times 10^{-5}\\times 10\\times 10^{-2}\\times 100\\times\\sin 30^{\\circ}$\n$= 3.7\\times 10^{-4}$ [N·m]",
+    "image_needed": false,
+    "source_page": "page_091",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 1회 전기기사",
+    "number": 3,
+    "question": "유전율이 $\\epsilon = 2\\epsilon_0$ 이고 투자율이 $\\mu_0$인 비도전성 유전체에서 전파의 전계의 세기가\n$E(z, t) = 120\\pi \\cos(10^9 t - \\beta z) \\hat{y}$ [V/m]일 때, 자계의 세기 $H$[A/m]는?(단, $\\hat{x}$, $\\hat{y}$는 단위벡터이다.)",
+    "choices": [
+      "$- \\sqrt{2} \\cos(10^9 t - \\beta z) \\hat{x}$",
+      "$\\sqrt{2} \\cos(10^9 t - \\beta z) \\hat{x}$",
+      "$- 2\\cos(10^9 t - \\beta z) \\hat{x}$",
+      "$2\\cos(10^9 t - \\beta z) \\hat{x}$"
+    ],
+    "answer": 1,
+    "explanation": "전자파\n자유공간에서 전계($E$)와 자계($H$)의 전자파가 진행할 때 자유공간에 분포된 매질에 따라 전자파의 진행을 방해하는 저항성분이 존재하는데 이를 자유공간의 고유임피던스($\\eta$)라 하며 전계는 $y$성분이고, 자계는 $x$ 성분이다.\n$\\eta = \\frac{E}{H} = \\sqrt{\\frac{\\mu}{\\epsilon}} = \\sqrt{\\frac{\\mu_0}{2\\epsilon_0}} = \\frac{377}{\\sqrt{2}}$ [$\\Omega$] 일 때\n$H = \\frac{E}{\\eta} = \\frac{120\\pi \\cos(10^9 t - \\beta z)}{\\frac{377}{\\sqrt{2}}}$\n$= \\sqrt{2} \\cos(10^9 t - \\beta z)$ [A/m]이다.\n전자파의 진행방향은 $z$방향으로서 $E\\times H$ 방향과 일치하므로 $\\hat{y}\\times\\hat{x}=-\\hat{z}$ 또는 $\\hat{y}\\times(-\\hat{x})=\\hat{z}$ 임을 알 수 있다. 따라서 자계의 방향은 $-\\hat{x}$ 인\n$\\therefore H = - \\sqrt{2} \\cos(10^9 t - \\beta z) \\hat{x}$ [A/m]",
+    "image_needed": false,
+    "source_page": "page_091",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 1회 전기기사",
+    "number": 15,
+    "question": "진공 중 반지름 $a$[m]인 무한길이의 원통 도체 2개가 간격 $d$[m]로 평행하게 배치되어 있다. 두 도체 사이의 정전용량(C)을 나타낸 것으로 옳은 것은?",
+    "choices": [
+      "$\\pi \\epsilon_0 \\ln \\frac{d-a}{a}$",
+      "$\\frac{\\pi \\epsilon_0}{\\ln \\frac{d-a}{a}}$",
+      "$\\pi \\epsilon_0 \\frac{a}{d-a}$",
+      "$\\frac{\\pi \\epsilon_0}{\\ln \\frac{d}{a}}$"
+    ],
+    "answer": 2,
+    "explanation": "평행 원통 도체 사이의 정전용량(C)\n반지름 $a$[m]인 원통 도체로부터 간격 $d$[m] 사이의 임의의 점 $x$[m] 되는 점의 전계의 세기 E를 표현하면\n$E = \\frac{\\lambda}{2\\pi\\epsilon_0 x} + \\frac{\\lambda}{2\\pi\\epsilon_0 (d-x)}$\n$\\quad = \\frac{\\lambda}{2\\pi\\epsilon_0} \\left\\{ \\frac{1}{x} + \\frac{1}{d-x} \\right\\}$ [V/m]이다.\n이 때 두 원통 도체 사이의 전위차 $V$는\n$V = -\\int_{d-a}^{a} Edx = -\\frac{\\lambda}{2\\pi\\epsilon_0} \\int_{d-a}^{a} \\left\\{ \\frac{1}{x} + \\frac{1}{d-x} \\right\\} dx$\n$\\quad = -\\frac{\\lambda}{2\\pi\\epsilon_0} \\left[ \\ln x - \\ln(d-x) \\right]_{d-a}^{a}$\n$\\quad = -\\frac{\\lambda}{2\\pi\\epsilon_0} \\left[ \\ln \\frac{x}{d-x} \\right]_{d-a}^{a} = -\\frac{\\lambda}{2\\pi\\epsilon_0} \\ln \\frac{a}{d-a}$\n$\\quad = \\frac{\\lambda}{2\\pi\\epsilon_0} \\ln \\frac{d-a}{a}$ [V]\n$C = \\frac{Q}{V} = \\frac{\\lambda l}{V} = \\frac{\\lambda l}{\\frac{\\lambda}{2\\pi\\epsilon_0} \\ln \\frac{d-a}{a}} = \\frac{2\\pi\\epsilon_0 l}{\\ln \\frac{d-a}{a}}$[F]\n$\\quad \\therefore C = \\frac{\\pi \\epsilon_0 l}{\\ln \\frac{d-a}{a}}$[F] = \\frac{\\pi \\epsilon_0}{\\ln \\frac{d-a}{a}}\\) [F/m]",
+    "image_needed": false,
+    "source_page": "page_094",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 1,
+    "question": "$\\epsilon_r = 81$, $\\mu_r = 1$인 매질의 고유 임피던스는 약 몇 [$\\Omega$]인가? (단, $\\epsilon_r$은 비유전율이고, $\\mu_r$은 비투자율이다.)",
+    "choices": [
+      "13.9",
+      "21.9",
+      "33.9",
+      "41.9"
+    ],
+    "answer": 4,
+    "explanation": "고유임피던스($\\eta$)\n$\\eta = \\frac{E}{H} = \\sqrt{\\frac{\\mu}{\\epsilon}} = \\sqrt{\\frac{\\mu_0 \\mu_r}{\\epsilon_0 \\epsilon_r}} = 120\\pi \\sqrt{\\frac{\\mu_r}{\\epsilon_r}} = 377 \\sqrt{\\frac{\\mu_r}{\\epsilon_r}}$ [$\\Omega$] 식에서\n$\\epsilon_r = 81, \\mu_r = 1$일 때\n$\\therefore \\eta = 377 \\sqrt{\\frac{\\mu_r}{\\epsilon_r}} = 377 \\times \\sqrt{\\frac{1}{81}} = 41.9 [\\Omega]$",
+    "image_needed": false,
+    "source_page": "page_121",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 2,
+    "question": "강자성체의 B-H 곡선을 자세히 관찰하면 매끈한 곡선이 아니라 자속밀도가 어느 순간 급격히 계단적으로 증가 또는 감소하는 것을 알 수 있다. 이러한 현상을 무엇이라 하는가?",
+    "choices": [
+      "큐리점 (Curie point)",
+      "자왜현상 (Magneto-striction)",
+      "바크하우젠 효과 (Barkhausen effect)",
+      "자기여자 효과 (Magnetic after effect)"
+    ],
+    "answer": 3,
+    "explanation": "자성체 내에서의 여러 가지 현상\n(1) 큐리점 : 강자성체가 상자성체로 변화하는 임계점으로서 온도에 의해 결정된다. 큐리온도라고도 한다.\n(2) 자왜현상 : 자성체에 왜력이 가해지면 자화의 세기가 변하고, 반대로 자화의 세기를 변화시키면 자기적 왜형이 일어나는 현상을 말한다.\n(3) 바크하우젠 효과 : 자성체 내에서 자구의 자축이 서서히 회전하지 않고 어떤 순간에 급격히 자계의 방향으로 회전하여 자속밀도가 계단적으로 증가 또는 감소하는 현상을 말한다.\n(4) 자기여자 효과 : 강자성체 및 페라이트에 자기장의 변화를 줄 때 이들 자성체의 자화변화가 시간적으로 늦은 현상을 말한다.",
+    "image_needed": false,
+    "source_page": "page_121",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 3,
+    "question": "진공 중에 무한 평면도체와 d[m] 만큼 떨어진 곳에 선전하밀도 $\\lambda$[C/m]의 무한 직선도체가 평행하게 놓여 있는 경우 직선 도체의 단위 길이당 받는 힘은 몇 [N/m]인가?",
+    "choices": [
+      "$\\frac{\\lambda^2}{\\pi \\epsilon_0 d}$",
+      "$\\frac{\\lambda^2}{2 \\pi \\epsilon_0 d}$",
+      "$\\frac{\\lambda^2}{4 \\pi \\epsilon_0 d}$",
+      "$\\frac{\\lambda^2}{16 \\pi \\epsilon_0 d}$"
+    ],
+    "answer": 1,
+    "explanation": "무한 평면과 선전하\n직선도체로부터 영상전하까지의 거리는 d[m] 떨어져 있으므로 그 사이의 전계의 세기(E)는\n$E = \\frac{\\lambda}{2 \\pi \\epsilon_0 R}$ [V/m], R=2d[m], Q=\\lambda l[C]일 때\n$E = \\frac{\\lambda}{2 \\pi \\epsilon_0 (2d)} = \\frac{\\lambda}{4 \\pi \\epsilon_0 d}$ [V/m] 이므로\n$\\therefore F = QE = \\frac{\\lambda^2 l}{4 \\pi \\epsilon_0 d}$ [N] = $\\frac{\\lambda^2}{4 \\pi \\epsilon_0 d}$ [N/m]",
+    "image_needed": false,
+    "source_page": "page_121",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 4,
+    "question": "평행 극판 사이에 유전율이 각각 $\\epsilon_1, \\epsilon_2$인 유전체를 그림과 같이 채우고, 극판 사이에 일정한 전압을 걸었을 때 두 유전체 사이에 작용하는 힘은? (단, $\\epsilon_1 > \\epsilon_2$)",
+    "choices": [
+      "ⓐ의 방향",
+      "ⓑ의 방향",
+      "ⓒ의 방향",
+      "ⓓ의 방향"
+    ],
+    "answer": 2,
+    "explanation": "유전체 내에서의 경계면의 조건\n경계면 사이에서 작용하는 힘은 유전율이 큰 쪽에서 유전율이 작은 쪽으로 향하므로 $\\epsilon_1 > \\epsilon_2$인 경우 경계면에 작용하는 힘의 방향은 ⓑ 방향이다.",
+    "image_needed": true,
+    "source_page": "page_121",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 9,
+    "question": "3상 권선형 유도전동기의 기동 시 2차 저항을 2배로 하면 최대토크 값은 어떻게 되는가?",
+    "choices": [
+      "1배로 된다.",
+      "2배로 된다.",
+      "1/2로 된다.",
+      "변하지 않는다."
+    ],
+    "answer": 4,
+    "explanation": "비례추이의 원리\n권선형 유도전동기의 2차 저항을 증가시키면\n(1) 최대토크는 변하지 않고 기동 시 기동토크가 증가하며 반면 기동전류는 감소한다.\n(2) 최대토크를 발생하는 슬립이 증가한다.\n(3) 기동역률이 좋아진다.\n(4) 전부하 효율이 저하되고 속도가 감소한다.",
+    "image_needed": false,
+    "source_page": "page_134",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 10,
+    "question": "직류 분권전동기에서 정출력 가변속도의 용도에 적합한 속도제어법은?",
+    "choices": [
+      "계자제어",
+      "저항제어",
+      "전압제어",
+      "극수제어"
+    ],
+    "answer": 1,
+    "explanation": "직류전동기의 속도제어\n(1) 전압제어(정토크제어)\n단자전압을 가감함으로써 속도를 제어하는 방식으로 속도의 조정범위가 광범위하고 운전 효율이 좋다.\n(2) 계자제어(정출력제어)\n계자회로의 계자전류를 조정하여 자속을 가감하여 속도를 제어하는 방식\n(3) 저항제어\n전기자권선과 직렬로 접속한 직렬저항을 가감하여 속도를 제어하는 방식",
+    "image_needed": false,
+    "source_page": "page_134",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 11,
+    "question": "직류 분권전동기의 전기자전류가 10[A]일 때 5[N·m]의 토크가 발생하였다. 이 전동기의 계자의 자속이 80[%]로 감소되고, 전기자전류가 12[A]로 되면 토크는 약 몇 [N·m]인가?",
+    "choices": [
+      "3.9",
+      "4.3",
+      "4.8",
+      "5.2"
+    ],
+    "answer": 3,
+    "explanation": "직류전동기의 토크($\\tau$)\n$\\tau = \\frac{EI_a}{\\omega} = \\frac{pZ\\phi I_a}{2\\pi a} = k\\phi I_a$ 식에서\n$\\tau \\propto \\phi I_a$ 이므로\n$I_a = 10 [\\text{A}], \\tau = 5 [\\text{N·m}], \\phi' = 0.8\\phi [\\text{Wb}]$\n$I_a' = 12 [\\text{A}]$일 때\n$\\therefore \\tau' = \\frac{\\phi' I_a'}{\\phi I_a}\\tau = \\frac{0.8\\phi \\times 12}{\\phi \\times 10}\\times 5 = 4.8 [\\text{N·m}]$",
+    "image_needed": false,
+    "source_page": "page_134",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 7,
+    "question": "내반경 a[m], 외반경 b[m]인 동축케이블에서 극간 매질의 도전율이 $\\sigma$[S/m]일 때 단위 길이당 이 동축케이블의 컨덕턴스[S/m]는?",
+    "choices": [
+      "$\\frac{4\\pi\\sigma}{\\ln \\frac{b}{a}}$",
+      "$\\frac{2\\pi\\sigma}{\\ln \\frac{b}{a}}$",
+      "$\\frac{\\pi\\sigma}{\\ln \\frac{b}{a}}$",
+      "$\\frac{6\\pi\\sigma}{\\ln \\frac{b}{a}}$"
+    ],
+    "answer": 2,
+    "explanation": "동심원통도체(=동축 케이블)의 저항(R)과 컨덕턴스(G)\n내·외반지름이 각각 a, b인 동심원통 도체의 정전용량\n을 C라 하면 $C = \\frac{2\\pi\\epsilon l}{\\ln \\frac{b}{a}} \\, [F]$이다.\n$RC = \\frac{\\epsilon}{\\sigma} = \\rho\\epsilon = \\frac{C}{G}$ 식에서 저항(R)과 컨덕턴스(G)\n를 각각 유도할 수 있다.\n$R = \\frac{\\epsilon}{C\\sigma} = \\frac{1}{2\\pi\\sigma l} \\ln \\frac{b}{a} = \\frac{1}{2\\pi\\sigma l} \\ln \\frac{b}{a} \\, [\\Omega]$\n$\\therefore G = \\frac{1}{R} = \\frac{2\\pi\\sigma l}{\\ln \\frac{b}{a}} \\, [S]$\n단위 길이당은 $G = \\frac{2\\pi\\sigma}{\\ln \\frac{b}{a}} \\, [S/m]$",
+    "image_needed": false,
+    "source_page": "page_150",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 16,
+    "question": "수력발전설비에서 흡출관을 사용하는 목적은?",
+    "choices": [
+      "압력을 줄이기 위해서",
+      "물의 유선을 일정하게 하기 위하여",
+      "속도변동률을 적게 하기 위하여",
+      "낙차를 늘리기 위하여"
+    ],
+    "answer": 4,
+    "explanation": "흡출관\n흡출관이란 수력발전소에서 러너 출구로부터 방수면까지의 사이를 관으로 연결하고 여기에 물을 충만시켜서 흘려줌으로써 낙차를 유효하게 늘리는 것을 의미하며 저낙차에 이용하는 카플란 수차에 필요하다.",
+    "image_needed": false,
+    "source_page": "page_158",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 17,
+    "question": "사용전압이 154 [kV]인 가공 송전선의 시설에서 전선과 식물과의 이격거리는 일반적인 경우에 몇 [m] 이상으로 하여야 하는가?",
+    "choices": [
+      "2.8",
+      "3.2",
+      "3.6",
+      "4.2"
+    ],
+    "answer": 2,
+    "explanation": "가공전선과 식물의 이격거리\n- 구분: 60 [kV] 이하 / 이격거리: 2 [m]\n- 구분: 특고압 가공전선 60 [kV] 초과 / 이격거리: 2+(사용전압[kV]/10-6)×0.12 소수점 절상\n\n계산: 2+(15.4-6)×0.12 = 2+9.4×0.12\n참고: ( ) 안의 수치는 소수점 절사하여 계산하여야 하기 때문에 9.4를 10으로 적용하여 계산하여야 함.\n따라서, 2+10×0.12 = 3.2[m]",
+    "image_needed": false,
+    "source_page": "page_176",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 20,
+    "question": "3상 변압기 2차측의 $E_W$ 상만을 반대로 하고 Y-Y 결선을 한 경우, 2차 상전압이 $E_U = 70$ [V], $E_V = 70$ [V], $E_W = 70$ [V]이라면 2차 선간전압은 약 몇 [V]인가?",
+    "choices": [
+      "① $V_{U-V} = 121.2$ [V], $V_{V-W} = 70$ [V], $V_{W-U} = 70$ [V]",
+      "② $V_{U-V} = 121.2$ [V], $V_{V-W} = 210$ [V], $V_{W-U} = 70$ [V]",
+      "③ $V_{U-V} = 121.2$ [V], $V_{V-W} = 121.2$ [V], $V_{W-U} = 70$ [V]",
+      "④ $V_{U-V} = 121.2$ [V], $V_{V-W} = 121.2$ [V], $V_{W-U} = 121.2$ [V]"
+    ],
+    "answer": 1,
+    "explanation": "3상 변압기 Y결선 접속 벡터해석\n$E_U = 70\\angle0°$ [V], $E_V = 70\\angle-120°$ [V]\n$E_W = 70\\angle-60°$ [V] 이므로\n$V_{U-V} = E_U\\angle0° - E_V\\angle-120° = E_U \\sqrt{3} \\angle+30°$\n$= 70 \\times \\sqrt{3} \\angle+30° = 121.2 \\angle+30°$ [V]\n$V_{V-W} = E_V\\angle-120° - E_W\\angle-60° = E_V\\angle-60°$\n$= 70\\angle-180°$ [V]\n$V_{W-U} = E_W\\angle-60° - E_U\\angle0° = E_V\\angle0°$\n$= 70\\angle-120°$ [V]\n$\\therefore V_{U-V} = 121.2$ [V], $V_{V-W} = 70$ [V], $V_{W-U} = 70$ [V]",
+    "image_needed": false,
+    "source_page": "page_164",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 1회 기출문제",
+    "number": 8,
+    "question": "증기의 엔탈피란?",
+    "choices": [
+      "증기 1 [kg]의 잠열",
+      "증기 1 [kg]의 현열",
+      "증기 1 [kg]의 보유열량",
+      "증기 1 [kg]의 증발열을 그 온도로 나눈 것"
+    ],
+    "answer": 3,
+    "explanation": "엔탈피와 엔트로피\n(1) 엔탈피\n단위무게 1[kg]의 물 또는 증기가 보유하고 있는 보유열량\n(2) 엔트로피\n증기 1[kg]의 증발열을 온도로 나눈 계수",
+    "image_needed": false,
+    "source_page": "page_184",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 1회 기출문제",
+    "number": 9,
+    "question": "모선 보호에 사용되는 계전방식이 아닌 것은?",
+    "choices": [
+      "위상 비교방식",
+      "선택접지 계전방식",
+      "방향거리 계전방식",
+      "전류차동 보호방식"
+    ],
+    "answer": 2,
+    "explanation": "모선보호용 계전방식\n(1) 전류차동계전방식 (=비율차동계전방식)\n(2) 전압차동계전방식\n(3) 위상비교계전방식\n(4) 방향비교계전방식 (방향거리계전기를 사용)",
+    "image_needed": false,
+    "source_page": "page_184",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 1,
+    "question": "공기 중에 있는 반지름 a[m]의 독립 금속구의 정전용량은 몇 F인가?",
+    "choices": [
+      "$2\\pi\\epsilon_0a$",
+      "$4\\pi\\epsilon_0a$",
+      "$\\frac{1}{2\\pi\\epsilon_0a}$",
+      "$\\frac{1}{4\\pi\\epsilon_0a}$"
+    ],
+    "answer": 2,
+    "explanation": "구도체의 정전용량 (C)\n구도체의 전위 $V = \\frac{Q}{4\\pi\\epsilon_0a}$ [V]이므로\n$\\therefore C = \\frac{Q}{V} = 4\\pi\\epsilon_0a$ [F]",
+    "image_needed": false,
+    "source_page": "page_178",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 2,
+    "question": "서로 다른 두 종류의 금속 도체로 하나의 폐회로를 만들고 여기에 전류를 흘리면 두 금속의 양 접점에서 어느 한 쪽은 온도가 올라가고, 다른 한 쪽은 온도가 내려가서 열의 발생 또는 흡수가 생기는 현상을 표현히는 효과로 알맞은 것은?",
+    "choices": [
+      "핀치(Pinch) 효과",
+      "펠티에(Peltier) 효과",
+      "톰슨(Thomson) 효과",
+      "제벡(Seebeck) 효과"
+    ],
+    "answer": 2,
+    "explanation": "전기효과\n(1) 핀치(Pinch) 효과 : 유동적인 도체에 대전류가 흐르면 이 전류에 의한 자계와 전류와의 사이에 작용하는 힘이 중심을 향해 발생하여 도면체가 수축하고 저항이 증가되어 결국 전류가 흐르지 못하게 되는 현상\n(2) 펠티에(Peltier) 효과 : 두 종류의 도체로 접합된 폐회로에 전류를 흘리면 접합점에서 열의 흡수 또는 발생이 일어나는 현상. 전자냉동의 원리\n(3) 톰슨(Thomson) 효과 : 같은 도선에 온도차가 있을 때 전류를 흘리면 열의 흡수 또는 발생이 일어나는 현상\n(4) 제벡(Seebeck) 효과 : 두 종류의 도체로 접합된 폐회로에 온도차를 주면 접합점에서 기전력차가 생겨 전류가 흐르게 되는 현상. 열전온도계나 태양열발전 등이 이에 속한다.",
+    "image_needed": false,
+    "source_page": "page_178",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 2회 기출문제",
+    "number": 8,
+    "question": "회로에서 6[Ω]에 흐르는 전류[A]는? [그림]",
+    "choices": [
+      "2.5",
+      "5",
+      "7.5",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "중첩의 원리\n먼저 저항 12[Ω]과 4[Ω]은 병렬 접속되어 있으므로 합성하면 $R' = \\frac{12 \\times 4}{12+4} = 3 \\, [\\Omega]$ 이므로\n(1) 전류원 7[A]를 개방\n전류원 8[A]에 의해 6[Ω]에 흐르는 전류 $I'$는\n$I' = \\frac{3}{6+3} \\times 8 = \\frac{8}{3} \\, [\\text{A}]$\n(2) 전류원 8[A]를 개방\n전류원 7[A]에 의해 6[Ω]에 흐르는 전류 $I''$는\n$I'' = \\frac{3}{6+3} \\times 7 = \\frac{7}{3} \\, [\\text{A}]$\n$I'$와 $I''$의 전류 방향은 같으므로 6[Ω]에 흐르는 전체 전류 $I$는\n$\therefore I = I' + I'' = \\frac{8}{3} + \\frac{7}{3} = 5 \\, [\\text{A}]$",
+    "image_needed": true,
+    "source_page": "page_226",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 2회 기출문제",
+    "number": 9,
+    "question": "수변전설비에서 1차측에 설치하는 차단기의 용량은 어느 것에 의하여 정하는가?",
+    "choices": [
+      "변압기 용량",
+      "수전계약용량",
+      "공급측 단락용량",
+      "부하설비용량"
+    ],
+    "answer": 3,
+    "explanation": "차단기의 차단용량(=단락용량)\n차단용량은 그 차단기가 적용되는 계통의 3상 단락용량 ($P_s$)의 한도를 표시하고\n$P_s$[MVA] = $\\sqrt{3} \\times$정격전압[kV]$\\times$정격차단전류[kA] 식으로 표현한다.\n이때 정격전압은 계통의 최고전압을 표시하며 정격차단전류는 단락전류를 기준으로 한다. 또한 차단용량의 크기를 정하는 기준이기도 하다. 단락전류는 단락지점을 기준으로 한 경우 공급측 계통에 흐르게 되며 그 전류로 공급측 전원용량의 크기나 공급측 전원단락용량을 결정하게 된다.",
+    "image_needed": false,
+    "source_page": "page_216",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 2회 기출문제",
+    "number": 11,
+    "question": "정격전압 25.8[kV], 정격차단용량 1,000[MVA]인 3상 차단기의 정격차단전류는 약 몇 [kA]인가?",
+    "choices": [
+      "12.5",
+      "22.4",
+      "35.6",
+      "41.2"
+    ],
+    "answer": 2,
+    "explanation": "차단기의 정격차단용량($P_s$)\n차단기의 정격차단용량 $P_s$[MVA], 차단기의 정격전압 $V$[kV], 차단기의 정격차단전류 $I_s$[kA]라 할 때\n$P_s = \\sqrt{3} V I_s$ [MVA] 식에서\n$V = 25.8$[kV], $P_s = 1,000$[MVA] 이므로\n$\\therefore I_s = \\frac{P_s}{\\sqrt{3} V} = \\frac{1,000}{\\sqrt{3} \\times 25.8} = 22.4$ [kA]",
+    "image_needed": false,
+    "source_page": "page_216",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 2회 기출문제",
+    "number": 12,
+    "question": "송전선로에 복도체를 사용하는 이유로 가장 알맞은 것은?",
+    "choices": [
+      "철탑의 하중을 평형 시키기 위해서이다.",
+      "선로의 진동을 없애기 위해서이다.",
+      "선로를 뇌격으로부터 보호하기 위해서이다.",
+      "코로나를 방지하고 인덕턴스를 감소시키기 위해서이다."
+    ],
+    "answer": 4,
+    "explanation": "복도체의 특징\n(1) 주된 사용 목적 : 코로나 방지\n(2) 장점\n    ⓐ 등가반지름이 증가되어 $L$이 감소하고 $C$가 증가한다. - 송전용량이 증가하고 안정도가 향상된다.\n    ⓑ 코로나 임계전압이 증가하여 코로나 손실이 감소한다. - 송전효율이 증가한다.\n    ⓒ 통신선의 유도장해가 억제된다.",
+    "image_needed": false,
+    "source_page": "page_216",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 2회 기출문제",
+    "number": 13,
+    "question": "유도전동기를 60[Hz], 600[rpm]인 동기전동기에 직결하여 동기전동기를 기동하는 경우 유도전동기의 적당한 극수는?",
+    "choices": [
+      "4극",
+      "8극",
+      "10극",
+      "12극"
+    ],
+    "answer": 3,
+    "explanation": "유도전동기의 극수\n같은 극수로 기동할 경우 유도기는 동기속도보다 $sN_s$ 만큼 늦기 때문에 유도전동기의 극수를 동기전동기의 극수보다 2극 적은 것을 사용하여야 한다. 따라서 동기전동기의 극수를 구해 보면\n$N_s = \\frac{120f}{p}$ [rpm] 식에서\n$f=60$ [Hz], $N=600$ [rpm]일 때\n$p = \\frac{120f}{N_s} = \\frac{120 \\times 60}{600} = 12$ 극 이므로\n∴ 유도전동기의 극수는 10극이다.",
+    "image_needed": false,
+    "source_page": "page_222",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 2회 기출문제",
+    "number": 14,
+    "question": "60[Hz] 6극 10[kW]인 유도전동기가 슬립 5[%]로 운전할 때 2차의 동손이 500[W]이다. 이 전동기의 전부하시의 토크[N·m]는?",
+    "choices": [
+      "약 4.3",
+      "약 8.5",
+      "약 41.8",
+      "약 83.7"
+    ],
+    "answer": 4,
+    "explanation": "유도전동기의 토크($\\tau$)\n기계적 출력 $P_0$, 회전자 속도 $N$, 2차 입력 $P_2$, 동기속도 $N_s$라 하면\n$\\tau = 9.55 \\frac{P_0}{N}$ [N·m] $= 0.975 \\frac{P_0}{N_s}$ [kg·m]\n$\\tau = 9.55 \\frac{P_2}{N_s}$ [N·m] $= 0.975 \\frac{P_2}{N_s}$ [kg·m] 식에서\n$f=60$ [Hz], 극수 $p=6$, $P_0=10$ [kW], $s=5$ [%], $P_{c2}=500$ [W]일 때\n$N = (1-s)N_s = (1-s) \\frac{120f}{p}$\n$= (1-0.05) \\times \\frac{120 \\times 60}{6} = 1,140$ [rpm] 이므로\n$\\therefore \\tau = 9.55 \\frac{P_0}{N} = 9.55 \\frac{10 \\times 10^3}{1,140} = 83.7$ [N·m]",
+    "image_needed": false,
+    "source_page": "page_222",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 2회 기출문제",
+    "number": 16,
+    "question": "동기발전기의 안정도를 증진시키기 위한 대책이 아닌 것은?",
+    "choices": [
+      "속응 여자 방식을 사용한다.",
+      "정상 임피던스를 작게 한다.",
+      "역상 · 영상 임피던스를 작게 한다.",
+      "회전자의 플라이 휠 효과를 크게 한다."
+    ],
+    "answer": 3,
+    "explanation": "동기기의 안정도 개선책\n(1) 단락비를 크게 한다.\n(2) 관성 모멘트 및 플라이 휠 효과를 크게 한다.\n(3) 조속기 성능을 개선한다.\n(4) 속응여자방식을 채용한다.\n(5) 동기 임피던스(또는 정상 임피던스)를 작게 한다.\n(6) 역상, 영상 임피던스를 크게 한다.",
+    "image_needed": false,
+    "source_page": "page_222",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 1,
+    "question": "자계의 시간적 변화에 의해 유도기전력이 발생하여 코일에 유도전류가 흐르는 현상을 발견한 사람은 누구인가?",
+    "choices": [
+      "노이만",
+      "가우스",
+      "패러데이",
+      "렌츠"
+    ],
+    "answer": 1,
+    "explanation": "전자기유도법칙\n(1) 노이만 공식 : 서로 근접해 있는 두 개의 폐쇄된 코일 중 어느 한쪽 코일에 전류가 흐르면 다른 코일에 전압이 유기되는 전압을 상호유도라 하며 이 때 기전력에 비례하는 상호유도계수 또는 상호인덕턴스 M의 공식을 노이만 공식이라 한다.\n(2) 가우스 법칙 : 어떤 폐곡면을 통과하는 전속은 그 곡면 내에 있는 총 전하량과 같다.\n(3) 패러데이 법칙 : 자계의 시간적 변화에 의해 유도기전력이 발생하여 코일에 유도전류가 흐른다.\n(4) 렌츠의 법칙 : 코일에 유기되는 기전력의 방향은 자속의 증가를 방해하는 방향과 같다.",
+    "image_needed": false,
+    "source_page": "page_209",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 2,
+    "question": "단락비가 1.2인 발전기의 퍼센트 동기임피던스는 약 얼마인가?",
+    "choices": [
+      "120",
+      "83",
+      "1.2",
+      "0.83"
+    ],
+    "answer": 2,
+    "explanation": "단락비(K_s)\n퍼센트 동기임피던스 %Z_s[%], 퍼센트 동기임피던스 p.u Z_s[p.u]일 때\nK_s = \\frac{100}{\\%Z_s} = \\frac{1}{Z_s[p.u]} 이므로 K_s = 1.2인 경우\n∴ \\%Z_s = \\frac{100}{K_s} = \\frac{100}{1.2} = 83[%]",
+    "image_needed": false,
+    "source_page": "page_247",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 3,
+    "question": "단면적 $S$[m²], 단위 길이당 권수 $n_0$[회/m]인 무한히 긴 솔레노이드의 자기인덕턴스[H/m]를 구하면?",
+    "choices": [
+      "$\\mu S n_0$",
+      "$\\mu S n_0^2$",
+      "$\\mu S^2 n_0$",
+      "$\\mu S^2 n_0^2$"
+    ],
+    "answer": 2,
+    "explanation": "무한장 솔레노이드의 자기인덕턴스($L$)\n$L = \\mu S n_0^2$ [H/m]",
+    "image_needed": false,
+    "source_page": "page_237",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 4,
+    "question": "자기인덕턴스 $L$[H]인 코일에 전류 $I$[A]를 흘렸을 때, 자계의 세기가 $H$[AT/m]였다. 이 코일을 진공 중에서 자화시키는데 필요한 에너지밀도[J/m³]는?",
+    "choices": [
+      "$\\frac{1}{2}LI^2$",
+      "$LI^2$",
+      "$\\frac{1}{2}\\mu_0 H^2$",
+      "$\\mu_0 H^2$"
+    ],
+    "answer": 3,
+    "explanation": "자기 에너지\n(1) 자기회로 내의 자기 에너지($W$)\n$W = \\frac{1}{2}LI^2 = \\frac{1}{2}\\phi I = \\frac{\\phi^2}{2L}$ [J]\n(2) 단위체적당 자기 에너지 = 에너지밀도($w$)\n$w = \\frac{B^2}{2\\mu_0} = \\frac{1}{2}\\mu_0 H^2 = \\frac{1}{2}HB$ [J/m³]",
+    "image_needed": false,
+    "source_page": "page_237",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 5,
+    "question": "무한히 넓은 두 장의 도체판을 d[m]의 간격으로 평행하게 놓은 후, 두 판 사이에 V[V]의 전압을 가한 경우 도체판의 단위 면적당 작용하는 힘은 몇 [N/m²]인가?",
+    "choices": [
+      "$f=\\epsilon_0\\frac{V^2}{d^2}$",
+      "$f=\\frac{1}{2}\\epsilon_0\\frac{V^2}{d}$",
+      "$f=\\frac{1}{2}\\epsilon_0\\left(\\frac{V}{d}\\right)^2$",
+      "$f=\\frac{1}{2}\\frac{1}{\\epsilon_0}\\left(\\frac{V}{d}\\right)^2$"
+    ],
+    "answer": 3,
+    "explanation": "유전체 내의 정전 에너지(w) 및 정전력(f)\n유전체 내의 단위체적당 정전에너지(w)와 단위면적당 정전력(f)은 서로 같으며 공기 유전율 $\\epsilon_0$, 면전하밀도 $P_s$, 전속밀도 $D$, 전계의 세기 $E$, 전위 $V$, 간격 $d$라 하면\n$w = \\frac{P_s^2}{2\\epsilon_0} = \\frac{D^2}{2\\epsilon_0} = \\frac{1}{2}\\epsilon_0E^2 = \\frac{1}{2}ED [\\text{J/m}^3]$ 식에서\n$f = w [\\text{N/m}^2]$ 이므로 $E = \\frac{V}{d} [\\text{V/m}]$일 때\n$\\therefore f = \\frac{1}{2}\\epsilon_0E^2 = \\frac{1}{2}\\epsilon_0\\left(\\frac{V}{d}\\right)^2 [\\text{N/m}^2]$",
+    "image_needed": false,
+    "source_page": "page_238",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 6,
+    "question": "패러데이의 법칙에 대한 설명으로 가장 알맞은 것은?",
+    "choices": [
+      "전자유도에 의하여 회로에 발생되는 기전력은 자속 쇄교수의 시간에 대한 증가율에 반비례한다.",
+      "전자유도에 의하여 회로에 발생되는 기전력은 자속의 변화를 방해하는 방향으로 기전력이 유도된다.",
+      "정전유도에 의하여 회로에 발생하는 기자력은 자속의 변화방향으로 유도된다.",
+      "전자유도에 의하여 회로에 발생되는 기전력은 자속 쇄교수의 시간 변화율에 비례한다."
+    ],
+    "answer": 4,
+    "explanation": "전자유도법칙\n(1) 패러데이법칙 : 회로에 발생하는 유기기전력은 자속 쇄교수의 시간에 대한 감쇄율에 비례한다.\n$e = -N \\frac{d\\phi}{dt} [V]$\n(2) 렌쯔의 법칙 : 유기기전력의 방향은 자속의 변화를 방해하는 방향으로 유도된다.",
+    "image_needed": false,
+    "source_page": "page_238",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 7,
+    "question": "공극(air gap)이 $\\delta$[m]인 강자성체로 된 환상 영구자석에서 성립하는 식은? (단, $l$[m]는 영구자석의 길이며 $l \\gg \\delta$ 이고, 자속 밀도와 자계의 세기를 각각 $B$ [Wb/m²], $H$ [AT/m]이라 한다.)",
+    "choices": [
+      "$B/H = l\\mu_0/\\delta$",
+      "$B/H = \\delta\\mu_0/l$",
+      "$B/H = \\delta/(\\mu_0 l)$",
+      "$B/H = l/(\\mu_0 \\delta)$"
+    ],
+    "answer": 1,
+    "explanation": "자기회로에서 기자력(F)\n자기회로의 외부 기자력을 $F_{out}$, 내부 기자력을 $F_{in}$이라 하면 코일권수 $N$, 전류 $I$, 자속밀도 $B$, 자계의 세기 $H$, 자석의 길이 $l$, 공극의 길이 $\\delta$일 때\n$F_{out} = NI [AT], F_{in} = Hl + \\frac{B}{\\mu_0}\\delta [AT]$이다.\n영구자석은 외부 기자력이 영($0$)이므로\n$F_{in} = F_{out} = 0 [AT]$일 때\n$Hl + \\frac{B}{\\mu_0}\\delta = 0$ 식에서\n$\\therefore \\frac{B}{H} = -\\frac{l\\mu_0}{\\delta}$",
+    "image_needed": false,
+    "source_page": "page_238",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 12,
+    "question": "송전계통의 한 부분이 [그림]과 같이 3상변압기로 1차측은 $\\Delta$로, 2차측은 Y로 중성점이 접지되어 있을 경우, 1차측에 흐르는 영상전류는?",
+    "choices": [
+      "① 1차측 선로에서 $\\infty$이다.",
+      "② 1차측 선로에서 반드시 0이다.",
+      "③ 1차측 변압기 내부에서는 반드시 0이다.",
+      "④ 1차측 변압기 내부와 1차측 선로에서 반드시 0이다."
+    ],
+    "answer": 2,
+    "explanation": "영상전류\n영상전류는 계통에서 지락사고가 발생하는 경우로서 변압기나 발전기 결선이 Y결선으로 되어있으며 중성점이 접지되어 있어야 선로에 영상전류가 흐르게 된다. 따라서 변압기 $\\Delta$-Y결선에서 Y결선에 중성점이 접지되어 있으므로 변압기 2차측에는 선로상에 모두 영상전류가 흐르게 된다. 그러나 $\\Delta$결선된 변압기 1차측에는 선로에는 나타날 수 없으며 $\\Delta$결선 내부순환전류에 영상전류가 포함되어 있다. 따라서 1차측 선로에는 반드시 영(0)이다.",
+    "image_needed": true,
+    "source_page": "page_244",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2024년 1회 전기기사",
+    "number": 1,
+    "question": "진공 중 4[m] 간격으로 두 개의 평행한 무한 평판 도체에 각각 +4[C/m²], -4[C/m²]의 전하를 주었을 때, 두 도체 간의 전위차는 약 몇 [V]인가?",
+    "choices": [
+      "1.8 x 10¹²",
+      "1.8 x 10¹¹",
+      "1.36 x 10¹²",
+      "1.36 x 10¹¹"
+    ],
+    "answer": 1,
+    "explanation": "평행판 전극 사이의 전위차\n$V = \\frac{\\rho_s}{\\epsilon_0}d [V]$ 식에서\n$d = 4 [m]$, $\\rho_s = 4 [C/m^2]$ 이므로\n$V = \\frac{\\rho_s}{\\epsilon_0}d = \\frac{4}{8.855 \\times 10^{-12}} \\times 4$\n$= 1.8 \\times 10^{12} [V]$",
+    "image_needed": false,
+    "source_page": "page_264",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2024년 1회 전기기사",
+    "number": 13,
+    "question": "회로에서 4[Ω]에 흐르는 전류[A]는? [그림]",
+    "choices": [
+      "5",
+      "10",
+      "2.5",
+      "7.5"
+    ],
+    "answer": 4,
+    "explanation": "중첩의 원리\n먼저 저항 12[Ω]과 6[Ω]은 병렬 접속되어 있으므로\n합성하면 $R' = \\frac{12 \\times 6}{12+6} = 4$ [Ω] 이므로\n(1) 전류원 7[A]를 개방\n전류원 8[A]에 의해 4[Ω]에 흐르는 전류\n$I' = I\\cdot\\frac{1}{2} = \\frac{1}{2} \\times 8 = 4$ [A]\n(2) 전류원 8[A]를 개방\n전류원 7[A]에 의해 6[Ω]에 흐르는 전류\n$I'' = I \\cdot \\frac{1}{2} = \\frac{1}{2} \\times 7 = 3.5$ [A]\n$I'$와 $I''$의 전류 방향은 같으므로 6[Ω]에 흐르는\n전체 전류 $I$는\n$\\therefore I = I' + I'' = 4+3.5 = 7.5$ [A]",
+    "image_needed": true,
+    "source_page": "page_282",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2024년 1회 전기기사",
+    "number": 14,
+    "question": "변성기의 정격부담을 표시하는 단위는?",
+    "choices": [
+      "W",
+      "S",
+      "dyne",
+      "VA"
+    ],
+    "answer": 4,
+    "explanation": "변성기의 정격부담($P$)\n부담이란 계기용변성기 2차측 외부 부하 임피던스가 소비하는 피상전력을 말한다.\n수식으로는 $P = VI = I^2Z = \\frac{V^2}{Z} [\\text{VA}]$로 표현된다.",
+    "image_needed": false,
+    "source_page": "page_272",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2024년 1회 전기기사",
+    "number": 15,
+    "question": "단상 2선식 송전선로는 $0.2+j0.5\\, [\\Omega]$인 선로 임피던스를 통해 부하에 $100\\, [\\text{A}]$가 공급되고 있다. 부하는 역률 $100\\, [\\%]$인 순저항 부하가 접속되어 있을 때 송전 무효전력은 몇 $[\\text{kVar}]$인가?",
+    "choices": [
+      "2",
+      "5",
+      "15",
+      "20"
+    ],
+    "answer": 2,
+    "explanation": "송전 무효전력($Q_s$)\n부하는 순저항 부하로서 역률이 $100\\,[\\%]$인 부하이기 때문에 부하의 무효전력은 $0$이다.\n이 때 송전선의 임피던스가 $Z = 0.2+j0.5\\,[\\Omega]$인 경우\n송전선로에서 무효전력이 발생하게 된다.\n$Q_s = I^2X \\times 10^{-3}\\,[\\text{kVar}]$ 식에서\n$Z = R+jX = 0.2+j0.5\\,[\\Omega]$ 이므로\n$X = 0.5\\,[\\Omega]$, $I = 100\\,[\\text{A}]$일 때\n$\\therefore Q_s = I^2X \\times 10^{-3} = 100^2 \\times 0.5 \\times 10^{-3}$\n$= 5\\,[\\text{kVar}]$",
+    "image_needed": false,
+    "source_page": "page_272",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2024년 2회 기출문제",
+    "number": 6,
+    "question": "$E = i+2j+3k [V/cm]$ 로 표시되는 전계가 있다. $0.01[\\mu C]$의 전하를 원점으로부터 $r=3i [m]$ 로 움직이는데 요하는 일$[J]$은?",
+    "choices": [
+      "$4.69 \\times 10^{-6}$",
+      "$3 \\times 10^{-6}$",
+      "$4.69 \\times 10^{-8}$",
+      "$3 \\times 10^{-8}$"
+    ],
+    "answer": 2,
+    "explanation": "전계에너지 또는 일(W)\n$W = F \\cdot l = QE \\cdot l [J]$ 식에서\n$E = i+2j+3k [V/cm]$, $Q = 0.01 [\\mu C]$,\n$l = 3i [m]$ 이므로\n$W = QE \\cdot l = 0.01 \\times 10^{-6} \\times (i+2j+3k) \\cdot 3i \\times 10^2$\n$= 0.01 \\times 10^{-6} \\times 3 \\times 10^2$\n$= 3 \\times 10^{-6} [J]$\n참고 벡터의 내적 성질\n$i \\cdot i = j \\cdot j = k \\cdot k = 1$, $i \\cdot j = j \\cdot k = k \\cdot i = 0$",
+    "image_needed": false,
+    "source_page": "page_292",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2024년 2회 기출문제",
+    "number": 7,
+    "question": "무한 평면 도체로부터 거리 $a[m]$인 곳에 점전하 $Q[C]$이 있을 때 이 무한 평면 도체 표면에 유도되는 면밀도가 최대인 점의 전하밀도는 몇 $C/m^2$인가?",
+    "choices": [
+      "$-\\frac{Q}{2\\pi a^2}$",
+      "$-\\frac{Q^2}{4\\pi a}$",
+      "$-\\frac{Q}{\\pi a^2}$",
+      "0"
+    ],
+    "answer": 1,
+    "explanation": "접지 무한평면과 점전하\n평면상 중심점(전계와 면전하밀도의 최대값)\n(1) $E_0 = -\\frac{Q}{2\\pi \\epsilon_0 a^2} [V/m]$\n(2) $\\rho_{s0} = -\\frac{Q}{2\\pi a^2} [C/m^2]$",
+    "image_needed": false,
+    "source_page": "page_292",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2024년 2회 전기기사",
+    "number": 1,
+    "question": "라디오 방송의 평면파 주파수를 700[kHz]라 할 때, 이 평면파가 콘크리트 벽 $\\epsilon_r=5$ 속을 지날 때 전파 속도[m/s]는? (단, 공기 중에서의 유전율 $\\epsilon_0$, 투자율 $\\mu$ 및 비 투자율 $\\mu_s=1$로 한다.)",
+    "choices": [
+      "$2.54 \\times 10^8$",
+      "$4.38 \\times 10^8$",
+      "$1.34 \\times 10^8$",
+      "$4.8 \\times 10^8$"
+    ],
+    "answer": 3,
+    "explanation": "전파속도(v)\n$v = \\lambda f = \\frac{\\omega}{\\beta} = \\frac{1}{\\sqrt{\\mu\\epsilon}} = \\frac{3 \\times 10^8}{\\sqrt{\\mu_s \\epsilon_s}}[\\text{m/s}]$ 식에서\n$\\therefore v = \\frac{3 \\times 10^8}{\\sqrt{\\mu_s \\epsilon_s}} = \\frac{3 \\times 10^8}{\\sqrt{1 \\times 5}} = 1.34 \\times 10^8[\\text{m/s}]$",
+    "image_needed": false,
+    "source_page": "page_291",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2024년 2회 전기기사",
+    "number": 2,
+    "question": "유전율 $\\epsilon$, 투자율 $\\mu$인 매질 중을 주파수 $f$[Hz]의 전자파가 전파되어 나갈 때의 파장[m]은?",
+    "choices": [
+      "$f\\sqrt{\\epsilon\\mu}$",
+      "$\\frac{1}{f\\sqrt{\\epsilon\\mu}}$ ",
+      "$\\frac{f}{\\sqrt{\\epsilon\\mu}}$ ",
+      "$\\frac{\\sqrt{\\epsilon\\mu}}{f}$"
+    ],
+    "answer": 2,
+    "explanation": "전파속도(v)\n$v = \\lambda f = \\frac{\\omega}{\\beta} = \\frac{1}{\\sqrt{\\mu\\epsilon}} = \\frac{3 \\times 10^8}{\\sqrt{\\mu_s \\epsilon_s}}[\\text{m/s}]$ 식에서\n$\\therefore \\lambda = \\frac{1}{f\\sqrt{\\epsilon\\mu}}[\\text{m}]$",
+    "image_needed": false,
+    "source_page": "page_291",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2024년 2회 전기기사",
+    "number": 3,
+    "question": "자계의 벡터포텐셜을 $A$[Wb/m]라 할 때 도체 주위에서 자계 $B$[Wb/m$^2$]가 시간적으로 변화하면 도체에 생기는 전계의 세기 $E$[V/m]는?",
+    "choices": [
+      "$E = -\\frac{\\partial A}{\\partial t}$",
+      "$\\text{rot } E = -\\frac{\\partial B}{\\partial t}$",
+      "$E = \\text{rot } A$",
+      "$\\text{rot } E = -\\frac{\\partial B}{\\partial t}$"
+    ],
+    "answer": 2,
+    "explanation": "자기 벡터 포텐셜(A)\n$\\text{rot } E = -\\frac{\\partial B}{\\partial t} = -\\text{rot}\\left(\\frac{\\partial A}{\\partial t}\\right)$ 식에서\n$B = \\text{rot } A[\\text{Wb/m}\\!^2\\text{}]$ 이므로\n$\\therefore E = -\\frac{\\partial A}{\\partial t}$",
+    "image_needed": false,
+    "source_page": "page_291",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2024년 2회 전기기사",
+    "number": 12,
+    "question": "3.3[kV] 이하의 단거리 송배전선로에 적용되는 비접지 방식에서 지락전류는 다음 중 어느 것을 말하는가?",
+    "choices": [
+      "누설전류",
+      "충전전류",
+      "뒤진전류",
+      "단락전류"
+    ],
+    "answer": 2,
+    "explanation": "비접지방식\n이 방식은 △결선 방식으로 단거리, 저전압 선로에만 적용하며 우리나라 계통에서는 3.3[kV]나 6.6[kV]에서 사용되었다. 1선 지락시 지락전류는 대지 충전전류로서 대지정전용량에 기인한다. 또한 1선 지락시 건전상의 전위상승이 $\\sqrt{3}$배 상승하기 때문에 기기나 선로의 절연 레벨이 매우 높다.",
+    "image_needed": false,
+    "source_page": "page_298",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2024년 3회 전기기사",
+    "number": 1,
+    "question": "반지름 r[m]인 무한장 원통형 도체에 전류가 균일하게 흐를 때 도체 내부에서 자계의 세기 [AT/m]는?",
+    "choices": [
+      "원통 중심축으로부터 거리에 비례한다.",
+      "원통 중심축으로부터 거리에 반비례한다.",
+      "원통 중심축으로부터 거리의 제곱에 비례한다.",
+      "원통 중심축으로부터 거리의 제곱에 반비례한다."
+    ],
+    "answer": 1,
+    "explanation": "원통도체(원주형 도체)에 의한 자계의 세기(H)\n(1) 원통도체 표면에만 전류가 흐르는 경우\n$H_{in} = 0 [AT/m], H_{out} = \\frac{I}{2\\pi r} [AT/m]$\n(2) 원통도체 내부에 균일하게 전류가 흐르는 경우\n$H_{in} = \\frac{Ir}{2\\pi a^2} [AT/m], H_{out} = \\frac{I}{2\\pi r} [AT/m]$\n∴ 문제의 조건에 따라 $H_{in} = \\frac{Ir}{2\\pi a^2} \\propto r [AT/m]$\n이므로 원통 중심축으로부터 거리에 비례한다.",
+    "image_needed": false,
+    "source_page": "page_317",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2024년 3회 전기기사",
+    "number": 3,
+    "question": "비투자율 $\\mu_r=800$, 원형 단면적이 $S=10[\\text{cm}^2]$, 평균 자로 길이가 $l=16\\pi \\times 10^{-2}[\\text{m}]$인 환상철심에 600회의 코일을 감고 이 코일에 1[A]의 전류를 흘리면 환상 철심 내부의 자속은 몇 [Wb]인가?",
+    "choices": [
+      "$1.2 \\times 10^{-3}$",
+      "$1.2 \\times 10^{-5}$",
+      "$2.4 \\times 10^{-3}$",
+      "$2.4 \\times 10^{-5}$"
+    ],
+    "answer": 1,
+    "explanation": "자기회로 내의 옴의 법칙\n$\\phi = \\frac{F}{R_m} = \\frac{NI}{R_m} = \\frac{\\mu_0 \\mu_r SNI}{l}$ [Wb]\n이므로\n$\\phi = \\frac{\\mu_0 \\mu_r SNI}{l}$\n$= \\frac{4\\pi \\times 10^{-7} \\times 800 \\times 10 \\times 10^{-4} \\times 600 \\times 1}{16\\pi \\times 10^{-2}}$\n$= 1.2 \\times 10^{-3}$ [Wb]",
+    "image_needed": false,
+    "source_page": "page_317",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 2,
+    "question": "가공전선로의 지지물에 시설하는 지선의 소선은 몇 가닥 이상의 연선 이어야 하는가?",
+    "choices": [
+      "3",
+      "5",
+      "7",
+      "9"
+    ],
+    "answer": 1,
+    "explanation": "지선의 시설\n(1) 가공전선로의 지지물 중 철탑은 지선을 사용하여 그 강도를 분담시켜서는 안된다.\n(2) 지선의 안전율은 2.5 이상, 허용인장하중은 4.31[kN] 이상으로 한다.\n(3) 지선에 연선을 사용할 경우에는 다음에 의할 것.\n㉠ 소선(素線) 3가닥 이상의 연선일 것.\n㉡ 소선의 지름이 2.6[mm] 이상의 금속선을 사용한 것일 것.\n㉢ 인장부분 및 지표상 30[cm]까지의 부분에는 내식성이 있는 것 또는 아연도금을 한 철봉을 사용하고 쉽게 부식하지 아니하는 근가에 견고하게 붙일 것.\n㉣ 지선근가는 지선의 인장하중에 충분히 견디도록 시설할 것.",
+    "image_needed": false,
+    "source_page": "page_366",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 3,
+    "question": "진공 중에 선간거리 $1 [m]$의 평행왕복도선이 있다. 두 선간에 작용하는 힘이 $4 \\times 10^{-7} [N/m]$이었다면 전선에 흐르는 전류는?",
+    "choices": [
+      "$1 [A]$",
+      "$\\sqrt{2} [A]$",
+      "$\\sqrt{3} [A]$",
+      "$2 [A]$"
+    ],
+    "answer": 2,
+    "explanation": "평행도선 사이의 작용력 $F = \\frac{2 I^2}{d} \\times 10^{-7} [N/m]$ 식에서 $d=1 [m]$, $F=4 \\times 10^{-7} [N/m]$ 일 때 ∴ $I = \\sqrt{\\frac{F \\cdot d}{2 \\times 10^{-7}}} = \\sqrt{\\frac{4 \\times 10^{-7} \\times 1}{2 \\times 10^{-7}}} = \\sqrt{2} [A]$",
+    "image_needed": false,
+    "source_page": "page_343",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 4,
+    "question": "$\\sigma [C/m^2]$의 면전하분포를 가진 구도체가 진공 중에서 놓여 있을 때 표면에 작용하는 정전응력의 크기와 방향은?",
+    "choices": [
+      "$\\frac{\\sigma^2}{2\\epsilon_0}$, 도체 외부방향",
+      "$\\frac{\\sigma^2}{\\epsilon_0}$, 도체 외부방향",
+      "$\\frac{\\sigma^2}{2\\epsilon_0}$, 도체 내부방향",
+      "$\\frac{\\sigma^2}{\\epsilon_0}$, 도체 내부방향"
+    ],
+    "answer": 1,
+    "explanation": "단위 면적당 정전력(정전응력) $f = \\frac{\\sigma^2}{2\\epsilon_0} = \\frac{D^2}{2\\epsilon_0} = \\frac{1}{2}\\epsilon_0 E^2 [N/m^2]$ 이므로 ∴ 정전응력은 $\\frac{\\sigma^2}{2\\epsilon_0} [N/m^2]$이고, 방향은 도체 표면에서 외부방향으로 향한다.",
+    "image_needed": false,
+    "source_page": "page_343",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 5,
+    "question": "어느 발전소에서 40,000[kWh]를 발전하는데 발열량 5,000[kcal/kg]의 석탄을 40톤 사용하였다. 이 화력발전소의 열효율[%]은 약 얼마인가?",
+    "choices": [
+      "17.2",
+      "27.2",
+      "34.4",
+      "38.5"
+    ],
+    "answer": 1,
+    "explanation": "발전소의 열효율($\\eta$)\n$\\eta = \\frac{860 W}{m H} \\times 100 [\\%]$ 식에서 발전전력량($W$)이 40,000[kWh], 발열량($H$)이 5,000[kcal/kg], 연료소비량($m$) 40 [ton]이므로\n$\\therefore \\eta = \\frac{860 \\times 40,000}{40 \\times 10^3 \\times 5,000} \\times 100 = 17.2 [\\%]$",
+    "image_needed": false,
+    "source_page": "page_350",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 6,
+    "question": "다음 중 특유속도가 가장 작은 수차는?",
+    "choices": [
+      "프로펠러수차",
+      "프란시스수차",
+      "펠턴수차",
+      "카플란수차"
+    ],
+    "answer": 3,
+    "explanation": "수차의 특유속도\n| 종류 | 특유속도의 한계치 |\n|---|---|\n| 펠턴 수차 | $12 \\le N_s \\le 23$ |\n| 프란시스 수차 | 저속도형 65~150\n중속도형 150~250\n고속도형 250~350 | $N_s \\le \\frac{20,000}{H+30}$ |\n| 사류 수차 | 150~250 | $N_s \\le \\frac{20,000}{H+40}$ |\n| 카플란 수차\n프로펠러 수차 | 350~800 | $N_s \\le \\frac{20,000}{H+50}$ |\n(표 끝)\n특유속도가 가장 작은 것은 펠턴수차이다.",
+    "image_needed": false,
+    "source_page": "page_350",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 13,
+    "question": "지화율(magnetic susceptibility) $\\chi_e$는 상자성체에서 일반적으로 어떤 값을 갖는가?",
+    "choices": [
+      "$\\chi = 0$",
+      "$\\chi = 1$",
+      "$\\chi < 0$",
+      "$\\chi > 0$"
+    ],
+    "answer": 4,
+    "explanation": "자성체의 성질\n비투자율 $\\mu_s$, 자화율 $\\chi_m$ 이라 하면\n(1) 역자성체(반자성체) : $\\mu_s < 1$, $\\chi_m < 0$\n(수소, 헬륨, 구리, 탄소, 안티몬, 비스무트, 은 등)\n(2) 상자성체 : $\\mu_s > 1$, $\\chi_m > 0$\n(칼륨, 텅스텐, 산소, 백금, 알루미늄 등)\n(3) 강자성체 : $\\mu_s \\gg 1$, $\\chi_m \\gg 0$\n(철, 니켈, 코발트)",
+    "image_needed": false,
+    "source_page": "page_346",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 14,
+    "question": "와전류손에 대한 설명 중 틀린 것은?",
+    "choices": [
+      "단위체적당 와전류손의 단위는 $[W/m^3]$이다.",
+      "와전류는 교번자속의 주파수와 최대자속밀도에 비례한다.",
+      "와전류손은 히스테리시스손과 함께 철손이다.",
+      "와전류손을 감소시키기 위하여 성층철선을 사용한다."
+    ],
+    "answer": 2,
+    "explanation": "와전류손\n$P_e = k_e \\sigma t^2 f^2 B_m^2 [\\text{W/m^3}]$ 식에서\n$\\therefore$ 와전류손은 주파수의 제곱과 최대자속밀도의 제곱에 비례한다.",
+    "image_needed": false,
+    "source_page": "page_346",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 15,
+    "question": "맥스웰(Maxwell)의 전자기방정식이 아닌 것은?",
+    "choices": [
+      "$\\nabla \\times H = i + \\frac{\\partial D}{\\partial t}$",
+      "$\\nabla \\times E = - \\frac{\\partial B}{\\partial t}$",
+      "$\\nabla \\cdot B = H$",
+      "$\\nabla \\cdot D = \\rho$"
+    ],
+    "answer": 3,
+    "explanation": "맥스웰 방정식\n(1) 패러데이-노이만의 전자기유도법칙에서 유도된 전자방정식\n$\\mathrm{rot} E = \\nabla \\times E = - \\frac{\\partial B}{\\partial t} = - \\mu \\frac{\\partial H}{\\partial t}$\n(2) 암페어의 주회적분법칙에서 유도된 전자기방정식\n$\\mathrm{rot} H = \\nabla \\times H = i + i_d = i + \\epsilon \\frac{\\partial E}{\\partial t} = i + \\frac{\\partial D}{\\partial t}$\n(3) 가우스의 발산정리에 의해서 유도된 전자기방정식\n$\\mathrm{div} D = \\rho_v$, $\\mathrm{div} B = 0$",
+    "image_needed": false,
+    "source_page": "page_346",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 1,
+    "question": "투자율이 $\\mu$ [H/m], 단면적이 $S$ [m$^2$], 길이가 $l$ [m]인 자성체에 권선을 $N$ 회 감아서 $I$ [A]의 전류를 흘렸을 때 이 자성체의 단면적 $S$ [m$^2$]를 통과하는 자속 [Wb]은?",
+    "choices": [
+      "$\\mu \\frac{I}{Nl}S$",
+      "$\\mu \\frac{NI}{Sl}$",
+      "$\\frac{NI}{\\mu S}$",
+      "$\\mu \\frac{NI}{l}S$"
+    ],
+    "answer": 4,
+    "explanation": "자기회로 내의 옴의 법칙\n$\\phi = \\frac{F}{R_m} = \\frac{NI}{R_m}$ [Wb], $R_m = \\frac{l}{\\mu S}$ [AT/Wb] 식에서\n$\\therefore \\phi = \\frac{F}{R_m} = \\frac{NI}{R_m} = \\mu \\frac{NI}{l}S$ [Wb]",
+    "image_needed": false,
+    "source_page": "page_372",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 9,
+    "question": "평행판 콘덴서에 어떤 유전체를 넣었을 때 전속밀도가 $2.4 \\times 10^{-7}$[C/m$^{2}$]이고 단위 체적당 정전에너지가 $2 \\times 10^{-3}$[J/m$^{3}$]이었다. 이 유전체의 유전율은 몇 [F/m]인가?",
+    "choices": [
+      "$1.44 \\times 10^{-11}$",
+      "$2.17 \\times 10^{-11}$",
+      "$3.19 \\times 10^{-11}$",
+      "$4.21 \\times 10^{-11}$"
+    ],
+    "answer": 1,
+    "explanation": "유전체 내의 정전에너지밀도[w]\n$w = \\frac{D^2}{2\\epsilon} = \\frac{1}{2}\\epsilon E^2 = \\frac{1}{2}ED$[J/m$^3$] 식에서\n$D = 2.4 \\times 10^{-7}$[C/m$^2$], $w = 2 \\times 10^{-3}$[J/m$^3$]일 때\n$\\therefore \\epsilon = \\frac{D^2}{2w} = \\frac{(2.4 \\times 10^{-7})^2}{2 \\times 2 \\times 10^{-3}} = 1.44 \\times 10^{-11}$[F/m]",
+    "image_needed": false,
+    "source_page": "page_374",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 10,
+    "question": "막대자석 위쪽에 동축도체 원판을 놓고 회로의 한 끝은 원판의 주변에 접촉시켜 회전하도록 해 놓은 [그림]과 같은 패러데이 원판 실험을 할 때 검류계에 전류가 흐르지 않는 경우는?",
+    "choices": [
+      "자석만을 일정한 방향으로 회전시킬 때",
+      "원판만을 일정한 방향으로 회전시킬 때",
+      "자석을 축 방향으로 전진시킨 후 후퇴시킬 때",
+      "원판과 자석을 동시에 같은 방향, 같은 속도로 회전시킬 때"
+    ],
+    "answer": 4,
+    "explanation": "패러데이의 법칙\n회로에 발생하는 유기기전력은 자속 쇄교수의 시간에 대한 감쇠율에 비례함을 정의하는 법칙으로서 유기기전력의 크기를 표현하기 위한 법칙이다.\n$\\therefore$ 원판과 자석을 동시에 같은 방향, 같은 속도로 회전시키면 자속의 변화가 나타나지 않기 때문에 기전력이 유도되지 않는다. 따라서 전류 또한 흐르지 않게 된다.",
+    "image_needed": true,
+    "source_page": "page_374",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 11,
+    "question": "반지름 a[m]인 원형코일에 전류 I[A]가 흘렀을 때 권수가 10번 감았을 경우 원형코일 중심에서의 자계의 세기 H[AT/m]는?",
+    "choices": [
+      "$\\frac{I}{5a}$",
+      "$\\frac{5I}{a}$",
+      "$\\frac{5I}{2\\pi a}$",
+      "$\\frac{I}{4\\pi a}$"
+    ],
+    "answer": 2,
+    "explanation": "원형코일 중심의 자계의 세기\n$H_0 = \\frac{NI}{2a}$[AT/m] 식에서\n$N=10$일 때\n$\\therefore H_0 = \\frac{NI}{2a} = \\frac{10I}{2a} = \\frac{5I}{a}$[AT/m]",
+    "image_needed": false,
+    "source_page": "page_374",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 18,
+    "question": "전속밀도 $D = x^2i + 2y^2j + 3zk \\,[\\text{C/m}^2\\text{}]$을 발생하는 전하분포에서 원점에서의 $1 \\,[\\text{m}^3\\text{}]$ 내의 전위는 얼마인가?",
+    "choices": [
+      "$3 \\times 10^{-12}$",
+      "3",
+      "$3 \\times 10^{-9}$",
+      "$3 \\times 10^{-6}$"
+    ],
+    "answer": 2,
+    "explanation": "가우스의 발산정리\n$\\int_S D \\cdot ds = \\int_V \\nabla \\cdot D dv = Q \\,[\\text{C}]$\n$div D = \\frac{\\partial D_x}{\\partial x} + \\frac{\\partial D_y}{\\partial y} + \\frac{\\partial D_z}{\\partial z}$\n$= \\frac{\\partial (x^2)}{\\partial x} + \\frac{\\partial (2y^2)}{\\partial y} + \\frac{\\partial (3z)}{\\partial z}$\n$= 2x + 4y + 3 \\,[\\text{C/m}^3\\text{}]$ 이므로\n원점에서의 체적전하밀도는 $x=0, y=0, z=0$일 때\n$div D = 2x + 4y + 3 = 2 \\times 0 + 4 \\times 0 + 3$\n$= 3 \\,[\\text{C/m}^3\\text{}]$이다.\n$v = 1 \\,[\\text{m}^3\\text{}]$ 내의 전하 $Q$는\n$\\therefore Q = div D \\times v = 3 \\times 1 = 3 \\,[\\text{C}]$",
+    "image_needed": false,
+    "source_page": "page_376",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 19,
+    "question": "전류 $+I$와 전하 $+Q$가 무한히 긴 직선상의 도체에 각각 주어졌고 이들 도체는 진공 속에서 각각 투자율과 유전율이 무한대인 물질로 된 무한대 평면과 평행하게 놓여 있다. 이 경우 영상법에 의한 영상전류와 영상전하는? (단, 전류는 직류이다.)",
+    "choices": [
+      "$-I, -Q$",
+      "$-I, +Q$",
+      "$+I, -Q$",
+      "$+I, +Q$"
+    ],
+    "answer": 1,
+    "explanation": "접지무한평면과 선전하\n접지무한평면으로부터 $h \\,[\\text{m}]$ 떨어진 곳에 $\\lambda \\,[\\text{C/m}]$인 선전하가 분포될 때 영상전하($Q'$)와 영상전류($I'$)는\n(1) 영상전하 $Q' = -Q \\,[\\text{C}]$\n(2) 영상전류 $I' = -I \\,[\\text{A}]$이다.",
+    "image_needed": false,
+    "source_page": "page_376",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 3회",
+    "number": 8,
+    "question": "가공전선로의 지지물에 하중이 가하여지는 경우에 그 하중을 받는 지지물의 기초 안전율은 특별한 경우를 제외하고 최소 얼마 이상인가?",
+    "choices": [
+      "1.5",
+      "2",
+      "2.5",
+      "3"
+    ],
+    "answer": 2,
+    "explanation": "가공전선로 지지물의 기초 안전율\n가공전선로의 지지물에 하중이 가하여지는 경우에 그 하중을 받는 지지물의 기초의 안전율은 2(이상 시 상정하중이 가하여지는 경우의 그 이상시 상정하중에 대한 철탑의 기초에 대하여는 1.33) 이상이어야 한다.",
+    "image_needed": false,
+    "source_page": "page_424",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 3회 기출문제",
+    "number": 4,
+    "question": "공극의 깊이가 $S=4.26 \\times 10^{-2} [\\text{m}^2]$이고 길이가 $l=5.6[\\text{mm}]$인 직류기에 있어서 공극의 자기저항은 약 몇 $[\\text{AT/Wb}]$인가?",
+    "choices": [
+      "$1.05 \\times 10^5$",
+      "$1.05 \\times 10^{-5}$",
+      "$10.5 \\times 10^2$",
+      "$10.5 \\times 10^{-2}$"
+    ],
+    "answer": 1,
+    "explanation": "자기회로의 자기저항\n$R_m = \\frac{l}{\\mu_0 \\mu_s S} [\\text{AT/Wb}]$ 식에서\n$S = 4.26 \\times 10^{-2} [\\text{m}^2]$, $l = 5.6[\\text{mm}]$, $\\mu_s = 1$ 이므로\n$\\therefore R_m = \\frac{l}{\\mu_0 \\mu_s S} = \\frac{5.6 \\times 10^{-3}}{4\\pi \\times 10^{-7} \\times 1 \\times 4.26 \\times 10^{-2}}$\n$= 1.05 \\times 10^5 [\\text{AT/Wb}]$",
+    "image_needed": false,
+    "source_page": "page_400",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 3회 전기기사",
+    "number": 1,
+    "question": "전위함수 V = x^2 + y^2 [V] 일 때 점 (3, 4) [m]에서의 등전위선의 반지름은 몇 [m]이며, 전력선 방정식은 어떻게 되는가?",
+    "choices": [
+      "등전위선의 반지름 : 3, 전력선 방정식 : y = (3/4)x",
+      "등전위선의 반지름 : 4, 전력선 방정식 : y = (4/3)x",
+      "등전위선의 반지름 : 5, 전력선 방정식 : x = (4/3)y",
+      "등전위선의 반지름 : 5, 전력선 방정식 : x = (3/4)y"
+    ],
+    "answer": 1,
+    "explanation": "전기력선의 방정식\nE = -∇V = -gradV = - (∂V/∂x i + ∂V/∂y j)\n= - (∂/∂x(x^2 + y^2)i + ∂/∂y(x^2 + y^2)j)\n= - (2xi + 2yj)\n= -2xi - 2yj\n= E_x i + E_y j [V/m]\nE_x = -2x, E_y = -2y 이므로\n전기력선 방정식 dx/E_x = dy/E_y 식에서\n(1/-2x)dx = (1/-2y)dy\n(1/x)dx = (1/y)dy\n양변을 적분하면\n∫ (1/x)dx = ∫ (1/y)dy 식에서 ln x = ln y + A 를 얻는다.\nln x - ln y = ln (x/y) = A 이다.\n점 (3, 4) [m]에서의 등전위선의 반지름 R과\n전기력선의 방정식은 K = x/y = 3/4 이므로\n∴ R = √(3^2 + 4^2) = 5 [m], x = (3/4)y",
+    "image_needed": false,
+    "source_page": "page_399",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 3회 전기기사",
+    "number": 2,
+    "question": "대지면에 높이 h [m]로 평행하게 가설된 매우 긴 선전하가 지면으로부터 받는 힘은?",
+    "choices": [
+      "h에 비례",
+      "h에 반비례",
+      "h^2에 비례",
+      "h^2에 반비례"
+    ],
+    "answer": 2,
+    "explanation": "접지무한평면과 선전하\n직선도체로부터 영상전하까지의 거리는 2h [m] 떨어져 있으므로 그 사이의 전계의 세기(E)는\nE = ρ_L / (2πε_0 r) = ρ_L / (2πε_0 (2h)) = ρ_L / (4πε_0 h) [V/m]\n따라서 작용력 F는\nF = QE = ρ_L l E = (ρ_L l / (4πε_0 h)) [N] = (ρ_L^2 l / (4πε_0 h)) [N/m]\n= -9 × 10^9 × (ρ_L^2 / h) [N/m]\n∴ 작용력(지면으로부터 받는 힘)은 높이 h에 반비례한다.",
+    "image_needed": false,
+    "source_page": "page_399",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2025년 3회 전기기사",
+    "number": 3,
+    "question": "반지름 2 [mm], 길이 100 [m]인 동선의 내부 인덕턴스 [mH]는?",
+    "choices": [
+      "2.5 × 10^-3",
+      "1.25 × 10^-3",
+      "5 × 10^-3",
+      "25 × 10^-3"
+    ],
+    "answer": 3,
+    "explanation": "원통도체(원주형도체)에 의한 자기 인덕턴스\nL = μ_0 l / (8π) [H] = μ_0 / (8π) [H/m] 식에서\nl = 100 [m] 일 때\n∴ L = μ_0 l / (8π) = (4π × 10^-7 × 100) / (8π) = 5 × 10^-6 [H]\n= 5 × 10^-3 [mH]",
+    "image_needed": false,
+    "source_page": "page_399",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사",
+    "number": 18,
+    "question": "순시치 전류 $i(t) = I_m \\sin(\\omega t + \\theta_i) [A]$의 파고율은 약 얼마인가?",
+    "choices": [
+      "0.577",
+      "0.707",
+      "1.414",
+      "1.732"
+    ],
+    "answer": 3,
+    "explanation": "파형의 파고율\n| 파형 | 정현파 | 반파정류파 | 반파구형파 | 톱니파 | 삼각파 |\n|---|---|---|---|---|---|\n| 파고율 | $\\sqrt{2}$ | 2 | 1 | $\\sqrt{3}$ | $\\sqrt{3}$ |\n$\\therefore$ 파형은 정현파이므로 파고율 = $\\sqrt{2} = 1.414$",
+    "image_needed": false,
+    "source_page": "page_113",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사 과년도",
+    "number": 7,
+    "question": "중성점 접지 방식 중 직접접지 송전방식에 대한 설명으로 틀린 것은?",
+    "choices": [
+      "1선 지락 사고 시 지락전류는 타 접지방식에 비하여 최대로 된다.",
+      "1선 지락 사고 시 지락계전기의 동작이 확실하고 선택차단이 가능하다.",
+      "통신선에서의 유도장해는 비접지방식에 비하여 크다.",
+      "기기의 절연레벨을 상승시킬 수 있다."
+    ],
+    "answer": 4,
+    "explanation": "직접접지방식의 특징\n(1) 장점\n㉠ 1선 지락고장시 건전상의 대지전압 상승이 거의 없고(=이상전압이 낮다.) 중성점의 전위도 거의 0인 상태를 유지하므로 기기의 절연레벨을 저감시켜 단절연할 수 있다.\n㉡ 아크지락이나 폐쇄서지에 의한 이상전압이 낮아 피뢰기의 책무 경감이나 피뢰기의 뇌전류 방전 효과를 증가시킬 수 있다.\n㉢ 1선 지락고장시 지락전류가 매우 크기 때문에 지락계전기(보호계전기)의 동작을 용이하게 해 고장의 선택차단이 신속하게 확실하다.\n(2) 단점\n㉠ 1선 지락고장시 지락전류가 매우 크기 때문에 근접 통신선에 유도장해가 발생하며 계통의 안정도가 매우 나쁘다.\n㉡ 차단기의 동작이 빈번하며 대용량 차단기를 필요로 한다.\n(4) 기기의 절연레벨을 저감시킬 수 있다. (기기의 절연레벨 상승은 비접지방식 등의 특징)",
+    "image_needed": false,
+    "source_page": "page_069",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사 과년도",
+    "number": 8,
+    "question": "송전선에 직렬콘덴서를 설치하였을 때의 특징으로 틀린 것은?",
+    "choices": [
+      "선로 중에서 일어나는 전압강하를 감소시킨다.",
+      "송전전력의 증가를 꾀할 수 있다.",
+      "부하역률이 좋을수록 설치효과가 크다.",
+      "단락사고가 발생하는 경우 사고전류에 의하여 과전압이 발생한다."
+    ],
+    "answer": 3,
+    "explanation": "직렬콘덴서의 특징\n(1) 장점\n㉠ 계통의 전압강하를 줄인다.\n㉡ 수전단의 전압변동률을 줄인다.\n㉢ 정태안정도가 증가하고 송전전력이 커진다.\n㉣ 부하의 역률이 나쁠수록 효과가 좋다.(시동이 빈번한 부하가 접속된 선로에 적용하는 것이 좋다.)\n(2) 단점\n㉠ 단락고장시 과전압이 발생한다.\n㉡ 유도기와 동기기의 자기여자 및 난조 등의 이상현상을 일으킬 수 있다.\n(3) 부하역률이 나쁠수록 설치효과가 크다.\n(4) 단락사고가 발생하는 경우 사고전류에 의하여 과전압이 발생한다.",
+    "image_needed": false,
+    "source_page": "page_069",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 5,
+    "question": "1차 전압은 3,300[V]이고 1차측 무부하 전류는 0.15[A], 철손은 330[W]인 단상 변압기의 자화전류는 약 몇 [A]인가?",
+    "choices": [
+      "① 0.112",
+      "② 0.145",
+      "③ 0.181",
+      "④ 0.231"
+    ],
+    "answer": 1,
+    "explanation": "변압기의 여자전류(무부하전류)\n$V_1 = 3,300$ [V], $I_0 = 0.15$ [A], $P_i = 330$ [W]이므로\n자화전류($I_{\\phi}$)는\n$I_0 = \\sqrt{I_{\\omega}^2 + I_{\\phi}^2}$ [A]식에서\n$I_{\\phi} = \\sqrt{I_0^2 - I_{\\omega}^2} = \\sqrt{0.15^2 - \\left(\\frac{330}{3,300}\\right)^2}$\n$= \\sqrt{0.15^2 - 0.1^2} = \\sqrt{0.0225 - 0.01} = \\sqrt{0.0125} \\approx 0.1118$\n$= 0.112$ [A]",
+    "image_needed": false,
+    "source_page": "page_017",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 6,
+    "question": "유도전동기의 안정 운전의 조건은? (단, $T_m$: 전동기 토크, $T_L$: 부하 토크, $n$: 회전수)",
+    "choices": [
+      "① $\\frac{dT_m}{dn} < \\frac{dT_L}{dn}$",
+      "② $\\frac{dT_m}{dn} = \\frac{dT_L}{dn}$",
+      "③ $\\frac{dT_m}{dn} > \\frac{dT_L}{dn}$",
+      "④ $\\frac{dT_m}{dn} \\ne \\frac{dT_L}{dn}$"
+    ],
+    "answer": 1,
+    "explanation": "전동기 및 부하의 속도-토크 특성 곡선\n전동기의 발생토크($T_m$)와 부하의 반항토크($T_L$)가 만나는 교점이 안정운전점인 경우 그 이전의 특성은 기동특성으로서 전동기의 발생토크가 부하의 반항토크보다 커야 하며, 교점을 기준으로 하여 그 이후에는 전동기의 발생토크가 부하의 반항토크보다 작아야 한다. 이러한 조건을 만족할 때 전동기의 운전이 안정되게 된다. 따라서 토크곡선은 전동기 발생토크가 하향곡선이며 부하의 반항토크는 상향곡선이 됨을 알 수 있다.\n$\\therefore \\frac{dT_m}{dn} < \\frac{dT_L}{dn}$",
+    "image_needed": false,
+    "source_page": "page_017",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 7,
+    "question": "3상 권선형 유도전동기 기동 시 2차측에 외부 가변저항을 넣는 이유는?",
+    "choices": [
+      "① 회전수 감소",
+      "② 기동전류 증가",
+      "③ 기동토크 감소",
+      "④ 기동전류 감소와 기동토크 증가"
+    ],
+    "answer": 4,
+    "explanation": "비례추이의 특징\n2차 저항이 증가하면\n(1) 최대토크는 변하지 않고 기동토크가 증가하며 반면 기동전류는 감소한다.\n(2) 최대토크를 발생시키는 슬립이 증가한다.\n(3) 기동역률이 좋아진다.\n(4) 전부하 효율이 저하되고 속도가 감소한다",
+    "image_needed": false,
+    "source_page": "page_017",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 13,
+    "question": "공기 중에 있는 반지름 a [m]의 독립 금속구의 정전용량은 몇 F인가?",
+    "choices": [
+      "$2\\pi\\epsilon_0a$",
+      "$4\\pi\\epsilon_0a$",
+      "$\\frac{1}{2\\pi\\epsilon_0a}$",
+      "$\\frac{1}{4\\pi\\epsilon_0a}$"
+    ],
+    "answer": 2,
+    "explanation": "구도체의 정전용량(C)\n구도체의 전위 $V = \\frac{Q}{4\\pi\\epsilon_0a}$ [V]이므로\n$\\therefore C = \\frac{Q}{V} = 4\\pi\\epsilon_0a$ [F]",
+    "image_needed": false,
+    "source_page": "page_037",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 14,
+    "question": "와전류가 이용되고 있는 것은?",
+    "choices": [
+      "수중 음파 탐지기",
+      "레이더",
+      "자기 브레이크 (magnetic brake)",
+      "사이클로트론 (cyclotron)"
+    ],
+    "answer": 3,
+    "explanation": "자기브레이크(자기제동)\n자석의 자극 간 공극에 알루미늄 등의 금속판을 삽입하여 금속판의 이동으로 그 속에 발생하는 와전류와 자계간에 발생하는 역토크를 제동시키는 것을 말한다. 제동계수는 자계의 세기의 제곱에 비례한다.\n적용 예로 철도 차량에 있어서 레일에 극히 가까운 위치에 전자석을 장치하고 이것에 전류를 보냄으로써 레일 내에 생기는 와전류에 의한 힘을 이용하여 브레이크를 거는 것을 말한다. 놀이공원에 설치된 롤러코스터와 자이로드롭 브레이크의 원리도 이와 마찬가지이다.",
+    "image_needed": false,
+    "source_page": "page_037",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 15,
+    "question": "전계 $E = \\frac{2}{x}\\hat{x} + \\frac{2}{y}\\hat{y}$ [V/m]에서 점 (3, 5) [m]를 통과하는 전기력선의 방정식은? (단, $\\hat{x}$, $\\hat{y}$는 단위 벡터이다.)",
+    "choices": [
+      "$x^2 + y^2 = 12$",
+      "$y^2 - x^2 = 12$",
+      "$x^2 + y^2 = 16$",
+      "$y^2 - x^2 = 16$"
+    ],
+    "answer": 4,
+    "explanation": "전기력선의 방정식\n$E = \\frac{2}{x}\\hat{x} + \\frac{2}{y}\\hat{y} = E_x \\hat{x} + E_y \\hat{y}$ [V/m] 식에서\n$E_x = \\frac{2}{x}$, $E_y = \\frac{2}{y}$ 임을 알 수 있다.\n전기력선 방정식 $\\frac{dx}{E_x} = \\frac{dy}{E_y}$ 식에서\n$\\frac{x}{2}dx = \\frac{y}{2}dy$ 를 양변 적분하면\n$\\int x dx = \\int y dy$ 식에서\n$\\frac{1}{2}(x^2 + k) = \\frac{1}{2}y^2$를 얻는다.\n$x = 3, y = 5$를 대입할 때 적분상수 $k$는\n$k = y^2 - x^2 = 5^2 - 3^2 = 25 - 9 = 16$ 이므로\n$\\therefore y^2 - x^2 = 16$",
+    "image_needed": false,
+    "source_page": "page_037",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 16,
+    "question": "진공 중에 4[m]의 간격으로 놓여진 평행 도선에 같은 크기의 왕복 전류가 흐를 때 단위 길이당 2.0×10^{-7}[N]의 힘이 작용하였다. 이 때 평행 도선에 흐르는 전류는 몇 [A]인가?",
+    "choices": [
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "평행도선 사이의 작용력 \n $F = \\frac{\\mu_0 I_1 I_2}{2\\pi d} = \\frac{2 I_1 I_2}{d} \\times 10^{-7} [N/m]$ 일 때 \n $d=4[m], F=2.0 \\times 10^{-7}[N/m], I_1 = I_2 = I$ 이므로 \n $F = \\frac{2I^2}{d} \\times 10^{-7} [N/m]$ 에서 \n $\\therefore I = \\sqrt{\\frac{Fd}{2 \\times 10^{-7}}} = \\sqrt{\\frac{2 \\times 10^{-7} \\times 4}{2 \\times 10^{-7}}} = 2 [A]$",
+    "image_needed": false,
+    "source_page": "page_095",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 17,
+    "question": "변압기의 습기를 제거하여 절연을 향상시키는 건조법이 아닌 것은?",
+    "choices": [
+      "열풍법",
+      "단락법",
+      "진공법",
+      "건식법"
+    ],
+    "answer": 4,
+    "explanation": "변압기의 건조법\n변압기의 권선과 철심을 건조하고 그 안에 있는 습기를 제거하여 절연을 향상시키는 건조법으로 열풍법, 단락법, 진공법이 채용되고 있다.",
+    "image_needed": false,
+    "source_page": "page_135",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 18,
+    "question": "선간전압이 150[V], 선전류가 $10\\sqrt{3}$ [A], 역률이 80[%]인 평형 3상 유도성 부하로 공급되는 무효전력[var]은?",
+    "choices": [
+      "3,600",
+      "3,000",
+      "2,700",
+      "1,800"
+    ],
+    "answer": 3,
+    "explanation": "3상 무효전력($Q$)\n$Q = \\sqrt{3}V_L I_L \\sin\\theta [Var]$ 식에서\n$V = 150[V]$, $I = 10\\sqrt{3}[A]$, $\\cos\\theta = 0.8$일 때\n$\\sin\\theta = \\sqrt{1-\\cos^2\\theta} = \\sqrt{1-0.8^2} = 0.6$ 이므로\n$\\therefore Q = \\sqrt{3} V_L I_L \\sin\\theta$\n$= \\sqrt{3} \\times 150 \\times 10\\sqrt{3} \\times 0.6 = 2,700[Var]$",
+    "image_needed": false,
+    "source_page": "page_055",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 19,
+    "question": "그림과 같은 함수의 라플라스 변환은?",
+    "choices": [
+      "$\\frac{1}{s}(e^s - e^{-2s})$",
+      "$\\frac{1}{s}(e^{-s} - e^{-2s})$",
+      "$\\frac{1}{s}(e^{-2s} - e^{-s})$",
+      "$\\frac{1}{s}(e^{-s} + e^{-2s})$"
+    ],
+    "answer": 2,
+    "explanation": "시간추이정리의 라플라스 변환\n$f(t) = u(t-1) - u(t-2)$ 일 때\n$\\therefore \\mathcal{L}\\{f(t)\\} = \\mathcal{L}\\{u(t-1) - u(t-2)\\}$\n$= \\frac{1}{s}e^{-s} - \\frac{1}{s}e^{-2s}$\n$= \\frac{1}{s}(e^{-s} - e^{-2s})$",
+    "image_needed": true,
+    "source_page": "page_055",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 20,
+    "question": "상의 순서가 $a-b-c$인 불평형 3상 전류가 $I_a = 15 + j2[A]$, $I_b = -20 - j14[A]$, $I_c = -3 + j10[A]$일 때 영상분 전류 $I_0$는 약 몇 [A]인가?",
+    "choices": [
+      "$2.67 + j0.38$",
+      "$2.02 + j6.98$",
+      "$15.5 - j3.56$",
+      "$-2.67 - j0.67$"
+    ],
+    "answer": 4,
+    "explanation": "영상분 전류($I_0$)\n$I_0 = \\frac{1}{3}(I_a + I_b + I_c)$\n$= \\frac{1}{3}(15+j2 - 20-j14 - 3+j10)$\n$= \\frac{1}{3}(15-20-3 + j(2-14+10))$\n$= \\frac{1}{3}(-8 + j(-2))$\n$= -2.666... - j0.666...$\n$\\approx -2.67 - j0.67 [A]$",
+    "image_needed": false,
+    "source_page": "page_055",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "전기기사_과년도출문제",
+    "number": 10,
+    "question": "단상 정류자전동기의 일종인 단상 반발전동기에 해당되는 것은?",
+    "choices": [
+      "시라게전동기",
+      "반발유도전동기",
+      "아트킨손형전동기",
+      "단상 직권 정류자전동기"
+    ],
+    "answer": 1,
+    "explanation": "단상 반발전동기의 종류\n(1) 에트킨슨 반발 전동기\n(2) 톰슨 반발 전동기\n(3) 데리 반발 전동기\n(4) 보상 반발 전동기",
+    "image_needed": false,
+    "source_page": "page_047",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "정보 없음",
+    "number": 4,
+    "question": "전식방지대책에서 매설금속체의 누설전류에 의한 전식의 피해가 예상되는 곳에 고려하여야 하는 방법으로 틀린 것은?",
+    "choices": [
+      "절연코팅",
+      "배류장치 설치",
+      "변전소 간 간격 축소",
+      "저준위 금속체를 접속"
+    ],
+    "answer": 3,
+    "explanation": "전기철도의 안전을 위한 보호 중 전식방지대책\n(1) 전기철도측의 전식방식 또는 전식예방을 위해서는 다음 방법을 고려하여야 한다.\n㉮ 변전소 간 간격 축소\n㉯ 레일본드의 양호한 시공\n㉰ 장대레일채택\n㉱ 절연도상 및 레일과 침목사이에 절연층의 설치\n(2) 매설 금속체측의 누설전류에 의한 전식의 피해가 예상되는 곳은 다음 방법을 고려하여야 한다.\n㉮ 배류장치 설치\n㉯ 절연코팅\n㉰ 매설 금속체 접속부 절연\n㉱ 저준위 금속체를 접속\n㉲ 궤도와의 이격 거리 증대\n㉳ 금속판 등의 도체로 차폐",
+    "image_needed": false,
+    "source_page": "page_057",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "정보 없음",
+    "number": 5,
+    "question": "일반 주택의 저압 옥내배선을 점검하였더니 다음과 같이 시설되어 있었을 경우 시설기준에 적합하지 않은 것은?",
+    "choices": [
+      "합성수지관의 지지점 간의 거리를 2 [m]로 하였다.",
+      "합성수지관 안에서 전선의 접속점이 없도록 하였다.",
+      "금속관공사에 옥외용 비닐절연전선을 제외한 절연전선을 사용하였다.",
+      "인입구에 가까운 곳으로서 쉽게 개폐할 수 있는 곳에 개폐기를 각 극에 시설하였다."
+    ],
+    "answer": 1,
+    "explanation": "합성수지관공사\n관의 지지점 간의 거리는 1.5 [m] 이하로 하고, 또한 그 지지점은 관의 끝·관과 박스의 접속점 및 관 상호간의 접속점 등에 가까운 곳에 시설할 것.",
+    "image_needed": false,
+    "source_page": "page_057",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "정보 없음",
+    "number": 6,
+    "question": "하나 또는 복합하여 시설하여야 하는 접지극의 방법으로 틀린 것은?",
+    "choices": [
+      "지중 금속구조물",
+      "토양에 매설된 기초 접지극",
+      "케이블의 금속외장 및 그 밖에 금속피복",
+      "대지에 매설된 강화콘크리트의 용접된 금속 보강재"
+    ],
+    "answer": 4,
+    "explanation": "접지시스템의 접지극의 시설\n접지극은 다음의 방법 중 하나 또는 복합하여 시설하여야 한다.\n(1) 콘크리트에 매입 된 기초 접지극\n(2) 토양에 매설된 기초 접지극\n(3) 토양에 수직 또는 수평으로 직접 매설된 금속전극 (봉, 전선, 테이프, 배관, 판 등)\n(4) 케이블의 금속외장 및 그 밖에 금속피복\n(5) 지중 금속구조물(배관 등)\n(6) 대지에 매설된 철근콘크리트의 용접된 금속 보강재. 다만, 강화콘크리트는 제외한다.",
+    "image_needed": false,
+    "source_page": "page_057",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "정보 없음",
+    "number": 7,
+    "question": "다음 중 DC 서보모터의 제어 기능에 속하지 않는 것은?",
+    "choices": [
+      "역률제어 기능",
+      "전류제어 기능",
+      "속도제어 기능",
+      "위치제어 기능"
+    ],
+    "answer": 1,
+    "explanation": "DC 서보모터의 기능\n(1) 전압을 가변 할 수 있어야 한다. - 전압제어 및 전류 제어\n(2) 최대토크에서 견디는 능력이 커야 한다.\n(3) 고도의 속응성을 갖추어야 한다. - 위치제어 및 속도제어\n(4) 안정성과 강인성이 있어야 한다.\n(5) Servo-lock 기능을 가져야 한다.",
+    "image_needed": false,
+    "source_page": "page_161",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "정보 없음",
+    "number": 8,
+    "question": "동기기의 권선법 중 기전력의 파형이 좋게 되는 권선법은?",
+    "choices": [
+      "단절권, 분포권",
+      "단절권, 집중권",
+      "전절권, 집중권",
+      "전절권, 2층권"
+    ],
+    "answer": 1,
+    "explanation": "고조파를 제거하는 방법\n(1) 단절권과 분포권을 채용한다.\n(2) 매극 매상의 슬롯수($q$)를 크게 한다.\n(3) Y결선(성형결선)을 채용한다.\n(4) 공극의 길이를 크게 한다.\n(5) 자극의 모양을 적당히 설계한다.\n(6) 전기자 철심을 스큐슬롯(사극)으로 한다.\n(7) 전기자 반작용을 작게 한다.",
+    "image_needed": false,
+    "source_page": "page_161",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "정보 없음",
+    "number": 9,
+    "question": "브러시의 위치를 이동시켜 회전방향을 역회전시킬 수 있는 단상 유도전동기는?",
+    "choices": [
+      "반발기동형 전동기",
+      "세이딩코일형 전동기",
+      "분상기동형 전동기",
+      "콘덴서 전동기"
+    ],
+    "answer": 1,
+    "explanation": "단상 반발전동기\n단상 반발전동기는 회전자 권선을 브러시로 단락하고 고정자 권선을 전원에 접속해서 회전자에 전원을 공급하는 직권형의 교류정류자 전동기이다. 이 전동기는 기동, 역전 및 속도제어를 브러시의 이동만으로 할 수 있으며 기동 토크가 매우 크다.",
+    "image_needed": false,
+    "source_page": "page_161",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "N/A",
+    "number": 12,
+    "question": "옥내에서 전선을 병렬로 사용할 때의 시설방법으로 틀린 것은?",
+    "choices": [
+      "병렬로 사용하는 전선에는 각각에 퓨즈를 설치하지 말아야 한다.",
+      "각 전선은 동일한 터미널러그에 완전히 접속하여야 한다.",
+      "전선의 굵기는 동 70[mm²] 이상이어야 한다.",
+      "교류회로에서 병렬로 사용하는 전선은 금속관 안에 전자적 불평형이 생기지 않도록 시설하여야 한다."
+    ],
+    "answer": 3,
+    "explanation": "전선의 접속\n두 개 이상의 전선을 병렬로 사용하는 경우,\n(1) 전선의 굵기는 동선 50[mm²] 이상 또는 알루미늄 70[mm²] 이상으로 하고, 전선은 같은 도체, 같은 재료, 같은 길이 및 같은 굵기의 것을 사용할 것.\n(2) 같은극의 전선은 동일한 터미널러그에 완전히 접속.\n(3) 같은 극인 각 전선의 터미널러그는 동일한 도체에 2개 이상의 리벳 또는 2개 이상의 나사로 접속할 것.\n(4) 병렬로 사용 전선에는 각각에 퓨즈를 설치하지 말 것.\n(5) 금속관 안에 전자적 불평형이 생기지 않도록 시설.",
+    "image_needed": false,
+    "source_page": "page_369",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "N/A",
+    "number": 13,
+    "question": "공기 중 무한 평면도체의 표면으로부터 2 [m] 떨어진 곳에 4[C]의 점전하가 있다. 이 점전하가 받는 힘은 몇 [N]인가?",
+    "choices": [
+      "$\\frac{1}{\\pi \\epsilon_0}$",
+      "$\\frac{1}{4\\pi \\epsilon_0}$",
+      "$\\frac{1}{8\\pi \\epsilon_0}$",
+      "$\\frac{1}{16\\pi \\epsilon_0}$"
+    ],
+    "answer": 2,
+    "explanation": "접지무한평면과 점전하(전기영상법)\n점전하 Q[C]에 대한 영상전하는 -Q[C]이며 서로간의 거리는 2d[m]이므로 전기영상법에 의한 평면과 점전하 사이에 작용하는 힘 F는\n$F = \\frac{Q_1 Q_2}{4 \\pi \\epsilon_0 r^2} = \\frac{-Q^2}{4 \\pi \\epsilon_0 (2d)^2}$ [N]이다.\nd = 2 [m], Q = 4 [C]일 때\n$F = \\frac{-Q^2}{4 \\pi \\epsilon_0 (2d)^2} = \\frac{-4^2}{4 \\pi \\epsilon_0 \\times 4^2 \\times 2^2} = \\frac{-1}{4 \\pi \\epsilon_0}$ [N]\n$\\therefore -\\frac{1}{4 \\pi \\epsilon_0}$ [N] 또는 $\\frac{1}{4 \\pi \\epsilon_0}$ [N]\n참고\n(－) 부호는 흡인력이 작용한다는 것을 의미한다.",
+    "image_needed": false,
+    "source_page": "page_065",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 3회 기출문제",
+    "number": 13,
+    "question": "3상 유도전동기에서 고조파 회전계자가 기본파 회전방향과 역방향인 고조파는?",
+    "choices": [
+      "제3고조파",
+      "제5고조파",
+      "제7고조파",
+      "제13고조파"
+    ],
+    "answer": 2,
+    "explanation": "고조파의 특성비교\n(1) 기본파와 상회전이 같은 고조파\n$h = 2nm+1$: 7고조파, 13고조파, ...\n(2) 기본파와 상회전이 반대인 고조파\n$h = 2nm-1$: 5고조파, 11고조파, ...\n(3) 회전자계가 없는 고조파\n$h = 2nm$: 3고조파, 6고조파, 9고조파, ...",
+    "image_needed": false,
+    "source_page": "page_075",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "number": 14,
+    "question": "최소 동작전류값 이상이면 일정한 시간에 동작하는 한시특성을 갖는 계전기는?",
+    "choices": [
+      "정한시 계전기",
+      "반한시 계전기",
+      "순한시 계전기",
+      "반한시성 정한시 계전기"
+    ],
+    "answer": 1,
+    "explanation": "계전기의 한시특성\n(1) 순한시계전기 : 정정된 최소동작전류 이상의 전류가 흐르면 즉시 동작하는 계전기\n(2) 정한시계전기 : 정정된 값 이상의 전류가 흘렀을 때 동작 전류의 크기에는 관계없이 정해진 시간이 경과한 후에 동작하는 계전기\n(3) 반한시계전기 : 정정된 값 이상의 전류가 흘렀을 때 동작하는 시간과 전류값이 서로 반비례하여 동작하는 계전기\n(4) 정한시-반한시 계전기 : 어느 전류값까지는 반한시 계전기의 성질을 띠지만 그 이상의 전류가 흐르는 경우 정한시계전기의 성질을 띠는 계전기",
+    "image_needed": false,
+    "source_page": "page_217",
+    "round": "2023년 2회 기출문제",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 15,
+    "question": "영구자석의 재료로 적합한 것은?",
+    "choices": [
+      "잔류 자속밀도($B_r$)는 크고, 보자력($H_c$)는 작아야 한다.",
+      "잔류 자속밀도($B_r$)는 작고, 보자력($H_c$)는 커야 한다.",
+      "잔류 자속밀도($B_r$)와 보자력($H_c$)모두 작아야 한다.",
+      "잔류 자속밀도($B_r$)와 보자력($H_c$)모두 커야 한다."
+    ],
+    "answer": 4,
+    "explanation": "영구자석과 전자석\n(1) 영구자석의 성질\n잔류자기와 보자력, 히스테리시스 곡선의 면적이 모두 크다.\n(2) 전자석의 성질\n잔류자기는 커야 하며 보자력과 히스테리시스 곡선의 면적은 작다.",
+    "image_needed": false,
+    "source_page": "page_009",
+    "subject": "전기설비기술기준"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 20,
+    "question": "송전선로의 고장전류 계산에 영상 임피던스가 필요한 경우는?",
+    "choices": [
+      "① 1선 지락",
+      "② 3상 단락",
+      "③ 3선 단선",
+      "④ 선간 단락"
+    ],
+    "answer": 1,
+    "explanation": "영상임피던스($Z_0$)\n송전선로의 사고의 종류가 다양한 만큼 그 특성 또한 각 양각색으로 매우 다양하다. 그 중에서 지락사고와 단락사고는 사고종류를 크게 2가지로 나눌 때 표현하며 두 사고의 커다란 차이점은 대지와 전기적인 접촉이 있는 경우와 없는 경우이다. 결론적으로 대지와 전기적인 접촉이 있는 경우인 지락사고는 영상임피던스가 필요하며 그렇지 않은 단락사고는 영상임피던스가 필요치 않다.",
+    "image_needed": false,
+    "source_page": "page_015",
+    "subject": "전기설비기술기준"
+  }
+]

@@ -1,0 +1,882 @@
+[
+  {
+    "round": "2021년 1회 기출문제",
+    "number": 10,
+    "question": "수소냉각식 발전기 및 이에 부속하는 수소냉각장치에 대한 시설기준으로 틀린 것은?",
+    "choices": [
+      "발전기 내부의 수소의 온도를 계측하는 장치를 시설할 것",
+      "발전기 내부의 수소의 순도가 70[%] 이하로 저하한 경우에 경보를 하는 장치를 시설할 것",
+      "발전기는 기밀구조의 것이고 또한 수소가 대기압에서 폭발하는 경우에 생기는 압력에 견디는 강도를 가지는 것일 것",
+      "발전기 내부의 수소의 압력을 계측하는 장치 및 그 압력이 현저히 변동한 경우에 이를 경보하는 장치를 시설할 것"
+    ],
+    "answer": 2,
+    "explanation": "수소냉각식 발전기 등의 시설\n수소냉각식의 발전기ㆍ조상기 또는 이에 부속하는 수소냉각 장치는 다음 각 호에 따라 시설하여야 한다.\n(1) 발전기 또는 조상기는 기밀구조의 것이고 또한 수소가 대기압에서 폭발하는 경우에 생기는 압력에 견디는 강도를 가지는 것일 것.\n(2) 발전기측의 밀봉부에는 질소 가스를 봉입할 수 있는 장치 또는 발전기 측의 밀봉부로부터 누설된 수소 가스를 안전하게 외부에 방출할 수 있는 장치를 시설할 것.\n(3) 발전기 내부 또는 조상기 내부의 수소의 순도가 85 [%] 이하로 저하한 경우에 이를 경보하는 장치를 시설할 것.\n(4) 발전기 내부 또는 조상기 내부의 수소의 압력을 계측하는 장치 및 그 압력이 현저히 변동한 경우에 이를 경보하는 장치를 시설할 것.\n(5) 발전기 내부 또는 조상기 내부의 수소의 온도를 계측하는 장치를 시설할 것.\n(6) 발전기 내부 또는 조상기 내부로 수소를 안전하게 도입할 수 있는 장치 및 발전기안 또는 조상기안의 수소를 안전하게 외부로 방출할 수 있는 장치를 시설할 것.\n(7) 수소를 통하는 관은 동관 또는 이음에 없는 강관이 어야 하며 또한 수소가 대기압에서 폭발하는 경우에 생기는 압력에 견디는 강도를 가질 것.\n(8) 수소를 통하는 관ㆍ밸브 등은 수소가 새지 아니하는 구조로 되어 있을 것.\n(9) 발전기 또는 조상기에 붙인 유리체의 점검 창 등은 쉽게 파손되지 아니하는 구조로 되어 있을 것.",
+    "image_needed": false,
+    "source_page": "page_030",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 1회 기출문제",
+    "number": 11,
+    "question": "특성 임피던스가 400[Ω]인 회로 말단에 1,200[Ω]의 부하가 연결되어 있다. 전원 측에 20[kV]의 전압을 인가할 때 반사파의 크기[kV]는? (단, 선로에서의 전압 감쇠는 없는 것으로 간주한다.)",
+    "choices": [
+      "3.3",
+      "5",
+      "10",
+      "33"
+    ],
+    "answer": 3,
+    "explanation": "진행파의 반사와 투과\n특성 임피던스 $Z_1$, 부하 임피던스 $Z_2$, 전입파 전압, 전류 $e_i, i_i$라 하면 반사파 전압, 전류 $e_r, i_r$과 투과파전압, 전류 $e_t, i_t$는\n$e_r = \\frac{Z_2 - Z_1}{Z_2 + Z_1} e_i$, $i_r = -\\frac{Z_2 - Z_1}{Z_2 + Z_1} i_i$\n$e_t = \\frac{2Z_2}{Z_2 + Z_1} e_i$, $i_t = \\frac{2Z_1}{Z_2 + Z_1} i_i$ 이다.\n$Z_1 = 400 [\\text{Ω}]$, $Z_2 = 1,200 [\\text{Ω}]$, $e_i = 20 [\\text{kV}]$일 때\n$e_r = \\frac{Z_2 - Z_1}{Z_2 + Z_1} e_i = \\frac{1,200 - 400}{1,200 + 400} \\times 20$\n$= 10 [\\text{kV}]$",
+    "image_needed": false,
+    "source_page": "page_024",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 1회 기출문제",
+    "number": 12,
+    "question": "그림과 같은 H형의 4단자 회로망에서 4단자 정수(전송 파라미터) A는? (단, $V_1$은 입력전압이고, $V_2$는 출력전압이고, A는 출력 개방 시 회로망의 전압이득 $(\\frac{V_1}{V_2})$이다.) [그림]",
+    "choices": [
+      "$\\frac{Z_1 + Z_2 + Z_3}{Z_3}$",
+      "$\\frac{Z_1 + Z_3 + Z_4}{Z_3}$",
+      "$\\frac{Z_2 + Z_3 + Z_5}{Z_3}$",
+      "$\\frac{Z_3 + Z_4 + Z_5}{Z_3}$"
+    ],
+    "answer": 2,
+    "explanation": "4단자 정수의 회로망 특성\n[그림: 4단자 회로망 변환 예시]\n$\\begin{bmatrix} A & B \\\\ C & D \\end{bmatrix}$\n$= \\begin{bmatrix} \\frac{Z_1+Z_3}{Z_3} & Z_1+Z_2+\\frac{Z_1Z_2}{Z_3} \\\\ \\frac{1}{Z_3} & \\frac{Z_2+Z_3}{Z_3} \\end{bmatrix}$\n[그림: A 파라미터 계산을 위한 변환 예시]\n$A = 1 + \\frac{Z_1}{Z_3} + \\frac{Z_4}{Z_3} = \\frac{Z_1 + Z_3 + Z_4}{Z_3}$",
+    "image_needed": true,
+    "source_page": "page_024",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 1회 기출문제",
+    "number": 13,
+    "question": "$F(s) = \\frac{2s^2+s-3}{s(s^2+4s+3)}$의 라플라스 역변환은?",
+    "choices": [
+      "$1-e^{-t}+2e^{-3t}$",
+      "$-1-e^{-t}+2e^{-3t}$",
+      "$-1+e^{-t}-2e^{-3t}$",
+      "$-1+e^{-t}+2e^{-3t}$"
+    ],
+    "answer": 4,
+    "explanation": "라플라스 역변환\n$F(s) = \\frac{2s^2+s-3}{s(s^2+4s+3)} = \\frac{2s^2+s-3}{s(s+1)(s+3)}$\n$= \\frac{A}{s} + \\frac{B}{s+1} + \\frac{C}{s+3}$ 일 때\n헤비사이드 전개를 이용하여 A, B, C를 구하면\n$A = sF(s)|_{s=0} = \\frac{2s^2+s-3}{(s+1)(s+3)}|_{s=0}$\n$= \\frac{-3}{1 \\times 3} = -1$\n$B = (s+1)F(s)|_{s=-1} = \\frac{2s^2+s-3}{s(s+3)}|_{s=-1}$\n$= \\frac{2(-1)^2+(-1)-3}{(-1)(-1+3)} = \\frac{2-1-3}{(-1)(2)} = \\frac{-2}{-2} = 1$\n$C = (s+3)F(s)|_{s=-3} = \\frac{2s^2+s-3}{s(s+1)}|_{s=-3}$\n$= \\frac{2(-3)^2+(-3)-3}{(-3)(-3+1)} = \\frac{2 \\times 9-3-3}{(-3)(-2)} = \\frac{18-6}{6} = \\frac{12}{6} = 2$\n$F(s) = -\\frac{1}{s} + \\frac{1}{s+1} + \\frac{2}{s+3}$\n$\\therefore f(t) = \\mathcal{L}^{-1}[F(s)] = -1 + e^{-t} + 2e^{-3t}$",
+    "image_needed": false,
+    "source_page": "page_024",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 14,
+    "question": "비유전율이 2이고, 비투자율이 2인 매질 내에서의 전자파의 전파속도 $v$[m/s]와 진공 중의 빛의 속도 $v_0$[m/s] 사이의 관계는?",
+    "choices": [
+      "$v = \\frac{1}{2}v_0$",
+      "$v = \\frac{1}{4}v_0$",
+      "$v = \\frac{1}{6}v_0$",
+      "$v = \\frac{1}{8}v_0$"
+    ],
+    "answer": 1,
+    "explanation": "전파속도($v$)\n파장 $\\lambda$, 주파수 $f$, 각속도 $\\omega$, 위상정수 $\\beta$, 인덕턴스 $L$, 정전용량 $C$라 하면\n$v = \\lambda f = \\frac{\\omega}{\\beta} = \\frac{1}{\\sqrt{LC}} = \\frac{1}{\\sqrt{\\epsilon \\mu}}$\n$= \\frac{1}{\\sqrt{\\epsilon_0 \\mu_0}} \\cdot \\frac{1}{\\sqrt{\\epsilon_s \\mu_s}} = \\frac{3 \\times 10^8}{\\sqrt{\\epsilon_s \\mu_s}}$[m/sec] 식에서\n$\\epsilon_s = 2$, $\\mu_s = 2$, $v_0 = 3 \\times 10^8$[m/sec] 이므로\n$\\therefore v = \\frac{3 \\times 10^8}{\\sqrt{\\epsilon_s \\mu_s}} = \\frac{3 \\times 10^8}{\\sqrt{2 \\times 2}} = \\frac{v_0}{2} = \\frac{1}{2}v_0$[m/sec]",
+    "image_needed": false,
+    "source_page": "page_008",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 19,
+    "question": "내부의 반지름이 2[cm], 외부의 반지름이 3[cm]인 동심 도체 간에 고유저항이 $1.884 \\times 10^2 [\\Omega \\cdot m]$인 저항 물질로 채워져 있을 때, 내외구 간의 합성 저항은 약 몇 [\\Omega]인가?",
+    "choices": [
+      "2.5",
+      "5.0",
+      "250",
+      "500"
+    ],
+    "answer": 3,
+    "explanation": "동심구도체의 저항($R$)\n$R = \\frac{\\rho}{4\\pi}\\left(\\frac{1}{a} - \\frac{1}{b}\\right) [\\Omega]$ 식에서\n$a = 2 \\times 10^{-2}[m], b = 3 \\times 10^{-2}[m]$\n$\\rho = 1.884 \\times 10^2 [\\Omega \\cdot m]$ 이므로\n$\\therefore R = \\frac{\\rho}{4\\pi}\\left(\\frac{1}{a} - \\frac{1}{b}\\right)$\n$= \\frac{1.884 \\times 10^2}{4\\pi}\\left(\\frac{1}{2 \\times 10^{-2}} - \\frac{1}{3 \\times 10^{-2}}\\right)$\n$= 250 [\\Omega]$",
+    "image_needed": false,
+    "source_page": "page_010",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 20,
+    "question": "비투자율 $\\mu_r = 800$, 원형 단면적이 $S=10[cm^2]$, 평균 자로 길이가 $l=16\\pi \\times 10^{-2}[m]$인 환상철심에 600회의 코일을 감고 $1[A]$의 전류를 흘리면 환상 철심 내부의 자속은 몇 [Wb]인가?",
+    "choices": [
+      "$1.2 \\times 10^{-3}$",
+      "$1.2 \\times 10^{-5}$",
+      "$2.4 \\times 10^{-3}$",
+      "$2.4 \\times 10^{-5}$"
+    ],
+    "answer": 1,
+    "explanation": "자기회로 내의 옴의 법칙\n$\\phi = \\frac{F}{R_m} = \\frac{NI}{R_m} = \\frac{\\mu_0\\mu_rSNI}{l} [Wb]$이므로\n$\\therefore \\phi = \\frac{\\mu_0\\mu_rSNI}{l}$\n$= \\frac{4\\pi \\times 10^{-7} \\times 800 \\times 10 \\times 10^{-4} \\times 600 \\times 1}{16\\pi \\times 10^{-2}}$\n$= 1.2 \\times 10^{-3} [Wb]$",
+    "image_needed": false,
+    "source_page": "page_010",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 2회 전기기사",
+    "number": 10,
+    "question": "전기력선의 성질에 대한 설명으로 옳은 것은?",
+    "choices": [
+      "전기력선은 등전위면과 평행하다.",
+      "전기력선은 도체 표면과 직교한다.",
+      "전기력선은 도체 내부에 존재할 수 있다.",
+      "전기력선은 전위가 낮은 점에서 높은 점으로 향한다."
+    ],
+    "answer": 2,
+    "explanation": "전기력선의 성질\n(1) 전기력선은 정(+)전하에서 시작하여 부(-)전하에서 끝난다. - 전계의 불연속성\n단, 전화가 없는 곳에서는 전기력선의 발생 및 소멸이 없다. - 전화가 없으면 연속성이다.\n(2) 전기력선은 서로 반발하여 교차할 수 없다.\n(3) 전기력선의 방향은 그 점의 전계의 방향과 같다.\n(4) 전기력선의 밀도는 전계의 세기와 같다.\n(5) 전기력선은 전위가 높은 점에서 낮은 점으로 향한다.\n(6) 전기력선은 도체 표면(=등전위면)에 수직으로 만난다.\n(7) 도체에 대전된 전하는 도체 표면에만 분포되며 전기력선은 대전도체 내부에는 존재하지 않는다.\n(8) 전기력선은 자신만으로 폐곡선을 이룰 수 없다.\n- 전계의 비회전성=전계의 발산 성질\n(9) 전기력선의 수는 $\\frac{Q}{\\epsilon_0}$ 개다.",
+    "image_needed": false,
+    "source_page": "page_036",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 2회 전기기사",
+    "number": 11,
+    "question": "평등자계와 직각방향으로 일정한 속도로 발사된 전자의 원운동에 관한 설명으로 옳은 것은?",
+    "choices": [
+      "플레밍의 오른손법칙에 의한 로렌츠의 힘과 원심력의 평형 원운동이다.",
+      "원의 반지름은 전자의 발사속도와 전계의 세기에 곱에 반비례한다.",
+      "전자의 원운동 주기는 전자의 발사 속도와 무관하다.",
+      "전자의 원운동 주파수는 전자의 질량에 비례한다."
+    ],
+    "answer": 3,
+    "explanation": "전자의 원운동\n플레밍의 왼손법칙에서 유도된 로렌츠의 힘이 자계 중에 놓인 전자가 받는 힘이며 전자는 원운동을 하여 갖는 원심력과 평형을 이룬다.\n전류 $I$, 자속밀도 $B$, 전자 $e$, 속도 $v$, 전자의 질량 $m$, 원운동 반경 $r$이라 하면\n$F = IBl [\\text{N}]$, $v = \\frac{l}{t} [\\text{m}/\\text{sec}]$이므로\n$F = IBl = \\frac{e}{t}Bl = evB = \\frac{mv^2}{r} [\\text{N}]$ 임을 알 수 있다.\n(1) 회전반경: $r = \\frac{mv}{Be} [\\text{m}]$\n(2) 각속도: $\\omega = \\frac{Be}{m} = 2\\pi f [\\text{rad}/\\text{sec}]$\n(3) 주기: $T = \\frac{1}{f} = \\frac{2\\pi m}{Be} [\\text{sec}]$",
+    "image_needed": false,
+    "source_page": "page_036",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 2회 전기기사",
+    "number": 17,
+    "question": "진공 중에 서로 떨어져 있는 두 도체 A, B가 있다. 도체 A에만 1[C]의 전하를 줄 때, 도체 A, B의 전위가 각각 3[V], 2[V]이었다. 지금 도체 A, B에 각각 1[C]과 2[C]의 전하를 주면 도체 A의 전위는 몇 [V]인가?",
+    "choices": [
+      "① 6",
+      "② 7",
+      "③ 8",
+      "④ 9"
+    ],
+    "answer": 2,
+    "explanation": "전위계수\nV_A = P_AA Q_A + P_AB Q_B [V]\nV_B = P_BA Q_A + P_BB Q_B [V] 식에서\nQ_A = 1 [C], Q_B = 0 [C]일 때 V_A = 3 [V], V_B = 2 [V]이면\nP_AA = V_A = 3, P_BA = V_B = 2이다.\nQ_A = 1 [C], Q_B = 2 [C]일 때 V_A는\n∴ V_A = P_AA Q_A + P_AB Q_B = 3×1 + 2×2 = 7 [V]\n\n참고 전위계수의 성질\n(1) P_AA ≥ P_BB > 0\n(2) P_AB = P_BA",
+    "image_needed": false,
+    "source_page": "page_038",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 2회 전기기사",
+    "number": 18,
+    "question": "한 변의 길이가 4[m]인 정사각형의 루프에 1[A]의 전류가 흐를 때, 중심점에서의 자속밀도 B는 약 몇 [Wb/m²]인가?",
+    "choices": [
+      "① 2.83 × 10^{-7}",
+      "② 5.65 × 10^{-7}",
+      "③ 11.31 × 10^{-7}",
+      "④ 14.14 × 10^{-7}"
+    ],
+    "answer": 1,
+    "explanation": "정n변형 회로의 중심 자계의 세기와 자속밀도\n한 변의 길이가 l[m]인 정n변형 회로의 중심 자계의 세기 H₀와 자속밀도 B₀는\nH₀ = (nI)/(πl) sin(π/n) tan(π/n) [AT/m]\nB₀ = μ₀H₀ = (μ₀nI)/(πl) sin(π/n) tan(π/n) [Wb/m²] 식에서\nl = 4 [m], n = 4, I = 1 [A]일 때\n∴ B₀ = (μ₀nI)/(πl) sin(π/n) tan(π/n)\n= (4π × 10^{-7} × 4 × 1) / (π × 4) sin(π/4) tan(π/4)\n= 4 × 10^{-7} × sin45° × tan45°\n= 2.83 × 10^{-7} [Wb/m²]",
+    "image_needed": false,
+    "source_page": "page_038",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 3회 기출문제",
+    "number": 12,
+    "question": "특고압 가공전선로에서 발생하는 극저주파 전계는 지표상 1[m]에서 몇 [kV/m] 이하이어야 하는가?",
+    "choices": [
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5"
+    ],
+    "answer": 4,
+    "explanation": "가공전선과 건조물의 조영재 사이의 이격거리\n사용전압이 400 [kV] 이상의 특고압 가공전선이 건조물과 제2차 접근상태로 있는 경우에는 다음에 따라 시설하여야 한다.\n(1) 전선높이가 최저상태일 때 가공전선과 건조물 상부(지붕ㆍ행(창: 遮陽)ㆍ옻말리는 곳 기타 사람이 올라갈 우려가 있는 개소를 말한다)와의 수직거리가 18 [m] 이상일 것.\n(2) 건조물 최상부에서 전계(3.5 [kV/m]) 및 자계(83.3 [μT])를 초과하지 아니할 것.",
+    "image_needed": false,
+    "source_page": "page_088",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 3회 기출문제",
+    "number": 13,
+    "question": "단면적 55[mm$^2$]인 경동연선을 사용하는 특고압 가공전선로의 지지물로 장력에 견디는 형태의 B종 철근 콘크리트주를 사용하는 경우, 허용 최대 경간은 몇 [m]인가?",
+    "choices": [
+      "150",
+      "250",
+      "300",
+      "500"
+    ],
+    "answer": 4,
+    "explanation": "가공전선로의 경간\n| 구분 | 지지물종류 | A종주, 목주 | B종주 | 철탑 |\n|---|---|---|---|---|\n| 표준경간 | - | 150[m] | 250[m] | 600[m] |\n| - | - | ③ 300[m] | ⑤ 500[m] | ⑦ 400[m] |\n\n① 특고압 가공전선로의 경간으로 철탑이 단주일 경우에 적용한다.\n② 고압 가공전선로의 전선에 인장강도 8.71 [kN] 이상의 것 또는 단면적 22[mm$^2$] 이상의 경동연선의 것을 사용하는 경우, 특고압 가공전선로의 전선에 인장강도 21.67 [kN] 이상의 것 또는 단면적 50[mm$^2$] 이상의 경동연선의 것을 사용하는 경우에 적용한다.",
+    "image_needed": false,
+    "source_page": "page_088",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2022년 1회",
+    "number": 4,
+    "question": "자기회로에서 전기회로의 도전율 σ [S/m]에 대응되는 것은?",
+    "choices": [
+      "자속",
+      "기자력",
+      "투자율",
+      "자기저항"
+    ],
+    "answer": 3,
+    "explanation": "전기회로와 자기회로의 대응관계\n전기회로 | 자기회로\n기전력 V[V] | 기자력 F[AT]\n전류 I[A] | 자속 Φ[Wb]\n전기저항 R[Ω] | 자기저항 R_m[AT/Wb]\n도전율 σ[S/m] | 투자율 μ[H/m]\n전류밀도 i[A/m²] | 자속밀도 B[Wb/m²]\n전계의 세기 E[V/m] | 자계의 세기 H[AT/m]\n컨덕턴스 G[S] | 퍼미언스 P_m[Wb/AT]",
+    "image_needed": false,
+    "source_page": "page_092",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2022년 1회",
+    "number": 5,
+    "question": "단면적이 균일한 환상철심에 권수 1,000회인 A코일과 권수 N_B회인 B코일이 감겨져 있다. A코일의 자기 인덕턴스가 100[mH]이고, 두 코일 사이의 상호 인덕턴스가 20[mH]이고, 결합계수가 1일 때, B코일의 권수(N_B)는 몇 회인가?",
+    "choices": [
+      "100",
+      "200",
+      "300",
+      "400"
+    ],
+    "answer": 2,
+    "explanation": "상호 인덕턴스(M)\nM = (N_A N_B) / R_m = (μS N_A N_B) / l\n= (L_A N_B) / N_A = (L_B N_A) / N_B\n= k√(L_A L_B) [H] 식에서\nN_A = 1,000, L_A = 100 [H], M = 20 [mH], k = 1일 때\n∴ N_B = (M N_A) / L_A = (20 × 1,000) / 100 = 200",
+    "image_needed": false,
+    "source_page": "page_092",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2022년 1회",
+    "number": 6,
+    "question": "공기 중에서 1[V/m]의 전계의 세기에 의한 변위전류밀도의 크기를 2[A/m²]으로 흐르게 하려면 전계의 주파수는 몇 [MHz]가 되어야 하는가?",
+    "choices": [
+      "9,000",
+      "18,000",
+      "36,000",
+      "72,000"
+    ],
+    "answer": 3,
+    "explanation": "변위전류밀도(i_d)\ni_d = ∂D/∂t = ε₀ ∂E/∂t = ε₀ ∂/∂t(E_m sin ωt)\n= ωε₀ E_m cos ωt [A/m²] 식에서\n변위전류밀도와 전계의 세기를 실효값으로 표현하면\nI_d = ωε₀ E = 2πfε₀ E [A/m²]이다.\nE = 1 [V/m], I_d = 2 [A/m²] 이므로\n∴ f = I_d / (2πε₀ E) = 2 / (2π × 8.855 × 10⁻¹² × 1)\n= 36,000 × 10⁶ [Hz] = 36,000 [MHz]",
+    "image_needed": false,
+    "source_page": "page_092",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2022년 1회",
+    "number": 7,
+    "question": "내부 원통 도체의 반지름이 a[m], 외부 원통 도체의 반지름이 b[m]인 동축 원통 도체에서 내외 도체 간 물질의 도전율이 σ[S/m]일 때 내외 도체 간의 단위 길이당 컨덕턴스[S/m]는?",
+    "choices": [
+      "2πσ / ln(b/a)",
+      "2πσ / ln(a/b)",
+      "4πσ / ln(b/a)",
+      "4πσ / ln(a/b)"
+    ],
+    "answer": 1,
+    "explanation": "동심원통도체(=동축 케이블)의 컨덕턴스(G)\n내·외반지름이 각각 a, b인 동심원통 도체의 정전용량\n을 C라 하면 C = (2π ε l) / ln(b/a) [F]이다.\nRC = ρ ε = ε/σ 식에서 컨덕턴스(G)는\n∴ G = (σ C) / ε = (σ/ε) × (2π ε l) / ln(b/a)\n= (2π σ l) / ln(b/a)\n단위 길이당 컨덕턴스이므로 G/l = (2π σ) / ln(b/a) [S/m]",
+    "image_needed": false,
+    "source_page": "page_092",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2022년 1회 전기기사",
+    "number": 8,
+    "question": "현수애자에 대한 설명이 아닌 것은?",
+    "choices": [
+      "애자를 연결하는 방법에 따라 클레비스(Clevis)형과 볼 소켓형이 있다.",
+      "애자를 표시하는 기호는 P이며 구조는 2~5층의 갓 모양의 자기편을 시멘트로 접착하고 그 자기를 주철제 base로 지지한다.",
+      "애자의 연결개수를 가감함으로써 임의의 송전 전압에 사용할 수 있다.",
+      "큰 하중에 대하여는 2련 또는 3련으로 하여 사용할 수 있다."
+    ],
+    "answer": 2,
+    "explanation": "현수애자\n(1) 애자를 연결하는 방법에 따라 클레비스(clevis)형과 볼소켓(ball socket)형이 있다.\n(2) 수 개 또는 수십 개를 일련으로 하여 애자련으로 사용한다.\n(3) 송전전압에 맞는 애자의 수를 가감하면서 사용한다.\n(4) 큰 하중에 대하여는 2련 또는 3련으로 하여 사용한다.\n(5) 절연체는 경질자기나 경질유리를 사용하며 주철제의 cap과 강제의 pin을 자기 또는 유리에 시멘트로 붙인 것이다.\n∴ 보기 ②는 핀애자에 대한 해설이다.",
+    "image_needed": false,
+    "source_page": "page_098",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2022년 1회 전기기사",
+    "number": 9,
+    "question": "교류발전기의 전압조정 장치로 속응여자방식을 채택하는 이유로 틀린 것은?",
+    "choices": [
+      "전력계통에 고장이 발생할 때 발전기의 동기화력을 증가시킨다.",
+      "송전계통의 안정도를 높인다.",
+      "여자기의 전압 상승률을 크게 한다.",
+      "전압조정용 탭의 수동변환을 원활히 하기 위함이다."
+    ],
+    "answer": 4,
+    "explanation": "속응여자방식\n계통의 안정도를 증진시키기 위한 방법 중 하나로서 전압변동을 줄이기 위해 고속도 AVR(자동전압조정기)을 사용하는 방식을 속응여자방식이라 한다. 다음은 속응여자방식을 채용하는 이유를 설명한 것이다.\n(1) 전력계통에 고장이 발생할 때 발전기의 동기화력을 증가시킨다.\n(2) 송전계통의 안정도를 증진시킨다.\n(3) 여자기의 전압상승률을 크게 한다.\n(4) 전압조정용 탭의 자동변환을 원활히 한다.",
+    "image_needed": false,
+    "source_page": "page_098",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 15,
+    "question": "송전단 전압 161[kV], 수전단 전압 154[kV], 상차각 35°, 리액턴스 60[Ω]일 때 선로 손실을 무시하면 전송전력[MW]은 약 얼마인가?",
+    "choices": [
+      "356",
+      "307",
+      "237",
+      "161"
+    ],
+    "answer": 3,
+    "explanation": "정태안정극한전력\n$P = \\frac{E_s E_r}{X} \\sin\\delta$ [MW] 식에서\n$E_s = 161$ [kV], $E_r = 154$ [kV], $\\delta = 35°$, $X = 60$ [Ω] 일 때\n$\\therefore P = \\frac{E_s E_r}{X} \\sin\\delta = \\frac{161 \\times 154}{60} \\times \\sin 35°$\n$= 237$ [MW]",
+    "image_needed": false,
+    "source_page": "page_130",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 5,
+    "question": "애자공사에 의한 고압 옥내배선을 할 때 전선을 조영재의 면을 따라 붙이는 경우, 전선의 지지점간의 거리는 몇 [m] 이하이어야 하는가?",
+    "choices": [
+      "2[m]",
+      "3[m]",
+      "4[m]",
+      "5[m]"
+    ],
+    "answer": 1,
+    "explanation": "애자공사의 이격거리\n| 구분                 | 전압종별 (저압)                                                                                                    | 전압종별 (고압)                                      |\n|----------------------|--------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|\n| 전선 상호간의 간격   | 6[cm] 이상                                                                                                       | 8[cm] 이상                                           |\n| 전선과 조영재 이격거리 | 400[V] 이하: 2.5[cm] 이상, 400[V] 초과: 4.5[cm] 이상, 단, 건조한 장소: 2.5[cm] 이상                             | 5[cm] 이상                                           |\n| 전선 지지점 간의 거리 | 400[V] 초과인 것은 6[m] 이하, 단, 전선을 조영재의 윗면 또는 옆면에 따라 붙일 경우에는 6[m] 이하, 면을 따라 붙이는 경우에는 2[m] 이하 | 6[m] 이하, 단, 전선을 조영재의 면을 따라 붙이는 경우에는 2[m] 이하 |\n\n해당 문제에서는 고압 옥내배선을 조영재의 면을 따라 붙이는 경우이므로, 전선 지지점 간의 거리는 2[m] 이하이다.",
+    "image_needed": false,
+    "source_page": "page_172",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 6,
+    "question": "서로 같은 2개의 구도체에 동일 양의 전하를 대전시킨 후 20[cm] 떨어뜨린 결과 구도체에 서로 $8.6 \\times 10^{-4}$[N]의 반발력이 작용한다. 구도체에 주어진 전하는?",
+    "choices": [
+      "$5.2 \\times 10^{-8}$ [C]",
+      "$6.2 \\times 10^{-8}$ [C]",
+      "$7.2 \\times 10^{-8}$ [C]",
+      "$8.2 \\times 10^{-8}$ [C]"
+    ],
+    "answer": 2,
+    "explanation": "쿨롱의 법칙\n$F = \\frac{Q_1 Q_2}{4\\pi\\epsilon_0 r^2} = \\frac{Q^2}{4\\pi\\epsilon_0 r^2} = 9 \\times 10^9 \\times \\frac{Q^2}{r^2} \\, [N]$ 식에서\n$F = 8.6 \\times 10^{-4} \\, [N]$, $r = 20 \\, [cm]$\n$Q_1 = Q_2 = Q \\, [C]$ 일 때\n$\\therefore Q = \\sqrt{\\frac{F r^2}{9 \\times 10^9}} = \\sqrt{\\frac{8.6 \\times 10^{-4} \\times 0.2^2}{9 \\times 10^9}}$\n$= 6.2 \\times 10^{-8} \\, [C]$",
+    "image_needed": false,
+    "source_page": "page_150",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 11,
+    "question": "3상 유도전동기에서 회전자가 슬립 $s$로 회전하고 있을 때 2차 유기전압 $E_{2s}$ 및 2차 주파수 $f_{2s}$와 $s$의 관계는? (단, $E_2$는 회전자가 정지하고 있을 때 2차 유기전력이며 $f_1$은 1차 주파수이다.)",
+    "choices": [
+      "$E_{2s} = sE_2, f_{2s} = sf_1$",
+      "$E_{2s} = sE_2, f_{2s} = \\frac{f_1}{s}$",
+      "$E_{2s} = \\frac{E_2}{s}, f_{2s} = \\frac{f_1}{s}$",
+      "$E_{2s} = (1-s)E_2, f_{2s} = (1-s)f_1$"
+    ],
+    "answer": 1,
+    "explanation": "유도전동기의 운전시 2차 전압($E_{2s}$)과 2차 주파수($f_{2s}$)\n$\\therefore E_{2s} = sE_2, f_{2s} = sf_1$",
+    "image_needed": false,
+    "source_page": "page_162",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 14,
+    "question": "단상 2선식(110[V]) 저압 배전선로를 단상 3선식(110/220[V])으로 변경하였을 때 전선로의 전압 강하율은 변경 전에 비해서 어떻게 되는가? (단, 부하용량은 변경 전후에 같고 역률은 1.00이며 평형부하이다.)",
+    "choices": [
+      "1/4로 된다.",
+      "1/3로 된다.",
+      "1/2로 된다.",
+      "변하지 않는다."
+    ],
+    "answer": 1,
+    "explanation": "전압에 따른 특성 값의 변화\n전압강하율 $\\delta \\propto \\frac{1}{V^2}$ 일 때\n110[V]에서 220[V]로 2배 승압되었으므로\n∴ 전압 강하율 $\\delta \\propto \\frac{1}{V^2} = \\frac{1}{2^2} = \\frac{1}{4}$배가 된다.",
+    "image_needed": false,
+    "source_page": "page_158",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 18,
+    "question": "저압 또는 고압의 가공전선로와 기설 가공약전류 전선로가 병행할 때 유도작용에 의한 통신상의 장해가 생기지 않도록 전선과 기설 가공약전류전선간의 이격거리는 몇 [m] 이상이어야 하는가? (단, 전기철도용 급전선로는 제외한다.)",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "answer": 1,
+    "explanation": "유도장해 방지\n(1) 저·고압 가공전선로의 이격거리\n저압 가공전선로 또는 고압 가공전선로와 기설 가공 약전류전선로가 병행하는 경우에는 유도작용에 의하여 통신상의 장해가 생기지 않도록 전선과 기설 약전류전선간의 이격거리는 2[m] 이상이어야 한다. (단, 전기철도용 급전선로는 제외한다.)\n(2) 특고압 가공전선로의 유도전류 제한\n특고압 가공전선로는 기설 가공 전화선로에 대하여 상시 정전유도작용에 의한 통신상의 장해가 없도록 시설하여야 한다.",
+    "image_needed": false,
+    "source_page": "page_176",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 19,
+    "question": "전원전압이 100[V]인 단상 전파정류회로에서 점호각이 30°일 때 직류 평균전압은 약 몇 [V] 인가?",
+    "choices": [
+      "① 54",
+      "② 64",
+      "③ 84",
+      "④ 94"
+    ],
+    "answer": 3,
+    "explanation": "단상 전파정류회로\n위상제어가 가능한 경우 최대값 $E_m$, 실효값(=교류값) $E$, 평균값(=직류값) $E_d$, 점호각 $\\alpha$ 라 하면\n$E_d = \\frac{E_m}{\\pi}(1 + \\cos\\alpha) = \\frac{\\sqrt{2}E}{\\pi}(1 + \\cos\\alpha)$ [V]이므로\n$E = 100$ [V], $\\alpha = 30°$일 때 출력전압(평균값)은\n$\\therefore E_d = \\frac{\\sqrt{2}E}{\\pi}(1 + \\cos\\alpha)$\n$= \\frac{\\sqrt{2} \\times 100}{\\pi} \\times (1 + \\cos 30°)$\n$= 84$ [V]",
+    "image_needed": false,
+    "source_page": "page_164",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 3,
+    "question": "진공 중에 서로 떨어져 있는 두 도체 A, B가 있다. 도체 A에만 1[C]의 전하를 줄 때, 도체 A, B의 전위가 각각 3[V], 2[V]이었다. 지금 도체 A, B에 각각 3[C]과 1[C]의 전하를 주면 도체 A의 전위는 몇 [V]인가?",
+    "choices": [
+      "6",
+      "9",
+      "11",
+      "13"
+    ],
+    "answer": 4,
+    "explanation": "전위계수\n$V_A = P_{AA}Q_A + P_{AB}Q_B$ [V]\n$V_B = P_{BA}Q_A + P_{BB}Q_B$ [V] 식에서\n$Q_A = 1$ [C], $Q_B = 0$ [C]일 때\n$V_A = 3$ [V], $V_B = 2$ [V]이면\n$P_{AA} = V_A = 3$, $P_{BA} = V_B = 2$이다.\n$Q_A' = 3$ [C], $Q_B' = 1$ [C]일 때 $V_A'$는\n$\\therefore V_A' = P_{AA}Q_A' + P_{AB}Q_B' = 3 \\times 3 + 2 \\times 1 = 11$ [V]\n참고 전위계수의 성질\n(1) $P_{AA} \\ge P_{BB} > 0$\n(2) $P_{AB} = P_{BA}$",
+    "image_needed": false,
+    "source_page": "page_178",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 18,
+    "question": "직류발전기를 3상 유도전동기에서 구동하고 있다. 이 발전기의 출력이 $P[\\text{kW}]$일 때 전동기의 입력은 약 몇 $[\\text{kW}]$인가? (단 발전기의 효율은 $\\eta_g[\\%]$, 전동기의 효율은 $\\eta_m[\\%]$로 한다.)",
+    "choices": [
+      "$\\eta_g \\eta_m P$",
+      "$\\frac{\\eta_g P}{\\eta_m}$",
+      "$\\frac{P}{\\eta_g \\eta_m}$",
+      "$\\frac{\\eta_m P}{\\eta_g}$"
+    ],
+    "answer": 3,
+    "explanation": "전동기의 입력\n$\\eta = \\eta_g \\eta_m = \\frac{P}{P_{in}}$ 식에서\n전동기의 입력 $P_{in}$은\n$\\therefore P_{in} = \\frac{P}{\\eta_g \\eta_m} [\\text{kW}]$",
+    "image_needed": false,
+    "source_page": "page_192",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 19,
+    "question": "구형단면의 반지름이 $d [\\text{m}]$인 자성체가 있다. 이 자성체의 자화의 세기를 $J [\\text{Wb/m}^2\\text{}]$라 할 때 자기모멘트를 표현한 식으로 알맞은 것은?",
+    "choices": [
+      "$\\pi d^2 J$",
+      "$4 \\pi d^2 J$",
+      "$\\frac{4}{3}\\pi d^3 J$",
+      "$\\frac{3}{4}\\pi d^3 J$"
+    ],
+    "answer": 3,
+    "explanation": "자화의 세기\n$J = \\frac{m}{\\Delta s} = \\frac{M}{\\Delta v} [\\text{Wb/m}^2\\text{}]$ 식에서\n구 형태의 체적은 반지름이 $r [\\text{m}]$ 일 때\n$\\Delta v = \\frac{4}{3}\\pi r^3 [\\text{m}^3\\text{}]$ 이므로\n자기모멘트 $M$ 은\n$\\therefore M = \\Delta v \\cdot J = \\frac{4}{3}\\pi d^3 J [\\text{Wb/m}^2\\text{}]$",
+    "image_needed": false,
+    "source_page": "page_182",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 20,
+    "question": "전류 분포가 도체의 표면 부근에 집중해서 전류가 흐르는 현상을 표피효과라 하는데 표피효과에 대한 설명으로 잘못된 것은?",
+    "choices": [
+      "도체에 교류가 흐르면 표면에서부터 중심으로 들어갈수록 전류밀도가 작아진다.",
+      "표피효과는 고주파일수록 심하다.",
+      "표피효과는 도체의 전도도가 클수록 심하다.",
+      "표피효과는 도체의 투자율이 작을수록 심하다."
+    ],
+    "answer": 4,
+    "explanation": "표피효과의 특징\n(1) 주파수가 높을수록 표피효과는 커진다.\n(2) 투자율이 클수록 표피효과는 커진다.\n(3) 도전율이 클수록 표피효과는 커진다.\n(4) 도체의 단면적(전선의 굵기)이 클수록 표피효과는 커진다.\n(5) 고유저항이 클수록 표피효과는 작아진다.",
+    "image_needed": false,
+    "source_page": "page_182",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2023년 2회 기출문제",
+    "number": 15,
+    "question": "포화하고 있지 않은 직류발전기의 회전수가 4배 증가되었을 때 기전력을 전과 같은 값으로 하려면 여자속도 변화 전에 비해 얼마로 하여야 하는가?",
+    "choices": [
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{1}{4}$",
+      "$\\frac{1}{8}$"
+    ],
+    "answer": 3,
+    "explanation": "직류발전기의 유기기전력($E$)\n$E = K\\phi N$ [V]이므로 기전력이 일정한 경우 $\\phi$ (자속: 여자)와 $N$ (회전수)은 반비례 관계가 성립된다.\n$\\therefore \\phi \\propto \\frac{1}{N}$ 이면 $\\phi$는 $\\frac{1}{4}$ 배 감소한다.",
+    "image_needed": false,
+    "source_page": "page_222",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 2,
+    "question": "단면적 $4 \\text{cm}^2$의 철심에 $6 \\times 10^{-4} \\text{Wb}$의 자속을 통하게 하려면 $2,800 \\text{AT/m}$의 자계가 필요하다. 이 철심의 비투자율은 약 얼마인가?",
+    "choices": [
+      "346",
+      "375",
+      "407",
+      "427"
+    ],
+    "answer": 2,
+    "explanation": "자기회로내의 자속밀도(B)\n$B = \\mu H = \\mu_0 \\mu_s H = \\frac{\\phi}{S} [\\text{Wb/m}^2]$ 식에서\n$S = 4[\\text{cm}^2]$, $\\phi = 6 \\times 10^{-4} [\\text{Wb}]$, $H = 2,800 [\\text{AT/m}]$ 일 때\n$\\therefore \\mu_s = \\frac{\\phi}{\\mu_0 S H} = \\frac{6 \\times 10^{-4}}{4\\pi \\times 10^{-7} \\times 4 \\times 10^{-4} \\times 2,800} = 427$",
+    "image_needed": false,
+    "source_page": "page_209",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 13,
+    "question": "평등자계와 직각방향으로 일정한 속도로 발사된 전자의 원운동에 관한 설명으로 옳은 것은?",
+    "choices": [
+      "플레밍의 오른손법칙에 의한 로렌츠의 힘과 원심력의 평형 원운동이다.",
+      "원의 반지름은 전자의 발사속도와 전계의 세기에 곱에 반비례한다.",
+      "전자의 원운동 주기는 전자의 발사 속도와 무관하다.",
+      "전자의 원운동 주파수는 전자의 질량에 비례한다."
+    ],
+    "answer": 3,
+    "explanation": "전자의 원운동\n플레밍의 왼손법칙에서 유도된 로렌츠의 힘이 자계 중에 놓인 전자에 작용하는 힘이며 전자는 원운동을 하여 갖는 원심력과 평형을 이룬다.\n전류 I, 자속밀도 B, 전자 e, 속도 v, 전자의 질량 m, 원운동 반경 r이라 하면\n$F = IBl [N]$, $v = \\frac{l}{t} [m/sec]$이므로\n$F = IBl = \\frac{e}{t} l B l = evB = \\frac{mv^2}{r} [N]$ 임을 알 수 있다.\n(1) 회전반경 : $r = \\frac{mv}{Be} [m]$\n(2) 각속도 : $\\omega = \\frac{Be}{m} = 2\\pi f [rad/sec]$\n(3) 주기 : $T = \\frac{1}{f} = \\frac{2\\pi m}{Be} [sec]$",
+    "image_needed": false,
+    "source_page": "page_240",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2024년 3회 전기기사",
+    "number": 16,
+    "question": "전계 및 자계의 세기가 각각 $E, H$일 때, 포인팅 벡터 $P$의 표시로 옳은 것은?",
+    "choices": [
+      "$P = \\frac{1}{2} E \\times H$",
+      "$P = E \\text{ rot } H$",
+      "$P = E \\times H$",
+      "$P = H \\text{ rot } E$"
+    ],
+    "answer": 3,
+    "explanation": "포인팅벡터($P$)\n자유공간에서 전계($E$)와 자계($H$)의 전파가 진행하면서 이루게 되는 평면파에 나타나는 단위시간 동안 단위면적당 에너지를 포인팅 벡터($P$)라 하며 자유공간의 고유임피던스를 $\\eta$라 하면\n$\\therefore P = E \\times H = \\eta H^2 = \\frac{E^2}{\\eta}$ [W/m$^2$]",
+    "image_needed": false,
+    "source_page": "page_320",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 7,
+    "question": "전력계통의 주파수 변동은 주로 무엇의 변화에 기인하는가?",
+    "choices": [
+      "유효전력",
+      "무효전력",
+      "계통 전압",
+      "계통 임피던스"
+    ],
+    "answer": 1,
+    "explanation": "전력계통의 주파수 변동\n전력 계통의 주파수는 발전기의 회전수에 의해 결정되므로 부하의 유효전력의 변화에 기인한다. 즉, 부하의 유효전력이 증가하면 주파수는 감소하고 반대로 유효전력이 감소하면 주파수는 증가하게 되는데 이 때 속도를 일정하게 유지하기 위해서 발전기 조속기(가버너)의 계통 동작이 이루어지게 된다.",
+    "image_needed": false,
+    "source_page": "page_350",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 8,
+    "question": "케이블 단선사고에 의한 고장점까지의 거리를 정전용량 측정법으로 구하는 경우, 건전상의 정전용량 $C$, 고장점까지의 정전용량 $C_x$, 케이블의 길이가 $l$일 때 고장점까지의 거리를 나타내는 식으로 알맞은 것은?",
+    "choices": [
+      "$\\frac{C}{C_x}l$",
+      "$\\frac{2C_x}{C}l$",
+      "$\\frac{C_x}{C}l$",
+      "$\\frac{C_x}{2C}l$"
+    ],
+    "answer": 3,
+    "explanation": "정전용량 측정법\n케이블 내의 안쪽 반지름 $a$, 바깥쪽 내반지름 $b$, 케이블의 길이 $l$, 고장점까지의 길이 $x$라 할 때 케이블 내의 정전용량 $C$, $C_x$는 각각\n$C = \\frac{2\\pi\\epsilon}{\\ln{\\left(\\frac{b}{a}\\right)}}l$ [F], $C_x = \\frac{2\\pi\\epsilon}{\\ln{\\left(\\frac{b}{a}\\right)}}x$ [F]이다.\n$\\frac{2\\pi\\epsilon}{\\ln{\\left(\\frac{b}{a}\\right)}}l : \\frac{2\\pi\\epsilon}{\\ln{\\left(\\frac{b}{a}\\right)}}x = C : C_x = l : x$ [F/m] 식에서 고장점 $x$는\n$C : C_x = l : x$\n$\\therefore x = \\frac{C_x}{C}l$[m]",
+    "image_needed": false,
+    "source_page": "page_350",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 9,
+    "question": "전기울타리의 접지전극과 다른 접지계통의 접지전극의 거리는 몇 [m]인가? (단, 충분한 접지망을 가진 경우는 제외한다.)",
+    "choices": [
+      "① 0.5",
+      "② 1",
+      "③ 2",
+      "④ 3"
+    ],
+    "answer": 3,
+    "explanation": "전기울타리\n가축의 탈출 또는 야생짐승의 침입을 방지하기 위함.\n(1) 사용전압은 250[V] 이하.\n(2) 전선 굵기 : 경동선 2[mm²] = 1.38[kN] 이상\n(3) 전선과 기둥 사이의 이격거리 : 25[mm] 이상.\n(4) 전선과 수목과의 이격거리 : 0.3[m] 이상.\n(5) 쉽게 개폐할 수 있는 곳에 전용 개폐기를 시설.\n(6) 전원장치의 외함 및 변압기의 철심은 접지공사 한다.\n(7) 접지전극과 다른 접지전극의 거리는 2[m] 이상.\n(8) 가공전선로의 아래를 통과하는 전기울타리의 금속부분은 교차지점의 양쪽으로부터 5[m] 이상의 간격을 두고 접지하여야 한다.",
+    "image_needed": false,
+    "source_page": "page_368",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 12,
+    "question": "유전율이 각각 다른 두 유전체가 서로 경계를 이루며 접해 있다. 옳지 않은 것은? (단, 이 경계면에는 진전하분포가 없다)",
+    "choices": [
+      "경계면에서 전계의 접선성분은 연속이다.",
+      "경계면에서 전속밀도의 법선성분은 연속이다.",
+      "경계면에서 전계와 전속밀도는 굴절한다.",
+      "경계면에서 전계와 전속밀도는 불변이다."
+    ],
+    "answer": 4,
+    "explanation": "유전체 내에서의 경계조건\n(1) 전계의 세기는 경계면의 접선성분이 서로 같다.\n$E_1 \\sin \\theta_1 = E_2 \\sin \\theta_2$\n(2) 전속밀도는 경계면의 법선성분이 서로 같다.\n$D_1 \\cos \\theta_1 = D_2 \\cos \\theta_2$ 또는\n$\\epsilon_1 E_1 \\cos \\theta_1 = \\epsilon_2 E_2 \\cos \\theta_2$\n(3) 굴절각 조건\n$\\frac{\\epsilon_1}{\\epsilon_2} = \\frac{\\tan \\theta_1}{\\tan \\theta_2}$ 또는 $\\epsilon_1 \\tan \\theta_2 = \\epsilon_2 \\tan \\theta_1$",
+    "image_needed": false,
+    "source_page": "page_346",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 16,
+    "question": "어떤 변전소의 총 부하용량은 전등 600[kW], 동력 800[kW]이다. 각 수용률은 전등 60[%], 동력 80[%]이고, 각 수용가간의 부등률은 전등 1.2, 동력 1.6이며, 전등부하와 동력부하간의 부등률은 1.4라 할 때 변전소에 공급하는 최대전력은 몇 [kW]인가? (단, 선로의 전력손실은 10[%]이다.)",
+    "choices": [
+      "450",
+      "500",
+      "550",
+      "600"
+    ],
+    "answer": 3,
+    "explanation": "합성최대수용전력\n합성최대수용전력 = $\\frac{부하용량 \\times 수용률}{부등률}$ [kW] 식에서\n전등 최대수용전력 = $\\frac{600 \\times 0.6}{1.2} = 300$ [kW]\n동력 최대수용전력 = $\\frac{800 \\times 0.8}{1.6} = 400$ [kW] 일 때\n전등과 동력간의 부등률이 1.4, 선로의 손실이 10[%] 이므로 합성최대수용전력은\n$\\therefore 합성최대수용전력 = \\frac{300 + 400}{1.4} \\times 1.1 = 550$ [kW]",
+    "image_needed": false,
+    "source_page": "page_352",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 17,
+    "question": "모선보호에 사용되는 계전방식이 아닌 것은?",
+    "choices": [
+      "위상 비교방식",
+      "선택접지 계전방식",
+      "방향거리 계전방식",
+      "전류차동 보호방식"
+    ],
+    "answer": 2,
+    "explanation": "모선보호용 계전방식\n(1) 전류차동계전방식\n(2) 전압차동계전방식\n(3) 위상비교계전방식\n(4) 방향비교계전방식(방향거리계전기를 사용)",
+    "image_needed": false,
+    "source_page": "page_352",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 12,
+    "question": "비투자율 $\\mu_s$는 반자성체에서 다음 어느 값을 갖는가?",
+    "choices": [
+      "$\\mu_s = 1$",
+      "$\\mu_s < 1$",
+      "$\\mu_s > 1$",
+      "$\\mu_s = 0$"
+    ],
+    "answer": 2,
+    "explanation": "자성체의 성질\n비투자율 $\\mu_s$, 자화율 $\\chi_m$라 하면\n(1) 역자성체(반자성체) : $\\mu_s < 1$, $\\chi_m < 0$\n(수소, 헬륨, 구리, 탄소, 안티몬, 비스무트, 은 등)\n(2) 상자성체 : $\\mu_s > 1$, $\\chi_m > 0$\n(칼륨, 텅스텐, 산소, 백금, 알루미늄 등)\n(3) 강자성체 : $\\mu_s \\gg 1$, $\\chi_m \\gg 0$\n(철, 니켈, 코발트)",
+    "image_needed": false,
+    "source_page": "page_374",
+    "subject": "전력공학"
+  },
+  {
+    "round": "전기기사 과년도 출제문제",
+    "number": 9,
+    "question": "3상 전원에 접속된 Δ결선의 콘덴서를 Y결선으로 바꾸면 진상용량은 어떻게 되는가?",
+    "choices": [
+      "√3배로 된다.",
+      "1/3로 된다.",
+      "3배로 된다.",
+      "1/√3로 된다."
+    ],
+    "answer": 2,
+    "explanation": "진상용량(=충전용량 : Q_c)\n정전용량(C)을 Δ결선한 경우 충전용량을 Q_Δ,\nY결선한 경우 충전용량을 Q_Y라 하면\nQ_Δ = 3I_C V = 3 × ωCV × V = 3ωC V² [VA]\nQ_Y = 3I_C V = 3 × ωC (V/√3) × (V/√3)\n= ωC V² [VA]\nQ_Y = ωC V² = (1/3) Q_Δ [VA]\n∴ Δ결선을 Y결선으로 바꾸면 (1/3)배가 된다.",
+    "image_needed": false,
+    "source_page": "page_243",
+    "subject": "전력공학"
+  },
+  {
+    "round": "전기기사 과년도출문제",
+    "number": 19,
+    "question": "고압 가공전선의 가공지선에 나경동선을 사용하려면 지름 몇 [mm] 이상의 것을 사용하여야 하는가?",
+    "choices": [
+      "2.0",
+      "3.0",
+      "4.0",
+      "5.0"
+    ],
+    "answer": 3,
+    "explanation": "가공전선로의 지지물에 시설하는 가공지선\n사용전압 | 가공지선의 규격\n---|---\n고압 | 인장강도 5.26 [kN] 이상의 것 또는 지름 4 [mm] 이상의 나경동선\n특고압 | 인장강도 8.01 [kN] 이상의 것 또는 지름 5 [mm] 이상의 나경동선, 22 [mm²] 이상의 나경동연선이나 아연도강연선, OPGW(광섬유 복합 가공지선) 전선",
+    "image_needed": false,
+    "source_page": "page_061",
+    "subject": "전력공학"
+  },
+  {
+    "round": "전기기사 과년도출문제",
+    "number": 20,
+    "question": "변전소의 주요 변압기에 계측장치를 시설하여 측정하여야 하는 것이 아닌 것은?",
+    "choices": [
+      "역률",
+      "전압",
+      "전력",
+      "전류"
+    ],
+    "answer": 1,
+    "explanation": "계측장치\n변전소 또는 이에 준하는 곳에는 다음의 사항을 계측하는 장치를 시설하여야 한다. 다만, 전기철도용 변전소는 주요 변압기의 전압을 계측하는 장치를 시설하지 아니할 수 있다.\n(1) 주요 변압기의 전압 및 전류 또는 전력\n(2) 특고압용 변압기의 온도",
+    "image_needed": false,
+    "source_page": "page_061",
+    "subject": "전력공학"
+  },
+  {
+    "round": "전기기사_과년도출문제",
+    "number": 12,
+    "question": "10 [kW], 3상 380 [V] 유도전동기의 전부하전류는 약 몇 [A]인가? (단, 전동기의 효율은 85[%], 역률은 85[%]이다.)",
+    "choices": [
+      "① 15",
+      "② 21",
+      "③ 26",
+      "④ 36"
+    ],
+    "answer": 2,
+    "explanation": "3상 유도전동기의 출력($P$)\n$P = \\sqrt{3} V I \\cos \\theta \\eta$ [W] 식에서\n$P = 10 [\\text{kW}], V = 380 [\\text{V}], \\cos \\theta = 0.85, \\eta = 0.85$ 이므로 전부하전류 $I$는\n$I = \\frac{P}{\\sqrt{3} V \\cos \\theta \\eta} = \\frac{10 \\times 10^3}{\\sqrt{3} \\times 380 \\times 0.85 \\times 0.85} \\approx 21 [\\text{A}]$",
+    "image_needed": false,
+    "source_page": "page_047",
+    "subject": "전력공학"
+  },
+  {
+    "round": "전기기사_과년도출문제",
+    "number": 13,
+    "question": "변압기의 주요시험 항목 중 전압변동률을 계산에 필요한 수치를 얻기 위한 필수적인 시험은?",
+    "choices": [
+      "단락시험",
+      "내전압시험",
+      "변압비시험",
+      "온도상승시험"
+    ],
+    "answer": 1,
+    "explanation": "변압기의 시험\n(1) 무부하 시험으로부터 구할 수 있는 것 : 여자전류(무부하전류), 철손(히스테리시스손 및 와류손), 여자어드미턴스 등\n(2) 단락시험으로부터 구할 수 있는 것 : 임피던스 전압, 임피던스 와트(동손), 누설리액턴스, %임피던스(%저항강하 및 %리액턴스 강하), 전압변동률 등",
+    "image_needed": false,
+    "source_page": "page_047",
+    "subject": "전력공학"
+  },
+  {
+    "round": "N/A",
+    "number": 14,
+    "question": "반지름이 r[m]인 반원형 전류 I[A]에 의한 반원의 중심(O)에서 자계의 세기[AT/m]는? [그림]",
+    "choices": [
+      "$\\frac{2I}{r}$",
+      "$\\frac{I}{r}$",
+      "$\\frac{I}{2r}$",
+      "$\\frac{I}{4r}$"
+    ],
+    "answer": 4,
+    "explanation": "반원형 코일 중심의 자계의 세기(H)\n원형코일 중심의 자계의 세기를 $H_0$, 반원형 코일 중심의 자계의 세기를 H라 하면 $H_0 = \\frac{I}{2r}$ [AT/m]이며\n$\\therefore H = \\frac{1}{2} H_0 = \\frac{1}{2} \\times \\frac{I}{2r} = \\frac{I}{4r}$ [AT/m]",
+    "image_needed": true,
+    "source_page": "page_065",
+    "subject": "전력공학"
+  },
+  {
+    "round": "N/A",
+    "number": 15,
+    "question": "진공 중에서 점 (0, 1)[m]의 위치에 $-2 \\times 10^{-9}$ [C]의 점전하가 있을 때, 점 (2, 0)[m]에 있는 1[C]의 점전하에 작용하는 힘은 몇 [N]인가? (단, $\\hat{x}$, $\\hat{y}$는 단위벡터이다.)",
+    "choices": [
+      "$\\frac{18}{3\\sqrt{5}}\\hat{x} + \\frac{36}{3\\sqrt{5}}\\hat{y}$",
+      "$-\\frac{36}{5\\sqrt{5}}\\hat{x} + \\frac{18}{5\\sqrt{5}}\\hat{y}$",
+      "$\\frac{36}{3\\sqrt{5}}\\hat{x} + \\frac{18}{3\\sqrt{5}}\\hat{y}$",
+      "$\\frac{36}{5\\sqrt{5}}\\hat{x} + \\frac{18}{5\\sqrt{5}}\\hat{y}$"
+    ],
+    "answer": 2,
+    "explanation": "쿨롱의 법칙\n점 (0, 1) [m] 위치의 전하 $Q_1$, 점 (2, 0) [m] 위치의 전하를 $Q_2$라\n하면 $\\hat{r} = \\frac{1}{|\\vec{r}|}(2\\hat{x} - \\hat{y})$\n이므로\n$|\\vec{r}| = \\sqrt{1^2 + 2^2} = \\sqrt{5}$ [m], $Q_1 = -2 \\times 10^{-9}$ [C], $Q_2 = 1$ [C]일 때\n$\\vec{F} = \\frac{Q_1 Q_2}{4 \\pi \\epsilon_0 r^2} \\cdot \\hat{r} = 9 \\times 10^9 \\times \\frac{Q_1 Q_2}{r^2} \\cdot \\hat{r}$ [N] 식에서\n$\\therefore \\vec{F} = 9 \\times 10^9 \\times \\frac{Q_1 Q_2}{r^2} \\cdot \\hat{r}$\n$= 9 \\times 10^9 \\times \\frac{-2 \\times 10^{-9} \\times 1}{(\\sqrt{5})^2} \\times \\frac{1}{\\sqrt{5}}(2\\hat{x} - \\hat{y})$\n$= -\\frac{36}{5\\sqrt{5}}\\hat{x} + \\frac{18}{5\\sqrt{5}}\\hat{y}$ [N]",
+    "image_needed": true,
+    "source_page": "page_065",
+    "subject": "전력공학"
+  },
+  {
+    "round": "N/A",
+    "number": 16,
+    "question": "15[kW] 3상 유도전동기의 기계손이 350[W], 전부하시의 슬립이 2[%]이다. 전부하시의 2차 동손 [W]은?",
+    "choices": [
+      "275",
+      "313",
+      "426",
+      "475"
+    ],
+    "answer": 2,
+    "explanation": "전력변환 종합표\n구분 | $\\times P_2$ | $\\times P_{c2}$ | $\\times P_0$\n---|---|---|---\n$P_2=$ | 1 | $\\frac{1}{s}$ | $\\frac{1}{1-s}$\n$P_{c2}=$ | $s$ | 1 | $\\frac{s}{1-s}$\n$P_0=$ | $1-s$ | $\\frac{1-s}{s}$ | 1\n\n$P_0 = P + P_l$ [W]\n$P_{c2} = s \\times P_2 = \\frac{s}{1-s} \\times P_0$ [W] 식에서\n$P = 15$[kW], $P_l = 350$[W], $s = 2$[%] 이므로\n$P_0 = P + P_l = 15 \\times 10^3 + 350 = 15,350$[W] 일 때\n$\\therefore P_{c2} = \\frac{s}{1-s} P_0 = \\frac{0.02}{1-0.02} \\times 15,350 = 313$[W]",
+    "image_needed": false,
+    "source_page": "page_277",
+    "subject": "전력공학"
+  },
+  {
+    "round": "N/A - Not visible in the provided image.",
+    "number": 17,
+    "question": "$\\vec{E} = \\vec{i} + 2\\vec{j} + 3\\vec{k}$ [V/cm]로 표시되는 전계가 있다. $0.01$ [$\\mu$C]의 전하를 원점으로부터 $\\vec{r} = 3\\vec{i}$ [m]로 움직이는데 요하는 일 [J]은?",
+    "choices": [
+      "$4.69 \\times 10^{-6}$",
+      "$3 \\times 10^{-6}$",
+      "$4.69 \\times 10^{-8}$",
+      "$3 \\times 10^{-8}$"
+    ],
+    "answer": 2,
+    "explanation": "전계 내에서의 에너지=일($W$)\n전계의 세기 $\\vec{E}$, 전하 $Q$, 힘 $\\vec{F}$, 거리를 $\\vec{l}$이라 하면\n$Q = 0.01$ [$\\mu$C], $\\vec{l} = 3\\vec{i}$ [m] $= 3\\vec{i} \\times 10^2$ [cm] 이므로\n$W = \\vec{F} \\cdot \\vec{l} = Q\\vec{E} \\cdot \\vec{l}$\n$= 0.01 \\times 10^{-6} \\times (\\vec{i} + 2\\vec{j} + 3\\vec{k}) \\cdot (3\\vec{i} \\times 10^2)$\n$= 0.01 \\times 10^{-6} \\times 3 \\times 10^2$\n$= 3 \\times 10^{-6}$ [J]\n참고 벡터의 내적 성질\n$\\vec{i} \\cdot \\vec{i} = \\vec{j} \\cdot \\vec{j} = \\vec{k} \\cdot \\vec{k} = 1$\n$\\vec{i} \\cdot \\vec{j} = \\vec{j} \\cdot \\vec{k} = \\vec{k} \\cdot \\vec{i} = 0$",
+    "image_needed": false,
+    "source_page": "page_375",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 3,
+    "question": "전기철도 변전소의 급전용변압기는 교류 전기철도의 경우 어떤 변압기 적용을 원칙으로 하는가?",
+    "choices": [
+      "3상 정류기용 변압기",
+      "3상 스코트결선 변압기",
+      "3상 흡상변압기",
+      "3상 단권변압기"
+    ],
+    "answer": 1,
+    "explanation": "변전소의 급전용변압기\n(1) 직류 전기철도 : 3상 정류기용 변압기\n(2) 교류 전기철도 : 3상 스코트결선 변압기",
+    "image_needed": false,
+    "source_page": "page_201",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 9,
+    "question": "그림과 같은 환상 솔레노이드 내의 철심 중심에서의 자계의 세기 H[AT/m]는? (단, 환상 철심의 평균 반지름은 r[m], 코일의 권수는 N회, 코일에 흐르는 전류는 I[A]이다.)",
+    "choices": [
+      "$\\frac{NI}{\\pi r}$",
+      "$\\frac{NI}{2\\pi r}$",
+      "$\\frac{NI}{4\\pi r}$",
+      "$\\frac{NI}{2r}$"
+    ],
+    "answer": 2,
+    "explanation": "환상 솔레노이드에 의한 자계의 세기($H$)\n$H_{in} = \\frac{NI}{l} = \\frac{NI}{2\\pi r}$ [AT/m], $H_{out} = 0$[AT/m]\n솔레노이드 내부의 자계의 세기는\n∴ $H_{in} = \\frac{NI}{2\\pi r}$ [AT/m]",
+    "image_needed": true,
+    "source_page": "page_007",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 10,
+    "question": "환상 솔레노이드의 단면적이 S, 평균 반지름이 r, 권선수가 N이고 누설자속이 없는 경우 자기 인덕턴스의 크기는?",
+    "choices": [
+      "권선수 및 단면적에 비례한다.",
+      "권선수의 제곱 및 단면적에 비례한다.",
+      "권선수의 제곱 및 평균 반지름에 비례한다.",
+      "권선수의 제곱에 비례하고 단면적에 반비례한다."
+    ],
+    "answer": 2,
+    "explanation": "환상 솔레노이드의 자기인덕턴스(L)\n$L = \\frac{N^2}{R_m} = \\frac{\\mu SN^2}{l} = \\frac{\\mu SN^2}{2\\pi r}$ [H]이므로\n∴ 자기인덕턴스($L$)는 코일권수($N$)의 제곱 및 단면적($S$)에 비례한다.",
+    "image_needed": false,
+    "source_page": "page_007",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 2회 기출문제",
+    "number": 14,
+    "question": "저압배전선로에 대한 설명으로 틀린 것은?",
+    "choices": [
+      "저압 뱅킹 방식은 전압변동을 경감할 수 있다.",
+      "밸런서(balancer)는 단상 2선식에 필요하다.",
+      "부하율(F)와 손실계수(H) 사이에는 $1 \\geq F \\geq H \\geq F^2 \\geq 0$의 관계가 있다.",
+      "수용률이란 최대수용전력을 설비용량으로 나눈 값을 퍼센트로 나타낸 것이다."
+    ],
+    "answer": 2,
+    "explanation": "저압밸런서\n단상 3선식은 중성선이 읍단되면 전압불평형이 발생하므로 중성선에 퓨즈를 삽입하면 안되며 부하 말단에 저압밸런스를 설치하여 전압밸런스를 유지한다.",
+    "image_needed": false,
+    "source_page": "page_043",
+    "subject": "전력공학"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 16,
+    "question": "전계 $E$[V/m], 전속밀도 $D$[C/m²], 유전율 $\\epsilon = \\epsilon_0\\epsilon_r$[F/m], 분극의 세기 $P$[C/m²] 사이의 관계를 나타낸 것으로 옳은 것은?",
+    "choices": [
+      "$P = D + \\epsilon_0 E$",
+      "$P = D - \\epsilon_0 E$",
+      "$P = \\frac{D+E}{\\epsilon_0}$",
+      "$P = \\frac{D-E}{\\epsilon_0}$"
+    ],
+    "answer": 2,
+    "explanation": "분극전하에 의한 전계의 세기($E$)\n분극의 세기 $P$, 전속밀도 $D$, 분극률 $\\chi$라 하면\n$P = D - \\epsilon_0 E = \\epsilon_0 \\epsilon_r E - \\epsilon_0 E$\n$= \\epsilon_0 (\\epsilon_r - 1) E = \\chi E = (1 - \\frac{1}{\\epsilon_r}) D$[C/m²]이다.",
+    "image_needed": false,
+    "source_page": "page_009",
+    "subject": "전력공학"
+  }
+]

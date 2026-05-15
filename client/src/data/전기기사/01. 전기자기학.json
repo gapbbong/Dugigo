@@ -1,0 +1,354 @@
+[
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 3,
+    "question": "정상전류계에서 $\\nabla \\cdot \\mathbf{i} = 0$에 대한 설명으로 틀린 것은?",
+    "choices": [
+      "도체 내에 흐르는 전류는 연속이다.",
+      "도체 내에 흐르는 전류는 일정하다.",
+      "단위 시간당 전화의 변화가 없다.",
+      "도체 내에 전류가 흐르지 않는다."
+    ],
+    "answer": 4,
+    "explanation": "전류의 연속성\n도체 내에서 키르히호프의 제1법칙은 $\\sum I = 0\\,[\\text{A}]$이므로\n$\\sum I = \\oint_S \\mathbf{i} \\cdot d\\mathbf{s} = \\int_V \\nabla \\cdot \\mathbf{i} \\, dv = 0\\,[\\text{A}]$이다.\n$\\nabla \\cdot \\mathbf{i} = 0$이란 도체 내에서는 전류의 발산이 일어나지 않으며 도체 내의 임의의 점으로 흘러들어가는 전류와 흘러나오는 전류는 서로 같다는 전류의 연속성을 의미한다.\n따라서 도체 내에 흐르는 전류는 일정하며 단위시간당 전화의 변화도 없음을 알 수 있다.",
+    "image_needed": false,
+    "source_page": "page_005",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 6,
+    "question": "유전율이 $\\epsilon_1$과 $\\epsilon_2$인 두 유전체가 경계를 이루어 평행하게 접하고 있는 경우 유전율이 $\\epsilon_1$인 영역에 전하 Q가 존재할 때 이 전하와 $\\epsilon_2$인 유전체 사이에 작용하는 힘에 대한 설명으로 옳은 것은?",
+    "choices": [
+      "$\\epsilon_1 > \\epsilon_2$ 인 경우 반발력이 작용한다.",
+      "$\\epsilon_1 < \\epsilon_2$ 인 경우 흡인력이 작용한다.",
+      "$\\epsilon_1$과 $\\epsilon_2$에 상관없이 반발력이 작용한다.",
+      "$\\epsilon_1$과 $\\epsilon_2$에 상관없이 흡인력이 작용한다."
+    ],
+    "answer": 1,
+    "explanation": "유전체의 경계면의 조건\n유전율이 서로 다른 두 유전체가 경계면을 이루고 있을 때 $\\epsilon_1$인 유전체에 전하가 놓여 있다면 $\\epsilon_1 > \\epsilon_2$ 인 경우 유전체 경계면에서는 $\\epsilon_1$에서 $\\epsilon_2$ 유전체로 힘이 작용하게 된다. 이 때 경계면에 작용하는 힘은 $\\epsilon_1$ 유전체에 존재하는 전하 Q가 $\\epsilon_2$ 유전체를 밀어내는 방향으로 작용하기 때문에 전하 Q와 $\\epsilon_2$ 유전체 사이에는 반발력이 작용함을 알 수 있다.",
+    "image_needed": false,
+    "source_page": "page_122",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 7,
+    "question": "단면적이 균일한 환상철심에 권수 100회인 A코일과 권수 400회인 B코일이 있을 때 A코일의 자기 인덕턴스가 4[H]라면 두 코일의 상호 인덕턴스는 몇 [H]인가? (단, 누설자속은 0이다.)",
+    "choices": [
+      "4",
+      "8",
+      "12",
+      "16"
+    ],
+    "answer": 4,
+    "explanation": "상호 인덕턴스($M$)\n$M = \\frac{N_A N_B}{R_m} = \\frac{\\mu S N_A N_B}{l} = \\frac{L_B N_A}{N_B} = \\frac{L_A N_B}{N_A}$\n$= k \\sqrt{L_A L_B}$ [H] 식에서\n$N_A = 100$, $N_B = 400$, $L_A = 4$ [H]일 때\n$\\therefore M = \\frac{L_A N_B}{N_A} = \\frac{4 \\times 400}{100} = 16$ [H]",
+    "image_needed": false,
+    "source_page": "page_122",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 8,
+    "question": "평균 자로의 길이가 10[cm], 평균 단면적이 2[cm$^2$]인 환상 솔레노이드의 자기 인덕턴스를 5.4[mH] 정도로 하고자 한다. 이때 필요한 코일의 권선수는 약 몇 회인가? (단, 철심의 비투자율은 15,000이다.)",
+    "choices": [
+      "6",
+      "12",
+      "24",
+      "29"
+    ],
+    "answer": 2,
+    "explanation": "환상 솔레노이드의 자기 인덕턴스($L$)\n$L = \\frac{N^2}{R_m} = \\frac{\\mu S N^2}{l} = \\frac{\\mu_0 \\mu_s S N^2}{l}$ [H] 식에서\n$l = 10 [cm]$, $S = 2 [cm^2]$, $L = 5.4 [mH]$, $\\mu_s = 15,000$ 일 때\n$\\therefore N = \\sqrt{\\frac{Ll}{\\mu_0 \\mu_s S}}$\n$= \\sqrt{\\frac{5.4 \\times 10^{-3} \\times 10 \\times 10^{-2}}{4\\pi \\times 10^{-7} \\times 15,000 \\times 2 \\times 10^{-4}}}$\n$= 12$",
+    "image_needed": false,
+    "source_page": "page_122",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 12,
+    "question": "정전용량이 C₀[μF]인 평행판의 공기 커패시터가 있다. 두 극판 사이에 극판과 평행하게 절반을 비유전율이 εᵣ인 유전체로 채우면 커패시터의 정전용량[μF]은?",
+    "choices": [
+      "\\frac{C_0}{2(1+\\frac{1}{\\epsilon_r})}",
+      "\\frac{C_0}{1+\\frac{1}{\\epsilon_r}}",
+      "\\frac{2C_0}{1+\\frac{1}{\\epsilon_r}}",
+      "\\frac{4C_0}{1+\\frac{1}{\\epsilon_r}}"
+    ],
+    "answer": 3,
+    "explanation": "유전체 내의 평행판 전극의 직렬연결\n공기콘덴서의 정전용량을 C₀라 하면\nC = \\frac{\\epsilon_0 S}{d} [μF]이다.\n콘덴서 판 간에 절반 두께를 유전체로 채운 경우 평행판 전극의 경계면과 단자가 수직을 이루고 있으므로 콘덴서는 직렬로 접속된다. 각 콘덴서의 정전용량을 C₁, C₂라 하고 합성정전용량을 C라 하면\nC₁ = \\frac{\\epsilon_0 S}{d/2} = \\frac{2\\epsilon_0 S}{d} = 2C₀[μF]\nC₂ = \\frac{\\epsilon_0 \\epsilon_r S}{d/2} = \\frac{2\\epsilon_0 \\epsilon_r S}{d} = 2\\epsilon_r C₀[μF]\n\\therefore C = \\frac{1}{\\frac{1}{C_1} + \\frac{1}{C_2}} = \\frac{1}{\\frac{1}{2C_0} + \\frac{1}{2\\epsilon_r C_0}} = \\frac{2C_0}{1+\\frac{1}{\\epsilon_r}} [μF]",
+    "image_needed": false,
+    "source_page": "page_124",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 13,
+    "question": "그림과 같이 점 O를 중심으로 반지름이 a[m]인 구도체 1과 안쪽 반지름이 b[m]이고 바깥쪽 반지름이 c[m]인 구도체 2가 있다. 이 도체계에서 전위계수 P₁₁[1/F]에 해당하는 것은? [그림]",
+    "choices": [
+      "\\frac{1}{4\\pi\\epsilon}\\frac{1}{a}",
+      "\\frac{1}{4\\pi\\epsilon}(\\frac{1}{a} - \\frac{1}{b})",
+      "\\frac{1}{4\\pi\\epsilon}(\\frac{1}{b} - \\frac{1}{c})",
+      "\\frac{1}{4\\pi\\epsilon}(\\frac{1}{a} - \\frac{1}{b} + \\frac{1}{c})"
+    ],
+    "answer": 4,
+    "explanation": "전위계수(P₁₁)\n도체 1에 +Q[C]의 전하를 줄 때 도체 1, 2의 전위 V₁, V₂는\nV₁ = \\frac{Q_1}{4\\pi\\epsilon}(\\frac{1}{a} - \\frac{1}{b} + \\frac{1}{c}) [V], V₂ = \\frac{Q_1}{4\\pi\\epsilon}\\frac{1}{c} [V]이고\nV₁ = P₁₁ Q₁ + P₁₂ Q₂ [V]\nV₂ = P₂₁ Q₁ + P₂₂ Q₂ [V] 식에서\nQ₂ = 0[C]일 때\n\\therefore P₁₁ = \\frac{V_1}{Q_1} = \\frac{1}{4\\pi\\epsilon}(\\frac{1}{a} - \\frac{1}{b} + \\frac{1}{c}) [V]",
+    "image_needed": true,
+    "source_page": "page_124",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 14,
+    "question": "자계의 세기를 나타내는 단위가 아닌 것은?",
+    "choices": [
+      "A/m",
+      "N/Wb",
+      "H·A/m²",
+      "Wb/(H·m)"
+    ],
+    "answer": 3,
+    "explanation": "자계의 세기 단위\n(1) H = \\frac{I}{2\\pi r} 식에서 [A/m]\n(2) H = \\frac{F}{m} 식에서 [N/Wb]\n(3) H = \\frac{m}{4\\pi \\mu_0 r^2} 식에서 [Wb/(H·m)]\n\\therefore [H·A/m²]는 자속밀도의 단위이다.",
+    "image_needed": false,
+    "source_page": "page_124",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 12,
+    "question": "회전계자형 동기발전기의 설명으로 틀린 것은?",
+    "choices": [
+      "전기자권선은 전압이 높고 결선이 복잡하다.",
+      "대용량의 경우에도 전류는 작다.",
+      "계자회로는 직류의 저압회로이며 소요전력도 적다.",
+      "계자극은 기계적으로 튼튼하게 만들기 쉽다."
+    ],
+    "answer": 2,
+    "explanation": "회전계자형을 채용하는 이유\n(1) 계자는 전기자보다 철의 분포가 크기 때문에 기계적으로 튼튼하다.\n(2) 계자는 전기자보다 결선이 쉽고 구조가 간단하다.\n(3) 고압이 걸리는 전기자보다 저압인 계자가 조작하는 데 더 안전하다.\n(4) 고압이 걸리는 전기자를 절연하는 데는 고정자로 두어야 용이해진다.",
+    "image_needed": false,
+    "source_page": "page_162",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 13,
+    "question": "3상 3선식의 전선 소요량에 대한 3상 4선식의 전선 소요량의 비는 얼마인가? (단, 배전거리, 배전전력 및 전력손실은 같고, 4선식의 중성선의 굵기는 외선의 굵기와 같으며, 외선과 중성선간의 전압은 3선식의 선간전압과 같다.)",
+    "choices": [
+      "$\\frac{4}{9}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{3}{4}$",
+      "$\\frac{1}{3}$"
+    ],
+    "answer": 1,
+    "explanation": "배전방식의 전기적 특성 비교\n구분 | 전선중량비교\n단상2선식 | 100[%]\n단상3선식 | $\\frac{3}{8}$ = 37.5[%]\n3상3선식 | $\\frac{3}{4}$ = 75[%]\n3상4선식 | $\\frac{1}{3}$ = 33.3[%]\n\n∴ 3상 4선식 : 3상 3선식 = $\\frac{0.333}{0.75} = \\frac{\\frac{1}{3}}{\\frac{3}{4}} = \\frac{1}{3} \\times \\frac{4}{3} = \\frac{4}{9}$",
+    "image_needed": false,
+    "source_page": "page_158",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 9,
+    "question": "두 코일 A, B의 저항과 리액턴스가 A코일은 3 [Ω], 5[Ω]이고 B코일은 5[Ω], 1[Ω]일 때 두 코일을 직렬로 접속하여 100[V]의 전압을 인가시 회로에 흐르는 전류 $I$는 몇 [A]인가?",
+    "choices": [
+      "① 10∠-37°",
+      "② 10∠37°",
+      "③ 10∠-53°",
+      "④ 10∠53°"
+    ],
+    "answer": 1,
+    "explanation": "R, X 직렬회로의 전류\n$I = \\frac{V}{Z}$ [A] 식에서\n$Z_A = 3 + j5$ [Ω], $Z_B = 5 + j1$ [Ω]\n$V = 100$ [V] 이므로\n$Z = Z_A + Z_B = 3 + j5 + 5 + j1 = 8 + j6$\n$= \\sqrt{8^2 + 6^2} \\angle \\tan^{-1}(\\frac{6}{8}) = 10 \\angle 37^{\\circ}$ [Ω] 일 때\n∴ $I = \\frac{V}{Z} = \\frac{100}{10 \\angle 37^{\\circ}} = 10 \\angle -37^{\\circ}$ [A]",
+    "image_needed": false,
+    "source_page": "page_254",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 10,
+    "question": "다음 중 고압배전계통의 구성 순서로 알맞은 것은?",
+    "choices": [
+      "① 배전변전소 → 간선 → 분기선 → 급전선",
+      "② 배전변전소 → 급전선 → 간선 → 분기선",
+      "③ 배전변전소 → 간선 → 급전선 → 분기선",
+      "④ 배전변전소 → 급전선 → 분기선 → 간선"
+    ],
+    "answer": 2,
+    "explanation": "고압배전계통의 구성\n배전용변전소로부터 부하에 전력을 공급하는 데에는 여러 가지 방식이 있지만 우선 그 기준으로서 선로전류의 대소에 따라 급전선, 간선 및 분기선으로 나눌 수 있다.\n∴ 배전용 변전소 → 급전선 → 간선 → 분기선",
+    "image_needed": false,
+    "source_page": "page_244",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 11,
+    "question": "가스절연개폐장치인 GIS(Gas Insulated Switch Gear)를 채용할 때, 다음 중 GIS 내에 설치하지 않는 장치는?",
+    "choices": [
+      "① 전력용 변압기",
+      "② 계기용 변성기",
+      "③ 차단기",
+      "④ 단로기"
+    ],
+    "answer": 2,
+    "explanation": "가스절연개폐장치 : GIS(Gas Insulated Switch Gear)\n금속용기(Enclosure) 내에 모선, 개폐장치(단로기와 차단기), 변성기(PT와 CT), 피뢰기 등을 내장시키고 절연 성능과 소호특성이 우수한 SF6 가스로 충전, 밀폐하여 절연을 유지시키는 개폐장치이다.",
+    "image_needed": false,
+    "source_page": "page_244",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 3회",
+    "number": 6,
+    "question": "외분권 차동복권발전기의 단자전압 V는? (단, $\\phi_f$ [Wb]: 직권계자권선에 의한 자속, $\\phi_s$ [Wb]: 분권계자의 자속, $R_s$ [Ω]: 전기자의 저항, $R_a$ [Ω]: 직권계자저항, $I_a$ [A]: 전기자의 전류, $I$ [A]: 부하전류, $n$ [rps]: 속도, $k = \\frac{PZ}{a}$ 이며 자기회로의 포화현상과 전기자반작용은 무시한다.)",
+    "choices": [
+      "① $V = k(\\phi_f + \\phi_s)n - I_a R_a - I_s R_s$ [V]",
+      "② $V = k(\\phi_f - \\phi_s)n - I_a R_a - I_s R_s$ [V]",
+      "③ $V = k(\\phi_f + \\phi_s)n - I_a (R_a + R_s)$ [V]",
+      "④ $V = k(\\phi_f - \\phi_s)n - I_a (R_a + R_s)$ [V]"
+    ],
+    "answer": 4,
+    "explanation": "외분권 차동복권발전기의 유기기전력(E)\n$E = k\\phi n = V + I_a R_a$ 식에서\n$\\phi = \\phi_f - \\phi_s$ [Wb], $R_o = R_a + R_s$ [Ω] 이므로\n∴ $V = E - I_a R_o = k(\\phi_f - \\phi_s)n - I_a (R_a + R_s)$ [V]",
+    "image_needed": false,
+    "source_page": "page_328",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 3회",
+    "number": 7,
+    "question": "3상 동기발전기의 각 상의 유기기전력 중에서 제5고조파를 제거하려면 코일간격/극간격을 어떻게 하면 되는가?",
+    "choices": [
+      "① 0.8",
+      "② 0.5",
+      "③ 0.7",
+      "④ 0.6"
+    ],
+    "answer": 1,
+    "explanation": "단절권 계수($k_p$)\n동기발전기의 권선을 단절권으로 감았을 때 제5고조파가 제거되었다면 5고조파 단절권계수($k_p$)는 0이 되어야 한다.\n$k_p = \\sin \\frac{5\\beta\\pi}{2} = 0$ 이기 위해서는\n$\\frac{5\\beta\\pi}{2} = n\\pi$ ($n$은 정수)를 만족해야 하므로\n$\\beta = \\frac{2n}{5} < 1$ 이어야 한다.\n$n=1$일 때 $\\beta = \\frac{2}{5} = 0.4$\n$n=2$일 때 $\\beta = \\frac{4}{5} = 0.8$\n∴ $\\beta = \\frac{\\text{코일 간격}}{\\text{극 간격}} = 0.8$일 때 제5고조파가 제거된다.",
+    "image_needed": false,
+    "source_page": "page_328",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 20,
+    "question": "높은 주파수의 전자파가 전파될 때 일기가 좋은 날보다 비오는 날 전자파의 감쇠가 심한 원인은?",
+    "choices": [
+      "도전율 관계",
+      "유전율 관계",
+      "투자율 관계",
+      "분극률 관계"
+    ],
+    "answer": 1,
+    "explanation": "전자파의 감쇠\n$tan \\delta = \\frac{\\epsilon''}{\\epsilon'} = \\frac{\\sigma}{\\omega \\epsilon}$ 식에서 $\\sigma \\gg \\omega \\epsilon$일 때 그 매질을\n양도체라 하고 양도체에서 감쇠정수($\\alpha$)와 위상정수($\\beta$)는 같아진다.\n$\\alpha = \\beta = \\sqrt{\\pi f \\mu \\sigma}$이므로 감쇠정수와 위상정수는 주파수, 투자율, 도전율에 비례한다.\n$\\therefore$ 비오는 날은 맑은 날씨에 비해서 주위의 도전율이 증가하여 감쇠정수가 매우 커지므로 전자파의 감쇠가 심해진다.",
+    "image_needed": false,
+    "source_page": "page_376",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 17,
+    "question": "정상상태에서 $t=0$ 초인 순간에 스위치 $S$를 열었다. 이 때 흐르는 전류 $i(t)$는?",
+    "choices": [
+      "$\\frac{V}{R}e^{-\\frac{R+r}{L}t}$",
+      "$\\frac{V}{r}e^{-\\frac{R+r}{L}t}$",
+      "$\\frac{V}{R}e^{-\\frac{L}{R+r}t}$",
+      "$\\frac{V}{r}e^{-\\frac{L}{R+r}t}$"
+    ],
+    "answer": 2,
+    "explanation": "R-L 과도현상\n스위치를 열기 직전과 직후의 상태 변화된 특성을 이해하면 쉽게 답을 구할 수 있다.\n먼저 스위치를 열기 직전의 정상전류 $I_0$, 스위치를 연 후의 특성값 $s$라 하면 과도전류 $i(t)$는 $i(t) = I_0 e^{st}[A]$임을 알 수 있다.\n$I_0 = \\frac{V}{r}[A]$, $s = -\\frac{R+r}{L}$ 이므로\n$i(t) = I_0 e^{st} = \\frac{V}{r}e^{-\\frac{R+r}{L}t}[A]$",
+    "image_needed": true,
+    "source_page": "page_055",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "N/A",
+    "number": 11,
+    "question": "저압 옥상전선로를 전개된 장소에 시설하는 경우 전선은 인장강도 2.30[kN] 이상의 것 또는 지름이 몇 [mm] 이상의 경동선이어야 하는가?",
+    "choices": [
+      "1.6",
+      "2.6",
+      "3.2",
+      "2.0"
+    ],
+    "answer": 2,
+    "explanation": "옥상 전선로\n(1) 전선굵기 : 2.6[mm] 2.30[kN] 이상 경동선 사용\n(2) 절연전선(OW전선 포함) 이상의 절연성능이 있는 것\n(3) 전선은 지지점 간의 거리는 15[m] 이하\n(4) 전선과 조영제와의 이격거리는 2[m] 이상\n    (단, 고압 절연, 특고압 절연, 케이블 : 1[m] 이상)",
+    "image_needed": false,
+    "source_page": "page_395",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "N/A",
+    "number": 18,
+    "question": "전력계통의 안정도 향상 방법이 아닌 것은?",
+    "choices": [
+      "선로 및 기기의 리액턴스를 낮게 한다.",
+      "고속도 제패로 차단기를 채용한다.",
+      "중성점 직접접지방식을 채용한다.",
+      "전압변동률을 줄인다."
+    ],
+    "answer": 3,
+    "explanation": "안정도 개선책\n(1) 리액턴스를 줄인다. : 직렬콘덴서 설치\n(2) 단락비를 증가시킨다. : 전압변동률을 줄인다.\n(3) 중간조상방식을 채용한다. : 동기조상기 설치\n(4) 속응여자방식을 채용한다. : 고속은 AVR 채용\n(5) 제패로 차단방식을 채용한다. : 고속도차단기 사용\n(6) 계통을 연계한다.\n(7) 소호리액터 접지방식을 채용한다.\n∴ 중성점 직접접지방식을 채용하면 지락전류가 대단히 크게 흘러 계통의 안정도를 나쁘게 한다.",
+    "image_needed": false,
+    "source_page": "page_353",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "N/A",
+    "number": 19,
+    "question": "전력계통의 전압조정과 무관한 것은?",
+    "choices": [
+      "전력용콘덴서",
+      "자동전압조정기",
+      "발전기의 조속기",
+      "부하시 탭 조정장치"
+    ],
+    "answer": 3,
+    "explanation": "전력계통의 전압조정\n전력계통의 무효전력을 조정하여 전압을 조정하게 되는 데 발전기의 자동전압조정장치, 동기조상기, 전력용 콘덴서, 분로리액터 등을 사용하여 조정할 수 있다. 발전기의 조속기는 발전기의 회전속도를 조정하는 장치이다.",
+    "image_needed": false,
+    "source_page": "page_353",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "N/A (Not visible in image)",
+    "number": 6,
+    "question": "비돌극형 동기발전기 한 상의 단자전압을 $V$, 유도기전력을 $E$, 동기리액턴스를 $X_s$, 부하각이 $\\delta$이고, 전기자저항을 무시할 때 한 상의 최대출력 [W]은?",
+    "choices": [
+      "$\\frac{EV}{X_s}$",
+      "$\\frac{3EV}{X_s}$",
+      "$\\frac{E^2V}{X_s}$",
+      "$\\frac{EV^2}{X_s}$"
+    ],
+    "answer": 1,
+    "explanation": "동기발전기의 출력($P$)\n(1) 비돌극형인 경우\n$P = \\frac{VE}{X_s} \\sin\\delta$[W]\n(2) 돌극형인 경우\n$P = \\frac{VE}{X_s} \\sin\\delta + \\frac{V^2(X_d-X_q)}{2X_dX_q} \\sin2\\delta$[W]\n비돌극형 동기발전기의 최대출력($P_m$)은 $\\sin\\delta = 1$일 때\n성립하므로\n$\\therefore P_m = \\frac{EV}{X_s}$[W]",
+    "image_needed": false,
+    "source_page": "page_103",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "Not specified in image",
+    "number": 9,
+    "question": "유효접지계통에서 피뢰기의 정격전압을 결정하는데 가장 중요한 요소는?",
+    "choices": [
+      "1선 지락고장시 건전상의 대지전위",
+      "선로 애자련의 충격섬락전압",
+      "내부 이상전압 중 과도이상전압의 크기",
+      "유도뢰의 전압의 크기"
+    ],
+    "answer": 1,
+    "explanation": "피뢰기 정격전압\n$V = \\alpha \\beta V_m$ [KV]이다.\n여기서, $\\alpha$: 접지계수, $\\beta$: 유도계수\n$V_m$: 계통최고전압\n접지계수\n$\\alpha = \\frac{\\text{1선 지락사고시 건전상 전위상승분}}{\\text{고장제거후 최대 선간전압}}$\n식으로 계산된다.\n그러므로 피뢰기 정격전압은 1선지락 사고시 건전상 전위 상승분이 결정하는 중요요소 중 하나이다.",
+    "image_needed": false,
+    "source_page": "page_407",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "Not specified in image",
+    "number": 10,
+    "question": "전력계통의 주회로에 사용되는 것으로 고장전류와 같은 대전류를 차단할 수 있는 것은?",
+    "choices": [
+      "선로개폐기 (LS)",
+      "단로기 (DS)",
+      "차단기 (CB)",
+      "유입개폐기 (OS)"
+    ],
+    "answer": 3,
+    "explanation": "개폐기 및 차단기\n(1) 선로개폐기와 단로기는 아크를 소호할 수 있는 능력이 없으므로 부하전류를 개폐할 수 없을 뿐만 아니라 고장전류를 차단할 수도 없다.\n(2) 유입개폐기는 고장전류를 차단할 수 있는 능력은 없으나 통상의 부하전류를 개폐할 수 있다.\n(3) 차단기는 아크를 소호할 수 있어 부하전류를 개폐할 수 있고 또는 고장전류를 차단할 수 있다.",
+    "image_needed": false,
+    "source_page": "page_407",
+    "subject": "전기자기학"
+  }
+]
