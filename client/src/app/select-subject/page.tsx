@@ -118,9 +118,17 @@ export default function SelectSubjectPage() {
       const data = await res.json();
       let fetchedSubjects = data.subjects || [];
       fetchedSubjects.sort((a: string, b: string) => {
-        if (a.includes('한국사') && !b.includes('한국사')) return 1;
-        if (!a.includes('한국사') && b.includes('한국사')) return -1;
-        return a.localeCompare(b);
+        const getPriority = (name: string) => {
+          if (name.includes('한국사')) return 100;
+          if (name.includes('전기기사')) return 101;
+          return 0;
+        };
+        
+        const pa = getPriority(a);
+        const pb = getPriority(b);
+        
+        if (pa !== pb) return pa - pb;
+        return a.localeCompare(b, 'ko');
       });
       setSubjects(fetchedSubjects);
       setLoading(false);
