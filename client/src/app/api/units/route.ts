@@ -66,7 +66,8 @@ export async function GET(req: NextRequest) {
           });
 
     const unitMap = new Map<string, number>();
-    const questionMap = new Map<string, boolean>(); // 중복 체크용 ID 맵
+    const questionMap = new Map<string, any>(); // 중복 체크용 ID 맵
+    const freqCountMap = new Map<string, number>(); // 텍스트 기반 빈도 측정용
 
     const classifyQuestion = (sub: string, q: any): string => {
       const text = ((q.question || '') + ' ' + (q.explanation || '')).toLowerCase();
@@ -203,6 +204,10 @@ export async function GET(req: NextRequest) {
           const hasImage = !!(q.question_img || q.image);
           if (isPlaceholder && !hasImage) return;
 
+          // 빈도 측정을 위한 텍스트 정규화 키
+          const normText = (q.question || "").trim().substring(0, 100);
+          freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
+
           // 고유 ID 생성 로직 통일
           const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
           
@@ -285,6 +290,12 @@ export async function GET(req: NextRequest) {
       if (name === "인쇄 및 사진기법") return 62;
       if (name === "시각디자인 일반") return 69;
 
+      if (name.includes("전기자기학")) return 70;
+      if (name.includes("전력공학")) return 71;
+      if (name.includes("전기기기")) return 72;
+      if (name.includes("회로이론")) return 73;
+      if (name.includes("전기설비기술기준")) return 74;
+
       return 99;
     };
 
@@ -293,6 +304,12 @@ export async function GET(req: NextRequest) {
       const wb = getWeight(b[0]);
       if (wa !== wb) return wa - wb;
       return a[0].localeCompare(b[0]);
+    });
+
+    // 빈도 정보 주입
+    Array.from(questionMap.values()).forEach((q: any) => {
+      const normText = (q.question || "").trim().substring(0, 100);
+      q.frequency = freqCountMap.get(normText) || 1;
     });
 
     // 1. [🔥 자주 나왔던 문항] 섹션 구성 (초정밀 중복 제거 - 특수문자/공백/대소문자 무시)
