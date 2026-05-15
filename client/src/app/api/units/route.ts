@@ -3,39 +3,46 @@ import fs from 'fs';
 import path from 'path';
 
 export async function GET(req: NextRequest) {
+  const sanitize = (str: string | null) => {
+    if (!str) return "";
+    return str.replace(/[<>:"|?*]/g, "").replace(/\.\./g, "");
+  };
+
   const { searchParams } = new URL(req.url);
-  const subject = searchParams.get('subject');
+  const subject = sanitize(searchParams.get('subject'));
 
   if (!subject) {
     return NextResponse.json({ error: 'Subject is required' }, { status: 400 });
   }
 
   try {
+    const baseDataDir = path.join(process.cwd(), 'src', 'data');
+    
     // 1. 원본 이름으로 시도
     let targetSubject = subject;
-    let dataDir = path.join(process.cwd(), 'src/data', targetSubject);
+    let dataDir = path.join(baseDataDir, targetSubject);
 
     // 2. 없으면 공백 제거 버전으로 시도
     if (!fs.existsSync(dataDir)) {
       targetSubject = subject.replace(/\s/g, '');
-      dataDir = path.join(process.cwd(), 'src/data', targetSubject);
+      dataDir = path.join(baseDataDir, targetSubject);
     }
 
     // 3. 그래도 없으면 전체 폴더를 돌며 공백 무시하고 매칭되는 것 찾기
     if (!fs.existsSync(dataDir)) {
-      const parentDir = path.join(process.cwd(), "src", "data");
-      if (fs.existsSync(parentDir)) {
-        const allFolders = fs.readdirSync(parentDir).filter(f => fs.statSync(path.join(parentDir, f)).isDirectory());
+      if (fs.existsSync(baseDataDir)) {
+        const allFolders = fs.readdirSync(baseDataDir).filter(f => fs.statSync(path.join(baseDataDir, f)).isDirectory());
         const match = allFolders.find(f => f.replace(/\s/g, '') === subject.replace(/\s/g, ''));
         if (match) {
           targetSubject = match;
-          dataDir = path.join(parentDir, targetSubject);
+          dataDir = path.join(baseDataDir, targetSubject);
         }
       }
     }
 
-    if (!fs.existsSync(dataDir)) {
-      return NextResponse.json({ units: [] });
+    // Security Check: Ensure dataDir is still within src/data
+    if (!dataDir.startsWith(baseDataDir) || !fs.existsSync(dataDir)) {
+      return NextResponse.json({ units: [], exams: [] });
     }
 
     const sanitizedSubject = targetSubject.replace(/\s/g, '');

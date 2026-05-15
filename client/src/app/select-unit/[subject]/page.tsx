@@ -212,8 +212,8 @@ export default function SelectUnitPage() {
       <main className="max-w-6xl mx-auto px-8 relative z-10">
         <div className="mb-8 flex items-center justify-between gap-4">
           <motion.h1 className="text-lg md:text-2xl font-black tracking-tight leading-tight">
-            두껍고 딱딱한 <span className="text-brand-600">기능사 책 대신</span><br className="sm:hidden" />
-            고민말고 <span className="text-brand-600 font-black">두 기 고</span> 하세요!
+            <span className="text-blue-500">두</span>꺼운 <span className="text-emerald-500">기</span>능사 책 대신<br className="sm:hidden" />
+            <span className="text-rose-500">고</span>민말고 <span className="text-slate-900 font-black">두기고</span>
           </motion.h1>
         </div>
 

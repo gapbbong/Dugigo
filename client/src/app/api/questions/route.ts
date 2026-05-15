@@ -10,18 +10,43 @@ const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 let supabase: any = null;
 
 export async function GET(req: NextRequest) {
+  const sanitize = (str: string | null) => {
+    if (!str) return null;
+    return str.replace(/[<>:"|?*]/g, "").replace(/\.\./g, "");
+  };
+
   try {
     const searchParams = req.nextUrl.searchParams;
-    const subject = searchParams.get("subject");
-    const examFile = searchParams.get("examFile");
+    const subject = sanitize(searchParams.get("subject"));
+    const examFile = sanitize(searchParams.get("examFile"));
 
     // Local HEAD logic for crop tool
     if (examFile) {
-      const DATA_PATH = path.join(process.cwd(), "src/data", examFile);
+      const baseDir = path.join(process.cwd(), "src/data");
+      const DATA_PATH = path.join(baseDir, examFile);
+      
+      if (!DATA_PATH.startsWith(baseDir) || !fs.existsSync(DATA_PATH)) {
+        return NextResponse.json({ error: "Invalid file access" }, { status: 403 });
+      }
+
       const data = await fsPromises.readFile(DATA_PATH, "utf-8");
       const parsed = JSON.parse(data);
       const questions = Array.isArray(parsed) ? parsed : parsed.questions || [];
-      return NextResponse.json(questions);
+      
+      // Data Scrubbing: Only return essential fields
+      const scrubbed = questions.map((q: any) => ({
+        id: q.id,
+        year: q.year,
+        round: q.round,
+        number: q.number || q.question_num,
+        question: q.question,
+        choices: q.choices || q.options,
+        answer: q.answer,
+        explanation: q.explanation,
+        image: q.image || q.question_img
+      }));
+
+      return NextResponse.json(scrubbed);
     }
 
     // Remote incoming logic for study
@@ -45,11 +70,11 @@ export async function GET(req: NextRequest) {
           });
         }
 
-        const start = parseInt(searchParams.get("start") || "0");
-        const limit = parseInt(searchParams.get("limit") || "30");
-        const yearFilter = searchParams.get("year");
-        const roundFilter = searchParams.get("round");
-        const unitFilter = searchParams.get("unit");
+        const start = Math.max(0, parseInt(searchParams.get("start") || "0"));
+        const limit = Math.min(100, Math.max(1, parseInt(searchParams.get("limit") || "30")));
+        const yearFilter = sanitize(searchParams.get("year"));
+        const roundFilter = sanitize(searchParams.get("round"));
+        const unitFilter = sanitize(searchParams.get("unit"));
 
         let query = supabase
           .from('dukigo_exam_questions')
@@ -108,16 +133,21 @@ export async function GET(req: NextRequest) {
       }
 
       // 3. 그래도 없으면 전체 폴더를 돌며 공백 무시하고 매칭되는 것 찾기
+      const baseDataDir = path.join(process.cwd(), "src", "data");
       if (!fs.existsSync(dataDir)) {
-        const parentDir = path.join(process.cwd(), "src", "data");
-        if (fs.existsSync(parentDir)) {
-          const allFolders = fs.readdirSync(parentDir).filter(f => fs.statSync(path.join(parentDir, f)).isDirectory());
+        if (fs.existsSync(baseDataDir)) {
+          const allFolders = fs.readdirSync(baseDataDir).filter(f => fs.statSync(path.join(baseDataDir, f)).isDirectory());
           const match = allFolders.find(f => f.replace(/\s/g, '') === subject.replace(/\s/g, ''));
           if (match) {
             targetSubject = match;
-            dataDir = path.join(parentDir, targetSubject);
+            dataDir = path.join(baseDataDir, targetSubject);
           }
         }
+      }
+
+      // Security Check: Ensure dataDir is still within src/data
+      if (!dataDir.startsWith(baseDataDir)) {
+        return NextResponse.json({ error: 'Access denied' }, { status: 403 });
       }
 
       if (!fs.existsSync(dataDir)) {
@@ -319,8 +349,8 @@ export async function GET(req: NextRequest) {
       const yearFilter = searchParams.get("year");
       const roundFilter = searchParams.get("round");
       const unitFilter = searchParams.get("unit");
-      const start = parseInt(searchParams.get("start") || "0");
-      const limit = parseInt(searchParams.get("limit") || "10000"); // 기본값은 크게 설정
+      const start = Math.max(0, parseInt(searchParams.get("start") || "0"));
+      const limit = Math.min(100, Math.max(1, parseInt(searchParams.get("limit") || "30")));
 
       if (unitFilter) {
         // [🔥 자주 나왔던 문항] 특수 처리

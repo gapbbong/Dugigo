@@ -1,37 +1,46 @@
-﻿import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const API_KEYS = [
-  'AIzaSyCqM6VXgXszoN_ICLmATOJ3KZHSSCkS49s',
-  'AIzaSyC3PpvfbdMxb3ajXvtP-4m3uLHa-qcDsU0',
-  'AIzaSyDmvjV4-D0WaWxOurP5TuUTjhc_c5ODHwk',
-  'AIzaSyAZIaqtGyf4lIM6A60yJevVW4l-T5gTM_4',
-  'AIzaSyBsWpRqpQA61MW0mFEWLEuvcTk15LNfxfg'
-];
+const API_KEYS = (process.env.GEMINI_API_KEYS || '').split(',').filter(Boolean);
 
 function getApiKey() {
+  if (API_KEYS.length === 0) return '';
   const index = Math.floor(Math.random() * API_KEYS.length);
   return API_KEYS[index];
 }
 
 export async function GET(req: NextRequest) {
+  const sanitize = (str: string | null) => {
+    if (!str) return "";
+    return str.replace(/[<>:"|?*]/g, "").replace(/\.\./g, "");
+  };
+
   const { searchParams } = new URL(req.url);
-  const subject = searchParams.get('subject');
-  const unit = searchParams.get('unit');
-  const set = searchParams.get('set');
+  const subject = sanitize(searchParams.get('subject'));
+  const unit = sanitize(searchParams.get('unit'));
+  const set = sanitize(searchParams.get('set'));
 
   if (!subject || !unit || !set) {
-    return NextResponse.json({ error: 'Missing parameters' }, { status: 400 });
+    return NextResponse.json({ error: 'Missing or invalid parameters' }, { status: 400 });
   }
 
   const cleanUnit = unit.replace(/\s*\(\d+부\)$/, '').trim();
   const safeUnitName = cleanUnit.replace(/[^a-z0-9가-힣]/gi, '_');
   const summaryFileName = `${safeUnitName}_${set}세트.json`;
 
-  const publicPath = path.join(process.cwd(), 'public', 'summaries', subject, summaryFileName);
-  const srcPath = path.join(process.cwd(), 'src', 'summaries', subject, summaryFileName);
+  const summariesBase = path.join(process.cwd(), 'public', 'summaries');
+  const srcSummariesBase = path.join(process.cwd(), 'src', 'summaries');
+  
+  const publicPath = path.join(summariesBase, subject, summaryFileName);
+  const srcPath = path.join(srcSummariesBase, subject, summaryFileName);
+  
+  // Verify path is within allowed base directories
+  if (!publicPath.startsWith(summariesBase) && !srcPath.startsWith(srcSummariesBase)) {
+    return NextResponse.json({ error: "Access denied" }, { status: 403 });
+  }
+
   const summaryPath = fs.existsSync(publicPath) ? publicPath : srcPath;
 
   if (fs.existsSync(summaryPath)) {
@@ -47,7 +56,11 @@ export async function GET(req: NextRequest) {
     const targetDir = path.dirname(summaryPath);
     if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir, { recursive: true });
 
-    const dataDir = path.join(process.cwd(), 'src', 'data', subject);
+    const dataBase = path.join(process.cwd(), 'src', 'data');
+    const dataDir = path.join(dataBase, subject);
+    
+    if (!dataDir.startsWith(dataBase)) throw new Error('Invalid data access');
+
     let dbPath = path.join(dataDir, 'MASTER_DB.json');
     if (!fs.existsSync(dbPath)) dbPath = path.join(dataDir, 'Literacy2_MASTER_DB.json');
     if (!fs.existsSync(dbPath)) dbPath = path.join(dataDir, 'history_master.json');
