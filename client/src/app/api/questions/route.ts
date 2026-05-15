@@ -282,8 +282,14 @@ export async function GET(req: NextRequest) {
             // 고유 ID 생성 로직 최적화 (year, round, number 조합 우선)
             const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
             
-            // 이미 등록된 문제가 있고, 현재 파일이 표준 단원 파일이 아니면 패스 (단원 파일 우선순위)
-            if (questionMap.has(qId) && !isStandardUnitFile) return;
+            // 이미 등록된 문제가 있으면 빈도 정보 업데이트 후 단원 파일이 아니면 패스
+            if (questionMap.has(qId)) {
+              const existingQ = questionMap.get(qId);
+              if (q.frequency) {
+                existingQ.frequency = Math.max(Number(existingQ.frequency) || 0, Number(q.frequency));
+              }
+              if (!isStandardUnitFile) return;
+            }
 
             const mainUnit = q.subject || "";
             const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));

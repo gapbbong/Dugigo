@@ -218,10 +218,10 @@ export async function GET(req: NextRequest) {
           const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
           
           if (questionMap.has(qId)) {
-            // 이미 등록된 문제인데, 현재 파일이 표준 단원 파일이면 '단원명'만 업데이트 (카운트는 이미 됨)
-            // 하지만 정확한 집계를 위해 처음부터 고유하게 처리하는 것이 좋음
-            if (isStandardUnitFile) {
-              // 이전 단원 카운트 차감 (필요시) - 여기서는 단순화를 위해 skip 로직을 아래에서 처리
+            // 이미 등록된 문제면 빈도 정보만 업데이트
+            const existingQ = questionMap.get(qId);
+            if (q.frequency) {
+              existingQ.frequency = Math.max(Number(existingQ.frequency) || 0, Number(q.frequency));
             }
             return;
           }
