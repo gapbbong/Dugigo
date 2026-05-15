@@ -250,8 +250,9 @@ export async function GET(req: NextRequest) {
           }
           if (!r) r = q.id?.split('_')[1];
           if (r) {
-            const roundStr = String(r);
-            const examKey = y ? `${y}년 ${roundStr}${roundStr.includes('상시') ? '' : '회'}` : `${roundStr}회 기출`;
+            const roundStr = String(r).replace(/\s*기출문제$/, '').replace(/\s*전기기사$/, '').trim();
+            const suffix = (roundStr.includes('회') || roundStr.includes('상시')) ? '' : '회';
+            const examKey = y ? `${y}년 ${roundStr}${suffix}` : `${roundStr}${suffix}`;
             examsMap.set(examKey, (examsMap.get(examKey) || 0) + 1);
           }
         });
@@ -352,8 +353,8 @@ export async function GET(req: NextRequest) {
     // 정보처리기능사는 빈출 섹션 숨김 (사용자 요청)
     if (frequentQuestions.length > 0 && sanitizedSubject !== '정보처리기능사') {
       const FREQ_PAGE_SIZE = 30;
-      // 유령 페이지 방지를 위해 실제 문항이 있는 만큼만 생성
-      const freqParts = Math.floor(frequentQuestions.length / FREQ_PAGE_SIZE) + (frequentQuestions.length % FREQ_PAGE_SIZE > 0 ? 1 : 0);
+      const MAX_FREQ_PARTS = 6; // 사용자 요청: 공략 07부터는 노출하지 않음
+      const freqParts = Math.min(MAX_FREQ_PARTS, Math.floor(frequentQuestions.length / FREQ_PAGE_SIZE) + (frequentQuestions.length % FREQ_PAGE_SIZE > 0 ? 1 : 0));
       
       for (let i = 0; i < freqParts; i++) {
         const currentCount = Math.min(FREQ_PAGE_SIZE, frequentQuestions.length - (i * FREQ_PAGE_SIZE));

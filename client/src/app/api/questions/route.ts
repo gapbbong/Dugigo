@@ -260,44 +260,48 @@ export async function GET(req: NextRequest) {
       const questionMap = new Map<string, any>();
 
       filesToLoad.forEach(file => {
-        const filePath = path.join(dataDir, file);
-        const fileContent = fs.readFileSync(filePath, 'utf-8');
-        const jsonData = JSON.parse(fileContent);
-        
-        const fileNameUnit = file.replace(/\.json$/, '').trim();
-        const isStandardUnitFile = /^\d+\./.test(fileNameUnit);
-
-        let fileQuestions: any[] = [];
-        if (Array.isArray(jsonData)) {
-          fileQuestions = jsonData;
-        } else if (jsonData.questions && Array.isArray(jsonData.questions)) {
-          fileQuestions = jsonData.questions;
-        }
-
-        fileQuestions.forEach(q => {
-          const text = (q.question || '').trim();
-          const isPlaceholder = text === '' || 
-                               text.includes('이미지에 지문이 없습니다') || 
-                               text.includes('이미지에 문제 본문 없음') ||
-                               text.includes('내용을 확인할 수 없습니다');
-          const hasImage = !!(q.question_img || q.image);
-          if (isPlaceholder && !hasImage) return;
-
-          // 고유 ID 생성 로직 최적화 (year, round, number 조합 우선)
-          const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
+        try {
+          const filePath = path.join(dataDir, file);
+          const fileContent = fs.readFileSync(filePath, 'utf-8');
+          const jsonData = JSON.parse(fileContent);
           
-          // 이미 등록된 문제가 있고, 현재 파일이 표준 단원 파일이 아니면 패스 (단원 파일 우선순위)
-          if (questionMap.has(qId) && !isStandardUnitFile) return;
+          const fileNameUnit = file.replace(/\.json$/, '').trim();
+          const isStandardUnitFile = /^\d+\./.test(fileNameUnit);
 
-          const mainUnit = q.subject || "";
-          const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
-          const subUnit = mainUnit ? `[${mainUnit}] ${baseSubUnit}` : baseSubUnit;
-          
-          questionMap.set(qId, {
-            ...q,
-            sub_unit: subUnit
+          let fileQuestions: any[] = [];
+          if (Array.isArray(jsonData)) {
+            fileQuestions = jsonData;
+          } else if (jsonData.questions && Array.isArray(jsonData.questions)) {
+            fileQuestions = jsonData.questions;
+          }
+
+          fileQuestions.forEach(q => {
+            const text = (q.question || '').trim();
+            const isPlaceholder = text === '' || 
+                                 text.includes('이미지에 지문이 없습니다') || 
+                                 text.includes('이미지에 문제 본문 없음') ||
+                                 text.includes('내용을 확인할 수 없습니다');
+            const hasImage = !!(q.question_img || q.image);
+            if (isPlaceholder && !hasImage) return;
+
+            // 고유 ID 생성 로직 최적화 (year, round, number 조합 우선)
+            const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
+            
+            // 이미 등록된 문제가 있고, 현재 파일이 표준 단원 파일이 아니면 패스 (단원 파일 우선순위)
+            if (questionMap.has(qId) && !isStandardUnitFile) return;
+
+            const mainUnit = q.subject || "";
+            const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
+            const subUnit = mainUnit ? `[${mainUnit}] ${baseSubUnit}` : baseSubUnit;
+            
+            questionMap.set(qId, {
+              ...q,
+              sub_unit: subUnit
+            });
           });
-        });
+        } catch (e) {
+          console.error(`Error loading ${file}:`, e);
+        }
       });
 
       const allQuestions = Array.from(questionMap.values());
@@ -327,7 +331,7 @@ export async function GET(req: NextRequest) {
         "스프레드시트 일반": 41
       };
 
-      let sorted = allQuestions.sort((a, b) => {
+      let sorted = deduplicatedQuestions.sort((a, b) => {
         const orderA = UNIT_ORDER[a.sub_unit] || 99;
         const orderB = UNIT_ORDER[b.sub_unit] || 99;
         
@@ -345,49 +349,32 @@ export async function GET(req: NextRequest) {
       if (unitFilter) {
         // [🔥 자주 나왔던 문항] 특수 처리
         if (unitFilter.includes("자주 나왔던 문항") || unitFilter.includes("자주나왔던문항")) {
-          const masterFile = filesToLoad.find(f => f.toLowerCase().includes('master') && f.endsWith('.json'));
-          if (masterFile) {
-            const masterPath = path.join(dataDir, masterFile);
-            const masterContent = fs.readFileSync(masterPath, 'utf-8');
-            const masterData = JSON.parse(masterContent);
-            let masterQuestions = Array.isArray(masterData) ? masterData : (masterData.questions || []);
-            
-            const uniqueMap = new Map<string, any>();
-            
-            const normalize = (text: string) => {
-              if (!text) return "";
-              return text.toLowerCase()
-                .replace(/[^a-z0-9가-힣]/g, "")
-                .replace(/[은는이가을를의에와과]/g, "") // Units API와 동일하게 보정
-                .replace(/\s+/g, "")
-                .trim();
-            };
+          const uniqueMap = new Map<string, any>();
+          const freqCountMap = new Map<string, number>();
+          
+          // 모든 파일에서 빈도 계산
+          deduplicatedQuestions.forEach((q: any) => {
+            const normText = normalize(q.question || "").substring(0, 100);
+            freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
+          });
 
-            // 빈도 측정을 위해 모든 문항 먼저 스캔
-            const freqCountMap = new Map<string, number>();
-            masterQuestions.forEach((q: any) => {
-              const normText = normalize(q.question || "").substring(0, 100);
-              freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
-            });
-
-            masterQuestions.forEach((q: any) => {
-              const normText = normalize(q.question || "").substring(0, 100);
-              const freq = Math.max(Number(q.frequency) || 0, freqCountMap.get(normText) || 1);
+          deduplicatedQuestions.forEach((q: any) => {
+            const normText = normalize(q.question || "").substring(0, 100);
+            const freq = Math.max(Number(q.frequency) || 0, freqCountMap.get(normText) || 1);
+            
+            if (freq >= 2) {
+              const cleanQuestion = normalize(q.question);
+              const cleanChoices = (q.choices || []).map((c: string) => normalize(c)).join("|");
+              const contentKey = `${cleanQuestion}_${cleanChoices}`;
               
-              if (freq >= 2) {
-                const cleanQuestion = normalize(q.question);
-                const cleanChoices = (q.choices || []).map((c: string) => normalize(c)).join("|");
-                const contentKey = `${cleanQuestion}_${cleanChoices}`;
-                
-                if (!uniqueMap.has(contentKey)) {
-                  uniqueMap.set(contentKey, { ...q, frequency: freq });
-                }
+              if (!uniqueMap.has(contentKey)) {
+                uniqueMap.set(contentKey, { ...q, frequency: freq });
               }
-            });
-
-            sorted = Array.from(uniqueMap.values())
-              .sort((a: any, b: any) => (b.frequency || 0) - (a.frequency || 0));
-          }
+            }
+          });
+          
+          sorted = Array.from(uniqueMap.values())
+            .sort((a: any, b: any) => (b.frequency || 0) - (a.frequency || 0));
         } else {
           const baseUnitFilter = unitFilter.replace(/\s*\(\d+부\)$/, '').trim();
           const cleanUnit = baseUnitFilter.replace(/^\[.*?\]\s*/g, '').trim();
