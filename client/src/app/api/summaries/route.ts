@@ -3,6 +3,8 @@ import fs from 'fs';
 import path from 'path';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
+export const dynamic = 'force-dynamic';
+
 const API_KEYS = (process.env.GEMINI_API_KEYS || '').split(',').filter(Boolean);
 
 function getApiKey() {

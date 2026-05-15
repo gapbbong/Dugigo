@@ -8,6 +8,7 @@ const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 
 let supabase: any = null;
+export const dynamic = 'force-dynamic';
 
 export async function GET(req: NextRequest) {
   const sanitize = (str: string | null) => {
@@ -19,6 +20,21 @@ export async function GET(req: NextRequest) {
     const searchParams = req.nextUrl.searchParams;
     const subject = sanitize(searchParams.get("subject"));
     const examFile = sanitize(searchParams.get("examFile"));
+
+    const scrub = (q: any) => ({
+      id: q.metadata?.id || q.id || `${q.year || q.exam_year || ''}_${q.round || q.exam_round || ''}_${q.number || q.question_no || ''}`,
+      year: (q.year || q.exam_year || '').toString(),
+      round: (q.round || q.exam_round || '').toString(),
+      number: q.number || q.question_no,
+      question: q.question || q.question_text,
+      choices: q.choices || q.options || q.choice_imgs || [],
+      answer: q.answer || q.correct_answer,
+      explanation: q.explanation || "",
+      sub_unit: q.sub_unit || q.metadata?.sub_unit || "",
+      image: q.image || q.question_img || q.metadata?.question_img || null,
+      visual_coords: q.visual_coords || q.metadata?.visual_coords || null,
+      choice_imgs: q.choice_imgs || q.metadata?.choice_imgs || []
+    });
 
     // Local HEAD logic for crop tool
     if (examFile) {
@@ -33,26 +49,19 @@ export async function GET(req: NextRequest) {
       const parsed = JSON.parse(data);
       const questions = Array.isArray(parsed) ? parsed : parsed.questions || [];
       
-      // Data Scrubbing: Only return essential fields
-      const scrubbed = questions.map((q: any) => ({
-        id: q.id,
-        year: q.year,
-        round: q.round,
-        number: q.number || q.question_num,
-        question: q.question,
-        choices: q.choices || q.options,
-        answer: q.answer,
-        explanation: q.explanation,
-        image: q.image || q.question_img
-      }));
-
-      return NextResponse.json(scrubbed);
+      return NextResponse.json(questions.map(scrub));
     }
 
     // Remote incoming logic for study
     if (subject) {
+      const start = Math.max(0, parseInt(searchParams.get("start") || "0"));
+      const limit = Math.min(100, Math.max(1, parseInt(searchParams.get("limit") || "30")));
+      const yearFilter = sanitize(searchParams.get("year"));
+      const roundFilter = sanitize(searchParams.get("round"));
+      const unitFilter = sanitize(searchParams.get("unit"));
+
       // 1. 자동화설비(생산자동화)기능사 - 슈파베이스 처리 (단, 자주 나왔던 문항은 로컬 파일 우선)
-      const isFrequentRequest = searchParams.get("unit")?.includes("자주") || false;
+      const isFrequentRequest = unitFilter?.includes("자주") || false;
       
       if ((subject.includes('자동화설비') || subject.includes('생산자동화')) && !isFrequentRequest) {
         if (!supabase) {
@@ -70,12 +79,6 @@ export async function GET(req: NextRequest) {
           });
         }
 
-        const start = Math.max(0, parseInt(searchParams.get("start") || "0"));
-        const limit = Math.min(100, Math.max(1, parseInt(searchParams.get("limit") || "30")));
-        const yearFilter = sanitize(searchParams.get("year"));
-        const roundFilter = sanitize(searchParams.get("round"));
-        const unitFilter = sanitize(searchParams.get("unit"));
-
         let query = supabase
           .from('dukigo_exam_questions')
           .select('*', { count: 'exact' })
@@ -85,7 +88,6 @@ export async function GET(req: NextRequest) {
         if (roundFilter) query = query.eq('exam_round', roundFilter);
         if (unitFilter) {
           const cleanUnit = unitFilter.replace(/^\[.*?\]\s*/, '').replace(/\s*\(\d+부\)$/, '').trim();
-          // metadata 내의 sub_unit 필드 검색 (Supabase jsonb 검색 활용)
           query = query.filter('metadata->>sub_unit', 'ilike', `%${cleanUnit}%`);
         }
 
@@ -96,26 +98,10 @@ export async function GET(req: NextRequest) {
           .range(start, start + limit - 1);
 
         if (!error && data) {
-          const mappedQuestions = data.map((q: any) => ({
-            id: q.metadata?.id || `${q.exam_year}_${q.exam_round}_${q.question_no}`,
-            year: q.exam_year.toString(),
-            round: q.exam_round.toString(),
-            number: q.question_no,
-            question: q.question_text,
-            choices: q.options,
-            answer: q.correct_answer,
-            explanation: q.explanation,
-            sub_unit: q.metadata?.sub_unit || "4.3 자동화 시스템",
-            question_img: q.metadata?.question_img || null,
-            visual_coords: q.metadata?.visual_coords || null,
-            round_info: `${q.exam_year}년 ${q.exam_round}회`,
-            choice_imgs: q.metadata?.choice_imgs || []
-          }));
-
           return NextResponse.json({
             subject,
-            total: count || mappedQuestions.length,
-            questions: mappedQuestions,
+            total: count || data.length,
+            questions: data.map(scrub),
             start,
             limit
           });
@@ -124,16 +110,16 @@ export async function GET(req: NextRequest) {
 
       // 2. 원본 이름으로 시도
       let targetSubject = subject;
-      let dataDir = path.join(process.cwd(), "src", "data", targetSubject);
+      const baseDataDir = path.join(process.cwd(), "src", "data");
+      let dataDir = path.join(baseDataDir, targetSubject);
 
       // 2. 없으면 공백 제거 버전으로 시도
       if (!fs.existsSync(dataDir)) {
         targetSubject = subject.replace(/\s/g, '');
-        dataDir = path.join(process.cwd(), "src", "data", targetSubject);
+        dataDir = path.join(baseDataDir, targetSubject);
       }
 
       // 3. 그래도 없으면 전체 폴더를 돌며 공백 무시하고 매칭되는 것 찾기
-      const baseDataDir = path.join(process.cwd(), "src", "data");
       if (!fs.existsSync(dataDir)) {
         if (fs.existsSync(baseDataDir)) {
           const allFolders = fs.readdirSync(baseDataDir).filter(f => fs.statSync(path.join(baseDataDir, f)).isDirectory());
@@ -428,7 +414,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({
         subject,
         total: totalCount,
-        questions: paginatedQuestions,
+        questions: paginatedQuestions.map(scrub),
         start,
         limit
       });
@@ -440,7 +426,7 @@ export async function GET(req: NextRequest) {
       const data = await fsPromises.readFile(DEFAULT_DATA_PATH, "utf-8");
       const parsed = JSON.parse(data);
       const questions = Array.isArray(parsed) ? parsed : parsed.questions || [];
-      return NextResponse.json(questions);
+      return NextResponse.json(questions.map(scrub));
     }
 
     return NextResponse.json({ error: "Either subject or examFile is required" }, { status: 400 });
