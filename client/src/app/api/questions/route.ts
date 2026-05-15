@@ -305,7 +305,8 @@ export async function GET(req: NextRequest) {
 
             const mainUnit = q.subject || "";
             const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
-            const subUnit = (mainUnit && !baseSubUnit.includes(mainUnit)) ? `[${mainUnit}] ${baseSubUnit}` : baseSubUnit;
+            // 전기기사는 이미 단원이 잘 나누어져 있으므로 [과목] 접두사를 붙이지 않음
+            const subUnit = (sanitizedSubject !== '전기기사' && mainUnit && !baseSubUnit.includes(mainUnit)) ? `[${mainUnit}] ${baseSubUnit}` : baseSubUnit;
             
             questionMap.set(qId, {
               ...q,
