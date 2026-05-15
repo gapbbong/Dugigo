@@ -305,8 +305,8 @@ export async function GET(req: NextRequest) {
 
             const mainUnit = q.subject || "";
             const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
-            // 전기기사는 이미 단원이 잘 나누어져 있으므로 [과목] 접두사를 붙이지 않음
-            const subUnit = (sanitizedSubject !== '전기기사' && mainUnit && !baseSubUnit.includes(mainUnit)) ? `[${mainUnit}] ${baseSubUnit}` : baseSubUnit;
+            // 전기기사는 파일명 기반 단원명을 최우선으로 사용하고, 불필요한 접두사 방지
+            const subUnit = (sanitizedSubject === '전기기사' || !mainUnit || baseSubUnit.includes(mainUnit)) ? baseSubUnit : `[${mainUnit}] ${baseSubUnit}`;
             
             questionMap.set(qId, {
               ...q,
@@ -419,8 +419,19 @@ export async function GET(req: NextRequest) {
         });
       }
 
-      const totalCount = sorted.length;
-      const paginatedQuestions = sorted.slice(start, start + limit);
+      // 파트/공략 쪼개기 처리 (단원별/빈출 쪼개기 대응)
+      let finalSorted = sorted;
+      const partMatch = unitFilter?.match(/\(((\d+)부)\)$/) || unitFilter?.match(/공략\s*(\d+)/);
+      if (partMatch) {
+        const partIdx = parseInt(partMatch[2] || partMatch[1]) - 1;
+        const pageSize = unitFilter?.includes("자주 나왔던 문항") ? 30 : 150;
+        const startIdx = partIdx * pageSize;
+        const endIdx = startIdx + pageSize;
+        finalSorted = sorted.slice(startIdx, endIdx);
+      }
+
+      const totalCount = finalSorted.length;
+      const paginatedQuestions = finalSorted.slice(start, start + limit);
 
       return NextResponse.json({
         subject,

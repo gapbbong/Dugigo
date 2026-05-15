@@ -227,10 +227,8 @@ export async function GET(req: NextRequest) {
 
           const mainUnit = q.subject || "";
           const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
-          
-          // 대단원이 소단원과 다를 때만 [대단원] 접두사 추가
-          // 전기기사는 이미 단원이 잘 나누어져 있으므로 [과목] 접두사를 붙이지 않음
-          const subUnit = (sanitizedSubject !== '전기기사' && mainUnit && !baseSubUnit.includes(mainUnit)) ? `[${mainUnit}] ${baseSubUnit}` : baseSubUnit;
+          // 전기기사는 파일명 기반 단원명을 최우선으로 사용하고, 불필요한 접두사 방지
+          const subUnit = (sanitizedSubject === '전기기사' || !mainUnit || baseSubUnit.includes(mainUnit)) ? baseSubUnit : `[${mainUnit}] ${baseSubUnit}`;
 
           unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
           questionMap.set(qId, { ...q, subUnit: subUnit });
