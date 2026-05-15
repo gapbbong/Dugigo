@@ -331,12 +331,6 @@ export async function GET(req: NextRequest) {
         return (a.number || 0) - (b.number || 0);
       });
 
-      // --- 서버 사이드 필터링 및 페이징 로직 추가 ---
-      const yearFilter = searchParams.get("year");
-      const roundFilter = searchParams.get("round");
-      const unitFilter = searchParams.get("unit");
-      const start = Math.max(0, parseInt(searchParams.get("start") || "0"));
-      const limit = Math.min(100, Math.max(1, parseInt(searchParams.get("limit") || "30")));
 
       if (unitFilter) {
         // [🔥 자주 나왔던 문항] 특수 처리
