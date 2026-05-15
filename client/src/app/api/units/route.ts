@@ -70,7 +70,6 @@ export async function GET(req: NextRequest) {
       if (!text) return "";
       return text.toLowerCase()
         .replace(/[^a-z0-9가-힣]/g, "")
-        .replace(/[은는이가을를의에와과]/g, "")
         .replace(/\s+/g, "")
         .trim();
     };
@@ -211,7 +210,7 @@ export async function GET(req: NextRequest) {
           if (isPlaceholder && !hasImage) return;
 
           // 빈도 측정을 위한 텍스트 정규화 키 (중복 체크 전에 수행하여 전체 파일 내 빈도 집계)
-          const normText = normalize(q.question || "").substring(0, 100);
+          const normText = normalize(q.question || "");
           freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
 
           // 고유 ID 생성 로직 통일
@@ -320,7 +319,7 @@ export async function GET(req: NextRequest) {
     // 빈도 정보 주입 (기본 데이터에 있는 빈도와 계산된 빈도 중 큰 것 선택)
     Array.from(questionMap.values()).forEach((q: any) => {
       const normText = normalize(q.question || "");
-      const calculatedFreq = freqCountMap.get(normText.substring(0, 100)) || 1;
+      const calculatedFreq = freqCountMap.get(normText) || 1;
       q.frequency = Math.max(Number(q.frequency) || 0, calculatedFreq);
     });
 

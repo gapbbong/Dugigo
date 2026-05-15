@@ -11,6 +11,14 @@ let supabase: any = null;
 export const dynamic = 'force-dynamic';
 
 export async function GET(req: NextRequest) {
+  const normalize = (text: string) => {
+    if (!text) return "";
+    return text.toLowerCase()
+      .replace(/[^a-z0-9가-힣]/g, "")
+      .replace(/\s+/g, "")
+      .trim();
+  };
+
   const sanitize = (str: string | null) => {
     if (!str) return null;
     return str.replace(/[<>:"|?*]/g, "").replace(/\.\./g, "");
@@ -253,6 +261,7 @@ export async function GET(req: NextRequest) {
       };
 
       const questionMap = new Map<string, any>();
+      const freqCountMap = new Map<string, number>();
 
       filesToLoad.forEach(file => {
         try {
@@ -279,6 +288,9 @@ export async function GET(req: NextRequest) {
             const hasImage = !!(q.question_img || q.image);
             if (isPlaceholder && !hasImage) return;
 
+            const normText = normalize(q.question || "");
+            freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
+
             // 고유 ID 생성 로직 최적화 (year, round, number 조합 우선)
             const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
             
@@ -293,7 +305,7 @@ export async function GET(req: NextRequest) {
 
             const mainUnit = q.subject || "";
             const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
-            const subUnit = mainUnit ? `[${mainUnit}] ${baseSubUnit}` : baseSubUnit;
+            const subUnit = (mainUnit && !baseSubUnit.includes(mainUnit)) ? `[${mainUnit}] ${baseSubUnit}` : baseSubUnit;
             
             questionMap.set(qId, {
               ...q,
@@ -351,16 +363,11 @@ export async function GET(req: NextRequest) {
         // [🔥 자주 나왔던 문항] 특수 처리
         if (unitFilter.includes("자주 나왔던 문항") || unitFilter.includes("자주나왔던문항")) {
           const uniqueMap = new Map<string, any>();
-          const freqCountMap = new Map<string, number>();
           
-          // 모든 파일에서 빈도 계산
-          allQuestions.forEach((q: any) => {
-            const normText = normalize(q.question || "").substring(0, 100);
-            freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
-          });
+          // 이미 파일 로드 시 freqCountMap에 전체 빈도가 계산되어 있음
 
           allQuestions.forEach((q: any) => {
-            const normText = normalize(q.question || "").substring(0, 100);
+            const normText = normalize(q.question || "");
             const freq = Math.max(Number(q.frequency) || 0, freqCountMap.get(normText) || 1);
             
             if (freq >= 2) {
