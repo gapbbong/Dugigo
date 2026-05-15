@@ -326,7 +326,7 @@ export async function GET(req: NextRequest) {
         "스프레드시트 일반": 41
       };
 
-      let sorted = deduplicatedQuestions.sort((a, b) => {
+      let sorted = allQuestions.sort((a, b) => {
         const orderA = UNIT_ORDER[a.sub_unit] || 99;
         const orderB = UNIT_ORDER[b.sub_unit] || 99;
         
@@ -348,12 +348,12 @@ export async function GET(req: NextRequest) {
           const freqCountMap = new Map<string, number>();
           
           // 모든 파일에서 빈도 계산
-          deduplicatedQuestions.forEach((q: any) => {
+          allQuestions.forEach((q: any) => {
             const normText = normalize(q.question || "").substring(0, 100);
             freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
           });
 
-          deduplicatedQuestions.forEach((q: any) => {
+          allQuestions.forEach((q: any) => {
             const normText = normalize(q.question || "").substring(0, 100);
             const freq = Math.max(Number(q.frequency) || 0, freqCountMap.get(normText) || 1);
             
