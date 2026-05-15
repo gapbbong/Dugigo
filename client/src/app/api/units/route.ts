@@ -67,6 +67,15 @@ export async function GET(req: NextRequest) {
     const questionMap = new Map<string, any>(); // 중복 체크용 ID 맵
     const freqCountMap = new Map<string, number>(); // 텍스트 기반 빈도 측정용
 
+    const normalize = (text: string) => {
+      if (!text) return "";
+      return text.toLowerCase()
+        .replace(/[^a-z0-9가-힣]/g, "")
+        .replace(/[은는이가을를의에와과]/g, "")
+        .replace(/\s+/g, "")
+        .trim();
+    };
+
     const classifyQuestion = (sub: string, q: any): string => {
       const text = ((q.question || '') + ' ' + (q.explanation || '')).toLowerCase();
       const s = sub.replace(/\s/g, '');
@@ -203,7 +212,7 @@ export async function GET(req: NextRequest) {
           if (isPlaceholder && !hasImage) return;
 
           // 빈도 측정을 위한 텍스트 정규화 키
-          const normText = (q.question || "").trim().substring(0, 100);
+          const normText = normalize(q.question || "").substring(0, 100);
           freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
 
           // 고유 ID 생성 로직 통일
@@ -218,7 +227,11 @@ export async function GET(req: NextRequest) {
             return;
           }
 
-          const subUnit = baseSubUnit;
+          const mainUnit = q.subject || "";
+          const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
+          
+          // 대단원이 소단원과 다를 때만 [대단원] 접두사 추가
+          const subUnit = (mainUnit && !baseSubUnit.includes(mainUnit)) ? `[${mainUnit}] ${baseSubUnit}` : baseSubUnit;
 
           unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
           questionMap.set(qId, { ...q, subUnit: subUnit });
@@ -300,24 +313,16 @@ export async function GET(req: NextRequest) {
       return a[0].localeCompare(b[0]);
     });
 
-    // 빈도 정보 주입
+    // 빈도 정보 주입 (기본 데이터에 있는 빈도와 계산된 빈도 중 큰 것 선택)
     Array.from(questionMap.values()).forEach((q: any) => {
-      const normText = (q.question || "").trim().substring(0, 100);
-      q.frequency = freqCountMap.get(normText) || 1;
+      const normText = normalize(q.question || "");
+      const calculatedFreq = freqCountMap.get(normText.substring(0, 100)) || 1;
+      q.frequency = Math.max(Number(q.frequency) || 0, calculatedFreq);
     });
 
     // 1. [🔥 자주 나왔던 문항] 섹션 구성 (초정밀 중복 제거 - 특수문자/공백/대소문자 무시)
     const uniqueFrequentMap = new Map<string, any>();
     
-    // 텍스트를 아주 엄격하게 정규화하는 함수
-    const normalize = (text: string) => {
-      if (!text) return "";
-      return text.toLowerCase()
-        .replace(/[^a-z0-9가-힣]/g, "")
-        .replace(/[은는이가을를의에와과]/g, "")
-        .replace(/\s+/g, "")
-        .trim();
-    };
 
     Array.from(questionMap.values()).forEach((q: any) => {
       if ((q.frequency || 0) >= 2) {
