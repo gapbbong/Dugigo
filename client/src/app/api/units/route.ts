@@ -147,12 +147,12 @@ export async function GET(req: NextRequest) {
       }
 
       if (s === '전기기사') {
-        if (q.subject) return q.subject;
         if (/자기|자계|전계|유전체/.test(text)) return "01. 전기자기학";
         if (/송전|배전|발전|변전/.test(text)) return "02. 전력공학";
         if (/변압기|유도기|직류기|동기기/.test(text)) return "03. 전기기기";
         if (/회로|라플라스|전달함수/.test(text)) return "04. 회로이론 및 제어공학";
         if (/KEC|설비|기술기준/.test(text)) return "05. 전기설비기술기준";
+        if (q.subject) return q.subject;
         return "기타";
       }
 
@@ -250,7 +250,11 @@ export async function GET(req: NextRequest) {
           }
           if (!r) r = q.id?.split('_')[1];
           if (r) {
-            const roundStr = String(r).replace(/\s*기출문제$/, '').replace(/\s*전기기사$/, '').trim();
+            let roundStr = String(r).trim();
+            // 전기기사 등 특정 키워드가 포함된 경우만 정리 (다른 종목 피해 최소화)
+            if (sanitizedSubject === '전기기사') {
+              roundStr = roundStr.replace(/\s*(기출문제|전기기사)$/, '').trim();
+            }
             const suffix = (roundStr.includes('회') || roundStr.includes('상시')) ? '' : '회';
             const examKey = y ? `${y}년 ${roundStr}${suffix}` : `${roundStr}${suffix}`;
             examsMap.set(examKey, (examsMap.get(examKey) || 0) + 1);
