@@ -210,7 +210,7 @@ export async function GET(req: NextRequest) {
           const hasImage = !!(q.question_img || q.image);
           if (isPlaceholder && !hasImage) return;
 
-          // 빈도 측정을 위한 텍스트 정규화 키
+          // 빈도 측정을 위한 텍스트 정규화 키 (중복 체크 전에 수행하여 전체 파일 내 빈도 집계)
           const normText = normalize(q.question || "").substring(0, 100);
           freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
 
