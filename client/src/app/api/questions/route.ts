@@ -131,8 +131,8 @@ export async function GET(req: NextRequest) {
         }
       }
 
-      // Security Check: Ensure dataDir is still within src/data
-      if (!dataDir.startsWith(baseDataDir)) {
+      // Security Check: Ensure dataDir is still within src/data (Case-insensitive for cross-platform)
+      if (!dataDir.toLowerCase().startsWith(baseDataDir.toLowerCase())) {
         return NextResponse.json({ error: 'Access denied' }, { status: 403 });
       }
 

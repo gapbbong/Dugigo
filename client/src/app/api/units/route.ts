@@ -41,8 +41,8 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    // Security Check: Ensure dataDir is still within src/data
-    if (!dataDir.startsWith(baseDataDir) || !fs.existsSync(dataDir)) {
+    // Security Check: Ensure dataDir is still within src/data (Case-insensitive check for cross-platform)
+    if (!dataDir.toLowerCase().startsWith(baseDataDir.toLowerCase()) || !fs.existsSync(dataDir)) {
       return NextResponse.json({ units: [], exams: [] });
     }
 
