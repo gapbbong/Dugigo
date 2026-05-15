@@ -209,12 +209,15 @@ export async function GET(req: NextRequest) {
           const hasImage = !!(q.question_img || q.image);
           if (isPlaceholder && !hasImage) return;
 
-          // 빈도 측정을 위한 텍스트 정규화 키 (중복 체크 전에 수행하여 전체 파일 내 빈도 집계)
+          // 빈도 측정을 위한 텍스트 및 ID 정규화 (중복 체크 전에 수행하여 전체 파일 내 빈도 집계)
           const normText = normalize(q.question || "");
           freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
 
-          // 고유 ID 생성 로직 통일
+          // 고유 ID 생성 로직 (ID 기반 빈도 측정도 병행)
           const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
+          const qIdFreqMap = (req as any).qIdFreqMap || new Map<string, number>();
+          qIdFreqMap.set(qId, (qIdFreqMap.get(qId) || 0) + 1);
+          (req as any).qIdFreqMap = qIdFreqMap;
           
           if (questionMap.has(qId)) {
             // 이미 등록된 문제면 빈도 정보만 업데이트
@@ -318,7 +321,8 @@ export async function GET(req: NextRequest) {
     // 빈도 정보 주입 (기본 데이터에 있는 빈도와 계산된 빈도 중 큰 것 선택)
     Array.from(questionMap.values()).forEach((q: any) => {
       const normText = normalize(q.question || "");
-      const calculatedFreq = freqCountMap.get(normText) || 1;
+      const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
+      const calculatedFreq = Math.max(freqCountMap.get(normText) || 1, ((req as any).qIdFreqMap?.get(qId) || 1));
       q.frequency = Math.max(Number(q.frequency) || 0, calculatedFreq);
     });
 
@@ -354,7 +358,7 @@ export async function GET(req: NextRequest) {
     // 정보처리기능사는 빈출 섹션 숨김 (사용자 요청)
     if (frequentQuestions.length > 0 && sanitizedSubject !== '정보처리기능사') {
       const FREQ_PAGE_SIZE = 30;
-      const MAX_FREQ_PARTS = 6; // 사용자 요청: 공략 07부터는 노출하지 않음
+      const MAX_FREQ_PARTS = 12; // 사용자 요청: 더 많은 분량의 빈출 문항 노출
       const freqParts = Math.min(MAX_FREQ_PARTS, Math.floor(frequentQuestions.length / FREQ_PAGE_SIZE) + (frequentQuestions.length % FREQ_PAGE_SIZE > 0 ? 1 : 0));
       
       for (let i = 0; i < freqParts; i++) {
