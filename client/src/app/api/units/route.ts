@@ -138,7 +138,17 @@ export async function GET(req: NextRequest) {
         return "시각디자인 일반";
       }
 
-      if (s === '전기공사산업기사' || s === '전기기사') {
+      if (s === '전기기사') {
+        if (q.subject) return q.subject;
+        if (/자기|자계|전계|유전체/.test(text)) return "01. 전기자기학";
+        if (/송전|배전|발전|변전/.test(text)) return "02. 전력공학";
+        if (/변압기|유도기|직류기|동기기/.test(text)) return "03. 전기기기";
+        if (/회로|라플라스|전달함수/.test(text)) return "04. 회로이론 및 제어공학";
+        if (/KEC|설비|기술기준/.test(text)) return "05. 전기설비기술기준";
+        return "기타";
+      }
+
+      if (s === '전기공사산업기사') {
         if (/조명|광도|럭스|루멘|전열|조도|광속|칸델라|글로브|휘도|램프|반사율|투과율/.test(text)) return "01. 조명 및 전열";
         if (/전지|배터리|축전지|전기화학|패러데이|전해|금속막대|도금|이온/.test(text)) return "02. 전기화학 및 배터리";
         if (/펌프|권상|엘리베이터|에스컬레이터|기중기|용접|가열|건조|공작기계/.test(text)) return "03. 전동기 응용";

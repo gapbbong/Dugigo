@@ -16,6 +16,294 @@
     "subject": "전기자기학"
   },
   {
+    "round": "2021년 1회 전기기사",
+    "number": 4,
+    "question": "진공의 점 (2, 2, 2)에 10^{-9}[C]의 전화가 놓여 있다. 점 (2, 5, 6)에서의 전계 E는 약 몇 [V/m]인가? (단, a_y, a_z는 단위벡터이다.)",
+    "choices": [
+      "0.278a_y + 2.888a_z",
+      "0.216a_y + 0.288a_z",
+      "0.288a_y + 0.216a_z",
+      "0.291a_y + 0.288a_z"
+    ],
+    "answer": 2,
+    "explanation": "전계의 세기(E)\n점전하와 단위전하 사이의 거리를 r[m]라 하면\nr=(2-2)a_x+(5-2)a_y+(6-2)a_z\n=3a_y+4a_z[m]이다.\n전계의 세기 E는\nE = \\frac{Q}{4\\pi\\epsilon_0 r^2} a_n = 9 \\times 10^9 \\times \\frac{Q}{r^2} a_n [V/m]일 때\nQ=10^{-9} [C]\nr=\\sqrt{3^2+4^2}=5[m]\na_n=\\frac{r}{r}=\\frac{3a_y+4a_z}{5} 이므로\nE = 9 \\times 10^9 \\times \\frac{Q}{r^2} a_n\n= 9 \\times 10^9 \\times \\frac{10^{-9}}{5^2} \\frac{3a_y+4a_z}{5}\n= 0.216a_y+0.288a_z [V/m]",
+    "image_needed": false,
+    "source_page": "page_006",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 5,
+    "question": "방송국 안테나 출력이 W[W]이고 이로부터 진공 중에 r[m] 떨어진 점에서 자계의 세기의 실효치는 약 몇 [A/m]인가?",
+    "choices": [
+      "\\frac{1}{r}\\sqrt{\\frac{W}{377\\pi}}",
+      "\\frac{1}{2r}\\sqrt{\\frac{W}{377\\pi}}",
+      "\\frac{1}{2r}\\sqrt{\\frac{W}{188\\pi}}",
+      "\\frac{1}{r}\\sqrt{\\frac{2W}{377\\pi}}"
+    ],
+    "answer": 2,
+    "explanation": "포인팅 벡터를 S, 고유임피던스를 \\eta, 전계의 세기를 E, 자계의 세기를 H, 안테나 출력을 W, 반경을 r이라 하면(\\epsilon_s=1, \\mu_s=1)\nS=EH=\\eta H^2 = \\frac{E^2}{\\eta} = \\frac{W}{4\\pi r^2} [W/m²]\n\\eta = \\sqrt{\\frac{\\mu}{\\epsilon}} = \\sqrt{\\frac{\\mu_0 \\mu_s}{\\epsilon_0 \\epsilon_s}} = \\sqrt{\\frac{\\mu_0}{\\epsilon_0}} = 377[Ω]이므로\n\\therefore H=\\sqrt{\\frac{W}{4\\pi r^2 \\eta}} = \\frac{1}{2r}\\sqrt{\\frac{W}{377\\pi}} [A/m]",
+    "image_needed": false,
+    "source_page": "page_006",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 11,
+    "question": "다음 중 비투자율($\\mu_s$)이 가장 큰 것은?",
+    "choices": [
+      "금",
+      "은",
+      "구리",
+      "니켈"
+    ],
+    "answer": 4,
+    "explanation": "자성체의 성질\n비투자율 $\\mu_s$, 자화율 $\\chi_m$라 하면\n(1) 역자성체 : $\\mu_s < 1$, $\\chi_m < 0$ (수소 헬륨, 구리, 탄소, 금, 은 등)\n(2) 상자성체 : $\\mu_s > 1$, $\\chi_m > 0$ (칼륨, 텅스텐, 산소 등)\n(3) 강자성체 : $\\mu_s \\gg 1$, $\\chi_m \\gg 0$ (철, 니켈, 코발트 등)\n$\\therefore$ 비투자율이 가장 큰 것은 강자성체로서 니켈이다.",
+    "image_needed": false,
+    "source_page": "page_008",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 12,
+    "question": "한 변의 길이가 $l$[m]인 정사각형 도체에 전류 $I$[A]가 흐르고 있을 때 중심점 $P$에서의 자계의 세기는 몇 [A/m]인가? [그림]",
+    "choices": [
+      "$16 \\pi I$",
+      "$4 \\pi I$",
+      "$\\frac{\\sqrt{3}\\pi}{2l}I$",
+      "$\\frac{2\\sqrt{2}}{\\pi l}I$"
+    ],
+    "answer": 4,
+    "explanation": "정n변형 회로의 중심 자계의 세기\n반지름이 $a$[m]인 경우와 한 변의 길이가 $l$[m]인 정$n$변형 회로의 중심 자계의 세기를 $H_0$라 하면\n$H_0 = \\frac{nI \\tan \\frac{\\pi}{n}}{2\\pi a} = \\frac{nI}{2\\pi \\frac{l}{2 \\sin \\frac{\\pi}{n}}} \\tan \\frac{\\pi}{n} = \\frac{nI}{\\pi l} \\sin \\frac{\\pi}{n} \\tan \\frac{\\pi}{n}$ [AT/m] 이므로\n한 변의 길이가 $l$[m], 정사각형인 $n=4$일 때\n$\\therefore H_0 = \\frac{4I}{\\pi l} \\sin \\frac{\\pi}{4} \\tan \\frac{\\pi}{4} = \\frac{4I}{\\pi l} \\times \\frac{1}{\\sqrt{2}} \\times 1 = \\frac{2\\sqrt{2}}{\\pi l}I$ [AT/m]",
+    "image_needed": true,
+    "source_page": "page_008",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 1회 전기기사",
+    "number": 13,
+    "question": "간격이 3[cm]이고 면적이 30[$cm^2$]인 평판의 공기 콘덴서에 220[V]의 전압을 가하면 두 판 사이에 작용하는 힘은 약 몇 [N]인가?",
+    "choices": [
+      "$6.3 \\times 10^{-6}$",
+      "$7.14 \\times 10^{-7}$",
+      "$3.8 \\times 10^{-5}$",
+      "$5.75 \\times 10^{-4}$"
+    ],
+    "answer": 2,
+    "explanation": "정전 에너지($w$) 및 정전력($f$)\n단위 체적당 정전 에너지($w$)와 단위면적당 정전력($f$)은 서로 같으며 공기 유전율 $\\epsilon_0$, 면전하밀도 $\\rho_s$, 전속밀도 $D$, 전계의 세기 $E$, 전위 $V$, 간격 $d$라 하면\n$w = \\frac{\\rho_s^2}{2\\epsilon_0} = \\frac{D^2}{2\\epsilon_0} = \\frac{1}{2}\\epsilon_0 E^2 = \\frac{1}{2}ED$[J/m$^3$]\n$f = w$[N/m$^2$]이므로 $E = \\frac{V}{d}$[V/m]일 때\n$f = \\frac{1}{2}\\epsilon_0 E^2 = \\frac{1}{2}\\epsilon_0 \\left(\\frac{V}{d}\\right)^2$[N/m$^2$]이다.\n$F = fS = \\frac{1}{2}\\epsilon_0 \\left(\\frac{V}{d}\\right)^2 S$[N] 식에서\n$d = 3 \\times 10^{-2}$[m], $S = 30 \\times 10^{-4}$[m$^2$]\n$V = 220$[V] 이므로\n$\\therefore F = \\frac{1}{2}\\epsilon_0 \\left(\\frac{V}{d}\\right)^2 S$\n$= \\frac{1}{2} \\times 8.855 \\times 10^{-12} \\times \\left(\\frac{220}{3 \\times 10^{-2}}\\right)^2 \\times 30 \\times 10^{-4}$\n$= 7.14 \\times 10^{-7}$[N]",
+    "image_needed": false,
+    "source_page": "page_008",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 2회 전기기사",
+    "number": 1,
+    "question": "두 종류의 유전율($\\epsilon_1$, $\\epsilon_2$)을 가진 유전체가 서로 접하고 있는 경계면에 전하가 존재하지 않을 때 성립하는 경계조건으로 옳은 것은? (단, $E_1$, $E_2$는 각 유전체에서의 전계이고, $D_1$, $D_2$는 각 유전체에서의 전속밀도이고, $\\theta_1$, $\\theta_2$는 각각 경계면의 법선벡터와 $E_1$, $E_2$가 이루는 각이다.)",
+    "choices": [
+      "$E_1 \\cos\\theta_1 = E_2 \\cos\\theta_2$, $D_1 \\sin\\theta_1 = D_2 \\sin\\theta_2$, $\\frac{\\tan\\theta_1}{\\tan\\theta_2} = \\frac{\\epsilon_2}{\\epsilon_1}$",
+      "$E_1 \\cos\\theta_1 = E_2 \\cos\\theta_2$, $D_1 \\sin\\theta_1 = D_2 \\sin\\theta_2$, $\\frac{\\tan\\theta_1}{\\tan\\theta_2} = \\frac{\\epsilon_1}{\\epsilon_2}$",
+      "$E_1 \\sin\\theta_1 = E_2 \\sin\\theta_2$, $D_1 \\cos\\theta_1 = D_2 \\cos\\theta_2$, $\\frac{\\tan\\theta_1}{\\tan\\theta_2} = \\frac{\\epsilon_2}{\\epsilon_1}$",
+      "$E_1 \\sin\\theta_1 = E_2 \\sin\\theta_2$, $D_1 \\cos\\theta_1 = D_2 \\cos\\theta_2$, $\\frac{\\tan\\theta_1}{\\tan\\theta_2} = \\frac{\\epsilon_1}{\\epsilon_2}$"
+    ],
+    "answer": 1,
+    "explanation": "유전체 내에서의 경계조건\n(1) 전계의 세기는 경계면의 접선성분이 서로 같다.\n$E_1 \\sin\\theta_1 = E_2 \\sin\\theta_2$\n(2) 전속밀도는 경계면의 법선성분이 서로 같다.\n$D_1 \\cos\\theta_1 = D_2 \\cos\\theta_2$ 또는 $\\epsilon_1 E_1 \\cos\\theta_1 = \\epsilon_2 E_2 \\cos\\theta_2$\n(3) 굴절각 조건\n$\\frac{\\epsilon_1}{\\epsilon_2} = \\frac{\\tan\\theta_1}{\\tan\\theta_2}$ 또는 $\\epsilon_1 \\tan\\theta_2 = \\epsilon_2 \\tan\\theta_1$",
+    "image_needed": false,
+    "source_page": "page_034",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 2회 전기기사",
+    "number": 2,
+    "question": "공기 중에서 반지름 $0.03[\\text{m}]$의 구도체에 줄 수 있는 최대 전하는 약 몇 $[\\text{C}]$인가? (단, 이 구도체의 주위 공기에 대한 절연내력은 $5 \\times 10^6 [\\text{V/m}]$이다.)",
+    "choices": [
+      "$1 \\times 10^{-7}$",
+      "$2 \\times 10^{-6}$",
+      "$5 \\times 10^{-5}$",
+      "$2 \\times 10^{-4}$"
+    ],
+    "answer": 4,
+    "explanation": "구도체의 절연내력=전계의 세기($E$)\n$E = \\frac{Q}{4\\pi\\epsilon_0 a^2} = 9 \\times 10^9 \\times \\frac{Q}{a^2} [\\text{V/m}]$ 식에서\n$a = 0.03 [\\text{m}]$, $E = 5 \\times 10^6 [\\text{V/m}]$일 때\n$\\therefore Q = 4\\pi\\epsilon_0 a^2 \\cdot E = \\frac{a^2 \\cdot E}{9 \\times 10^9}$\n$= \\frac{0.03^2 \\times 5 \\times 10^6}{9 \\times 10^9} = 5 \\times 10^{-7} [\\text{C}]$",
+    "image_needed": false,
+    "source_page": "page_034",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 2회 전기기사",
+    "number": 3,
+    "question": "진공 중의 평등자계 $H_0$ 중에 반지름 $a[\\text{m}]$이고, 투자율이 $\\mu$인 구 자성체가 있다. 이 구 자성체의 감자율은? (단, 구 자성체 내부의 자계는 $H = \\frac{3\\mu_0}{2\\mu_0 + \\mu} H_0$이다.)",
+    "choices": [
+      "1",
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{1}{4}$"
+    ],
+    "answer": 3,
+    "explanation": "감자율($N$)\n자성체 내에서의 자화의 세기 $J$는\n$J = \\mu_0 (\\mu_s - 1) H$\n$= \\mu_0 (\\mu_s - 1) \\cdot \\frac{3\\mu_0}{2\\mu_0 + \\mu} H_0 [\\text{Wb/m}^2]$\n$J = \\frac{\\mu_0 (\\mu_s - 1)}{1+N(\\mu_s - 1)} H_0 [\\text{Wb/m}^2]$ 식에서\n$\\mu_0 (\\mu_s - 1) \\cdot \\frac{3\\mu_0}{2\\mu_0 + \\mu} H_0 = \\frac{\\mu_0 (\\mu_s - 1)}{1+N(\\mu_s - 1)} H_0$ 이므로\n$\\frac{3\\mu_0}{2\\mu_0 + \\mu} = \\frac{1}{1+N(\\mu_s - 1)}$\n$\\mu = \\mu_0 \\mu_s$를 대입하여 전개하면\n$3(1+N(\\mu_s-1)) = 2 + \\mu_s$가 된다.\n$\\therefore N = \\frac{1}{3}$",
+    "image_needed": false,
+    "source_page": "page_034",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 3,
+    "question": "길이가 10 [cm]이고 단면의 반지름이 1 [cm]인 원통형 자성체가 길이 방향으로 균일하게 자화되어 있을 때 자화의 세기가 0.5 [Wb/m$^2$]이라면 이 자성체의 자기모멘트[Wb·m]는?",
+    "choices": [
+      "$1.57 \\times 10^{-5}$",
+      "$1.57 \\times 10^{-4}$",
+      "$1.57 \\times 10^{-3}$",
+      "$1.57 \\times 10^{-2}$"
+    ],
+    "answer": 1,
+    "explanation": "자화의 세기 $J$\n자극의 세기 $m$ [Wb], 자기모멘트 $M$ [Wb·m], 미소면적 $\\Delta S$ [m$^2$], 미소체적 $\\Delta v$ [m$^3$]라 하면\n$J = \\frac{m}{\\Delta S} = \\frac{M}{\\Delta v}$ [Wb/m$^2$]이다.\n단면의 반지름이 $r$[m]인 원통 단면적 $S$는\n$S = \\pi r^2$ [m$^2$]이므로 체적 $v$는\n$v = Sl = \\pi r^2 l$ [m$^3$]이 된다.\n$l = 10$ [cm] $= 0.1$ [m], $r = 1$ [cm] $= 0.01$ [m],\n$J = 0.5$ [Wb/m$^2$]일 때\n$v = \\pi r^2 l = \\pi \\times 0.01^2 \\times 0.1$\n$= 3.14 \\times 10^{-5}$ [m$^3$] 이므로\n$\\therefore M = \\Delta v J = 3.14 \\times 10^{-5} \\times 0.5$\n$= 1.57 \\times 10^{-5}$ [Wb·m]",
+    "image_needed": false,
+    "source_page": "page_062",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 4,
+    "question": "그림과 같이 공기 중 2개의 동심 구도체에서 내구(A)에만 전하 $Q$를 주고 외구(B)를 접지하였을 때 내구(A)의 전위는? [그림]",
+    "choices": [
+      "$\\frac{Q}{4\\pi\\epsilon_0} \\left( \\frac{1}{a} - \\frac{1}{b} + \\frac{1}{c} \\right)$",
+      "$\\frac{Q}{4\\pi\\epsilon_0} \\left( \\frac{1}{a} - \\frac{1}{b} \\right)$",
+      "$\\frac{Q}{4\\pi\\epsilon_0} \\frac{1}{c}$",
+      "0"
+    ],
+    "answer": 2,
+    "explanation": "동심구도체에 의한 전위\n도체 A에만 +$Q$[C]으로 대전하고 도체 B를 접지한 경우 도체 A의 전위 $V_A$는\n$\\therefore V_A = \\frac{Q}{4\\pi\\epsilon_0} \\left( \\frac{1}{a} - \\frac{1}{b} \\right)$ [V]\n참고 도체 B는 접지되어 있어 도체 B에는 전위가 나타나지 않는다.",
+    "image_needed": true,
+    "source_page": "page_062",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 9,
+    "question": "다음 중 기자력(magnetomotive force)에 대한 설명으로 틀린 것은?",
+    "choices": [
+      "SI 단위는 암페어[A]이다.",
+      "전기회로의 기전력에 대응한다.",
+      "자기회로의 자기저항과 자속의 곱과 동일하다.",
+      "코일에 전류를 흘렸을 때 전류밀도와 코일의 권수의 곱의 크기와 같다."
+    ],
+    "answer": 4,
+    "explanation": "기자력\n기자력 F, 코일권수 N, 전류 I, 자기저항 R_m, 자속 Φ, 자계의 세기 H, 길이 l이라 하면\nF = NI = R_mΦ = H⋅l [AT]이므로\n∴ 기자력은 코일에 흐르는 전류와 코일의 권수의 곱의 크기와 같다.",
+    "image_needed": false,
+    "source_page": "page_064",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 10,
+    "question": "유전율 $\\epsilon$, 투자율 $\\mu$인 매질 내에서 전자기파의 전파속도는?",
+    "choices": [
+      "$\\sqrt{\\frac{\\mu}{\\epsilon}}$",
+      "$\\sqrt{\\mu\\epsilon}$",
+      "$\\sqrt{\\frac{\\epsilon}{\\mu}}$",
+      "$\\frac{1}{\\sqrt{\\mu\\epsilon}}$"
+    ],
+    "answer": 4,
+    "explanation": "전파속도(v)\n파장 $\\lambda$, 주파수 f, 각속도 $\\omega$, 위상정수 $\\beta$, 인덕턴스 L, 정전용량 C, 유전율 $\\epsilon$, 투자율 $\\mu$라 하면\nv = $\\lambda$f = $\\frac{\\omega}{\\beta}$ = $\\frac{1}{\\sqrt{LC}}$ = $\\frac{1}{\\sqrt{\\epsilon\\mu}}$\n= $\\frac{1}{\\sqrt{\\epsilon_0\\mu_0}}$ · $\\frac{1}{\\sqrt{\\epsilon_r\\mu_r}}$ = $\\frac{3 \\times 10^8}{\\sqrt{\\epsilon_r\\mu_r}}$ [m/sec]",
+    "image_needed": false,
+    "source_page": "page_064",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 11,
+    "question": "평균 반지름(r)이 20[cm], 단면적(S)이 6[cm²]인 환상 철심에서 권선수(N)가 500회인 코일에 흐르는 전류(I)가 4[A]일 때 철심 내부에서의 자계의 세기(H)는 약 몇 [AT/m]인가? [그림]",
+    "choices": [
+      "1,590",
+      "1,700",
+      "1,870",
+      "2,120"
+    ],
+    "answer": 1,
+    "explanation": "환상솔레노이드에 의한 자계의 세기(H)\nH$_{in}$ = $\\frac{NI}{l}$ = $\\frac{NI}{2\\pi r}$ [AT/m], H$_{out}$ = 0 [AT/m] 식에서\nr = 20 [cm] = 0.2 [m], S = 6 [cm²], N = 500, I = 4 [A]일 때\n∴ H$_{in}$ = $\\frac{NI}{2\\pi r}$ = $\\frac{500 \\times 4}{2\\pi \\times 0.2}$ = 1,590 [AT/m]",
+    "image_needed": true,
+    "source_page": "page_064",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 12,
+    "question": "페러데이관(Faraday tube)의 성질에 대한 설명으로 틀린 것은?",
+    "choices": [
+      "페러데이관 중에 있는 전속수는 그 관속에 진전하가 없으면 일정하며 연속적이다.",
+      "페러데이관의 양단에는 양 또는 음의 단위 진전하가 존재하고 있다.",
+      "페러데이관 한 개의 단위 전위차 당 보유에너지는 $\\frac{1}{2}$J이다.",
+      "페러데이관의 밀도는 전속밀도와 같지 않다."
+    ],
+    "answer": 4,
+    "explanation": "페러데이관의 성질\n(1) 페러데이관 내의 전속선수는 일정하며 전속선수가 페러데이관의 수이기도 하다.\n(2) 진전하가 없는 점에서는 페러데이관은 연속적이다.\n(3) 페러데이관의 밀도는 전속밀도와 같다.\n(4) 페러데이관 양단에 정(+), 부(-)의 단위 진전하가 있다.\n(5) 페러데이관의 단위 전위차당 보유에너지는 1/2[J]이다.",
+    "image_needed": false,
+    "source_page": "page_064",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 1회 전기기사",
+    "number": 12,
+    "question": "전계가 유리에서 공기로 입사할 때 입사각 $\\theta_1$과 굴절각 $\\theta_2$의 관계와 유리에서의 전계 $E_1$과 공기에서의 전계 $E_2$의 관계는?",
+    "choices": [
+      "$\\theta_1 > \\theta_2$, $E_1 > E_2$",
+      "$\\theta_1 < \\theta_2$, $E_1 > E_2$",
+      "$\\theta_1 > \\theta_2$, $E_1 < E_2$",
+      "$\\theta_1 < \\theta_2$, $E_1 < E_2$"
+    ],
+    "answer": 3,
+    "explanation": "유전체 내에서의 경계조건\n(1) $\\epsilon_1 > \\epsilon_2$이면 $E_1 < E_2$, $D_1 > D_2$, $\\theta_1 > \\theta_2$이다.\n(2) 유리의 유전율($\\epsilon_1$)이 공기의 유전율($\\epsilon_2$)보다 크다.\n$\\quad \\therefore \\epsilon_1 > \\epsilon_2$ 이므로 $\\theta_1 > \\theta_2$, $E_1 < E_2$",
+    "image_needed": false,
+    "source_page": "page_094",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 1회 전기기사",
+    "number": 13,
+    "question": "진공 중 4[m] 간격으로 평행한 두 개의 무한평판 도체에 각각 +4[C/m²], -4[C/m²]의 전하를 주었을 때, 두 도체 간의 전위차는 약 몇 [V]인가?",
+    "choices": [
+      "1.36 × 10¹¹",
+      "1.36 × 10¹²",
+      "1.8 × 10¹¹",
+      "1.8 × 10¹²"
+    ],
+    "answer": 4,
+    "explanation": "평행평판 전극 사이의 전계와 전위\n면전하 밀도 $\\rho_s$, 간격 d, 전계의 세기 E, 전위 V라 하면\n$E = \\frac{\\rho_s}{\\epsilon_0}$ [V/m], $V = Ed$ [V]이므로\nd = 4[m], $\\rho_s$ = ±4 [C/m²]일 때\n$\\quad \\therefore V = Ed = \\frac{\\rho_s}{\\epsilon_0}d = \\frac{4}{8.855 \\times 10^{-12}} \\times 4$\n$\\quad \\qquad = 1.8 \\times 10^{12}$ [V]",
+    "image_needed": false,
+    "source_page": "page_094",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 1회 전기기사",
+    "number": 19,
+    "question": "평등 전계 중에 유전체 구에 의한 전계 분포가 그림과 같이 되었을 때 $ \\epsilon_1 $과 $ \\epsilon_2 $의 크기 관계는?",
+    "choices": [
+      "$ \\epsilon_1 > \\epsilon_2 $",
+      "$ \\epsilon_1 < \\epsilon_2 $",
+      "$ \\epsilon_1 = \\epsilon_2 $",
+      "무관하다."
+    ],
+    "answer": 2,
+    "explanation": "유전체 내에서의 경계조건\n$ \\epsilon_1 > \\epsilon_2 $이면 $ E_1 < E_2 $, $ D_1 > D_2 $, $ \\theta_1 > \\theta_2 $이므로 전계 분포와 유전율은 반비례에 있다.\n전계 분포가 유전체 $ \\epsilon_1 $쪽으로 모이기 때문에 유전율은 $ \\epsilon_2 $가 더 크다는 것을 알 수 있다.\n$ \\therefore \\epsilon_1 < \\epsilon_2 $",
+    "image_needed": true,
+    "source_page": "page_096",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 1회 전기기사",
+    "number": 20,
+    "question": "어떤 도체에 교류 전류가 흐를 때 도체에서 나타나는 표피 효과에 대한 설명으로 틀린 것은?",
+    "choices": [
+      "도체 중심부보다 도체 표면부에 더 많은 전류가 흐르는 것을 표피 효과라 한다.",
+      "전류의 주파수가 높을수록 표피 효과는 작아진다.",
+      "도체의 도전율이 클수록 표피 효과는 커진다.",
+      "도체의 투자율이 클수록 표피 효과는 커진다."
+    ],
+    "answer": 2,
+    "explanation": "표피효과($\\delta$)\n도체에 교류전원이 인가된 경우 도체 내에 흐르는 전류는 도체 표면으로 갈수록 증가하는 현상이 생기는데 이를 표피효과라 한다.\n$ \\delta = 2\\pi\\sqrt{\\frac{2f\\mu}{\\rho}} = 2\\pi\\sqrt{2f\\mu k} $ 식에 의해서\n(1) 주파수가 높을수록 커진다.\n(2) 투자율이 클수록 커진다.\n(3) 도전율이 클수록 커진다.\n(4) 고유저항이 작을수록 커진다.\n(5) 전선의 단면적이 클수록 커진다.",
+    "image_needed": false,
+    "source_page": "page_096",
+    "subject": "전기자기학"
+  },
+  {
     "round": "2022년 2회 전기기사",
     "number": 6,
     "question": "유전율이 $\\epsilon_1$과 $\\epsilon_2$인 두 유전체가 경계를 이루어 평행하게 접하고 있는 경우 유전율이 $\\epsilon_1$인 영역에 전하 Q가 존재할 때 이 전하와 $\\epsilon_2$인 유전체 사이에 작용하는 힘에 대한 설명으로 옳은 것은?",
@@ -112,6 +400,230 @@
     "subject": "전기자기학"
   },
   {
+    "round": "2022년 2회 전기기사",
+    "number": 18,
+    "question": "내구의 반지름이 a=5[cm] 외구의 반지름이 b=10[cm]이고, 공기로 채워진 동심구형 캐패시터의 정전용량은 약 몇 [pF]인가?",
+    "choices": [
+      "11.1",
+      "22.2",
+      "33.3",
+      "44.4"
+    ],
+    "answer": 1,
+    "explanation": "동심구도체의 정전용량(C)\n$C = \\frac{Q}{V} = \\frac{4\\pi \\epsilon_0 ab}{b-a} = \\frac{1}{\\frac{1}{4\\pi \\epsilon_0}(\\frac{1}{a}-\\frac{1}{b})} = \\frac{1}{9\\times 10^9} \\times \\frac{ab}{b-a}$ [F] 식에서\n$\\therefore C = \\frac{1}{9\\times 10^9} \\times \\frac{ab}{b-a} = \\frac{1}{9\\times 10^9} \\times \\frac{5\\times 10^{-2} \\times 10^{-2}}{10\\times 10^{-2}-5\\times 10^{-2}} = 11.1\\times 10^{-12}$ [F] = 11.1 [pF]",
+    "image_needed": false,
+    "source_page": "page_126",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 19,
+    "question": "자성체의 종류에 대한 설명으로 옳은 것은? (단, $X_m$는 자화율이고, $\\mu_r$은 비투자율이다.)",
+    "choices": [
+      "$X_m > 0$이면 역자성체이다.",
+      "$X_m < 0$이면 상자성체이다.",
+      "$\\mu_r > 1$이면 비자성체이다.",
+      "$\\mu_r < 1$이면 역자성체이다."
+    ],
+    "answer": 4,
+    "explanation": "자성체의 성질\n비투자율 $\\mu_r$, 자화율 $X_m$라 하면\n(1) 역자성체 : $\\mu_r < 1, X_m < 0$\n(수소, 헬륨, 구리, 탄소, 금, 은 등)\n(2) 상자성체 : $\\mu_r > 1, X_m > 0$(칼륨, 텅스텐, 산소 등)\n(3) 강자성체 : $\\mu_r \\gg 1, X_m \\gg 0$(철, 니켈, 코발트 등)",
+    "image_needed": false,
+    "source_page": "page_126",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 20,
+    "question": "구좌표계에서 $\\nabla^2r$의 값은 얼마인가?\n(단, $r = \\sqrt{x^2+y^2+z^2}$)",
+    "choices": [
+      "$\\frac{1}{r}$",
+      "$\\frac{2}{r}$",
+      "$r$",
+      "$2r$"
+    ],
+    "answer": 2,
+    "explanation": "구좌표계에서의 라플라시안\n구좌표계의 라플라시안 $\\nabla^2$의 표현은 다음과 같다.\n$\\nabla^2 = \\frac{1}{r^2} \\frac{\\partial}{\\partial r}(r^2 \\frac{\\partial}{\\partial r}) + \\frac{1}{r^2\\sin\\theta} \\frac{\\partial}{\\partial\\theta}(\\sin\\theta \\frac{\\partial}{\\partial\\theta}) + \\frac{1}{r^2\\sin^2\\theta} \\frac{\\partial^2}{\\partial\\phi^2}$\n따라서 $\\nabla^2r$을 구좌표계에 그대로 표현해보면\n$\\nabla^2r = \\frac{1}{r^2} \\frac{\\partial}{\\partial r}(r^2 \\frac{\\partial r}{\\partial r}) + \\frac{1}{r^2\\sin\\theta} \\frac{\\partial}{\\partial\\theta}(\\sin\\theta \\frac{\\partial r}{\\partial\\theta}) + \\frac{1}{r^2\\sin^2\\theta} \\frac{\\partial^2 r}{\\partial\\phi^2}$ 이므로\n$\\therefore \\nabla^2r = \\frac{1}{r^2} \\frac{\\partial}{\\partial r}(r^2 \\cdot 1) = \\frac{1}{r^2} \\frac{\\partial}{\\partial r}(r^2) = \\frac{1}{r^2} \\cdot 2r = \\frac{2}{r}$",
+    "image_needed": false,
+    "source_page": "page_126",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 3회 기출문제",
+    "number": 12,
+    "question": "0.3[μF]인 평행판 공기 콘덴서가 있다. 전극간에 그 간격의 절반 두께의 유리판을 넣었다면 콘덴서의 용량은 약 몇 [μF]인가? (단, 유리의 비유전율은 10이다.)",
+    "choices": [
+      "0.25",
+      "0.35",
+      "0.45",
+      "0.55"
+    ],
+    "answer": 4,
+    "explanation": "유전체 내의 평행판 전극의 직렬연결\n공기콘덴서의 정전용량 C라 하면\n$C = \\frac{\\epsilon_0 S}{d} = 0.3 [\\mu F]$이다.\n콘덴서 판 간에 $\\frac{1}{2}$인 두께를 유전체로 채운 경우 평행판 전극의 경계면과 단자가 수직을 이루고 있으므로 콘덴서는 직렬로 접속된다. 각 콘덴서의 정전용량 $C_1$, $C_2$라 하고 합성정전용량 C'라 하면\n$C_1 = \\frac{\\epsilon_0 \\epsilon_s S}{d/2} = \\frac{2\\epsilon_0 \\epsilon_s S}{d} = 2C \\epsilon_s = 2 \\times 0.3 \\times 10 = 6 [\\mu F]$\n$C_2 = \\frac{\\epsilon_0 S}{d/2} = \\frac{2\\epsilon_0 S}{d} = 2C = 2 \\times 0.3 = 0.6 [\\mu F]$\n$\\therefore C' = \\frac{1}{\\frac{1}{C_1} + \\frac{1}{C_2}} = \\frac{C_1 C_2}{C_1 + C_2} = \\frac{6 \\times 0.6}{6 + 0.6} = 0.55 [\\mu F]$",
+    "image_needed": false,
+    "source_page": "page_152",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 3회 기출문제",
+    "number": 13,
+    "question": "철심이 든 환상 솔레노이드의 권수는 500회, 평균 반지름은 10[cm], 철심의 단면적은 10[cm²], 비투자율 4,000이다. 이 환상 솔레노이드에 2[A]의 전류를 흘릴 때 철심 내의 자속[Wb]은?",
+    "choices": [
+      "$4 \\times 10^{-3}$",
+      "$4 \\times 10^{-4}$",
+      "$8 \\times 10^{-3}$",
+      "$8 \\times 10^{-4}$"
+    ],
+    "answer": 3,
+    "explanation": "자기회로 내의 옴의 법칙\n$N = 500$, $a = 10 [cm] = 10^{-1} [m]$, $S = 10 [cm^2] = 10^{-3} [m^2]$, $\\mu_s = 4,000$, $I = 2 [A]$일 때\n$\\phi = \\frac{F}{R_m} = \\frac{NI}{R_m} = \\frac{\\mu_0 \\mu_s NI S}{l} = \\frac{\\mu_0 \\mu_s NI S}{2 \\pi a} [Wb]$이므로\n$\\phi = \\frac{4 \\pi \\times 10^{-7} \\times 4,000 \\times 10^{-3} \\times 500 \\times 2}{2 \\pi \\times 10^{-1}}$\n$= 8 \\times 10^{-3} [Wb]$",
+    "image_needed": false,
+    "source_page": "page_152",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 3회 기출문제",
+    "number": 14,
+    "question": "무한 평면에 일정한 전류가 표면에 한 방향으로 흐르고 있다. 평면으로부터 r만큼 떨어진 점과 2r만큼 떨어진 점과의 자계의 비는 얼마인가?",
+    "choices": [
+      "1",
+      "$\\sqrt{2}$",
+      "2",
+      "4"
+    ],
+    "answer": 1,
+    "explanation": "암페어의 주회법칙\n[그림]\n무한평면에 일정한 방향(y방향)으로 전류가 흐른다고 가정하면 자계의 세기는 x성분만 존재하는 것을 알 수 있다.\n평면 내의 전류밀도는 균일하기 때문에 자계의 세기는 평면 양쪽에서 서로 같게 되며 방향은 암페어의 주회법칙에 의해서 반대방향이 된다.\n$\\therefore$ 평면 위, 아래의 자계의 비는 1이며 방향은 서로 반대방향이다.",
+    "image_needed": false,
+    "source_page": "page_152",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 3회 기출문제",
+    "number": 19,
+    "question": "면적 S[m²], 간격 d[m]인 평행판 공기콘덴서에 두께가 t[m]이고 비유전율이 ε_r인 유전체를 평행판 사이에 끼워 넣었다. 이 때 유전체를 삽입했을 때의 정전에너지는 유전체를 삽입하기 전의 몇 배인가? (단, 평행판 콘덴서의 전위는 일정하다.)",
+    "choices": [
+      "$\\frac{\\var\\epsilon_r d}{t + \\var\\epsilon_r (d-t)}$",
+      "$\\frac{t + \\var\\epsilon_r (d-t)}{\\var\\epsilon_r d}$",
+      "$\\frac{\\var\\epsilon_0 t}{t + \\var\\epsilon_r (d-t)}$",
+      "$\\frac{t + \\var\\epsilon_r (d-t)}{\\var\\epsilon_0 t}$"
+    ],
+    "answer": 1,
+    "explanation": "정전에너지(W)\n평행판 공기콘덴서의 정전용량을 C₀, 유전체가 삽입된 평행판 콘덴서의 정전용량을 C_S라 하면\n$C_0 = \\frac{\\var\\epsilon_0 S}{d} [F]$\n$C_S = \\frac{1}{\\frac{d-t}{\\var\\epsilon_0 S} + \\frac{t}{\\var\\epsilon_0 \\var\\epsilon_r S}} = \\frac{\\var\\epsilon_0 \\var\\epsilon_r S}{\\var\\epsilon_r (d-t) + t} [F]$\n전위가 일정한 평행판 콘덴서의 정전에너지는\n$W = \\frac{1}{2} C V^2 [J]$이므로 정전에너지와 정전용량은 비례 관계에 있음을 알 수 있다.\n$\\therefore \\frac{W'}{W} = \\frac{C_S}{C_0} = \\frac{\\frac{\\var\\epsilon_0 \\var\\epsilon_r S}{\\var\\epsilon_r (d-t) + t}}{\\frac{\\var\\epsilon_0 S}{d}}$\n$= \\frac{\\var\\epsilon_r d}{t + \\var\\epsilon_r (d-t)}$",
+    "image_needed": false,
+    "source_page": "page_154",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 3회 기출문제",
+    "number": 20,
+    "question": "권수가 25회인 코일에 100[A]인 전류를 흘리면 1[Wb]의 자속이 쇄교한다. 이 코일의 자기 인덕턴스를 1[H]로 유지하기 위해서는 코일의 권수를 몇 회로 조정하여야 하는가?",
+    "choices": [
+      "50",
+      "75",
+      "100",
+      "150"
+    ],
+    "answer": 1,
+    "explanation": "자기 인덕턴스\n$LI = N\\phi$ 식에서\n$N=25, I=100[A], \\phi=1[Wb]$ 일 때\n$L = \\frac{N\\phi}{I} = \\frac{25 \\times 1}{100} = 0.25 [H]$이다.\n자기회로의 자기저항이 일정한 경우\n$L = \\frac{N^2}{R_m} = \\frac{\\mu S N^2}{l} [H]$ 식에서\n자기 인덕턴스는 코일권수의 제곱에 비례하므로\n$L' = 1 [H]$로 유지하는데 필요한 권수 $N'$는\n$\\therefore N' = \\sqrt{\\frac{L'}{L}} \\times N = \\sqrt{\\frac{1}{0.25}} \\times 25$\n$= 50$ [회]",
+    "image_needed": false,
+    "source_page": "page_154",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 1,
+    "question": "어떤 막대철심이 있다. 단면적이 $8.26 \\times 10^{-4} [m^2]$, 길이가 $5.28 [mm]$, 비투자율이 6000이다. 이 철심의 자기저항은 약 몇 $[AT/Wb]$인가?",
+    "choices": [
+      "$2.48 \\times 10^3$",
+      "$4.48 \\times 10^3$",
+      "$6.48 \\times 10^3$",
+      "$8.48 \\times 10^3$"
+    ],
+    "answer": 4,
+    "explanation": "자기회로 내의 옴의 법칙\n자기회로의 투자율을 $\\mu$, 단면적을 $S$, 길이를 $l$이라 하면 자기저항 $R_m$은\n$R_m = \\frac{l}{\\mu S} = \\frac{l}{\\mu_0 \\mu_S S} [AT/Wb]$ 이므로\n$S = 8.26 \\times 10^{-4} [m^2]$, $l = 5.28 \\times 10^{-3} [m]$,\n$\\mu_S = 6000$ 일 때\n$\\therefore R_m = \\frac{l}{\\mu_0 \\mu_S S} = \\frac{5.28 \\times 10^{-3}}{4\\pi \\times 10^{-7} \\times 6000 \\times 8.26 \\times 10^{-4}}$\n$= 8.48 \\times 10^3 [AT/Wb]$",
+    "image_needed": false,
+    "source_page": "page_149",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 2,
+    "question": "진공내에서 전위함수가 $V = x^2 + y^2$ 과 같이 주어질 때 점 $(2, 2, 0)[m]$에서 체적전하밀도 $\\rho_v$는 몇 $[C/m^3]$인가? (단, $\\epsilon_0$는 자유공간의 유전율이다.)",
+    "choices": [
+      "$-4\\epsilon_0$",
+      "$-2\\epsilon_0$",
+      "$4\\epsilon_0$",
+      "$2\\epsilon_0$"
+    ],
+    "answer": 1,
+    "explanation": "포아송 방정식\n$\\nabla^2 V = -\\frac{\\rho_v}{\\epsilon_0}$ 일 때 $\\nabla^2 V$는\n$\\nabla^2 V = \\frac{\\partial^2 V}{\\partial x^2} + \\frac{\\partial^2 V}{\\partial y^2}$\n$= \\frac{\\partial^2}{\\partial x^2}(x^2+y^2) + \\frac{\\partial^2}{\\partial y^2}(x^2+y^2)$\n$= \\frac{\\partial}{\\partial x}(2x) + \\frac{\\partial}{\\partial y}(2y) = 2+2=4$ 이다.\n$\\therefore \\rho_v = -\\epsilon_0 \\nabla^2 V = -4\\epsilon_0 [C/m^3]$",
+    "image_needed": false,
+    "source_page": "page_149",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 3,
+    "question": "임의의 단면을 가진 2개의 원주상의 무한히 긴 평행도체가 있다. 지금 도체의 도전율을 무한대라고 하면 $C$, $L$, $\\epsilon$ 및 $\\mu$ 사이의 관계는? (단, $C$는 두 도체간의 단위길이당 정전용량, $L$은 두 도체를 한 개의 왕복회로로 한 경우의 단위길이당 자기인덕턴스, $\\epsilon$은 두 도체 사이에 있는 매질의 유전율, $\\mu$는 두 도체 사이에 있는 매질의 투자율이다.)",
+    "choices": [
+      "$C = \\frac{L}{\\epsilon \\mu}$",
+      "$\\frac{1}{LC} = \\epsilon \\cdot \\mu$",
+      "$LC = \\epsilon \\cdot \\mu$",
+      "$C \\cdot \\epsilon = L \\cdot \\mu$"
+    ],
+    "answer": 3,
+    "explanation": "평행도선의 자기인덕턴스($L$)와 정전용량($C$)의 관계\n$L = \\frac{\\mu_0 l}{\\pi} \\ln \\frac{d}{a} [H] = \\frac{\\mu_0}{\\pi} \\ln \\frac{d}{a} [H/m]$\n$C = \\frac{\\pi \\epsilon_0 l}{\\ln \\frac{d}{a}} [F] = \\frac{\\pi \\epsilon_0}{\\ln \\frac{d}{a}} [F/m]$ 이므로\n$LC = \\frac{\\mu_0}{\\pi} \\ln \\frac{d}{a} \\times \\frac{\\pi \\epsilon_0}{\\ln \\frac{d}{a}} = \\mu_0 \\epsilon_0$\n$\\therefore$ 매질내에서의 관계식은 $LC=\\mu \\epsilon$ 이다.",
+    "image_needed": false,
+    "source_page": "page_149",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 4,
+    "question": "강자성체의 히스테리시스 루프의 면적은?",
+    "choices": [
+      "강자성체의 단위체적당 필요한 에너지이다.",
+      "강자성체의 단위면적당 필요한 에너지이다.",
+      "강자성체의 단위길이당 필요한 에너지이다.",
+      "강자성체의 전체체적에 필요한 에너지이다."
+    ],
+    "answer": 1,
+    "explanation": "히스테리시스 곡선(자기이력곡선=B-H곡선)\n(1) 히스테리시스 곡선은 횡축(가로축)에 자계(H), 종축(세로축)에 자속밀도(B)를 취하여 그리는 자기회로 내의 자화곡선을 말한다.\n(2) 히스테리시스 곡선이 자계축과 만나는 점을 자성체가 갖는 보자력이라 하며 자속밀도축과 만나는 점을 자성체가 갖는 잔류자화라 한다.\n(3) 히스테리시스 손실($P_h$)은 철손($P_i$) 중의 하나로\n$P_h = k_h f B_m^{1.6} [W/m^3]$\n여기서, $k_h$ : 히스테리시스 상수, $f$ : 주파수,\n$B_m$ : 최대자속밀도이다.\n(4) 히스테리시스 루프의 면적이 나타내는 값은 자성체 내의 단위체적당 나타나는 에너지($W_h$)를 의미하며\n$W_h = \\oint BdH [J/m^3]$",
+    "image_needed": false,
+    "source_page": "page_150",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 5,
+    "question": "도전율이 $5.8 \\times 10^7 \\, [S/m]$, 비투자율이 0.99인 구리에 50[Hz]의 주파수를 갖는 전류가 흐를 때, 표피두께는 몇 [mm]인가?",
+    "choices": [
+      "8.47 [mm]",
+      "9.47 [mm]",
+      "10.47 [mm]",
+      "11.47 [mm]"
+    ],
+    "answer": 2,
+    "explanation": "표피효과($m$)와 침투깊이($\\delta$)\n(1) 표피효과($m$)\n$m = 2\\pi \\sqrt{\\frac{2f\\mu}{\\rho}} = 2\\pi \\sqrt{2f\\mu k}$\n(2) 침투깊이($\\delta$)\n$\\delta = \\sqrt{\\frac{2}{\\omega k\\mu}} = \\sqrt{\\frac{1}{\\pi f k\\mu}} = \\sqrt{\\frac{\\rho}{\\pi f \\mu}} \\, [m]$\n여기서, $f$는 주파수, $\\mu$는 투자율, $\\rho$는 고유저항,\n$k$는 도전율, $\\omega$는 각주파수이다.\n$k = 5.8 \\times 10^7 \\, [S/m]$, $\\mu_s = 0.99$.\n$f = 50 \\, [Hz]$ 일 때\n$\\therefore \\delta = \\sqrt{\\frac{1}{\\pi f \\mu k}} = \\sqrt{\\frac{1}{\\pi f \\mu_0 \\mu_s k}}$\n$= \\frac{1}{\\sqrt{\\pi \\times 50 \\times 4\\pi \\times 10^{-7} \\times 0.99 \\times 5.8 \\times 10^7}}$\n$= 9.47 \\, [mm]$",
+    "image_needed": false,
+    "source_page": "page_150",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 3회 전기기사",
+    "number": 7,
+    "question": "특성 임피던스 400[Ω]의 회로 말단에 1,200[Ω]의 부하가 연결되어 있다. 전원측에 100[kV]의 전압을 인가할 때 반사파의 크기[kV]는? (단, 선로에서의 전압 감쇠는 없는 것으로 가정한다.)",
+    "choices": [
+      "50",
+      "1",
+      "10",
+      "5"
+    ],
+    "answer": 3,
+    "explanation": "반사파 전압($E_p$)\n$E_p = \\rho E$ [kV], $\\rho = \\frac{Z_L - Z_0}{Z_L + Z_0}$ 식에서\n$Z_0 = 400$ [Ω], $Z_L = 1,200$ [Ω],\n전원측 전압 $E = 100$ [kV]일 때\n$\\rho = \\frac{Z_L - Z_0}{Z_L + Z_0} = \\frac{1,200 - 400}{1,200 + 400} = 0.5$ 이므로\n∴ $E_p = \\rho E = 0.5 \\times 100 = 50$ [kV]",
+    "image_needed": false,
+    "source_page": "page_166",
+    "subject": "전기자기학"
+  },
+  {
     "round": "2022년 3회 전기기사",
     "number": 12,
     "question": "회전계자형 동기발전기의 설명으로 틀린 것은?",
@@ -141,6 +653,278 @@
     "explanation": "배전방식의 전기적 특성 비교\n구분 | 전선중량비교\n단상2선식 | 100[%]\n단상3선식 | $\\frac{3}{8}$ = 37.5[%]\n3상3선식 | $\\frac{3}{4}$ = 75[%]\n3상4선식 | $\\frac{1}{3}$ = 33.3[%]\n\n∴ 3상 4선식 : 3상 3선식 = $\\frac{0.333}{0.75} = \\frac{\\frac{1}{3}}{\\frac{3}{4}} = \\frac{1}{3} \\times \\frac{4}{3} = \\frac{4}{9}$",
     "image_needed": false,
     "source_page": "page_158",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 9,
+    "question": "자기 인덕턴스 L[H]인 코일에 전류 I[A]를 흘렸을 때, 자계의 세기가 H[A/m]이다. 이 코일에 전류 (1/2)I[A]를 흘리면 저장되는 자기 에너지밀도[J/m³]는?",
+    "choices": [
+      "$\\frac{1}{2}LI^2$",
+      "$\\frac{1}{8}LI^2$",
+      "$\\frac{1}{2}\\mu_0H^2$",
+      "$\\frac{1}{8}\\mu_0H^2$"
+    ],
+    "answer": 4,
+    "explanation": "자기 에너지(W)와 자기 에너지밀도(w)\nW = $\\frac{1}{2}LI^2$ = $\\frac{1}{2}N\\Phi I$ = $\\frac{(N\\Phi)^2}{2L}$ [J]\nw = $\\frac{1}{2}\\mu_0H^2$ = $\\frac{1}{2}HB$ = $\\frac{B^2}{2\\mu_0}$ [J/m³]\nH = $\\frac{I}{l}$ [A/m] 이므로 H∝I 일 때 전류를 $\\frac{1}{2}I$ [A]로 흘리면 W', w'는 각각\nW' = $\\frac{1}{2}L(\\frac{1}{2}I)^2$ = $\\frac{1}{8}LI^2$ [J]\nw' = $\\frac{1}{2}\\mu_0(\\frac{1}{2}H)^2$ = $\\frac{1}{8}\\mu_0H^2$ [J/m³]\n∴ w' = $\\frac{1}{8}\\mu_0H^2$ [J/m³]",
+    "image_needed": false,
+    "source_page": "page_180",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 10,
+    "question": "유전율이 각각 다른 두 유전체가 서로 경계를 이루며 접해 있다. 다음 중 옳은 것은? (단, 이 경계면에는 진전하분포가 없다고 한다)",
+    "choices": [
+      "경계면에서 전계의 법선성분은 연속이다.",
+      "경계면에서 전속밀도의 접선성분은 연속이다.",
+      "경계면에서 전계와 전속밀도는 굴절한다.",
+      "경계면에서 전계와 전속밀도는 불변이다."
+    ],
+    "answer": 3,
+    "explanation": "유전체 내에서의 경계면의 조건\n유전율이 서로 다른 두 유전체가 접해 있을 때 경계면에서 전계와 전속밀도는 굴절하게 되는데 이를 경계면의 법칙이라 한다. 이 때 경계면의 조건은 다음과 같다.\n(1) 전계의 세기는 경계면의 접선성분이 서로 같다.\n$E_1\\sin\\theta_1 = E_2\\sin\\theta_2$\n(2) 전속밀도는 경계면의 법선성분이 서로 같다.\n$D_1\\cos\\theta_1 = D_2\\cos\\theta_2$ 또는\n$\\epsilon_1E_1\\cos\\theta_1 = \\epsilon_2E_2\\cos\\theta_2$\n(3) 굴절율 조건\n$\\frac{\\epsilon_1}{\\epsilon_2} = \\frac{\\tan\\theta_1}{\\tan\\theta_2}$ 또는 $\\epsilon_1\\tan\\theta_2 = \\epsilon_2\\tan\\theta_1$",
+    "image_needed": false,
+    "source_page": "page_180",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 11,
+    "question": "전위경도 V와 전계 E의 관계식은?",
+    "choices": [
+      "$E = \\text{grad } V$",
+      "$E = \\text{div } V$",
+      "$E = -\\text{grad } V$",
+      "$E = -\\text{div } V$"
+    ],
+    "answer": 3,
+    "explanation": "전위경도($\\nabla V$)와 전계($E$)와의 관계\n$V = -\\int E \\cdot dl$ [V], $\\nabla V = -E$ 식에서 전계 E는\n∴ $E = -\\nabla V = -\\text{grad } V$ [V/m]",
+    "image_needed": false,
+    "source_page": "page_180",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 12,
+    "question": "다음 정전계에 관한 식 중 틀린 것은?\n(단, D는 전속밀도, V는 전위, $\\rho$는 공간(체적)전하밀도, $\\epsilon$은 유전율이다.)",
+    "choices": [
+      "가우스의 정리 : $\\text{div } D = \\rho$",
+      "포아송의 방정식 : $\\nabla^2V = \\frac{\\rho}{\\epsilon}$",
+      "라플라스의 방정식 : $\\nabla^2V = 0$",
+      "발산의 정리 : $\\oint_S D \\cdot ds = \\int_v \\text{div } D dv$"
+    ],
+    "answer": 2,
+    "explanation": "포아송 방정식과 라플라스 방정식\n(1) 포아송 방정식\n$\\nabla^2V = -\\frac{\\rho}{\\epsilon_0}$\n(2) 라플라스 방정식\n$\\nabla^2V = 0$",
+    "image_needed": false,
+    "source_page": "page_180",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 13,
+    "question": "질량($m$)이 $10^{-10}$[kg]이고 전하량($Q$)이 $10^{-8}$[C]인 전화가 전기장에 의해 가속되어 운동하고 있다. 가속도가 $a = 10^2i + 10^2j$ [m/s²]일 때 전기장의 세기 $E$ [V/m]는?",
+    "choices": [
+      "$E = 10^4i + 10^5j$",
+      "$E = i + j$",
+      "$E = i + j$",
+      "$E = 10^{-6}i + 10^{-4}j$"
+    ],
+    "answer": 3,
+    "explanation": "전하의 운동력과 전기장의 세기\n전하의 운동력을 F라 하면 F = ma = EQ [N]이므로\n∴ $E = \\frac{ma}{Q} = \\frac{10^{-10} \\times (10^2i + 10^2j)}{10^{-8}} = i + j$ [V/m]",
+    "image_needed": false,
+    "source_page": "page_180",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 18,
+    "question": "-1.2[C]의 전하가 $\\vec{v} = 5a_x + 2a_y - 3a_z [\\text{m/s}]$ 속도로 운동한다. 이 전하가 $\\vec{B} = -4a_x + 4a_y + 3a_z [\\text{Wb/m}^2\\text{}]$ 자계 내에서 운동하고 있을 때 이 전하에 작용하는 힘은 약 몇[N]인가? (단, $a_x, a_y, a_z$는 방향을 지시하는 단위벡터이다.)",
+    "choices": [
+      "$-21.6a_x + 3.6a_y - 33.6a_z$",
+      "$21.6a_x - 3.6a_y + 33.6a_z$",
+      "$-21.6a_x - 3.6a_y + 33.6a_z$",
+      "$21.6a_x + 3.6a_y - 33.6a_z$"
+    ],
+    "answer": 1,
+    "explanation": "로렌츠의 힘(F)\n자속밀도가 B [Wb/m²] 인 자장 내에서 전하 q [C] 이 속도 v [m/sec] 로 이동할 때 전하에 작용하는 힘을 로렌츠의 힘이라 하며 F = qv × B [N] 이다. 벡터의 외적 정리를 이용하여 구해 보면\n$F = qv \\times B = -1.2 \\begin{vmatrix} a_x & a_y & a_z \\\\ 5 & 2 & -3 \\\\ -4 & 4 & 3 \\end{vmatrix}$\n$= -1.2\\{(2)(3) - (-3)(4)\\}a_x$\n$-1.2\\{(-3)(-4) - (5)(3)\\}a_y$\n$-1.2\\{(5)(4) - (2)(-4)\\}a_z$\n$\\therefore F = -21.6a_x + 3.6a_y - 33.6a_z [\\text{N}]$",
+    "image_needed": false,
+    "source_page": "page_182",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 3,
+    "question": "유전체 A, B의 접합면에 전화가 없을 때, 각 유전체 중 전계의 방향이 [그림]과 같다면, 전계 $E_2$는 어떻게 되는가?",
+    "choices": [
+      "$\\frac{\\cos\\theta_2}{\\cos\\theta_1} E_1$",
+      "$\\frac{\\sin\\theta_1}{\\sin\\theta_2} E_1$",
+      "$\\frac{\\tan\\theta_1}{\\tan\\theta_2} E_1$",
+      "$\\frac{\\cos\\theta_1}{\\cos\\theta_2} E_1$"
+    ],
+    "answer": 2,
+    "explanation": "유전체 내에서의 경계조건\n전계의 세기는 경계면의 접선성분이 서로 같으므로\n$E_1 \\sin\\theta_1 = E_2 \\sin\\theta_2$ 식에서\n$\\therefore E_2 = \\frac{\\sin\\theta_1}{\\sin\\theta_2} E_1 [\\text{V/m}]$",
+    "image_needed": true,
+    "source_page": "page_209",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 4,
+    "question": "유전율이 9인 유전체 내 전계의 세기가 $100 [\\text{V/m}]$ 일 때 유전체 내에 저장되는 에너지밀도는 몇 $[\\text{J/m}^3]$ 인가?",
+    "choices": [
+      "$5.5 \\times 10^2$",
+      "$4.5 \\times 10^4$",
+      "$9 \\times 10^4$",
+      "$4.5 \\times 10^5$"
+    ],
+    "answer": 2,
+    "explanation": "유전체 내의 정전에너지 밀도($w_e$)\n$w_e = \\frac{\\rho_s^2}{2\\epsilon} = \\frac{D^2}{2\\epsilon} = \\frac{1}{2}\\epsilon E^2 = \\frac{1}{2}ED [\\text{J/m}^3]$ 식에서\n$\\epsilon = 9, E = 100 [\\text{V/m}]$ 일 때\n$\\therefore w_e = \\frac{1}{2}\\epsilon E^2 = \\frac{1}{2}\\times 9 \\times 100^2 = 4.5 \\times 10^4 [\\text{J/m}^3]$",
+    "image_needed": false,
+    "source_page": "page_209",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 5,
+    "question": "유전체에서의 변위전류에 대한 설명으로 옳은 것은?",
+    "choices": [
+      "유전체의 굴절률이 2배가 되면 변위전류의 크기도 2배가 된다",
+      "변위전류의 크기는 투자율의 값에 비례한다.",
+      "변위전류는 자계를 발생시킨다.",
+      "전속밀도의 공간적 변화가 변위전류를 발생시킨다."
+    ],
+    "answer": 3,
+    "explanation": "맥스웰 방정식\n암페어의 주회적분법칙에서 유도된 전자방정식은\n`rot H = ∇ × H = i + i_d = i + ∂D/∂t = i + ε ∂E/∂t` 이며\n여기서 `i_d`를 변위전류밀도라 하여 전속밀도의 시간적\n변화량으로 정의한다. 이로써 유전체 내를 흐르는 전류\n를 변위전류라 하며 이 또한 주위에 자계를 발생시키는\n것을 알 수 있다.",
+    "image_needed": false,
+    "source_page": "page_210",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 6,
+    "question": "반사계수 `ρ=0.8`일 때 정재파비 `s`를 데시벨[dB]로 표시하면?",
+    "choices": [
+      "`10 log_10 (1/9)`",
+      "`10 log_10 9`",
+      "`20 log_10 (1/9)`",
+      "`20 log_10 9`"
+    ],
+    "answer": 4,
+    "explanation": "정재파비(`s`)\n`s = (1+|ρ|)/(1-|ρ|) = (1+0.8)/(1-0.8) = 9`\n∴ 이득 `g = 20 log_10 s = 20 log_10 9 [dB]`",
+    "image_needed": false,
+    "source_page": "page_210",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 8,
+    "question": "극판 간격 `d[m]`, 면적 `S[m^2]`, 유전율 `ε[F/m]`\n이고, 정전용량이 `C[F]`인 평행판 콘덴서에\n`v = V_m sin ωt[V]`의 전압을 가할 때의 변위전류[A]\n는?",
+    "choices": [
+      "`ωCV_m cos ωt`",
+      "`CV_m sin ωt`",
+      "`-CV_m sin ωt`",
+      "`-ωCV_m cos ωt`"
+    ],
+    "answer": 1,
+    "explanation": "변위전류(`I_d`)\n변위전류밀도 `i_d`라 하면\n`i_d = ∂D/∂t = ε ∂E/∂t = ε ∂v/(d ∂t) = (εS)/d V_m ω cos ωt [A/m^2]`\n∴ `I_d = i_d S = ω (εS)/d V_m cos ωt = ωCV_m cos ωt [A]`",
+    "image_needed": false,
+    "source_page": "page_210",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 13,
+    "question": "면적이 S [m²]이고 극간의 거리가 d[m]인 평행판 콘덴서에 비유전율 ε_s의 유전체를 채울 때 정전용량은 몇 [F]인가? (단, 진공의 유전율은 ε_0이다.)",
+    "choices": [
+      "$2\\epsilon_0\\epsilon_s S / d$",
+      "$\\epsilon_0\\epsilon_s S / \\pi d$",
+      "$\\epsilon_0\\epsilon_s S / d$",
+      "$2\\pi\\epsilon_0\\epsilon_s S / d$"
+    ],
+    "answer": 3,
+    "explanation": "유전체 내 평행판 콘덴서의 정전용량(C)\n$C = \\epsilon S / d = \\epsilon_0\\epsilon_s S / d$ [F]",
+    "image_needed": false,
+    "source_page": "page_212",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 14,
+    "question": "그림과 같이 비투자율이 μ_s1, μ_s2인 각각 다른 자성체를 접하여 놓고 θ_1을 입사각이라 하고, θ_2를 굴절각이라 한다. 경계면에 자하가 없는 경우 미소 폐곡면을 취하여 이 곳에 출입하는 자속수를 구하려면?",
+    "choices": [
+      "$\\oint_l B \\cdot ndl = 0$",
+      "$\\oint_s B \\cdot nds = 0$",
+      "$\\oint_v B \\cdot dv = 0$",
+      "$\\oint_s B \\cdot nsin\\theta ds = 0$"
+    ],
+    "answer": 2,
+    "explanation": "자속의 연속성\n자성체 내에서 키르히호프의 제1법칙은 $\\sum\\Phi = 0$ [Wb] 이므로\n$\\sum\\Phi = \\oint_s B \\cdot nds = \\oint_v div B dv = \\oint_v \\nabla \\cdot B dv = 0$ [Wb]이다.\n$\\therefore \\oint_s B \\cdot nds = \\oint_v div B dv = 0$ [Wb]이란 자성체 내에서 자속은 발산하지 않으며 경계면을 기준으로 법선성분(수직성분)은 연속임을 의미한다.\n이것을 자속의 연속성이라 한다.",
+    "image_needed": true,
+    "source_page": "page_212",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 15,
+    "question": "진공 중에 반지름이 1/50 [m]인 도체구 A와 외 반지름이 1/25 [m] 및 1/20 [m]인 도체구 B를 동심(동심)으로 놓고 도체구 A에 Q_A = 4 x 10⁻¹⁰ [C]의 전하를 대전시키고 도체구 B의 전하를 0으로 했을 때 도체구 A의 전위는 약 몇 [V]인가?",
+    "choices": [
+      "112",
+      "132",
+      "162",
+      "182"
+    ],
+    "answer": 3,
+    "explanation": "동심구도체에 의한 전위\nA도체에만 +Q [C]으로 대전된 경우 A도체 전위는\n$V_A = \\frac{Q}{4\\pi\\epsilon_0} \\left( \\frac{1}{a} - \\frac{1}{b} + \\frac{1}{c} \\right)$ [V] 식에서\n$a = \\frac{1}{50}$ [m], $b = \\frac{1}{25}$ [m], $c = \\frac{1}{20}$ [m],\n$Q_A = 4 \\times 10^{-10}$ [C] 이므로\n$\\therefore V_A = \\frac{Q}{4\\pi\\epsilon_0} \\left( \\frac{1}{a} - \\frac{1}{b} + \\frac{1}{c} \\right)$\n$= 9 \\times 10^9 \\times 4 \\times 10^{-10} \\times (50 - 25 + 20)$\n$= 162$ [V]",
+    "image_needed": false,
+    "source_page": "page_212",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 16,
+    "question": "플레밍의 왼손의 법칙에서 수식 F=B × I × l [N] 중 F에 대한 설명으로 옳은 것은?",
+    "choices": [
+      "발전기 정류자에 가해지는 힘이다.",
+      "발전기 브러시에 가해지는 힘이다.",
+      "전동기 계자극에 가해지는 힘이다.",
+      "전동기 전기자에 가해지는 힘이다."
+    ],
+    "answer": 4,
+    "explanation": "플레밍의 왼손의 법칙\n$F = \\int (I \\times B) \\cdot dl = IBlsin\\theta$ [N] 식으로부터\n자계 중에서 전류가 흐르는 도체를 운동시키면 도체에 힘이 작용하게 된다는 것을 알 수 있다. 이 법칙을 플레밍의 왼손의 법칙이라 하며 전동기의 전기자 도체에 힘이 작용하여 회전하게 되는 것을 설명할 수 있다.",
+    "image_needed": false,
+    "source_page": "page_212",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 1,
+    "question": "자속밀도가 0.3[Wb/m²] 평등자계 내에 5[A]의 전류가 흐르고 있는 길이 2[m]인 직선도체를 자계의 방향에 대하여 60°의 각도로 놓았을 때 이 도체가 받는 힘은 약 몇 [N]인가?",
+    "choices": [
+      "1.3",
+      "2.6",
+      "4.7",
+      "5.2"
+    ],
+    "answer": 2,
+    "explanation": "플레밍의 왼손법칙\n$F = Idl \\times B = IBl\\sin\\theta$ [N] 식에서\n$B = 0.3$ [Wb/m²], $I = 5$ [A], $l = 2$ [m], $\\theta = 60^{\\circ}$ 이므로\n$\\therefore F = IBl\\sin\\theta = 5 \\times 0.3 \\times 2 \\times \\sin60^{\\circ} = 2.6$ [N]",
+    "image_needed": false,
+    "source_page": "page_237",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 2,
+    "question": "다음 중 정전계와 정자계의 대응관계가 성립되는 것은?",
+    "choices": [
+      "$\\text{div } D = \\rho_v \\implies \\text{div } B = \\rho_m$",
+      "$\\nabla^2 V = -\\frac{\\rho_v}{\\epsilon_0} \\implies \\nabla^2 A = -\\frac{i}{\\mu_0}$",
+      "$W = \\frac{1}{2}CV^2 \\implies W = \\frac{1}{2}LI^2$",
+      "$F = 9 \\times 10^9 \\frac{Q_1 Q_2}{R^2} a_R \\implies F = 6.33 \\times 10^{-4} \\frac{m_1 m_2}{R^2} a_R$"
+    ],
+    "answer": 3,
+    "explanation": "정전계와 정자계의 대응관계\n(1) $\\text{div } D = \\rho_v \\implies \\text{div } B = 0$\n(2) $\\nabla^2 V = -\\frac{\\rho_v}{\\epsilon_0} \\implies \\nabla^2 A = -\\mu_0 i$\n(3) $W = \\frac{1}{2}CV^2 \\implies W = \\frac{1}{2}LI^2$\n(4) $F = 9 \\times 10^9 \\frac{Q_1 Q_2}{R^2} a_R \\implies F = 6.33 \\times 10^{-4} \\frac{m_1 m_2}{R^2} a_R$",
+    "image_needed": false,
+    "source_page": "page_237",
     "subject": "전기자기학"
   },
   {
@@ -192,6 +976,230 @@
     "subject": "전기자기학"
   },
   {
+    "round": "2024년 1회 기출문제",
+    "number": 6,
+    "question": "두 개의 가공 송전선로의 어느 하나의 도체에 전압 $V_1$[V]를 인가 시 $Q_1$[C]의 전화가 흐르고, 또한 다른 하나의 도체에 $V_2$[V]를 인가 시 $Q_2$[C]의 전화가 흐른다고 한다. 이 때 정전용량계수를 $k$, 정전유도계수를 $k'$라 하면 대지정전용량은 어떻게 표현 되는가?",
+    "choices": [
+      "$k+k'$",
+      "$k$",
+      "$k'$",
+      "$k-k'$"
+    ],
+    "answer": 1,
+    "explanation": "대지정전용량 계산\n[그림]\n$Q_1 = k_{11}V_1 + k_{12}V_2 = k_{11}V_1 + k_{12}V_1 - k_{12}V_1 = (k_{11}+k_{12})V_1 - k_{12}(V_1-V_2) = C_1V_1 - C_{12}(V_1-V_2)$\n$Q_2 = k_{21}V_1 + k_{22}V_2 = k_{21}V_2 + k_{22}V_2 - k_{21}V_2 = -k_{21}(V_2-V_1) + (k_{22}+k_{21})V_2 = C_{21}(V_1-V_2) + C_2V_2$\n대지정전용량 $C_1$, $C_2$는\n$C_1 = k_{11}+k_{12}$, $C_2 = k_{22}+k_{21}$ 식에서\n$k_{11}, k_{22}$는 정전용량계수,\n$k_{12}, k_{21}$은 정전유도계수 이므로\n∴ 대지정전용량 = $k+k'$",
+    "image_needed": true,
+    "source_page": "page_270",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 1회 전기기사",
+    "number": 2,
+    "question": "반지름 2[mm]의 두 개의 무한히 긴 원통 도체가 중심 간격 2[m]로 진공 중에 평행하게 놓여 있을 때 1[km]당 정전용량은 약 몇 [\\mu F]인가?",
+    "choices": [
+      "1 x 10⁻³ [\\mu F]",
+      "2 x 10⁻³ [\\mu F]",
+      "4 x 10⁻³ [\\mu F]",
+      "6 x 10⁻³ [\\mu F]"
+    ],
+    "answer": 2,
+    "explanation": "평행한 두 원통도체\n$C = \\frac{\\pi \\epsilon_0 l}{ln\\frac{d}{a}} [F] = \\frac{\\pi \\epsilon_0}{ln\\frac{d}{a}} [F/m]$ 식에서\n$a = 2 [mm]$, $d = 2 [m]$, $l = 1 [km]$ 일 때\n$C = \\frac{\\pi \\epsilon_0 l}{ln\\frac{d}{a}} = \\frac{\\pi \\times 8.855 \\times 10^{-12} \\times 10^3}{ln\\frac{2}{2 \\times 10^{-3}}}$\n$= 4 \\times 10^{-9} [F] = 4 \\times 10^{-3} [\\mu F]$",
+    "image_needed": false,
+    "source_page": "page_264",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 1회 전기기사",
+    "number": 3,
+    "question": "$x > 0$ 영역에 비유전율 $\\epsilon_{r1} = 3$인 유전체, $x < 0$ 인 영역에 비유전율 $\\epsilon_{r2} = 5$인 유전체가 있다. $x < 0$ 인 영역에서 전계 $E_2 = 20a_x + 30a_y - 40a_z$ [V/m] 일 때 $x > 0$ 인 영역에서의 전속밀도는 몇 [C/m²] 인가?",
+    "choices": [
+      "$10(10a_x + 9a_y - 12a_z)\\epsilon_0$",
+      "$20(5a_x - 10a_y + 6a_z)\\epsilon_0$",
+      "$50(5a_x - 10a_y + 6a_z)\\epsilon_0$",
+      "$50(2a_x - 3a_y + 4a_z)\\epsilon_0$"
+    ],
+    "answer": 1,
+    "explanation": "유전체의 경계면의 조건\n$x$축의 (+), (-) 부분이 유전체로 나누어져 있으므로 $y$축과 $z$축은 유전체의 경계면이 되어 접선방향이 되고 $x$축이 법선방향을 나타낸다.\n(1) 전계의 세기는 경계면의 접선성분이 서로 같다.\n$E_1 \\sin\\theta_1 = E_2 \\sin\\theta_2$\n따라서 $\\frac{D_{y1}}{\\epsilon_1} = \\frac{D_{y2}}{\\epsilon_2}$, $\\frac{D_{z1}}{\\epsilon_1} = \\frac{D_{z2}}{\\epsilon_2}$\n(2) 전속밀도는 경계면의 법선성분이 서로 같다.\n$D_1 \\cos\\theta_1 = D_2 \\cos\\theta_2$\n따라서 $D_{x1} = D_{x2}$\n$\\therefore D_1 = \\epsilon_1 E_{x2}a_x + \\epsilon_1 E_{y2}a_y + \\epsilon_1 E_{z2}a_z$\n$= 5\\epsilon_0 \\times 20a_x + 3\\epsilon_0 \\times 30a_y - 3\\epsilon_0 \\times 40a_z$\n$= 100\\epsilon_0 a_x + 90\\epsilon_0 a_y - 120\\epsilon_0 a_z$\n$= 10(10a_x + 9a_y - 12a_z)\\epsilon_0$",
+    "image_needed": false,
+    "source_page": "page_264",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 1회 전기기사",
+    "number": 3,
+    "question": "파동임피던스 $Z_1 = 500[\\Omega]$인 선로의 종단에 파동임피던스 $Z_2 = 1,000[\\Omega]$의 변압기가 접속되어 있다. 지금 선로에서 파고 $e_i = 600[\\text{kV}]$의 전압이 진입할 경우 접속점에서의 전압 반사파는 몇 $[\\text{kV}]$인가?",
+    "choices": [
+      "200[kV]",
+      "300[kV]",
+      "400[kV]",
+      "500[kV]"
+    ],
+    "answer": 1,
+    "explanation": "진행파의 반사와 투과\n파동임피던스 $Z_1, Z_2$, 진입파 전압, 전류 $e_i, i_i$라 하면\n반사파 전압, 전류 $e_r, i_r$과 투과파전압, 전류 $e_t, i_t$는\n$e_r = \\frac{Z_2 - Z_1}{Z_2 + Z_1} e_i$, $i_r = -\\frac{Z_2 - Z_1}{Z_2 + Z_1} i_i$\n$e_t = \\frac{2Z_2}{Z_2 + Z_1} e_i$, $i_t = \\frac{2Z_1}{Z_2 + Z_1} i_i$ 이다.\n$Z_1 = 500[\\Omega]$, $Z_2 = 1,000[\\Omega]$, $e_i = 600[\\text{kV}]$일 때\n$\\therefore e_r = \\frac{Z_2 - Z_1}{Z_2 + Z_1} e_i = \\frac{1,000 - 500}{1,000 + 500} \\times 600 = 200[\\text{kV}]$",
+    "image_needed": false,
+    "source_page": "page_269",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 1회 전기기사",
+    "number": 4,
+    "question": "전계 $E[V/m]$, 전속밀도 $D[C/m^2]$, 유전율 $\\epsilon = \\epsilon_r \\epsilon_0 [F/m]$, 분극의 세기 $P[C/m^2]$의 관계는?",
+    "choices": [
+      "$P = D + \\epsilon_0 E$",
+      "$P = D - \\epsilon_0 E$",
+      "$P = \\frac{D + E}{\\epsilon_0}$",
+      "$P = \\frac{D - E}{\\epsilon_0}$"
+    ],
+    "answer": 2,
+    "explanation": "분극의 세기\n$P = \\epsilon_0 (\\epsilon_r - 1)E = \\epsilon_r \\epsilon_0 E - \\epsilon_0 E$\n$= \\epsilon E - \\epsilon_0 E = D - \\epsilon_0 E [C/m^2]$",
+    "image_needed": false,
+    "source_page": "page_264",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 1회 전기기사",
+    "number": 9,
+    "question": "자화율(magnetic susceptibility) $\\chi$는 상자성체에서 일반적으로 어떤 값을 갖는가?",
+    "choices": [
+      "$\\chi = 0$",
+      "$\\chi = 1$",
+      "$\\chi < 0$",
+      "$\\chi > 0$"
+    ],
+    "answer": 4,
+    "explanation": "자성체의 성질\n비투자율 $\\mu_s$, 자화율 $\\chi_m$라 하면\n(1) 역자성체(반자성체): $\\mu_s < 1$, $\\chi_m < 0$\n    (수소, 헬륨, 구리, 탄소, 안티몬, 비스무트, 은 등)\n(2) 상자성체: $\\mu_s > 1$, $\\chi_m > 0$\n    (칼륨, 텅스텐, 산소, 백금, 알루미늄 등)\n(3) 강자성체: $\\mu_s \\gg 1$, $\\chi_m \\gg 0$\n    (철, 니켈, 코발트)",
+    "image_needed": false,
+    "source_page": "page_266",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 1회 전기기사",
+    "number": 10,
+    "question": "저항 10[Ω]의 코일을 지나는 자속이 $\\phi=5\\sin 10t$[Wb]일 때, 유도기전력에 의한 전류[A]의 최댓값은?",
+    "choices": [
+      "1[A]",
+      "2[A]",
+      "5[A]",
+      "10[A]"
+    ],
+    "answer": 3,
+    "explanation": "유도기전력\n$\\phi = 5\\sin 10t = \\phi_m \\sin \\omega t$[Wb] 식에서\n$\\phi_m = 5$[Wb], $\\omega = 10$[rad/s], N=1일 때\n유도기전력의 최댓값 $E_m$은\n$E_m = \\omega \\phi_m N = 10 \\times 5 \\times 1 = 50$[V]이다.\n$R=10$[Ω]일 때 전류의 최댓값 $I_m$은\n$\\therefore I_m = \\frac{E_m}{R} = \\frac{50}{10} = 5$[A]",
+    "image_needed": false,
+    "source_page": "page_266",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 1회 전기기사",
+    "number": 11,
+    "question": "자계의 벡터 포텐셜(vector potential)을 $A$[Wb/m]라 할 때 도체 주위에서 자계 $B$[Wb/m$^2$]가 시간적으로 변화하면 도체에 발생하는 전계의 세기 $E$[V/m]는?",
+    "choices": [
+      "$E = -\\frac{\\partial A}{\\partial t}$",
+      "$\\text{rot}\\,E = -\\frac{\\partial A}{\\partial t}$",
+      "$\\text{rot}\\,E = -\\frac{\\partial B}{\\partial t}$",
+      "$E = \\text{rot}\\,B$"
+    ],
+    "answer": 1,
+    "explanation": "자기 벡터 포텐셜($A$)\n$\\text{rot}\\,E = -\\frac{\\partial B}{\\partial t} = -\\text{rot}\\left(\\frac{\\partial A}{\\partial t}\\right)$ 식에서\n$B=\\text{rot}\\,A$[Wb/m$^2$] 이므로\n$\\therefore E = -\\frac{\\partial A}{\\partial t}$",
+    "image_needed": false,
+    "source_page": "page_266",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 1회 전기기사",
+    "number": 12,
+    "question": "반지름 $a$인 접지된 구형도체와 점전하가 유전율 $\\epsilon$인 공간에서 각각 원점과 $(d,\\,0,\\,0)$인 점에 있다. 구형도체를 제외한 공간의 전계를 구할 수 있도록 구형도체를 영상전하로 대치할 때의 영상점전하의 위치는?",
+    "choices": [
+      "$\\left(-\\frac{a^2}{d},\\,0,\\,0\\right)$",
+      "$\\left(\\frac{a^2}{d},\\,0,\\,0\\right)$",
+      "$\\left(0,\\,+\\frac{a^2}{d},\\,0\\right)$",
+      "$\\left(\\frac{a^2}{4a},\\,0,\\,0\\right)$"
+    ],
+    "answer": 2,
+    "explanation": "접지구도체와 점전하\n영상전하($Q'$)의 크기와 위치\n(1) 영상전하의 크기: $Q' = -\\frac{a}{d}Q$[C]\n(2) 영상전하의 위치: $\\left(+\\frac{a^2}{d},\\,0,\\,0\\right)$[m]",
+    "image_needed": false,
+    "source_page": "page_266",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 2회 전기기사",
+    "number": 4,
+    "question": "공기 중에서 코로나 방전이 3.5[kV/mm] 전계에서 발생한다고 하면, 이때 도체의 표면에 작용하는 힘은 약 몇 [N/m$^2$]인가?",
+    "choices": [
+      "27",
+      "54",
+      "81",
+      "108"
+    ],
+    "answer": 2,
+    "explanation": "단위 면적당 정전력\n$f = \\frac{\\rho_s^2}{2\\epsilon_0} = \\frac{D^2}{2\\epsilon_0} = \\frac{1}{2}ED[\\text{N/m}\\!^2\\text{}]$ 식에서\n$E = 3.5[\\text{kV/mm}] = 3.5 \\times 10^6[\\text{V/m}]$ 일 때\n$\\therefore f = \\frac{1}{2}\\epsilon_0 E^2 = \\frac{1}{2} \\times 8.855 \\times 10^{-12} \\times (3.5 \\times 10^6)^2$\n$= 54[\\text{N/m}\\!^2\\text{}]$",
+    "image_needed": false,
+    "source_page": "page_291",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 2회 전기기사",
+    "number": 13,
+    "question": "폐곡면을 통하는 전속과 폐곡면 내부의 전하와의 상간관계를 나타내는 법칙은?",
+    "choices": [
+      "가우스 법칙",
+      "쿨롱의 법칙",
+      "푸아송의 법칙",
+      "라플라스 법칙"
+    ],
+    "answer": 1,
+    "explanation": "가우스의 법칙\n가우스의 정리에 의하여 폐곡면을 이루고 있는 전속이 자유공간으로 발산할 때 발산된 전속량은 그 면으로 둘러싸인 공간 내의 체적전하밀도와 같기 때문에 다음와 같은 결과를 얻을 수 있다.\n$\\int_S D \\cdot ds = \\int_V div D dv = \\int_V \\nabla \\cdot D dv = Q [C]$ 식에서\n$div D = \\nabla \\cdot D = \\rho_v [C/m^3]$임을 알 수 있다.",
+    "image_needed": false,
+    "source_page": "page_294",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 2회 전기기사",
+    "number": 14,
+    "question": "압전기 현상에서 분극이 응력과 동일한 방향으로 발생하는 현상을 무슨 효과라 하는가?",
+    "choices": [
+      "종효과",
+      "횡효과",
+      "역효과",
+      "간접효과"
+    ],
+    "answer": 1,
+    "explanation": "압전기현상\n(1) 압전기효과(직접효과) : 결정체에 어떤 방향으로 압축 또는 응력을 가하여 기계적으로 변형시키면 내부에 전기분극이 일어나고 일정 방향으로 분극전하가 나타난다.\n(2) 압전기 역효과 : 결정체에 특정한 방향으로 전압을 가하면 기계적 변형이 일어난다.\n(3) 종효과 : 압전기 현상에서 분극과 응력이 동일방향으로 발생한다.\n(4) 횡효과 : 압전기 현상에서 분극과 응력이 수직방향으로 발생한다.",
+    "image_needed": false,
+    "source_page": "page_294",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 2회 전기기사",
+    "number": 15,
+    "question": "상자성체에서 자화율 $\\chi$ 와 투자율 $\\mu$ 의 관계를 판단할 수 있는 것은?",
+    "choices": [
+      "투자율 > 자화율",
+      "투자율 < 자화율",
+      "투자율 = 자화율",
+      "비투자율 > 자화율"
+    ],
+    "answer": 1,
+    "explanation": "자화의 세기($J$)\n$J = B - \\mu_0 H = \\mu_0 (\\mu_s - 1) H = \\chi H [Wb/m^2]$ 식에서\n상자성체는 $\\mu_s > 1$ 이기 때문에\n$\\chi = \\mu_0 (\\mu_s - 1) = \\mu_0 \\mu_s - \\mu_0 = \\mu - \\mu_0$ 이므로\n자화율은 투자율보다 약간 작다.\n$\\therefore$ 투자율 > 자화율",
+    "image_needed": false,
+    "source_page": "page_294",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 2회 전기기사",
+    "number": 16,
+    "question": "반지름 $a$[m]인 도체구에 전하 $Q$[C]를 주었다. 도체구를 둘러싸고 있는 유전체의 유전율이 $\\epsilon_s$인 경우 경계면에 나타나는 분극전하는 몇 $[C/m^2]$인가?",
+    "choices": [
+      "$\\frac{Q}{4\\pi a^2} (1-\\epsilon_s)$",
+      "$\\frac{Q}{4\\pi a^2} (\\epsilon_s-1)$",
+      "$\\frac{Q}{4\\pi a^2} (1-\\frac{1}{\\epsilon_s})$",
+      "$\\frac{Q}{4\\pi a^2} (\\frac{1}{\\epsilon_s}-1)$"
+    ],
+    "answer": 3,
+    "explanation": "분극의 세기\n$P = (1-\\frac{1}{\\epsilon_s}) D [C/m^2]$ 식에서\n반지름 $a$[m]인 구도체의 전속밀도 $D$는\n$D = \\frac{Q}{4\\pi a^2} [C/m^2]$ 이므로\n$\\therefore P = (1-\\frac{1}{\\epsilon_s}) \\frac{Q}{4\\pi a^2} = \\frac{Q}{4\\pi a^2} (1-\\frac{1}{\\epsilon_s}) [C/m^2]$",
+    "image_needed": false,
+    "source_page": "page_294",
+    "subject": "전기자기학"
+  },
+  {
     "round": "2024년 3회",
     "number": 6,
     "question": "외분권 차동복권발전기의 단자전압 V는? (단, $\\phi_f$ [Wb]: 직권계자권선에 의한 자속, $\\phi_s$ [Wb]: 분권계자의 자속, $R_s$ [Ω]: 전기자의 저항, $R_a$ [Ω]: 직권계자저항, $I_a$ [A]: 전기자의 전류, $I$ [A]: 부하전류, $n$ [rps]: 속도, $k = \\frac{PZ}{a}$ 이며 자기회로의 포화현상과 전기자반작용은 무시한다.)",
@@ -224,6 +1232,214 @@
     "subject": "전기자기학"
   },
   {
+    "round": "2024년 3회 기출문제",
+    "number": 10,
+    "question": "무한장 평행 2선 선로에 주파수 200[MHz]의 전압을 가하였을 때 전압의 위상정수는 약 몇 [rad/m]인가? (단, 여기서 전파속도는 $3 \\times 10^8$[m/sec]로 한다.)",
+    "choices": [
+      "$\\frac{3}{4}\\pi$",
+      "$\\frac{2}{3}\\pi$",
+      "$\\frac{4}{3}\\pi$",
+      "$\\frac{3}{4}\\pi$"
+    ],
+    "answer": 3,
+    "explanation": "전파속도($v$)\n$v = \\lambda f = \\frac{\\omega}{\\beta}$ [m/sec] 식에서\n$f = 200$ [MHz], $v = 3 \\times 10^8$ [m/sec] 이므로\n위상정수 $\\beta$는\n$\\therefore \\beta = \\frac{\\omega}{v} = \\frac{2\\pi f}{v} = \\frac{2\\pi \\times 200 \\times 10^6}{3 \\times 10^8} = \\frac{4}{3}\\pi$ [rad/m]",
+    "image_needed": false,
+    "source_page": "page_334",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 3회 전기기사",
+    "number": 1,
+    "question": "전선의 표피 효과에 관한 설명으로 옳은 것은?",
+    "choices": [
+      "전선이 굵을수록, 주파수가 낮을수록 커진다.",
+      "전선이 굵을수록, 주파수가 높을수록 커진다.",
+      "전선이 가늘수록, 주파수가 낮을수록 커진다.",
+      "전선이 가늘수록, 주파수가 높을수록 커진다."
+    ],
+    "answer": 1,
+    "explanation": "표피효과(m)와 침투깊이(δ)\n(1) 표피효과(m)\n$m=2\\pi\\sqrt{\\frac{2f\\mu}{\\rho}}=2\\pi\\sqrt{2f\\mu k}$\n따라서 표피효과는 주파수, 투자율, 도전율, 전선의 굵기에 비례하며 고유저항에 반비례한다.\n여기서, $f$는 주파수, $\\mu$는 투자율, $\\rho$는 고유저항, $k$는 도전율이다.\n(2) 침투깊이(δ)\n$\\delta = \\sqrt{\\frac{2}{w k \\mu}} = \\sqrt{\\frac{1}{\\pi f k \\mu}} = \\sqrt{\\frac{\\rho}{\\pi f \\mu}}\\;[m]$\n침투깊이는 표피효과와 반대인 성질을 띤다.",
+    "image_needed": false,
+    "source_page": "page_322",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 3회 전기기사",
+    "number": 6,
+    "question": "액체 유전체를 넣은 콘덴서의 용량이 20[μF]이다. 여기에 500[V]의 전압을 가하면 누설 전류 [mA]는? (단, 비유전율 $\\epsilon_s=2.2$, 고유저항 $\\rho=10^{11} [\\Omega \\cdot m]$이다.)",
+    "choices": [
+      "① 4.2",
+      "② 5.13",
+      "③ 54.5",
+      "④ 61"
+    ],
+    "answer": 2,
+    "explanation": "전기저항($R$)과 정전용량($C$)의 관계\n$RC = \\rho \\epsilon = \\frac{\\epsilon}{k}$ 또는 $\\frac{C}{G} = \\rho \\epsilon = \\frac{\\epsilon}{k}$ 이므로\n누설전류 $I$는 $I = \\frac{V}{R} = \\frac{VC}{RC} = \\frac{VC}{\\rho \\epsilon}$ [A]이다.\n$C = 20[\\mu F], V = 500[V], \\epsilon_s = 2.2, \\rho = 10^{11}[\\Omega]$ 일 때\n∴ $I = \\frac{CV}{\\rho \\epsilon} = \\frac{CV}{\\rho \\epsilon_0 \\epsilon_s}$\n$= \\frac{20 \\times 10^{-6} \\times 500}{10^{11} \\times 8.855 \\times 10^{-12} \\times 2.2}$\n$= 5.13 \\times 10^{-3} [A] = 5.13 [mA]$",
+    "image_needed": false,
+    "source_page": "page_318",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 3회 전기기사",
+    "number": 7,
+    "question": "평균 반지름($r$)이 20[cm], 단면적($S$)이 6[cm$^2$]인 환상 철심에서 권선수($N$)가 500회인 코일에 흐르는 전류($I$)가 4[A]일 때 철심 내부에서의 자계의 세기($H$)는 약 [AT/m]인가? [그림]",
+    "choices": [
+      "① 1,590",
+      "② 1,700",
+      "③ 1,870",
+      "④ 2,120"
+    ],
+    "answer": 1,
+    "explanation": "환상솔레노이드에 의한 자계의 세기($H$)\n$H_{in} = \\frac{NI}{l} = \\frac{NI}{2\\pi r}$ [AT/m], $H_{out}=0$[AT/m] 식에서\n$r = 20[cm] = 0.2[m], S = 6[cm^2], N = 500, I = 4[A]$일 때\n∴ $H_{in} = \\frac{NI}{2\\pi r} = \\frac{500 \\times 4}{2\\pi \\times 0.2} = 1,590$ [AT/m]",
+    "image_needed": true,
+    "source_page": "page_318",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 1회 기출문제",
+    "number": 5,
+    "question": "z축 상에 놓인 길이가 긴 직선 도체에 10[A]의 전류가 +z 방향으로 흐르고 있다. 이 도체 주위의 자속밀도가 $3a_x - 4a_y$ [Wb/m²]일 때 도체가 받는 단위 길이당 힘[N/m]은? (단, $a_x, a_y$는 단위벡터이다.)",
+    "choices": [
+      "$-40a_x + 30a_y$",
+      "$-30a_x + 40a_y$",
+      "$30a_x + 40a_y$",
+      "$40a_x + 30a_y$"
+    ],
+    "answer": 4,
+    "explanation": "플레밍의 왼손법칙\n$F = I \\times B$ [N/m] 식에서\n$I = 10a_z$ [A], $B = 3a_x - 4a_y$ [Wb/m²] 이므로\n$F = I \\times B = 10a_z \\times (3a_x - 4a_y)$\n$= 30a_z \\times a_x - 40a_z \\times a_y = 30a_y - 40(-a_x)$\n$= 40a_x + 30a_y$ [N/m]\n참고 벡터의 외적\n$a_x \\times a_y = a_z$, $a_y \\times a_z = a_x$, $a_z \\times a_x = a_y$\n$a_y \\times a_x = -a_z$, $a_z \\times a_y = -a_x$, $a_x \\times a_z = -a_y$",
+    "image_needed": false,
+    "source_page": "page_344",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 1회 기출문제",
+    "number": 6,
+    "question": "전력선(전기력선)의 설명 중 틀린 것은?",
+    "choices": [
+      "전기력선의 방향은 그 점의 전계의 방향과 일치하며 밀도는 그 점에서의 크기와 같다.",
+      "전기력선은 부전하에서 시작하여 정전하에서 그친다.",
+      "단위 전하에서는 $1/\\epsilon_0$ 개의 전기력선이 출입한다.",
+      "전기력선은 전위가 높은 점에서 낮은 점으로 향한다."
+    ],
+    "answer": 2,
+    "explanation": "전기력선의 성질\n(1) 전기력선은 정(+)전하에서 시작하여 부(-)전하에서 끝난다.\n(2) 전기력선은 전위가 높은 곳에서 낮은 곳으로 향한다.\n(3) 전기력선의 밀도는 전계의 세기와 같고, 전기력선의 방향은 전계의 방향과 같다.\n(4) 전기력선은 자신만으로 폐곡선을 그리지 않는다.\n(5) 전기력선은 도체 표면(등전위면)과 수직을 이룬다.\n(6) 전기력선은 서로 반발하여 교차하지 않는다.\n(7) 전기력선은 도체 내부에 존재하지 않는다.\n(8) 전하가 없는 곳에서는 전기력선의 발생, 소멸이 없다.\n(9) 단위 전하에서의 전기력선의 수는 $\\frac{1}{\\epsilon_0}$개다.",
+    "image_needed": false,
+    "source_page": "page_344",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 1회 기출문제",
+    "number": 6,
+    "question": "1 [km]당 인덕턴스 25 [mH], 정전용량 0.005 [$\\mu$F]의 선로가 있다. 무손실 선로라고 가정한 경우 진행 파의 위상(전파) 속도는 약 몇 [km/s]인가?",
+    "choices": [
+      "$89.4 \\times 10^4$",
+      "$8.94 \\times 10^4$",
+      "$8.94 \\times 10^3$",
+      "$89.4 \\times 10^5$"
+    ],
+    "answer": 2,
+    "explanation": "무손실 선로의 전파속도($v$)\n$v = \\frac{1}{\\sqrt{LC}} \\; [m/sec]$ 식에서\n$L = 25 \\; [mH/km]$, $C = 0.005 \\; [\\mu F/km]$ 이므로\n$\\therefore v = \\frac{1}{\\sqrt{LC}}$\n$= \\frac{1}{\\sqrt{25 \\times 10^{-3} \\times 0.005 \\times 10^{-6}}}$\n$= 8.94 \\times 10^4 \\; [km/sec]$",
+    "image_needed": false,
+    "source_page": "page_360",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 1회 기출문제",
+    "number": 7,
+    "question": "진공 중에서 점 (0, 1) [m]의 위치에 $-2 \\times 10^{-9}$[C]의 전하가 있을 때, 점 (2, 0) [m]에 있는 1[C]의 점전하에 작용하는 힘은 몇 [N]인가? (단, $\\hat{x}, \\hat{y}$는 단위벡터이다.)",
+    "choices": [
+      "$\\frac{18}{3\\sqrt{5}}\\hat{x} + \\frac{36}{3\\sqrt{5}}\\hat{y}$",
+      "$-\\frac{36}{5\\sqrt{5}}\\hat{x} + \\frac{18}{5\\sqrt{5}}\\hat{y}$",
+      "$-\\frac{36}{3\\sqrt{5}}\\hat{x} + \\frac{18}{3\\sqrt{5}}\\hat{y}$",
+      "$\\frac{36}{5\\sqrt{5}}\\hat{x} + \\frac{18}{5\\sqrt{5}}\\hat{y}$"
+    ],
+    "answer": 2,
+    "explanation": "쿨롱의 법칙\n점(0, 1)[m] 위치의 전하를 $Q_1$, 점 (2, 0)[m] 위치의 전하를 $Q_2$라 하면 힘의 방향을 지시하는 단위벡터는\n$\\hat{r} = \\frac{1}{|r|}(2\\hat{x} - \\hat{y})$ 이므로\n$\\vec{F} = \\frac{Q_1 Q_2}{4\\pi\\epsilon_0 r^2}\\hat{r} = 9 \\times 10^9 \\times \\frac{Q_1 Q_2}{r^2}\\hat{r}$ [N] 식에서\n$|r| = \\sqrt{2^2 + (-1)^2} = \\sqrt{5}$ [m], $Q_1 = -2 \\times 10^{-9}$[C], $Q_2 = 1$[C]일 때\n$\\therefore \\vec{F} = 9 \\times 10^9 \\times \\frac{Q_1 Q_2}{r^2}\\hat{r}$\n$= 9 \\times 10^9 \\times \\frac{-2 \\times 10^{-9} \\times 1}{(\\sqrt{5})^2} \\times \\frac{1}{\\sqrt{5}}(2\\hat{x} - \\hat{y})$\n$= -\\frac{18}{5\\sqrt{5}}(2\\hat{x} - \\hat{y})$\n$= -\\frac{36}{5\\sqrt{5}}\\hat{x} + \\frac{18}{5\\sqrt{5}}\\hat{y}$ [N]",
+    "image_needed": false,
+    "source_page": "page_344",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 1,
+    "question": "그림과 같이 단면적 $S [m^2]$가 균일한 환상철심에 권수 $N_1$인 A코일과 권수 $N_2$인 B코일이 있을 때, A코일의 자기 인덕턴스가 $L_1 [H]$이라면 두 코일의 상호 인덕턴스 M[H]는? (단, 누설자속은 0이다.)",
+    "choices": [
+      "$\\frac{L_1 N_2}{N_1}$",
+      "$\\frac{N_2}{L_1 N_1}$",
+      "$\\frac{L_1 N_1}{N_2}$",
+      "$\\frac{N_1}{L_1 N_2}$"
+    ],
+    "answer": 1,
+    "explanation": "상호 인덕턴스 $M = \\frac{N_1 N_2}{R_m} = \\frac{\\mu S N_1 N_2}{l} = \\frac{L_1 N_2}{N_1} [H]$",
+    "image_needed": true,
+    "source_page": "page_343",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 2,
+    "question": "대지면에 높이 $h$로 평행하게 가설된 매우 긴 선전하가 지면으로부터 받는 힘은?",
+    "choices": [
+      "$h^2$에 비례한다.",
+      "$h^2$에 반비례한다.",
+      "$h$에 비례한다.",
+      "$h$에 반비례한다."
+    ],
+    "answer": 4,
+    "explanation": "접지 무한 평면과 선전하 $F = -\\frac{\\lambda^2}{4\\pi\\epsilon_0 h} [N/m]$ 식에서 ∴ 작용력은 $h$에 반비례한다.",
+    "image_needed": false,
+    "source_page": "page_343",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 2,
+    "question": "영구자석에 관한 설명 중 옳지 않은 것은?",
+    "choices": [
+      "히스테리시스 현상을 가진 재료만이 영구자석이 될 수 있다.",
+      "보자력이 클수록 자계가 강한 영구자석이 된다.",
+      "잔류 자속 밀도가 높을수록 자계가 강한 영구자석이 된다.",
+      "자석 재료로 폐회로를 만들면 강한 영구자석이 된다."
+    ],
+    "answer": 4,
+    "explanation": "영구자석의 성질\n(1) 잔류자기가 클 것\n(2) 보자력이 클 것\n(3) 히스테리시스 특성을 가질 것\n$\\therefore$ 자석재료로 폐회로를 만들면 극성을 갖지 않기 때문에 전자력을 상실하게 된다.",
+    "image_needed": false,
+    "source_page": "page_372",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 3,
+    "question": "반지름 $a$ 인 접지 도체구의 중심에서 $d > a$ 되는 곳에 점전하 $Q$ 가 있다. 구도체에 유기되는 영상전하 및 그 위치(중심에서의 거리)는 각각 얼마인가?",
+    "choices": [
+      "$+ \\frac{a}{d} Q$ 이며 $\\frac{a^2}{d}$ 이다.",
+      "$- \\frac{a}{d} Q$ 이며 $\\frac{a^2}{d}$ 이다.",
+      "$+ \\frac{d}{a} Q$ 이며 $\\frac{a^2}{d}$ 이다.",
+      "$- \\frac{d}{a} Q$ 이며 $\\frac{d^2}{a}$ 이다."
+    ],
+    "answer": 2,
+    "explanation": "접지구도체와 점전하 영상전하($Q$')의 크기와 위치\n(1) 영상전하의 크기: $Q' = - \\frac{a}{d} Q [C]$\n(2) 영상전하의 위치: ($+ \\frac{a^2}{d}$, 0, 0) [m]",
+    "image_needed": false,
+    "source_page": "page_372",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 4,
+    "question": "무한장 직선도체에 선전하밀도 $\\lambda$[C/m]의 전화가 분포되어 있는 경우 직선 도체를 축으로 하는 반지름 $r$의 원통면상의 전계는 몇 [V/m]인가?",
+    "choices": [
+      "$E = \\frac{1}{4\\pi\\epsilon_0} \\times \\frac{\\lambda}{r}$",
+      "$E = \\frac{1}{2\\pi\\epsilon_0} \\times \\frac{\\lambda}{r^2}$",
+      "$E = \\frac{1}{4\\pi\\epsilon_0} \\times \\frac{\\lambda}{r^2}$",
+      "$E = \\frac{1}{2\\pi\\epsilon_0} \\times \\frac{\\lambda}{r}$"
+    ],
+    "answer": 4,
+    "explanation": "무한장 직선 도체에 의한 전계의 세기\n$\\therefore E = \\frac{1}{2\\pi\\epsilon_0} \\times \\frac{\\lambda}{r}$ [V/m]",
+    "image_needed": false,
+    "source_page": "page_372",
+    "subject": "전기자기학"
+  },
+  {
     "round": "2025년 2회 전기기사",
     "number": 20,
     "question": "높은 주파수의 전자파가 전파될 때 일기가 좋은 날보다 비오는 날 전자파의 감쇠가 심한 원인은?",
@@ -240,6 +1456,518 @@
     "subject": "전기자기학"
   },
   {
+    "round": "2025년 3회 기출문제",
+    "number": 7,
+    "question": "반지름 $a[\\text{m}]$인 2개의 원형 도선 루프가 $\\pm Z$축 상에 그림과 같이 놓인 경우 $I[\\text{A}]$의 전류가 흐를 때 원형전류 중심축 상의 자계 $H_z [\\text{AT/m}]$는? (단, $a_z, a_\\phi$는 단위벡터이다.) [그림]",
+    "choices": [
+      "$H_z = \\frac{a^2 I a_z}{(a^2 + z^2)^{\\frac{3}{2}}}$",
+      "$H_z = \\frac{a^2 I a_\\phi}{(a^2 + z^2)^{\\frac{3}{2}}}$",
+      "$H_z = \\frac{a^2 I a_z}{2(a^2 + z^2)^{\\frac{3}{2}}}$",
+      "$H_z = \\frac{a^2 I a_\\phi}{2(a^2 + z^2)^{\\frac{3}{2}}}$"
+    ],
+    "answer": 1,
+    "explanation": "원형코일에 의한 자계의 세기\n(1) 원형코일 중심축 상 $z[\\text{m}]$ 떨어진 점의 자계의 세기\n$H = \\frac{NI}{2a} \\sin^3 \\theta = \\frac{NIa^2}{2(a^2 + z^2)^{\\frac{3}{2}}} [\\text{AT/m}]$\n(2) 원형코일 중심의 자계의 세기\n$H_0 = \\frac{NI}{2a} [\\text{AT/m}]$\n$N=2$ 이며 자계는 $z$ 방향을 가리키므로\n$\\therefore H = \\frac{2 \\times I \\times a^2}{2(a^2 + z^2)^{\\frac{3}{2}}} a_z = \\frac{I a^2}{(a^2 + z^2)^{\\frac{3}{2}}} a_z [\\text{AT/m}]$",
+    "image_needed": true,
+    "source_page": "page_400",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 3회 기출문제",
+    "number": 12,
+    "question": "커패시터를 제조하는데 4가지 (A, B, C, D)의 유전재료가 있다. 커패시터 내의 전계를 일정하게 하였을 때, 단위체적당 가장 큰 에너지 밀도를 나타내는 재료부터 순서대로 나열한 것은? (단, 유전재료 A, B, C, D의 비유전율은 각각 $\\epsilon_{rA} = 8, \\epsilon_{rB} = 10, \\epsilon_{rC} = 2, \\epsilon_{rD} = 4이다.)",
+    "choices": [
+      "C > D > A > B",
+      "B > A > D > C",
+      "D > A > C > B",
+      "A > B > D > C"
+    ],
+    "answer": 2,
+    "explanation": "유전체 내의 정전에너지 밀도($W$) $w = \\frac{p_s^2}{2\\epsilon} = \\frac{D^2}{2\\epsilon} = \\frac{1}{2}\\epsilon E^2 = \\frac{1}{2}ED [J/m^3]$ 식에서 전계($E$)가 일정할 경우 정전에너지 밀도의 공식은 $w = \\frac{1}{2}\\epsilon E^2 [J/m^3]$이므로 $w \\propto \\epsilon$임을 알 수 있다. ∴ 정전에너지 밀도는 유전율에 비례하므로 큰 재료부터의 순서는 $B > A > D > C$이다.",
+    "image_needed": false,
+    "source_page": "page_402",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 3회 기출문제",
+    "number": 13,
+    "question": "정전용량이 0.5[$\\mu F$], 1[$\\mu F$]인 콘덴서에 각각 $2 \\times 10^{-4}$[C] 및 $3 \\times 10^{-4}$[C]의 전하를 주고 극성을 같게 하여 병렬로 접속할 때 콘덴서에 축적된 에너지는 약 몇 [J]인가?",
+    "choices": [
+      "0.042",
+      "0.063",
+      "0.083",
+      "0.126"
+    ],
+    "answer": 3,
+    "explanation": "정전에너지($W$) $C_1 = 0.5 [\\mu F]$, $Q_1 = 2 \\times 10^{-4}$ [C], $C_2 = 1 [\\mu F]$, $Q_2 = 3 \\times 10^{-4}$ [C]인 경우 콘덴서가 병렬접속 되었다면 합성정전용량 $C'$와 합성전하량 $Q'$는 $C' = C_1 + C_2 = 0.5 + 1 = 1.5 [\\mu F]$ $Q' = Q_1 + Q_2 = 2 \\times 10^{-4} + 3 \\times 10^{-4} = 5 \\times 10^{-4}$ [C] 이므로 ∴ $W = \\frac{Q^2}{2C} = \\frac{(5 \\times 10^{-4})^2}{2 \\times 1.5 \\times 10^{-6}} = 0.083$ [J]",
+    "image_needed": false,
+    "source_page": "page_402",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 3회 기출문제",
+    "number": 14,
+    "question": "비투자율 $\\mu_s = 800$, 원형 단면적이 $S=10[\\text{cm}^2]$, 평균 경로 길이 $l=16\\pi \\times 10^{-2}$[m]의 환상철심에 600회의 코일을 감고 이 코일에 1[A]의 전류를 흘리면 환상 철심 내부의 자속은 몇 [Wb]인가?",
+    "choices": [
+      "$1.2 \\times 10^{-3}$",
+      "$1.2 \\times 10^{-5}$",
+      "$2.4 \\times 10^{-3}$",
+      "$2.4 \\times 10^{-5}$"
+    ],
+    "answer": 1,
+    "explanation": "자기회로 내의 옴의 법칙 $\\phi = \\frac{\\mu_0 \\mu_s S N I}{l}$ [Wb] 식에서 $\\mu_s = 800$, $S = 10 [\\text{cm}^2] = 10 \\times 10^{-4} [\\text{m}^2]$, $l = 16\\pi \\times 10^{-2}$ [m], $N = 600$, $I = 1$ [A] (문제에서 주어진 값) 이므로 $\\phi = \\frac{4\\pi \\times 10^{-7} \\times 800 \\times 10 \\times 10^{-4} \\times 600 \\times 1}{16\\pi \\times 10^{-2}} = 1.2 \\times 10^{-3}$ [Wb]",
+    "image_needed": false,
+    "source_page": "page_402",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 3회 기출문제",
+    "number": 15,
+    "question": "정전용량이 각각 $C_1 = 1[\\mu F]$, $C_2 = 2[\\mu F]$인 도체에 전하 $Q_1 = -5[\\mu C]$, $Q_2 = 2[\\mu C]$를 각각 주고 각 도체를 가는 철사로 연결하였을 때 $C_1$에서 $C_2$로 이동하는 전하 $Q_{12}$는?",
+    "choices": [
+      "-4",
+      "-3.5",
+      "-3",
+      "-1.5"
+    ],
+    "answer": 1,
+    "explanation": "콘덴서 병렬운전 전하로 충전된 두 도체를 가는 철사로 연결하게 되면 두 도체는 병렬로 접속된 경우와 같아진다. 이 때 도체의 총 전하량($Q_0$)은 $Q_0 = Q_1 + Q_2 = -5 + 2 = -3 [\\mu C]$ 이므로 각 도체에 분배되는 전하량 $Q_1'$와 $Q_2'$는 다음과 같다. $Q_1' = \\frac{C_1}{C_1 + C_2} Q_0 = \\frac{1}{1 + 2} \\times (-3) = -1 [\\mu C]$ $Q_2' = \\frac{C_2}{C_1 + C_2} Q_0 = \\frac{2}{1 + 2} \\times (-3) = -2 [\\mu C]$ 따라서 도체 $C_1$에서 도체 $C_2$로 이동한 전하량 $Q_{12}$는 $Q_{12} = Q_1 - Q_1' = Q_2' - Q_2$이다. ∴ $Q_{12} = -5 - (-1) = -2 - 2 = -4 [\\mu C]$",
+    "image_needed": false,
+    "source_page": "page_402",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 3회 전기기사",
+    "number": 10,
+    "question": "$20[\\text{mH}]$의 두 자기인덕턴스가 있다. 결합계수를 $0.1$로부터 $0.9$까지 변화시킬 수 있다면 이것을 직렬 접속시켜 얻을 수 있는 합성 인덕턴스의 최댓값과 최솟값의 비는 얼마인가?",
+    "choices": [
+      "9:1",
+      "13:1",
+      "16:1",
+      "19:1"
+    ],
+    "answer": 4,
+    "explanation": "$L_1 = L_2 = 20 [\\text{mH}]$, $k=0.1 \\sim 0.9$ 일 때\n$M = k\\sqrt{L_1 L_2}$ 이며, $k=0.9$를 대입하여 풀면\n$M = 0.9 \\times \\sqrt{20 \\times 20} = 18 [\\text{mH}]$\n최댓값 $L_{max}$, 최솟값 $L_{min}$이라 하면\n$L_{max} = L_1 + L_2 + 2M = 20 + 20 + 2 \\times 18 = 76 [\\text{mH}]$\n$L_{min} = L_1 + L_2 - 2M = 20 + 20 - 2 \\times 18 = 4 [\\text{mH}]$\n$\\therefore L_{max} : L_{min} = 76 : 4 = 19 : 1$",
+    "image_needed": false,
+    "source_page": "page_418",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 3회 전기기사",
+    "number": 20,
+    "question": "자속밀도 B [Wb/m²]가 도체 중에서 f [Hz]로 변화할 때, 도체 중에 유기되는 기전력 e는 무엇에 비례하는가?",
+    "choices": [
+      "e \\propto \\frac{B}{f}",
+      "e \\propto \\frac{B^2}{f}",
+      "e \\propto \\frac{f}{B}",
+      "e \\propto B \\cdot f"
+    ],
+    "answer": 4,
+    "explanation": "유기기전력(e)\n자속 $\\phi$를 $\\phi_m \\sin \\omega t$ [Wb]라 하면\n$e = -N \\frac{d\\phi}{dt} = -\\omega N \\phi_m \\cos \\omega t$\n$= \\omega N \\phi_m \\sin (\\omega t - 90^\\circ)$\n$= 2\\pi f N \\phi_m \\sin (\\omega t - 90^\\circ)$ [V]이다.\n$\\phi_m = BS$[Wb] 이므로\n$\\therefore e \\propto \\phi_m \\cdot f$ 또는 $e \\propto B \\cdot f$",
+    "image_needed": false,
+    "source_page": "page_404",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도 문제",
+    "number": 5,
+    "question": "전류 $4\\pi$[A]가 흐르고 있는 무한직선도체에 의해 자계가 $4$[A/m]인 점은 직선도체로부터 거리가 몇 [m]인가?",
+    "choices": [
+      "0.5[m]",
+      "1[m]",
+      "3[m]",
+      "4[m]"
+    ],
+    "answer": 1,
+    "explanation": "무한장 직선도체에 의한 자계의 세기 $H = \\frac{I}{2\\pi r}$ [AT/m] 식에서 $I = 4\\pi$[A], $H = 4$[A/m] 이므로 $\\therefore r = \\frac{I}{2\\pi H} = \\frac{4\\pi}{2\\pi \\times 4} = 0.5$[m]",
+    "image_needed": false,
+    "source_page": "page_265",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도 문제",
+    "number": 6,
+    "question": "속도 $v$의 전자가 평등자계 내에 수직으로 들어갈 때, 이 전자에 대한 설명으로 옳은 것은?",
+    "choices": [
+      "구면 위에서 회전하고 구의 반지름은 자계의 세기에 비례한다.",
+      "원운동을 하고 원의 반지름은 자계의 세기에 비례한다.",
+      "원운동을 하고 원의 반지름은 자계의 세기에 반비례한다.",
+      "원운동을 하고 원의 반지름은 전자의 처음 속도의 제곱에 비례한다."
+    ],
+    "answer": 3,
+    "explanation": "전자의 원운동\n평등 자계 내에 전자를 입사시킬 때 전자의 입사 방향이 자계와 평행한 경우 전자는 직선 운동을 하며 전자의 입사 방향이 자계와 수직인 경우 전자는 원운동을 하게 된다.\n구분 | 공식\n반지름(r) | $r = \\frac{mv}{Bq} = \\frac{mv}{\\mu_0 Hq}$ [m]\n각속도($\\omega$) | $\\omega = \\frac{Bq}{m} = \\frac{\\mu_0 Hq}{m}$ [rad/sec]\n주기(T) | $T = \\frac{2\\pi m}{Bq} = \\frac{2\\pi m}{\\mu_0 Hq}$ [sec]",
+    "image_needed": false,
+    "source_page": "page_265",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도 문제",
+    "number": 7,
+    "question": "자극의 세기가 $8 \\times 10^{-6}$[Wb], 길이가 $3$[cm]인 막대자석을 $120$[AT/m]의 평등자계 내에 자력선과 $30^\\circ$의 각도로 놓으면 이 막대자석이 받는 회전력은 몇 [N·m]인가?",
+    "choices": [
+      "$3.02 \\times 10^{-5}$",
+      "$3.02 \\times 10^{-4}$",
+      "$1.44 \\times 10^{-5}$",
+      "$1.44 \\times 10^{-4}$"
+    ],
+    "answer": 4,
+    "explanation": "막대자석의 회전력\n$T = mlH\\sin\\theta$ [N·m] 식에서\n$m = 8 \\times 10^{-6}$[Wb], $l = 3$[cm], $H = 120$[AT/m],\n$\\theta = 30^\\circ$ 이므로\n$\\therefore T = mlH\\sin\\theta$\n$= 8 \\times 10^{-6} \\times 3 \\times 10^{-2} \\times 120 \\times \\sin30^\\circ$\n$= 1.44 \\times 10^{-5}$ [N·m]",
+    "image_needed": false,
+    "source_page": "page_265",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도 문제",
+    "number": 8,
+    "question": "인덕턴스의 단위 [H]와 같지 않은 것은?",
+    "choices": [
+      "J/A·s",
+      "$\\Omega$·s",
+      "Wb/A",
+      "J/A²"
+    ],
+    "answer": 1,
+    "explanation": "인덕턴스(L)\n인덕턴스는 여러 가지 형태의 식으로 표현되며 식에 의해서 단위 또한 여러 가지 표현을 갖게 된다.\n(1) $L = \\frac{N\\phi}{I} = \\frac{NBS}{I} = \\frac{N\\mu HS}{I}$ [H] 식에서\n[H] = [$\\frac{Wb}{A}$]\n(2) $e = -L\\frac{di}{dt}$ [V] 식에서 $L = -\\frac{e}{di/dt}$ [H]이므로\n[H] = [$\\frac{V \\cdot sec}{A}$] = [$\\Omega \\cdot sec$]\n(3) $W = \\frac{1}{2}LI^2$ [J] 식에서 $L = \\frac{2W}{I^2}$ [H]이므로\n[H] = [$\\frac{J}{A^2}$]",
+    "image_needed": false,
+    "source_page": "page_265",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출문제",
+    "number": 4,
+    "question": "유전율 $\\epsilon$, 전계의 세기 $E$인 유전체의 단위 체적당 축적되는 정전에너지는?",
+    "choices": [
+      "$\\frac{E}{2\\epsilon}$",
+      "$\\frac{\\epsilon E}{2}$",
+      "$\\frac{\\epsilon E^2}{2}$",
+      "$\\frac{\\epsilon^2 E^2}{2}$"
+    ],
+    "answer": 3,
+    "explanation": "유전체 내의 정전에너지 밀도($w$)\n$w = \\frac{\\rho_s^2}{2\\epsilon} = \\frac{D^2}{2\\epsilon} = \\frac{1}{2} \\epsilon E^2 = \\frac{1}{2} ED \\, [\\text{J/m}^3]$",
+    "image_needed": false,
+    "source_page": "page_035",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출문제",
+    "number": 5,
+    "question": "단면적이 균일한 환상철심에 권수 $N_A$인 A코일과 권수 $N_B$인 B코일이 있을 때, B코일의 자기 인덕턴스가 $L_A$라면 두 코일의 상호 인덕턴스 $M$ [H]는? (단, 누설자속은 0이다.)",
+    "choices": [
+      "$\\frac{L_A N_A}{N_B}$",
+      "$\\frac{L_A N_B}{N_A}$",
+      "$\\frac{N_A}{L_A N_B}$",
+      "$\\frac{N_B}{L_A N_A}$"
+    ],
+    "answer": 1,
+    "explanation": "상호인덕턴스($M$)\n이 문제의 이해를 돕기 위해 1차 코일의 권수와 자기 인덕턴스를 각각 $N_1$, $L_1$이라 하고 2차 코일의 권수와 자기 인덕턴스를 $N_2$, $L_2$라 하면\n두 코일 간의 상호 인덕턴스 $M$은\n$M = \\frac{N_1 N_2}{R_m} = \\frac{\\mu S N_1 N_2}{l} = L_1 \\frac{N_2}{N_1} = L_2 \\frac{N_1}{N_2}$\n$ = k\\sqrt{L_A L_B} \\, [\\text{H}]$이 된다.\n이 문제에서는 $N_1 = N_A$, $L_1 = L_B$, $N_2 = N_B$, $L_2 = L_A$로 조건이 바뀌었음을 주의하여야 한다.\n$M = \\frac{N_A N_B}{R_m} = \\frac{\\mu S N_A N_B}{l} = L_A \\frac{N_A}{N_B} = L_B \\frac{N_B}{N_A}$",
+    "image_needed": false,
+    "source_page": "page_035",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출문제",
+    "number": 6,
+    "question": "비투자율이 350인 환상철심 내부의 평균 자계의 세기가 342[AT/m]일 때 자화의 세기는 약 몇 $[\\text{Wb/m}^2]$인가?",
+    "choices": [
+      "0.12",
+      "0.15",
+      "0.18",
+      "0.21"
+    ],
+    "answer": 2,
+    "explanation": "자화의 세기($J$)\n자속밀도 $B$, 자계의 세기 $H$, 투자율 $\\mu$, 자화율 $\\chi_m$라 하면\n$J = B - \\mu_0 H = \\mu H - \\mu_0 H = \\mu_0 (\\mu_s - 1) H$\n$ = \\chi_m H = (1 - \\frac{1}{\\mu_s}) B \\, [\\text{Wb/m}^2]$식에서\n$\\mu_s = 350, H = 342 \\, [\\text{AT/m}]$일 때\n$\\therefore J = \\mu_0 (\\mu_s - 1) H = 4\\pi \\times 10^{-7} \\times (350 - 1) \\times 342$\n$= 0.15 \\, [\\text{Wb/m}^2]$",
+    "image_needed": false,
+    "source_page": "page_035",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출문제",
+    "number": 7,
+    "question": "진공 중에 놓인 $Q \\, [\\text{C}]$의 전하에서 발산되는 전기력선의 수는?",
+    "choices": [
+      "$Q$",
+      "$\\epsilon_0$",
+      "$\\frac{Q}{\\epsilon_0}$",
+      "$\\frac{\\epsilon_0}{Q}$"
+    ],
+    "answer": 3,
+    "explanation": "가우스의 발산정리(전기력선과 전속선)\n(1) 전기력선의 개수($N$)\n$N = \\int_S \\vec{E} d\\vec{S} = \\int_V \\text{div} \\, \\vec{E} dv = \\frac{Q}{\\epsilon_0}$\n(2) 전속선의 개수($Ψ$)\n$Ψ = \\int_S \\vec{D} d\\vec{S} = Q$",
+    "image_needed": false,
+    "source_page": "page_035",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출문제",
+    "number": 8,
+    "question": "비투자율이 50인 환상 철심을 이용하여 100[cm] 길이의 자기회로를 구성할 때 자기저항을 $2.0 \\times 10^7 \\, [\\text{AT/Wb}]$ 이하로 하기 위해서는 철심의 단면적을 약 몇 $[\\text{m}^2]$ 이상으로 하여야 하는가?",
+    "choices": [
+      "$3.6 \\times 10^{-4}$",
+      "$6.4 \\times 10^{-4}$",
+      "$8.0 \\times 10^{-4}$",
+      "$9.2 \\times 10^{-4}$"
+    ],
+    "answer": 3,
+    "explanation": "자기회로 내의 옴의 법칙\n투자율 $\\mu$, 단면적 $S$, 길이 $l$이라 하면 자기저항 $R_m$은\n$R_m = \\frac{l}{\\mu S} = \\frac{l}{\\mu_0 \\mu_s S} \\, [\\text{AT/Wb}]$ 식에서\n$\\mu_s = 50, l = 100 \\, [\\text{cm}] = 1 \\, [\\text{m}]$\n$R_m = 2.0 \\times 10^7 \\, [\\text{AT/Wb}]$이므로,\n$\\therefore S = \\frac{l}{\\mu_0 \\mu_s R_m} = \\frac{1}{4\\pi \\times 10^{-7} \\times 50 \\times 2.0 \\times 10^7}$\n$= 8.0 \\times 10^{-4} \\, [\\text{m}^2]$",
+    "image_needed": false,
+    "source_page": "page_035",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 8,
+    "question": "z축 상에 놓인 길이가 긴 직선 도선에 10[A]의 전류가 +z 방향으로 흐르고 있다. 이 도체 주위의 자속밀도가 $3\\hat{x} - 4\\hat{y}$ [Wb/m²]일 때 도체가 받는 단위 길이당 힘[N/m]은?(단, $\\hat{x}$, $\\hat{y}$는 단위벡터이다.)",
+    "choices": [
+      "$40\\hat{x} + 30\\hat{y}$",
+      "$-30\\hat{x} + 40\\hat{y}$",
+      "$30\\hat{x} + 40\\hat{y}$",
+      "$-40\\hat{x} + 30\\hat{y}$"
+    ],
+    "answer": 4,
+    "explanation": "자계 내에 흐르는 전류에 의한 작용력(플레밍의 왼손법칙)\n반원형 도선에 흐르는 전류의 방향이 +y축 방향이므로 전류벡터 $\\vec{I}$는 $\\vec{I} = 10\\hat{z}$ [A]이다.\n플레밍의 왼손법칙을 이용하면\n$\\vec{F} = \\vec{I} \\times \\vec{B}$ [N/m]이므로\n$\\therefore \\vec{F} = \\vec{I} \\times \\vec{B} = \\begin{vmatrix} \\hat{x} & \\hat{y} & \\hat{z} \\\\ 0 & 0 & 10 \\\\ 3 & -4 & 0 \\end{vmatrix}$\n$= 40\\hat{x} + 30\\hat{y}$ [N]",
+    "image_needed": false,
+    "source_page": "page_093",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 8,
+    "question": "간격이 d[m]이고 면적이 S[m²]인 평행판 커패시터의 전극 사이에 유전율이 ϵ인 유전체를 넣고 전극 간에 V[V]의 전압을 가했을 때, 이 커패시터의 전극판을 떼어내는데 필요한 힘의 크기[N]는?",
+    "choices": [
+      "$\\frac{1}{2\\epsilon}\\frac{V^2}{d^2}S$",
+      "$\\frac{1}{2}\\frac{dV^2}{\\epsilon S}$",
+      "$\\frac{1}{2}\\frac{\\epsilon V^2}{d}$",
+      "$\\frac{1}{2}\\epsilon\\frac{V^2}{d^2}S$"
+    ],
+    "answer": 4,
+    "explanation": "유전체 내의 정전력(F)\n단위 면적당 정전력 f는 단위체적당 정전 에너지 w와 같으며 $f = \\frac{P_e^2}{2\\epsilon} = \\frac{D^2}{2\\epsilon} = \\frac{1}{2}\\epsilon E^2 = \\frac{1}{2}ED[\\text{N/m}^2]$이다.\n∴ $F = f \\times S = \\frac{1}{2}\\epsilon E^2S = \\frac{1}{2}\\epsilon (\\frac{V}{d})^2S = \\frac{1}{2}\\epsilon \\frac{V^2}{d^2}S[\\text{N}]$",
+    "image_needed": false,
+    "source_page": "page_151",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 9,
+    "question": "투자율이 $\\mu$[H/m], 단면적이 $S$[m$^2$], 길이가 $l$[m]인 자성체에 권선을 $N$회 감아서 $I$[A]의 전류를 흘렸을 때 이 자성체의 단면적 $S$[m$^2$]를 통과하는 자속[Wb]은?",
+    "choices": [
+      "$\\frac{I}{\\mu N l S}$",
+      "$\\frac{NI}{\\mu S l}$",
+      "$\\frac{NI}{\\mu S}$",
+      "$\\frac{\\mu NI S}{l}$"
+    ],
+    "answer": 4,
+    "explanation": "자기회로 내의 옴의 법칙\n$F = NI = R_m \\phi$ [AT], $R_m = \\frac{l}{\\mu S}$ [AT/Wb] 식에서\n$\\therefore \\phi = \\frac{F}{R_m} = \\frac{NI}{R_m} = \\frac{\\mu SNI}{l}$ [Wb]",
+    "image_needed": false,
+    "source_page": "page_123",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 9,
+    "question": "자유공간에서 정육각형의 꼭짓점에 동량, 동질의 점전하 Q가 각각 놓여 있을 때 정육각형 한 변의 길이가 a라 하면 정육각형 중심의 전계의 세기는?",
+    "choices": [
+      "$\\frac{Q}{4\\pi\\epsilon_0a^2}$",
+      "$\\frac{3Q}{2\\pi\\epsilon_0a^2}$",
+      "$6Q$",
+      "$0$"
+    ],
+    "answer": 4,
+    "explanation": "정전하에 의한 전계의 세기(E)\n전계의 세기는 벡터량으로서 그림에서와 같이 정육각형 각 정점에 같은 전하를 놓았을 때 중심에서의 전계의 세기 $E_A, E_B, E_C, E_D, E_E, E_F$는 다음과 같은 관계가 성립한다.\n$E_A = -E_D, E_B = -E_E, E_C = -E_F$\n따라서, 중심에서의 전계의 세기를 E라 하면\n∴ $E = E_A+E_B+E_C+E_D+E_E+E_F = 0[\\text{V/m}]$\n참고\n정 n각형 각 정점에 같은 크기의 전하가 놓여있는 경우 도형 중심에서의 전계의 세기는 항상 0[V/m]이다.",
+    "image_needed": false,
+    "source_page": "page_151",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 10,
+    "question": "그림은 커패시터의 유전체 내에 흐르는 변위전류를 보여준다. 커패시터의 전극 면적을 $S$[m$^2$], 전극에 축적된 전하를 $q$[C], 전극의 표면전하 밀도를 $\\sigma$[C/m$^2$], 전극 사이의 전속밀도를 $D$[C/m$^2$]라 하면 변위전류밀도 $i_d$[A/m$^2$]는? [그림]",
+    "choices": [
+      "$\\frac{\\partial D}{\\partial t}$",
+      "$\\frac{\\partial q}{\\partial t}$",
+      "$S \\frac{\\partial D}{\\partial t}$",
+      "$\\frac{1}{S} \\frac{\\partial D}{\\partial t}$"
+    ],
+    "answer": 1,
+    "explanation": "변위전류밀도($i_d$)\n시간적으로 변화하는 전계가 자계를 발생시킬 수 있다는 원리로서 전속밀도의 시간적 변화가 변위전류밀도이며 변위전류밀도가 자계를 발생시킨다.\n$\\therefore i_d = \\frac{\\partial D}{\\partial t} = \\epsilon \\frac{\\partial E}{\\partial t}$ [A/m$^2$]",
+    "image_needed": true,
+    "source_page": "page_123",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 10,
+    "question": "내부장치 또는 공간을 물질로 포위시켜 외부 자계의 영향을 차폐시키는 방식을 자기차폐라 한다. 다음 중 자기차폐에 가장 좋은 것은?",
+    "choices": [
+      "강자성체 중에서 비투자율이 큰 물질",
+      "강자성체 중에서 비투자율이 작은 물질",
+      "비투자율이 1보다 작은 역자성체",
+      "비투자율에 관계없이 물질의 두께에만 관계되므로 되도록 두꺼운 물질"
+    ],
+    "answer": 1,
+    "explanation": "자기차폐\n전자기유도에 의한 방해작용을 방지할 목적으로 대상이 되는 장치 또는 시설을 투자율이 큰 자성재료를 이용해서 감싸게 되면 자계의 영향으로부터 차단하게 되는 현상",
+    "image_needed": false,
+    "source_page": "page_151",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 11,
+    "question": "진공 내 전위함수가 $V = x^2 + y^2$[V]로 주어졌을 때, $0 \\le x \\le 1$, $0 \\le y \\le 1$, $0 \\le z \\le 1$인 공간에 저장되는 정전에너지[J]는?",
+    "choices": [
+      "$\\frac{4}{3}\\epsilon_0$",
+      "$\\frac{2}{3}\\epsilon_0$",
+      "$4\\epsilon_0$",
+      "$2\\epsilon_0$"
+    ],
+    "answer": 1,
+    "explanation": "정전 에너지(W)\n$\\vec{E} = -\\nabla V = -\\text{grad } V$ [V/m]\n$W = \\frac{1}{2}\\int_{\\text{vol}} \\epsilon_0 E^2 dv$ [J] 식에서\n$\\vec{E} = -\\text{grad } V = - (\\hat{i}\\frac{\\partial V}{\\partial x} + \\hat{j}\\frac{\\partial V}{\\partial y} + \\hat{k}\\frac{\\partial V}{\\partial z})$\n$= - (\\hat{i}\\frac{\\partial (x^2 + y^2)}{\\partial x} + \\hat{j}\\frac{\\partial (x^2 + y^2)}{\\partial y} + \\hat{k}\\frac{\\partial (x^2 + y^2)}{\\partial z})$\n$= - (\\hat{i}(2x) + \\hat{j}(2y) + \\hat{k}(0))$\n$= -2x\\hat{i} - 2y\\hat{j}$ [V/m] 이므로\n$E^2 = \\vec{E} \\cdot \\vec{E} = (-2x)^2 + (-2y)^2 = 4x^2 + 4y^2$ [V/m]이다.\n$W = \\frac{1}{2}\\int_{\\text{vol}} \\epsilon_0 E^2 dv$\n$= \\frac{1}{2}\\epsilon_0 \\int_{0}^{1}\\int_{0}^{1}\\int_{0}^{1} (4x^2 + 4y^2) dz dy dx$\n$= \\frac{1}{2}\\epsilon_0 \\int_{0}^{1}\\int_{0}^{1} (4x^2 + 4y^2) dy dx$\n$= \\frac{1}{2}\\epsilon_0 \\int_{0}^{1} [4x^2y + \\frac{4}{3}y^3]_{0}^{1} dx$\n$= \\frac{1}{2}\\epsilon_0 \\int_{0}^{1} (4x^2 + \\frac{4}{3}) dx$\n$= \\frac{1}{2}\\epsilon_0 [\\frac{4}{3}x^3 + \\frac{4}{3}x]_{0}^{1}$\n$= \\frac{1}{2}\\epsilon_0 (\\frac{4}{3} + \\frac{4}{3})$\n$= \\frac{1}{2}\\epsilon_0 (\\frac{8}{3})$\n$= \\frac{4}{3}\\epsilon_0$ [J]",
+    "image_needed": false,
+    "source_page": "page_093",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 11,
+    "question": "진공 중에서 점(1, 3)[m]의 위치에 $-2 \\times 10^{-9}$[C]의 점전하가 있을 때 점(2, 1)[m]에 있는 1[C]의 점전하에 작용하는 힘은 몇 [N]인가? (단, $\\hat{x}, \\hat{y}$는 단위벡터이다.)",
+    "choices": [
+      "$\\frac{18}{5\\sqrt{5}}\\hat{x} + \\frac{36}{5\\sqrt{5}}\\hat{y}$",
+      "$-\\frac{36}{5\\sqrt{5}}\\hat{x} + \\frac{18}{5\\sqrt{5}}\\hat{y}$",
+      "$\\frac{36}{5\\sqrt{5}}\\hat{x} - \\frac{18}{5\\sqrt{5}}\\hat{y}$",
+      "$\\frac{18}{5\\sqrt{5}}\\hat{x} - \\frac{36}{5\\sqrt{5}}\\hat{y}$"
+    ],
+    "answer": 1,
+    "explanation": "쿨롱의 법칙\n점(1, 3)[m] 위치의 전하를 $Q_1$, 점 (2, 1)[m] 위치의 전하를 $Q_2$라 하면 단위벡터 $\\hat{r}$은\n$\\hat{r} = \\frac{1}{|\\vec{r}|}\\{(2-1)\\hat{x} + (1-3)\\hat{y}\\}$\n$= \\frac{1}{|\\vec{r}|}(\\hat{x}-2\\hat{y})$ 이므로\n$|\\vec{r}| = \\sqrt{1^2 + (-2)^2} = \\sqrt{5}$ [m], $Q_1 = -2 \\times 10^{-9}$[C], $Q_2 = 1$[C]일 때\n$\\vec{F} = \\frac{Q_1 Q_2}{4\\pi\\epsilon_0 r^2} \\hat{r} = 9 \\times 10^9 \\times \\frac{Q_1 Q_2}{r^2} \\hat{r}$ [N] 식에서\n$\\vec{F} = 9 \\times 10^9 \\times \\frac{Q_1 Q_2}{r^2} \\hat{r}$\n$= 9 \\times 10^9 \\times \\frac{-2 \\times 10^{-9} \\times 1}{(\\sqrt{5})^2} \\times \\frac{1}{\\sqrt{5}}(\\hat{x}-2\\hat{y})$\n$= -\\frac{18}{5\\sqrt{5}}\\hat{x} + \\frac{36}{5\\sqrt{5}}\\hat{y}$ [N]",
+    "image_needed": false,
+    "source_page": "page_123",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 11,
+    "question": "진공 중에서 점 (1, 3)[m] 되는 곳에 $-2 \\times 10^{-9}$[C] 점전하가 있을 점 (2, 1)[m]에 있는 1[C]에 작용하는 힘[N]은?",
+    "choices": [
+      "$\\frac{36}{5\\sqrt{5}}\\vec{a_x} + \\frac{18}{5\\sqrt{5}}\\vec{a_y}$",
+      "$-\\frac{18}{5\\sqrt{5}}\\vec{a_x} + \\frac{36}{5\\sqrt{5}}\\vec{a_y}$",
+      "$-\\frac{36}{3\\sqrt{5}}\\vec{a_x} + \\frac{18}{3\\sqrt{5}}\\vec{a_y}$",
+      "$\\frac{36}{5\\sqrt{5}}\\vec{a_x} - \\frac{18}{5\\sqrt{5}}\\vec{a_y}$"
+    ],
+    "answer": 2,
+    "explanation": "쿨롱의 법칙\n점 (1, 3)[m] 위치의 전하를 $Q_1$, 점 (2, 1)[m] 위치의 전하를 $Q_2$라 하면 단위 벡터 $\\vec{r}$은\n$\\vec{r} = \\frac{1}{|\\vec{r}|}\\{(2-1)\\vec{a_x} + (1-3)\\vec{a_y}\\} = \\frac{1}{|\\vec{r}|}(\\vec{a_x} - 2\\vec{a_y})$ 이므로\n$|\\vec{r}| = \\sqrt{1^2 + (-2)^2} = \\sqrt{5}[\\text{m}]$, $Q_1 = -2 \\times 10^{-9}[\\text{C}]$, $Q_2 = 1[\\text{C}]$일 때\n$\\vec{F} = \\frac{Q_1 Q_2}{4\\pi\\epsilon_0 r^2}\\vec{r} = 9 \\times 10^9 \\frac{Q_1 Q_2}{r^2}\\vec{r}[\\text{N}]$ 식에서\n∴ $\\vec{F} = 9 \\times 10^9 \\frac{-2 \\times 10^{-9} \\times 1}{(\\sqrt{5})^2} \\frac{1}{\\sqrt{5}}(\\vec{a_x} - 2\\vec{a_y}) = -\\frac{18}{5\\sqrt{5}}(\\vec{a_x} - 2\\vec{a_y}) = -\\frac{18}{5\\sqrt{5}}\\vec{a_x} + \\frac{36}{5\\sqrt{5}}\\vec{a_y}[\\text{N}]$",
+    "image_needed": false,
+    "source_page": "page_151",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 13,
+    "question": "공기 중에서 무한 평면 도체 표면 아래의 1[m] 떨어진 곳에 4[C]의 전하가 있다. 전하가 받는 힘의 크기[N]는?",
+    "choices": [
+      "① $3.6 \\times 10^{10}$",
+      "② $4.6 \\times 10^{10}$",
+      "③ $5.6 \\times 10^{10}$",
+      "④ $6.6 \\times 10^{10}$"
+    ],
+    "answer": 1,
+    "explanation": "접지 무한평면과 정전하\n$F = \\frac{Q^2}{16\\pi\\epsilon_0 d^2} = 9 \\times 10^9 \\times \\frac{Q^2}{4d^2}$ [N] 식에서\n$d=1$[m], $Q=4$[C] 이므로\n$\\therefore F = 9 \\times 10^9 \\times \\frac{Q^2}{4d^2} = 9 \\times 10^9 \\times \\frac{4^2}{4 \\times 1^2}$\n$= 3.6 \\times 10^{10}$ [N]",
+    "image_needed": false,
+    "source_page": "page_267",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 14,
+    "question": "그림과 같이 비투자율이 $\\mu_1$, $\\mu_2$인 각각 다른 자성체를 접하여 놓고 $\\theta_1$을 입사각이라 하고, $\\theta_2$를 굴절각이라 한다. 경계면에 자하가 없을 경우 미소 폐곡면을 취하여 이곳에 출입하는 자속수를 구하면? [그림]",
+    "choices": [
+      "① $\\int B \\cdot n ds = 0$",
+      "② $\\int B \\cdot ndl = 0$",
+      "③ $\\int B \\cdot n\\sin\\theta ds = 0$",
+      "④ $\\int B \\cdot ds = 0$"
+    ],
+    "answer": 1,
+    "explanation": "자속의 연속성\n자성체 내에서 키르히호프의 제1법칙은 $\\sum \\Phi = 0$[Wb] 이므로\n$\\sum \\Phi = \\oint_S B \\cdot nds = \\int_V div B dv$\n$= \\int_V \\nabla \\cdot B dv = 0$[Wb]이다.\n$\\therefore \\oint_S B \\cdot nds = \\int_V div B dv = 0$[Wb]이란 자성체 내에서 자속은 발산하지 않으며 경계면을 기준으로 법선성분(수직성분)은 연속임을 의미한다.\n이것을 자속의 연속성이라 한다.",
+    "image_needed": true,
+    "source_page": "page_267",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 15,
+    "question": "유전율이 $\\epsilon$인 유전체 내에 있는 점전하 $Q$에서 발산되는 전기력선의 수는 총 몇 개인가?",
+    "choices": [
+      "$Q$",
+      "$\\frac{Q}{\\epsilon_0 \\epsilon_s}$",
+      "$\\frac{Q}{\\epsilon_s}$",
+      "$\\frac{Q}{\\epsilon_0}$"
+    ],
+    "answer": 2,
+    "explanation": "가우스의 발산정리(전기력선과 전속선)\n(1) 전기력선의 개수(N)\n(진공 또는 공기중일 때)\n$N = \\oint_S \\vec{E} \\cdot d\\vec{s} = \\int_V div \\vec{E} dv = \\frac{Q}{\\epsilon_0}$\n(유전체중일 때)\n$N = \\frac{Q}{\\epsilon_0 \\epsilon_s} = \\frac{Q}{\\epsilon}$\n(2) 전속선의 개수($\\Psi$)\n$\\Psi = \\oint_S \\vec{D} \\cdot d\\vec{s} = Q$ (매질과 관계없다.)",
+    "image_needed": false,
+    "source_page": "page_153",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 15,
+    "question": "그림과 같은 유전속의 분포에서 $\\epsilon_1$과 $\\epsilon_2$의 관계는? [그림]",
+    "choices": [
+      "① $\\epsilon_1 > \\epsilon_2$",
+      "② $\\epsilon_2 > \\epsilon_1$",
+      "③ $\\epsilon_1 = \\epsilon_2$",
+      "④ $\\epsilon_1 > 0, \\epsilon_2 > 0$"
+    ],
+    "answer": 2,
+    "explanation": "유전체의 경계면의 조건\n$\\epsilon_1 > \\epsilon_2$ 이면 $E_1 < E_2, D_1 > D_2, \\theta_1 > \\theta_2$ 일 때 유전율과 전속밀도는 비례관계에 있으므로 유전속이 유전율 $\\epsilon_2$에서 증가할 때 유전율도 $\\epsilon_2$가 $\\epsilon_1$보다 크다는 것을 알 수 있다.\n$\\therefore \\epsilon_2 > \\epsilon_1$",
+    "image_needed": true,
+    "source_page": "page_267",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 16,
+    "question": "한 공간 내의 전계의 세기가 $E=E_0 \\cos \\omega t$ ($\\omega$는 각주파수)일 때, 이 공간 내의 변위전류밀도의 크기는?",
+    "choices": [
+      "$\\omega E_0$에 비례한다.",
+      "$\\omega E_0^2$에 비례한다.",
+      "$\\omega^2 E_0$에 비례한다.",
+      "$\\omega^2 E_0^2$에 비례한다."
+    ],
+    "answer": 1,
+    "explanation": "변위전류밀도($i_d$)\n$i_d = \\frac{\\partial D}{\\partial t} = \\epsilon \\frac{\\partial E}{\\partial t} = \\epsilon \\frac{\\partial}{\\partial t} (E_0 \\cos \\omega t)$\n$= -\\omega \\epsilon E_0 \\sin \\omega t [\\text{A/m}^2]$이므로\n$\\therefore$ 변위전류밀도는 $\\omega \\epsilon E_0$에 비례한다.",
+    "image_needed": false,
+    "source_page": "page_153",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 16,
+    "question": "점전하에 의한 전위 함수가 $V = \\frac{1}{x^2+y^2}$ [V]일 때 grad V는?",
+    "choices": [
+      "$-\\frac{ix+jy}{(x^2+y^2)^2}$",
+      "$-\\frac{i2x+j2y}{(x^2+y^2)^2}$",
+      "$-\\frac{i2x}{(x^2+y^2)^2}$",
+      "$-\\frac{j2y}{(x^2+y^2)^2}$"
+    ],
+    "answer": 2,
+    "explanation": "전위경도(grad V)\n$grad V = \\nabla V = \\frac{\\partial V}{\\partial x}i + \\frac{\\partial V}{\\partial y}j$ 식에서\n$\\frac{\\partial V}{\\partial x} = \\frac{\\partial}{\\partial x}(\\frac{1}{x^2+y^2}) = -\\frac{2x}{(x^2+y^2)^2}$\n$\\frac{\\partial V}{\\partial y} = \\frac{\\partial}{\\partial y}(\\frac{1}{x^2+y^2}) = -\\frac{2y}{(x^2+y^2)^2}$ 이므로\n$\\therefore grad V = -\\frac{i2x+j2y}{(x^2+y^2)^2}$",
+    "image_needed": false,
+    "source_page": "page_241",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 16,
+    "question": "무손실 매질에서 고유 임피던스 $\\eta = 60\\pi$, 비투자율 $\\mu_s = 1$, 자계 $H = -0.1\\cos(\\omega t-z)\\hat{x} + 0.5\\sin(\\omega t-z)\\hat{y}$[AT/m]일 때 각주파수[rad/s]는?",
+    "choices": [
+      "① $6 \\times 10^8$",
+      "② $3 \\times 10^8$",
+      "③ $0.5 \\times 10^8$",
+      "④ $1.5 \\times 10^8$"
+    ],
+    "answer": 4,
+    "explanation": "전자파\n전자파 자계의 세기는\n$H = -0.1\\cos(\\omega t-\\beta z)\\hat{x} + 0.5\\sin(\\omega t-\\beta z)\\hat{y}$ [AT/m]\n식으로 표현되므로 위상정수 $\\beta=1$[rad/m]이다.\n전파속도 $v = \\frac{\\omega}{\\beta} = \\frac{1}{\\sqrt{\\epsilon\\mu}}$ [m/sec]\n고유 임피던스 $\\eta = \\sqrt{\\frac{\\mu}{\\epsilon}} = 120\\pi \\sqrt{\\frac{\\mu_s}{\\epsilon_s}}$ [$\\Omega$] 식에서\n각주파수 $\\omega = \\frac{\\beta}{\\sqrt{\\epsilon\\mu}} = \\frac{\\beta}{\\sqrt{\\epsilon_s\\mu_s}}\\frac{1}{\\sqrt{\\epsilon_0\\mu_0}}$ [rad/sec] 이므로\n$\\epsilon_s = \\frac{(120\\pi)^2 \\mu_s}{\\eta^2} = \\frac{(120\\pi)^2 \\times 1}{(60\\pi)^2} = 4$ 일 때\n$\\therefore \\omega = \\frac{3 \\times 10^8}{\\sqrt{\\epsilon_s\\mu_s}} = \\frac{3 \\times 10^8}{\\sqrt{4 \\times 1}} = 1.5 \\times 10^8$ [rad/sec]",
+    "image_needed": false,
+    "source_page": "page_267",
+    "subject": "전기자기학"
+  },
+  {
     "round": "전기기사 과년도출제문제",
     "number": 17,
     "question": "정상상태에서 $t=0$ 초인 순간에 스위치 $S$를 열었다. 이 때 흐르는 전류 $i(t)$는?",
@@ -253,6 +1981,166 @@
     "explanation": "R-L 과도현상\n스위치를 열기 직전과 직후의 상태 변화된 특성을 이해하면 쉽게 답을 구할 수 있다.\n먼저 스위치를 열기 직전의 정상전류 $I_0$, 스위치를 연 후의 특성값 $s$라 하면 과도전류 $i(t)$는 $i(t) = I_0 e^{st}[A]$임을 알 수 있다.\n$I_0 = \\frac{V}{r}[A]$, $s = -\\frac{R+r}{L}$ 이므로\n$i(t) = I_0 e^{st} = \\frac{V}{r}e^{-\\frac{R+r}{L}t}[A]$",
     "image_needed": true,
     "source_page": "page_055",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 17,
+    "question": "평행 극판 사이 간격이 d[m]이고 정전용량이 0.3[μF]인 공기 커패시터가 있다. 그림과 같이 두 극판 사이에 비유전율이 5인 유전체를 절반 두께만큼 넣었을 때 이 커패시터의 정전용량은 몇 [μF]이 되는가?",
+    "choices": [
+      "0.01",
+      "0.05",
+      "0.1",
+      "0.5"
+    ],
+    "answer": 4,
+    "explanation": "유전체 내의 평행판 전극의 직렬연결 \n 공기콘덴서의 정전용량 $C$ 는 $C = \\frac{\\epsilon_0 S}{d} = 0.3 [\\mu F]$ 이다. \n 콘덴서 판 간에 $\\frac{1}{2}d$ 인 두께를 유전체로 채운 경우 평행판 전극의 경계면과 단자가 수직을 이루고 있으므로 콘덴서는 직렬로 접속이 된다. 각 콘덴서의 정전용량을 $C_1, C_2$ 라 하고 합성정전용량을 $C'$ 라 하면 \n $C_1 = \\frac{\\epsilon_0 S}{d/2} = \\frac{2\\epsilon_0 S}{d} = 2 \\times 0.3 = 0.6 [\\mu F]$ \n $C_2 = \\frac{\\epsilon_0 \\epsilon_r S}{d/2} = \\frac{2\\epsilon_0 \\epsilon_r S}{d} = 2 \\times 5 \\times 0.3 = 3 [\\mu F]$ \n $C' = \\frac{1}{\\frac{1}{C_1} + \\frac{1}{C_2}} = \\frac{C_1 C_2}{C_1 + C_2} = \\frac{0.6 \\times 3}{0.6 + 3} = 0.5 [\\mu F]$",
+    "image_needed": true,
+    "source_page": "page_095",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 17,
+    "question": "진공 중의 점전하 $Q[\\text{C}]$으로부터 거리 $r[\\text{m}]$ 떨어진 점에 있어서 전계의 세기$[\\text{V/m}]$는?",
+    "choices": [
+      "$\\frac{Q}{2\\pi \\epsilon_0 r}$",
+      "$\\frac{Q}{2\\pi \\epsilon_0 r^2}$",
+      "$\\frac{Q}{4\\pi \\epsilon_0 r}$",
+      "$\\frac{Q}{4\\pi \\epsilon_0 r^2}$"
+    ],
+    "answer": 4,
+    "explanation": "점전하에 의한 전계의 세기와 전위\n| 구분 | 공식 |\n|---|---|\n| 전계의 세기 | $E = \\frac{Q}{4\\pi \\epsilon_0 r^2} [\\text{V/m}]$ |\n| 전위 | $V = \\frac{Q}{4\\pi \\epsilon_0 r} [\\text{V}]$ |",
+    "image_needed": false,
+    "source_page": "page_153",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 17,
+    "question": "정전계에서 도체에 정(+)의 전하를 주었을 때의 설명으로 틀린 것은?",
+    "choices": [
+      "도체 표면의 곡률 반지름이 작은 곳에 전하가 많이 분포한다.",
+      "도체 외측의 표면에만 전하가 분포한다.",
+      "도체 표면에서 수직으로 전기력선이 출입한다.",
+      "도체 내에 있는 공동면에도 전하가 골고루 분포한다."
+    ],
+    "answer": 4,
+    "explanation": "도체의 성질\n(1) 대전도체 내부에는 전하가 존재하지 않는다.\n또한 전하는 대전도체 외부 표면에만 분포된다.\n(2) 도체 표면에서 수직으로 전기력선과 만난다.\n또한 도체 표면에서 전계는 수직이다.\n(3) 도체 내부와 표면의 전위는 항상 같다.\n또한 도체 내부의 전계는 0이다.\n(4) 도체 표면의 곡률이 클수록 곡률 반지름은 작아지므로 전하밀도가 높아져서 전하가 많이 모이려는 성질이 생긴다. 또한 곡률이 작을수록 곡률 반지름이 커지므로 전하밀도가 작다.",
+    "image_needed": false,
+    "source_page": "page_241",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 18,
+    "question": "반지름이 a[m]인 접지된 구도체와 구도체의 중심에서 거리 d[m] 떨어진 곳에 점전하가 존재할 때, 점전하에 의한 접지된 구도체에서의 영상전하에 대한 설명으로 틀린 것은?",
+    "choices": [
+      "영상전하는 구도체 내부에 존재한다.",
+      "영상전하는 점전하와 구도체 중심을 이은 직선상에 존재한다.",
+      "영상전하의 전하량과 점전하의 전하량은 크기는 같고 부호는 반대이다.",
+      "영상전하의 위치는 구도체의 중심과 점전하 사이 거리($d(m)$)와 구도체의 반지름($a(m)$)에 의해 결정된다."
+    ],
+    "answer": 3,
+    "explanation": "전기영상법(접지구도체와 점전하) \n 접지구도체로부터 영상전하($Q'$)는 \n $Q' = -\\frac{a}{d} Q$ 이므로 \n $\\therefore$ 영상전하의 전하량은 점전하의 전하량의 $\\frac{a}{d}$ 배이고 부호는 반대이다.",
+    "image_needed": false,
+    "source_page": "page_095",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 18,
+    "question": "진공 중 $3[\\text{m}]$ 간격으로 두 개의 평행한 무한평판 도체에 각각 $+4[\\text{C/m}^2]$, $-4[\\text{C/m}^2]$의 전하를 주었을 때, 두 도체 간의 전위차는 약 몇 $[\\text{V}]$인가?",
+    "choices": [
+      "$1.5 \\times 10^{11}$",
+      "$1.5 \\times 10^{12}$",
+      "$1.36 \\times 10^{11}$",
+      "$1.36 \\times 10^{12}$"
+    ],
+    "answer": 4,
+    "explanation": "평행판 전극 사이의 전계와 전위\n면전하 밀도 $\\rho_s$, 간격 $d$, 전계의 세기 $E$, 전위 $V$라 하면\n$E = \\frac{\\rho_s}{\\epsilon_0} [\\text{V/m}], V = Ed [\\text{V}]$이므로\n$d = 3[\\text{m}], \\rho_s = 4[\\text{C/m}^2]$일 때\n$\\therefore V = Ed = \\frac{\\rho_s}{\\epsilon_0} d = \\frac{4}{8.855 \\times 10^{-12}} \\times 3$\n$= 1.36 \\times 10^{12} [\\text{V}]$",
+    "image_needed": false,
+    "source_page": "page_153",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 18,
+    "question": "비오-사바르의 법칙으로 구할 수 있는 것은?",
+    "choices": [
+      "전계의 세기",
+      "자계의 세기",
+      "전위",
+      "자위"
+    ],
+    "answer": 2,
+    "explanation": "비오-사바르 법칙\n비오-사바르 법칙은 자유공간에서 미소 전류에 의한 자계의 세기를 구하는 법칙으로 다음과 같다.\n$H = \\oint \\frac{Idl \\times a_r}{4\\pi r^2} = \\frac{Idl \\sin\\theta}{4\\pi r^2}$ [AT/m]\n(1) 전류(I)와 미소 선소의 길이($\\Delta l$)의 곱에 비례한다.\n(2) 거리(r)의 제곱에 반비례한다.\n(3) 미소 선소 $\\Delta l$와 거리 r이 이루는 각도 $\\theta$에 대해서 정현향($\\sin\\theta$)에 비례한다.",
+    "image_needed": false,
+    "source_page": "page_241",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 18,
+    "question": "N회 감긴 환상코일의 단면적이 S[m²]이고 평균 길이가 l[m]이다. 이 코일의 권수를 반으로 줄이고 인덕턴스를 일정하게 하려고 할 때, 다음 중 옳은 것은?",
+    "choices": [
+      "단면적을 2배로 한다.",
+      "길이를 1/4배로 한다.",
+      "전류의 세기를 4배로 한다.",
+      "비투자율을 2배로 한다."
+    ],
+    "answer": 2,
+    "explanation": "자기인덕턴스(L)\nL = NΦ/I = N²/R_m = μSN²/l [H]이므로 코일의 권수를 반으로 줄이고 인덕턴스를 일정하게 하려면 다음과 같은 조건을 만족하여야 한다.\n(1) 투자율을 4배 증가시킨다.\n(2) 단면적을 4배 증가시킨다.\n(3) 길이를 1/4배 감소시킨다.\n(4) 전류를 1/2배 감소시킨다.",
+    "image_needed": false,
+    "source_page": "page_321",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 19,
+    "question": "유전율이 다른 두 유전체의 경계면에 작용하는 힘은? (단, 유전체의 경계면과 전계 방향은 수직이다.)",
+    "choices": [
+      "유전율의 차이에 비례",
+      "유전율의 차이에 반비례",
+      "경계면의 전계 세기의 제곱에 비례",
+      "경계면의 면전하밀도의 제곱에 비례"
+    ],
+    "answer": 4,
+    "explanation": "유전체 내에서의 경계조건\n경계면에 작용하는 힘(=맥스웰의 변형력)은 전계가 경계면에 수직인 경우($D_1=D_2$ 이며 $\\epsilon_1 > \\epsilon_2$라 하면)\n$f = \\frac{1}{2}(E_2-E_1)D = \\frac{1}{2}(\\frac{1}{\\epsilon_2}-\\frac{1}{\\epsilon_1})D^2$[N/m$^2$]\n$D = \\rho_s$[C/m$^2$] 식에서\n$\\therefore$ 경계면에 작용하는 힘은 전속밀도(D)의 제곱에 비례하거나 또는 면전하밀도($\\rho_s$)의 제곱에 비례한다.",
+    "image_needed": false,
+    "source_page": "page_241",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 19,
+    "question": "내원통의 반지름 a, 외원통의 반지름 b인 동축원통 콘덴서의 내외 원통 사이에 공기를 넣었을 때 정전용량이 C₀이었다. 내외 반지름을 모두 2배로 하고 공기 대신 비유전율 3인 유전체를 넣었을 경우의 정전용량은?",
+    "choices": [
+      "C₀/9",
+      "C₀/3",
+      "3C₀",
+      "9C₀"
+    ],
+    "answer": 3,
+    "explanation": "유전체 내의 동심(=동축)원통도체의 정전용량(C)\n공기중의 동심(=동축)원통도체의 정전용량 C₀\nC₀ = 2πϵ₀ / ln(b/a) [F/m],\n유전체 내의 정전용량 C라 하면\nC = 2πϵ / ln(b/a) = 2πϵ₀ϵ_s / ln(b/a) [F/m]이므로\na를 2배, b를 2배, 비유전율 ϵ_s = 3인 유전체에서 정전용량 C'는\n∴ C' = (2πϵ₀ × 3) / ln(2b/2a) = (3 × 2πϵ₀) / ln(b/a) = 3C₀[F/m]",
+    "image_needed": false,
+    "source_page": "page_321",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "전기기사 과년도출제문제",
+    "number": 20,
+    "question": "자기 인덕턴스 L₁, L₂[mH]인 두 코일의 인덕턴스 합이 20[mH]인 경우 결합계수가 0.75가 되도록 두 코일을 결합 시켰을 때 상호 인덕턴스가 6[mH]였다. L₁, L₂는 각각 몇 [mH]인가?",
+    "choices": [
+      "10, 10",
+      "14, 6",
+      "16, 4",
+      "18, 2"
+    ],
+    "answer": 3,
+    "explanation": "결합회로\nL₁ + L₂ = 20[mH], M = k√(L₁L₂) 식에서\nL₁L₂ = M² / k² = (6 × 10⁻³)² / 0.75² = (36 × 10⁻⁶) / 0.5625 = 64 × 10⁻⁶[H]\n= 64[mH]이므로\nL₁ + L₂ = 20[mH] 이면서 L₁L₂ = 64[mH]이 조건을 만족하는 값은 16[mH]와 4[mH]이다.\n∴ L₁ = 16[mH], L₂ = 4[mH] 또는\nL₁ = 4[mH], L₂ = 16[mH]",
+    "image_needed": false,
+    "source_page": "page_321",
     "subject": "전기자기학"
   },
   {
@@ -304,6 +2192,54 @@
     "subject": "전기자기학"
   },
   {
+    "round": "N/A - Not visible in the provided image.",
+    "number": 14,
+    "question": "자유 공간 중에서 점 P(5, -2, 4)가 도체 면 상에 있으며 이 점에서 전계 $\\vec{E} = 6\\vec{a_x} - 2\\vec{a_y} + 3\\vec{a_z}$ [V/m]이다. 점 P에서의 면전하밀도 $\\rho_s$ [C/m²]는?",
+    "choices": [
+      "$7\\epsilon_0$",
+      "$3\\epsilon_0$",
+      "$6\\epsilon_0$",
+      "$4\\epsilon_0$"
+    ],
+    "answer": 1,
+    "explanation": "면전하에 의한 전계의 세기($\\vec{E}$)\n구도체 표면전하밀도가 $\\rho_s$ [C/m²]인 경우\n$\\vec{E} = \\frac{\\rho_s}{\\epsilon_0} \\vec{n}$ [V/m] 식에서\n$\\vec{E} = 6\\vec{a_x} - 2\\vec{a_y} + 3\\vec{a_z}$ [V/m]일 때\n$E = \\sqrt{6^2 + (-2)^2 + 3^2} = \\sqrt{36+4+9} = \\sqrt{49} = 7$ [V/m]이다.\n$\\therefore \\rho_s = \\epsilon_0 E = 7\\epsilon_0$ [C/m²]",
+    "image_needed": false,
+    "source_page": "page_375",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "N/A - Not visible in the provided image.",
+    "number": 15,
+    "question": "어떤 영역 내의 체적 전하밀도가 매초 $2 \\times 10^{-8}$ [C/m³] 비율로 감소할 때 반지름 $10^{-5}$ [m] 구면을 흘러나가는 전류는 몇 [$\\mu$A]인가?",
+    "choices": [
+      "0.938",
+      "1.938",
+      "0.738",
+      "0.838"
+    ],
+    "answer": 4,
+    "explanation": "전류\n$i = -\\frac{dQ}{dt}$ [A], $\\rho_v = \\frac{Q}{V} = \\frac{Q}{\\frac{4}{3}\\pi r^3}$ [C/m³] 식에서\n$r = 10^{-5}$ [m] 이므로\n$Q = \\frac{4}{3}\\pi r^3 \\rho_v = \\frac{4}{3}\\pi (10^{-5})^3 \\times 2 \\times 10^8$\n$= 0.838 \\times 10^{-6}$ [C]\n$\\therefore i = -\\frac{dQ}{dt} = \\frac{0.838 \\times 10^{-6}}{1}$ [A] $= 0.838$ [$\\mu$A]",
+    "image_needed": false,
+    "source_page": "page_375",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "N/A - Not visible in the provided image.",
+    "number": 16,
+    "question": "1변의 길이가 $l$ [m]인 정방형 도체 회로에 직류 $I$ [A]를 흘릴 때 회로의 중심점 자계의 세기 [A/m]는?",
+    "choices": [
+      "$\\frac{\\sqrt{3}I}{2\\pi l}$",
+      "$\\frac{\\sqrt{2}I}{2\\pi l}$",
+      "$\\frac{2I}{\\pi l}$",
+      "$\\frac{2\\sqrt{2}I}{\\pi l}$"
+    ],
+    "answer": 4,
+    "explanation": "정 $n$변형 도형 중심의 자계의 세기\n$H_0 = \\frac{nI}{2\\pi l_0} \\sin \\frac{\\pi}{n} \\tan \\frac{\\pi}{n}$ [AT/m] 식에서\n$n=4$일 때\n$\\therefore H_0 = \\frac{4I}{2\\pi l} \\sin \\frac{\\pi}{4} \\tan \\frac{\\pi}{4}$\n$= \\frac{4I}{\\pi l} \\times \\frac{\\sqrt{2}}{2} \\times 1$\n$= \\frac{2\\sqrt{2}I}{\\pi l}$ [AT/m]",
+    "image_needed": false,
+    "source_page": "page_375",
+    "subject": "전기자기학"
+  },
+  {
     "round": "N/A (Not visible in image)",
     "number": 6,
     "question": "비돌극형 동기발전기 한 상의 단자전압을 $V$, 유도기전력을 $E$, 동기리액턴스를 $X_s$, 부하각이 $\\delta$이고, 전기자저항을 무시할 때 한 상의 최대출력 [W]은?",
@@ -349,6 +2285,979 @@
     "explanation": "개폐기 및 차단기\n(1) 선로개폐기와 단로기는 아크를 소호할 수 있는 능력이 없으므로 부하전류를 개폐할 수 없을 뿐만 아니라 고장전류를 차단할 수도 없다.\n(2) 유입개폐기는 고장전류를 차단할 수 있는 능력은 없으나 통상의 부하전류를 개폐할 수 있다.\n(3) 차단기는 아크를 소호할 수 있어 부하전류를 개폐할 수 있고 또는 고장전류를 차단할 수 있다.",
     "image_needed": false,
     "source_page": "page_407",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "Not specified in image",
+    "number": 17,
+    "question": "평면 전파가 유전율 $\\epsilon$, 투자율 $\\mu$인 유전체 내를 전파한다. 전계의 세기가 $E = E_m \\sin \\omega (t - \\frac{x}{v})$ [V/m]라면 자계의 세기 H [AT/m]는?",
+    "choices": [
+      "$\\sqrt{\\frac{\\mu}{\\epsilon}} E_m \\sin \\omega (t - \\frac{x}{v})$",
+      "$\\sqrt{\\frac{\\epsilon}{\\mu}} E_m \\cos \\omega (t - \\frac{x}{v})$",
+      "$\\sqrt{\\frac{\\epsilon}{\\mu}} E_m \\sin \\omega (t - \\frac{x}{v})$",
+      "$\\sqrt{\\frac{\\mu}{\\epsilon}} E_m \\cos \\omega (t - \\frac{x}{v})$"
+    ],
+    "answer": 3,
+    "explanation": "고유임피던스($\\eta$) $E \\over H = \\sqrt{\\frac{\\mu}{\\epsilon}}$ [Ω] 식에서\n$\\therefore H = \\frac{E}{\\eta} = \\frac{E}{\\sqrt{\\frac{\\mu}{\\epsilon}}} = \\sqrt{\\frac{\\epsilon}{\\mu}} E = \\sqrt{\\frac{\\epsilon}{\\mu}} E_m \\sin \\omega (t - \\frac{x}{v})$ [AT/m]",
+    "image_needed": false,
+    "source_page": "page_295",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "Not specified in image",
+    "number": 18,
+    "question": "전속밀도가 $D = e^{-2y}(a_x \\sin 2x + a_y \\cos 2x)$ [C/m²]일 때 전속의 단위 체적당 발산량[C/m³]은?",
+    "choices": [
+      "$2e^{-2y}(\\sin 2x + \\cos 2x)$",
+      "$4e^{-2y}\\cos 2x$",
+      "0",
+      "$-4e^{-2y}\\cos 2x$"
+    ],
+    "answer": 3,
+    "explanation": "가우스의 발산정리\n$\\nabla \\cdot D = \\frac{\\partial D_x}{\\partial x} + \\frac{\\partial D_y}{\\partial y}$\n$= \\frac{\\partial}{\\partial x} (e^{-2y} \\sin 2x) + \\frac{\\partial}{\\partial y} (e^{-2y} \\cos 2x)$\n$= 2e^{-2y} \\cos 2x - 2e^{-2y} \\cos 2x = 0$\n$\\therefore \\rho_v = \\nabla \\cdot D = 0$ [C/m³]",
+    "image_needed": false,
+    "source_page": "page_295",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "Not specified in image",
+    "number": 19,
+    "question": "철도 궤도간 거리가 1.5[m]이며 궤도는 서로 절연되어 있다. 열차가 매시 60[km]의 속도로 달리면서 자축이 지구자계의 수직분력 $B = 0.15 \\times 10^{-4}$ [Wb/m²]을 절단할 때 두 궤도 사이에 발생하는 기전력은 몇 [V]인가?",
+    "choices": [
+      "1.75 $\\times 10^{-4}$",
+      "2.75 $\\times 10^{-4}$",
+      "3.75 $\\times 10^{-4}$",
+      "4.75 $\\times 10^{-4}$"
+    ],
+    "answer": 3,
+    "explanation": "유기기전력(e) : 플레밍의 오른손법칙\n$e = vBl\\sin \\theta$ [V] 식에서\n$l = 1.5$ [m], $v = 60$ [km/h], 수직이므로 $\\theta = 90°$,\n$B = 0.15 \\times 10^{-4}$ [Wb/m²]일 때\n$\\therefore e = vBl\\sin \\theta$\n$= 60 \\times \\frac{10^3}{3600} \\times 0.15 \\times 10^{-4} \\times 1.5 \\times \\sin 90°$\n$= 3.75 \\times 10^{-4}$ [V]",
+    "image_needed": false,
+    "source_page": "page_295",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "Unknown",
+    "number": 9,
+    "question": "높은 주파수의 전자파가 전파될 때 일기가 좋은 날보다 비오는 날 전자파의 감쇠가 심한 원인은?",
+    "choices": [
+      "도전율 관계임",
+      "유전율 관계임",
+      "투자율 관계임",
+      "분극률 관계임"
+    ],
+    "answer": 1,
+    "explanation": "전자파의 감쇠\n$\\tan\\delta = \\frac{\\epsilon''}{\\epsilon'} = \\frac{\\sigma}{\\omega\\epsilon}$ 식에서 $\\sigma \\gg \\omega\\epsilon$ 일 때 그 매질을 양도체라 하고 양도체에서 감쇠정수($\\alpha$)와 위상정수($\\beta$)는 같아진다.\n$\\alpha = \\beta = \\sqrt{\\pi f \\mu \\sigma}$ 이므로 감쇠정수와 위상정수는 주파수, 투자율, 도전율에 비례한다.\n$\\therefore$ 비오는 날은 맑은 날씨에 비해서 주위의 도전율이 증가하여 감쇠정수가 매우 커지므로 전자파의 감쇠가 심해진다.",
+    "image_needed": false,
+    "source_page": "page_401",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "Unknown",
+    "number": 10,
+    "question": "선전하밀도 $\\rho$[C/m]를 갖는 코일이 반원형의 형태를 취할 때, 반원의 중심에서 전계의 세기를 구하면 몇 [V/m]인가? (단, 반지름은 $r$[m]이다.) [그림]",
+    "choices": [
+      "$\\frac{\\rho}{8\\pi\\epsilon_0 r^2}$",
+      "$\\frac{\\rho}{4\\pi\\epsilon_0 r}$",
+      "$\\frac{\\rho}{4\\pi\\epsilon_0 r^2}$",
+      "$\\frac{\\rho}{2\\pi\\epsilon_0 r}$"
+    ],
+    "answer": 4,
+    "explanation": "무한장 직선 전하에 의한 전계의 세기\n오른쪽 그림처럼 반원 중심을 원점으로 한 직각좌표로 해석하면 선전하에 의한 반 $(-a, 0)$, $(a, 0)$ 원형 중심의 전계의 세기는 $E_x = E_a - E_b = -E_x$, $E_y = -E_y$\n원형 중심의 전계의 세기는 백터량으로 주어진다.\n$E_x = i \\frac{\\rho}{2\\pi\\epsilon_0 r}$ [V/m], $E_y = j \\frac{\\rho}{2\\pi\\epsilon_0 r}$ [V/m] 이므로\n$E = E_x - E_y = -j \\frac{\\rho}{2\\pi\\epsilon_0 r}$ [V/m]\n$|E| = \\frac{\\rho}{2\\pi\\epsilon_0 r}$ [V/m]",
+    "image_needed": true,
+    "source_page": "page_401",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "Unknown",
+    "number": 11,
+    "question": "동심구형 콘덴서의 내외 반지름을 각각 5배로 증가시키면 정전 용량은 몇 배로 증가하는가?",
+    "choices": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "answer": 1,
+    "explanation": "동심구도체의 정전용량($C'$)\n$C = \\frac{Q}{V} = \\frac{4\\pi\\epsilon_0}{\\frac{1}{b} - \\frac{1}{a}} = \\frac{4\\pi\\epsilon_0 ab}{b-a}$ [F] 이므로\n$a, b$를 각각 5배씩 증가시키면\n$C' = \\frac{4\\pi\\epsilon_0 a'b'}{b'-a'} = \\frac{4\\pi\\epsilon_0 (5a)(5b)}{5b-5a} = \\frac{4\\pi\\epsilon_0 25ab}{5(b-a)}$\n$= 5 \\cdot \\frac{4\\pi\\epsilon_0 ab}{b-a} = 5C$[F]\n$\\therefore$ 정전용량은 5배 증가한다.",
+    "image_needed": false,
+    "source_page": "page_401",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 5,
+    "question": "평행판 커패시터에 어떤 유전체를 넣었을 때 전속밀도가 $4.8 \\times 10^{-7}$ [C/m$^2$]이고 단위 체적당 정전에너지가 $5.3 \\times 10^{-3}$ [J/m$^3$]이었다. 이 유전체의 유전율은 약 몇 [F/m] 인가?",
+    "choices": [
+      "$1.15 \\times 10^{-11}$",
+      "$2.17 \\times 10^{-11}$",
+      "$3.19 \\times 10^{-11}$",
+      "$4.21 \\times 10^{-11}$"
+    ],
+    "answer": 2,
+    "explanation": "유전체 내의 정전에너지 $w$ [J/m$^3$]\n$w = \\frac{\\rho_s^2}{2\\epsilon} = \\frac{D^2}{2\\epsilon} = \\frac{1}{2}\\epsilon E^2 = ED[\\text{J/m}^3]$ 식에서\n$D = 4.8 \\times 10^{-7} [\\text{C/m}^2]$, $w = 5.3 \\times 10^{-3} [\\text{J/m}^3]$일 때\n$\\therefore \\epsilon = \\frac{D^2}{2w} = \\frac{(4.8 \\times 10^{-7})^2}{2 \\times 5.3 \\times 10^{-3}} = 2.17 \\times 10^{-11} [\\text{F/m}]$",
+    "image_needed": false,
+    "source_page": "page_063",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 5,
+    "question": "자속밀도 10[Wb/m²] 자계 중에서 10[cm] 도체를 자계와 30°의 각도로 30[m/s]로 움직일 때, 도체에 유기되는 기전력은 몇 [V]인가?",
+    "choices": [
+      "15",
+      "15√3",
+      "1,500",
+      "1,500√3"
+    ],
+    "answer": 1,
+    "explanation": "유기기전력(e) : 플레밍의 오른손법칙\nB = 10 [Wb/m²], l = 10 [cm]\nθ = 30°, v = 30 [m/s]일 때\n∴ e = vBlsinθ\n= 30 × 10 × 10 × 10⁻² × sin 30° = 15 [V]",
+    "image_needed": false,
+    "source_page": "page_179",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 5,
+    "question": "위상정수 $\\frac{\\pi}{8}$ [rad/m] 선로의 1 [MHz]에 대한 전파속도는 몇 [m/s]인가?",
+    "choices": [
+      "1.6 × 10⁷",
+      "3.2 × 10⁷",
+      "5.0 × 10⁷",
+      "8.0 × 10⁷"
+    ],
+    "answer": 1,
+    "explanation": "전파속도($v$)\n$v = \\frac{\\omega}{\\beta} = \\frac{2\\pi f}{\\beta}$ [m/s] 식에서\n$\\beta = \\frac{\\pi}{8}$ [rad/m], $f = 1$ [MHz] 이므로\n$\\therefore v = \\frac{2\\pi f}{\\beta} = \\frac{2\\pi \\times 10^6}{\\pi/8} = 1.6 \\times 10^7$ [m/s]",
+    "image_needed": false,
+    "source_page": "page_253",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 5,
+    "question": "점 전하에 의한 전위 함수가 V = 10 / (x^2 + y^2) [V]일 때 P점 (2, 1)에서의 전계의 세기 E는?",
+    "choices": [
+      "5/4 (2i + j)",
+      "4/5 (2i + j)",
+      "4/5 (2i - j)",
+      "2i + j"
+    ],
+    "answer": 2,
+    "explanation": "전계의 세기 \nE = -∇V = -gradV = - (∂V/∂x i + ∂V/∂y j) \n= - (∂/∂x (10/(x^2 + y^2)) i + ∂/∂y (10/(x^2 + y^2)) j) \n= - (-10 * 2x / (x^2 + y^2)^2 i - 10 * 2y / (x^2 + y^2)^2 j) [V/m] 식에 \nx=2, y=1을 대입하면 \nE = - (-10 * 2 * 2 / (2^2 + 1^2)^2 i - 10 * 2 * 1 / (2^2 + 1^2)^2 j) \n= 8/5 i + 4/5 j [V/m]이다. \n∴ E = 4/5 (2i + j) [V/m]",
+    "image_needed": false,
+    "source_page": "page_373",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 6,
+    "question": "선로의 단위 길이 당 인덕턴스, 저항, 정전용량, 누설 컨덕턴스를 각각 L, R, C, G라 하면 전파정수는?",
+    "choices": [
+      "$\\sqrt{\\frac{R+j\\omega L}{G+j\\omega C}}$",
+      "$\\sqrt{(R+j\\omega L)(G+j\\omega C)}$",
+      "$\\sqrt{\\frac{R+j\\omega C}{G+j\\omega L}}$",
+      "$\\sqrt{\\frac{G+j\\omega C}{R+j\\omega L}}$"
+    ],
+    "answer": 2,
+    "explanation": "분포정수회로\n(1) 특성임피던스(Z₀)\nZ₀ = $\\sqrt{\\frac{Z}{Y}}$ = $\\sqrt{\\frac{R+j\\omega L}{G+j\\omega C}}$ = $\\sqrt{\\frac{L}{C}}$ [Ω]\n(2) 전파정수(γ)\nγ = $\\sqrt{ZY}$ = $\\sqrt{(R+j\\omega L)(G+j\\omega C)}$ = α+jβ",
+    "image_needed": false,
+    "source_page": "page_195",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 6,
+    "question": "파동임피던스가 $300[\\Omega]$인 가공송전선 $1[\\text{km}]$당의 인덕턴스는 약 몇 $[\\text{mH/km}]$인가?",
+    "choices": [
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "answer": 4,
+    "explanation": "특성임피던스(=파동임피던스: $Z_0$)와 전파속도($v$)\n$Z_0 = \\sqrt{\\frac{L}{C}} [\\Omega], v = \\frac{1}{\\sqrt{LC}} [\\text{m/s}]$이므로\n$L = \\frac{Z_0}{v} [\\text{H/m}], C = \\frac{1}{Z_0 v} [\\text{F/m}]$ 식에서\n$Z_0 = 300[\\Omega], v=3 \\times 10^8 [\\text{m/s}]$일 때\n$\\therefore L = \\frac{Z_0}{v} = \\frac{300}{3 \\times 10^8} = 1 \\times 10^{-6} [\\text{H/m}]$\n$= 1 [\\text{mH/km}]$",
+    "image_needed": false,
+    "source_page": "page_215",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 2회 전기기사",
+    "number": 6,
+    "question": "파동임피던스 $Z_1=300[\\Omega]$인 선로의 중단에 파동임피던스 $Z_2=1,500[\\Omega]$의 변압기가 접속되어 있다. 지금 선로에서 파고 $e_1=600[\\text{kV}]$의 전압이 진입할 경우 접속점에서의 전압 반사파 파고는 몇 [kV]인가?",
+    "choices": [
+      "200[kV]",
+      "300[kV]",
+      "400[kV]",
+      "500[kV]"
+    ],
+    "answer": 3,
+    "explanation": "진행파의 반사와 투과\n파동임피던스 $Z_1$, $Z_2$, 진입파 전압, 전류 $e_i$, $i_i$라 하면\n반사파 전압, 전류 $e_r$, $i_r$과 투과파전압, 전류 $e_t$, $i_t$는\n$e_r = \\frac{Z_2 - Z_1}{Z_2 + Z_1} e_i$, $i_r = - \\frac{Z_2 - Z_1}{Z_2 + Z_1} i_i$,\n$e_t = \\frac{2Z_2}{Z_2 + Z_1} e_i$, $i_t = \\frac{2Z_1}{Z_2 + Z_1} i_i$이다.\n$Z_1=300[\\Omega]$, $Z_2=1,500[\\Omega]$, $e_i=600[\\text{kV}]$일 때\n$\\therefore e_r = \\frac{Z_2 - Z_1}{Z_2 + Z_1} e_i = \\frac{1,500 - 300}{1,500 + 300} \\times 600$\n$= 400[\\text{kV}]$",
+    "image_needed": false,
+    "source_page": "page_297",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 3회 전기기사",
+    "number": 6,
+    "question": "파동임피던스가 300[Ω]인 가공송전선 1[km]당의 인덕턴스는 몇 [mH/km]인가? (단, 저항과 누설 콘덕턴스는 무시한다.)",
+    "choices": [
+      "0.5",
+      "1",
+      "1.5",
+      "2"
+    ],
+    "answer": 2,
+    "explanation": "파동임피던스와 작용인덕턴스\n파동임피던스 $Z_0 = 138 \\log_{10} \\frac{D}{r} [\\Omega]$\n작용인덕턴스 $L = 0.4605 \\log_{10} \\frac{D}{r} [\\mathrm{mH}/\\mathrm{km}]$ 식에서\n$Z_0 = 300 [\\Omega]$ 이므로\n$\\log_{10} \\frac{D}{r} = \\frac{Z_0}{138} = \\frac{300}{138}$ 일 때\n$\\therefore L = 0.4605 \\log_{10} \\frac{D}{r} = 0.4605 \\times \\frac{300}{138} = 1 [\\mathrm{mH}/\\mathrm{km}]$",
+    "image_needed": false,
+    "source_page": "page_323",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 6,
+    "question": "유전체 내의 전자분극이 발생할 때 그 이유에 대한 설명 중 맞는 것은?",
+    "choices": [
+      "화합물에서 (+), (-) 이온 간의 상대적인 변위",
+      "단결정에서 (+), (-) 이온 간의 상대적인 변위",
+      "단결정 매질에서 전자운과 핵의 상대적인 변위",
+      "영구 전기쌍극자의 전계 방향 배열에 의한다."
+    ],
+    "answer": 3,
+    "explanation": "분극의 종류 \n(1) 전자분극 : 다이아몬드와 같은 단결정 물체에 전계(=(전장)를 가할 때 전자운과 핵의 상대적인 변위에 의해 쌍극자를 이루는 분극으로 유전체 내의 구속전자 또는 속박전자의 변위로 생긴다. \n(2) 이온분극 : 화합물에서 + 이온과 - 이온 간의 상대적인 변위에 의해서 생기는 분극이다. \n(3) 배향분극(=쌍극자분극) : 영구 전기쌍극자의 전계 방향의 배열에 의해서 생기는 분극이다.",
+    "image_needed": false,
+    "source_page": "page_373",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 7,
+    "question": "그림과 같이 극판의 면적이 $S$[m$^2$]인 평행판 커패시터에 유전율이 각각 $\\epsilon_1=4$, $\\epsilon_2=2$인 유전체를 채우고 $a$, $b$ 양단에 $V$[V]의 전압을 인가했을 때 $\\epsilon_1$, $\\epsilon_2$인 유전체 내부의 전계의 세기 $E_1$과 $E_2$의 관계식은? (단, $\\sigma$ [C/m$^2$]는 면전하밀도이다.) [그림]",
+    "choices": [
+      "$E_1 = 2E_2$",
+      "$E_1 = 4E_2$",
+      "$2E_1 = E_2$",
+      "$E_1 = E_2$"
+    ],
+    "answer": 3,
+    "explanation": "유전체 내에서의 경계조건\n극판 사이에 전압을 걸어주면 전화의 이동은 경계면에 수직 방향으로 진행하게 되어 $\\theta_1=0$이 되며 $\\theta_2=0$이 되어 전속밀도가 연속적이 된다.\n$D_1 \\cos \\theta_1 = D_2 \\cos \\theta_2$ 또는\n$\\epsilon_1 E_1 \\cos \\theta_1 = \\epsilon_2 E_2 \\cos \\theta_2$ 이므로\n$\\theta_1=0, \\theta_2=0$이면 $\\epsilon_1 E_1 = \\epsilon_2 E_2$가 된다.\n$4E_1 = 2E_2$ 이므로\n$\\therefore 2E_1 = E_2$",
+    "image_needed": true,
+    "source_page": "page_063",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 7,
+    "question": "반지름이 r[m]인 반원형 전류 I[A]에 의한 반원의 중심(O)에서 자계의 세기[AT/m]는? [그림]",
+    "choices": [
+      "2I / r",
+      "I / r",
+      "I / (2r)",
+      "I / (4r)"
+    ],
+    "answer": 4,
+    "explanation": "반원형 코일 중심의 자계의 세기(H)\n원형코일 중심의 자계의 세기를 H₀, 반원형 코일 중심\n의 자계의 세기를 Hₐ라 하면 H₀ = I / (2r) [AT/m]이며\n∴ Hₐ = (1/2)H₀ = (1/2) × (I / (2r)) = I / (4r) [AT/m]",
+    "image_needed": true,
+    "source_page": "page_179",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 7,
+    "question": "중심은 원점에 있고 반지름 a[m]인 원형 선도체가 z=0인 평면에 있다. 도체에 선전하밀도 ρ_L [C/m]가 분포되어 있을 때 z=b[m]인 점에서 전계 E[V/m]는? (단, a_r, a_z는 원통좌표계에서 r 및 z 방향의 단위벡터이다.)",
+    "choices": [
+      "abρ_L / (2πε_0 (a^2 + b^2)^(1/2)) a_r",
+      "abρ_L / (4πε_0 (a^2 + b^2)^(3/2)) a_z",
+      "abρ_L / (2πε_0 (a^2 + b^2)^(3/2)) a_z",
+      "abρ_L / (4πε_0 (a^2 + b^2)^(1/2)) a_z"
+    ],
+    "answer": 3,
+    "explanation": "원형코일(원형도선)에 의한 전계의 세기(E) \n원형코일 중심축(z축)상 b [m]만큼 떨어진 점의 전계의 세기(E)는 \nE = aλ / (2ε_0 (a^2 + z^2)^(3/2)) [V/m] 식에서 \nz=b, λ=ρ_L 전계의 방향은 z방향을 가리키므로 \n∴ E = abρ_L / (2ε_0 (a^2 + b^2)^(3/2)) a_z [V/m]",
+    "image_needed": true,
+    "source_page": "page_373",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 8,
+    "question": "간격이 $d$[m]이고 면적이 $S$[m$^2$]인 평행판 커패시터의 전극 사이에 유전율이 $\\epsilon$인 유전체를 넣고 전극 간에 $V$[V]의 전압을 가했을 때, 이 커패시터의 전극판을 떼어내는데 필요한 힘의 크기[N]는?",
+    "choices": [
+      "$\\frac{1}{2}\\epsilon \\frac{V^2}{d^2}S$",
+      "$\\frac{1}{2}\\epsilon \\frac{d V^2}{d^2 S}$",
+      "$\\frac{1}{2}\\epsilon \\frac{V}{d}S$",
+      "$\\frac{1}{2}\\epsilon \\frac{V^2}{d^2}S$"
+    ],
+    "answer": 4,
+    "explanation": "유전체 내의 정전력(F)\n단위 면적당 정전력 $f$는 단위체적당 정전에너지 $w$와 같으며 $f = \\frac{\\rho_s^2}{2\\epsilon} = \\frac{D^2}{2\\epsilon} = \\frac{1}{2}\\epsilon E^2 = ED [\\text{N/m}^2]$이다.\n$\\therefore F = f \\times S = \\frac{1}{2}\\epsilon E^2 S = \\frac{1}{2}\\epsilon (\\frac{V}{d})^2 S$\n$= \\frac{1}{2}\\epsilon \\frac{V^2}{d^2} S [\\text{N}]$",
+    "image_needed": false,
+    "source_page": "page_063",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 8,
+    "question": "일반적인 전지계에서 성립되는 맥스웰의 기본 방정식이 아닌 것은? (단, i_c는 전류밀도, ρ_v는 공간전하밀도이다.)",
+    "choices": [
+      "∇ × H = i_c + ∂D/∂t",
+      "∇ × E = -∂B/∂t",
+      "∇ ⋅ D = ρ_v",
+      "i_c = ∇ ⋅ E"
+    ],
+    "answer": 4,
+    "explanation": "맥스웰 방정식\n(1) 패러데이-노이만의 전자유도법칙에서 유도된 전자방정식\nrot E = ∇ × E = -∂B/∂t = -μ(∂H/∂t)\n(2) 암페어의 주회적분법칙에서 유도된 전자방정식\nrot H = ∇ × H = i_c + i_d = i_c + ∂D/∂t = i_c + ε(∂E/∂t)\n(3) 가우스의 발산정리에 의해서 유도된 전자방정식\ndiv D = ∇ ⋅ D = ρ_v, div B = ∇ ⋅ B = 0",
+    "image_needed": false,
+    "source_page": "page_179",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 2회 전기기사",
+    "number": 8,
+    "question": "권수가 2,000회이고 저항이 12[$\\Omega$]인 솔레노이드에 전류 10[A]를 흘릴 때, 자속이 $6 \\times 10^{-2}[Wb]$가 발생하였다. 이 회로의 시정수[sec]는?",
+    "choices": [
+      "1",
+      "0.1",
+      "0.01",
+      "0.001"
+    ],
+    "answer": 1,
+    "explanation": "R-L 과도현상의 시정수\n$\\tau = \\frac{L}{R} = \\frac{N \\phi}{R I} [sec]$ 식에서\n$N = 2,000, R = 12 [\\Omega], I = 10 [A],$\n$\\phi = 6 \\times 10^{-2} [Wb]$일 때\n$\\therefore \\tau = \\frac{L}{R} = \\frac{N \\phi}{R I} = \\frac{2,000 \\times 6 \\times 10^{-2}}{12 \\times 10} = 1 [sec]$",
+    "source_page": "page_307",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 1회 기출문제",
+    "number": 8,
+    "question": "자기회로와 전기회로의 대응으로 틀린 것은?",
+    "choices": [
+      "자속 ↔ 전류",
+      "기자력 ↔ 기전력",
+      "투자율 ↔ 유전율",
+      "자계의 세기 ↔ 전계의 세기"
+    ],
+    "answer": 3,
+    "explanation": "전기회로와 자기회로 대응관계\n전기회로           자기회로\n기전력 V[V]        기자력 F[AT]\n전류 I[A]          자속 $\\phi$[Wb]\n전기저항 R[$\\Omega$]   자기저항 $R_m$[AT/Wb]\n도전율 $\\sigma$[S/m]  투자율 $\\mu$[H/m]\n전류밀도 i[A/m$^2$]  자속밀도 B[Wb/m$^2$]\n전계의 세기 E[V/m]   자계의 세기 H[AT/m]\n콘덕턴스 G[S]        퍼미언스 $P_m$[Wb/AT]\n여기서, 퍼미언스는 자기저항의 역수이다.",
+    "image_needed": false,
+    "source_page": "page_345",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 2회 전기기사",
+    "number": 8,
+    "question": "내 도체의 반지름 a [m]이고, 외 도체의 내 반지름이 b [m], 외 반지름이 c [m]인 동축 케이블의 단위 길이 당 자기 인덕턴스는 몇 [H/m]인가?",
+    "choices": [
+      "μ_0 / (2π) ln(b/a)",
+      "μ_0 / π ln(b/a)",
+      "2π / μ_0 ln(b/a)",
+      "π / μ_0 ln(b/a)"
+    ],
+    "answer": 1,
+    "explanation": "동심원통도체에 의한 자기 인덕턴스 \n∴ L = (μ_0 l) / (2π) ln(b/a) [H] = μ_0 / (2π) ln(b/a) [H/m]",
+    "image_needed": false,
+    "source_page": "page_373",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 9,
+    "question": "권수가 2,000회이고 저항이 12[Ω]인 솔레노이드에 전류 10[A]를 흘릴 때, 자속이 $6 \\times 10^{-2}$[Wb]가 발생하였다. 이 회로의 시정수[sec]는?",
+    "choices": [
+      "1",
+      "0.1",
+      "0.01",
+      "0.001"
+    ],
+    "answer": 1,
+    "explanation": "R-L 과도현상의 시정수(τ)\nτ = $\\frac{L}{R}$ [sec] 식에서\nN = 2,000, R = 12 [Ω], I = 10 [A],\nφ = $6 \\times 10^{-2}$ [Wb]일 때\n∴ τ = $\\frac{N\\phi}{RI}$ = $\\frac{2,000 \\times 6 \\times 10^{-2}}{12 \\times 10}$ = 1 [sec]",
+    "image_needed": false,
+    "source_page": "page_195",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 9,
+    "question": "내도체의 반지름이 $\\frac{1}{4\\pi\\epsilon}$ [cm], 외도체의 반지름이 $\\frac{1}{\\pi\\epsilon}$ [cm]인 동심구 사이를 유전율이 $\\epsilon$ [F/m]인 매질로 채웠을 때 두 도체 사이의 정전용량은?",
+    "choices": [
+      "$\\frac{1}{2}$ [F]",
+      "$10^{-2}$",
+      "$\\frac{3}{4}$ [F]",
+      "$\\frac{4}{3} \\times 10^{-2}$ [F]"
+    ],
+    "answer": 4,
+    "explanation": "동심구도체의 정전용량(C)\n동심구도체의 내구의 반지름이 a, 외구의 반지름이 b인 경우\n$C = \\frac{Q}{V} = \\frac{4\\pi\\epsilon}{\\frac{1}{a} - \\frac{1}{b}} = \\frac{4\\pi\\epsilon ab}{b-a}$ [F] 식에서\n$a = \\frac{1}{4\\pi\\epsilon}$ [cm], $b = \\frac{1}{\\pi\\epsilon}$ [cm]일 때\n$\\therefore C = \\frac{4\\pi\\epsilon}{\\frac{1}{a} - \\frac{1}{b}} = \\frac{4\\pi\\epsilon}{4\\pi\\epsilon \\times 10^2 - \\pi\\epsilon \\times 10^2} = \\frac{4\\pi\\epsilon}{4 \\times 10^2 - 1 \\times 10^2} = \\frac{4\\pi\\epsilon}{3 \\times 10^2} = \\frac{4}{3} \\times 10^{-2}$ [F]",
+    "image_needed": false,
+    "source_page": "page_211",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 9,
+    "question": "전하 q [C]이 공기 중의 자계 T [AT/m]에 수직 방향으로 v [m/s] 속도로 돌입하였을 때 받는 힘은 몇 [N]인가?",
+    "choices": [
+      "① qH / (mu_0 v)",
+      "② (1 / mu_0) qvH",
+      "③ qvH",
+      "④ mu_0 qvH"
+    ],
+    "answer": 4,
+    "explanation": "로렌츠의 힘(F)\nF = q(E + v \\times B) [N] 식에서 전계 E가 주어지지 않는 경우이므로 F = q(v \\times B) [N]이다.\nB = mu_0 H [Wb/m^2], 수직 방향이므로 \\theta = 90°일 때\n∴ F = q(v \\times B) = qvB sin\\theta = qv mu_0 H sin90° = mu_0 qvH [N]",
+    "image_needed": false,
+    "source_page": "page_239",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 2회 기출문제",
+    "number": 9,
+    "question": "강자성체의 자속밀도 B의 크기와 자화의 세기 J의 크기 사이에는?",
+    "choices": [
+      "J는 B보다 약간 크다.",
+      "J는 B보다 대단히 크다.",
+      "J는 B보다 약간 작다.",
+      "J는 B보다 대단히 작다."
+    ],
+    "answer": 3,
+    "explanation": "자화의 세기(J)\n$J=B-\\mu_0H=\\mu_0(\\mu_r-1)H=\\chi_mH \\;[\\text{Wb/m}^2]$식에서\n$\\mu_0=4\\pi\\times10^{-7}=12.57\\times10^{-7} \\;[\\text{H/m}]$ 이므로\n$\\therefore J$는 $B$보다 약간 작음을 알 수 있다.",
+    "image_needed": false,
+    "source_page": "page_293",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 3회 전기기사",
+    "number": 9,
+    "question": "미분방정식 형태로 나타낸 맥스웰의 전자기초 방정식에 해당되는 것은?",
+    "choices": [
+      "$rot\\,E = -\\frac{\\partial B}{\\partial t},\\, rot\\,H = \\frac{\\partial D}{\\partial t},\\, div\\,D = 0,\\, div\\,B = 0$",
+      "$rot\\,E = -\\frac{\\partial B}{\\partial t},\\, rot\\,H = i+\\frac{\\partial D}{\\partial t},\\, div\\,D = \\rho,\\, div\\,B = H$",
+      "$rot\\,E = -\\frac{\\partial B}{\\partial t},\\, rot\\,H = i+\\frac{\\partial D}{\\partial t},\\, div\\,D = \\rho,\\, div\\,B = 0$",
+      "$rot\\,E = -\\frac{\\partial B}{\\partial t},\\, rot\\,H = i,\\, div\\,D = 0,\\, div\\,B = 0$"
+    ],
+    "answer": 3,
+    "explanation": "맥스웰 방정식\n(1) 페러데이-노이만의 전자유도법칙에서 유도된 전자방정식\n$rot\\,E = \\nabla \\times E = -\\frac{\\partial B}{\\partial t} = -\\mu \\frac{\\partial H}{\\t}$\n(2) 암페어의 주회적분법칙에서 유도된 전자방정식\n$rot\\,H = \\nabla \\times H = i+i_d = i+\\frac{\\partial D}{\\partial t} = i+\\epsilon \\frac{\\partial E}{\\partial t}$\n(3) 가우스의 발산정리에 의해서 유도된 전자방정식\n$div\\,D = \\rho_v$, $div\\,B = 0$",
+    "image_needed": false,
+    "source_page": "page_319",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 1회 기출문제",
+    "number": 9,
+    "question": "액체 유전체를 포함한 콘덴서 용량이 C[F]인 것에 V[V] 전압을 가했을 경우에 흐르는 누설 전류는 몇 [A]인가? (단, 유전체의 비유전율은 ε$_s$ 이며 고유저항은 ρ[$\\Omega$ $⋅$ m]이라 한다.)",
+    "choices": [
+      "$\\frac{CV}{\\rho\\epsilon_s}$",
+      "$\\frac{CV^2}{\\rho\\epsilon_s}$",
+      "$\\frac{\\rho\\epsilon_s V}{C}$",
+      "$\\frac{\\rho\\epsilon_s}{C}$"
+    ],
+    "answer": 1,
+    "explanation": "전기저항(R)과 정전용량(C)의 관계\nRC = $\\rho\\epsilon$ = $\\frac{\\epsilon}{G}$ = $\\rho\\frac{C}{k}$ 이므로\n누설전류 $I_L = \\frac{V}{R} = \\frac{V}{\\rho\\epsilon_s}$ [A]",
+    "image_needed": false,
+    "source_page": "page_345",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 10,
+    "question": "무한히 넓은 도체 평면판에 면밀도 $\\sigma$ [C/m²]의 전화가 분포되어 있는 경우 전력선은 면(面)에 수직으로 나와 평행하게 발산한다. 이 평면의 전계의 세기는 몇 [V/m]인가?",
+    "choices": [
+      "$\\frac{\\sigma}{\\epsilon_0}$",
+      "$\\frac{\\sigma}{2\\epsilon_0}$",
+      "$\\frac{\\sigma}{2\\pi\\epsilon_0}$",
+      "$\\frac{\\sigma}{4\\pi\\epsilon_0}$"
+    ],
+    "answer": 2,
+    "explanation": "면전하에 의한 전계의 세기(E)\n(1) 구도체 표면전하밀도가 $\\sigma$ [C/m²]인 경우\n$E = \\frac{\\sigma}{\\epsilon_0}$ [V/m]\n(2) 평면(평판)도체 표면전하밀도가 $\\sigma$ [C/m²]인 경우\n$E = \\frac{\\sigma}{2\\epsilon_0}$ [V/m]",
+    "image_needed": false,
+    "source_page": "page_211",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 10,
+    "question": "0.2 [\\mu F] 평행판 공기 콘덴서가 있다. 전극 간에 그 간격의 절반 두께의 유리판을 넣었다면 콘덴서의 용량은 약 몇 [\\mu F]인가? (단, 유리의 비유전율은 10이다.)",
+    "choices": [
+      "① 0.26",
+      "② 0.36",
+      "③ 0.46",
+      "④ 0.56"
+    ],
+    "answer": 2,
+    "explanation": "유전체 내의 평행판 전극의 직렬연결\n공기콘덴서의 정전용량을 C라 하면\nC = (epsilon_0 S) / d = 0.2 [\\mu F]이다.\n콘덴서 판 간에 1/2인 두께를 유전체로 채운 경우 평행판 전극의 경계면과 단자가 수직을 이루고 있으므로 콘덴서는 직렬로 접속된다. 각 콘덴서의 정전용량을 C_1, C_2라 하고 합성정전용량을 C'라 하면\nC_1 = (epsilon_0 S) / (d/2) = (2 epsilon_0 S) / d = 2C = 2 \\times 0.2 = 0.4 [\\mu F]\nC_2 = (epsilon_0 epsilon_S S) / (d/2) = (2 epsilon_0 epsilon_S S) / d = 2 epsilon_S C = 2 \\times 10 \\times 0.2 = 4 [\\mu F]\n∴ C' = 1 / ( (1/C_1) + (1/C_2) ) = (C_1 C_2) / (C_1 + C_2) = (0.4 \\times 4) / (0.4 + 4) = 1.6 / 4.4 \\approx 0.36 [\\mu F]",
+    "image_needed": false,
+    "source_page": "page_239",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 2회 기출문제",
+    "number": 10,
+    "question": "코일로 감겨진 자기회로에서 철심의 투자율을 $\\mu$라 하고, 회로의 길이를 $l$이라 할 때, 그 회로 일부에 미소 공극 $l_g$를 만들면 자기저항은 처음의 몇 배가 되는가? (단, $l \\gg l_g$ 이다.)",
+    "choices": [
+      "$1+\\frac{\\mu l}{\\mu_0 l_g}$",
+      "$1+\\frac{\\mu_0 l_g}{\\mu l}$",
+      "$1+\\frac{\\mu_0 l}{\\mu l_g}$",
+      "$1+\\frac{\\mu l_g}{\\mu_0 l}$"
+    ],
+    "answer": 4,
+    "explanation": "자기저항($R_m$)\n공극이 없을 때의 자기저항은 $R_m=\\frac{l}{\\mu S} \\;[\\text{AT/Wb}]$이다.\n공극이 있을 때 자기회로의 자기저항($R_{m1}$)과 공극부 자기저항($R_{m2}$)은\n$R_{m1}=\\frac{l-l_g}{\\mu S} \\approx \\frac{l}{\\mu S} \\;[\\text{AT/Wb}]$ \n$R_{m2}=\\frac{l_g}{\\mu_0 S} \\;[\\text{AT/Wb}]$ 이므로\n공극이 있을 때 합성 자기저항($R_{mm}$)은\n$R_{mm}=R_{m1}+R_{m2}=\\frac{l}{\\mu S}+\\frac{l_g}{\\mu_0 S} \\;[\\text{AT/Wb}]$이다.\n$\\therefore \\frac{R_{mm}}{R_m}=\\frac{\\frac{l}{\\mu S}+\\frac{l_g}{\\mu_0 S}}{\\frac{l}{\\mu S}}=1+\\frac{\\mu l_g}{\\mu_0 l}$",
+    "image_needed": false,
+    "source_page": "page_293",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 3회 전기기사",
+    "number": 10,
+    "question": "평등 전계 중에 유전체 구에 의한 전계 분포가 [그림]과 같이 되었을 때 $\\epsilon_1$과 $\\epsilon_2$의 크기 관계는?",
+    "choices": [
+      "$\\epsilon_1 > \\epsilon_2$",
+      "$\\epsilon_1 < \\epsilon_2$",
+      "$\\epsilon_1 = \\epsilon_2$",
+      "무관하다."
+    ],
+    "answer": 2,
+    "explanation": "유전체 내에서의 경계조건\n$\\epsilon_1 > \\epsilon_2$이면 $E_1 < E_2$, $D_1 > D_2$, $\\theta_1 > \\theta_2$이므로\n전계 분포와 유전율은 반비례에 있다.\n전계 분포가 유전체 $\\epsilon_1$ 쪽으로 모이기 때문에 유전율은\n$\\epsilon_2$가 더 크다는 것을 알 수 있다.\n$\\therefore \\epsilon_1 < \\epsilon_2$",
+    "image_needed": true,
+    "source_page": "page_319",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 11,
+    "question": "1 [kV]로 충전된 어떤 콘덴서의 정전에너지가 1 [J]일 때, 이 콘덴서의 크기는 몇 [$\\mu$F]인가?",
+    "choices": [
+      "2 [$\\mu$F]",
+      "4 [$\\mu$F]",
+      "6 [$\\mu$F]",
+      "8 [$\\mu$F]"
+    ],
+    "answer": 1,
+    "explanation": "정전에너지(W)\n전하량 Q, 콘덴서 C, 전위차 V라 하면\n$W = \\frac{1}{2}QV = \\frac{1}{2}CV^2 = \\frac{Q^2}{2C}$ [J] 식에서\n$V = 1$ [kV], $W = 1$ [J]일 때\n$\\therefore C = \\frac{2W}{V^2} = \\frac{2 \\times 1}{(10^3)^2} = 2 \\times 10^{-6}$ [F] = 2 [$\\mu$F]",
+    "image_needed": false,
+    "source_page": "page_211",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 11,
+    "question": "한 변의 길이가 a [m]인 정삼각형 회로에 I [A]가 흐르고 있을 때 그 정삼각형 중심의 자계의 세기는 몇 [A/m]인가?",
+    "choices": [
+      "① 9I / (2\\pi a)",
+      "② 2\\sqrt{2}I / (\\pi a)",
+      "③ \\sqrt{3}I / (\\pi a)",
+      "④ \\sqrt{2}I / (2\\pi a)"
+    ],
+    "answer": 1,
+    "explanation": "정n변형 회로의 중심 자계의 세기(H)\n한 변의 길이가 a[m]인 정n변형 중심 자계의 세기를 H_0라 하면\nH_0 = (nI / (\\pi a)) sin(\\pi/n) tan(\\pi/n) [AT/m] 식에서\n한 변의 길이가 a인 정삼각형은 n=3 이므로\n∴ H_0 = (3I / (\\pi a)) sin(\\pi/3) tan(\\pi/3) = (3I / (\\pi a)) \\times (\\sqrt{3}/2) \\times \\sqrt{3} = 9I / (2\\pi a) [AT/m]",
+    "image_needed": false,
+    "source_page": "page_239",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 2회 기출문제",
+    "number": 11,
+    "question": "비유전율 $\\epsilon_r=10$인 유전체 내에 전계의 세기가 $5[\\text{V/m}]$일 때 유전체 내의 전하밀도는 $[\\text{C/m}^2]$?",
+    "choices": [
+      "$40\\epsilon_0$",
+      "$35\\epsilon_0$",
+      "$50\\epsilon_0$",
+      "$55\\epsilon_0$"
+    ],
+    "answer": 3,
+    "explanation": "유전체 내의 표면전하밀도($\\rho_s$)\n$\\rho_s = D = \\epsilon E = \\epsilon_0\\epsilon_r E \\;[\\text{C/m}^2]$ 식에서\n$\\epsilon_r = 10$, $E = 5 \\;[\\text{V/m}]$ 이므로\n$\\therefore \\rho_s = \\epsilon_0\\epsilon_r E = \\epsilon_0\\times10\\times5=50\\epsilon_0 \\;[\\text{C/m}^2]$",
+    "image_needed": false,
+    "source_page": "page_293",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 3회 전기기사",
+    "number": 11,
+    "question": "정전용량이 $C_0\\,[\\mu F]$인 평행판의 공기 커패시터가 있다. 두 극판 사이에 극판과 평행하게 절반을 비유전율이 $\\epsilon_r$인 유전체로 채우면 커패시터의 정전용량 $[\\mu F]$은?",
+    "choices": [
+      "$\\frac{C_0}{2(1+\\frac{1}{\\epsilon_r})}$",
+      "$\\frac{C_0}{1+\\frac{1}{\\epsilon_r}}$",
+      "$\\frac{2C_0}{1+\\frac{1}{\\epsilon_r}}$",
+      "$\\frac{4C_0}{1+\\frac{1}{\\epsilon_r}}$"
+    ],
+    "answer": 3,
+    "explanation": "유전체 내의 평행판 전극의 직렬연결\n공기콘덴서의 정전용량을 $C_0$라 하면\n$C = \\frac{\\epsilon_0 S}{d}\\,[\\mu F]$이다.\n콘덴서 판 간에 절반 두께를 유전체로 채운 경우 평행판 전극의 경계면과 단자가 수직을 이루고 있으므로 콘덴서는 직렬로 접속된다. 각 콘덴서의 정전용량을 $C_1$, $C_2$라 하고 합성정전용량을 $C$라 하면\n$C_1 = \\frac{\\epsilon_0 \\epsilon_r S}{\\frac{d}{2}} = \\frac{2\\epsilon_0 \\epsilon_r S}{d} = 2\\epsilon_r C_0\\,[\\mu F]$\n$C_2 = \\frac{\\epsilon_0 S}{\\frac{d}{2}} = \\frac{2\\epsilon_0 S}{d} = 2C_0\\,[\\mu F]$\n$\\therefore C = \\frac{1}{\\frac{1}{C_1}+\\frac{1}{C_2}} = \\frac{1}{\\frac{1}{2\\epsilon_r C_0}+\\frac{1}{2C_0}}$\n$= \\frac{2C_0}{1+\\frac{1}{\\epsilon_r}}\\,[\\mu F]$",
+    "image_needed": false,
+    "source_page": "page_319",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 1회 기출문제",
+    "number": 11,
+    "question": "진공 중에 한 변의 길이가 0.1[m]인 정삼각형의 3정점 A, B, C에 각각 $2.0 \\times 10^{-6}$[C]의 점전하가 있을 때, 점 A의 전하에 작용하는 힘은 몇 [N]인가?",
+    "choices": [
+      "$1.8\\sqrt{2}$",
+      "$1.8\\sqrt{3}$",
+      "$3.6\\sqrt{2}$",
+      "$3.6\\sqrt{3}$"
+    ],
+    "answer": 4,
+    "explanation": "쿨롱의 법칙\n$F_{AB} = 9 \\times 10^9 \\times \\frac{Q^2}{r^2} = 9 \\times 10^9 \\times \\frac{(2 \\times 10^{-6})^2}{0.1^2}$\n$= 3.6$ [N]\n$F_{AC} = 9 \\times 10^9 \\times \\frac{Q^2}{r^2} = 9 \\times 10^9 \\times \\frac{(2 \\times 10^{-6})^2}{0.1^2}$\n$= 3.6$ [N]\n$F_{AB}$와 $F_{AC}$의 크기는 같고 서로 이루는 각도가 60$\\degree$이므로 점 A의 전하에 작용하는 힘은 $\\sqrt{3}$배이다.\n$F_A = \\sqrt{3} F_{AB} = \\sqrt{3} F_{AC}$ [N] 식에서\n$\\therefore F_A = 3.6\\sqrt{3}$ [N]",
+    "image_needed": false,
+    "source_page": "page_345",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 12,
+    "question": "반지름 2 [mm]의 두 개의 무한히 긴 원통 도체가 중심 간격 2 [m]로 진공 중에 평행하게 놓여 있을 때 1 [km]당 정전용량은 약 몇 [$\\mu$F]인가?",
+    "choices": [
+      "$1 \\times 10^{-3}$ [$\\mu$F/km]",
+      "$2 \\times 10^{-3}$ [$\\mu$F/km]",
+      "$4 \\times 10^{-3}$ [$\\mu$F/km]",
+      "$6 \\times 10^{-3}$ [$\\mu$F/km]"
+    ],
+    "answer": 3,
+    "explanation": "평행한 두 원통도체의 정전용량(C)\n반지름 a, 간격 d, 도체 길이 l, 단위 길이당 정전용량\n$C'$라 하면 $C' = \\frac{\\pi\\epsilon_0}{ln \\frac{d}{a}}$ [F/m] 식에서\n$a = 2$ [mm], $d = 2$ [m]일 때\n$\\therefore C' = \\frac{\\pi\\epsilon_0}{ln \\frac{d}{a}} = \\frac{\\pi \\times 8.855 \\times 10^{-12}}{ln \\frac{2}{2 \\times 10^{-3}}} = \\frac{\\pi \\times 8.855 \\times 10^{-12}}{ln \\frac{1}{10^{-3}}} = \\frac{\\pi \\times 8.855 \\times 10^{-12}}{ln 10^3} \\approx 4 \\times 10^{-12}$ [F/m] = $4 \\times 10^{-12} \\times 10^3$ [F/km] = $4 \\times 10^{-9}$ [F/km] = $4 \\times 10^{-3}$ [$\\mu$F/km]",
+    "image_needed": false,
+    "source_page": "page_211",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 3회 전기기사",
+    "number": 12,
+    "question": "전속밀도에 대한 설명으로 가장 옳은 것은?",
+    "choices": [
+      "① 전속은 스칼라량이기 때문에 전속밀도도 스칼라량이다.",
+      "② 전속밀도는 전계의 세기의 방향과 반대 방향이다.",
+      "③ 전속밀도는 유전체 내에 분극의 세기와 같다.",
+      "④ 전속밀도는 유전체와 관계없이 크기는 일정하다."
+    ],
+    "answer": 4,
+    "explanation": "전속밀도의 성질\n① 전속밀도는 벡터량이다.\n② D = epsilon_0 E이므로 전속밀도의 방향과 전계의 세기는 같은 방향이다.\n③ P = D - epsilon_0 E이므로 전속밀도가 분극의 세기보다 약간 크다.\n④ D = epsilon_0 E = Q/S = Q/(4\\pi r^2) [C/m^2]이므로 유전체와 관계없이 크기가 일정하다.",
+    "image_needed": false,
+    "source_page": "page_239",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 2회 기출문제",
+    "number": 12,
+    "question": "정전용량 이 $C_0[\\mu\\text{F}]$인 평행판의 공기 커패시터가 있다. 두 극판 사이에 극판과 평행하게 절반을 비유전율이 $\\epsilon_r$인 유전체로 채우면 커패시터의 정전용량$[\\mu\\text{F}]$은?",
+    "choices": [
+      "$\\frac{C_0}{2\\left(1+\\frac{1}{\\epsilon_r}\\right)}$",
+      "$\\frac{C_0}{1+\\frac{1}{\\epsilon_r}}$",
+      "$\\frac{2C_0}{1+\\frac{1}{\\epsilon_r}}$",
+      "$\\frac{4C_0}{1+\\frac{1}{\\epsilon_r}}$"
+    ],
+    "answer": 3,
+    "explanation": "평행판 콘덴서의 정전용량\n[그림: 직렬 연결된 두 개의 평행판 커패시터. 상단은 유전율 $\\epsilon_0\\epsilon_r$로 채워져 있고, 두께 $d/2$. 하단은 유전율 $\\epsilon_0$로 채워져 있고, 두께 $d/2$.]\n공기콘덴서의 정전용량을 $C_0$라 하면\n$C_0=\\frac{\\epsilon_0 S}{d} \\;[\\text{F}]$이다.\n이 때 유전체로 채운 경우 각각의 콘덴서의 정전용량을 $C_1, C_2$라 하고 합성 정전용량을 $C$라 하면\n$C_1=\\frac{\\epsilon_0\\epsilon_r S}{d/2}=\\frac{2\\epsilon_0\\epsilon_r S}{d} \\;[\\text{F}]$, $C_2=\\frac{\\epsilon_0 S}{d/2}=\\frac{2\\epsilon_0 S}{d} \\;[\\text{F}]$ 이므로\n$\\therefore C=\\frac{1}{\\frac{1}{C_1}+\\frac{1}{C_2}}=\\frac{1}{\\frac{d}{2\\epsilon_0\\epsilon_r S}+\\frac{d}{2\\epsilon_0 S}}=\\frac{2\\epsilon_0 S}{d(1+\\epsilon_r)}\n= \\frac{2C_0}{1+\\epsilon_r} \\;[\\text{F}]$",
+    "image_needed": true,
+    "source_page": "page_293",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2024년 3회 전기기사",
+    "number": 12,
+    "question": "자유공간을 진행하는 전자기파의 전계와 자계의 위상차는?",
+    "choices": [
+      "전계가 $\\frac{\\pi}{2}$ 빠르다.",
+      "자계가 $\\frac{\\pi}{2}$ 빠르다.",
+      "위상이 같다.",
+      "전계가 $\\pi$ 빠르다."
+    ],
+    "answer": 3,
+    "explanation": "전자파\n자유공간에서 전계($E$)와 자계($H$)가 같은 위상으로 동시에 존재하게 되며 모두 진행방향에 대하여 수직으로 나타나게 되는데 이때 전계와 자계가 만드는 파를 전자파라 한다.",
+    "image_needed": false,
+    "source_page": "page_319",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 14,
+    "question": "간격 d[m]의 평행판 도체에 V[kV]의 전위차를 주었을 때 음극 도체판을 초속도 0으로 출발한 전자 e[C]이 양극 도체판에 도달할 때의 속도는 몇 [m/s]인가? (단, m[kg]은 전자의 질량이다.)",
+    "choices": [
+      "$\\frac{eV}{m}$",
+      "$\\sqrt{\\frac{2eV}{m}}$",
+      "$\\frac{eV}{2m}$",
+      "$\\frac{2eV}{m}$"
+    ],
+    "answer": 2,
+    "explanation": "전기에너지와 전자의 운동에너지\n평행판 도체 사이에 전위차(V)를 주게 되면 전자(e)에 가해지는 에너지(W1)와 전자의 운동에너지(W2)는 서로 같게 된다.\nW1 = eV[J], W2 = 1/2mv^2[J]\n여기서, m은 전자의 질량, v는 전자의 이동속도이다.\nW1 = W2일 때 eV = 1/2mv^2이므로\nv = $\\sqrt{\\frac{2eV}{m}}$ [m/sec]",
+    "image_needed": false,
+    "source_page": "page_181",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 15,
+    "question": "그림과 같이 평행한 무한장 직선의 두 도선에 $I$[A], $4I$[A]인 전류가 각각 흐른다. 두 도선 사이 점 P에서의 자계의 세기가 0이라면 $\\frac{a}{b}$는? [그림]",
+    "choices": [
+      "2",
+      "4",
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{4}$"
+    ],
+    "answer": 4,
+    "explanation": "직선도체에 의한 자계의 세기($H$)\n위의 그림에서와 같이 $I$[A]가 흐르는 도선에서 $a$[m] 떨어진 P점의 자계의 세기($H_1$)와 $4I$[A]가 흐르는 도선에서 $b$[m] 떨어진 P점의 자계의 세기($H_2$)가 서로 반대방향으로 작용하므로 P점의 자계의 세기가 0이 되기 위해서는 $H_1 = H_2$ 조건을 만족하여야 한다.\n$H_1 = \\frac{I}{2\\pi a}$ [AT/m], $H_2 = \\frac{4I}{2\\pi b}$ [AT/m]이므로\n$\\frac{I}{2\\pi a} = \\frac{4I}{2\\pi b}$ 일 때\n$\\therefore \\frac{a}{b} = \\frac{1}{4}$",
+    "image_needed": true,
+    "source_page": "page_125",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 15,
+    "question": "그림과 같이 비투자율이 $\\mu_1$, $\\mu_2$인 각각 다른 자성체를 접하여 놓고 $\\theta_1$을 입사각이라 하고, $\\theta_2$를 굴절각이라 한다. 경계면에 자하가 없는 경우 미소 폐곡면을 취하여 이면에 출입하는 자속수를 구하면?",
+    "choices": [
+      "$\\oint B \\cdot ndl = 0$",
+      "$\\oint B \\cdot ndS = 0$",
+      "$\\oint B \\cdot ds = 0$",
+      "$\\oint B \\cdot n\\sin\\theta ds = 0$"
+    ],
+    "answer": 2,
+    "explanation": "자속의 연속성\n자성체 내에서 키르히호프의 제1법칙은 $\\sum \\phi = 0$ [Wb]\n이므로\n$\\sum \\phi = \\oint_s B \\cdot ndS = \\int_v div B dv$\n$= \\int_v \\nabla \\cdot B dv = 0$ [Wb]이다.\n$\\therefore \\oint_s B \\cdot ndS = \\int_v div B dv = 0$ [Wb]이란 자성체 내에서 자속은 발산하지 않으며 경계면을 기준으로 법선성분(수직성분)은 연속임을 의미한다.\n이것을 자속의 연속성이라 한다.",
+    "image_needed": true,
+    "source_page": "page_181",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 16,
+    "question": "대지면에 높이 h로 평행하게 가설된 매우 긴 선전하가 지면으로부터 받는 힘은?",
+    "choices": [
+      "h$^2$에 비례한다.",
+      "h$^2$에 반비례한다.",
+      "h에 비례한다.",
+      "h에 반비례한다."
+    ],
+    "answer": 4,
+    "explanation": "접지무한평면과 선전하\n직선도체로부터 영상전하까지의 거리는 2h [m] 떨어져 있으므로 그 사이의 전계의 세기(E)는\n$E = \\frac{\\rho_L}{2\\pi\\epsilon_0 r} = \\frac{\\rho_L}{2\\pi\\epsilon_0 (2h)} = \\frac{\\rho_L}{4\\pi\\epsilon_0 h}$ [V/m]\n따라서 작용력 F는\n$\\therefore F = QE = \\frac{\\rho_L l}{4\\pi\\epsilon_0 h}$ [N] $= \\frac{\\rho_L^2}{4\\pi\\epsilon_0 h}$ [N/m]\n$= -9 \\times 10^9 \\times \\frac{\\rho_L^2}{h}$ [N/m]\n$\\therefore$ 작용력(지면으로부터 받는 힘)은 h에 반비례한다.",
+    "image_needed": false,
+    "source_page": "page_181",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 16,
+    "question": "반자성체의 비투자율($\\mu_r$) 값의 범위는?",
+    "choices": [
+      "$\\mu_r = 1$",
+      "$\\mu_r < 1$",
+      "$\\mu_r > 1$",
+      "$\\mu_r = 0$"
+    ],
+    "answer": 2,
+    "explanation": "자성체의 성질\n비투자율 $\\mu_r$, 자화율 $\\chi_m$ 이라면\n(1) 역자성체(반자성체): $\\mu_r < 1, \\chi_m < 0$\n(수소, 헬륨, 구리, 탄소, 안티몬, 비스무트, 은 등)\n(2) 상자성체: $\\mu_r > 1, \\chi_m > 0$\n(칼륨, 텅스텐, 산소, 백금, 알루미늄 등)\n(3) 강자성체: $\\mu_r \\gg 1, \\chi_m \\gg 0$\n(철, 니켈, 코발트)",
+    "image_needed": false,
+    "source_page": "page_347",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 3회 기출문제",
+    "number": 16,
+    "question": "패러데이 법칙에서 회로에 쇄교하는 자속수 $\\phi$[Wb], 코일의 권수를 $N$이라 할 때, 유도기전력 $e$[V]를 옳게 표현한 것은?",
+    "choices": [
+      "$e = - \\frac{1}{N} \\frac{d\\phi}{dt}$",
+      "$e = - \\frac{1}{N^2} \\frac{d\\phi}{dt}$",
+      "$e = -N \\frac{d\\phi}{dt}$",
+      "$e = -N^2 \\frac{d\\phi}{dt}$"
+    ],
+    "answer": 3,
+    "explanation": "전자기유도법칙에 의한 유도기전력\n시간에 따라 변하는 자계는 자계 내에 있는 적절한 폐회로에 전류를 흐르게 하는 기전력을 일으킨다.\n$e = -N \\frac{d\\phi}{dt}$ [V]\n(1) 패러데이법칙\n폐회로에 유도되는 기전력의 크기는 폐회로에 쇄교되는 자속의 감쇠율에 비례한다.\n(2) 렌츠의 법칙\n폐회로에 유도되는 기전력의 방향을 자속의 변화를 방해하는 방향으로 정해진다.",
+    "image_needed": false,
+    "source_page": "page_403",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2022년 2회 전기기사",
+    "number": 17,
+    "question": "반지름이 2[m]이고 권수가 120회인 원형코일 중심에서의 자계의 세기를 30[AT/m]로 하려면 원형코일에 몇 [A]의 전류를 흘려야 하는가?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 1,
+    "explanation": "원형코일 중심에서의 자계의 세기($H$)\n$H_0 = \\frac{NI}{2a}$ [AT/m] 식에서\n$a = 2$[m], $N = 120$, $H = 30$[AT/m]일 때\n$\\therefore I = \\frac{2aH_0}{N} = \\frac{2 \\times 2 \\times 30}{120} = 1$[A]",
+    "image_needed": false,
+    "source_page": "page_125",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 1회 전기기사",
+    "number": 17,
+    "question": "액체 유전체를 포함한 콘덴서 용량이 C[F]인 것에 V[V]의 전압을 가했을 경우에 흐르는 누설 전류[A]는? (단, 유전체의 유전율은 $\\epsilon$[F/m], 고유 저항은 $\\rho[\\Omega \\cdot m]$이다.)",
+    "choices": [
+      "$\\frac{\\rho\\epsilon}{CV}$",
+      "$\\frac{C}{\\rho\\epsilon V}$",
+      "$\\frac{CV}{\\rho\\epsilon}$",
+      "$\\frac{\\rho\\epsilon V}{C}$"
+    ],
+    "answer": 3,
+    "explanation": "전기저항(R)과 정전용량(C')의 관계\n$RC = \\rho\\epsilon$ 또는 $\\frac{C}{G} = \\rho\\epsilon = \\frac{\\epsilon}{k}$ 이므로\n누설전류 $I = \\frac{V}{R} = \\frac{CV}{\\rho\\epsilon}$ [A]이다.",
+    "image_needed": false,
+    "source_page": "page_181",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 17,
+    "question": "자성재료의 히스테리시스 곡선의 특징으로 잘 못된 것은?",
+    "choices": [
+      "세로축은 자속밀도이다.",
+      "자화력이 0일 때 세로축과 만나는 점을 잔류자기라 한다.",
+      "잔류자기를 0으로 하기 위해서는 반대 방향의 자화력을 가해야 한다.",
+      "자화의 경력과 관계없이 자속밀도는 일정하다."
+    ],
+    "answer": 4,
+    "explanation": "히스테리시스 곡선(B-H 곡선)\n(1) 횡축(가로축)에 자계, 종축(세로축)에 자속밀도를 취하여 그리는 자화곡선\n(2) 자계축과 만나는 점을 보자력, 자속밀도축과 만나는 점을 잔류자기라 한다.\n(3) 자화의 경력이 있으면 잔류자기와 보자력이 생기므로 곡선은 변형된다.\n(4) 잔류자기를 상쇄시키려면 역방향 자화력을 가한다.",
+    "image_needed": false,
+    "source_page": "page_213",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 3회 기출문제",
+    "number": 17,
+    "question": "전기력선의 설명 중 틀린 것은?",
+    "choices": [
+      "전기력선은 부전하에서 시작하여 정전하에서 끝난다.",
+      "단위 전하에서는 $1/\\epsilon_o$개의 전기력선이 출입한다.",
+      "전기력선은 전위가 높은 점에서 낮은 점으로 향한다.",
+      "전기력선의 방향은 그 점의 전계의 방향과 일치하며 밀도는 그 점에서의 전계의 크기와 같다."
+    ],
+    "answer": 1,
+    "explanation": "전기력선의 성질\n(1) 전기력선은 정(+)전하에서 시작하여 부(-)전하에서 끝난다.\n(2) 전기력선은 서로 반발하여 교차할 수 없다.\n(3) 전기력선은 방향은 그 점의 전계의 방향과 같다.\n(4) 전기력선의 밀도는 전계의 세기와 같다.\n(5) 전기력선은 전위가 높은 점에서 낮은 점으로 향한다.\n(6) 전기력선은 등전위면(등전위선)에 수직으로 만난다.\n(7) 도체에 대전된 전하는 도체 표면에만 분포되며 전기력선은 대전도체 내부에는 존재하지 않는다.\n(8) 전기력선은 자신만으로 폐곡선을 이룰 수 없다.\n(9) 전기력선의 수는 $\\frac{Q}{\\epsilon_o}$개이다.",
+    "image_needed": false,
+    "source_page": "page_403",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 18,
+    "question": "한 변의 길이가 $l$[m]인 정사각형 회로에 $I$[A]가 흐르고 있을 때 그 정사각형 중심의 자계의 세기는 몇 [A/m]인가?",
+    "choices": [
+      "$\\frac{I}{2\\pi l}$",
+      "$\\frac{2\\sqrt{2}I}{\\pi l}$",
+      "$\\frac{\\sqrt{3}I}{\\pi l}$",
+      "$\\frac{\\sqrt{2}I}{2\\pi l}$"
+    ],
+    "answer": 2,
+    "explanation": "정n변형 회로의 중심 자계의 세기($H$)\n한 변의 길이가 $l$[m]인 정n변형 중심 자계의 세기를 $H_0$라 하면\n$H_0 = \\frac{nI}{\\pi l} \\sin \\frac{\\pi}{n} \\tan \\frac{\\pi}{n}$ [AT/m] 식에서\n한 변의 길이가 $l$인 정사각형은 $n=4$ 이므로\n$\\therefore H_0 = \\frac{4I}{\\pi l} \\sin \\frac{\\pi}{4} \\tan \\frac{\\pi}{4} = \\frac{4I}{\\pi l} \\times \\frac{1}{\\sqrt{2}} \\times 1 = \\frac{2\\sqrt{2}I}{\\pi l}$ [AT/m]",
+    "image_needed": false,
+    "source_page": "page_213",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 1회 전기기사",
+    "number": 18,
+    "question": "평행판 콘덴서의 극판 사이에 유전율이 각각 $\\epsilon_1$, $\\epsilon_2$인 두 유전체를 반씩 채우고 극판 사이에 일정한 전압을 걸어줄 때 매질 (1), (2) 내의 전계의 세기 $E_1$, $E_2$ 사이에 성립하는 관계로 옳은 것은?",
+    "choices": [
+      "$E_2 = 4E_1$",
+      "$E_2 = 2E_1$",
+      "$E_2 = \\frac{E_1}{4}$",
+      "$E_2 = E_1$"
+    ],
+    "answer": 3,
+    "explanation": "유전체의 경계면의 조건\n전계가 경계면에 수직으로 향하고 있으므로 경계면에서 전속밀도는 연속임을 알 수 있다.\n$\\frac{E_2}{E_1} = \\frac{\\epsilon_1}{\\epsilon_2}$ 식에서 $\\frac{E_2}{E_1} = \\frac{\\epsilon_1}{4\\epsilon_1}$ 일 때\n$\\therefore E_2 = \\frac{E_1}{4}$",
+    "image_needed": true,
+    "source_page": "page_347",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 3회 기출문제",
+    "number": 18,
+    "question": "그림에서 $l = 100$[cm], $S = 10$[cm²], $\\mu_s = 100$, $N = 1,000$회인 회로에 전류 $I = 10$[A]를 흘렸을 때 축적되는 에너지[J]는?",
+    "choices": [
+      "$2\\pi \\times 10^{-1}$",
+      "$2\\pi \\times 10^{-2}$",
+      "$2\\pi \\times 10^{-3}$",
+      "$2\\pi$"
+    ],
+    "answer": 4,
+    "explanation": "자기 에너지\n$L = \\frac{\\mu_s N^2 S}{l} = \\frac{\\mu_0 \\mu_s N^2 S}{l}$ [H]\n$W = \\frac{1}{2} L I^2$ 식에서\n$L = \\frac{\\mu_0 \\mu_s S N^2}{l} = \\frac{4\\pi \\times 10^{-7} \\times 100 \\times 10 \\times 10^{-4} \\times 1,000^2}{100 \\times 10^{-2}} = \\frac{\\pi}{25}$ [H]\n∴ $W = \\frac{1}{2} L I^2 = \\frac{1}{2} \\times \\frac{\\pi}{25} \\times 10^2 = 2\\pi$ [J]",
+    "image_needed": true,
+    "source_page": "page_403",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 19,
+    "question": "속도 $v$의 전자가 평등자계 내에 수직으로 들어갈 때, 이 전자에 대한 설명으로 옳은 것은?",
+    "choices": [
+      "구면위에서 회전하고 구의 반지름은 자계의 세기에 비례한다.",
+      "원운동을 하고 원의 반지름은 자계의 세기에 비례한다.",
+      "원운동을 하고 원의 반지름은 자계의 세기에 반비례한다.",
+      "원운동을 하고 원의 반지름은 전자의 처음 속도의 제곱에 비례한다."
+    ],
+    "answer": 3,
+    "explanation": "전자의 원운동\n플레밍의 왼손법칙에서 유도된 로렌츠의 힘이 자계 중에 놓인 전자가 받는 힘이며 전자는 원운동을 하여 갖는 원심력과 평형을 이룬다.\n전류 $I$, 자속밀도 $B$, 전하 $e$, 속도 $v$, 전자의 질량 $m$, 원운동 반경 $r$, 투자율 $μ$, 자계의 세기 $H$라 하면\n$F = IBl\\ [N],\\ v = \\frac{l}{t}\\ [m/sec]$ 이므로\n$F = IBl = evB = \\frac{mv^2}{r}\\ [N]$\n(1) 회전반경 : $r = \\frac{mv}{Be} = \\frac{mv}{μHe}\\ [m]$\n(2) 각속도 : $ω = \\frac{Be}{m} = \\frac{μHe}{m} = 2πf\\ [rad/sec]$\n(3) 주기 : $T = \\frac{1}{f} = \\frac{2πm}{Be} = \\frac{2πm}{μHe}\\ [sec]$\nㆍ원운동을 하고 원의 반지름($r$)은 자계의 세기($H$)에 반비례한다.",
+    "source_page": "page_067",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 19,
+    "question": "그림과 같이 회로 C에 전류 $I$[A]가 흐를 때 C의 미소 부분 $dl$에 의하여 거리 $r$[m]만큼 떨어진 P점에서의 자계의 세기 $dH$[AT/m]는? (단, $\\theta$는 $dl$과 거리 $r$이 이루는 각이다) [그림]",
+    "choices": [
+      "$\\frac{Idl \\sin \\theta}{4\\pi r}$",
+      "$\\frac{Idl \\sin \\theta}{r^2}$",
+      "$\\frac{Idl \\sin \\theta}{4\\pi r^2}$",
+      "$\\frac{4\\pi Idl \\sin \\theta}{r^2}$"
+    ],
+    "answer": 3,
+    "explanation": "비오-사바르 법칙\n미소전류소에 의한 임의의 점 P에서의 자계 크기는 전류와 선소의 크기에 비례하고, 점 P와 선소를 잇는 선분과 선소 사이의 각에 대한 $\\sin\\theta$에 비례하며, 점 P와 선소 사이의 직선거리의 제곱에 반비례한다.\n$\\therefore dH = \\frac{I \\times a_r}{4\\pi r^2} dl = \\frac{Idl \\sin \\theta}{4\\pi r^2}$ [AT/m]",
+    "image_needed": true,
+    "source_page": "page_213",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2025년 3회 기출문제",
+    "number": 19,
+    "question": "반자성체의 비투자율($ \\mu_r $) 값의 범위는?",
+    "choices": [
+      "$\\mu_r = 1$",
+      "$\\mu_r < 1$",
+      "$\\mu_r > 1$",
+      "$\\mu_r = 0$"
+    ],
+    "answer": 2,
+    "explanation": "자성체의 성질\n비투자율 $\\mu_r$, 자화율 $\\chi_m$라 하면\n(1) 역자성체(반자성체) : $\\mu_r < 1$, $\\chi_m < 0$ (수소, 헬륨, 구리, 탄소 등)\n(2) 상자성체 : $\\mu_r > 1$, $\\chi_m > 0$ (칼륨, 텅스텐, 산소 등)\n(3) 강자성체 : $\\mu_r \\gg 1$, $\\chi_m \\gg 0$ (철, 니켈, 코발트 등)\n반자성체(역자성체)에는 이외에도 비스무트, 납, 아연, 금, 은 등이 있다.",
+    "image_needed": false,
+    "source_page": "page_403",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 2회 전기기사",
+    "number": 20,
+    "question": "공기 중에서 전자기파의 파장이 3[m]라면 그 주파수는 몇 [MHz]인가?",
+    "choices": [
+      "100",
+      "300",
+      "1,000",
+      "3,000"
+    ],
+    "answer": 1,
+    "explanation": "전파속도(v)\n파장 λ, 주파수 f, 각속도 ω, 위상정수 β, 인덕턴스 L, 정전용량 C, 유전율 ε, 투자율 μ라 하면\n$v = \\lambda f = \\frac{\\omega}{\\beta} = \\frac{1}{\\sqrt{LC}} = \\frac{1}{\\sqrt{\\epsilon \\mu}}$\n$= \\frac{1}{\\sqrt{\\epsilon_0 \\mu_0}} \\cdot \\frac{1}{\\sqrt{\\epsilon_s \\mu_s}} = \\frac{3 \\times 10^8}{\\sqrt{\\epsilon_s \\mu_s}}$ [m/sec] 식에서\n$\\lambda = 3$[m], 공기 중일 때 $\\epsilon_s = 1$, $\\mu_s = 1$ 이므로\n$\\therefore f = \\frac{3 \\times 10^8}{\\lambda \\sqrt{\\epsilon_s \\mu_s}} = \\frac{3 \\times 10^8}{3 \\times \\sqrt{1 \\times 1}} = 100 \\times 10^6$[Hz]\n$= 100$[MHz]",
+    "image_needed": false,
+    "source_page": "page_039",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2021년 3회 전기기사",
+    "number": 20,
+    "question": "쌍극자 모멘트가 $M\\ [C \\cdot m]$인 전기쌍극자에 의한 임의의 점 P에서의 전계의 크기는 전기쌍극자의 중심에서 축방향과 점 P를 잇는 선분 사이의 각이 얼마일 때 최대가 되는가?",
+    "choices": [
+      "$0$",
+      "$\\frac{π}{2}$",
+      "$\\frac{π}{3}$",
+      "$\\frac{π}{4}$"
+    ],
+    "answer": 4,
+    "explanation": "전기쌍극자에 의한 전계의 세기($E$)\n$E = \\frac{M}{4πε_0r^3}\\sqrt{1+3\\cos^2θ}\\ [V/m]$이므로\n(1) 최대치($E_{max}$)\n$E_{max} = \\frac{M}{2πε_0r^3}\\ [V/m]$ ($\theta=0^{\\circ}$)\n(2) 최소치($E_{min}$)\n$E_{min} = \\frac{M}{4πε_0r^3}\\ [V/m]$ ($\theta=90^{\\circ}$)\nㆍ전기쌍극자에 의한 전계의 세기가 최대가 되는 위상각은 $0^{\\circ}$이다.",
+    "source_page": "page_067",
+    "subject": "전기자기학"
+  },
+  {
+    "round": "2023년 2회 전기기사",
+    "number": 20,
+    "question": "균일하게 원형단면을 흐르는 전류 $I$[A]에 의한, 반지름 $a$[m], 길이 $l$[m], 비투자율 $\\mu_s$인 원통도체의 내부 인덕턴스는 몇 [H]인가?",
+    "choices": [
+      "$10^{-7}\\mu_s l$",
+      "$3 \\times 10^{-7}\\mu_s l$",
+      "$\\frac{1}{4} \\times 10^{-7}\\mu_s l$",
+      "$\\frac{1}{2} \\times 10^{-7}\\mu_s l$"
+    ],
+    "answer": 4,
+    "explanation": "원통도체(원주형도체)에 의한 자기 인덕턴스\n$L = \\frac{\\mu l}{8\\pi}$ [H] = $\\frac{\\mu}{8\\pi}$ [H/m] 식에서\n$\\mu_0 = 4\\pi \\times 10^{-7}$ [H/m] 이므로\n$\\therefore L = \\frac{\\mu l}{8\\pi} = \\frac{\\mu_0 \\mu_s l}{8\\pi} = \\frac{4\\pi \\times 10^{-7}\\mu_s l}{8\\pi}$\n$= \\frac{1}{2} \\times 10^{-7}\\mu_s l$ [H]",
+    "image_needed": false,
+    "source_page": "page_213",
     "subject": "전기자기학"
   }
 ]
