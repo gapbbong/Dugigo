@@ -110,30 +110,25 @@ export async function GET(req: NextRequest) {
 
       // 2. 원본 이름으로 시도
       let targetSubject = subject;
-      const baseDataDir = path.join(process.cwd(), "src", "data");
-      let dataDir = path.join(baseDataDir, targetSubject);
+      const baseDataDir = path.resolve(process.cwd(), "src", "data");
+      let dataDir = path.resolve(baseDataDir, targetSubject);
 
       // 2. 없으면 공백 제거 버전으로 시도
       if (!fs.existsSync(dataDir)) {
         targetSubject = subject.replace(/\s/g, '');
-        dataDir = path.join(baseDataDir, targetSubject);
+        dataDir = path.resolve(baseDataDir, targetSubject);
       }
 
       // 3. 그래도 없으면 전체 폴더를 돌며 공백 무시하고 매칭되는 것 찾기
       if (!fs.existsSync(dataDir)) {
         if (fs.existsSync(baseDataDir)) {
           const allFolders = fs.readdirSync(baseDataDir).filter(f => fs.statSync(path.join(baseDataDir, f)).isDirectory());
-          const match = allFolders.find(f => f.replace(/\s/g, '') === subject.replace(/\s/g, ''));
+          const match = allFolders.find(f => f.replace(/\s/g, '').toLowerCase() === subject.replace(/\s/g, '').toLowerCase());
           if (match) {
             targetSubject = match;
-            dataDir = path.join(baseDataDir, targetSubject);
+            dataDir = path.resolve(baseDataDir, targetSubject);
           }
         }
-      }
-
-      // Security Check: Ensure dataDir is still within src/data (Case-insensitive for cross-platform)
-      if (!dataDir.toLowerCase().startsWith(baseDataDir.toLowerCase())) {
-        return NextResponse.json({ error: 'Access denied' }, { status: 403 });
       }
 
       if (!fs.existsSync(dataDir)) {
