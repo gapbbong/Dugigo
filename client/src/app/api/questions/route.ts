@@ -29,21 +29,36 @@ export async function GET(req: NextRequest) {
     const subject = sanitize(searchParams.get("subject"));
     const examFile = sanitize(searchParams.get("examFile"));
 
-    const scrub = (q: any) => ({
-      id: q.metadata?.id || q.id || `${q.year || q.exam_year || ''}_${q.round || q.exam_round || ''}_${q.number || q.question_no || ''}`,
-      year: (q.year || q.exam_year || '').toString(),
-      round: (q.round || q.exam_round || '').toString(),
-      number: q.number || q.question_no,
-      question: q.question || q.question_text,
-      choices: q.choices || q.options || q.choice_imgs || [],
-      answer: q.answer || q.correct_answer,
-      explanation: q.explanation || "",
-      sub_unit: q.sub_unit || q.metadata?.sub_unit || "",
-      image: q.image || q.question_img || q.metadata?.question_img || null,
-      visual_coords: q.visual_coords || q.metadata?.visual_coords || null,
-      choice_imgs: q.choice_imgs || q.metadata?.choice_imgs || [],
-      frequency: Math.max(Number(q.frequency) || 1, 1)
-    });
+    const scrub = (q: any) => {
+      let yr = (q.year || q.exam_year || '').toString();
+      let rd = (q.round || q.exam_round || '').toString();
+
+      if (!yr && rd) {
+        const match = rd.match(/\b(19\d\d|20\d\d)\b/);
+        if (match) {
+          yr = match[1];
+        }
+      }
+      if (yr && rd.includes(`${yr}년`)) {
+        rd = rd.replace(`${yr}년`, '').replace(/기출문제|과년도출제문제|전기기사/g, '').trim();
+      }
+
+      return {
+        id: q.metadata?.id || q.id || `${yr}_${rd}_${q.number || q.question_no || ''}`,
+        year: yr,
+        round: rd,
+        number: q.number || q.question_no,
+        question: q.question || q.question_text,
+        choices: q.choices || q.options || q.choice_imgs || [],
+        answer: q.answer || q.correct_answer,
+        explanation: q.explanation || "",
+        sub_unit: q.sub_unit || q.metadata?.sub_unit || "",
+        image: q.image || q.question_img || q.metadata?.question_img || null,
+        visual_coords: q.visual_coords || q.metadata?.visual_coords || null,
+        choice_imgs: q.choice_imgs || q.metadata?.choice_imgs || [],
+        frequency: Math.max(Number(q.frequency) || 1, 1)
+      };
+    };
 
     // Local HEAD logic for crop tool
     if (examFile) {

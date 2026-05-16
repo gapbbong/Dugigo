@@ -610,6 +610,26 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     }).filter(Boolean);
   };
 
+  const getQuestionBadgeText = (q: any, idx: number) => {
+    if (!q) return '';
+    const num = q.question_num || q.number || idx + 1;
+    const yr = q.year && String(q.year) !== '0' && String(q.year) !== '0000' ? String(q.year) : '';
+    const rd = q.round ? String(q.round) : '';
+
+    const parts = [];
+    if (yr) parts.push(`${yr}년`);
+    if (rd) {
+      if (!rd.includes('회') && !rd.includes('년') && !rd.includes('문제') && !isNaN(Number(rd))) {
+        parts.push(`${Number(rd)}회`);
+      } else {
+        parts.push(rd);
+      }
+    }
+
+    if (parts.length === 0) return `Q. ${num}번`;
+    return `Q. ${parts.join(' ')} - ${num}번`;
+  };
+
   const renderQuestionText = (text: string) => {
     if (!text) return null;
     
@@ -867,7 +887,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               <div className="space-y-4 md:space-y-8">
                 <div className="flex items-center gap-3">
                   <span className="px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 text-brand-600 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase">
-                    Q. {currentQuestion.year || '0000'}-{currentQuestion.round || '00'}-{currentQuestion.question_num || currentQuestion.number || '0'}
+                    {getQuestionBadgeText(currentQuestion, currentIndex)}
                   </span>
                   {currentQuestion.frequency > 1 && (
                     <motion.span 
@@ -1115,7 +1135,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-4 bg-black/40 backdrop-blur-sm" onClick={(e) => { if (e.target === e.currentTarget) setReportOpen(false); }}>
             <motion.div initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 60, opacity: 0 }} transition={{ type: 'spring', damping: 25 }} className="w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden">
               <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100">
-                <div className="flex items-center gap-2"><Flag className="w-4 h-4 text-rose-500" /><h3 className="font-black text-slate-800 text-sm">문항 오류 신고</h3><span className="text-[10px] text-slate-400 font-bold bg-slate-100 px-2 py-0.5 rounded-full">Q.{currentQuestion.year}-{currentQuestion.round}-{currentQuestion.question_num || currentQuestion.number}</span></div>
+                <div className="flex items-center gap-2"><Flag className="w-4 h-4 text-rose-500" /><h3 className="font-black text-slate-800 text-sm">문항 오류 신고</h3><span className="text-[10px] text-slate-400 font-bold bg-slate-100 px-2 py-0.5 rounded-full">{getQuestionBadgeText(currentQuestion, currentIndex)}</span></div>
                 <button onClick={() => setReportOpen(false)} className="text-slate-400 hover:text-slate-600"><X className="w-4 h-4" /></button>
               </div>
               {reportStatus === 'done' ? (
