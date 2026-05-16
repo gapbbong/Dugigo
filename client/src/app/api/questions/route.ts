@@ -331,7 +331,9 @@ export async function GET(req: NextRequest) {
             freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
 
             // 고유 ID 생성 로직 최적화 (year, round, number 조합 우선)
-            const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
+            // 표준 단원 파일(01.xxx, 02.xxx)에서는 파일명을 ID에 포함 → 과목별 같은 번호 충돌 방지
+            const baseId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
+            const qId = isStandardUnitFile ? `${fileNameUnit}__${baseId}` : baseId;
             qIdFreqMap.set(qId, (qIdFreqMap.get(qId) || 0) + 1);
             
             // 이미 등록된 문제가 있으면 빈도 정보 업데이트 후 단원 파일이 아니면 패스
