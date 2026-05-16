@@ -41,7 +41,8 @@ export async function GET(req: NextRequest) {
       sub_unit: q.sub_unit || q.metadata?.sub_unit || "",
       image: q.image || q.question_img || q.metadata?.question_img || null,
       visual_coords: q.visual_coords || q.metadata?.visual_coords || null,
-      choice_imgs: q.choice_imgs || q.metadata?.choice_imgs || []
+      choice_imgs: q.choice_imgs || q.metadata?.choice_imgs || [],
+      frequency: Math.max(Number(q.frequency) || 1, 1)
     });
 
     // Local HEAD logic for crop tool
@@ -323,6 +324,12 @@ export async function GET(req: NextRequest) {
       });
 
       const allQuestions = Array.from(questionMap.values());
+      allQuestions.forEach((q: any) => {
+        const normText = normalize(q.question || "");
+        const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
+        const calculatedFreq = Math.max(freqCountMap.get(normText) || 1, qIdFreqMap.get(qId) || 1);
+        q.frequency = Math.max(Number(q.frequency) || 0, calculatedFreq);
+      });
 
       const UNIT_ORDER: { [key: string]: number } = {
         "선사시대 및 국가의 형성": 1,
@@ -369,20 +376,14 @@ export async function GET(req: NextRequest) {
         if (unitFilter.includes("자주 나왔던 문항") || unitFilter.includes("자주나왔던문항")) {
           const uniqueMap = new Map<string, any>();
           
-          // 이미 파일 로드 시 freqCountMap에 전체 빈도가 계산되어 있음
-
           allQuestions.forEach((q: any) => {
-            const normText = normalize(q.question || "");
-            const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
-            const freq = Math.max(Number(q.frequency) || 0, freqCountMap.get(normText) || 1, qIdFreqMap.get(qId) || 1);
-            
-            if (freq >= 2) {
+            if ((q.frequency || 0) >= 2) {
               const cleanQuestion = normalize(q.question);
               const cleanChoices = (q.choices || []).map((c: string) => normalize(c)).join("|");
               const contentKey = `${cleanQuestion}_${cleanChoices}`;
               
               if (!uniqueMap.has(contentKey)) {
-                uniqueMap.set(contentKey, { ...q, frequency: freq });
+                uniqueMap.set(contentKey, q);
               }
             }
           });
