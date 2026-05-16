@@ -258,15 +258,31 @@ export async function GET(req: NextRequest) {
           if (!r) r = q.id?.split('_')[1];
           if (r) {
             let roundStr = String(r).trim();
-            // 오염된 round 값 필터링 (OCR 추출 실패로 들어간 N/A, Unknown 등)
-            const INVALID_ROUND = [/^N\/A$/i, /^not\s+visible/i, /^not\s+specified/i, /^unknown$/i, /^n\/a\s*-/i, /image/i];
-            if (INVALID_ROUND.some(p => p.test(roundStr))) return; // 카드 생성 skip
-            // 특정 키워드 정리 (전기기사 등)
-            if (sanitizedSubject === '전기기사') {
-              roundStr = roundStr.replace(/\s*(기출문제|전기기사)$/, '').trim();
+
+            // roundStr에서 연도 추출 시도 (전기기사처럼 round에 연도가 포함된 경우)
+            let examYear = String(y || '').replace(/[^0-9]/g, '').slice(0, 4);
+            if (!examYear) {
+              const yearInRound = roundStr.match(/(19|20)\d{2}/);
+              if (yearInRound) examYear = yearInRound[0];
             }
+
+            // 화이트리스트: 연도(4자리)와 회차(회|상시) 모두 있어야만 유효
+            if (!examYear) return; // 연도 불명 → skip
+            const hasRound = /(\d+\s*회|상시)/.test(roundStr);
+            if (!hasRound) return; // 회차 불명 → skip
+
+            // roundStr 정리: 연도·과목명·불필요 텍스트 제거 후 회차만 남기기
+            roundStr = roundStr
+              .replace(/(19|20)\d{2}년?\s*/g, '') // "2021년 " 제거
+              .replace(/\s*(기출문제|전기기사|과년도|출제문제|기출|기능사|기사)\S*/g, '') // 과목명 제거
+              .replace(/\s*\(.*?\)/g, '') // 괄호 내용 제거
+              .trim();
+
+            // 정리 후에도 회차 정보 없으면 skip
+            if (!/(회|상시)/.test(roundStr)) return;
+
             const suffix = (roundStr.includes('회') || roundStr.includes('상시')) ? '' : '회';
-            const examKey = y ? `${y}년 ${roundStr}${suffix}` : `${roundStr}${suffix}`;
+            const examKey = `${examYear}년 ${roundStr}${suffix}`;
             examsMap.set(examKey, (examsMap.get(examKey) || 0) + 1);
           }
         });
