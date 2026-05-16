@@ -303,6 +303,8 @@ export async function GET(req: NextRequest) {
                 existingQ.frequency = Math.max(Number(existingQ.frequency) || 0, Number(q.frequency));
               }
               if (!isStandardUnitFile) return;
+              // '기타' 단원 파일이 기존의 유효한 단원 분류를 덮어쓰지 않도록 방지
+              if (fileNameUnit === '기타' && existingQ.sub_unit && existingQ.sub_unit !== '기타') return;
             }
 
             const mainUnit = q.subject || "";

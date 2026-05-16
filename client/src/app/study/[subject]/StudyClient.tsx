@@ -67,6 +67,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   };
   const [isFinished, setIsFinished] = useState(false);
   const [direction, setDirection] = useState(0); // 1 for next, -1 for prev
+  const [isNavigatingNextSet, setIsNavigatingNextSet] = useState(false);
 
   const [reportOpen, setReportOpen] = useState(false);
   const [reportType, setReportType] = useState('');
@@ -439,6 +440,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
   const handleNextSet = () => {
     if (!setNum) return;
+    setIsNavigatingNextSet(true);
     const nextSet = parseInt(setNum) + 1;
     // URL 변경 후 강제 새로고침으로 데이터 리로드 보장
     const nextUrl = `/study/${params.subject}?unit=${encodeURIComponent(unitFilter || '')}&set=${nextSet}&size=${setSize || '30'}`;
@@ -690,6 +692,11 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   if (isFinished) {
     const correctCount = answers.filter(a => a.isCorrect).length;
     const score = Math.round((correctCount / questions.length) * 100);
+    const currentSetNum = setNum ? parseInt(setNum) : 1;
+    const currentSetSize = setSize ? parseInt(setSize) : 30;
+    const maxSetNum = Math.ceil(totalQuestions / currentSetSize);
+    const hasNextSet = setNum && (currentSetNum < maxSetNum);
+
     return (
       <div className="min-h-screen relative flex items-center justify-center p-6">
         <div className="mesh-bg" />
@@ -727,8 +734,29 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                 <XCircle className="w-5 h-5" /> 틀린 문제 다시 풀기 ({answers.filter(a => !a.isCorrect).length}문제)
               </button>
             )}
-            {setNum && <button onClick={handleNextSet} className="py-5 rounded-2xl bg-brand-600 text-white font-black text-lg hover:bg-brand-700 shadow-lg shadow-brand-500/20 transition-all flex items-center justify-center gap-2">다음 세트 <ChevronRight className="w-5 h-5" /></button>}
-            <button onClick={() => router.push(`/select-unit/${encodeURIComponent(subject)}`)} className={`py-5 rounded-2xl border-2 border-slate-100 text-slate-400 font-bold text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-2 ${!setNum ? 'col-span-1' : 'md:col-span-2'}`}><Home className="w-5 h-5" /> 단원 선택으로</button>
+            {hasNextSet && (
+              <button 
+                onClick={handleNextSet} 
+                disabled={isNavigatingNextSet}
+                className="py-5 rounded-2xl bg-brand-600 text-white font-black text-lg hover:bg-brand-700 shadow-lg shadow-brand-500/20 transition-all flex items-center justify-center gap-2 disabled:opacity-75 disabled:cursor-wait"
+              >
+                {isNavigatingNextSet ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" /> 다음 세트로 이동 중...
+                  </>
+                ) : (
+                  <>
+                    다음 세트 <ChevronRight className="w-5 h-5" />
+                  </>
+                )}
+              </button>
+            )}
+            <button 
+              onClick={() => router.push(`/select-unit/${encodeURIComponent(subject)}`)} 
+              className={`py-5 rounded-2xl border-2 border-slate-100 text-slate-400 font-bold text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-2 ${!hasNextSet ? 'col-span-1 md:col-span-2' : ''}`}
+            >
+              <Home className="w-5 h-5" /> 단원 선택으로
+            </button>
           </div>
         </motion.div>
       </div>
