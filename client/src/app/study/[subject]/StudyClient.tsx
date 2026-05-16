@@ -613,12 +613,21 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const getQuestionBadgeText = (q: any, idx: number) => {
     if (!q) return '';
     const num = q.question_num || q.number || idx + 1;
-    const yr = q.year && String(q.year) !== '0' && String(q.year) !== '0000' ? String(q.year) : '';
-    const rd = q.round ? String(q.round) : '';
+    let yr = q.year && String(q.year) !== '0' && String(q.year) !== '0000' ? String(q.year) : '';
+    let rd = q.round && String(q.round) !== 'undefined' && String(q.round) !== 'null' ? String(q.round) : '';
+
+    if ((!yr || !rd) && q.id) {
+      const parts = String(q.id).split('_');
+      const yrIdx = parts.findIndex((p: string) => /^(19|20)\d{2}$/.test(p));
+      if (yrIdx !== -1 && yrIdx < parts.length - 1) {
+        if (!yr) yr = parts[yrIdx];
+        if (!rd) rd = parts[yrIdx + 1];
+      }
+    }
 
     const parts = [];
-    if (yr) parts.push(`${yr}년`);
-    if (rd) {
+    if (yr && yr !== '0000') parts.push(`${yr}년`);
+    if (rd && rd !== 'undefined' && rd !== 'null') {
       if (!rd.includes('회') && !rd.includes('년') && !rd.includes('문제') && !isNaN(Number(rd))) {
         parts.push(`${Number(rd)}회`);
       } else {
@@ -636,12 +645,12 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     if (text.includes('<pre>') && text.includes('</pre>')) {
       const parts = text.split(/(<pre>[\s\S]*?<\/pre>)/g);
       return (
-        <div className="text-xl md:text-4xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">
+        <div className="text-xl md:text-4xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">
           {parts.map((part, i) => {
             if (part.startsWith('<pre>') && part.endsWith('</pre>')) {
               const codeContent = part.slice(5, -6).trim();
               return (
-                <div key={i} className="my-6 p-5 md:p-8 bg-[#f8fafc] border-2 border-slate-200 rounded-3xl text-left overflow-x-auto shadow-inner">
+                <div key={i} className="my-6 p-5 md:p-8 bg-[#f8fafc] border-2 border-slate-200 rounded-3xl text-left overflow-x-auto shadow-inner tracking-normal">
                   <pre className="font-mono text-sm md:text-xl text-slate-800 whitespace-pre-wrap leading-relaxed">{codeContent}</pre>
                 </div>
               );
@@ -655,12 +664,12 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     if (text.includes('```')) {
       const parts = text.split(/(```[\s\S]*?```)/g);
       return (
-        <div className="text-lg md:text-2xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">
+        <div className="text-lg md:text-2xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">
           {parts.map((part, i) => {
             if (part.startsWith('```') && part.endsWith('```')) {
               const codeContent = part.slice(3, -3).replace(/^[a-z]*\n/i, '').trim();
               return (
-                <div key={i} className="my-6 p-5 md:p-8 bg-[#f8fafc] border-2 border-slate-200 rounded-3xl text-left overflow-x-auto shadow-inner">
+                <div key={i} className="my-6 p-5 md:p-8 bg-[#f8fafc] border-2 border-slate-200 rounded-3xl text-left overflow-x-auto shadow-inner tracking-normal">
                   <pre className="font-mono text-sm md:text-xl text-slate-800 whitespace-pre-wrap leading-relaxed">{codeContent}</pre>
                 </div>
               );
@@ -677,10 +686,10 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       const codePart = text.slice(firstDoubleNewline + 2).trim();
       
       return (
-        <div className="text-lg md:text-2xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">
+        <div className="text-lg md:text-2xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">
           <span>{renderMath(questionPart)}</span>
           {codePart && (
-            <div className="my-6 p-5 md:p-8 bg-[#f8fafc] border-2 border-slate-200 rounded-3xl text-left overflow-x-auto shadow-inner">
+            <div className="my-6 p-5 md:p-8 bg-[#f8fafc] border-2 border-slate-200 rounded-3xl text-left overflow-x-auto shadow-inner tracking-normal">
               <pre className="font-mono text-sm md:text-xl text-slate-800 whitespace-pre-wrap leading-relaxed">{codePart}</pre>
             </div>
           )}
@@ -688,7 +697,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       );
     }
     
-    return <h2 className="text-lg md:text-2xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] word-break-keep-all">{renderMath(text)}</h2>;
+    return <h2 className="text-lg md:text-2xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">{renderMath(text)}</h2>;
   };
 
   const formatTime = (seconds: number) => {

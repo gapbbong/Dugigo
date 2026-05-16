@@ -53,7 +53,7 @@ export async function GET(req: NextRequest) {
     
     // 모든 JSON 파일 읽기 (단원 파일 우선순위 적용을 위해 정렬)
     const filesToLoad = allFiles
-          .filter(f => f.endsWith('.json') && !f.includes('_CLEAN') && !f.includes('.bak'))
+          .filter(f => f.endsWith('.json') && !f.toLowerCase().includes('master') && !f.includes('_CLEAN') && !f.includes('.bak') && !f.includes('_BACKUP'))
           .sort((a, b) => {
             const isAStandard = /^\d+\./.test(a);
             const isBStandard = /^\d+\./.test(b);
@@ -198,7 +198,7 @@ export async function GET(req: NextRequest) {
         const questions = Array.isArray(data) ? data : (data.questions || []);
         
         const fileNameUnit = file.replace(/\.json$/, '').trim();
-        const isStandardUnitFile = /^\d+\./.test(fileNameUnit);
+        const isStandardUnitFile = /^\d+\./.test(fileNameUnit) || fileNameUnit.includes("족집게");
 
         questions.forEach((q: any) => {
           const text = (q.question || '').trim();
@@ -230,8 +230,7 @@ export async function GET(req: NextRequest) {
 
           const mainUnit = q.subject || "";
           const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
-          // 전기기사는 파일명 기반 단원명을 최우선으로 사용하고, 불필요한 접두사 방지
-          const subUnit = (sanitizedSubject === '전기기사' || !mainUnit || baseSubUnit.includes(mainUnit)) ? baseSubUnit : `[${mainUnit}] ${baseSubUnit}`;
+          const subUnit = isStandardUnitFile ? fileNameUnit : ((sanitizedSubject === '전기기사' || !mainUnit || baseSubUnit.includes(mainUnit)) ? baseSubUnit : `[${mainUnit}] ${baseSubUnit}`);
 
           unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
           questionMap.set(qId, { ...q, subUnit: subUnit });

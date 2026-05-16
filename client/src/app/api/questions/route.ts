@@ -29,19 +29,80 @@ export async function GET(req: NextRequest) {
     const subject = sanitize(searchParams.get("subject"));
     const examFile = sanitize(searchParams.get("examFile"));
 
-    const scrub = (q: any) => {
-      let yr = (q.year || q.exam_year || '').toString();
-      let rd = (q.round || q.exam_round || '').toString();
+    const extractYearRound = (q: any, subj?: string) => {
+      let yr = (q.year || q.exam_year || '').toString().trim();
+      let rd = (q.round || q.exam_round || '').toString().trim();
+
+      if (yr === '0000' || yr === '0') yr = '';
+      if (rd === '0' || rd === 'null' || rd === 'undefined') rd = '';
+
+      if (q.round_info) {
+        if (!yr) {
+          const yearMatch = q.round_info.match(/(\d{4})년/);
+          if (yearMatch) yr = yearMatch[1];
+        }
+        if (!rd) {
+          const roundMatch = q.round_info.match(/(\d+)회/);
+          const sangsiMatch = q.round_info.match(/상시\s*(\d+)/);
+          if (roundMatch) rd = roundMatch[1];
+          else if (sangsiMatch) rd = `상시 ${sangsiMatch[1]}`;
+          else rd = q.round_info.replace(new RegExp(`${yr}년?`), '').trim();
+        }
+      }
+
+      if ((!yr || !rd) && q.id) {
+        const parts = q.id.split('_');
+        const yrIdx = parts.findIndex((p: string) => /^(19|20)\d{2}$/.test(p));
+        if (yrIdx !== -1) {
+          if (!yr) yr = parts[yrIdx];
+          if (!rd && yrIdx < parts.length - 1) {
+            const nextPart = parts[yrIdx + 1];
+            if (!isNaN(Number(nextPart))) rd = nextPart;
+          }
+        }
+      }
+
+      if ((!yr || !rd) && (q.round || q.id || '')) {
+        const str = `${q.round || ''} ${q.id || ''}`;
+        const dashMatch = str.match(/\b(19\d\d|20\d\d)-(\d+)\b/);
+        if (dashMatch) {
+          if (!yr) yr = dashMatch[1];
+          if (!rd) rd = dashMatch[2];
+        }
+      }
+
+      if ((!yr || !rd || yr === '20200704' || rd === '20200704') && (q.round || q.id || q.year || '')) {
+        const str = `${q.year || ''} ${q.round || ''} ${q.id || ''}`;
+        const ymdMatch = str.match(/\b(19\d\d|20\d\d)(\d{2})(\d{2})\b/);
+        if (ymdMatch && ymdMatch[0].length === 8) {
+          yr = ymdMatch[1];
+          rd = `${Number(ymdMatch[2])}월 ${Number(ymdMatch[3])}일`;
+        }
+      }
 
       if (!yr && rd) {
         const match = rd.match(/\b(19\d\d|20\d\d)\b/);
-        if (match) {
-          yr = match[1];
-        }
+        if (match) yr = match[1];
       }
       if (yr && rd.includes(`${yr}년`)) {
-        rd = rd.replace(`${yr}년`, '').replace(/기출문제|과년도출제문제|전기기사/g, '').trim();
+        rd = rd.replace(`${yr}년`, '').trim();
       }
+      if (yr && rd.startsWith(yr)) {
+        rd = rd.replace(yr, '').trim();
+      }
+
+      rd = rd.replace(/기출문제|과년도출제문제|전기기사|교사용|\(|\)/g, '').trim();
+
+      const s = (subj || '').replace(/\s/g, '');
+      if ((s.includes('한국사') || (!rd.includes('회') && !rd.includes('상시') && !rd.includes('월'))) && /^\d+$/.test(rd)) {
+        rd = `${rd}회`;
+      }
+
+      return { yr, rd };
+    };
+
+    const scrub = (q: any) => {
+      const { yr, rd } = extractYearRound(q, subject);
 
       return {
         id: q.metadata?.id || q.id || `${yr}_${rd}_${q.number || q.question_no || ''}`,
@@ -84,55 +145,7 @@ export async function GET(req: NextRequest) {
       const roundFilter = sanitize(searchParams.get("round"));
       const unitFilter = sanitize(searchParams.get("unit"));
 
-      // 1. 자동화설비(생산자동화)기능사 - 슈파베이스 처리 (단, 자주 나왔던 문항은 로컬 파일 우선)
-      const isFrequentRequest = unitFilter?.includes("자주") || false;
-      
-      if ((subject.includes('자동화설비') || subject.includes('생산자동화')) && !isFrequentRequest) {
-        if (!supabase) {
-          const { createClient } = await import('@supabase/supabase-js');
-          supabase = createClient(supabaseUrl!, SERVICE_ROLE_KEY!, {
-            global: {
-              fetch: (url, options) => {
-                const headers = new Headers(options?.headers);
-                if (supabaseUrl!.includes('ngrok-free.dev')) {
-                  headers.set('ngrok-skip-browser-warning', '1');
-                }
-                return fetch(url, { ...options, headers });
-              }
-            }
-          });
-        }
-
-        let query = supabase
-          .from('dukigo_exam_questions')
-          .select('*', { count: 'exact' })
-          .eq('subject_id', 'PRODUCTION_AUTO');
-
-        if (yearFilter) query = query.eq('exam_year', yearFilter);
-        if (roundFilter) query = query.eq('exam_round', roundFilter);
-        if (unitFilter) {
-          const cleanUnit = unitFilter.replace(/^\[.*?\]\s*/, '').replace(/\s*\(\d+부\)$/, '').trim();
-          query = query.filter('metadata->>sub_unit', 'ilike', `%${cleanUnit}%`);
-        }
-
-        const { data, error, count } = await query
-          .order('exam_year', { ascending: false })
-          .order('exam_round', { ascending: false })
-          .order('question_no', { ascending: true })
-          .range(start, start + limit - 1);
-
-        if (!error && data) {
-          return NextResponse.json({
-            subject,
-            total: count || data.length,
-            questions: data.map(scrub),
-            start,
-            limit
-          });
-        }
-      }
-
-      // 2. 원본 이름으로 시도
+      // 1. 원본 이름으로 시도
       let targetSubject = subject;
       const baseDataDir = path.resolve(process.cwd(), "src", "data");
       let dataDir = path.resolve(baseDataDir, targetSubject);
@@ -163,7 +176,7 @@ export async function GET(req: NextRequest) {
 
       // 모든 JSON 파일 읽기 (단원 파일 우선순위 적용을 위해 정렬)
       const filesToLoad = fs.readdirSync(dataDir)
-        .filter(file => file.endsWith('.json') && !file.includes('_CLEAN'))
+        .filter(file => file.endsWith('.json') && !file.toLowerCase().includes('master') && !file.includes('_CLEAN') && !file.includes('.bak') && !file.includes('_BACKUP'))
         .sort((a, b) => {
           const isAStandard = /^\d+\./.test(a);
           const isBStandard = /^\d+\./.test(b);
@@ -287,7 +300,7 @@ export async function GET(req: NextRequest) {
           const jsonData = JSON.parse(fileContent);
           
           const fileNameUnit = file.replace(/\.json$/, '').trim();
-          const isStandardUnitFile = /^\d+\./.test(fileNameUnit);
+          const isStandardUnitFile = /^\d+\./.test(fileNameUnit) || fileNameUnit.includes("족집게");
 
           let fileQuestions: any[] = [];
           if (Array.isArray(jsonData)) {
@@ -325,8 +338,7 @@ export async function GET(req: NextRequest) {
 
             const mainUnit = q.subject || "";
             const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
-            // 전기기사는 파일명 기반 단원명을 최우선으로 사용하고, 불필요한 접두사 방지
-            const subUnit = (sanitizedSubject === '전기기사' || !mainUnit || baseSubUnit.includes(mainUnit)) ? baseSubUnit : `[${mainUnit}] ${baseSubUnit}`;
+            const subUnit = isStandardUnitFile ? fileNameUnit : ((sanitizedSubject === '전기기사' || !mainUnit || baseSubUnit.includes(mainUnit)) ? baseSubUnit : `[${mainUnit}] ${baseSubUnit}`);
             
             questionMap.set(qId, {
               ...q,
@@ -422,20 +434,9 @@ export async function GET(req: NextRequest) {
 
       if (yearFilter || roundFilter) {
         sorted = sorted.filter(q => {
-          let y = q.year || '';
-          let r = q.round || q.id?.split('_')[1] || '';
-
-          if (subject === '컴퓨터활용능력 2급' && q.round_info) {
-            const yearMatch = q.round_info.match(/(\d{4})년/);
-            const roundMatch = q.round_info.match(/(\d+)회/);
-            const sangsiMatch = q.round_info.match(/상시\s*(\d+)/);
-            if (yearMatch) y = yearMatch[1];
-            if (roundMatch) r = roundMatch[1];
-            else if (sangsiMatch) r = `상시${sangsiMatch[1]}`;
-          }
-
-          const matchYear = !yearFilter || y.toString().replace(/\s/g, '').includes(yearFilter.toString());
-          const matchRound = !roundFilter || r.toString().replace(/\s/g, '').includes(roundFilter.toString());
+          const { yr, rd } = extractYearRound(q, subject);
+          const matchYear = !yearFilter || yr.toString().replace(/\s/g, '').includes(yearFilter.toString().replace(/\s/g, ''));
+          const matchRound = !roundFilter || rd.toString().replace(/\s/g, '').includes(roundFilter.toString().replace(/\s/g, ''));
           return matchYear && matchRound;
         });
       }
