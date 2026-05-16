@@ -152,7 +152,7 @@ export async function GET(req: NextRequest) {
           const isAStandard = /^\d+\./.test(a);
           const isBStandard = /^\d+\./.test(b);
           if (isAStandard && !isBStandard) return -1;
-          if (!isAStandard && isAStandard) return 1;
+          if (!isAStandard && isBStandard) return 1;
           return 0;
         });
 
@@ -304,7 +304,7 @@ export async function GET(req: NextRequest) {
               }
               if (!isStandardUnitFile) return;
               // '기타' 단원 파일이 기존의 유효한 단원 분류를 덮어쓰지 않도록 방지
-              if (fileNameUnit === '기타' && existingQ.sub_unit && existingQ.sub_unit !== '기타') return;
+              if (fileNameUnit.includes('기타') && existingQ.sub_unit && !existingQ.sub_unit.includes('기타')) return;
             }
 
             const mainUnit = q.subject || "";

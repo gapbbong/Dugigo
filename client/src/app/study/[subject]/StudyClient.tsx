@@ -252,8 +252,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     if (!paramsReady) return;
     const isYearMode = !!searchParamsProps?.year;
     
-    // rStart가 있으면 그것을 우선 사용, 없으면 setNum 기반 계산
-    const initialStart = rStart ? parseInt(rStart) : (parseInt(setNum || '1') - 1) * parseInt(setSize || '30');
+    // 단원별/빈출 쪼개기 시 API 내부 파트별 슬라이싱과 일치하도록 세트 번호 기반으로 오프셋 계산
+    const initialStart = (parseInt(setNum || '1') - 1) * parseInt(setSize || '30');
     const initialLimit = isYearMode ? 1000 : parseInt(setSize || '30');
     
     setLoading(true);
