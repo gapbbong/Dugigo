@@ -598,14 +598,39 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     if (!text) return '';
     // 선택지 번호(1., ①, (1)) 제거를 위한 정규식 추가
     const cleanText = text.replace(/^(\d+\.|①|②|③|④|⑤|\(\d+\))\s*/, '').replace(/\*\*/g, '');
+
+    // LaTeX 수식 정규화: JSON 인코딩 오류 및 이중 이스케이프 보정
+    const normalizeMath = (expr: string): string => {
+      return expr
+        // JSON \f escape로 form-feed(0x0C)가 된 \frac, \text 등 복원
+        .replace(/\x0crac/g, '\\frac')
+        .replace(/\x0cext/g, '\\text')
+        .replace(/\x0crightarrow/g, '\\rightarrow')
+        .replace(/\x0cleftarrow/g, '\\leftarrow')
+        // 이중 백슬래시 + LaTeX 명령 → 단일 백슬래시 (예: \\circ → \circ)
+        .replace(/\\\\(circ|alpha|beta|gamma|delta|epsilon|zeta|eta|theta|iota|kappa|lambda|mu|nu|xi|pi|rho|sigma|tau|upsilon|phi|chi|psi|omega|Omega|Phi|Psi|Sigma|Lambda|Delta|Gamma|Theta|cdot|times|div|pm|mp|leq|geq|neq|approx|equiv|sim|infty|partial|nabla|forall|exists|in|notin|subset|supset|cup|cap|wedge|vee|neg|rightarrow|leftarrow|leftrightarrow|Rightarrow|Leftarrow|sum|prod|int|oint|sqrt|log|ln|sin|cos|tan|lim|eta)/g, '\\$1');
+    };
+
     const regex = /(\$.*?\$|\\\(.*?\\\)|\\\[.*?\\\]|\\text\{.*?\}|\\\w+(\{.*?\})?)/g;
     const parts = cleanText.split(regex);
     return parts.map((part, i) => {
       if (!part) return null;
-      if (part.startsWith('$') && part.endsWith('$')) return <InlineMath key={i} math={part.slice(1, -1)} />;
-      if (part.startsWith('\\(') && part.endsWith('\\)')) return <InlineMath key={i} math={part.slice(2, -2)} />;
-      if (part.startsWith('\\[') && part.endsWith('\\]')) return <InlineMath key={i} math={part.slice(2, -2)} />;
-      if (part.startsWith('\\')) return <InlineMath key={i} math={part} />;
+      if (part.startsWith('$') && part.endsWith('$')) {
+        const expr = normalizeMath(part.slice(1, -1));
+        return <InlineMath key={i} math={expr} renderError={() => <span>{part.slice(1, -1)}</span>} />;
+      }
+      if (part.startsWith('\\(') && part.endsWith('\\)')) {
+        const expr = normalizeMath(part.slice(2, -2));
+        return <InlineMath key={i} math={expr} renderError={() => <span>{part.slice(2, -2)}</span>} />;
+      }
+      if (part.startsWith('\\[') && part.endsWith('\\]')) {
+        const expr = normalizeMath(part.slice(2, -2));
+        return <InlineMath key={i} math={expr} renderError={() => <span>{part.slice(2, -2)}</span>} />;
+      }
+      if (part.startsWith('\\')) {
+        const expr = normalizeMath(part);
+        return <InlineMath key={i} math={expr} renderError={() => <span>{part}</span>} />;
+      }
       return <span key={i}>{part}</span>;
     }).filter(Boolean);
   };

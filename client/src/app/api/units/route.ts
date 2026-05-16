@@ -52,8 +52,16 @@ export async function GET(req: NextRequest) {
     const hasMaster = !!masterFile;
     
     // 모든 JSON 파일 읽기 (단원 파일 우선순위 적용을 위해 정렬)
+    const hasStandardFiles = allFiles.some(f => /^0\d+\./.test(f) && f.endsWith('.json'));
     const filesToLoad = allFiles
-          .filter(f => f.endsWith('.json') && !f.toLowerCase().includes('master') && !f.includes('_CLEAN') && !f.includes('.bak') && !f.includes('_BACKUP'))
+          .filter(f => {
+            if (!f.endsWith('.json')) return false;
+            if (f.toLowerCase().includes('master')) return false;
+            if (f.includes('_CLEAN') || f.includes('.bak') || f.includes('_BACKUP')) return false;
+            // 표준 단원 파일(01~)이 있으면 99. 기타 등 잡동사니 파일 제외 (ID 충돌 방지)
+            if (hasStandardFiles && /^99\./.test(f)) return false;
+            return true;
+          })
           .sort((a, b) => {
             const isAStandard = /^\d+\./.test(a);
             const isBStandard = /^\d+\./.test(b);
@@ -250,7 +258,10 @@ export async function GET(req: NextRequest) {
           if (!r) r = q.id?.split('_')[1];
           if (r) {
             let roundStr = String(r).trim();
-            // 전기기사 등 특정 키워드가 포함된 경우만 정리 (다른 종목 피해 최소화)
+            // 오염된 round 값 필터링 (OCR 추출 실패로 들어간 N/A, Unknown 등)
+            const INVALID_ROUND = [/^N\/A$/i, /^not\s+visible/i, /^not\s+specified/i, /^unknown$/i, /^n\/a\s*-/i, /image/i];
+            if (INVALID_ROUND.some(p => p.test(roundStr))) return; // 카드 생성 skip
+            // 특정 키워드 정리 (전기기사 등)
             if (sanitizedSubject === '전기기사') {
               roundStr = roundStr.replace(/\s*(기출문제|전기기사)$/, '').trim();
             }

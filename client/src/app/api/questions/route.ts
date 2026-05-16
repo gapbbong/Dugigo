@@ -175,8 +175,17 @@ export async function GET(req: NextRequest) {
       const sanitizedSubject = targetSubject.replace(/\s/g, '');
 
       // 모든 JSON 파일 읽기 (단원 파일 우선순위 적용을 위해 정렬)
-      const filesToLoad = fs.readdirSync(dataDir)
-        .filter(file => file.endsWith('.json') && !file.toLowerCase().includes('master') && !file.includes('_CLEAN') && !file.includes('.bak') && !file.includes('_BACKUP'))
+      const allDataFiles = fs.readdirSync(dataDir);
+      const hasStandardFiles = allDataFiles.some(f => /^0\d+\./.test(f) && f.endsWith('.json'));
+      const filesToLoad = allDataFiles
+        .filter(file => {
+          if (!file.endsWith('.json')) return false;
+          if (file.toLowerCase().includes('master')) return false;
+          if (file.includes('_CLEAN') || file.includes('.bak') || file.includes('_BACKUP')) return false;
+          // 표준 단원 파일(01~)이 있으면 99. 기타 등 잡동사니 파일 제외 (ID 충돌 → 빈 세트 방지)
+          if (hasStandardFiles && /^99\./.test(file)) return false;
+          return true;
+        })
         .sort((a, b) => {
           const isAStandard = /^\d+\./.test(a);
           const isBStandard = /^\d+\./.test(b);

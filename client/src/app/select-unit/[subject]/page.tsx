@@ -334,8 +334,8 @@ export default function SelectUnitPage() {
                   onClick={() => handleSelectExam(exam)}
                   className="p-5 bg-white border border-slate-100 rounded-[1.5rem] hover:border-indigo-300 transition-all text-left group"
                 >
-                  <h4 className="text-sm font-black text-slate-800 mb-1 group-hover:text-indigo-600 transition-colors">{exam.name}</h4>
-                  <p className="text-[10px] font-black text-slate-400">{exam.count}문항</p>
+                  <h4 className="text-2xl font-black tracking-tighter text-slate-800 mb-1 group-hover:text-indigo-600 transition-colors">{exam.name}</h4>
+                  <p className="text-[9px] font-black uppercase text-slate-400">{exam.count}문항</p>
                 </button>
               ))}
             </div>
