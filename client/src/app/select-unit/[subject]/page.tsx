@@ -81,7 +81,7 @@ export default function SelectUnitPage() {
             setUserRole(profile.role?.toLowerCase() || 'student');
           }
         }
-        const res = await fetch(`/api/units?subject=${subject}`);
+        const res = await fetch(`/api/units?subject=${subject}&t=${Date.now()}`);
         const data = await res.json();
         setUnits(data.units || []);
         setExams(data.exams || []);
