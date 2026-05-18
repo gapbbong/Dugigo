@@ -17,7 +17,11 @@ import {
   Download,
   Share,
   PlusSquare,
-  FolderPlus
+  FolderPlus,
+  Key,
+  Lock,
+  AlertCircle,
+  X
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -48,6 +52,39 @@ export default function SelectSubjectPage() {
   const [randomQuote, setRandomQuote] = useState("");
   const [showGuide, setShowGuide] = useState(false);
   const [studentRank, setStudentRank] = useState<{ groupName: string, rank: number, total: number } | null>(null);
+
+  // 비밀번호 변경 모달 상태
+  const [showPwModal, setShowPwModal] = useState(false);
+  const [pwForm, setPwForm] = useState({ newPw: '', confirmPw: '' });
+  const [pwStatus, setPwStatus] = useState<{ type: 'idle' | 'loading' | 'success' | 'error'; message: string }>({ type: 'idle', message: '' });
+
+  const handleUpdatePassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!pwForm.newPw || pwForm.newPw.length < 6) {
+      setPwStatus({ type: 'error', message: '새 비밀번호는 6글자 이상이어야 합니다.' });
+      return;
+    }
+    if (pwForm.newPw !== pwForm.confirmPw) {
+      setPwStatus({ type: 'error', message: '새 비밀번호 확인이 일치하지 않습니다.' });
+      return;
+    }
+
+    setPwStatus({ type: 'loading', message: '비밀번호를 변경하고 있습니다...' });
+    try {
+      const { error } = await supabase.auth.updateUser({ password: pwForm.newPw });
+      if (error) throw error;
+
+      setPwStatus({ type: 'success', message: '비밀번호가 성공적으로 변경되었습니다! 창을 닫습니다.' });
+      setTimeout(() => {
+        setShowPwModal(false);
+        setPwForm({ newPw: '', confirmPw: '' });
+        setPwStatus({ type: 'idle', message: '' });
+      }, 1500);
+    } catch (err: any) {
+      console.error('[UPDATE_PW_ERROR]', err);
+      setPwStatus({ type: 'error', message: err.message || '비밀번호 변경 중 오류가 발생했습니다.' });
+    }
+  };
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (e: any) => {
@@ -203,6 +240,13 @@ export default function SelectSubjectPage() {
                 대시보드
               </Link>
             )}
+            <button
+              onClick={() => setShowPwModal(true)}
+              className="text-xs md:text-sm text-slate-600 hover:text-brand-600 font-black transition-all px-2.5 py-1.5 bg-white/80 hover:bg-white rounded-xl border border-slate-200 shadow-sm flex items-center gap-1.5 whitespace-nowrap"
+            >
+              <Key size={15} className="text-brand-500" />
+              비밀번호 변경
+            </button>
             <div className="w-px h-4 bg-slate-200 mx-1 md:mx-2" />
             <button 
               onClick={() => supabase.auth.signOut().then(() => router.push('/login'))} 
@@ -337,6 +381,84 @@ export default function SelectSubjectPage() {
               </div>
 
               <button onClick={() => setShowGuide(false)} className="w-full py-5 bg-brand-600 hover:bg-brand-700 text-white font-black rounded-2xl transition-all text-xl mt-6 shadow-lg shadow-brand-600/20">확인했습니다</button>
+            </motion.div>
+          </>
+        )}
+
+        {/* 비밀번호 변경 모달 */}
+        {showPwModal && (
+          <>
+            <motion.div 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              exit={{ opacity: 0 }} 
+              onClick={() => setShowPwModal(false)} 
+              className="fixed inset-0 z-[100] bg-slate-900/60 backdrop-blur-sm" 
+            />
+            <motion.div 
+              initial={{ scale: 0.95, opacity: 0, y: 20 }} 
+              animate={{ scale: 1, opacity: 1, y: 0 }} 
+              exit={{ scale: 0.95, opacity: 0, y: 20 }} 
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[101] w-full max-w-[440px] bg-white rounded-[2.5rem] p-8 md:p-10 shadow-2xl border border-slate-100 text-slate-900"
+            >
+              <div className="flex justify-between items-center mb-6">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center font-black">
+                    <Key size={20} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-black tracking-tight text-slate-900">비밀번호 변경</h3>
+                    <p className="text-xs font-bold text-slate-400">안전한 계정 관리를 위해 비밀번호를 재설정하세요</p>
+                  </div>
+                </div>
+                <button onClick={() => setShowPwModal(false)} className="text-slate-400 hover:text-slate-600 p-1">
+                  <X size={20} />
+                </button>
+              </div>
+
+              <form onSubmit={handleUpdatePassword} className="space-y-4">
+                <div>
+                  <label className="block text-xs font-black text-slate-600 mb-1.5 pl-1">새 비밀번호 <span className="text-rose-500 font-bold">(6자 이상)</span></label>
+                  <div className="relative">
+                    <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"><Lock size={18} /></div>
+                    <input
+                      type="password"
+                      placeholder="새로운 비밀번호 입력"
+                      value={pwForm.newPw}
+                      onChange={e => setPwForm({ ...pwForm, newPw: e.target.value })}
+                      className="w-full bg-slate-50 border-2 border-transparent focus:border-brand-500/30 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold placeholder:text-slate-400 focus:outline-none focus:bg-white transition-all shadow-sm"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-black text-slate-600 mb-1.5 pl-1">새 비밀번호 확인</label>
+                  <div className="relative">
+                    <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"><Lock size={18} /></div>
+                    <input
+                      type="password"
+                      placeholder="비밀번호 다시 입력"
+                      value={pwForm.confirmPw}
+                      onChange={e => setPwForm({ ...pwForm, confirmPw: e.target.value })}
+                      className="w-full bg-slate-50 border-2 border-transparent focus:border-brand-500/30 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold placeholder:text-slate-400 focus:outline-none focus:bg-white transition-all shadow-sm"
+                    />
+                  </div>
+                </div>
+
+                {pwStatus.type !== 'idle' && (
+                  <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className={`p-4 rounded-xl text-xs font-bold flex items-center gap-2 ${pwStatus.type === 'error' ? 'bg-rose-50 text-rose-600' : pwStatus.type === 'success' ? 'bg-emerald-50 text-emerald-600' : 'bg-brand-50 text-brand-600'}`}>
+                    <AlertCircle size={16} className="shrink-0" />
+                    {pwStatus.message}
+                  </motion.div>
+                )}
+
+                <button
+                  disabled={pwStatus.type === 'loading'}
+                  className="w-full btn-primary font-black py-4 rounded-xl transition-all flex items-center justify-center gap-2 mt-6 h-14 text-sm shadow-lg shadow-brand-500/20 disabled:opacity-70"
+                >
+                  {pwStatus.type === 'loading' ? '변경 중...' : '비밀번호 변경 확정'}
+                </button>
+              </form>
             </motion.div>
           </>
         )}

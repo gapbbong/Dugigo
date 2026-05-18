@@ -105,6 +105,27 @@ export default function LoginPage() {
                 onSubmit={handleLogin} 
                 className="space-y-5"
               >
+                {/* 클라우드 이전 공지 배너 */}
+                <motion.div 
+                  initial={{ opacity: 0, y: -10 }} 
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mb-6 p-4.5 bg-amber-50 border border-amber-200/80 rounded-2xl shadow-sm text-left"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 bg-amber-500 text-white rounded-xl shadow-md shadow-amber-500/20 shrink-0 mt-0.5">
+                      <AlertCircle className="w-5 h-5" strokeWidth={2.5} />
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-black text-amber-900 tracking-tight flex items-center gap-1.5 mb-1">
+                        📢 서버 클라우드 공식 이전 안내
+                      </h3>
+                      <p className="text-xs font-bold text-amber-800 leading-relaxed tracking-tight">
+                        기존 가입자분들의 원활한 접속을 위해 비밀번호가 <span className="px-1.5 py-0.5 bg-white text-amber-900 font-black rounded-md shadow-sm border border-amber-200 inline-block font-mono">Dugigo1234!</span> 로 초기화되었습니다. 로그인 후 상단의 <span className="font-black text-amber-950 underline underline-offset-2">비밀번호 변경</span> 메뉴에서 언제든 변경 가능합니다.
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+
                 <div className="space-y-4">
                   <InputGroup 
                     icon={<Mail className="w-5 h-5" />} 
