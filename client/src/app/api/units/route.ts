@@ -260,6 +260,9 @@ export async function GET(req: NextRequest) {
           if (!r) r = q.id?.split('_')[1];
           if (r) {
             let roundStr = String(r).trim();
+            if (/^\d+$/.test(roundStr)) {
+              roundStr = `${roundStr}회`;
+            }
 
             // roundStr에서 연도 추출 시도 (전기기사처럼 round에 연도가 포함된 경우)
             let examYear = String(y || '').replace(/[^0-9]/g, '').slice(0, 4);
@@ -279,6 +282,10 @@ export async function GET(req: NextRequest) {
               .replace(/\s*(기출문제|전기기사|과년도|출제문제|기출|기능사|기사)\S*/g, '') // 과목명 제거
               .replace(/\s*\(.*?\)/g, '') // 괄호 내용 제거
               .trim();
+
+            if (/^\d+$/.test(roundStr)) {
+              roundStr = `${roundStr}회`;
+            }
 
             // 정리 후에도 회차 정보 없으면 skip
             if (!/(회|상시)/.test(roundStr)) return;
