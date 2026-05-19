@@ -31,19 +31,24 @@ export async function GET(req: NextRequest) {
   const cleanUnit = unit.replace(/\s*\(\d+부\)$/, '').trim();
   const safeUnitName = cleanUnit.replace(/[^a-z0-9가-힣]/gi, '_');
   const summaryFileName = `${safeUnitName}_${set}세트.json`;
+  const fallbackFileName = `${cleanUnit.replace(/^\d+\.\s*/, '').replace(/[^a-z0-9가-힣]/gi, '_')}_${set}세트.json`;
 
   const summariesBase = path.join(process.cwd(), 'public', 'summaries');
   const srcSummariesBase = path.join(process.cwd(), 'src', 'summaries');
   
   const publicPath = path.join(summariesBase, subject, summaryFileName);
+  const fallbackPublicPath = path.join(summariesBase, subject, fallbackFileName);
   const srcPath = path.join(srcSummariesBase, subject, summaryFileName);
+  const fallbackSrcPath = path.join(srcSummariesBase, subject, fallbackFileName);
   
   // Verify path is within allowed base directories
   if (!publicPath.startsWith(summariesBase) && !srcPath.startsWith(srcSummariesBase)) {
     return NextResponse.json({ error: "Access denied" }, { status: 403 });
   }
 
-  const summaryPath = fs.existsSync(publicPath) ? publicPath : srcPath;
+  const summaryPath = fs.existsSync(publicPath) ? publicPath : 
+                    (fs.existsSync(fallbackPublicPath) ? fallbackPublicPath : 
+                    (fs.existsSync(srcPath) ? srcPath : fallbackSrcPath));
 
   if (fs.existsSync(summaryPath)) {
     try {
