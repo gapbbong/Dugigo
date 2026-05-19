@@ -119,6 +119,21 @@ export async function GET(req: NextRequest) {
           if (/저압전기설비|고압전기설비|보안거리|가공전선|옥내배선|이격거리/.test(text)) return "18. 저압/고압/특고압 전기설비(KEC)";
           if (/전기철도|분산형|신재생|전기저장장치|태양광/.test(text)) return "19. 전기철도 및 분산형 전원(KEC)";
         }
+        if (subject === '전기기사') {
+          if (/자기|자계|전계|유전체/.test(text)) return "01. 전기자기학";
+          if (/송전|배전|발전|변전/.test(text)) return "02. 전력공학";
+          if (/변압기|유도기|직류기|동기기/.test(text)) return "03. 전기기기";
+          if (/회로|라플라스|전달함수/.test(text)) return "04. 회로이론 및 제어공학";
+          if (/KEC|설비|기술기준/.test(text)) return "05. 전기설비기술기준";
+          if (q.subject) {
+            if (q.subject.includes("자기")) return "01. 전기자기학";
+            if (q.subject.includes("전력")) return "02. 전력공학";
+            if (q.subject.includes("기기")) return "03. 전기기기";
+            if (q.subject.includes("회로")) return "04. 회로이론 및 제어공학";
+            if (q.subject.includes("설비")) return "05. 전기설비기술기준";
+          }
+          return "01. 전기자기학";
+        }
         return q.sub_unit || q.subject || "";
       };
 

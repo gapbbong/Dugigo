@@ -597,7 +597,13 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const renderMath = (text: string) => {
     if (!text) return '';
     // 선택지 번호(1., ①, (1)) 제거를 위한 정규식 추가
-    const cleanText = text.replace(/^(\d+\.|①|②|③|④|⑤|\(\d+\))\s*/, '').replace(/\*\*/g, '');
+    let cleanText = text.replace(/^(\d+\.|①|②|③|④|⑤|\(\d+\))\s*/, '').replace(/\*\*/g, '');
+
+    if (!cleanText.includes('$') && !cleanText.includes('\\(') && !cleanText.includes('\\[') && !/[가-힣]/.test(cleanText)) {
+      if (/\\(frac|sqrt|mu|pi|epsilon|omega|theta|phi|times|cdot|int|sum|alpha|beta|gamma|delta|sigma|Delta|Omega|sim|approx|neq|leq|geq|pm|mp|circ)/.test(cleanText) || /[\^_]/.test(cleanText)) {
+        cleanText = `$${cleanText}$`;
+      }
+    }
 
     // LaTeX 수식 정규화: JSON 인코딩 오류 및 이중 이스케이프 보정
     const normalizeMath = (expr: string): string => {
@@ -611,7 +617,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         .replace(/\\\\(circ|alpha|beta|gamma|delta|epsilon|zeta|eta|theta|iota|kappa|lambda|mu|nu|xi|pi|rho|sigma|tau|upsilon|phi|chi|psi|omega|Omega|Phi|Psi|Sigma|Lambda|Delta|Gamma|Theta|cdot|times|div|pm|mp|leq|geq|neq|approx|equiv|sim|infty|partial|nabla|forall|exists|in|notin|subset|supset|cup|cap|wedge|vee|neg|rightarrow|leftarrow|leftrightarrow|Rightarrow|Leftarrow|sum|prod|int|oint|sqrt|log|ln|sin|cos|tan|lim|eta)/g, '\\$1');
     };
 
-    const regex = /(\$.*?\$|\\\(.*?\\\)|\\\[.*?\\\]|\\text\{.*?\}|\\\w+(\{.*?\})?)/g;
+    const regex = /(\$.*?\$|\\\(.*?\\\)|\\\[.*?\\\]|\\text\{.*?\}|\\\w+(\{.*?\})*)/g;
     const parts = cleanText.split(regex);
     return parts.map((part, i) => {
       if (!part) return null;
@@ -1244,7 +1250,12 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                         style={{ animation: 'float 3s ease-in-out infinite' }} 
                         className="flex justify-center items-center drop-shadow-2xl select-none w-full h-full"
                       >
-                        {slideData[currentSlideIdx].image ? (
+                        {slideData[currentSlideIdx].svg ? (
+                          <div 
+                            dangerouslySetInnerHTML={{ __html: slideData[currentSlideIdx].svg }} 
+                            className="w-full h-full max-h-[180px] md:max-h-[300px] flex items-center justify-center [&>svg]:w-full [&>svg]:h-full [&>svg]:max-h-[300px] p-4 bg-white/80 rounded-[2rem] shadow-2xl border-4 border-white/80"
+                          />
+                        ) : slideData[currentSlideIdx].image ? (
                           <img 
                             src={slideData[currentSlideIdx].image} 
                             alt={slideData[currentSlideIdx].title}

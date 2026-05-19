@@ -1,0 +1,57 @@
+{
+  "subject": "전기기사",
+  "unit": "전기자기학",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "전계의 세기와 등전위선",
+      "content": "전위는 산의 높이, 전계는 경사도와 같습니다! 전위함수를 기울기(-grad V) 미분하면 전계의 세기가 되며, 등전위선은 전계와 항상 수직으로 직교합니다.",
+      "visual": "전계 벡터와 등전위선의 직교 도식",
+      "exam_point": "- 전계의 세기 E = -grad V\n- 등전위면과 전기력선은 항상 수직(90도)으로 교차\n- 전위가 높은 곳에서 낮은 곳으로 향함",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#3b82f6\"/><stop offset=\"100%\" stop-color=\"#1d4ed8\"/></linearGradient></defs><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g fill=\"none\" stroke-width=\"3\"><ellipse cx=\"200\" cy=\"125\" rx=\"140\" ry=\"70\" stroke=\"#cbd5e1\" stroke-dasharray=\"8 8\"/><ellipse cx=\"200\" cy=\"125\" rx=\"90\" ry=\"45\" stroke=\"#94a3b8\" stroke-dasharray=\"6 6\"/><ellipse cx=\"200\" cy=\"125\" rx=\"40\" ry=\"20\" stroke=\"#64748b\" stroke-dasharray=\"4 4\"/></g><g stroke=\"#ef4444\" stroke-width=\"4\" stroke-linecap=\"round\"><line x1=\"200\" y1=\"125\" x2=\"320\" y2=\"35\"/><polygon points=\"320,35 308,38 316,48\" fill=\"#ef4444\"/><line x1=\"200\" y1=\"125\" x2=\"80\" y2=\"215\"/><polygon points=\"80,215 92,212 84,202\" fill=\"#ef4444\"/></g><circle cx=\"200\" cy=\"125\" r=\"12\" fill=\"#ef4444\"/><text x=\"194\" y=\"130\" fill=\"white\" font-weight=\"bold\" font-family=\"sans-serif\" font-size=\"14\">+</text><text x=\"330\" y=\"30\" fill=\"#ef4444\" font-weight=\"bold\" font-family=\"sans-serif\" font-size=\"16\">전계 E</text><text x=\"310\" y=\"190\" fill=\"#475569\" font-weight=\"bold\" font-family=\"sans-serif\" font-size=\"16\">등전위선 (90° 직교)</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🛡️",
+      "title": "피뢰설비 수뢰부 시스템",
+      "content": "건물에 내리치는 직격뢰를 안전하게 포착하여 대지로 흘려보내는 든든한 방패입니다! 돌침, 수평도체, 메시도체를 단독 또는 조합하여 시설합니다.",
+      "visual": "건물 상단의 수뢰부 시스템 구성 도식",
+      "exam_point": "- 수뢰부 3대 요소: 돌침, 수평도체, 메시도체\n- 뇌격점의 뇌전류를 대지로 안전하게 방전시키는 목적\n- 불꽃방전에 의한 화재 및 폭발 방지",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"100\" y=\"120\" width=\"200\" height=\"110\" fill=\"#cbd5e1\" rx=\"6\"/><path d=\"M80 120 L320 120 L300 90 L100 90 Z\" fill=\"#64748b\"/><line x1=\"200\" y1=\"90\" x2=\"200\" y2=\"40\" stroke=\"#f59e0b\" stroke-width=\"6\" stroke-linecap=\"round\"/><polygon points=\"200,30 194,42 206,42\" fill=\"#f59e0b\"/><line x1=\"120\" y1=\"85\" x2=\"280\" y2=\"85\" stroke=\"#3b82f6\" stroke-width=\"4\"/><path d=\"M200 30 Q170 10 140 30\" stroke=\"#fbbf24\" stroke-width=\"3\" stroke-dasharray=\"4\" fill=\"none\"/><text x=\"220\" y=\"55\" fill=\"#b45309\" font-weight=\"bold\" font-family=\"sans-serif\" font-size=\"16\">돌침 (수뢰부)</text><text x=\"230\" y=\"105\" fill=\"white\" font-weight=\"bold\" font-family=\"sans-serif\" font-size=\"14\">수평도체 / 메시도체</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🧲",
+      "title": "자화의 세기와 비투자율",
+      "content": "자성체가 외부 자계에 반응하여 스스로 자석이 되려는 성질입니다! 전체 자속밀도에서 진공의 자계를 뺀 값으로, 비투자율이 클수록 강하게 자화됩니다.",
+      "visual": "자성체 내부 자화 세기 도식",
+      "exam_point": "- 자화의 세기 J = B - μ0 H = μ0(μs - 1)H\n- 비투자율(μs)이 큰 철심일수록 자속밀도가 급증\n- 단위: Wb/m² (자속밀도와 단위 동일)",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"70\" y=\"80\" width=\"260\" height=\"90\" rx=\"15\" fill=\"#e0e7ff\" stroke=\"#6366f1\" stroke-width=\"4\"/><g stroke=\"#6366f1\" stroke-width=\"4\" stroke-linecap=\"round\"><line x1=\"110\" y1=\"125\" x2=\"170\" y2=\"125\"/><polygon points=\"175,125 165,120 165,130\" fill=\"#6366f1\"/><line x1=\"210\" y1=\"125\" x2=\"270\" y2=\"125\"/><polygon points=\"275,125 265,120 265,130\" fill=\"#6366f1\"/></g><text x=\"130\" y=\"115\" fill=\"#4f46e5\" font-weight=\"bold\" font-family=\"sans-serif\" font-size=\"20\">N</text><text x=\"230\" y=\"115\" fill=\"#ef4444\" font-weight=\"bold\" font-family=\"sans-serif\" font-size=\"20\">S</text><text x=\"110\" y=\"60\" fill=\"#334155\" font-weight=\"bold\" font-family=\"sans-serif\" font-size=\"18\">자화의 세기 J = μ0(μs - 1)H</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "🌀",
+      "title": "동심구도체의 정전용량",
+      "content": "도체의 기하학적 모양에 따라 전하를 저장하는 용량이 결정됩니다! 동심구 콘덴서의 안팎 반지름을 각각 5배로 늘리면 정전용량도 정확히 5배 커집니다.",
+      "visual": "내외 반지름과 정전용량 비례 도식",
+      "exam_point": "- 동심구 정전용량 C = 4πε0 ab / (b - a)\n- 반지름 a, b가 각각 N배 증가하면 정전용량도 N배 증가\n- 도체 사이의 간격이 좁을수록 용량 급증",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><circle cx=\"200\" cy=\"125\" r=\"80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><circle cx=\"200\" cy=\"125\" r=\"40\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><line x1=\"200\" y1=\"125\" x2=\"240\" y2=\"125\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"212\" y=\"120\" fill=\"#1e293b\" font-weight=\"bold\" font-family=\"sans-serif\" font-size=\"14\">a</text><line x1=\"200\" y1=\"125\" x2=\"143\" y2=\"68\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"160\" y=\"88\" fill=\"#1e293b\" font-weight=\"bold\" font-family=\"sans-serif\" font-size=\"14\">b</text><text x=\"120\" y=\"230\" fill=\"#2563eb\" font-weight=\"bold\" font-family=\"sans-serif\" font-size=\"16\">정전용량 C ∝ 반지름 크기</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🔋",
+      "title": "정전에너지 밀도와 유전체",
+      "content": "유전체 내부에 저장되는 에너지 밀도는 전계가 일정할 때 비유전율에 비례합니다. 따라서 비유전율이 큰 유전재료일수록 더 많은 에너지를 품을 수 있습니다!",
+      "visual": "유전율에 따른 정전에너지 저장 도식",
+      "exam_point": "- 정전에너지 밀도 w = 1/2 ε E² [J/m³]\n- 전계 E가 일정할 때 에너지 밀도는 유전율 ε에 정비례\n- 비유전율이 10인 유전체는 진공보다 10배 많은 에너지 축적",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"80\" y=\"100\" width=\"240\" height=\"80\" rx=\"10\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"4\"/><g fill=\"#d97706\"><polygon points=\"120,130 135,115 130,135 145,135 125,160 130,140 115,140\"/><polygon points=\"180,130 195,115 190,135 205,135 185,160 190,140 175,140\"/><polygon points=\"240,130 255,115 250,135 265,135 245,160 250,140 235,140\"/></g><text x=\"125\" y=\"70\" fill=\"#b45309\" font-weight=\"bold\" font-family=\"sans-serif\" font-size=\"20\">에너지 밀도 w = 1/2 ε E²</text><text x=\"135\" y=\"215\" fill=\"#475569\" font-weight=\"bold\" font-family=\"sans-serif\" font-size=\"16\">비유전율(εs)에 비례</text></svg>"
+    }
+  ]
+}
