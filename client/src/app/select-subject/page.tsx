@@ -102,8 +102,9 @@ export default function SelectSubjectPage() {
     }
 
     async function init() {
-      const { data: { user: currentUser } } = await supabase.auth.getUser();
-      if (!currentUser) {
+      const { data: { user: currentUser }, error } = await supabase.auth.getUser();
+      if (!currentUser || error) {
+        await supabase.auth.signOut(); // 파편화된 옛날 로컬 세션 완전 파기
         router.push('/login');
         return;
       }

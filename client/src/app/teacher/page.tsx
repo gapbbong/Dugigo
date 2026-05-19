@@ -59,8 +59,9 @@ export default function TeacherDashboard() {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) {
+      const { data: { user }, error } = await supabase.auth.getUser();
+      if (!user || error) {
+        await supabase.auth.signOut(); // 무효화된 로컬 세션 찌꺼기 삭제
         window.location.href = '/login';
         return;
       }
