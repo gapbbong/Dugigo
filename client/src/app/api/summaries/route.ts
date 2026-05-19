@@ -142,8 +142,48 @@ export async function GET(req: NextRequest) {
         return q.sub_unit || q.subject || "";
       };
 
-      const filteredByUnit = allQuestions.filter((q: any) => classify(q) === cleanUnit || !unit);
-      const setQuestions = filteredByUnit.slice((parseInt(set) - 1) * size, parseInt(set) * size);
+      let filteredByUnit: any[] = [];
+      if (cleanUnit.includes("자주 나왔던 문항")) {
+        const freqCountMap = new Map<string, number>();
+        const normalizeText = (t: string) => (t || '').replace(/\s+/g, '').replace(/[^\w가-힣]/g, '').toLowerCase();
+        
+        allQuestions.forEach((q: any) => {
+          const norm = normalizeText(q.question);
+          if (norm) {
+            freqCountMap.set(norm, (freqCountMap.get(norm) || 0) + 1);
+          }
+        });
+
+        const uniqueFreqMap = new Map<string, any>();
+        allQuestions.forEach((q: any) => {
+          const norm = normalizeText(q.question);
+          const freq = Math.max(Number(q.frequency) || 0, freqCountMap.get(norm) || 1);
+          if (freq >= 2) {
+            const cleanChoices = (q.choices || []).map((c: string) => normalizeText(c)).join("|");
+            const contentKey = `${norm}_${cleanChoices}`;
+            if (!uniqueFreqMap.has(contentKey)) {
+              uniqueFreqMap.set(contentKey, { ...q, frequency: freq });
+            }
+          }
+        });
+
+        const sortedFreq = Array.from(uniqueFreqMap.values())
+          .sort((a, b) => (b.frequency || 0) - (a.frequency || 0));
+
+        const match = cleanUnit.match(/공략\s*(\d+)/);
+        const partIdx = match ? parseInt(match[1]) - 1 : 0;
+        
+        const startIdx = partIdx * 30;
+        const endIdx = startIdx + 30;
+        filteredByUnit = sortedFreq.slice(startIdx, endIdx);
+      } else {
+        filteredByUnit = allQuestions.filter((q: any) => classify(q) === cleanUnit || !unit);
+      }
+
+      const setQuestions = cleanUnit.includes("자주 나왔던 문항") 
+        ? filteredByUnit 
+        : filteredByUnit.slice((parseInt(set) - 1) * size, parseInt(set) * size);
+        
       const uniqueQuestions = Array.from(new Map(setQuestions.map((q: any) => [q.question, q])).values());
       contextQuestions = JSON.stringify(uniqueQuestions);
     }
