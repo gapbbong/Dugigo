@@ -1,0 +1,57 @@
+{
+  "subject": "전기기사 필기",
+  "unit": "회로이론_및_제어공학",
+  "set": 7,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "⚖️",
+      "title": "시스템의 안정을 결정하는 경계선! 루스 안정도와 허수축 교차점",
+      "content": "제어 시스템이 폭주하지 않고 안정하려면 모든 특성방정식의 근이 S평면의 좌반면에 존재해야 합니다. 시스템이 안정을 유지할 수 있는 아슬아슬한 한계점을 바로 '허수축 교차점'이라고 부릅니다. 루스 판정법의 첫 번째 열이 모두 양수여야 안정하며, 특정 줄이 0이 되는 순간의 K값에서 바로 시스템이 허수축과 만나 진동하게 됩니다.",
+      "visual": "S평면(s-plane)에서 안정 영역인 좌반면과 불안정 영역인 우반면, 그리고 그 경계인 허수축(jω) 교차점을 보여주는 도식",
+      "exam_point": "루스 표에서 s^1 행을 0으로 만드는 K를 구한 뒤, 바로 윗행(s^2)의 보조방정식 As^2 + B = 0을 풀어 교차 주파수 ω = sqrt(B/A)를 찾아내는 것이 핵심 합격 공식입니다!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"125\" x2=\"350\" y2=\"125\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"230\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"210\" y=\"35\" fill=\"#475569\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">jω (Imaginary)</text><text x=\"310\" y=\"145\" fill=\"#475569\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">σ (Real)</text><path d=\"M 80 80 Q 140 80 200 125 T 320 170\" fill=\"none\" stroke=\"#6366f1\" stroke-width=\"4\"/><circle cx=\"200\" cy=\"125\" r=\"8\" fill=\"#f43f5e\"/><text x=\"215\" y=\"120\" fill=\"#f43f5e\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">교차점 (s = jω)</text><text x=\"60\" y=\"70\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">안정 영역 (LHP)</text><text x=\"260\" y=\"210\" fill=\"#ef4444\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">불안정 영역 (RHP)</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "신호가 급격히 꺾이는 필터의 경계선, 절점 주파수",
+      "content": "1차 지연요소는 입력된 신호가 출력에 서서히 반영되는 일종의 댐퍼나 그릇과 같습니다. 여기서 '절점 주파수'는 신호의 실수부 크기와 허수부 크기가 정확히 같아지는 운명의 주파수입니다. 이 주파수를 기점으로 시스템의 반응 속도와 이득이 급격하게 감소하며 꺾이기 때문에, 신호를 걸러내는 필터의 기준선 역할을 합니다.",
+      "visual": "이득 곡선이 평탄하게 유지되다가 절점 주파수를 기점으로 아래로 급격히 꺾여 내려가는 주파수 응답(보드선도) 그래프",
+      "exam_point": "전달함수 G(js) = k / (js + a) 형태에서 절점 주파수는 실수부와 허수부가 같아지는 지점이므로 주파수 ω = a 입니다. s 옆에 더해진 상수를 바로 찾으세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 50 60 L 220 60 Q 260 60 350 180\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><line x1=\"220\" y1=\"30\" x2=\"220\" y2=\"220\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"4\"/><circle cx=\"220\" cy=\"60\" r=\"6\" fill=\"#f59e0b\"/><text x=\"50\" y=\"45\" fill=\"#64748b\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">이득 [dB]</text><text x=\"300\" y=\"230\" fill=\"#64748b\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">주파수 [log ω]</text><text x=\"230\" y=\"45\" fill=\"#d97706\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">절점 주파수 ω = a</text><text x=\"80\" y=\"100\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">평탄 구간 (실수=허수)</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🧩",
+      "title": "복잡한 논리 회로를 심플하게! 불 대수 정리",
+      "content": "컴퓨터의 디지털 뇌를 설계할 때 수많은 논리 게이트를 그대로 쓰면 비용도 비싸고 느려집니다. 불 대수(Boolean Algebra)를 이용하면 복잡한 가계부의 영수증을 합치듯 논리식을 아주 우아하게 다이어트할 수 있습니다. 겹치는 조건들을 공통인수로 묶고 무의미한 중복을 제거하면 동일한 동작을 하는 가장 간단한 회로가 탄생합니다.",
+      "visual": "A와 B 두 개의 논리 집합 영역이 겹쳐져 합집합과 교집합을 나타내며 식으로 간소화되는 벤다이어그램 도식",
+      "exam_point": "가장 중요한 흡수 공식 A + A_bar B = A + B 와 분배 법칙을 외우세요! 공통 인수가 보이면 무조건 묶어서 1이나 0으로 만드는 연습이 합격 지름길입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><circle cx=\"160\" cy=\"110\" r=\"55\" fill=\"#3b82f6\" fill-opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"3\"/><circle cx=\"240\" cy=\"110\" r=\"55\" fill=\"#10b981\" fill-opacity=\"0.15\" stroke=\"#10b981\" stroke-width=\"3\"/><text x=\"125\" y=\"115\" fill=\"#1e3a8a\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\">A</text><text x=\"260\" y=\"115\" fill=\"#064e3b\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\">B</text><text x=\"180\" y=\"115\" fill=\"#0f172a\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">A ∩ B</text><text x=\"60\" y=\"210\" fill=\"#475569\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\">정리식: A + (not A) • B  =  A + B</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "📉",
+      "title": "흔들리며 안정을 찾아가는 파형, 감쇠 진동 주파수",
+      "content": "자동차가 과속방지턱을 넘을 때 쇼크업소버(쇼바)의 저항력 덕분에 출렁임이 서서히 잦아듭니다. 제어계에서도 이 저항 성분(제동비) 때문에 고유 주파수보다 조금 더 느린 주파수로 진동하며 수렴하는데, 이를 '감쇠 진동 주파수'라고 합니다. 제동비가 적절해야 과도한 진동 없이 시스템이 빠르게 정상상태로 복귀합니다.",
+      "visual": "진동폭이 양쪽 지수 곡선 포락선(Envelope) 사이에서 점점 줄어들며 수렴하는 감쇠 사인파 그래프",
+      "exam_point": "시험에 무조건 나오는 마법의 공식은 감쇠 주파수 ωd = ωn • sqrt(1 - ζ^2) 입니다. 특성방정식 분모에서 고유주파수 ωn과 제동비 ζ를 뽑아내는 훈련을 하세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"125\" x2=\"350\" y2=\"125\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><path d=\"M 50 125 Q 100 25 150 185 T 250 125 T 350 125\" fill=\"none\" stroke=\"#6366f1\" stroke-width=\"3\"/><path d=\"M 50 40 Q 150 90 350 125\" fill=\"none\" stroke=\"#ec4899\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/><path d=\"M 50 210 Q 150 160 350 125\" fill=\"none\" stroke=\"#ec4899\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/><text x=\"230\" y=\"60\" fill=\"#db2777\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">감쇠 포락선</text><text x=\"70\" y=\"195\" fill=\"#4f46e5\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">감쇠 진동 파형 (ωd)</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🌊",
+      "title": "찌그러진 파도의 수학적 비밀, 비정현파와 왜형률",
+      "content": "송배전 선로를 흐르는 교류 전압은 깨끗한 사인파여야 하지만 부하의 특성 때문에 찌그러지게 되는데, 이를 비정현파라고 합니다. 비정현파는 깨끗한 '기본파' 위에 주파수가 정수배로 높은 '고조파'들이 섞여 있는 형태입니다. 이 찌그러짐의 정도를 수치화한 비율을 '왜형률'이라고 부릅니다.",
+      "visual": "둥글고 깨끗한 기본파와 지저분하게 흔들리는 고조파가 합쳐져 불규칙하고 찌그러진 비정현파(합성파)가 만들어지는 도식",
+      "exam_point": "① 전체 소비전력은 반드시 주파수가 완전히 같은 성분(기본파는 기본파끼리, 고조파는 고조파끼리)의 전력만 더해야 합니다! ② 왜형률은 (모든 고조파 실효값의 합성) / (기본파 실효값) 입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 50 125 Q 100 25 150 125 T 250 125 T 350 125\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-opacity=\"0.4\"/><path d=\"M 50 125 Q 65 95 80 125 T 110 125 T 140 125 T 170 125 T 200 125\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"1.5\" stroke-opacity=\"0.6\"/><path d=\"M 50 125 Q 80 40 110 110 T 170 140 T 230 110 T 290 140 T 350 125\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"3.5\"/><text x=\"50\" y=\"45\" fill=\"#ef4444\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">비정현파 (합성파)</text><text x=\"220\" y=\"45\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">기본파</text><text x=\"220\" y=\"70\" fill=\"#10b981\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">고조파</text></svg>"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "subject": "전기설비기술기준",
+  "unit": "전기설비기술기준 및 판단기준",
+  "set": 4,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "🔌",
+      "title": "보호와 중성의 합체! PEN 도체의 비밀",
+      "content": "전기설비에서 안전을 지키는 '보호도체(PE)'와 전류의 되돌아오는 길인 '중성선(N)'을 하나로 합친 것을 PEN 도체라고 합니다. 마치 고속도로에서 버스 전용 차로와 일반 차로를 하나로 합쳐 넓게 쓰는 것과 같죠. 합쳐진 만큼 안전을 위해 도체 단면적이 튼튼해야 하므로, 구리는 10제곱밀리미터 이상, 알루미늄은 16제곱밀리미터 이상이어야만 사용할 수 있습니다.",
+      "visual": "PEN 도체가 PE와 N으로 분기되는 계통도와 구리(10제곱밀리미터) 및 알루미늄(16제곱밀리미터)의 최소 단면적 기준 규격 도식",
+      "exam_point": "TN-C-S 계통 PEN 도체의 최소 단면적 규격: 구리 10mm² 이상, 알루미늄 16mm² 이상 (암기팁: 구십알십육 -> 구리 10, 알루미늄 16)",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><path d='M40 125 H160' stroke='#94a3b8' stroke-width='12' stroke-linecap='round'/><path d='M160 125 Q200 125 210 85 T280 85' fill='none' stroke='#22c55e' stroke-width='8' stroke-linecap='round'/><path d='M160 125 Q200 125 210 165 T280 165' fill='none' stroke='#3b82f6' stroke-width='8' stroke-linecap='round'/><text x='50' y='105' font-family='sans-serif' font-weight='bold' fill='#334155' font-size='14'>PEN Conductor</text><text x='290' y='90' font-family='sans-serif' font-weight='bold' fill='#16a34a' font-size='14'>PE (보호)</text><text x='290' y='170' font-family='sans-serif' font-weight='bold' fill='#2563eb' font-size='14'>N (중성)</text><rect x='40' y='160' width='100' height='55' rx='8' fill='#ffedd5' stroke='#f97316' stroke-width='2'/><text x='50' y='180' font-family='sans-serif' font-weight='bold' fill='#c2410c' font-size='11'>Cu (구리)</text><text x='50' y='200' font-family='sans-serif' font-weight='bold' fill='#7c2d12' font-size='15'>&gt;= 10 mm²</text><rect x='155' y='160' width='110' height='55' rx='8' fill='#f1f5f9' stroke='#94a3b8' stroke-width='2'/><text x='165' y='180' font-family='sans-serif' font-weight='bold' fill='#475569' font-size='11'>Al (알루미늄)</text><text x='165' y='200' font-family='sans-serif' font-weight='bold' fill='#1e293b' font-size='15'>&gt;= 16 mm²</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🌋",
+      "title": "화력발전의 심장, 랭킨 사이클의 여정",
+      "content": "발전소의 물은 거대한 에너지를 싣고 여행을 떠납니다. '급수펌프'가 강한 압력으로 밀어주면, '보일러'에서 뜨겁게 끓고, '과열기'를 거쳐 고온·고압의 슈퍼 증기로 업그레이드됩니다. 이 강력한 증기가 '터빈'의 날개를 돌려 전기를 만들고, 힘이 빠진 증기는 '복수기'에서 차가운 물로 되돌아가 다시 펌프로 향합니다.",
+      "visual": "급수펌프에서 시작하여 보일러, 과열기, 터빈, 복수기로 끊임없이 순환하는 증기 및 급수의 흐름도",
+      "exam_point": "화력발전 기본 랭킨 사이클의 올바른 순서: 급수펌프 -> 보일러 -> 과열기 -> 터빈 -> 복수기 (이 흐름 자체를 고르는 문제가 출제됩니다!)",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f1f5f9'/><g fill='none' stroke='#cbd5e1' stroke-width='3' stroke-dasharray='5,5'><rect x='50' y='50' width='300' height='150' rx='10'/></g><circle cx='50' cy='125' r='25' fill='none' stroke='#3b82f6' stroke-width='2'/><rect x='25' y='105' width='50' height='40' rx='5' fill='#dbeafe' stroke='#3b82f6' stroke-width='1'/><text x='34' y='129' font-family='sans-serif' font-weight='bold' fill='#1e40af' font-size='11'>펌프</text><rect x='110' y='30' width='70' height='40' rx='8' fill='#fee2e2' stroke='#ef4444' stroke-width='2'/><text x='125' y='54' font-family='sans-serif' font-weight='bold' fill='#991b1b' font-size='11'>보일러</text><rect x='220' y='30' width='70' height='40' rx='8' fill='#ffedd5' stroke='#f97316' stroke-width='2'/><text x='235' y='54' font-family='sans-serif' font-weight='bold' fill='#9a3412' font-size='11'>과열기</text><rect x='315' y='105' width='70' height='40' rx='8' fill='#f3e8ff' stroke='#a855f7' stroke-width='2'/><text x='335' y='129' font-family='sans-serif' font-weight='bold' fill='#6b21a8' font-size='11'>터빈</text><rect x='165' y='180' width='70' height='40' rx='8' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/><text x='180' y='204' font-family='sans-serif' font-weight='bold' fill='#0369a1' font-size='11'>복수기</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "22.9kV의 한계 테스트! 절연내력시험",
+      "content": "새로 만든 다리를 개통하기 전에 무거운 트럭을 올려 안전한지 시험하듯, 전로도 사용하기 전에 고전압으로 10분간 절연 성능을 시험합니다. 우리나라에서 가장 흔히 쓰는 22,900V 다중접지 전로는 최대사용전압에 '0.92배'를 곱한 21,068V의 시험 전압을 견뎌내야 안전성을 공식 인정받을 수 있습니다.",
+      "visual": "22.9kV 전로에 시험전압 배수 0.92배를 적용하여 계산된 21,068V와 시험 합격(PASS) 표시 도식",
+      "exam_point": "22,900V 중성선 다중접지 전로의 절연내력 시험전압 배수는 '0.92배'이며, 계산 결과값인 '21,068V'가 시험 문제의 답으로 직접 출제됩니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><rect x='30' y='40' width='340' height='170' rx='15' fill='#ffffff' stroke='#e2e8f0' stroke-width='3'/><text x='60' y='80' font-family='sans-serif' font-weight='bold' fill='#475569' font-size='14'>22.9 kV 다중접지 전로 시험</text><text x='60' y='120' font-family='sans-serif' font-weight='bold' fill='#0f172a' font-size='20'>22,900 V x 0.92 배</text><line x1='60' y1='135' x2='340' y2='135' stroke='#cbd5e1' stroke-width='2'/><text x='60' y='170' font-family='sans-serif' font-weight='bold' fill='#ef4444' font-size='24'>= 21,068 V</text><rect x='260' y='145' width='80' height='35' rx='10' fill='#dcfce7' stroke='#22c55e' stroke-width='2'/><text x='283' y='168' font-family='sans-serif' font-weight='bold' fill='#15803d' font-size='15'>PASS</text><circle cx='315' cy='95' r='18' fill='#fef08a'/><path d='M315 85 L310 97 H320 L315 107' fill='none' stroke='#ca8a04' stroke-width='2' stroke-linejoin='round'/></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "🚧",
+      "title": "땅속의 안전거리, 30cm의 장벽",
+      "content": "땅속에는 고압 전선뿐만 아니라 통신선(약전류전선), 가스관, 물 배관 등 다양한 이웃들이 함께 지나갑니다. 만약 저압/고압 전선과 약전류전선이 30cm(0.3m)보다 가깝게 붙게 되면 서로 간섭을 일으키거나 사고 시 위험해집니다. 이때는 둘 사이에 단단한 '내화성 격벽'을 설치하여 불꽃과 전자기적 간섭을 완벽히 차단해야 합니다.",
+      "visual": "지중전선과 통신선 사이의 거리가 30cm 이하일 때 그 사이에 오렌지색의 내화성 격벽을 설치하여 차단하는 도식",
+      "exam_point": "저압 또는 고압 지중전선이 지중약전류전선과 접근/교차 시 이격거리가 30cm(0.3m) 이하이면 '내화성 격벽'을 설치해야 합니다. (특고압은 60cm 이하)",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#fafaf9'/><path d='M0 160 Q100 150 200 160 T400 150 L400 250 L0 250 Z' fill='#e7e5e4'/><circle cx='100' cy='120' r='25' fill='#fee2e2' stroke='#ef4444' stroke-width='3'/><text x='80' y='124' font-family='sans-serif' font-weight='bold' fill='#991b1b' font-size='11'>지중전선</text><circle cx='300' cy='120' r='25' fill='#dbeafe' stroke='#3b82f6' stroke-width='3'/><text x='280' y='124' font-family='sans-serif' font-weight='bold' fill='#1e40af' font-size='11'>통신선</text><line x1='200' y1='50' x2='200' y2='200' stroke='#f97316' stroke-width='6' stroke-linecap='round' stroke-dasharray='10,5'/><text x='165' y='35' font-family='sans-serif' font-weight='bold' fill='#c2410c' font-size='12'>내화성 격벽</text><line x1='130' y1='120' x2='270' y2='120' stroke='#475569' stroke-width='2'/><polygon points='130,120 138,115 138,125' fill='#475569'/><polygon points='270,120 262,115 262,125' fill='#475569'/><rect x='160' y='105' width='80' height='22' rx='5' fill='#ffffff' stroke='#475569' stroke-width='1'/><text x='170' y='120' font-family='sans-serif' font-weight='bold' fill='#1e293b' font-size='10'>30 cm 이하</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🌊",
+      "title": "전류의 밀당 게임! 표피 효과",
+      "content": "교류 전류는 전선의 한가운데를 통과하는 것을 싫어합니다. 주파수가 높아질수록 마치 만원 지하철에서 사람들이 문가로 밀려나듯, 전류가 전선의 겉표면으로만 흐르려는 성질을 '표피 효과'라고 합니다. 이 때문에 전류가 실제로 흐르는 두께인 '침투 깊이'는 주파수와 전도율이 높을수록 오히려 얇아져 전선의 유효 단면적이 줄어들게 됩니다.",
+      "visual": "전선 단면에서 직류(DC)는 골고루 흐르고, 교류(AC)는 가장자리에만 전류가 집중되어 흐르는 표피효과 현상 도식",
+      "exam_point": "표피효과는 주파수, 투자율, 도전율, 전선 굵기에 비례하고 고유저항에 반비례합니다. 침투깊이는 표피효과와 완전히 반대입니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><circle cx='110' cy='120' r='50' fill='#e2e8f0' stroke='#94a3b8' stroke-width='3'/><circle cx='110' cy='120' r='45' fill='none' stroke='#3b82f6' stroke-width='8' stroke-dasharray='5,5'/><circle cx='110' cy='120' r='25' fill='none' stroke='#3b82f6' stroke-width='4' stroke-dasharray='5,5'/><text x='95' y='124' font-family='sans-serif' font-weight='bold' fill='#1e3a8a' font-size='14'>DC</text><text x='65' y='200' font-family='sans-serif' font-weight='bold' fill='#475569' font-size='12'>전체 고른 흐름</text><circle cx='290' cy='120' r='50' fill='#e2e8f0' stroke='#94a3b8' stroke-width='3'/><circle cx='290' cy='120' r='46' fill='none' stroke='#ef4444' stroke-width='10'/><text x='275' y='124' font-family='sans-serif' font-weight='bold' fill='#991b1b' font-size='14'>AC</text><text x='225' y='200' font-family='sans-serif' font-weight='bold' fill='#475569' font-size='12'>표피 집중 (침투깊이 얇음)</text><text x='110' y='40' font-family='sans-serif' font-weight='bold' fill='#0f172a' font-size='16'>교류의 표피효과 (Skin Effect)</text></svg>"
+    }
+  ]
+}

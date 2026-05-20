@@ -1,0 +1,57 @@
+{
+  "subject": "회로이론 및 제어공학",
+  "unit": "회로이론_및_제어공학",
+  "set": 2,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "🎯",
+      "title": "공진의 날카로운 칼날, 첨예도 Q!",
+      "content": "공진 회로가 특정 주파수에 얼마나 민감하게 반응하는지를 나타내는 지표가 바로 첨예도(Q)입니다. 저항(R)은 전류의 흐름을 방해하여 곡선을 뭉툭하게 만들고, 인덕터(L)와 커패시터(C)는 에너지를 주고받으며 파형을 날카롭게 만듭니다. 비유하자면 저항은 그네의 공기 저항이고, L과 C는 흔들리는 그네의 속도감과 같습니다. 즉 저항이 작고 튼튼한 그릇(L/C가 클수록)일수록 원하는 주파수만 선명하게 골라내는 날카로운 돋보기가 됩니다.",
+      "visual": "주파수에 따른 전류 특성 곡선에서 저항이 작을 때(높은 Q, 날카로운 피크)와 저항이 클 때(낮은 Q, 완만한 곡선)의 대비를 보여주는 도식",
+      "exam_point": "직렬 공진 시 첨예도 공식 Q = (1/R) * √(L/C)는 무조건 암기하세요! 시험에서는 각 소자의 크기(R, L, C)를 주고 Q를 직접 계산하게 하거나, 저항과 첨예도의 반비례 관계를 집요하게 물어봅니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><grid stroke='#e2e8f0' stroke-width='1'/><line x1='50' y1='210' x2='350' y2='210' stroke='#64748b' stroke-width='2' stroke-linecap='round'/><line x1='50' y1='30' x2='50' y2='210' stroke='#64748b' stroke-width='2' stroke-linecap='round'/><path d='M 80,210 Q 200,10 320,210' fill='none' stroke='#f43f5e' stroke-width='4' stroke-linecap='round'/><path d='M 80,210 Q 200,120 320,210' fill='none' stroke='#3b82f6' stroke-width='3' stroke-linecap='round'/><line x1='200' y1='30' x2='200' y2='210' stroke='#cbd5e1' stroke-dasharray='4'/><text x='210' y='50' font-family='sans-serif' font-weight='bold' font-size='12' fill='#f43f5e'>High Q (저항 R 작음)</text><text x='210' y='140' font-family='sans-serif' font-weight='bold' font-size='12' fill='#3b82f6'>Low Q (저항 R 큼)</text><text x='310' y='230' font-family='sans-serif' font-size='11' fill='#64748b'>주파수 (f)</text><text x='20' y='40' font-family='sans-serif' font-size='11' fill='#64748b'>전류 (I)</text><circle cx='200' cy='110' r='4' fill='#f43f5e'/></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🧭",
+      "title": "복소평면 위의 나침반, 나이퀴스트 선도",
+      "content": "제어계의 안정성을 한눈에 판단하기 위해 주파수를 0부터 무한대까지 변화시키며 벡터의 궤적을 복소평면에 그린 지도입니다. 주파수(w)가 커짐에 따라 크기와 위상각이 어떻게 변하는지 추적하는 탐험과 같습니다. 이 궤적이 특정한 기준점인 좌측의 임계점(-1, j0)을 감싸 안고 도는지, 비껴가는지에 따라 시스템이 불안정하게 폭주할지 안정적으로 수렴할지가 결정됩니다.",
+      "visual": "3사분면을 거쳐 원점으로 향하는 2차 제어계의 나이퀴스트 벡터 궤적과 임계점(-1, j0)의 기하학적 매핑",
+      "exam_point": "G(jw) = K / [jw(jw+1)] 형태의 선도는 w=0일 때 크기 무한대, 위상 -90도(3사분면 세로축 아래)에서 출발하여 w=무한대일 때 크기 0, 위상 -180도(원점 좌측)로 매끄럽게 수렴해 들어갑니다. 출발점과 종착점의 사분면 위치를 매칭하는 것이 핵심입니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><line x1='40' y1='125' x2='360' y2='125' stroke='#94a3b8' stroke-width='1.5'/><line x1='260' y1='20' x2='260' y2='230' stroke='#94a3b8' stroke-width='1.5'/><circle cx='140' cy='125' r='5' fill='#ef4444'/><text x='110' y='110' font-family='sans-serif' font-weight='bold' font-size='12' fill='#ef4444'>임계점 (-1, j0)</text><path d='M 260,220 C 120,220 120,125 260,125' fill='none' stroke='#6366f1' stroke-width='4' stroke-linecap='round'/><polygon points='250,121 260,125 250,129' fill='#6366f1'/><text x='330' y='145' font-family='sans-serif' font-size='11' fill='#64748b'>실수축(Re)</text><text x='270' y='35' font-family='sans-serif' font-size='11' fill='#64748b'>허수축(Im)</text><text x='110' y='210' font-family='sans-serif' font-weight='bold' font-size='11' fill='#6366f1'>w=0 (시작: -90도 방향)</text><text x='270' y='115' font-family='sans-serif' font-weight='bold' font-size='11' fill='#6366f1'>w=무한대 (원점)</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "⏳",
+      "title": "전류가 정상 궤도에 오르는 시간, RL 과도응답",
+      "content": "스위치를 켜는 순간, 전류는 즉시 목표치로 도달하지 못합니다. 인덕터(L)가 가진 자속의 '전기적 관성'이 전류의 급격한 변화를 가로막기 때문입니다. 마치 묵직한 기차가 서서히 출발하여 시속 100km에 도달하는 것처럼 과도기를 거칩니다. 시간이 흘러 인덕터의 방해 힘이 완전히 사라지면, 결국 저항(R)만이 방해하는 단순한 직류 회로 상태(정상 상태)로 수렴합니다.",
+      "visual": "전류가 시간의 흐름에 따라 지수함수적으로 증가하여 최종 정상 상태인 V/R에 도달하는 아름다운 곡선",
+      "exam_point": "스위치를 닫은 후 t = L/R 초(시정수)가 지난 순간, 전류는 최종 목표치의 정확히 63.2%에 도달하게 됩니다! 따라서 지문에서 이 과도 전류 공식을 계산할 때는 e의 지수 부분에 시정수를 대입하여 간편하게 값을 골라내는 스킬을 연마하세요.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><line x1='50' y1='200' x2='350' y2='200' stroke='#64748b' stroke-width='2'/><line x1='50' y1='50' x2='50' y2='200' stroke='#64748b' stroke-width='2'/><line x1='50' y1='80' x2='350' y2='80' stroke='#cbd5e1' stroke-width='1.5' stroke-dasharray='5'/><path d='M 50,200 Q 150,85 350,80' fill='none' stroke='#10b981' stroke-width='4'/><line x1='150' y1='80' x2='150' y2='200' stroke='#94a3b8' stroke-width='1' stroke-dasharray='2'/><circle cx='150' cy='125' r='5' fill='#f59e0b'/><text x='310' y='70' font-family='sans-serif' font-weight='bold' font-size='12' fill='#64748b'>최종치 V/R</text><text x='160' y='135' font-family='sans-serif' font-weight='bold' font-size='12' fill='#f59e0b'>63.2% (시정수 τ = L/R)</text><text x='320' y='220' font-family='sans-serif' font-size='11' fill='#64748b'>시간 t</text><text x='20' y='45' font-family='sans-serif' font-size='11' fill='#64748b'>전류 i(t)</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "🎛️",
+      "title": "잔류편차를 잡는 정밀 타격, P와 I 제어",
+      "content": "비례동작(P)은 현재의 오차에 비례해서 조절하는 가장 직관적인 제어입니다. 반응이 무척 빠르지만, 목표량 근처에 도달하면 제어 출력이 약해지며 결국 오차를 완전히 없애지 못하는 고질적인 '잔류편차(Offset)'를 남깁니다. 이때 누적된 과거의 오차를 싹 쓸어 모아 적분해 주는 적분동작(I)을 결합하면 잔류편차가 마법처럼 완벽하게 제거됩니다.",
+      "visual": "목표값에 도달할 때 P 제어(잔류편차 있음)와 PI 제어(편차 없이 완전히 수렴함)의 과도 응답 특성 차이",
+      "exam_point": "'잔류편차(Offset)'가 발생하는 것을 묻는다면 정답은 비례제어(P), 이 잔류편차를 깨끗이 소거하는 가장 효과적인 동작을 묻는다면 무조건 적분제어(I)를 선택하는 것이 핵심 암기 포인트입니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><line x1='50' y1='210' x2='360' y2='210' stroke='#94a3b8' stroke-width='1.5'/><line x1='50' y1='50' x2='50' y2='210' stroke='#94a3b8' stroke-width='1.5'/><line x1='50' y1='90' x2='360' y2='90' stroke='#f59e0b' stroke-width='2' stroke-dasharray='5'/><text x='310' y='80' font-family='sans-serif' font-weight='bold' font-size='11' fill='#f59e0b'>목표값</text><path d='M 50,210 C 100,100 200,130 360,130' fill='none' stroke='#f43f5e' stroke-width='3'/><text x='220' y='150' font-family='sans-serif' font-weight='bold' font-size='11' fill='#f43f5e'>P 제어 (잔류편차 발생)</text><path d='M 50,210 C 100,50 150,110 360,90' fill='none' stroke='#3b82f6' stroke-width='3'/><text x='200' y='110' font-family='sans-serif' font-weight='bold' font-size='11' fill='#3b82f6'>PI 제어 (잔류편차 제거)</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🌐",
+      "title": "아날로그와 디지털의 연결고리, s-z 평면 사상",
+      "content": "연속적인 아날로그 제어계를 다루는 s평면과 컴퓨터식 디지털 이산 제어계를 분석하는 z평면은 수학적으로 완벽히 얽혀 있습니다. s평면에서 시스템이 안전하게 작동하는 영역인 왼쪽 절반(좌반평면)은 z평면으로 좌표 변환이 되는 순간, 반지름이 1인 예쁘고 안정적인 '단위원의 내부' 영역으로 동그랗게 압축되어 쏙 들어옵니다.",
+      "visual": "s평면의 좌반평면 영역과 z평면의 단위원 내부 영역이 서로 대응(매핑)되어 매끄러운 화살표로 연결된 도식",
+      "exam_point": "시험 출제 빈도가 매우 높습니다! s평면의 좌반평면은 z평면의 '단위원 내부(안정)', 허수축은 '단위원 둘레(임계안정)', 우반평면은 '단위원 외부(불안정)'로 매핑된다는 대응 관계 규칙을 확실히 머리에 새겨두세요.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><rect x='40' y='60' width='60' height='120' fill='#93c5fd' fill-opacity='0.4'/><line x1='100' y1='40' x2='100' y2='200' stroke='#64748b' stroke-width='1.5'/><line x1='30' y1='120' x2='130' y2='120' stroke='#64748b' stroke-width='1.5'/><text x='45' y='55' font-family='sans-serif' font-weight='bold' font-size='10' fill='#1d4ed8'>s 평면 (좌반평면)</text><circle cx='300' cy='120' r='45' fill='#93c5fd' fill-opacity='0.4'/><circle cx='300' cy='120' r='45' fill='none' stroke='#3b82f6' stroke-dasharray='3'/><line x1='300' y1='40' x2='300' y2='200' stroke='#64748b' stroke-width='1.5'/><line x1='230' y1='120' x2='370' y2='120' stroke='#64748b' stroke-width='1.5'/><text x='255' y='55' font-family='sans-serif' font-weight='bold' font-size='10' fill='#1d4ed8'>z 평면 (단위원 내부)</text><path d='M 140,110 Q 185,90 230,110' fill='none' stroke='#f59e0b' stroke-width='3' stroke-linecap='round'/><polygon points='225,105 235,112 223,115' fill='#f59e0b'/><text x='160' y='85' font-family='sans-serif' font-weight='bold' font-size='12' fill='#d97706'>안정 영역 사상</text></svg>"
+    }
+  ]
+}

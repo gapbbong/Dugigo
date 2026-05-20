@@ -152,6 +152,9 @@ export default function SelectSubjectPage() {
     }
 
     async function init() {
+      // 1. 과목 목록 API 병렬 요청 시작 (미리 던져두기)
+      const subjectsPromise = fetch('/api/subjects').then(res => res.json()).catch(() => ({ subjects: [] }));
+
       const { data: { user: currentUser }, error } = await supabase.auth.getUser();
       if (!currentUser || error) {
         await supabase.auth.signOut(); // 파편화된 옛날 로컬 세션 완전 파기
@@ -159,8 +162,63 @@ export default function SelectSubjectPage() {
         return;
       }
 
-      const { data: profile } = await supabase.from('dukigo_profiles').select('*').eq('id', currentUser.id).single();
+      // 2. 프로필 병렬 요청 시작
+      const profilePromise = supabase.from('dukigo_profiles').select('*').eq('id', currentUser.id).single();
+      
+      const { data: profile } = await profilePromise;
       setUser({ ...currentUser, ...profile });
+
+      // 3. UI 렌더링 블로킹 해제를 위해 과목 목록 렌더링 준비
+      const data = await subjectsPromise;
+      let fetchedSubjects = data.subjects || [];
+      fetchedSubjects.sort((a: string, b: string) => {
+        const getPriority = (name: string) => {
+          if (name.includes('한국사')) return 100;
+          if (name.includes('전기기사')) return 101;
+          return 0;
+        };
+        const pa = getPriority(a);
+        const pb = getPriority(b);
+        if (pa !== pb) return pa - pb;
+        return a.localeCompare(b, 'ko');
+      });
+      setSubjects(fetchedSubjects);
+      setLoading(false); // ★ 메인 UI 차단 해제 (과목 목록 즉시 렌더링)
+
+      // 4. 백그라운드 비동기 로직 (교사 그룹 및 학생 랭킹 불러오기) - UI 안막음
+      if (profile?.role?.toLowerCase() === 'teacher' || currentUser.email === 'serv@kakao.com') {
+        setIsTeacher(true);
+        supabase.from('dukigo_teacher_groups').select('*').eq('teacher_id', currentUser.id)
+          .then(({ data: dbGroups }) => {
+            if (dbGroups) setGroups(dbGroups);
+          });
+      } else {
+        // 학생인 경우 소속 그룹 찾기 및 랭킹 계산
+        supabase.from('dukigo_teacher_groups').select('*').contains('members', [currentUser.id])
+          .then(async ({ data: myGroups }) => {
+            if (myGroups && myGroups.length > 0) {
+              setGroups(myGroups);
+              const targetGroup = myGroups[0];
+              const memberIds = targetGroup.members || [];
+              if (memberIds.length > 0) {
+                const { data: membersProfiles } = await supabase
+                  .from('dukigo_profiles')
+                  .select('id, exp_points')
+                  .in('id', memberIds)
+                  .order('exp_points', { ascending: false });
+                
+                if (membersProfiles) {
+                  const myRank = membersProfiles.findIndex((p: any) => p.id === currentUser.id) + 1;
+                  setStudentRank({
+                    groupName: targetGroup.name,
+                    rank: myRank,
+                    total: membersProfiles.length
+                  });
+                }
+              }
+            }
+          });
+      }
 
       // 학생인데 한글 실명이 누락된 경우 감지하여 학번/이름 입력 유도
       if (profile?.role?.toLowerCase() === 'student') {
@@ -170,65 +228,6 @@ export default function SelectSubjectPage() {
           setShowNameModal(true);
         }
       }
-
-      if (profile?.role?.toLowerCase() === 'teacher' || currentUser.email === 'serv@kakao.com') {
-        setIsTeacher(true);
-        const { data: dbGroups } = await supabase
-          .from('dukigo_teacher_groups')
-          .select('*')
-          .eq('teacher_id', currentUser.id);
-        setGroups(dbGroups || []);
-      } else {
-        // 학생인 경우 소속 그룹 찾기 및 랭킹 계산
-        const { data: myGroups } = await supabase
-          .from('dukigo_teacher_groups')
-          .select('*')
-          .contains('members', [currentUser.id]);
-        
-        if (myGroups && myGroups.length > 0) {
-          setGroups(myGroups);
-          
-          // 첫 번째 그룹 기준으로 랭킹 계산
-          const targetGroup = myGroups[0];
-          const memberIds = targetGroup.members || [];
-          
-          if (memberIds.length > 0) {
-            const { data: membersProfiles } = await supabase
-              .from('dukigo_profiles')
-              .select('id, exp_points')
-              .in('id', memberIds)
-              .order('exp_points', { ascending: false });
-            
-            if (membersProfiles) {
-              const myRank = membersProfiles.findIndex(p => p.id === currentUser.id) + 1;
-              setStudentRank({
-                groupName: targetGroup.name,
-                rank: myRank,
-                total: membersProfiles.length
-              });
-            }
-          }
-        }
-      }
-
-      const res = await fetch('/api/subjects');
-      const data = await res.json();
-      let fetchedSubjects = data.subjects || [];
-      fetchedSubjects.sort((a: string, b: string) => {
-        const getPriority = (name: string) => {
-          if (name.includes('한국사')) return 100;
-          if (name.includes('전기기사')) return 101;
-          return 0;
-        };
-        
-        const pa = getPriority(a);
-        const pb = getPriority(b);
-        
-        if (pa !== pb) return pa - pb;
-        return a.localeCompare(b, 'ko');
-      });
-      setSubjects(fetchedSubjects);
-      setLoading(false);
     }
     init();
   }, [router]);

@@ -1,0 +1,57 @@
+{
+  "subject": "전기자기학",
+  "unit": "전기자기학",
+  "set": 2,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "🧲",
+      "title": "자성체의 세 가지 성격: 강, 상, 반자성체",
+      "content": "자성체는 외부 자기장을 만났을 때 반응하는 강도와 방향에 따라 구분됩니다. 강자성체는 자석에 강력하게 끌려가고(비투자율이 1보다 매우 큼), 상자성체는 수줍게 아주 미약하게 끌려가며(1보다 약간 큼), 반자성체는 청개구리처럼 자기장을 밀어냅니다(1보다 작음). 시험에서는 이 자성체들의 비투자율 범위와 대표적인 물질 종류를 매칭하는 문제가 단골로 출제됩니다.",
+      "visual": "외부 자기장 방향에 대응하여 배열되는 자화 방향 도식도",
+      "exam_point": "반자성체(역자성체)의 비투자율 범위는 μs < 1 이고 자화율 χm < 0 입니다. 강자성체는 μs ≫ 1, 상자성체는 μs > 1 임을 반드시 암기하세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"15\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><text x=\"20\" y=\"35\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\">외부 자기장 H ➔ 방향으로 인가 시</text><line x1=\"220\" y1=\"28\" x2=\"280\" y2=\"28\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"4\"/><polygon points=\"280,24 288,28 280,32\" fill=\"#f59e0b\"/><rect x=\"25\" y=\"70\" width=\"100\" height=\"120\" rx=\"10\" fill=\"#ffffff\" stroke=\"#f43f5e\" stroke-width=\"2\"/><text x=\"40\" y=\"95\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#f43f5e\">반자성체 (μ&lt;1)</text><line x1=\"95\" y1=\"140\" x2=\"55\" y2=\"140\" stroke=\"#f43f5e\" stroke-width=\"3\"/><polygon points=\"55,136 47,140 55,144\" fill=\"#f43f5e\"/><rect x=\"150\" y=\"70\" width=\"100\" height=\"120\" rx=\"10\" fill=\"#ffffff\" stroke=\"#6366f1\" stroke-width=\"2\"/><text x=\"165\" y=\"95\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#6366f1\">상자성체 (μ&gt;1)</text><line x1=\"185\" y1=\"140\" x2=\"215\" y2=\"140\" stroke=\"#6366f1\" stroke-width=\"2\"/><polygon points=\"215,137 221,140 215,143\" fill=\"#6366f1\"/><rect x=\"275\" y=\"70\" width=\"100\" height=\"120\" rx=\"10\" fill=\"#ffffff\" stroke=\"#10b981\" stroke-width=\"2\"/><text x=\"290\" y=\"95\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#10b981\">강자성체 (μ≫1)</text><line x1=\"300\" y1=\"140\" x2=\"350\" y2=\"140\" stroke=\"#10b981\" stroke-width=\"4\"/><polygon points=\"350,135 358,140 350,145\" fill=\"#10b981\"/><text x=\"25\" y=\"220\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#64748b\">구리, 은, 비스무트</text><text x=\"155\" y=\"220\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#64748b\">알루미늄, 백금</text><text x=\"285\" y=\"220\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#64748b\">철, 니켈, 코발트</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🌍",
+      "title": "전기의 무한한 고향, 접지(Earth)와 영전위",
+      "content": "접지(Ground)는 지구라는 거대한 바다에 전선을 꽂는 일입니다. 바다에 물 한 바가지를 붓거나 퍼내도 전체 바닷물의 높이는 변하지 않듯이, 지구는 전하를 담는 전기적 용량이 무한히 크기 때문에 아무리 많은 전류가 흘러들어도 전위가 거의 변하지 않고 언제나 일정한 0[V]를 유지합니다. 이 덕분에 위험한 이상 전압을 대지로 신속히 방전시켜 사람과 장비를 안전하게 보호할 수 있습니다.",
+      "visual": "전자기기에서 대지(지구)로 접지되어 전하가 방전되는 안전 원리 도식",
+      "exam_point": "모든 전기 장치를 대지에 접지시키는 근본적인 이유는 '지구의 정전 용량이 대단히 커서 전위가 영전위(0V)로 거의 변함없이 일정하기 때문'입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"15\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><rect x=\"130\" y=\"40\" width=\"140\" height=\"80\" rx=\"8\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"165\" y=\"75\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\">전기 장치</text><text x=\"155\" y=\"95\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#ef4444\">⚡ 누전/이상전압</text><path d=\"M200,120 L200,180\" stroke=\"#10b981\" stroke-width=\"3\" fill=\"none\"/><line x1=\"180\" y1=\"180\" x2=\"220\" y2=\"180\" stroke=\"#10b981\" stroke-width=\"3\"/><line x1=\"185\" y1=\"186\" x2=\"215\" y2=\"186\" stroke=\"#10b981\" stroke-width=\"3\"/><line x1=\"192\" y1=\"192\" x2=\"208\" y2=\"192\" stroke=\"#10b981\" stroke-width=\"3\"/><text x=\"230\" y=\"190\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#10b981\">접지 (0 V)</text><path d=\"M 40,210 Q 200,170 360,210\" stroke=\"#059669\" stroke-width=\"4\" fill=\"none\"/><text x=\"150\" y=\"225\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">대지 (용량 C = 무한대)</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "전하들의 전용 통로, 전기력선의 성질",
+      "content": "전기력선은 전하가 주변 공간에 미치는 전기적 힘의 흐름을 눈에 보이도록 시각화한 가상의 선입니다. 전기력선은 항상 양(+)전하에서 솟구쳐 나와 음(-)전하로 수렴하며, 높은 전위에서 낮은 전위로 미끄러져 흘러갑니다. 전기력선들은 서로 교차하거나 끊어지지 않는 도도한 성질을 가지며, 도체 내부에는 절대 침투하지 못하고 오직 표면에 수직으로만 드나듭니다.",
+      "visual": "양전하에서 나와 음전하로 부드럽게 이어지는 전기력선의 곡선 분포",
+      "exam_point": "전기력선은 도체 내부에 존재할 수 없으며 서로 교차하지 않습니다. 또한 단위전하 Q[C]에서 나오는 전기력선의 개수는 Q/ε0 개임을 암기하세요.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"15\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"125\" r=\"20\" fill=\"#f87171\"/><text x=\"104\" y=\"130\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#ffffff\">+</text><circle cx=\"290\" cy=\"125\" r=\"20\" fill=\"#60a5fa\"/><text x=\"285\" y=\"130\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#ffffff\">-</text><path d=\"M 130,125 L 270,125\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"4\"/><polygon points=\"205,121 213,125 205,129\" fill=\"#475569\"/><path d=\"M 125,110 Q 200,60 275,110\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"200,77 208,82 201,87\" fill=\"#475569\"/><path d=\"M 125,140 Q 200,190 275,140\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"201,163 208,168 200,173\" fill=\"#475569\"/><text x=\"90\" y=\"80\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#ef4444\">고전위 출발</text><text x=\"260\" y=\"80\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">저전위 도착</text><text x=\"150\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\">※ 서로 교차하지 않음</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "⚛️",
+      "title": "전기쌍극자가 만드는 비대칭의 힘",
+      "content": "매우 가까이 밀착되어 있는 플러스(+) 전하와 마이너스(-) 전하의 쌍을 전기쌍극자라고 부릅니다. 이 쌍극자가 주변 공간에 만드는 전계의 세기는 각도에 따라 크게 달라집니다. 두 전하를 관통하는 회전축 선상(0도)일 때 전기력이 가장 부드럽고 강하게 집중되어 최대 세기를 나타내며, 두 전하의 한가운데를 수직으로 지르는 평면상(90도)에서는 전계의 세기가 절반으로 감소하게 됩니다.",
+      "visual": "전기쌍극자의 전하 쌍과 임의의 관측점 P 사이의 각도 theta 도식",
+      "exam_point": "전기쌍극자 전계의 크기는 θ = 0°(축방향)일 때 최대, θ = 90°(직각방향)일 때 최소(최대치의 절반)가 되므로 cosθ = 1 혹은 0 조건을 기억하세요.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"15\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><line x1=\"50\" y1=\"150\" x2=\"350\" y2=\"150\" stroke=\"#cbd5e1\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/><circle cx=\"140\" cy=\"150\" r=\"12\" fill=\"#f87171\"/><text x=\"136\" y=\"154\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#ffffff\">+</text><circle cx=\"200\" cy=\"150\" r=\"12\" fill=\"#60a5fa\"/><text x=\"197\" y=\"154\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#ffffff\">-</text><line x1=\"170\" y1=\"150\" x2=\"280\" y2=\"70\" stroke=\"#334155\" stroke-width=\"2\"/><circle cx=\"280\" cy=\"70\" r=\"5\" fill=\"#f59e0b\"/><text x=\"292\" y=\"74\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\">점 P</text><path d=\"M 195,150 A 25,25 0 0,0 188,137\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.5\"/><text x=\"202\" y=\"136\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">θ</text><text x=\"280\" y=\"180\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#ef4444\">θ = 0° 일 때 전계 최대 (Max)</text><text x=\"280\" y=\"205\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">θ = 90° 일 때 전계 최소 (Min)</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🥛",
+      "title": "콘덴서 직렬연결과 도미노 파괴 법칙",
+      "content": "크기가 다른 콘덴서 세 개를 한 줄로 직렬 연결하면, 흘러가는 전하량(Q)은 마치 하나의 좁은 배관을 흐르는 물처럼 모든 콘덴서에 동일하게 축적됩니다. 이 상태에서 전압을 계속 올리면 어떤 콘덴서가 가장 먼저 버티지 못하고 펑 터질까요? 그것은 바로 각 콘덴서가 가질 수 있는 한계 용량인 허용 전하량(내압 V × 정전용량 C)이 가장 작아 금방 물이 넘쳐버리는 약한 콘덴서부터 차례대로 파괴됩니다.",
+      "visual": "직렬 연결된 세 개의 콘덴서 회로와 한계치가 가장 작아 파괴 마크가 뜬 콘덴서 도식",
+      "exam_point": "콘덴서 직렬 연결 시 '가장 먼저 파괴되는 것'은 각 콘덴서의 내압과 용량을 곱한 최대 전하량(Q = CV)이 가장 작은 콘덴서입니다. 절대 헷갈리지 마세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"15\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><line x1=\"40\" y1=\"110\" x2=\"360\" y2=\"110\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"100\" y1=\"90\" x2=\"100\" y2=\"130\" stroke=\"#475569\" stroke-width=\"3\"/><line x1=\"110\" y1=\"90\" x2=\"110\" y2=\"130\" stroke=\"#475569\" stroke-width=\"3\"/><line x1=\"200\" y1=\"90\" x2=\"200\" y2=\"130\" stroke=\"#475569\" stroke-width=\"3\"/><line x1=\"210\" y1=\"90\" x2=\"210\" y2=\"130\" stroke=\"#475569\" stroke-width=\"3\"/><line x1=\"300\" y1=\"90\" x2=\"300\" y2=\"130\" stroke=\"#475569\" stroke-width=\"3\"/><line x1=\"310\" y1=\"90\" x2=\"310\" y2=\"130\" stroke=\"#475569\" stroke-width=\"3\"/><circle cx=\"105\" cy=\"110\" r=\"25\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"2\" stroke-dasharray=\"3\"/><path d=\"M 90,95 L 120,125 M 120,95 L 90,125\" stroke=\"#f43f5e\" stroke-width=\"3\"/><text x=\"75\" y=\"65\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#f43f5e\">Q1 = 300μC</text><text x=\"80\" y=\"160\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\">C1 (3μF)</text><text x=\"175\" y=\"65\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#475569\">Q2 = 2500μC</text><text x=\"180\" y=\"160\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\">C2 (5μF)</text><text x=\"275\" y=\"65\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#475569\">Q3 = 3000μC</text><text x=\"280\" y=\"160\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\">C3 (12μF)</text><text x=\"110\" y=\"215\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#ef4444\">★ C1 콘덴서 최초 파괴!</text></svg>"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "subject": "전기설비기술기준",
+  "unit": "기출 3세트 완벽 분석",
+  "set": 3,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "🗼",
+      "title": "전신주를 지탱하는 든든한 삼형제, 지선(地線)",
+      "content": "전신주가 강한 바람이나 전선의 무게 때문에 한쪽으로 쓰러지지 않도록 대지에 단단히 묶어주는 로프 역할을 하는 것이 바로 지선입니다. 무대 장치를 지탱하는 굵은 와이어처럼 강력한 인장력을 버텨야 하기 때문에 법적인 기준이 매우 까다롭습니다. 가느다란 철선 하나가 아닌 지름 2.6mm 이상의 금속선 최소 3가닥 이상을 꼬아서 만든 튼튼한 연선만 사용해야 하며 가해지는 하중보다 2.5배 이상 견디는 강도를 지녀야 안전합니다.",
+      "visual": "가공전선로 지지물과 대지를 대각선으로 연결하여 든든히 지탱해 주는 연선 지선의 인장 및 지상 높이 도식",
+      "exam_point": "지선의 필수 4대 암기 공식: ① 안전율 2.5 이상, ② 허용 인장하중 4.31kN 이상, ③ 소선 3가닥 이상의 연선 사용, ④ 소선 지름 2.6mm 이상의 금속선 사용.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='15' fill='#f8fafc'/><line x1='50' y1='210' x2='350' y2='210' stroke='#94a3b8' stroke-width='4'/><rect x='120' y='50' width='16' height='160' fill='#64748b'/><line x1='128' y1='80' x2='280' y2='210' stroke='#0284c7' stroke-width='3' stroke-dasharray='4 2'/><circle cx='280' cy='210' r='5' fill='#0284c7'/><rect x='260' y='165' width='110' height='35' rx='5' fill='#e0f2fe' stroke='#0284c7' stroke-width='1'/><text x='315' y='187' font-family='sans-serif' font-weight='bold' font-size='10' fill='#0369a1' text-anchor='middle'>지선 안전율 2.5 이상</text><rect x='145' y='95' width='115' height='35' rx='5' fill='#ffedd5' stroke='#f97316' stroke-width='1'/><text x='202' y='117' font-family='sans-serif' font-weight='bold' font-size='10' fill='#c2410c' text-anchor='middle'>소선 3가닥 / 2.6mm</text><text x='128' y='40' font-family='sans-serif' font-weight='bold' font-size='12' fill='#334155' text-anchor='middle'>지지물 (전신주)</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🚧",
+      "title": "위험 구역과의 완벽한 차단, 울타리 높이의 비밀",
+      "content": "강력한 캠프파이어의 열기를 피하려면 멀리 떨어지거나 튼튼한 방화벽을 세워야 하듯, 특고압 변압기가 뿜어내는 전기적 위험에서 사람을 보호하기 위해 울타리를 설치해야 합니다. 전압이 높을수록 울타리 높이와 충전부까지의 거리의 합계를 늘려야만 안전을 보장할 수 있습니다. 154kV와 같은 특고압 구역은 전압 등급상 35kV 초과 160kV 이하 영역에 해당하므로 울타리 높이와 이격 거리의 합을 무조건 6m 이상으로 설계해야 합니다.",
+      "visual": "특고압 변압기 본체와 안전 울타리 사이의 높이와 수평 거리의 상관관계를 한눈에 보여주는 도식",
+      "exam_point": "울타리 높이 + 충전부 거리 합계 빈출 기준: ① 35kV 이하: 5m 이상, ② 35kV 초과 ~ 160kV 이하: 6m 이상 (154kV가 여기에 해당), ③ 160kV 초과: 10kV 초과 시마다 12cm 가산.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='15' fill='#f8fafc'/><line x1='40' y1='210' x2='360' y2='210' stroke='#94a3b8' stroke-width='3'/><rect x='80' y='110' width='8' height='100' fill='#475569'/><line x1='80' y1='120' x2='80' y2='210' stroke='#ef4444' stroke-dasharray='4 2'/><rect x='240' y='90' width='80' height='120' rx='8' fill='#cbd5e1' stroke='#475569' stroke-width='2'/><circle cx='280' cy='150' r='18' fill='#fee2e2'/><path d='M280 138 L272 153 L280 153 L278 164 L288 147 L280 147 Z' fill='#ef4444'/><path d='M84 120 L240 120' stroke='#10b981' stroke-width='2' stroke-dasharray='2 2'/><path d='M84 120 L94 116 M84 120 L94 124 M240 120 L230 116 M240 120 L230 124' stroke='#10b981' stroke-width='2'/><rect x='105' y='55' width='190' height='40' rx='8' fill='#ecfdf5' stroke='#10b981' stroke-width='1.5'/><text x='200' y='80' font-family='sans-serif' font-weight='bold' font-size='11' fill='#047857' text-anchor='middle'>154kV: 울타리+거리 합 = 6m 이상</text><text x='84' y='225' font-family='sans-serif' font-weight='bold' font-size='10' fill='#475569' text-anchor='middle'>울타리</text><text x='280' y='225' font-family='sans-serif' font-weight='bold' font-size='10' fill='#475569' text-anchor='middle'>특고압 변압기</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "10분 동안의 고문 테스트, 절연내력시험",
+      "content": "가정용 수도관이 터지지 않고 튼튼한지 확인하려면 아주 높은 압력의 물을 잠시 통과시켜서 균열이 생기는지 확인해야 합니다. 발전기나 변압기도 마찬가지로 평소 쓰는 전압보다 훨씬 높은 전압을 전선과 철심 사이에 강제로 걸어 전류가 새어 나오는지 확인하는 테스트를 거칩니다. 이것이 절연내력시험이며 기준에 명시된 특별한 전압을 '10분 동안' 연속으로 견뎌내야 안전한 기기로 합격 도장을 받을 수 있습니다.",
+      "visual": "변압기 1차측과 2차측 코일에 각각 가하는 가혹 전압 테스트 배율 및 최소 전압 제한값의 입체적 비교",
+      "exam_point": "시험 전압 구하는 핵심 공식: 7kV 이하의 저압 및 고압 가공전로는 최대사용전압의 1.5배를 가합니다. 단, 2차측(220V x 1.5 = 330V)처럼 계산값이 500V 미만으로 낮게 나올 경우에는 무조건 '최저시험전압 500V'를 정답으로 선택해야 합니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='15' fill='#f8fafc'/><rect x='40' y='60' width='140' height='100' rx='10' fill='#eff6ff' stroke='#3b82f6' stroke-width='2'/><text x='110' y='85' font-family='sans-serif' font-weight='bold' font-size='12' fill='#1d4ed8' text-anchor='middle'>1차측 (3,300V)</text><text x='110' y='115' font-family='sans-serif' font-weight='bold' font-size='11' fill='#475569' text-anchor='middle'>배율: 1.5배</text><text x='110' y='145' font-family='sans-serif' font-weight='bold' font-size='14' fill='#ef4444' text-anchor='middle'>4,950 V</text><rect x='220' y='60' width='140' height='100' rx='10' fill='#f0fdf4' stroke='#10b981' stroke-width='2'/><text x='290' y='85' font-family='sans-serif' font-weight='bold' font-size='12' fill='#0f766e' text-anchor='middle'>2차측 (220V)</text><text x='290' y='115' font-family='sans-serif' font-weight='bold' font-size='11' fill='#475569' text-anchor='middle'>330V → 최저 적용</text><text x='290' y='145' font-family='sans-serif' font-weight='bold' font-size='14' fill='#ef4444' text-anchor='middle'>500 V</text><rect x='100' y='185' width='200' height='35' rx='8' fill='#fee2e2' stroke='#ef4444' stroke-width='1.5'/><text x='200' y='207' font-family='sans-serif' font-weight='bold' font-size='12' fill='#991b1b' text-anchor='middle'>인내 시간 : 연속 10분간</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "🐄",
+      "title": "가축과 침입자를 통제하는 전기울타리의 한계치",
+      "content": "넓은 초원에서 양이나 소가 달아나지 않게 하거나 야생 동물의 침입을 막기 위해 전선에 찌릿한 전기를 흘려보내는 전기울타리를 설치합니다. 하지만 전압이 너무 높으면 자칫 동물이나 사람이 생명을 잃을 수 있어 엄격한 법적 테두리가 필요합니다. 전기울타리를 가동할 때 사용하는 전원장치의 전압은 안전상 최대 250V 이하로 제약하고 있으며, 땅속의 전류가 엉켜 오작동하는 것을 피하기 위해 다른 접지극과는 2m 이상의 충분한 거리를 띄우고 설치해야 합니다.",
+      "visual": "전기울타리 제어 장치에서 뻗어 나간 전선의 제한 전압과 땅속 접지봉 사이의 2m 이격 거리를 표현한 단면도",
+      "exam_point": "시험에 무조건 출제되는 전기울타리 규격: ① 사용전압은 250V 이하, ② 전선 굵기 경동선 2mm 이상, ③ 나무(수목)와의 이격거리 0.3m 이상, ④ 접지극과 다른 접지극 사이 거리는 2m 이상.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='15' fill='#f8fafc'/><line x1='30' y1='190' x2='370' y2='190' stroke='#854d0e' stroke-width='4'/><rect x='60' y='100' width='10' height='90' fill='#a16207'/><rect x='200' y='100' width='10' height='90' fill='#a16207'/><line x1='60' y1='120' x2='340' y2='120' stroke='#ef4444' stroke-width='2'/><line x1='60' y1='150' x2='340' y2='150' stroke='#ef4444' stroke-width='2'/><rect x='270' y='50' width='90' height='50' rx='6' fill='#fffbeb' stroke='#d97706' stroke-width='1.5'/><text x='315' y='72' font-family='sans-serif' font-weight='bold' font-size='10' fill='#b45309' text-anchor='middle'>전원 250V 이하</text><line x1='100' y1='190' x2='100' y2='230' stroke='#475569' stroke-width='3'/><line x1='240' y1='190' x2='240' y2='230' stroke='#3b82f6' stroke-width='3'/><line x1='100' y1='215' x2='240' y2='215' stroke='#10b981' stroke-width='2' stroke-dasharray='3 3'/><path d='M100 215 L110 211 M100 215 L110 219 M240 215 L230 211 M240 215 L230 219' stroke='#10b981' stroke-width='2'/><rect x='130' y='220' width='80' height='20' rx='4' fill='#ecfdf5' stroke='#10b981' stroke-width='1'/><text x='170' y='233' font-family='sans-serif' font-weight='bold' font-size='10' fill='#047857' text-anchor='middle'>이격거리 2m 이상</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🛡️",
+      "title": "사고로부터 우리 집을 지키는 방패, 중성점 접지",
+      "content": "변압기 내부에서 절연이 노후화되어 수만 볼트의 초고전압선(1차측)과 우리 집으로 들어오는 220V 저압선(2차측)이 달라붙는 충돌 사고를 '혼촉'이라고 부릅니다. 그대로 방치하면 가전제품이 즉사하고 감전 사고가 일어날 것입니다. 이를 막고자 고압측 중성선과 저압측 보호도체를 단단한 구리선으로 결합하여 땅으로 심어 둡니다. 평상시에는 아무 일 없다가 혼촉 사고가 발생하면 거대한 폭풍 전압을 접지선을 통해 순식간에 대지로 배출하여 전위 상승을 억제하는 고마운 수호신입니다.",
+      "visual": "변압기 1차 고압 전로와 2차 저압 전로가 서로 닿는 혼촉 시, 중성선 접지를 통해 전류가 땅으로 대피하는 소통 흐름도",
+      "exam_point": "다중접지 계통에서 고압측 중성선 겸용 보호도체(PEN)와 저압측 중성선의 보호도체를 연동하여 대지에 다중 연결하는 가장 핵심적인 목적은 '고저압 혼촉 사고 발생 시 저압측의 이상 전위 상승을 신속하게 억제하기 위함'입니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='15' fill='#f8fafc'/><circle cx='130' cy='100' r='35' fill='none' stroke='#ef4444' stroke-width='4'/><text x='130' y='105' font-family='sans-serif' font-weight='bold' font-size='12' fill='#ef4444' text-anchor='middle'>고압 (1차)</text><circle cx='200' cy='100' r='35' fill='none' stroke='#3b82f6' stroke-width='4'/><text x='200' y='105' font-family='sans-serif' font-weight='bold' font-size='12' fill='#3b82f6' text-anchor='middle'>저압 (2차)</text><path d='M145 75 L185 75' stroke='#f59e0b' stroke-width='4' stroke-dasharray='2 2'/><path d='M165 65 L155 75 L165 85 L160 75 Z' fill='#f59e0b'/><text x='165' y='55' font-family='sans-serif' font-weight='bold' font-size='11' fill='#d97706' text-anchor='middle'>혼촉사고</text><line x1='200' y1='135' x2='200' y2='200' stroke='#10b981' stroke-width='3'/><line x1='180' y1='200' x2='220' y2='200' stroke='#10b981' stroke-width='3'/><line x1='188' y1='207' x2='212' y2='207' stroke='#10b981' stroke-width='3'/><line x1='194' y1='214' x2='206' y2='214' stroke='#10b981' stroke-width='3'/><rect x='225' y='145' width='145' height='45' rx='6' fill='#ecfdf5' stroke='#10b981' stroke-width='1.5'/><text x='297' y='164' font-family='sans-serif' font-weight='bold' font-size='10' fill='#065f46' text-anchor='middle'>고저압 혼촉 시</text><text x='297' y='180' font-family='sans-serif' font-weight='bold' font-size='10' fill='#ef4444' text-anchor='middle'>저압측 전위 상승 억제!</text></svg>"
+    }
+  ]
+}

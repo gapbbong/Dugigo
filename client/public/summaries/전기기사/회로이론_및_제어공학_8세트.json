@@ -1,0 +1,57 @@
+{
+  "subject": "회로이론 및 제어공학",
+  "unit": "회로이론_및_제어공학",
+  "set": 8,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "🔀",
+      "title": "신호의 고속도로: 메이슨 정리와 전달함수",
+      "content": "블록선도와 신호흐름선도는 복잡한 회로 속에서 신호가 흐르는 경로를 보여주는 지도입니다. 전달함수는 쉽게 말해 '입력 대비 출력의 비율'을 뜻하는데요. 순탄하게 직진하는 메인 도로인 '전향 경로 이득'을 분자에 두고, 뱅글뱅글 맴돌며 흐름을 방해하거나 돕는 소용돌이인 '루프 이득'의 효과를 분모(1 - 루프이득)에 대입하여 계통의 최종 전달 특성을 명쾌하게 찾아낼 수 있습니다.",
+      "visual": "입력 R(s)에서 출력 C(s)로 향하는 전향 경로와 피드백 루프 회로가 기하학적이고 세련된 아이콘과 화살표로 도식화된 전달함수 흐름도",
+      "exam_point": "전달함수 G(s) = (전향경로 이득) / (1 - 루프이득). 루프 부호가 마이너스(-) 피드백이면 공식 분모에서는 플러스(+)로 부호가 반전된다는 점이 정답을 가르는 핵심입니다!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 60 125 L 330 125\" stroke=\"#6366f1\" stroke-width=\"4\" fill=\"none\"/><polygon points=\"180,120 195,125 180,130\" fill=\"#6366f1\"/><polygon points=\"320,120 335,125 320,130\" fill=\"#6366f1\"/><path d=\"M 130 125 C 130 60, 270 60, 270 125\" stroke=\"#3b82f6\" stroke-width=\"3\" stroke-dasharray=\"4 2\" fill=\"none\"/><polygon points=\"205,80 220,85 208,93\" fill=\"#3b82f6\"/><path d=\"M 270 125 C 270 190, 130 190, 130 125\" stroke=\"#ef4444\" stroke-width=\"3\" fill=\"none\"/><polygon points=\"195,170 180,165 192,157\" fill=\"#ef4444\"/><circle cx=\"60\" cy=\"125\" r=\"8\" fill=\"#4f46e5\"/><circle cx=\"130\" cy=\"125\" r=\"8\" fill=\"#4f46e5\"/><circle cx=\"270\" cy=\"125\" r=\"8\" fill=\"#4f46e5\"/><circle cx=\"340\" cy=\"125\" r=\"8\" fill=\"#4f46e5\"/><text x=\"60\" y=\"105\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#1e293b\" text-anchor=\"middle\">R(s)</text><text x=\"340\" y=\"105\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#1e293b\" text-anchor=\"middle\">C(s)</text><text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#3b82f6\" text-anchor=\"middle\">Forward Path</text><text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#ef4444\" text-anchor=\"middle\">Feedback Loop (-)</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "⏳",
+      "title": "전류의 느긋한 적응: RL 직렬회로와 시정수",
+      "content": "인덕터(L)는 회로에 흐르는 전류의 변화를 극도로 싫어하는 고집 센 '전기적 관성'을 가집니다. 그래서 스위치를 켜도 전류가 즉시 최대치에 도달하지 못하고 서서히 차오르는데요. 이때 전류가 최종 안정 상태 값의 약 63.2%에 도달할 때까지 걸리는 정체 시간을 '시정수(τ = L/R)'라고 부릅니다. 시정수가 클수록 변화에 둔감하고 느린 회로임을 뜻합니다.",
+      "visual": "가로축 시간(t), 세로축 전류(i) 그래프 위에 63.2% 목표치에 도달하는 순간의 시정수(τ) 지점을 깔끔한 점선과 파스텔톤 곡선으로 표시한 전기 과도현상 그래프",
+      "exam_point": "RL 직렬회로 시정수 공식 τ = L/R [초]. 인덕턴스 L과는 비례하고 저항 R과는 반비례하므로, 저항이 커질수록 전류가 목표치에 도달하는 시간(시정수)은 오히려 짧아진다는 점을 꼭 기억하세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 60 200 L 350 200\" stroke=\"#64748b\" stroke-width=\"2\" fill=\"none\"/><path d=\"M 80 50 L 80 210\" stroke=\"#64748b\" stroke-width=\"2\" fill=\"none\"/><path d=\"M 80 200 Q 140 100, 320 82\" stroke=\"#10b981\" stroke-width=\"4\" fill=\"none\"/><line x1=\"80\" y1=\"80\" x2=\"340\" y2=\"80\" stroke=\"#cbd5e1\" stroke-width=\"2\" stroke-dasharray=\"4 4\"/><line x1=\"180\" y1=\"80\" x2=\"180\" y2=\"200\" stroke=\"#3b82f6\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/><circle cx=\"180\" cy=\"125\" r=\"6\" fill=\"#3b82f6\"/><text x=\"70\" y=\"85\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#64748b\" text-anchor=\"end\">100% (I_max)</text><text x=\"70\" y=\"130\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#3b82f6\" text-anchor=\"end\">63.2%</text><text x=\"180\" y=\"220\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#3b82f6\" text-anchor=\"middle\">시정수 τ = L/R</text><text x=\"340\" y=\"220\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#64748b\">시간 (t)</text><text x=\"190\" y=\"115\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#1e293b\">τ 일 때의 전류</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🚙",
+      "title": "흔들림을 제어하는 마법: 2차 시스템의 감쇠율",
+      "content": "2차 제어계의 응답 특성은 거친 비포장도로를 달리는 자동차의 스프링(서스펜션)과 같습니다. 시스템이 충격을 받았을 때 얼마나 빨리 안정을 찾을지 결정하는 척도가 바로 감쇠율(ζ, 제타)인데요. 감쇠율이 1보다 작으면 바퀴가 오랫동안 출렁거리는 '부족 감쇠(진동)' 상태가 되고, 1보다 크면 진동은 없지만 충격 흡수가 너무 느려 둔하게 반응하는 '과감쇠' 상태가 됩니다.",
+      "visual": "감쇠율 ζ의 크기에 따라 출렁거리는 부족감쇠 곡선과 부드럽게 안정을 찾는 과감쇠 곡선을 비교 대조한 2차 제어계 응답 특성 그래프",
+      "exam_point": "2차계 전달함수 분모의 표준식 s² + 2ζω_n s + ω_n²을 반드시 암기하세요! 문제에서 제시된 분모의 s 항 계수와 상수항을 표준식과 비교하면 고유주파수(ω_n)와 감쇠율(ζ)을 5초 만에 풀 수 있습니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 50 200 L 360 200\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/><path d=\"M 60 40 L 60 210\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"5 3\"/><path d=\"M 60 200 C 90 40, 130 180, 170 100 C 210 130, 250 115, 300 120 L 350 120\" stroke=\"#f43f5e\" stroke-width=\"3\" fill=\"none\"/><path d=\"M 60 200 Q 140 125, 350 120\" stroke=\"#3b82f6\" stroke-width=\"3\" fill=\"none\"/><text x=\"280\" y=\"80\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#f43f5e\">부족감쇠 (ζ &lt; 1)</text><text x=\"280\" y=\"155\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#3b82f6\">과감쇠 (ζ &gt; 1)</text><text x=\"340\" y=\"110\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#475569\">목표값</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "⚖️",
+      "title": "안전과 폭주의 경계: S평면과 루스 안정도 판별법",
+      "content": "제어 시스템이 안정하게 동작할지, 아니면 입력이 들어왔을 때 겉잡을 수 없이 진동하며 폭주할지는 복소수 S평면 위의 '근의 위치'가 결정합니다. S평면의 허수축을 국경선으로 삼아, 왼쪽 영역(좌반면)은 흔들림이 서서히 소멸하여 안전해지는 '천국(안정)'이고, 오른쪽 영역(우반면)은 에너지가 무한히 커져 파괴되는 '지옥(불안정)'입니다. 루스 판별법은 복잡한 근을 직접 구하지 않고도 이 구역의 위치를 간편하게 찾아 줍니다.",
+      "visual": "세로 허수축과 가로 실수축으로 나뉜 복소 S평면에서 녹색의 좌반면(안정 영역)과 적색의 우반면(불안정 영역)을 직관적인 컬러 대비로 명시한 안정도 도표",
+      "exam_point": "루스(Routh) 수열의 제1열 요소들의 부호가 변하지 않아야 계통이 안정합니다. 만약 1열에서 플러스(+)에서 마이너스(-)로, 다시 플러스로 부호 변화가 2번 생겼다면 S평면 우반면에 불안정한 근이 2개 존재함을 뜻합니다!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"40\" y=\"40\" width=\"160\" height=\"170\" fill=\"#dcfce7\" opacity=\"0.8\" rx=\"8\"/><rect x=\"200\" y=\"40\" width=\"160\" height=\"170\" fill=\"#fee2e2\" opacity=\"0.8\" rx=\"8\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"220\" stroke=\"#475569\" stroke-width=\"3\"/><line x1=\"30\" y1=\"125\" x2=\"370\" y2=\"125\" stroke=\"#475569\" stroke-width=\"2\"/><circle cx=\"120\" cy=\"90\" r=\"6\" fill=\"#16a34a\"/><circle cx=\"120\" cy=\"160\" r=\"6\" fill=\"#16a34a\"/><circle cx=\"280\" cy=\"125\" r=\"6\" fill=\"#dc2626\"/><text x=\"120\" y=\"75\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#15803d\" text-anchor=\"middle\">안정 (Stable)</text><text x=\"280\" y=\"75\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#b91c1c\" text-anchor=\"middle\">불안정 (Unstable)</text><text x=\"120\" y=\"200\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#15803d\" text-anchor=\"middle\">좌반면 (LHP)</text><text x=\"280\" y=\"200\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#b91c1c\" text-anchor=\"middle\">우반면 (RHP)</text><text x=\"215\" y=\"45\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#475569\">jω (허수축)</text><text x=\"350\" y=\"145\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#475569\">σ (실수축)</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "송전선로의 혈관 확장: 직렬 콘덴서의 리액턴스 보상",
+      "content": "아주 먼 거리를 달리는 송전선로에는 자체적인 유도 리액턴스(인덕턴스) 성분이 가득하여 전기의 흐름을 강하게 가로막고 큰 전압 강하를 만듭니다. 여기에 콘덴서(C)를 직렬로 쏙 넣어주면, 콘덴서 특유의 반대 성질 리액턴스가 선로의 인덕턴스를 말끔하게 상쇄시켜 주는데요. 이는 마치 고속도로의 정체 구간을 뻥 뚫어주는 것과 같아, 계통 전반의 송전 능력을 획기적으로 향상시킵니다.",
+      "visual": "송전선 도중에 설치된 유도 리액턴스(XL)와 용량 리액턴스(XC)가 서로 반대 방향의 벡터 화살표로 상쇄되며 전력 전송 장벽을 낮추는 전력계통 도식",
+      "exam_point": "직렬콘덴서의 핵심 효과 3가지: 선로 유도리액턴스 보상, 수전단 전압강하 감소, 송전용량 및 정태안정도 증대! 시험에서 '선로의 역률 개선 효과'는 병렬(전력용) 콘덴서의 역할이므로 정답 함정에 주의하세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 40 125 L 120 125\" stroke=\"#1e293b\" stroke-width=\"3\" fill=\"none\"/><path d=\"M 120 125 L 130 110 L 140 140 L 150 110 L 160 140 L 170 125\" stroke=\"#f59e0b\" stroke-width=\"3\" fill=\"none\"/><path d=\"M 170 125 L 230 125\" stroke=\"#1e293b\" stroke-width=\"3\" fill=\"none\"/><line x1=\"230\" y1=\"100\" x2=\"230\" y2=\"150\" stroke=\"#3b82f6\" stroke-width=\"4\"/><line x1=\"242\" y1=\"100\" x2=\"242\" y2=\"150\" stroke=\"#3b82f6\" stroke-width=\"4\"/><path d=\"M 242 125 L 360 125\" stroke=\"#1e293b\" stroke-width=\"3\" fill=\"none\"/><text x=\"145\" y=\"90\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#d97706\" text-anchor=\"middle\">선로 리액턴스 X_L</text><text x=\"236\" y=\"90\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#2563eb\" text-anchor=\"middle\">직렬 콘덴서 X_C</text><rect x=\"70\" y=\"170\" width=\"260\" height=\"45\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#bfdbfe\" stroke-width=\"1.5\"/><text x=\"200\" y=\"198\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#1e3a8a\" text-anchor=\"middle\">합성 리액턴스 감소 (X_L - X_C)</text></svg>"
+    }
+  ]
+}

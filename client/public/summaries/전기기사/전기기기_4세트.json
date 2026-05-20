@@ -1,0 +1,57 @@
+{
+  "subject": "전기기기",
+  "unit": "전기기기",
+  "set": 4,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "타이밍의 미학! 브러시 불꽃의 비밀 (정류 특성)",
+      "content": "직류 발전기에서 흐르는 전류가 방향을 바꿀 때, 성격이 급해 너무 일찍 바꾸면(과정류) 브러시의 들어가는 입구(전반부)에서 불꽃이 튑니다. 반대로 너무 굼뜨게 늦게 바꾸면(부족정류) 빠져나가는 출구(후반부)에서 불꽃이 일어납니다. 마치 자동차가 코너를 돌 때 타이밍을 못 맞추면 궤도를 벗어나 미끄러지는 것과 같습니다. 가장 이상적인 형태는 일직선이나 정현파처럼 부드럽게 전류가 변하는 것입니다.",
+      "visual": "시간에 따른 정류 전류 변화 곡선(이상적인 직선정류, 과정류, 부족정류)을 나타낸 그래프 도식",
+      "exam_point": "과정류는 '초기' 급변하여 브러시 '전반부' 불꽃 발생! 부족정류는 '말기' 급변하여 브러시 '후반부' 불꽃 발생!",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc' stroke='#cbd5e1' stroke-width='2'/><line x1='50' y1='125' x2='350' y2='125' stroke='#94a3b8' stroke-width='2' stroke-dasharray='4'/><line x1='70' y1='30' x2='70' y2='220' stroke='#94a3b8' stroke-width='2'/><text x='60' y='25' font-family='sans-serif' font-weight='bold' font-size='12' fill='#64748b'>+Ic</text><text x='60' y='235' font-family='sans-serif' font-weight='bold' font-size='12' fill='#64748b'>-Ic</text><path d='M 70,60 L 330,190' stroke='#10b981' stroke-width='3' fill='none'/><path d='M 70,60 Q 110,60 170,125 T 330,190' stroke='#ef4444' stroke-width='3' fill='none'/><path d='M 70,60 Q 230,125 290,190 T 330,190' stroke='#3b82f6' stroke-width='3' fill='none'/><text x='100' y='90' font-family='sans-serif' font-size='10' font-weight='bold' fill='#ef4444'>과정류 (초기 급변, 전반부 불꽃)</text><text x='200' y='170' font-family='sans-serif' font-size='10' font-weight='bold' fill='#3b82f6'>부족정류 (말기 급변, 후반부 불꽃)</text><text x='230' y='75' font-family='sans-serif' font-size='11' font-weight='bold' fill='#10b981'>이상적인 직선정류</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🎒",
+      "title": "가성비 극대화! 하나로 나눠 쓰는 단권변압기",
+      "content": "일반 변압기가 1차와 2차 권선이 서로 격리된 독립형 가방이라면, 단권변압기는 하나의 공통 권선을 서로 나누어 쓰는 '공유형 배낭'입니다. 구리선을 덜 감아도 되니 크기가 줄어들고 전력 손실도 획기적으로 낮아집니다. 무엇보다 자기 몸집(자기용량)보다 실제로 부하에 보내줄 수 있는 능력(부하용량)이 훨씬 커서 송배전 계통에서 전압을 올리는 승압기로 매우 사랑받습니다.",
+      "visual": "단권변압기의 단선 회로도로, 공통권선과 직렬권선 및 고압측(VH), 저압측(VL)의 전압 인가 형태 도식",
+      "exam_point": "단권변압기 핵심 공식: 자기용량 / 부하용량 = (Vh - Vl) / Vh ! 전압 차이가 적을수록 가성비(부하용량 대비 자기용량 비율)가 압도적으로 좋아집니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc' stroke='#cbd5e1' stroke-width='2'/><rect x='180' y='40' width='40' height='170' rx='8' fill='#cbd5e1'/><path d='M 140,50 L 180,50 M 140,80 L 180,80 M 140,110 L 180,110 M 140,140 L 180,140 M 140,170 L 180,170 M 140,200 L 180,200' stroke='#475569' stroke-width='4'/><line x1='140' y1='50' x2='140' y2='200' stroke='#475569' stroke-width='4'/><line x1='90' y1='140' x2='140' y2='140' stroke='#3b82f6' stroke-width='3'/><line x1='90' y1='200' x2='140' y2='200' stroke='#3b82f6' stroke-width='3'/><line x1='290' y1='50' x2='180' y2='50' stroke='#f59e0b' stroke-width='3'/><line x1='290' y1='200' x2='140' y2='200' stroke='#f59e0b' stroke-width='3'/><text x='50' y='175' font-family='sans-serif' font-weight='bold' font-size='14' fill='#3b82f6'>VL (저압)</text><text x='300' y='130' font-family='sans-serif' font-weight='bold' font-size='14' fill='#f59e0b'>VH (고압)</text><text x='115' y='95' font-family='sans-serif' font-size='11' font-weight='bold' fill='#64748b'>직렬권선</text><text x='115' y='180' font-family='sans-serif' font-size='11' font-weight='bold' fill='#64748b'>공통권선</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🌊",
+      "title": "파도의 부딪침! 전송로 끝에서의 반사와 투과",
+      "content": "송전선로를 타고 흐르던 전기 파동이 임피던스가 다른 변압기 장벽을 만나면, 마치 해안가 절벽에 부딪히는 파도처럼 일부는 되돌아가고(반사파) 일부는 뚫고 들어갑니다(투과파). 이 기이한 반사와 투과는 두 매질의 고유한 성질인 '파동 임피던스' 차이 때문에 생깁니다. 임피던스가 큰 벽에 부딪힐수록 돌아오는 전압의 반사파는 더 커져 요동치게 됩니다.",
+      "visual": "파동임피던스 Z1에서 Z2로 이행하는 경계면에서 진입파, 반사파, 투과파가 분리되는 현상 도식",
+      "exam_point": "전압 반사계수 공식: (Z2 - Z1) / (Z2 + Z1) ! 분모는 항상 더하고, 분자는 목적지(Z2)에서 출발지(Z1)를 빼면 끝!",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc' stroke='#cbd5e1' stroke-width='2'/><line x1='30' y1='150' x2='200' y2='150' stroke='#3b82f6' stroke-width='6'/><line x1='200' y1='150' x2='370' y2='150' stroke='#818cf8' stroke-width='12'/><line x1='200' y1='40' x2='200' y2='220' stroke='#cbd5e1' stroke-dasharray='4'/><path d='M 50,100 Q 100,60 145,95' fill='none' stroke='#f59e0b' stroke-width='4'/><polygon points='145,95 137,87 150,100 135,103' fill='#f59e0b'/><path d='M 180,110 Q 140,80 100,115' fill='none' stroke='#ef4444' stroke-width='3'/><polygon points='100,115 105,107 90,120 108,123' fill='#ef4444'/><path d='M 220,110 Q 270,90 320,110' fill='none' stroke='#10b981' stroke-width='4'/><polygon points='320,110 312,102 325,115 310,118' fill='#10b981'/><text x='50' y='180' font-family='sans-serif' font-weight='bold' font-size='13' fill='#3b82f6'>Z1 = 500 Ω</text><text x='250' y='180' font-family='sans-serif' font-weight='bold' font-size='13' fill='#818cf8'>Z2 = 1000 Ω</text><text x='60' y='55' font-family='sans-serif' font-size='11' font-weight='bold' fill='#f59e0b'>진입파 (ei)</text><text x='110' y='140' font-family='sans-serif' font-size='11' font-weight='bold' fill='#ef4444'>반사파 (er)</text><text x='260' y='75' font-family='sans-serif' font-size='11' font-weight='bold' fill='#10b981'>투과파 (et)</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "🛡️",
+      "title": "용접기의 안전핀! 누설변압기의 수하특성",
+      "content": "누설변압기는 내부에 자속이 잘 새어나가도록 틈을 만들어 둔 안전 설계 변압기입니다. 부하에 전류가 증가하려고 하면 누설 자속이 폭발적으로 늘어나 전압을 자진해서 뚝 떨어뜨려 주는 '수하(垂下) 특성'이 발동합니다. 이 덕분에 전선이 합선되더라도 전류가 일정하게 제어되어 용접을 안정적으로 할 수 있게 해주는 고마운 존재입니다.",
+      "visual": "전류가 늘어날 때 전압이 직각에 가깝게 아래로 급강하하는 수하특성 곡선 도식",
+      "exam_point": "수하특성은 곧 '정전류' 특성! 용접용, 네온관용 변압기에 필수적이며 효율과 역률은 좋지 않습니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc' stroke='#cbd5e1' stroke-width='2'/><line x1='60' y1='40' x2='60' y2='200' stroke='#64748b' stroke-width='2'/><line x1='60' y1='200' x2='340' y2='200' stroke='#64748b' stroke-width='2'/><path d='M 60,60 Q 200,70 260,190' stroke='#f43f5e' stroke-width='4' fill='none'/><path d='M 60,60 L 300,80' stroke='#94a3b8' stroke-width='2' stroke-dasharray='4' fill='none'/><text x='30' y='45' font-family='sans-serif' font-weight='bold' font-size='12' fill='#64748b'>전압 (V)</text><text x='310' y='220' font-family='sans-serif' font-weight='bold' font-size='12' fill='#64748b'>전류 (I)</text><text x='130' y='120' font-family='sans-serif' font-size='12' font-weight='bold' fill='#f43f5e'>급강하 (수하특성)</text><text x='180' y='65' font-family='sans-serif' font-size='10' fill='#94a3b8'>일반 변압기</text><path d='M 320,60 L 335,75 L 315,80 L 340,105 L 325,110 L 350,130' fill='none' stroke='#eab308' stroke-width='3'/><text x='270' y='150' font-family='sans-serif' font-size='11' font-weight='bold' fill='#eab308'>안정적인 아크 용접</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🔄",
+      "title": "전력이 곧 돌림힘! 동기와트와 2차 입력",
+      "content": "동기와트(Synchronous Watt)는 유도전동기의 회전자 속으로 들어가는 '2차 입력 전력'을 의미합니다. 전동기가 동기속도로 돌 때 발생하는 강력한 돌림힘(토크)을 와트(W)의 전력 단위로 그대로 치환해 표현한 영리한 지표입니다. 즉, 전기 에너지를 밀어 넣은 만큼 기계적 돌림힘으로 오차 없이 변환되어 나가는 직관적인 물리 원리입니다.",
+      "visual": "전동기의 고정자(Stator)에서 회전자(Rotor)로 자기장을 통해 전기력이 전달되어 회전력이 나타나는 도식",
+      "exam_point": "시험에서 '동기와트'는 곧 유도전동기의 '2차 입력(P2)'과 완전히 같다는 것만 기억하면 모든 계산이 풀립니다!",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc' stroke='#cbd5e1' stroke-width='2'/><circle cx='200' cy='120' r='75' fill='none' stroke='#38bdf8' stroke-width='8' stroke-dasharray='12 6'/><circle cx='200' cy='120' r='50' fill='#e2e8f0' stroke='#0284c7' stroke-width='4'/><path d='M 145,75 A 60 60 0 0 1 255,75' fill='none' stroke='#f59e0b' stroke-width='5'/><polygon points='255,75 245,68 260,80 248,85' fill='#f59e0b'/><text x='105' y='35' font-family='sans-serif' font-weight='bold' font-size='13' fill='#0284c7'>고정자 (Stator) 입력</text><text x='245' y='210' font-family='sans-serif' font-weight='bold' font-size='13' fill='#475569'>회전자 (Rotor)</text><text x='155' y='125' font-family='sans-serif' font-weight='bold' font-size='15' fill='#0f172a'>P2 = τ</text><text x='125' y='150' font-family='sans-serif' font-size='12' font-weight='bold' fill='#10b981'>2차 입력 (동기와트)</text></svg>"
+    }
+  ]
+}

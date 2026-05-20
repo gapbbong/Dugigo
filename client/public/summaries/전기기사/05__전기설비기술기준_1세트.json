@@ -1,0 +1,37 @@
+{
+  "subject": "전기설비기술기준",
+  "unit": "전기설비기술기준 기출 핵심 이론",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "벼락 치는 날, 송전선 위의 든든한 보호 우산!",
+      "content": "가공지선은 송전선로의 가장 꼭대기에 설치되어 무시무시한 직격뢰(벼락)를 대신 맞아 땅으로 흘려보내는 고마운 전선입니다. 마치 비 오는 날 우리가 쓰는 '우산'처럼, 아래에 지나가는 전력선들을 벼락의 직접적인 타격으로부터 정전차폐하여 안전하게 보호해주지요. 덕분에 정전 사고 없이 집에서 편안히 전기를 쓸 수 있답니다.",
+      "visual": "송전탑 상단에서 번개를 대신 흡수하는 가공지선과 아래 안전하게 보호받는 전선들을 나타낸 도식",
+      "exam_point": "직격뢰 방호의 일등 공신은 '가공지선'입니다. 정전차폐 및 전자차폐 효과로 인해 통신선에 발생하는 유도장해도 경감시켜 줍니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f1f5f9\"/><path d=\"M120 230 L160 80 L180 80 L220 230 Z\" fill=\"#94a3b8\"/><line x1=\"160\" y1=\"80\" x2=\"240\" y2=\"80\" stroke=\"#475569\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"50\" r=\"6\" fill=\"#ef4444\"/><line x1=\"20\" y1=\"50\" x2=\"380\" y2=\"50\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4\"/><line x1=\"20\" y1=\"110\" x2=\"380\" y2=\"110\" stroke=\"#3b82f6\" stroke-width=\"3\"/><line x1=\"20\" y1=\"150\" x2=\"380\" y2=\"150\" stroke=\"#3b82f6\" stroke-width=\"3\"/><path d=\"M180 0 L195 25 L185 25 L200 50\" fill=\"none\" stroke=\"#eab308\" stroke-width=\"3\"/><path d=\"M200 50 L20 110 M200 50 L380 110\" stroke=\"rgba(239, 68, 68, 0.3)\" stroke-width=\"1.5\" stroke-dasharray=\"3\"/><text x=\"210\" y=\"45\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#ef4444\">가공지선 (GW)</text><text x=\"210\" y=\"105\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#3b82f6\">송전선 (피보호)</text><text x=\"30\" y=\"220\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#1e293b\">직격뢰 정전 차폐</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "📐",
+      "title": "전신주 사이의 안전 거리, 경간의 비밀",
+      "content": "전신주나 철탑을 세울 때 그 사이 거리를 '경간'이라고 부릅니다. 징검다리 사이가 너무 멀면 건너기 힘들 듯, 지지물 사이가 너무 멀어지면 전선이 아래로 축 늘어져 끊어지거나 위험해집니다. 그래서 법으로 안전한 최대 거리를 정해두었는데, 지지물의 뼈대가 튼튼할수록(A종보다 B종, B종보다 철탑) 더 멀리 세울 수 있습니다.",
+      "visual": "두 전신주 사이의 전선 늘어짐과 보안공사에 따른 경간 거리를 표시한 설계 도식",
+      "exam_point": "고압 보안공사에서 지지물이 A종 철주(또는 A종 콘크리트주/목주)인 경우, 안전을 위해 경간은 무조건 '100m 이하'로 제한됩니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><line x1=\"20\" y1=\"210\" x2=\"380\" y2=\"210\" stroke=\"#cbd5e1\" stroke-width=\"4\"/><line x1=\"100\" y1=\"210\" x2=\"100\" y2=\"80\" stroke=\"#64748b\" stroke-width=\"6\"/><line x1=\"300\" y1=\"210\" x2=\"300\" y2=\"80\" stroke=\"#64748b\" stroke-width=\"6\"/><circle cx=\"100\" cy=\"80\" r=\"5\" fill=\"#475569\"/><circle cx=\"300\" cy=\"80\" r=\"5\" fill=\"#475569\"/><path d=\"M100 80 Q200 130 300 80\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M100 230 L300 230\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"4\"/><polygon points=\"100,230 110,225 110,235\" fill=\"f59e0b\"/><polygon points=\"300,230 290,225 290,235\" fill=\"f59e0b\"/><text x=\"175\" y=\"220\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#d97706\">경간 (Span)</text><text x=\"110\" y=\"140\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#64748b\">A종 철주</text><text x=\"240\" y=\"140\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#64748b\">A종 철주</text><text x=\"130\" y=\"110\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#2563eb\">늘어진 전선 (이도)</text><rect x=\"110\" y=\"25\" width=\"180\" height=\"30\" rx=\"5\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1\"/><text x=\"120\" y=\"44\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#1e40af\">고압 보안공사 A종: 100m 이하</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "⚓",
+      "title": "태풍에도 끄떡없는 전주 버팀줄, 지선!",
+      "content": "강풍이나 전선의 장력 때문에 전신주가 한쪽으로 쓰러지는 것을 막기 위해 비스듬히 땅에 고정하는 쇠줄을 '지선'이라고 합니다. 텐트를 고정하는 스트링처럼 팽팽하게 중심을 잡아주죠. 이 줄이 끊어지면 대형 사고로 이어지므로, 소선을 여러 가닥 꼬아 만들고 전기가 흐르지 않게 동그란 애자를 중간에 끼워 안전을 확보합니다.",
+      "visual": "전주를 지탱하는 붉은색 지선과 그 사이에 끼워진 노란 지선애자, 그리고 땅 속 근가까지 표현한 구조도",
+      "exam_point": "지선의 암기 3요소: 안전율은 '2.5 이상', 꼬아 쓰는 소선은 '3가닥 이상', 소선의 지름은 '2.6mm 이상'의 튼튼한 금속선이어야 합니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f0fdf4\"/><line x1=\"20\" y1=\"220\" x2=\"380\" y2=\"220\" stroke=\"#16a34a\" stroke-width=\"3\"/><line x1=\"120\" y1=\"220\" x2=\"120\" y2=\"60\" stroke=\"#4b5563\" stroke-width=\"8\"/><path d=\"M120 80 L280 220\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"150\" r=\"10\" fill=\"#eab308\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"215\" y=\"154\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#854d0e\">지선애자</text><rect x=\"260\" y=\"210\" width=\"40"
+    }
+  ]
+}

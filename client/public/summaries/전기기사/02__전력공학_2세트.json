@@ -1,0 +1,57 @@
+{
+  "subject": "전력공학",
+  "unit": "전력계통의 안정도 및 계통 보호",
+  "set": 2,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "🔄",
+      "title": "무효전력 마술사: 동기조상기 vs 콘덴서",
+      "content": "전력 계통에서 전압을 일정하게 지키는 조상설비는 전기의 흐름을 제어하는 밸브입니다. 전력용 콘덴서는 스위치로 켜고 끄는 단계적 밸브처럼 동작하여 진상(진행 방향) 전류만 제어합니다. 반면 회전기기인 동기조상기는 물뿌리개처럼 진상과 지상(지체 방향) 양방향을 연속적으로 정밀 조정합니다. 비록 기계적 회전체라 손실과 소음은 발생하지만 계통 유연성이 극히 뛰어납니다.",
+      "visual": "연속적으로 양방향 제어가 가능한 원형 동기조상기 모티브와 단계적으로 제어하는 콘덴서의 계단식 그래프 대비 도식",
+      "exam_point": "동기조상기는 '진상/지상 모두 가능, 연속 조정, 전력손실 큼'. 전력용 콘덴서는 '진상만 가능, 단계적 조정, 손실 작음'이 핵심 출제 키워드입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"210\" stroke=\"#e2e8f0\" stroke-width=\"2\" stroke-dasharray=\"4\"/><circle cx=\"100\" cy=\"110\" r=\"45\" fill=\"none\" stroke=\"#6366f1\" stroke-width=\"6\"/><path d=\"M 65 110 A 35 35 0 1 1 135 110\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><text x=\"100\" y=\"115\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#1e293b\" text-anchor=\"middle\">지상 ↔ 진상</text><text x=\"100\" y=\"180\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#4f46e5\" text-anchor=\"middle\">동기조상기 (연속적)</text><path d=\"M 240 140 L 270 140 L 270 110 L 300 110 L 300 80 L 330 80\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"5\"/><text x=\"285\" y=\"150\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#1e293b\" text-anchor=\"middle\">진상 (ONLY)</text><text x=\"285\" y=\"180\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#d97706\" text-anchor=\"middle\">전력용 콘덴서 (단계적)</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🚧",
+      "title": "사고 전류를 막는 방지턱, 한류리액터!",
+      "content": "전력 계통에 합선(단락) 사고가 발생하면 댐이 무너지듯 엄청난 전류가 쏟아져 내립니다. 이때 차단기의 전원측에 직렬로 설치한 한류리액터는 전기적 과속방지턱 역할을 합니다. 고유한 인덕턴스 성분으로 급격한 전류 폭주를 억제하여, 아래쪽 차단기가 안전하게 회로를 끊을 수 있도록 차단 용량의 부담을 획기적으로 낮춰 줍니다.",
+      "visual": "합선으로 치솟는 붉은색 번개 모양의 고전류가 코일 모양의 초록색 한류리액터를 거치며 안정적인 파란색 전류로 제어되는 개념도",
+      "exam_point": "한류리액터의 존재 이유는 오직 '단락전류 제한으로 차단기 용량 경감 및 기기 보호'입니다. 다른 리액터(소호, 직렬)의 역할과 절대 혼동하지 마세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 30 110 L 130 110\" stroke=\"#ef4444\" stroke-width=\"6\"/><path d=\"M 110 90 L 130 110 L 110 130\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"6\"/><path d=\"M 130 110 Q 145 70 160 110 Q 175 70 190 110 Q 205 70 220 110 Q 235 70 250 110\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"8\"/><path d=\"M 250 110 L 370 110\" stroke=\"#06b6d4\" stroke-width=\"4\"/><text x=\"80\" y=\"75\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#ef4444\" text-anchor=\"middle\">폭주 단락전류</text><text x=\"190\" y=\"165\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#047857\" text-anchor=\"middle\">한류리액터 (L)</text><text x=\"310\" y=\"75\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#0891b2\" text-anchor=\"middle\">제한된 전류</text><text x=\"200\" y=\"215\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"15\" fill=\"#1e293b\" text-anchor=\"middle\">차단기 용량 경감 보호 완료!</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "📐",
+      "title": "송전의 마법 각도! 부하각 90도의 비밀",
+      "content": "송전선로에서 전달되는 전력식은 P = (Vs*Vr/X)*sinδ 입니다. 여기서 부하각(δ)은 보내는 전압과 받는 전압의 각도 차이로, 마치 고무줄을 당길 때의 각도와 같습니다. 이 당기는 힘이 극대화되는 시점은 사인(sin) 값이 최대인 1이 되는 순간, 즉 두 전압의 부하각이 정확히 90도일 때입니다. 90도를 초과하면 계통은 힘을 잃고 붕괴됩니다.",
+      "visual": "X축 부하각, Y축 송전전력을 나타내는 사인파 곡선 그래프에서 90도 정상 위치에서 최댓값을 가리키는 포인터 도식",
+      "exam_point": "정상 상태에서 최대 송전전력이 발생하는 부하각은 정확히 '90도'입니다. 전력 전송 공식에서 리액턴스(X)가 분모에 위치한다는 점도 필수 암기사항입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#475569\" stroke-width=\"3\"/><line x1=\"50\" y1=\"50\" x2=\"50\" y2=\"210\" stroke=\"#475569\" stroke-width=\"3\"/><path d=\"M 50 200 Q 175 50 300 200\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><line x1=\"175\" y1=\"125\" x2=\"175\" y2=\"200\" stroke=\"#ef4444\" stroke-dasharray=\"4\" stroke-width=\"2\"/><circle cx=\"175\" cy=\"125\" r=\"6\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"175\" y=\"105\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#b91c1c\" text-anchor=\"middle\">최대 송전전력 (P_max)</text><text x=\"175\" y=\"220\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#1e293b\" text-anchor=\"middle\">부하각 δ = 90°</text><text x=\"300\" y=\"220\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">180°</text><text x=\"40\" y=\"60\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#475569\" text-anchor=\"end\">전력 P</text><text x=\"350\" y=\"220\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">부하각(δ)</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "🤐",
+      "title": "SF6 가스로 꽁꽁 싸맨 미니 변전소, GIS!",
+      "content": "웅장한 야외 변전 설비를 고성능 절연 가스로 압축시켜 한눈에 들어오는 크기인 밀폐 탱크에 모아놓은 것이 가스절연 개폐설비(GIS)입니다. 공기보다 절연력이 훨씬 뛰어난 SF6(육불화황) 가스를 채워 내부 공간을 극적으로 소형화했습니다. 외부 환경 오염을 완벽히 차단하여 안전하지만, 내부를 직접 눈으로 볼 수 없어 정밀 감시가 필요합니다.",
+      "visual": "가스로 밀폐된 세련된 금속 원통 챔버 내부를 관통하는 3상 전선선로와 SF6 가스 분자를 상징하는 은은한 청록색 그라데이션 및 원형 배경",
+      "exam_point": "GIS의 장점은 '소형화, 고신뢰성, 저소음'이며, 단점은 '내부 육안 확인 불가, 고가 장비, 한랭지 액화 방지 대책 필요'가 주로 출제됩니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"60\" y=\"60\" width=\"280\" height=\"130\" rx=\"15\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" stroke-width=\"4\"/><rect x=\"70\" y=\"70\" width=\"260\" height=\"110\" rx=\"10\" fill=\"#ecfeff\" stroke=\"#22d3ee\" stroke-width=\"2\"/><line x1=\"90\" y1=\"100\" x2=\"310\" y2=\"100\" stroke=\"#f59e0b\" stroke-width=\"6\"/><line x1=\"90\" y1=\"125\" x2=\"310\" y2=\"125\" stroke=\"#ef4444\" stroke-width=\"6\"/><line x1=\"90\" y1=\"150\" x2=\"310\" y2=\"150\" stroke=\"#3b82f6\" stroke-width=\"6\"/><circle cx=\"120\" cy=\"85\" r=\"4\" fill=\"#22d3ee\" opacity=\"0.7\"/><circle cx=\"280\" cy=\"165\" r=\"4\" fill=\"#22d3ee\" opacity=\"0.7\"/><circle cx=\"200\" cy=\"90\" r=\"5\" fill=\"#06b6d4\" opacity=\"0.6\"/><text x=\"200\" y=\"45\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"15\" fill=\"#0f172a\" text-anchor=\"middle\">가스절연 개폐설비 (GIS)</text><text x=\"200\" y=\"215\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#0891b2\" text-anchor=\"middle\">밀폐형 SF₆ 가스 충진 (절연성 대폭 강화)</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "뇌전류는 빼고 정상 전류는 잡는 피뢰기",
+      "content": "피뢰기(LA)는 낙뢰가 칠 때 계통을 수호하는 소방수입니다. 핵심 구조인 '직렬 갭'은 평소에는 길을 막고 있다가 대형 번개가 치는 순간 길을 열어 대지로 흘려보냅니다. 이때 함께 연결된 '특성 요소'는 순식간에 방전을 유도한 후, 번개가 끝난 뒤 흐르려 하는 정상 계통 전류(속류)를 칼같이 감지하여 대지 통로를 즉시 폐쇄해 버립니다.",
+      "visual": "피뢰기의 구성 요소인 번개 방출용 직렬 갭(바늘 모양 전극 대향형 구조)과 특성 요소 블록이 직렬로 연결되어 대지 접지선으로 흐르는 회로 도식",
+      "exam_point": "피뢰기의 2대 필수 구성 요소는 '직렬 갭'과 '특성 요소'입니다. 피뢰기의 주 역할은 외부 이상전압 내습 시 '뇌전류 방전' 및 '속류 차단'입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 120 40 L 140 70 L 110 70 L 130 100\" stroke=\"#f59e0b\" stroke-width=\"3\" fill=\"none\"/><line x1=\"200\" y1=\"40\" x2=\"200\" y2=\"80\" stroke=\"#475569\" stroke-width=\"3\"/><polygon points=\"196,80 204,80 200,90\" fill=\"#475569\"/><polygon points=\"196,110 204,110 200,100\" fill=\"#475569\"/><line x1=\"200\" y1=\"110\" x2=\"200\" y2=\"130\" stroke=\"#475569\" stroke-width=\"3\"/><rect x=\"175\" y=\"130\" width=\"50\" height=\"40\" rx=\"5\" fill=\"#f43f5e\" stroke=\"#be123c\" stroke-width=\"2\"/><text x=\"200\" y=\"154\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#ffffff\" text-anchor=\"middle\">특성 요소</text><line x1=\"200\" y1=\"170\" x2=\"200\" y2=\"195\" stroke=\"#475569\" stroke-width=\"3\"/><line x1=\"180\" y1=\"195\" x2=\"220\" y2=\"195\" stroke=\"#475569\" stroke-width=\"3\"/><line x1=\"188\" y1=\"202\" x2=\"212\" y2=\"202\" stroke=\"#475569\" stroke-width=\"3\"/><line x1=\"195\" y1=\"209\" x2=\"205\" y2=\"209\" stroke=\"#475569\" stroke-width=\"3\"/><text x=\"220\" y=\"98\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#1e293b\" text-anchor=\"start\">직렬 갭</text><text x=\"200\" y=\"230\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#be123c\" text-anchor=\"middle\">뇌전류는 방전, 속류는 확실하게 차단!</text></svg>"
+    }
+  ]
+}

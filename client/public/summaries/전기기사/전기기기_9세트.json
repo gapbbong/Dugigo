@@ -1,0 +1,57 @@
+{
+  "subject": "전기기기",
+  "unit": "전기기기",
+  "set": 9,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "발전기가 만드는 진짜 전압, 유기기전력!",
+      "content": "분권 발전기를 하나의 '물펌프'로 상상해 보세요. 펌프가 실제로 밀어 올리는 물의 압력(유기기전력 E)은, 우리 집 수도꼭지에서 나오는 최종 수압(단자전압 V)에 펌프 내부 파이프에서 발생하는 마찰 손실(전기자 저항 강하 Ia·Ra)을 더한 만큼 커야 합니다. 즉, 발전기가 자체 생산한 전압은 소모된 내부 손실분과 터미널 전압의 합입니다.",
+      "visual": "발전기 유기기전력 E가 전기자 저항 Ra를 거쳐 단자전압 V로 공급되는 전압 관계 도식",
+      "exam_point": "분권발전기 기전력 공식인 E = V + Ia·Ra를 확실히 암기하세요! 계자전류 If가 무시될 때는 Ia = I 가 되어 계산이 훨씬 간단해집니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f1f5f9'/><circle cx='100' cy='150' r='30' fill='#e2e8f0' stroke='#475569' stroke-width='3'/><text x='100' y='155' font-family='sans-serif' font-weight='bold' font-size='20' fill='#0f172a' text-anchor='middle'>G</text><path d='M 130 150 L 180 150' stroke='#475569' stroke-width='3'/><rect x='180' y='135' width='50' height='30' rx='3' fill='#f43f5e'/><text x='205' y='155' font-family='sans-serif' font-weight='bold' font-size='12' fill='#ffffff' text-anchor='middle'>Ra</text><path d='M 230 150 L 320 150 M 320 150 L 320 100 M 320 150 L 320 200' stroke='#475569' stroke-width='3'/><circle cx='320' cy='100' r='5' fill='#3b82f6'/><circle cx='320' cy='200' r='5' fill='#3b82f6'/><text x='340' y='155' font-family='sans-serif' font-weight='bold' font-size='18' fill='#3b82f6'>V</text><text x='110' y='95' font-family='sans-serif' font-weight='bold' font-size='14' fill='#475569'>Ia = I + If</text><text x='200' y='70' font-family='sans-serif' font-weight='bold' font-size='20' fill='#0f172a' text-anchor='middle'>E = V + Ia·Ra</text><path d='M 155 140 L 170 150 L 155 160 Z' fill='#475569'/></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🔄",
+      "title": "두 발전기의 밀당, 주고받는 수수전력",
+      "content": "두 대의 발전기가 힘을 합쳐 전력을 생산할 때, 한쪽이 살짝 삐끗하여 위상(타이밍)의 격차(위상차 δs)가 생기면 어떻게 될까요? 마치 줄다리기를 하듯 힘의 불균형이 생겨 서로 전기를 주고받는 '밀당 현상(수수전력)'이 일어납니다. 이 불균형을 스스로 맞추어 원래 상태로 회복하려는 복원력이 바로 '동기화력'이랍니다.",
+      "visual": "두 발전기의 위상차 δs로 인해 발생하는 유효수수전력 발생 원리 도식",
+      "exam_point": "수수전력 공식 P = (E₀²/2Zs) sin δs는 sin에 비례하고, 동기화력 Ps는 이를 위상차로 미분한 cos에 비례한다는 차이점을 꼭 구분하세요!",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f1f5f9'/><path d='M 50 200 L 350 200 M 100 200 L 100 50' stroke='#94a3b8' stroke-width='2' stroke-dasharray='4'/><line x1='100' y1='200' x2='280' y2='80' stroke='#3b82f6' stroke-width='4'/><line x1='100' y1='200' x2='300' y2='130' stroke='#f43f5e' stroke-width='4'/><path d='M 250 148 A 150 150 0 0 0 240 105' fill='none' stroke='#10b981' stroke-width='3'/><text x='260' y='130' font-family='sans-serif' font-weight='bold' font-size='16' fill='#10b981'>δs</text><text x='290' y='75' font-family='sans-serif' font-weight='bold' font-size='14' fill='#3b82f6'>Ea</text><text x='310' y='140' font-family='sans-serif' font-weight='bold' font-size='14' fill='#f43f5e'>Eb</text><text x='200' y='45' font-family='sans-serif' font-weight='bold' font-size='18' fill='#0f172a' text-anchor='middle'>P = (E₀²/2Zs) sin δs</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🐫",
+      "title": "역률을 마음대로 조절하는 마법의 V-곡선",
+      "content": "동기전동기는 정말 기특한 기계입니다. 여자전류(계자전류 If)를 듬뿍 주어 '과여자' 상태로 만들면, 전동기가 마치 '콘덴서(진상)'처럼 행동하여 앞선 전류를 보냅니다. 반대로 굶겨서 '부족여자'로 만들면 '리액터(지상)'처럼 늦은 전류를 보내죠. 이 전류의 변화 흐름을 선으로 그리면 낙타의 등 같은 아름다운 'V-곡선'이 완성됩니다.",
+      "visual": "여자전류 변화에 따른 전기자전류 곡선(V-곡선) 및 진상/지상 작용 영역",
+      "exam_point": "과여자는 콘덴서(진상 역률), 부족여자는 리액터(지상 역률)로 작동합니다. 곡선의 최저점은 역률이 가장 좋은 1(100%)인 지점입니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f1f5f9'/><line x1='60' y1='210' x2='350' y2='210' stroke='#475569' stroke-width='3'/><line x1='60' y1='210' x2='60' y2='40' stroke='#475569' stroke-width='3'/><path d='M 80 70 Q 200 220 320 70' fill='none' stroke='#6366f1' stroke-width='5'/><circle cx='200' cy='145' r='6' fill='#10b981'/><text x='200' y='135' font-family='sans-serif' font-weight='bold' font-size='12' fill='#10b981' text-anchor='middle'>역률 cosθ = 1</text><text x='110' y='100' font-family='sans-serif' font-weight='bold' font-size='12' fill='#ef4444'>지상 (리액터)</text><text x='290' y='100' font-family='sans-serif' font-weight='bold' font-size='12' fill='#3b82f6'>진상 (콘덴서)</text><text x='350' y='225' font-family='sans-serif' font-weight='bold' font-size='11' fill='#475569' text-anchor='end'>여자전류 If</text><text x='55' y='35' font-family='sans-serif' font-weight='bold' font-size='11' fill='#475569'>전기자전류 Ia</text><text x='200' y='25' font-family='sans-serif' font-weight='bold' font-size='16' fill='#0f172a' text-anchor='middle'>동기전동기 위상특성 (V-곡선)</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "🌪️",
+      "title": "발전기 자속을 찌그러트리는 전기자 반작용",
+      "content": "발전기 내부에는 메인 자석이 만드는 곧은 자속이 흐릅니다. 그러나 부하가 걸려 전기자 코일에 큰 전류가 흐르면, 새로운 전기자 자속이 생겨나 메인 자속을 옆에서 밀쳐냅니다. 이 두 자속이 부딪히며 메인 자속이 찌그러지고 세기가 약해지는데, 이로 인해 중성축이 이동하고 불꽃이 튀며 기전력이 감소하게 됩니다.",
+      "visual": "전기자 자속에 의해 주자속 분포가 왜곡되고 중성축이 회전 방향으로 기울어지는 모습",
+      "exam_point": "전기자 반작용의 3대 결과는 주자속 감소, 중성축 이동(발전기는 회전방향, 전동기는 반대방향), 브러시 불꽃(정류 불량)입니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f1f5f9'/><rect x='40' y='70' width='60' height='110' rx='10' fill='#ef4444'/><text x='70' y='135' font-family='sans-serif' font-weight='bold' font-size='24' fill='#ffffff' text-anchor='middle'>N</text><rect x='300' y='70' width='60' height='110' rx='10' fill='#3b82f6'/><text x='330' y='135' font-family='sans-serif' font-weight='bold' font-size='24' fill='#ffffff' text-anchor='middle'>S</text><circle cx='200' cy='125' r='45' fill='#e2e8f0' stroke='#64748b' stroke-width='3'/><path d='M 100 100 Q 200 160 300 100' fill='none' stroke='#f59e0b' stroke-width='3' stroke-dasharray='5'/><path d='M 100 125 Q 200 185 300 125' fill='none' stroke='#f59e0b' stroke-width='3'/><path d='M 100 150 Q 200 210 300 150' fill='none' stroke='#f59e0b' stroke-width='3' stroke-dasharray='5'/><line x1='200' y1='50' x2='200' y2='200' stroke='#94a3b8' stroke-width='2' stroke-dasharray='4'/><line x1='150' y1='65' x2='250' y2='185' stroke='#ef4444' stroke-width='3'/><text x='200' y='35' font-family='sans-serif' font-weight='bold' font-size='16' fill='#0f172a' text-anchor='middle'>전기자 반작용 (자속 왜곡)</text><text x='260' y='195' font-family='sans-serif' font-weight='bold' font-size='11' fill='#ef4444'>이동된 편중축</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "⚖️",
+      "title": "용량과 임피던스로 정하는 부하 나누기",
+      "content": "두 변압기를 병렬로 묶어 큰 부하를 나누어 들게 할 때, 짐을 나누는 비율은 어떻게 결정될까요? 상식적으로 체격이 큰 녀석(정격 용량 P)이 더 많은 짐을 들어야 마땅합니다. 하지만 자기 내부의 방해 성분(임피던스 z)이 크면 전류가 잘 안 흐르려 버팁니다. 따라서 부하 분담 비율은 용량에는 비례하고, 임피던스에는 반비례하여 완벽히 배분됩니다.",
+      "visual": "두 개의 병렬 회로에서 임피던스(z)와 정격용량(P)에 따른 전류 분배 관계 도식",
+      "exam_point": "핵심 공식인 Ia/Ib = (zb/za) * (Pan/Pbn)를 암기하세요! 전류와 용량은 비례(a는 분자, b는 분모), 전류와 임피던스는 반비례(a는 분모, b는 분자)입니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f1f5f9'/><path d='M 50 125 L 120 125 M 120 125 L 120 75 L 170 75 M 120 125 L 120 175 L 170 175' stroke='#475569' stroke-width='3'/><rect x='170' y='60' width='60' height='30' rx='5' fill='#f59e0b'/><text x='200' y='80' font-family='sans-serif' font-weight='bold' font-size='14' fill='#ffffff' text-anchor='middle'>Za, Pa</text><rect x='170' y='160' width='60' height='30' rx='5' fill='#10b981'/><text x='200' y='180' font-family='sans-serif' font-weight='bold' font-size='14' fill='#ffffff' text-anchor='middle'>Zb, Pb</text><path d='M 230 75 L 280 75 L 280 125 M 230 175 L 280 175 L 280 125 M 280 125 L 350 125' stroke='#475569' stroke-width='3'/><text x='80' y='110' font-family='sans-serif' font-weight='bold' font-size='14' fill='#475569'>전류 분배</text><text x='200' y='35' font-family='sans-serif' font-weight='bold' font-size='16' fill='#0f172a' text-anchor='middle'>Ia/Ib = (zb/za) × (Pa/Pb)</text><text x='200' y='225' font-family='sans-serif' font-weight='bold' font-size='12' fill='#475569' text-anchor='middle'>용량에 비례, %임피던스에 반비례</text></svg>"
+    }
+  ]
+}

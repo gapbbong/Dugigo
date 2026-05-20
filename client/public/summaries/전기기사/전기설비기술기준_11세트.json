@@ -1,0 +1,57 @@
+{
+  "subject": "전기설비기술기준",
+  "unit": "전기설비기술기준",
+  "set": 11,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "저압·고압·특고압의 KEC 한계선",
+      "content": "전압의 크기를 물길의 수압에 비유해 볼까요? 우리 주위의 안전한 실개천(저압)은 교류 1kV, 직류 1.5kV 이하를 의미합니다. 그보다 물살이 더 강한 강줄기(고압)는 교류 1kV, 직류 1.5kV를 초과하여 7kV 이하까지 해당하죠. 마지막으로 7kV를 통과해 쏟아져 내리는 거대한 폭포수 같은 전압은 '특고압'으로 분류합니다. 이 명확한 경계선을 완벽히 암기하는 것이 설비기술기준의 첫출발입니다.",
+      "visual": "KEC 전압 구분을 한눈에 알아볼 수 있도록 설계한 3단계 에너지 계단형 인포그래픽",
+      "exam_point": "[전압 구분 기출 1순위] 교류(AC)는 1kV, 직류(DC)는 1.5kV 이하가 '저압'입니다. 7kV를 초과하면 무조건 '특고압'이 됩니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"20\" y=\"35\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e293b\">KEC 전압의 구분 기준</text><rect x=\"40\" y=\"160\" width=\"100\" height=\"50\" rx=\"8\" fill=\"#10b981\" opacity=\"0.85\"/><text x=\"90\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">저 압</text><text x=\"90\" y=\"200\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#ffffff\" text-anchor=\"middle\">AC 1kV / DC 1.5kV↓</text><rect x=\"150\" y=\"110\" width=\"100\" height=\"100\" rx=\"8\" fill=\"#f59e0b\" opacity=\"0.85\"/><text x=\"200\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">고 압</text><text x=\"200\" y=\"155\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#ffffff\" text-anchor=\"middle\">저압 초과 ~ 7kV 이하</text><rect x=\"260\" y=\"60\" width=\"100\" height=\"150\" rx=\"8\" fill=\"#ef4444\" opacity=\"0.85\"/><text x=\"310\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">특고압</text><text x=\"310\" y=\"105\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#ffffff\" text-anchor=\"middle\">7kV 초과</text><line x1=\"140\" y1=\"185\" x2=\"150\" y2=\"185\" stroke=\"#64748b\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/><line x1=\"250\" y1=\"160\" x2=\"260\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🏹",
+      "title": "지지점이 끊어지면 이도(Sag)는 딱 2배!",
+      "content": "양 기둥 사이에 빨랫줄을 걸면 무거운 무게 때문에 아래로 동그랗게 처지는데, 이 처진 깊이를 '이도(Sag)'라고 합니다. 만약 똑같은 길이로 평화롭게 나란히 걸려 있던 2경간 전선의 한가운데 지지점(B)이 우지끈 끊어져 버리면 어떻게 될까요? 양쪽 전선이 하나로 합쳐지며 늘어나게 되는데, 전선 자체의 전체 실장은 변하지 않으므로, 새롭게 만들어진 단일 경간의 처짐 깊이(이도)는 정확히 원래 이도의 '2배'로 불어납니다.",
+      "visual": "가운데 지지점 B가 유실되어 2경간이 1경간으로 합쳐질 때 이도가 정확히 2배로 늘어나는 원리를 도식화한 기하학적 비교 그래프",
+      "exam_point": "[단선 사고 이도 계산 꿀팁] 복잡한 실장 계산 공식을 쓸 필요 없이, '가운데 지지점 단선' 문항은 기존 이도값에 무조건 곱하기 2를 하세요. 12cm가 24cm로 변합니다!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"20\" y=\"35\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e293b\">경간 단선에 따른 이도(Sag)의 변화</text><line x1=\"40\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"2\"/><circle cx=\"40\" cy=\"100\" r=\"6\" fill=\"#475569\"/><circle cx=\"200\" cy=\"100\" r=\"6\" fill=\"#ef4444\"/><circle cx=\"360\" cy=\"100\" r=\"6\" fill=\"#475569\"/><text x=\"40\" y=\"90\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\" text-anchor=\"middle\">A</text><text x=\"200\" y=\"90\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#ef4444\" text-anchor=\"middle\">B (단선)</text><text x=\"360\" y=\"90\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\" text-anchor=\"middle\">C</text><path d=\"M 40 100 Q 120 124 200 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><path d=\"M 200 100 Q 280 124 360 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><path d=\"M 40 100 Q 200 148 360 100\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"120\" y=\"135\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#64748b\">D1 = 12cm</text><text x=\"200\" y=\"165\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" text-anchor=\"middle\">D2 = 2D1 = 24cm</text><path d=\"M 200 105 L 200 148\" stroke=\"#2563eb\" stroke-width=\"1.5\" stroke-dasharray=\"2,2\"/></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🌍",
+      "title": "동결선 피해 안전하게! 접지극 매설법",
+      "content": "누전 전류를 지구의 품으로 안전하게 돌려보내는 접지극은 식물의 뿌리와 흡사합니다. 겨울철 흙이 꽁꽁 얼면 토양 저항이 매우 커져 전기가 잘 통하지 않습니다. 따라서 반드시 얼어붙는 깊이(동결 깊이)보다 훨씬 깊은 지표면 아래 0.75m(75cm) 이상 깊이에 묻어야 합니다. 접지선을 지탱하는 철주가 있다면, 철주 바로 밑에 0.3m 이상 묻거나 철주로부터 옆으로 최소 1m 이상 떼어 놓아야 전기가 제 갈 길을 찾아 흘러갑니다.",
+      "visual": "지표면과 동결 기준선, 땅속에 묻힌 구리 접지판 및 철주와의 이격거리를 입체감 있게 표현한 지하 단면 도식도",
+      "exam_point": "[핵심 수치 암기법] 일반 매설 깊이는 '0.75m 이상', 철주 밑면 매설 시는 '0.3m 이상', 옆으로 이격 시는 '1m 이상' 꼭 기억하세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"0\" y=\"80\" width=\"400\" height=\"170\" fill=\"#e2e8f0\"/><line x1=\"0\" y1=\"80\" x2=\"400\" y2=\"80\" stroke=\"#a8a29e\" stroke-width=\"3\"/><text x=\"20\" y=\"70\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">지표면 (Ground)</text><rect x=\"260\" y=\"20\" width=\"20\" height=\"120\" fill=\"#64748b\"/><text x=\"270\" y=\"15\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#334155\" text-anchor=\"middle\">철주</text><rect x=\"100\" y=\"180\" width=\"40\" height=\"10\" fill=\"#b45309\"/><line x1=\"120\" y1=\"80\" x2=\"120\" y2=\"180\" stroke=\"#b45309\" stroke-width=\"2\"/><line x1=\"80\" y1=\"80\" x2=\"80\" y2=\"180\" stroke=\"#ef4444\" stroke-width=\"1.5\"/><polygon points=\"80,80 76,90 84,90\" fill=\"#ef4444\"/><polygon points=\"80,180 76,170 84,170\" fill=\"#ef4444\"/><text x=\"70\" y=\"135\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#ef4444\" text-anchor=\"end\">0.75 m 이상</text><line x1=\"120\" y1=\"190\" x2=\"260\" y2=\"190\" stroke=\"#2563eb\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/><polygon points=\"120,190 130,186 130,194\" fill=\"#2563eb\"/><polygon points=\"260,190 250,186 250,194\" fill=\"#2563eb\"/><text x=\"190\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" text-anchor=\"middle\">이격거리 1 m 이상</text><text x=\"145\" y=\"175\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#78350f\">접지극</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "🚂",
+      "title": "가공전선 철도 횡단 높이의 철칙",
+      "content": "가공전선이나 통신선이 열차나 기차가 힘차게 달리는 철로 위를 통과할 때, 높이가 낮으면 열차 지붕에 닿아 거대한 사고가 날 우려가 있습니다. 그렇기 때문에 철도나 궤도를 가로지르는 경우에는 승객의 안전과 장비 보전의 목적을 달성하고자, 철도 레일 윗면에서 측정하여 반드시 '6.5m 이상'의 안전한 이격거리를 두어야 합니다. 이는 일반 전선뿐만 아니라 전주에 부착되는 전력보안통신선에도 완벽히 동일하게 일괄 적용됩니다.",
+      "visual": "전주 사이에 걸쳐진 가공선로가 기차가 다니는 철로와 충분히 격리되어 공중에 안전하게 설치된 모습을 묘사한 횡단도",
+      "exam_point": "[출제 우선순위] 시험 문제에 '철도 또는 궤도를 횡단'이란 키워드가 등장하면, 전선 종류나 전압 조건을 따질 것 없이 무조건 정답은 '6.5m 이상'입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"20\" y=\"35\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e293b\">가공전선 철도 횡단 높이 기준</text><line x1=\"20\" y1=\"210\" x2=\"380\" y2=\"210\" stroke=\"#475569\" stroke-width=\"4\"/><line x1=\"20\" y1=\"216\" x2=\"380\" y2=\"216\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"60\" y1=\"60\" x2=\"60\" y2=\"210\" stroke=\"#64748b\" stroke-width=\"4\"/><line x1=\"340\" y1=\"60\" x2=\"340\" y2=\"210\" stroke=\"#64748b\" stroke-width=\"4\"/><path d=\"M 60 80 Q 200 110 340 80\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><rect x=\"160\" y=\"160\" width=\"80\" height=\"50\" rx=\"4\" fill=\"#3b82f6\"/><rect x=\"170\" y=\"170\" width=\"15\" height=\"15\" fill=\"#ffffff\"/><rect x=\"192\" y=\"170\" width=\"15\" height=\"15\" fill=\"#ffffff\"/><rect x=\"215\" y=\"170\" width=\"15\" height=\"15\" fill=\"#ffffff\"/><line x1=\"200\" y1=\"99\" x2=\"200\" y2=\"210\" stroke=\"#ef4444\" stroke-width=\"2\"/><polygon points=\"200,99 196,109 204,109\" fill=\"#ef4444\"/><polygon points=\"200,210 196,200 204,200\" fill=\"#ef4444\"/><text x=\"210\" y=\"150\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#ef4444\">6.5 m 이상</text><text x=\"20\" y=\"235\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#64748b\">레일면 기준 높이 측정</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🏗️",
+      "title": "154kV 송전선로 특고압 보안공사 규격",
+      "content": "수십만 볼트의 초고압 송전선이 인가가 밀집한 지역을 지나갈 경우, 전선이 끊어지면 끔찍한 대참사가 벌어지게 됩니다. 그리하여 국가적으로 '제1종 특고압 보안공사' 규정을 두어 매우 안전하고 단단한 설비를 갖추게 강제하고 있습니다. 대한민국 대표 송전 전압 계통인 154kV(100kV 이상 300kV 미만) 구간의 경동연선은 어떤 충격에도 버틸 수 있도록 그 굵기가 자그마치 '150mm² 이상'인 튼튼한 전선을 적용해야 합니다.",
+      "visual": "특고압 송전탑 사이로 전개된 154kV 도체와, 고난도 보안공사 전선 규격을 돋보기 형태로 단면 확대해 표현한 테크니컬 드로잉",
+      "exam_point": "[시험 단골 전압별 굵기 스펙] 100kV 미만은 '55mm² 이상', 154kV가 포함된 100kV~300kV 미만은 '150mm² 이상', 300kV 이상은 '200mm² 이상'을 선택해야 합니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"20\" y=\"35\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e293b\">제1종 특고압 보안공사 전선 규격</text><line x1=\"20\" y1=\"100\" x2=\"240\" y2=\"100\" stroke=\"#475569\" stroke-width=\"4\"/><path d=\"M 40 80 L 50 140 L 70 140 L 80 80 Z\" fill=\"#cbd5e1\" stroke=\"#475569\" stroke-width=\"1\"/><circle cx=\"240\" cy=\"110\" r=\"50\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"3\"/><circle cx=\"240\" cy=\"110\" r=\"42\" fill=\"#f1f5f9\"/><circle cx=\"240\" cy=\"110\" r=\"25\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"2\" stroke-dasharray=\"4,2\"/><circle cx=\"225\" cy=\"110\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"235\" cy=\"100\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"245\" cy=\"100\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"255\" cy=\"110\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"245\" cy=\"120\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"235\" cy=\"120\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"240\" cy=\"110\" r=\"5\" fill=\"#2563eb\"/><line x1=\"160\" y1=\"100\" x2=\"195\" y2=\"110\" stroke=\"#3b82f6\" stroke-width=\"1.5\" stroke-dasharray=\"2,2\"/><rect x=\"20\" y=\"175\" width=\"360\" height=\"55\" rx=\"8\" fill=\"#eff6ff\"/><text x=\"35\" y=\"195\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">★ 중요 전압 조건: 154 [kV] 송전선로 적용 시</text><text x=\"35\" y=\"215\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#ef4444\">→ 경동연선 단면적 150 mm² 이상 필수 사용</text></svg>"
+    }
+  ]
+}

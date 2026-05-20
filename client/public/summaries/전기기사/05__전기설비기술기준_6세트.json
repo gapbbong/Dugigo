@@ -1,0 +1,57 @@
+{
+  "subject": "전기설비기술기준",
+  "unit": "기출 06세트 핵심 요약",
+  "set": 6,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "📈",
+      "title": "평균과 손실의 밀당! 부하율과 손실계수의 법칙",
+      "content": "부하율(F)은 우리가 하루 동안 전기를 얼마나 골고루 평균적으로 사용했는지를 보여주는 전기 사용 효율입니다. 반면 손실계수(H)는 그 과정에서 전선 등에서 낭비되어 날아간 전력 손실의 비율이지요. 전기를 매시간 일정하게 잘 써서 부하율이 좋으면 손실계수도 부하율에 가까워지지만, 불규칙하게 몰아서 쓰면 손실은 사용량의 제곱으로 급격히 증가합니다. 그래서 항상 1이 가장 크고, 그 다음 부하율, 손실계수, 부하율의 제곱 순으로 작아지는 관계식이 탄생합니다.",
+      "visual": "부하율(F)과 손실계수(H)의 대소 관계를 직관적인 선형 분포와 곡선형 손실 곡선으로 비교 도식화한 그래픽",
+      "exam_point": "시험에서는 수치 관계식 '1 >= F >= H >= F² >= 0' 부등호 방향과 순서를 올바르게 짝지은 것을 찾는 문제가 출제됩니다. 부하율이 늘 손실계수보다 크거나 같다는 중심 축을 뼈대로 삼아 확실히 정리하세요.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f1f5f9\"/><path d=\"M 50,200 L 350,200\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 50,200 L 350,50\" stroke=\"#3b82f6\" stroke-width=\"3\" stroke-dasharray=\"5 5\"/><path d=\"M 50,200 Q 200,200 350,90\" stroke=\"#ef4444\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"50\" cy=\"200\" r=\"5\" fill=\"#64748b\"/><circle cx=\"350\" cy=\"50\" r=\"5\" fill=\"#3b82f6\"/><circle cx=\"350\" cy=\"90\" r=\"5\" fill=\"#ef4444\"/><text x=\"200\" y=\"35\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"16\" fill=\"#1e293b\" text-anchor=\"middle\">부하율(F) vs 손실계수(H)</text><text x=\"360\" y=\"55\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#3b82f6\">F (평균)</text><text x=\"360\" y=\"95\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#ef4444\">H (손실)</text><text x=\"200\" y=\"230\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#0f172a\" text-anchor=\"middle\">1 &gt;= F &gt;= H &gt;= F² &gt;= 0</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "⚠️",
+      "title": "선 넘지 마세요! '제2차 접근상태'의 3미터 룰",
+      "content": "송배전 전선로를 지을 때 주위 건물이나 나무에 전선이 너무 가깝게 붙으면 감전이나 화재 위험이 무척 커집니다. 법에서는 이를 관리하기 위해 위험 구역을 지정하는데요, 특히 훨씬 심각하게 인접하여 사고 확률이 극도로 높은 상태를 '제2차 접근상태'라고 규정합니다. 이것의 기준은 바로 수평거리 '3m 미만'입니다. 지하철 승강장에서 안전선 바깥으로 바짝 다가선 일촉즉발의 아슬아슬한 상태를 상상하시면 이해하기 쉽습니다.",
+      "visual": "송전탑 가공전선과 우측 인근 건물 구조물 사이의 안전 경계망을 가시화하고 3m 위험 범위를 경고 영역으로 표시한 그림",
+      "exam_point": "시험 단골 키워드는 단연 '제2차 접근상태'와 '3m 미만'의 매칭입니다. 간혹 오답으로 5m나 1.5m를 섞어서 출제하므로 '이차니까 3m 미만으로 아주 가깝다!'라고 소리 내어 외우며 정답을 바로 낚아채세요.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#fcf8f8\"/><line x1=\"80\" y1=\"220\" x2=\"80\" y2=\"60\" stroke=\"#475569\" stroke-width=\"4\"/><line x1=\"60\" y1=\"80\" x2=\"100\" y2=\"80\" stroke=\"#475569\" stroke-width=\"3\"/><circle cx=\"80\" cy=\"80\" r=\"6\" fill=\"#f59e0b\"/><rect x=\"250\" y=\"100\" width=\"100\" height=\"120\" rx=\"10\" fill=\"#cbd5e1\" stroke=\"#94a3b8\" stroke-width=\"2\"/><rect x=\"270\" y=\"120\" width=\"20\" height=\"30\" rx=\"2\" fill=\"#f8fafc\"/><rect x=\"310\" y=\"120\" width=\"20\" height=\"30\" rx=\"2\" fill=\"#f8fafc\"/><rect x=\"80\" y=\"60\" width=\"170\" height=\"160\" fill=\"#fee2e2\" fill-opacity=\"0.4\"/><line x1=\"80\" y1=\"150\" x2=\"250\" y2=\"150\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4 4\"/><polygon points=\"90,145 80,150 90,155\" fill=\"#ef4444\"/><polygon points=\"240,145 250,150 240,155\" fill=\"#ef4444\"/><text x=\"165\" y=\"140\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#ef4444\" text-anchor=\"middle\">수평거리 3m 미만</text><text x=\"200\" y=\"35\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"16\" fill=\"#1e293b\" text-anchor=\"middle\">제2차 접근상태 (위험 구역)</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🏗️",
+      "title": "강풍에도 끄떡없다! 전신주 기초 안전율 '2'",
+      "content": "산이나 길가에 외롭게 서 있는 전신주와 철탑은 사계절 내내 거친 비바람과 태풍, 폭설의 하중을 고스란히 견뎌야 합니다. 따라서 실제 넘어지지 않도록 가해지는 힘보다 최소 몇 배는 튼튼하게 땅속 기초를 공사해야 하는데, 이를 '기초 안전율'이라 부릅니다. 기술기준 규정상 가공전선로 지지물의 기초 안전율은 '2 이상'으로 단단하게 설계하도록 강제하고 있습니다. 흔들리지 않는 튼튼한 뿌리를 지녀야 전력망 전체가 보호받는 법입니다.",
+      "visual": "땅속 단단히 매립된 콘크리트 전신주 기초 블록의 고정 상태와 하중을 견뎌내는 안정성을 화살표로 묘사한 기초 안전율 시각화 그래픽",
+      "exam_point": "기초 안전율 기본 기준치인 '2'를 묻는 단답형 문제가 가장 많습니다. 다만 '이상 시 상정하중에 대한 철탑 기초 안전율'을 한정해서 물어볼 때는 기준이 대폭 완화된 '1.33 이상'이 정답이 되므로 문제를 끝까지 읽는 꼼꼼함이 필수적입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f0fdf4\"/><rect x=\"0\" y=\"180\" width=\"400\" height=\"70\" fill=\"#bbf7d0\"/><rect x=\"170\" y=\"140\" width=\"60\" height=\"50\" fill=\"#94a3b8\" rx=\"5\"/><line x1=\"200\" y1=\"200\" x2=\"200\" y2=\"40\" stroke=\"#475569\" stroke-width=\"8\"/><line x1=\"150\" y1=\"70\" x2=\"250\" y2=\"70\" stroke=\"#475569\" stroke-width=\"6\"/><path d=\"M 120,200 Q 200,100 280,200\" stroke=\"#10b981\" stroke-width=\"3\" fill=\"none\"/><text x=\"200\" y=\"225\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"16\" fill=\"#166534\" text-anchor=\"middle\">기초 안전율 2.0 이상</text><text x=\"200\" y=\"30\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"15\" fill=\"#0f172a\" text-anchor=\"middle\">지지물(전신주) 기초 보강</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "💧",
+      "title": "그릇에서 새는 물방울, 누설전류의 비밀",
+      "content": "콘덴서는 전하를 소중하게 담아두는 전력용 물그릇입니다. 하지만 완벽한 절연체는 존재하지 않기에 그릇 벽면의 미세한 기공을 통해 물이 뚝뚝 새듯 전기가 흐르는데 이를 '누설전류'라고 부릅니다. 누설전류(I)는 가해준 전압(V)과 정전용량(C)에 비례해서 더 많이 생깁니다. 반대로 채워놓은 내부 유전체의 고유저항(ρ)과 유전율(ε)에는 완벽히 반비례하게 됩니다. 그래서 이 네 가지 인자를 결합하면 I = CV/(ρ·ε) 라는 아름다운 수식이 도출되는 것이죠.",
+      "visual": "콘덴서 내부의 양극판과 그 사이를 메운 유전체층에 전위차가 걸려 미세한 전하가 건너가 흐르는 누설전류와 수식의 구조적 배치도",
+      "exam_point": "누설전류 공식을 직접 유도하거나 보기에서 고르는 문제로 빈출됩니다. 정전용량 관계식 RC = ρ·ε 에서 R = V/I 대입법을 활용하여 'I = CV / (ρ·ε)' 임을 손수 써 가며 정량적 곱과 나눗셈 형태를 확실히 인지해두는 것이 정답의 지름길입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#fffbeb\"/><rect x=\"100\" y=\"60\" width=\"20\" height=\"130\" fill=\"#6366f1\" rx=\"2\"/><rect x=\"280\" y=\"60\" width=\"20\" height=\"130\" fill=\"#f43f5e\" rx=\"2\"/><rect x=\"120\" y=\"70\" width=\"160\" height=\"110\" fill=\"#fef3c7\" fill-opacity=\"0.7\"/><path d=\"M 130,100 L 270,100\" stroke=\"#d97706\" stroke-width=\"2\" stroke-dasharray=\"4 2\"/><path d=\"M 130,125 L 270,125\" stroke=\"#d97706\" stroke-width=\"2\" stroke-dasharray=\"4 2\"/><path d=\"M 130,150 L 270,150\" stroke=\"#d97706\" stroke-width=\"2\" stroke-dasharray=\"4 2\"/><polygon points=\"265,97 273,100 265,103\" fill=\"#d97706\"/><polygon points=\"265,122 273,125 265,128\" fill=\"#d97706\"/><polygon points=\"265,147 273,150 265,153\" fill=\"#d97706\"/><text x=\"200\" y=\"95\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#b45309\" text-anchor=\"middle\">누설전류 (I)</text><text x=\"110\" y=\"50\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#4f46e5\" text-anchor=\"middle\">+</text><text x=\"290\" y=\"50\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#e11d48\" text-anchor=\"middle\">-</text><text x=\"200\" y=\"215\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"16\" fill=\"#1e293b\" text-anchor=\"middle\">I = CV / (ρ·ε)</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "📞",
+      "title": "고압선 옆 통신선을 지켜라! 유도전류 제한값",
+      "content": "매우 높은 전압이 쌩쌩 흐르는 송전선 아래에는 다른 통신 전선이나 전화선도 지나가곤 합니다. 이때 특고압선 주위에 형성되는 강력한 전자기적 성질 때문에 바로 옆에 있는 전화선에 전기가 유도되는 장해 현상이 발생하여 전자기 유도 잡음이 생깁니다. 이를 예방하기 위하여 전기설비기술기준에서는 60kV 이하인 전선로의 경우 '12km 구간마다 발생하는 누적 유도전류가 2uA를 절대 넘지 않도록 규정'하여 아주 조용하고 안정적인 전력망을 이끌고 있습니다.",
+      "visual": "고압 가공전선로로부터 아래에 포설된 기설 전화선로로 향하는 정전 및 전자기적 결합 현상과 60kV 이하 구간 12km, 2uA 한계를 표현한 그림",
+      "exam_point": "암기 수치 매칭 문제가 백발백중입니다. '60kV 이하'는 '12km 마다 2uA 이하'이며, 전압이 커진 '60kV 초과'는 '40km 마다 3uA 이하'로 한계 범위와 거리가 모두 늘어납니다. '육십 이하 일이에이(12km, 2uA)' 입으로 외워버립시다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f5f3ff\"/><path d=\"M 50,60 L 350,60\" stroke=\"#4f46e5\" stroke-width=\"3\"/><text x=\"70\" y=\"50\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#4f46e5\">특고압선 (60kV 이하)</text><path d=\"M 50,180 L 350,180\" stroke=\"#06b6d4\" stroke-width=\"2\"/><text x=\"70\" y=\"200\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#0891b2\">가공 통신선 (전화선)</text><path d=\"M 150,80 Q 200,120 250,160\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-dasharray=\"3 3\" fill=\"none\"/><text x=\"260\" y=\"125\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#7c3aed\">유도작용</text><rect x=\"110\" y=\"215\" width=\"180\" height=\"25\" rx=\"5\" fill=\"#ddd6fe\"/><text x=\"200\" y=\"232\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#5b21b6\" text-anchor=\"middle\">12km마다 유도전류 2uA 이하</text></svg>"
+    }
+  ]
+}

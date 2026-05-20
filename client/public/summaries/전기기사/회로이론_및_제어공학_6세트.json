@@ -1,0 +1,57 @@
+{
+  "subject": "전기기사 필기",
+  "unit": "회로이론_및_제어공학",
+  "set": 6,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "⏱️",
+      "title": "기전력의 브레이크, RL 시정수의 비밀",
+      "content": "인덕터(L)는 전류의 변화를 싫어하는 아주 고집 센 '관성'을 가지고 있습니다. 직류 전압을 가해도 전류가 단숨에 흐르지 못하고 서서히 차오르는 이유가 바로 이 때문이죠. 이때 목표 전류의 약 63.2%에 도달하는 시간을 시정수(L/R)라고 부릅니다. 저항(R)이라는 브레이크가 2배로 강해지면, 시정수는 오히려 절반으로 줄어들어 더 빠르게 정상 상태에 도달하게 됩니다.",
+      "visual": "RL 직류 인가 시 전류 상승 곡선(63.2% 지점 및 시정수 표시)과 저항 증가에 따른 변화 속도 비교 그래프",
+      "exam_point": "시정수 t = L/R [초] 공식을 꼭 암기하세요! 저항 R과 시정수 t는 반비례 관계이므로, 저항이 2배가 되면 시정수는 1/2배가 됩니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 50 200 L 350 200 M 50 200 L 50 50\" stroke=\"#64748b\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M 50 200 Q 150 80 350 80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><path d=\"M 50 200 Q 100 80 350 80\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"4\"/><line x1=\"150\" y1=\"200\" x2=\"150\" y2=\"110\" stroke=\"#94a3b8\" stroke-dasharray=\"2\"/><line x1=\"50\" y1=\"110\" x2=\"150\" y2=\"110\" stroke=\"#94a3b8\" stroke-dasharray=\"2\"/><circle cx=\"150\" cy=\"110\" r=\"4\" fill=\"#ef4444\"/><text x=\"160\" y=\"115\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#ef4444\">63.2% (Time Constant)</text><text x=\"310\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">Time (t)</text><text x=\"35\" y=\"45\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">Current (i)</text><text x=\"170\" y=\"70\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#f59e0b\">2x Resistance (Faster)</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🌊",
+      "title": "에너지 손실 제로! 무손실 선로의 비밀",
+      "content": "전선에 저항(R)과 누설 컨덕턴스(G)가 완전히 사라진 이상적인 선로를 '무손실 선로'라고 부릅니다. 에너지를 열로 소비하는 훼방꾼들이 모두 0이 되었으니, 오직 전기장(C)과 자기장(L)이라는 그릇을 통해서만 파동이 전달됩니다. 이때 신호의 퍼짐을 나타내는 전파정수는 실수부(감쇠)가 전혀 없고, 오직 허수부(위상 변화)만 존재하여 감쇠 없이 영원히 에너지가 흘러가게 됩니다.",
+      "visual": "저항과 컨덕턴스가 0이 되어 감쇠 없이 깨끗하게 진행하는 순수 사인파 파동 도식",
+      "exam_point": "무손실 조건 R=0, G=0을 대입하면 전파정수 γ = j * omega * sqrt(L * C)가 됩니다. 감쇠정수 alpha=0이므로 신호가 감쇠 없이 영원히 흘러갑니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 30 125 Q 75 45 120 125 T 210 125 T 300 125 T 390 125\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\"/><line x1=\"30\" y1=\"125\" x2=\"370\" y2=\"125\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><text x=\"40\" y=\"50\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"16\" fill=\"#0f172a\">No Loss Wave (R=0, G=0)</text><text x=\"40\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#475569\">Attenuation = 0</text><text x=\"40\" y=\"210\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"16\" fill=\"#10b981\">Propagation Constant = j * omega * sqrt(L * C)</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "⚖️",
+      "title": "삼상 균형의 흔들림을 측정하는 불평형률",
+      "content": "3상 전력은 세 개의 축이 완벽하게 대칭을 이룰 때 가장 아름답고 효율적입니다. 하지만 불평형 고장이 나면 정상적인 회전 방향의 '정상분'과, 이를 반대 방향으로 잡아당겨 방해하는 '역상분'이 함께 발생합니다. 불평형률은 정상적인 회전 세력에 비해 방해하는 세력이 얼마나 강한지를 나타내는 척도이며, 공식으로는 '역상분 / 정상분'으로 표현합니다.",
+      "visual": "정상분(정방향 벡터)과 역상분(역방향 벡터)의 크기 대비를 나타내는 벡터 다이어그램",
+      "exam_point": "불평형률 공식인 '역상분 / 정상분'을 꼭 외우세요! 분모가 정상분, 분자가 역상분입니다. (영상분은 불평형률 공식에 들어가지 않습니다!)",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><circle cx=\"200\" cy=\"125\" r=\"80\" fill=\"none\" stroke=\"#cbd5e1\" stroke-dasharray=\"4\"/><line x1=\"200\" y1=\"125\" x2=\"200\" y2=\"45\" stroke=\"#3b82f6\" stroke-width=\"4\" marker-end=\"url(#arrow)\"/><line x1=\"200\" y1=\"125\" x2=\"269\" y2=\"165\" stroke=\"#3b82f6\" stroke-width=\"4\"/><line x1=\"200\" y1=\"125\" x2=\"131\" y2=\"165\" stroke=\"#3b82f6\" stroke-width=\"4\"/><line x1=\"200\" y1=\"125\" x2=\"240\" y2=\"102\" stroke=\"#ef4444\" stroke-width=\"3\"/><line x1=\"200\" y1=\"125\" x2=\"160\" y2=\"148\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"140\" y=\"30\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#3b82f6\">Positive Sequence (Normal)</text><text x=\"245\" y=\"90\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#ef4444\">Negative (Unbalance)</text><text x=\"50\" y=\"220\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#0f172a\">Unbalance Factor = Negative / Positive</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "🎵",
+      "title": "모든 파형의 합창, 비정현파 실효값 구하기",
+      "content": "비정현파 전압은 기본파, 고조파, 직류분이 한데 어우러진 복잡한 합창과도 같습니다. 이 복잡한 파형의 진짜 힘(실효값)을 구하고 싶을 때는 각 성분들을 독립된 연주자로 취급해야 합니다. 즉, 기본파 실효값의 제곱, 고조파들의 실효값의 제곱을 모두 더한 뒤 루트를 씌워주면 됩니다. 서로 다른 주파수의 에너지는 직교하기 때문에 단순히 각자의 에너지를 더하는 원리입니다.",
+      "visual": "기본파, 3고조파가 더해져 일그러진 비정현파를 만드는 과정과 피타고라스식 실효값 합성 공식 도식",
+      "exam_point": "비정현파 실효값 = sqrt(V1^2 + V2^2 + V3^2 + ...) (각 성분의 실효값 제곱의 합의 제곱근). 최대값이 주어졌을 때는 반드시 sqrt(2)로 나누어 실효값으로 변환한 뒤 계산하세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 30 150 Q 75 70 120 150 T 210 150 T 300 150 T 390 150\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"2\"/><path d=\"M 30 150 Q 45 120 60 150 T 90 150 T 120 150 T 150 150 T 180 150 T 210 150 T 240 150 T 270 150 T 300 150 T 330 150 T 360 150 T 390 150\" fill=\"none\" stroke=\"#6366f1\" stroke-width=\"1\"/><path d=\"M 30 150 C 60 80 90 180 120 150 C 150 120 180 160 210 150 C 240 140 270 170 300 150 C 330 130 360 140 390 150\" fill=\"none\" stroke=\"#ec4899\" stroke-width=\"3\"/><text x=\"30\" y=\"45\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"15\" fill=\"#ec4899\">Distorted Wave (Sum of Harmonics)</text><text x=\"30\" y=\"70\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#0f172a\">RMS = sqrt( V1^2 + V2^2 + V3^2 + ... )</text><text x=\"310\" y=\"130\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#94a3b8\">Fundamental</text><text x=\"310\" y=\"175\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#6366f1\">3rd Harmonic</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🚀",
+      "title": "제어계의 운명을 결정하는 루스 판별법",
+      "content": "우리가 설계한 제어 시스템이 안정적으로 동작할지, 아니면 폭주하여 파괴될지는 특성방정식의 근이 's 평면'의 어느 쪽에 있는지에 달렸습니다. 근이 오른쪽(우반면)에 단 하나라도 존재하면 제어계는 안정성을 잃고 발산합니다. 루스 판별법을 사용하면 제어계의 전달함수 분모로부터 아주 쉽게 우반면에 존재하는 불안정한 근의 개수를 파악할 수 있어 대단히 편리합니다.",
+      "visual": "s-평면의 좌반면(안정 영역, Green)과 우반면(불안정 영역, Red)의 시각화 및 루스 제1열 부호 변화 도식",
+      "exam_point": "루스 표의 제1열 부호 변화 횟수 = s 평면 우반면(불안정 영역)에 위치하는 근의 개수! 부호 변화가 전혀 없어야 제어계가 완전히 안정합니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"40\" y=\"50\" width=\"160\" height=\"150\" fill=\"#ecfdf5\" rx=\"10\"/><rect x=\"200\" y=\"50\" width=\"160\" height=\"150\" fill=\"#fef2f2\" rx=\"10\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"20\" y1=\"125\" x2=\"380\" y2=\"125\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"280\" cy=\"85\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"120\" cy=\"165\" r=\"8\" fill=\"#10b981\"/><text x=\"60\" y=\"80\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#065f46\">Stable Left Half</text><text x=\"220\" y=\"80\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#991b1b\">Unstable Right Half</text><text x=\"130\" y=\"170\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#ffffff\">S</text><text x=\"277\" y=\"90\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#ffffff\">U</text><text x=\"40\" y=\"225\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#0f172a\">Routh Sign Changes = Unstable Roots Count</text></svg>"
+    }
+  ]
+}

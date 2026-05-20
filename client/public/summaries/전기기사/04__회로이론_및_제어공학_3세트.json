@@ -1,0 +1,57 @@
+{
+  "subject": "회로이론 및 제어공학",
+  "unit": "전기기사 필기 핵심 개념",
+  "set": 3,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "⏳",
+      "title": "전류의 달리기 방해꾼, 인덕턴스의 관성과 시정수",
+      "content": "인덕터(L)는 전류가 갑자기 변하는 것을 아주 싫어하는 '전기적 관성'을 가지고 있어요. 스위치를 닫아도 전류는 즉시 최댓값에 도달하지 못하고 완만한 곡선을 그리며 서서히 흘러갑니다. 이때 정상 전류의 63.2%에 도달할 때까지 걸리는 끈기 있는 대기 시간을 '시정수(τ)'라고 불러요. 관성(L)이 클수록 반응이 굼떠서 시간이 더 걸리고, 회로의 마찰력(R)이 클수록 흐름을 빨리 억제하므로 시정수는 L/R이 된답니다.",
+      "visual": "시간의 흐름에 따라 전류가 0에서 정상상태(100%)까지 도달하는 과도특성 곡선 그래프. 시정수 지점인 63.2% 레벨과 공식 L/R이 명확히 대비되는 도식입니다.",
+      "exam_point": "R-L 직렬회로에서 시정수 τ = L/R [sec] 공식을 완벽히 암기하세요! 만약 인덕턴스가 직접 주어지지 않았다면, 솔레노이드 관계식 L = Nφ/I를 결합하여 τ = Nφ / (R·I)로 구하는 응용법도 자주 출제됩니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 60,200 L 350,200\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4\"/><path d=\"M 60,200 L 60,40\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 60,200 C 120,130 180,95 350,90\" stroke=\"#4f46e5\" stroke-width=\"4\" fill=\"none\"/><path d=\"M 60,90 L 350,90\" stroke=\"#cbd5e1\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/><line x1=\"160\" y1=\"90\" x2=\"160\" y2=\"200\" stroke=\"#f43f5e\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/><circle cx=\"160\" cy=\"120\" r=\"5\" fill=\"#f43f5e\"/><text x=\"70\" y=\"80\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#64748b\">정상 전류 (100%)</text><text x=\"170\" y=\"115\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#f43f5e\">63.2%</text><text x=\"145\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#4f46e5\">시간 t = L/R (시정수)</text><text x=\"340\" y=\"215\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#64748b\">시간 [s]</text><text x=\"45\" y=\"55\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#64748b\">전류</text><rect x=\"230\" y=\"135\" width=\"110\" height=\"40\" rx=\"8\" fill=\"#e0f2fe\" stroke=\"#0284c7\" stroke-width=\"1\"/><text x=\"242\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#0369a1\">τ = L / R [sec]</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🎯",
+      "title": "안전지대는 단위원 내부! z-평면의 안정도 조건",
+      "content": "컴퓨터가 제어하는 디지털 세상(이산 시간 계통)에서는 아날로그의 s-평면 대신 z-평면을 사용해 시스템이 안정한지 판별해요. s-평면의 넓디넓은 안전지대인 '좌반평면'을 곱게 구부려 z-평면으로 가져오면, 신기하게도 반지름이 정확히 1인 '단위원 내부'로 쏙 들어옵니다. 따라서 시스템이 요동치며 폭주하지 않으려면, 시스템의 뇌와 같은 특성방정식의 모든 뿌리(근)들이 반드시 이 예쁜 원의 내부에만 안착해야 합니다.",
+      "visual": "z-평면의 복소평면 위에 반지름이 1인 원(단위원)을 가시화하고, 원 내부를 안전한 영역(Stable)으로, 원 외부를 불안정한 영역(Unstable)으로 깔끔하게 채색한 도식입니다.",
+      "exam_point": "s-평면의 안전 영역은 '좌반평면', z-평면의 안전 영역은 '단위원 내부'입니다. 경계선(단위원 원주) 상에 놓이면 '임계 안정', 원 밖으로 한 발짝이라도 삐져나가면 '불안정'하다는 진리를 꼭 기억하세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><circle cx=\"200\" cy=\"125\" r=\"70\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"3\"/><line x1=\"70\" y1=\"125\" x2=\"330\" y2=\"125\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"315\" y=\"120\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#475569\">Re (실수)</text><text x=\"205\" y=\"45\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#475569\">Im (허수)</text><text x=\"165\" y=\"120\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">단위원 내부</text><text x=\"175\" y=\"138\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\">(안정)</text><text x=\"280\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#e11d48\">외부 (불안정)</text><circle cx=\"160\" cy=\"100\" r=\"4\" fill=\"#059669\"/><circle cx=\"220\" cy=\"140\" r=\"4\" fill=\"#059669\"/><text x=\"156\" y=\"96\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#047857\">×</text><text x=\"216\" y=\"136\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#047857\">×</text><text x=\"255\" y=\"185\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0284c7\">반지름 |z| = 1</text><line x1=\"200\" y1=\"125\" x2=\"250\" y2=\"75\" stroke=\"#0284c7\" stroke-width=\"2\" stroke-dasharray=\"2\"/></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "무한한 선로가 가진 고유의 고집, 특성 임피던스",
+      "content": "송전선로가 아무리 끝도 없이 길어도, 그 선로가 본질적으로 지니고 있는 고유한 저항의 성질은 일정합니다. 이를 '특성 임피던스(Z₀)'라고 해요. 마치 아무리 넓은 바다라도 물의 밀도는 똑같은 것과 같죠. 전선이 직렬로 전류의 흐름을 버티는 힘(직렬 임피던스 Z)과 병렬로 에너지를 새게 만드는 힘(병렬 어드미턴스 Y)의 고요한 비율로 결정되며, 선로의 길이에는 전혀 흔들리지 않는 굳건한 특성치입니다.",
+      "visual": "무한 장거리 송전선로와 그 선로 내부의 단위 소자(R, L, G, C)의 추상적 표현, 그리고 중앙에 위풍당당하게 빛나는 특성 임피던스 공식 Z0 = sqrt(Z/Y)를 대비시킨 시각화입니다.",
+      "exam_point": "특성 임피던스는 선로의 '길이'에 전혀 반비례하거나 비례하지 않고 항상 일정합니다! 공식 Z₀ = √(Z/Y)와 함께 무손실 선로일 때의 단순화된 공식 Z₀ = √(L/C)는 무조건 시험에 출제되니 뇌에 꼭 새겨두세요.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 30,100 L 150,100 M 30,150 L 150,150\" stroke=\"#cbd5e1\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"45\" y=\"85\" width=\"30\" height=\"30\" rx=\"5\" fill=\"#3b82f6\"/><text x=\"55\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#ffffff\">Z</text><rect x=\"100\" y=\"110\" width=\"30\" height=\"30\" rx=\"5\" fill=\"#10b981\"/><text x=\"110\" y=\"130\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#ffffff\">Y</text><line x1=\"115\" y1=\"100\" x2=\"115\" y2=\"110\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"115\" y1=\"140\" x2=\"115\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"2\"/><rect x=\"180\" y=\"45\" width=\"195\" height=\"160\" rx=\"12\" fill=\"#f1f5f9\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><text x=\"215\" y=\"80\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e293b\">특성 임피던스 Z₀</text><text x=\"220\" y=\"135\" font-family=\"sans-serif\" font-size=\"24\" font-weight=\"bold\" fill=\"#3b82f6\">√</text><line x1=\"237\" y1=\"118\" x2=\"325\" y2=\"118\" stroke=\"#3b82f6\" stroke-width=\"3\"/><text x=\"245\" y=\"145\" font-family=\"sans-serif\" font-size=\"20\" font-weight=\"bold\" fill=\"#1e293b\">Z / Y</text><text x=\"235\" y=\"185\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#64748b\">※ 선로 길이와 무관함!</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "🌊",
+      "title": "기본파에 섞인 불청객의 비율, 왜형률",
+      "content": "가장 아름답고 깨끗한 주파수 성분인 '기본파'에, 전력 전자 장비 등에서 발생하는 불청객인 '고조파(노이즈)'들이 가득 섞여 우글우글해진 더러운 파형을 왜형파라고 해요. 이 찌그러짐의 치명도를 나타내는 지표가 바로 '왜형률'입니다. 깨끗하게 쭉 뻗은 큰 형님인 '기본파의 실효값'을 기준으로 잡고, 그 뒤에서 시끄럽게 방해하는 고조파 동생들의 '전체 실효값 합산'이 얼마나 치솟아 있는지를 분수식 비율로 가려내는 것입니다.",
+      "visual": "완만한 파란색의 깨끗한 기본파(Sine wave)와 온갖 주파수가 엉켜 찌그러진 빨간색의 왜형파를 대비하여, 왜형률의 개념적 기하학을 보여줍니다.",
+      "exam_point": "왜형률의 수식 정의를 완벽히 하세요. 분모는 오직 '기본파의 실효값' 하나뿐이고, 분자는 '전체 고조파 실효값들의 제곱합의 제곱근(루트)'입니다. 기본파를 분모로 둔다는 점을 출제자들이 헷갈리게 유도하니 주의하세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 30,125 L 370,125\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><path d=\"M 40,125 C 80,40 120,40 160,125 C 200,210 240,210 280,125 C 320,40 360,40 380,125\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"4\" fill=\"none\" opacity=\"0.6\"/><path d=\"M 40,125 Q 60,70 80,85 T 120,110 T 160,125 T 200,140 T 240,115 T 280,125 T 320,100 T 360,125\" stroke=\"#ef4444\" stroke-width=\"3\" fill=\"none\"/><text x=\"50\" y=\"50\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#3b82f6\">기본파 (정현파)</text><text x=\"165\" y=\"60\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#ef4444\">왜형파 (찌그러진 파형)</text><rect x=\"110\" y=\"175\" width=\"180\" height=\"55\" rx=\"8\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><text x=\"122\" y=\"195\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#475569\">왜형률 =</text><line x1=\"170\" y1=\"198\" x2=\"280\" y2=\"198\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"175\" y=\"192\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#ef4444\">전 고조파 실효값</text><text x=\"182\" y=\"211\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#3b82f6\">기본파 실효값</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "⚖️",
+      "title": "첫 번째 열만 감시한다! 루스 안정도 판정법",
+      "content": "복잡한 제어계 시스템이 안전하게 흘러갈지, 아니면 도중에 폭발하여 망가질지 알아내기 위해 매번 고차방정식의 해를 직접 구하는 수고를 덜어주는 구세주가 있어요. 바로 '루스 판정법'입니다. 시스템의 설계도 격인 특성방정식 계수들을 가져와 특별한 사다리꼴 표를 정렬한 다음, 맨 왼쪽의 '첫 번째 열'만 눈을 크게 뜨고 감시합니다. 이곳의 모든 숫자들이 단 한 번도 부호를 바꾸지 않고 유지되어야만 안심할 수 있는 상태가 됩니다.",
+      "visual": "루스 배열의 1열 원소들의 정렬 상태와 부호 변화 여부(양수 유지)를 검사하여 시스템이 완벽히 안정적(Stable)임을 보여주는 수학적 레이아웃 도식입니다.",
+      "exam_point": "제1열 원소들의 부호 변화 횟수는 '우반평면에 존재하는 불안정한 근의 개수'와 완벽히 같습니다. 따라서 안정하려면 1열에 부호 변화가 전혀 없어야 합니다. 다항식 s³ + 3s² + 2s + K = 0 형태에서 안정이 되기 위한 조건인 0 < K < 6 유도 문제는 매년 출제됩니다!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"40\" y=\"60\" width=\"75\" height=\"140\" rx=\"8\" fill=\"#e0f2fe\" stroke=\"#0284c7\" stroke-width=\"1.5\"/><text x=\"55\" y=\"45\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#0284c7\">제 1 열</text><text x=\"68\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\">1</text><text x=\"68\" y=\"115\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\">3</text><text x=\"50\" y=\"145\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">(6-K)/3</text><text x=\"68\" y=\"185\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\">K</text><line x1=\"130\" y1=\"60\" x2=\"130\" y2=\"200\" stroke=\"#cbd5e1\" stroke-dasharray=\"2\"/><text x=\"150\" y=\"85\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#64748b\">s³ 행 계수</text><text x=\"150\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#64748b\">s² 행 계수</text><text x=\"150\" y=\"145\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#64748b\">s¹ 행 판별</text><text x=\"150\" y=\"185\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#64748b\">s⁰ 행 마감</text><rect x=\"245\" y=\"120\" width=\"130\" height=\"55\" rx=\"10\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"2\"/><text x=\"260\" y=\"143\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\">모두 양수(+)일 것</text><text x=\"270\" y=\"163\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#059669\">0 &lt; K &lt; 6 (안정)</text></svg>"
+    }
+  ]
+}

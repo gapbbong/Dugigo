@@ -1,0 +1,57 @@
+{
+  "subject": "전기설비기술기준",
+  "unit": "전기설비 핵심 설비 및 안전기준",
+  "set": 12,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "번개의 역습을 막아라! 매설지선과 역섬락",
+      "content": "송전탑에 내리치는 강력한 벼락은 전력계통의 무서운 적입니다. 철탑의 접지저항이 너무 높으면 벼락 전류가 땅으로 다 빠져나가지 못하고 오히려 철탑의 전위가 비정상적으로 치솟아, 전선 쪽으로 역류 방전되는 '역섬락'이 발생합니다. 이를 방지하기 위해 땅속에 방사형으로 매설지선을 길게 깔아 벼락 전하가 시원하게 땅으로 빠져나갈 배수구를 넓혀줍니다.",
+      "visual": "벼락을 맞은 송전탑에서 지중으로 뻗어나가는 매설지선과 이로 인한 역섬락 방지 도식",
+      "exam_point": "시험에서 송전탑의 '역섬락 방지' 대책을 물으면 무조건 '매설지선 설치(탑각 접지저항 감소)'가 정답입니다. 이 둘의 인과관계를 기억해 두세요!",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><path d='M10 200 L390 200' stroke='#94a3b8' stroke-width='4'/><path d='M180 200 L195 80 L205 80 L220 200 Z' fill='#475569'/><path d='M160 120 L240 120 M150 150 L250 150 M195 80 L205 80' stroke='#334155' stroke-width='3'/><path d='M200 10 L190 50 L210 50 L200 90' fill='none' stroke='#f59e0b' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/><path d='M160 210 Q140 220 120 215 M140 210 Q110 230 80 220 M240 210 Q260 220 280 215 M260 210 Q290 230 320 220' fill='none' stroke='#10b981' stroke-width='3' stroke-dasharray='4,4'/><text x='200' y='235' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='12' fill='#0f172a'>방사형 매설지선 (접지저항 극대 저하)</text><text x='50' y='180' font-family='sans-serif' font-weight='bold' font-size='11' fill='#ef4444'>역섬락 방지! (Counter-flashover)</text><text x='200' y='30' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='14' fill='#d97706'>Lightning Strike</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🧪",
+      "title": "튼튼한 전선인지 확인하는 법! 절연내력 시험전압",
+      "content": "전력설비가 특고압을 견딜 수 있는지 테스트하는 것은 배관의 수압 테스트와 같습니다. 10분 동안 최대사용전압에 일정 배율을 곱한 가혹한 고전압을 인가하여 버티는지 시험합니다. 예를 들어 7kV 이하의 전력계통은 최대사용전압의 1.5배 전압을 견뎌야 하고, 23,000V의 중성점 비접지 계통의 경우 1.25배인 28,750V의 맹렬한 전압을 무조건 버텨내야 합격 판정을 받습니다.",
+      "visual": "절연내력 시험 전압의 기준 배수를 기기 권선과 함께 도식화한 다이어그램",
+      "exam_point": "자주 출제되는 두 개의 핵심 수치는 ① 7kV 이하 = 1.5배 (최저 500V) ② 7kV 초과 60kV 이하 비접지 = 1.25배입니다. 특히 23,000V 비접지식의 시험전압(23,000 x 1.25 = 28,750V) 계산 문제가 단골로 출제됩니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f5f3ff'/><rect x='50' y='50' width='300' height='130' rx='10' fill='none' stroke='#8b5cf6' stroke-width='3'/><text x='200' y='35' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='14' fill='#6d28d9'>절연내력 시험배수 기준</text><path d='M80 115 C100 85, 120 85, 140 115 C160 145, 180 145, 200 115 C220 85, 240 85, 260 115 C280 145, 300 145, 320 115' fill='none' stroke='#c084fc' stroke-width='6'/><rect x='70' y='140' width='110' height='30' rx='5' fill='#312e81'/><text x='125' y='158' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='11' fill='#ffffff'>7kV 이하: 1.5배</text><rect x='220' y='140' width='110' height='30' rx='5' fill='#4c1d95'/><text x='275' y='158' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='11' fill='#ffffff'>23kV 비접지: 1.25배</text><text x='200' y='215' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='13' fill='#1e1b4b'>시험 조건: 최대사용전압에 배수를 곱하여 10분간 인가</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🚛",
+      "title": "무거운 차가 지나가도 안전하게! 지중전선 매설 깊이",
+      "content": "미관과 안전을 위해 전선을 땅밑에 묻는 지중전선로는 지상의 무거운 하중으로부터 배선을 단단히 지켜내야 합니다. 차량이나 무거운 장비 등의 중량 압력을 상시 받기 쉬운 도로 밑이라면 전력관 보호를 위해 최소 1.0m 이상의 깊이로 깊숙이 묻어야 안전합니다. 압력 걱정이 없는 한적한 기타 장소라면 0.6m 이상만 묻어도 충분합니다.",
+      "visual": "도로 하부 중량물 압력을 받는 구간에서 지중전선관의 직접매설 깊이 한계를 나타낸 단면도",
+      "exam_point": "직접매설식 및 관로식의 매설 깊이 기준: ① 차량 및 중량물 압력 발생 장소 = 1.0m 이상 ② 기타 장소 = 0.6m 이상. 최근 법 개정으로 기존 1.2m에서 '1.0m'로 기준이 완화된 포인트가 시험의 핵심 오답 저격처입니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#fef3c7'/><line x1='30' y1='100' x2='370' y2='100' stroke='#b45309' stroke-width='4'/><rect x='50' y='50' width='80' height='40' rx='4' fill='#475569'/><rect x='130' y='65' width='30' height='25' rx='3' fill='#64748b'/><circle cx='70' cy='95' r='10' fill='#1e293b'/><circle cx='110' cy='95' r='10' fill='#1e293b'/><circle cx='140' cy='95' r='10' fill='#1e293b'/><rect x='30' y='102' width='340' height='118' fill='#f59e0b' fill-opacity='0.15'/><circle cx='250' cy='180' r='16' fill='#d97706' fill-opacity='0.3' stroke='#b45309' stroke-width='2'/><circle cx='250' cy='180' r='6' fill='#1e293b'/><line x1='210' y1='100' x2='210' y2='180' stroke='#dc2626' stroke-width='2' stroke-dasharray='4,2'/><polygon points='210,100 206,110 214,110' fill='#dc2626'/><polygon points='210,180 206,170 214,170' fill='#dc2626'/><text x='195' y='145' text-anchor='end' font-family='sans-serif' font-weight='bold' font-size='12' fill='#dc2626'>압력 우려시 1.0m 이상</text><text x='250' y='215' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='11' fill='#78350f'>지중전선관 (직접매설식)</text><text x='200' y='30' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='14' fill='#78350f'>차량 및 중량물 압력 발생 구역</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "📐",
+      "title": "팽팽하면 끊어집니다! 이도(Sag)의 미학",
+      "content": "가공전선을 가설할 때 빨랫줄처럼 팽팽하게만 당겨놓으면, 겨울철에 날이 추워지며 전선이 수축해 가벼운 자극에도 툭 끊어지고 맙니다. 따라서 안전을 위해 약간 밑으로 늘어지도록 여유를 주는 곡선 깊이를 '이도(Sag, D)'라고 합니다. 이 여유분 때문에 전선의 실제 총길이(L)는 수평거리인 경간(S)보다 약간 더 길어지며 공식으로 정밀 설계합니다.",
+      "visual": "두 지지물 사이에서 자연스러운 현수선 곡선을 이루는 전선의 이도(D)와 실제 길이 관계 도식",
+      "exam_point": "실제 전선 길이 공식인 L = S + 8D²/3S 가 빈출 계산문제로 등장합니다. 실장(L)에서 경간(S)을 뺀 여유 전선 길이가 '8D²/3S' 라는 점을 꼭 숙지하고 수치를 대입하세요!",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#ecfdf5'/><line x1='60' y1='80' x2='60' y2='200' stroke='#065f46' stroke-width='5'/><line x1='340' y1='80' x2='340' y2='200' stroke='#065f46' stroke-width='5'/><path d='M60 90 Q200 170 340 90' fill='none' stroke='#059669' stroke-width='3'/><line x1='60' y1='90' x2='340' y2='90' stroke='#a3e635' stroke-width='1.5' stroke-dasharray='3,3'/><line x1='200' y1='90' x2='200' y2='130' stroke='#ef4444' stroke-width='2'/><polygon points='200,130 197,123 203,123' fill='#ef4444'/><text x='210' y='115' font-family='sans-serif' font-weight='bold' font-size='11' fill='#b91c1c'>이도 (Sag, D)</text><text x='200' y='40' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='14' fill='#064e3b'>전선의 이도(D)와 실제 길이</text><text x='200' y='75' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='12' fill='#047857'>경간 (Span, S)</text><rect x='100' y='170' width='200' height='35' rx='5' fill='#059669'/><text x='200' y='192' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='12' fill='#ffffff'>실제 길이 L = S + 8D² / 3S</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🚨",
+      "title": "폭발을 막는 마지노선! 수소 순도 85%",
+      "content": "대용량 발전기에서는 열 흡수력이 압도적인 수소 가스를 밀폐 순환시켜 내부를 냉각시킵니다. 하지만 수소 가스에 공기(산소)가 새어들어가 섞이면 일순간 거대한 폭발물로 변할 수 있어 매우 위험합니다. 따라서 안전을 지키기 위해 기기 내부의 수소 순도가 85% 이하로 떨어지면 대폭발을 예방하는 비상 경보장치가 강제로 작동되어야 합니다.",
+      "visual": "발전기 수소 냉각기 챔버와 안전 임계치인 85% 순도를 나타내는 경보 계기판",
+      "exam_point": "수소냉각식 발전기 안전설비 암기 조건: ① 수소 순도 '85% 이하' 저하시 경보장치 동작 ② 압력의 현저한 변동 시에도 경보 작동 ③ 온도는 '계측장치만' 시설하면 되므로 선지 구성 시 온도 경보는 오답입니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#fff5f5'/><circle cx='200' cy='120' r='60' fill='none' stroke='#f87171' stroke-width='4'/><circle cx='200' cy='120' r='50' fill='#fee2e2'/><line x1='200' y1='120' x2='160' y2='90' stroke='#dc2626' stroke-width='4' stroke-linecap='round'/><path d='M200 120 L160 90 A 50 50 0 0 0 150 120 Z' fill='#ef4444' fill-opacity='0.4'/><text x='200' y='40' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='14' fill='#991b1b'>수소밀폐형 냉각기 안전 임계선</text><text x='200' y='210' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='12' fill='#7f1d1d'>수소 순도 85% 이하 시 경보 필수!</text><text x='130' y='125' text-anchor='end' font-family='sans-serif' font-weight='bold' font-size='11' fill='#b91c1c'>위험 구역 (&lt;85%)</text><circle cx='280' cy='90' r='8' fill='#3b82f6'/><text x='280' y='93' text-anchor='middle' font-family='sans-serif' font-size='8' font-weight='bold' fill='#ffffff'>H₂</text><circle cx='300' cy='140' r='8' fill='#3b82f6'/><text x='300' y='143' text-anchor='middle' font-family='sans-serif' font-size='8' font-weight='bold' fill='#ffffff'>H₂</text></svg>"
+    }
+  ]
+}

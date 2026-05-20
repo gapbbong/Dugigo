@@ -1,0 +1,57 @@
+{
+  "subject": "전력공학",
+  "unit": "02. 전력공학 1세트",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "송전선로가 견딜 수 있는 최대의 에너지 흐름",
+      "content": "송전선로를 통해 보낼 수 있는 전력은 송전단과 수전단의 전압 크기, 그리고 두 전압의 각도 차이인 상차각에 의해 결정됩니다. 이를 물의 흐름에 비유하면 두 저수지의 높이 차이가 크고 연결 파이프가 넓을수록 더 많은 물을 보낼 수 있는 것과 같습니다. 상차각이 90도가 될 때 전송 가능한 전력은 극대화되며, 이 한계를 넘어서면 송전 계통은 안정성을 잃고 동기를 이탈하게 됩니다.",
+      "visual": "정태안정극한전력 공식과 상차각 90도에서 피크를 이루는 사인 곡선 그래프 도식",
+      "exam_point": "정태안정극한전력 공식 P = (Es * Er / X) * sin(delta) [MW] 계산 문제를 대비하세요. Es와 Er에 kV 단위를 대입하면 결과는 자동으로 MW가 되며, 최대 전송 조건은 상차각이 90도일 때입니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f1f5f9'/><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='#3b82f6'/><stop offset='100%' stop-color='#1d4ed8'/></linearGradient></defs><path d='M 50 180 Q 200 60 350 180' fill='none' stroke='url(#grad1)' stroke-width='4'/><circle cx='200' cy='120' r='6' fill='#ef4444'/><line x1='50' y1='180' x2='350' y2='180' stroke='#475569' stroke-width='2'/><line x1='50' y1='50' x2='50' y2='190' stroke='#475569' stroke-width='2'/><text x='40' y='40' font-family='sans-serif' font-weight='bold' font-size='12' fill='#1e293b'>Power P</text><text x='330' y='200' font-family='sans-serif' font-weight='bold' font-size='12' fill='#1e293b'>delta (Deg)</text><text x='210' y='115' font-family='sans-serif' font-weight='bold' font-size='12' fill='#ef4444'>P_max (delta = 90)</text><text x='95' y='225' font-family='sans-serif' font-weight='bold' font-size='14' fill='#0f172a'>P = (Es * Er / X) * sin(delta)</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🌩️",
+      "title": "이상전압을 방출하고 평화를 되찾는 안전밸브",
+      "content": "피뢰기는 낙뢰와 같은 외부의 이상 고전압이 침투했을 때, 신속하게 대지로 방전 통로를 열어주어 설비를 보호합니다. 이때 가장 중요한 것은 방전이 끝난 후 계통의 정상 전류가 계속 땅으로 흐르는 현상인 '속류'를 차단하는 능력입니다. 마치 비상 배수 밸브가 위험한 압력만 빼낸 직후 정상 가동 상태로 돌아가기 위해 알아서 즉시 닫히는 원리와 같습니다.",
+      "visual": "송전선로에서 분기되어 접지된 피뢰기가 낙뢰 전하를 방출하고 정상 전류를 차단하는 도식",
+      "exam_point": "피뢰기의 정격전압 정의는 반드시 출제됩니다! '속류를 차단할 수 있는 최고의 교류 전압'이 바로 피뢰기의 정격전압입니다. 제한전압, 충격방전개시전압의 개념과 혼동하지 않도록 구별하여 암기해야 합니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><line x1='50' y1='60' x2='350' y2='60' stroke='#3b82f6' stroke-width='4'/><text x='60' y='45' font-family='sans-serif' font-weight='bold' font-size='12' fill='#3b82f6'>Transmission Line</text><rect x='170' y='60' width='60' height='100' rx='8' fill='#e2e8f0' stroke='#64748b' stroke-width='2'/><path d='M 180 85 L 220 85 M 180 110 L 220 110 M 180 135 L 220 135' stroke='#475569' stroke-width='3'/><line x1='200' y1='160' x2='200' y2='200' stroke='#475569' stroke-width='3'/><line x1='180' y1='200' x2='220' y2='200' stroke='#475569' stroke-width='3'/><line x1='190' y1='207' x2='210' y2='207' stroke='#475569' stroke-width='2'/><line x1='195' y1='214' x2='205' y2='214' stroke='#475569' stroke-width='1'/><path d='M 120 20 L 150 70 L 135 75 L 180 110' fill='none' stroke='#f59e0b' stroke-width='4' stroke-linejoin='round'/><text x='245' y='115' font-family='sans-serif' font-weight='bold' font-size='13' fill='#0f172a'>Discharge / Cutoff</text><text x='245' y='135' font-family='sans-serif' font-weight='bold' font-size='11' fill='#ef4444'>Rated Voltage</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🛡️",
+      "title": "거대한 고장 전류를 끊어내는 든든한 방패",
+      "content": "계통에 단락 사고가 발생하면 일반적인 부하 전류보다 수십 배 강한 파괴적인 단락 전류가 흐릅니다. 차단기는 내부에 내장된 강력한 소호 장치 덕분에 이러한 대전류를 안전하게 소호(아크 제거)하여 전로를 열 수 있는 장치입니다. 부하 전류만 끄고 켤 수 있는 일반 개폐기나, 무부하 상태에서만 조작해야 하는 단로기와 달리 시스템 전체의 소손을 막는 가장 강력한 방패입니다.",
+      "visual": "차단기의 가동 접점이 개방되면서 내부에서 아크가 제거되고 전로가 차단되는 모습",
+      "exam_point": "3상 차단기의 정격차단용량 Ps 공식 Ps = (root 3) * V * Is [MVA]는 필수 암기 사항입니다. 여기서 차단기 정격전압 V는 kV 단위, 정격차단전류 Is는 kA 단위로 대입해야 정확한 MVA 결과가 도출됩니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#fff1f2'/><rect x='100' y='70' width='200' height='100' rx='12' fill='#fecdd3' stroke='#f43f5e' stroke-width='3'/><circle cx='150' cy='120' r='6' fill='#e11d48'/><circle cx='250' cy='120' r='6' fill='#e11d48'/><line x1='150' y1='120' x2='185' y2='90' stroke='#e11d48' stroke-width='4' stroke-linecap='round'/><path d='M 185 90 Q 215 105 250 120' fill='none' stroke='#fb7185' stroke-width='2' stroke-dasharray='3'/><text x='115' y='195' font-family='sans-serif' font-weight='bold' font-size='15' fill='#9f1239'>Ps = sqrt(3) * V * Is</text><text x='125' y='50' font-family='sans-serif' font-weight='bold' font-size='14' fill='#e11d48'>Circuit Breaker (CB)</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "🌊",
+      "title": "성질이 다른 선로를 만날 때 발생하는 메아리",
+      "content": "선로를 흐르는 전압 진행파는 특성임피던스가 급격히 변하는 경계면(예: 송전선로와 부하의 연결점)을 만났을 때, 물결이 절벽에 부딪쳐 튀어 오르듯 반사파를 형성하게 됩니다. 두 매질의 임피던스 차이가 클수록 원래 전력 진행 방향과 반대로 되돌아오는 반사파 전압의 크기도 더욱 커집니다. 임피던스가 완전히 일치(정합)하면 반사가 일어나지 않고 100% 흡수됩니다.",
+      "visual": "서로 다른 임피던스의 연결 경계면에서 전압 진행파가 입사되고 일부가 반사되는 현상",
+      "exam_point": "반사계수 rho = (ZL - Z0) / (ZL + Z0) 공식을 정확히 외우세요! 분모는 합(+), 분자는 차(-)입니다. 반사파 전압 Ep = rho * E이며, 부하 임피던스가 개방(무한대)되면 rho = 1이 되어 100% 동위상 반사가 일어납니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f0fdf4'/><line x1='50' y1='120' x2='200' y2='120' stroke='#10b981' stroke-width='6'/><line x1='200' y1='120' x2='350' y2='120' stroke='#059669' stroke-width='12'/><line x1='200' y1='80' x2='200' y2='160' stroke='#34d399' stroke-width='2' stroke-dasharray='4'/><text x='60' y='95' font-family='sans-serif' font-weight='bold' font-size='12' fill='#065f46'>Line Z0 = 400 ohm</text><text x='220' y='95' font-family='sans-serif' font-weight='bold' font-size='12' fill='#065f46'>Load ZL = 1200 ohm</text><path d='M 60 150 Q 80 130 100 150 T 140 150' fill='none' stroke='#3b82f6' stroke-width='3'/><text x='60' y='180' font-family='sans-serif' font-weight='bold' font-size='11' fill='#3b82f6'>Incident E = 20kV</text><path d='M 180 160 Q 160 175 140 160 T 100 160' fill='none' stroke='#ef4444' stroke-width='3'/><text x='130' y='200' font-family='sans-serif' font-weight='bold' font-size='11' fill='#ef4444'>Reflected Ep = 10kV</text><text x='110' y='45' font-family='sans-serif' font-weight='bold' font-size='14' fill='#065f46'>Impedance Mismatch</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🔥",
+      "title": "석탄 에너지가 전기에너지로 변하는 마법의 비율",
+      "content": "화력발전소는 석탄을 연소시켜 발생하는 강력한 열에너지로 보일러를 가열하고, 고압의 스팀을 통해 터빈을 돌려 전기에너지를 생산합니다. 이때 소비한 총 연료의 연소 열량 중에서 우리에게 유용하게 돌아온 전기 에너지의 양을 비율로 나타낸 것이 열효율입니다. 효율을 계산할 때는 연료가 가진 에너지를 전기 단위인 kWh에 맞춰 환산하기 위해 상수 860을 곱해 주어야 합니다.",
+      "visual": "투입 열에너지(연료 소비량 * 발열량)와 최종 생산된 전기에너지의 관계를 나타낸 열효율 공식 도식",
+      "exam_point": "열효율 eta = (860 * W) / (m * H) * 100 [%] 공식은 빈출 계산 문제입니다! 특히 연료 소비량 m의 단위가 주로 톤(ton)으로 주어지므로, 반드시 kg 단위(10^3)로 변환한 후 연산해야 오답을 피할 수 있습니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#fffbeb'/><rect x='40' y='80' width='100' height='60' rx='8' fill='#f59e0b' opacity='0.8'/><text x='50' y='115' font-family='sans-serif' font-weight='bold' font-size='12' fill='#78350f'>Coal (m * H)</text><rect x='260' y='80' width='100' height='60' rx='8' fill='#10b981' opacity='0.8'/><text x='270' y='115' font-family='sans-serif' font-weight='bold' font-size='12' fill='#064e3b'>Power (860*W)</text><path d='M 150 110 L 250 110' stroke='#3b82f6' stroke-width='8'/><polygon points='245,100 258,110 245,120' fill='#3b82f6'/><text x='160' y='95' font-family='sans-serif' font-weight='bold' font-size='14' fill='#1d4ed8'>Efficiency (eta)</text><text x='75' y='195' font-family='sans-serif' font-weight='bold' font-size='15' fill='#1e293b'>eta = (860 * W) / (m * H) * 100 %</text></svg>"
+    }
+  ]
+}

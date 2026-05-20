@@ -1,0 +1,57 @@
+{
+  "subject": "전기설비기술기준",
+  "unit": "전기설비기술기준",
+  "set": 10,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "🚧",
+      "title": "변전소 울타리 안전거리! 합해서 6미터의 법칙",
+      "content": "특고압 변전소는 엄청난 에너지가 꿈틀거리는 무시무시한 성곽과 같습니다. 사람들이 위험한 고전압 충전부에 절대 가까이 가지 못하도록 튼튼한 울타리를 치고 확실한 거리를 두어야 하죠. 154kV 송전선로처럼 35kV를 초과하고 160kV 이하인 구간에서는 울타리의 높이와 울타리로부터 충전부까지의 거리의 합계를 반드시 6m 이상으로 설계해 굳건한 안전 방어선을 구축해야 합니다.",
+      "visual": "변전소 울타리 높이 H와 내부 충전부까지의 거리 D의 합계가 6m 이상이어야 함을 보여주는 도식",
+      "exam_point": "★35kV 이하는 합계 5m 이상, 35kV 초과 160kV 이하는 합계 6m 이상! 시험에 가장 많이 나오는 154kV 시설 기준의 정답은 무조건 합계 '6m'입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f1f5f9\"/><rect x=\"260\" y=\"80\" width=\"90\" height=\"120\" rx=\"10\" fill=\"#cbd5e1\" stroke=\"#94a3b8\" stroke-width=\"3\"/><line x1=\"305\" y1=\"80\" x2=\"305\" y2=\"40\" stroke=\"#ef4444\" stroke-width=\"4\"/><circle cx=\"305\" cy=\"40\" r=\"10\" fill=\"#ef4444\"/><line x1=\"120\" y1=\"200\" x2=\"120\" y2=\"100\" stroke=\"#475569\" stroke-width=\"4\"/><line x1=\"100\" y1=\"120\" x2=\"140\" y2=\"120\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"100\" y1=\"150\" x2=\"140\" y2=\"150\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"20\" y1=\"200\" x2=\"380\" y2=\"200\" stroke=\"#334155\" stroke-width=\"4\"/><line x1=\"80\" y1=\"200\" x2=\"80\" y2=\"100\" stroke=\"#3b82f6\" stroke-width=\"2\"/><path d=\"M76,105 L80,100 L84,105 M76,195 L80,200 L84,195\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"45\" y=\"155\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#1e3a8a\">H (높이)</text><line x1=\"120\" y1=\"120\" x2=\"305\" y2=\"120\" stroke=\"#10b981\" stroke-width=\"2\"/><path d=\"M125,116 L120,120 L125,124 M300,116 L305,120 L300,124\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\"/><text x=\"180\" y=\"110\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#065f46\">D (거리)</text><rect x=\"90\" y=\"210\" width=\"220\" height=\"30\" rx=\"5\" fill=\"#3b82f6\"/><text x=\"110\" y=\"230\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#ffffff\">합계 (H + D) ≥ 6m (154kV 기준)</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🕳️",
+      "title": "땅속 전선들의 안전한 거리! 30cm와 60cm",
+      "content": "보이지 않는 어두운 땅속에는 강한 전력이 흐르는 지중전선과 정밀한 통신 신호가 오가는 지중약전류전선이 이웃해 있습니다. 전력선에서 발생하는 강력한 전자적 노이즈가 예민한 통신선의 아름다운 목소리를 덮어버리지 않으려면 일정한 거리를 두어야 합니다. 저압이나 고압 전선과는 최소 30cm, 어마무시한 힘을 가진 특고압 전선과는 60cm 이상 떨어져야 간섭을 피할 수 있습니다.",
+      "visual": "지중전선(저/고압)과 지중약전류전선 사이의 이격거리가 최소 30cm 이상 유지되어야 함을 나타내는 단면 도식",
+      "exam_point": "★지중전선과 약전류전선의 최소 이격거리 공식! 저·고압은 0.3m(30cm) 이상, 특고압은 0.6m(60cm) 이상이며 격벽 설치 시 이 기준을 완화할 수 있습니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#fef3c7\"/><rect x=\"0\" y=\"150\" width=\"400\" height=\"100\" fill=\"#d97706\" opacity=\"0.2\"/><line x1=\"0\" y1=\"150\" x2=\"400\" y2=\"150\" stroke=\"#d97706\" stroke-width=\"3\" stroke-dasharray=\"5,5\"/><circle cx=\"120\" cy=\"110\" r=\"25\" fill=\"#ef4444\" stroke=\"#b91c1c\" stroke-width=\"3\"/><circle cx=\"120\" cy=\"110\" r=\"10\" fill=\"#fca5a5\"/><text x=\"80\" y=\"165\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#7f1d1d\">저/고압 지중전선</text><circle cx=\"280\" cy=\"110\" r=\"15\" fill=\"#3b82f6\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><circle cx=\"280\" cy=\"110\" r=\"5\" fill=\"#93c5fd\"/><text x=\"235\" y=\"165\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#1e3a8a\">지중약전류전선</text><line x1=\"145\" y1=\"110\" x2=\"265\" y2=\"110\" stroke=\"#059669\" stroke-width=\"2\"/><path d=\"M150,105 L145,110 L150,115 M260,105 L265,110 L260,115\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"180\" y=\"100\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#047857\">≥ 30 cm</text><text x=\"120\" y=\"40\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"15\" fill=\"#1e293b\">지중전선 상호 이격거리 표준</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🚂",
+      "title": "철길 위를 지나는 전선, 안전 높이는 무조건 6.5m",
+      "content": "끝없이 뻗어 있는 철길 위로 전선을 가로질러 공중 가설할 때는 열차의 높이와 예기치 못한 안전사고에 철저히 대비해야 합니다. 전압이 낮든 높든 전혀 상관없이 철길을 건널 때 전선의 높이는 레일 표면을 기준으로 까마득한 높이인 최소 6.5m 이상으로 띄워야 합니다. 달리는 기차가 안전하게 통과할 수 있도록 넉넉한 상부 공간을 마련해 주는 공학적인 약속입니다.",
+      "visual": "철도 레일 위를 지나가는 저/고압 가공전선이 레일면상 6.5m 이상 떨어져 지나가는 입체 도식",
+      "exam_point": "★철도 또는 궤도를 횡단하는 가공전선로의 높이 규정은 전압 종류에 상관없이 무조건 '레일면상 6.5m 이상' 하나만 확실히 외우면 백전백승입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f0fdf4\"/><line x1=\"20\" y1=\"210\" x2=\"380\" y2=\"210\" stroke=\"#16a34a\" stroke-width=\"4\"/><rect x=\"80\" y=\"210\" width=\"100\" height=\"10\" fill=\"#4b5563\"/><line x1=\"100\" y1=\"210\" x2=\"100\" y2=\"220\" stroke=\"#9ca3af\" stroke-width=\"3\"/><line x1=\"160\" y1=\"210\" x2=\"160\" y2=\"220\" stroke=\"#9ca3af\" stroke-width=\"3\"/><rect x=\"90\" y=\"130\" width=\"80\" height=\"80\" rx=\"5\" fill=\"#2563eb\"/><rect x=\"100\" y=\"145\" width=\"25\" height=\"25\" fill=\"#93c5fd\"/><rect x=\"135\" y=\"145\" width=\"25\" height=\"25\" fill=\"#93c5fd\"/><rect x=\"90\" y=\"195\" width=\"80\" height=\"15\" fill=\"#1e293b\"/><line x1=\"20\" y1=\"60\" x2=\"380\" y2=\"60\" stroke=\"#b91c1c\" stroke-width=\"3\"/><text x=\"280\" y=\"50\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#b91c1c\">가공전선</text><line x1=\"240\" y1=\"60\" x2=\"240\" y2=\"210\" stroke=\"#0891b2\" stroke-width=\"2\"/><path d=\"M235,65 L240,60 L245,65 M235,205 L240,210 L245,205\" fill=\"none\" stroke=\"#0891b2\" stroke-width=\"2\"/><text x=\"250\" y=\"140\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"16\" fill=\"#0e7490\">≥ 6.5 m</text><text x=\"30\" y=\"35\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#0f172a\">철도 횡단 가공전선 높이 기준</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "과전류를 막는 비상 탈출구, 퓨즈의 용단 기준",
+      "content": "퓨즈는 전로에 허용 용량 이상의 전류가 넘쳐흐를 때 스스로 녹아 끊어져 장비를 살리는 기특한 소모성 부품입니다. 겉을 감싸 보호 장치가 되어 있는 '포장퓨즈'는 안전성이 높아 1.3배의 과전류를 버틸 수 있지만, 벌거벗은 전선 모양인 '비포장퓨즈'는 열이 빠르게 방출되어야 하므로 1.25배까지만 견디고, 정격의 2배에 달하는 위험 전류가 밀려오면 단 2분 안에 순식간에 사르르 녹아내려 전로를 끊어야 안전합니다.",
+      "visual": "포장퓨즈와 비포장퓨즈의 정격 배율 및 2배 전류 유입 시 용단 시간을 대비하여 보여주는 시각 도식",
+      "exam_point": "★비포장퓨즈 암기 공식: 1.25배 전류에 견디고, 2배 전류가 유입될 때 딱 '2분' 안에 완벽히 용단(녹아 끊어짐)되어야 함을 기억하세요.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#faf5ff\"/><rect x=\"30\" y=\"70\" width=\"150\" height=\"120\" rx=\"10\" fill=\"#ffffff\" stroke=\"#e9d5ff\" stroke-width=\"2\"/><rect x=\"65\" y=\"115\" width=\"80\" height=\"30\" rx=\"5\" fill=\"#cbd5e1\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"55\" y=\"120\" width=\"10\" height=\"20\" fill=\"#94a3b8\"/><rect x=\"145\" y=\"120\" width=\"10\" height=\"20\" fill=\"#94a3b8\"/><text x=\"75\" y=\"95\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#6b21a8\">포장 퓨즈</text><text x=\"45\" y=\"170\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#475569\">2배 전류 → 120분 용단</text><rect x=\"220\" y=\"70\" width=\"150\" height=\"120\" rx=\"10\" fill=\"#ffffff\" stroke=\"#fbcfe8\" stroke-width=\"2\"/><line x1=\"255\" y1=\"130\" x2=\"335\" y2=\"130\" stroke=\"#f43f5e\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><circle cx=\"255\" cy=\"130\" r=\"6\" fill=\"#94a3b8\"/><circle cx=\"335\" cy=\"130\" r=\"6\" fill=\"#94a3b8\"/><text x=\"260\" y=\"95\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#9d174d\">비포장 퓨즈</text><text x=\"235\" y=\"170\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#be123c\">2배 전류 → 2분 이내 용단!</text><text x=\"110\" y=\"35\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"15\" fill=\"#1e1b4b\">고압 전로용 퓨즈 규격 비교</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🏠",
+      "title": "지붕 위의 아슬아슬한 동거! 건조물 위쪽 이격거리",
+      "content": "가공전선이 빌딩이나 주택의 지붕(상부 조영재) 위를 아슬아슬하게 통과할 때, 바람에 흔들리거나 사람이 지붕에 올라가 발생할 수 있는 감전 사고를 완전히 예방해야 합니다. 전선의 절연 보호막 성능에 따라 요구되는 하늘길 안전거리가 달라지는데, 껍질이 없는 위험천만한 나전선은 최고 2m 이상 듬뿍 띄워야 하지만, 안전 피복이 꼼꼼히 입혀진 절연전선이나 튼튼한 케이블은 1m까지만 접근해도 시설이 허용됩니다.",
+      "visual": "주택 지붕 위에 설치되는 저/고압 가공선과 지붕면 사이의 절연 상태에 따른 안전 높이 이격거리 기준 도식",
+      "exam_point": "★건조물 위쪽 접근 시 저·고압 이격거리: 나전선은 가장 먼 '2.0m 이상', 안전한 케이블은 절반으로 줄어든 '1.0m 이상' 띄우면 통과입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#fff5f5\"/><polygon points=\"50,200 150,120 250,200\" fill=\"#fca5a5\" stroke=\"#ef4444\" stroke-width=\"3\"/><rect x=\"80\" y=\"200\" width=\"140\" height=\"40\" fill=\"#fee2e2\"/><line x1=\"20\" y1=\"60\" x2=\"380\" y2=\"60\" stroke=\"#475569\" stroke-width=\"4\"/><line x1=\"150\" y1=\"60\" x2=\"150\" y2=\"120\" stroke=\"#b91c1c\" stroke-width=\"2\"/><path d=\"M145,65 L150,60 L155,65 M145,115 L150,120 L155,115\" fill=\"none\" stroke=\"#b91c1c\" stroke-width=\"2\"/><rect x=\"240\" y=\"90\" width=\"145\" height=\"70\" rx=\"8\" fill=\"#ffffff\" stroke=\"#fca5a5\" stroke-width=\"1\"/><text x=\"248\" y=\"112\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#7f1d1d\">• 나전선: 2.0m 이상</text><text x=\"248\" y=\"129\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#7f1d1d\">• 절연전선: 1.0m 이상</text><text x=\"248\" y=\"146\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#7f1d1d\">• 케이블: 1.0m 이상</text><text x=\"30\" y=\"35\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#450a0a\">건조물 위쪽 접근 시 이격거리</text></svg>"
+    }
+  ]
+}

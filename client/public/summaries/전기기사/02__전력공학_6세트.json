@@ -1,0 +1,57 @@
+{
+  "subject": "전기기사 필기",
+  "unit": "전력공학",
+  "set": 6,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "맥주 거품을 쏙 빼는 기술! 전력용 콘덴서와 역률 개선",
+      "content": "역률은 우리가 보낸 전력 중 실제로 일을 한 유효전력의 비율을 말해요. 모터 같은 코일(L) 성분 때문에 원치 않는 무효전력(거품)이 생기는데, 여기에 전력용 콘덴서(C)를 병렬로 달아주면 마치 거품을 걷어내듯 무효전력이 싹 사라집니다! 덕분에 컵에 진짜 알짜 맥주(유효전력)를 가득 채워 효율을 극대화할 수 있게 됩니다.",
+      "visual": "유효전력 P를 가로축, 코일로 인한 무효전력 Q1과 콘덴서 C를 달아 감소된 무효전력 Q2의 관계를 직관적으로 표현한 삼각 벡터도입니다.",
+      "exam_point": "콘덴서 용량 계산 공식인 Qc = P(tanθ1 - tanθ2)를 반드시 암기하세요! 개선 전 역률과 개선 후 역률을 대입하여 콘덴서의 용량을 구하는 문제가 고정 출제됩니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><line x1='50' y1='200' x2='350' y2='200' stroke='#94a3b8' stroke-width='2'/><polygon points='350,200 340,195 340,205' fill='#94a3b8'/><line x1='50' y1='50' x2='50' y2='210' stroke='#94a3b8' stroke-width='2'/><path d='M 50,200 L 250,200 L 250,80 Z' fill='none' stroke='#3b82f6' stroke-width='3'/><path d='M 50,200 L 250,140' fill='none' stroke='#ef4444' stroke-width='3' stroke-dasharray='4'/><line x1='250' y1='80' x2='250' y2='140' stroke='#10b981' stroke-width='3'/><polygon points='250,140 245,130 255,130' fill='#10b981'/><text x='130' y='218' font-family='sans-serif' font-weight='bold' font-size='11' fill='#1e293b'>유효전력 P (알짜배기)</text><text x='260' y='110' font-family='sans-serif' font-weight='bold' font-size='11' fill='#10b981'>콘덴서 QC 효과</text><text x='110' y='110' font-family='sans-serif' font-weight='bold' font-size='11' fill='#3b82f6'>개선 전 S1</text><text x='110' y='165' font-family='sans-serif' font-weight='bold' font-size='11' fill='#ef4444'>개선 후 S2</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🌊",
+      "title": "전기 파도의 충돌! 진행파의 반사와 투과",
+      "content": "송전선을 흐르던 전기 파동이 임피던스가 다른 지점(선로 말단이나 변압기)에 도달하면 신기한 현상이 일어납니다. 강물이 좁은 틈새를 만나면 일부는 튕겨 나오고 일부는 통과하듯, 진행파 전압도 일부분은 반사파(er)가 되어 되돌아가고 나머지는 투과파(et)가 되어 앞으로 나아가게 됩니다.",
+      "visual": "서로 다른 임피던스를 가진 두 선로의 경계면에서 전압 진행파가 부딪쳐 일부는 반사되고 일부는 통과하는 역동적인 파동 도식입니다.",
+      "exam_point": "반사계수 m = (Z2 - Z1)/(Z2 + Z1)과 투과계수 t = 2Z2/(Z2 + Z1) 공식을 외워두세요! 분모는 무조건 합이고, 분자는 반사일 때 '차', 투과일 때 '상대방의 2배'라는 것만 기억하면 끝납니다.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><line x1='200' y1='40' x2='200' y2='210' stroke='#64748b' stroke-width='2' stroke-dasharray='5 5'/><rect x='30' y='120' width='170' height='10' fill='#3b82f6'/><rect x='200' y='115' width='170' height='20' fill='#ec4899'/><path d='M 40,90 Q 75,60 110,90 T 180,90' fill='none' stroke='#3b82f6' stroke-width='3'/><polygon points='185,90 175,85 175,95' fill='#3b82f6'/><path d='M 160,160 Q 130,180 100,160 T 40,160' fill='none' stroke='#f59e0b' stroke-width='3'/><polygon points='35,160 45,155 45,165' fill='#f59e0b'/><path d='M 220,90 Q 255,75 290,90 T 360,90' fill='none' stroke='#10b981' stroke-width='3'/><polygon points='365,90 355,85 355,95' fill='#10b981'/><text x='50' y='50' font-family='sans-serif' font-weight='bold' font-size='12' fill='#1e293b'>선로 1 (Z1 = 400Ω)</text><text x='250' y='50' font-family='sans-serif' font-weight='bold' font-size='12' fill='#1e293b'>선로 2 (Z2 = 1200Ω)</text><text x='40' y='110' font-family='sans-serif' font-size='10' fill='#3b82f6'>입사파 (ei)</text><text x='250' y='110' font-family='sans-serif' font-size='10' fill='#10b981'>투과파 (et)</text><text x='60' y='185' font-family='sans-serif' font-size='10' fill='#f59e0b'>반사파 (er)</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🔄",
+      "title": "버리는 열도 다시 보자! 재생 사이클의 지혜",
+      "content": "화력발전소에서 터빈을 돌리고 남은 증기는 엄청난 열을 품고 있지만 그냥 버려지기 일쑤입니다. 재생 사이클은 터빈 중간에서 이 뜨거운 증기를 일부 뽑아내어(추출), 보일러로 들어갈 차가운 급수를 미리 데우는 친환경 고효율 열시스템입니다. 찬 국에 뜨거운 육수를 부어 끓는 시간을 획기적으로 줄이는 원리이죠.",
+      "visual": "터빈 중간에서 뜨거운 증기가 추출되어 급수가열기로 들어가고, 보일러로 예열된 물이 공급되는 고효율 재생사이클의 순환 계통도입니다.",
+      "exam_point": "'터빈 팽창 도중 증기 일부 추출' 및 '급수가열'이라는 설명이 지문에 나오면 무조건 '재생 사이클'이 답입니다! 터빈을 거친 증기를 통째로 보일러로 돌려 재가열하는 것은 '재열 사이클'이니 절대 헷갈리지 마세요.",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><rect x='40' y='70' width='70' height='80' rx='10' fill='#f87171'/><text x='53' y='115' font-family='sans-serif' font-weight='bold' font-size='12' fill='#ffffff'>보일러</text><polygon points='160,60 240,40 240,120 160,100' fill='#60a5fa'/><text x='180' y='85' font-family='sans-serif' font-weight='bold' font-size='12' fill='#ffffff'>터빈</text><rect x='130' y='160' width='100' height='50' rx='10' fill='#34d399'/><text x='145' y='190' font-family='sans-serif' font-weight='bold' font-size='11' fill='#ffffff'>급수가열기</text><path d='M 110,90 L 160,80' fill='none' stroke='#ef4444' stroke-width='3'/><path d='M 200,85 L 200,160' fill='none' stroke='#f59e0b' stroke-width='3'/><polygon points='200,160 195,150 205,150' fill='#f59e0b'/><text x='210' y='130' font-family='sans-serif' font-size='10' fill='#b45309'>증기 일부 추출</text><path d='M 240,80 L 300,80 L 300,185 L 230,185' fill='none' stroke='#3b82f6' stroke-width='2'/><path d='M 130,185 L 75,185 L 75,150' fill='none' stroke='#10b981' stroke-width='3'/><polygon points='75,150 70,160 80,160' fill='#10b981'/><text x='70' y='215' font-family='sans-serif' font-size='9' fill='#047857'>뜨거워진 급수 입력</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "🕸️",
+      "title": "끊기지 않는 전기의 그물! 망상 배전 방식",
+      "content": "망상(Network) 배전 방식은 전력선을 거미줄이나 바둑판처럼 조밀하게 엮어놓은 형태입니다. 한쪽 전선이 끊어져 정전이 나더라도, 다른 징검다리 경로가 무수히 많기 때문에 전기가 계속 공급되는 초강력 신뢰성을 자랑하지요. 서울 명동이나 여의도 같은 빌딩 숲 대도시에 최고의 안정성을 선사합니다.",
+      "visual": "어느 한 경로가 끊어지더라도 다른 우회 경로를 통해 전력이 중단 없이 공급되는 촘촘한 그물망 구조의 송배전 네트워크입니다.",
+      "exam_point": "망상 배전은 무정전 공급, 전압 변동 최적, 신뢰성 극대라는 엄청난 장점이 있지만, 설비가 매우 비싸고 감전 사고 우려가 큰 것이 단점입니다. '싸다' 혹은 '안전하다'는 지문은 오답입니다!",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><line x1='80' y1='60' x2='320' y2='60' stroke='#cbd5e1' stroke-width='4'/><line x1='80' y1='120' x2='320' y2='120' stroke='#cbd5e1' stroke-width='4'/><line x1='80' y1='180' x2='320' y2='180' stroke='#cbd5e1' stroke-width='4'/><line x1='100' y1='40' x2='100' y2='200' stroke='#cbd5e1' stroke-width='4'/><line x1='200' y1='40' x2='200' y2='200' stroke='#cbd5e1' stroke-width='4'/><line x1='300' y1='40' x2='300' y2='200' stroke='#cbd5e1' stroke-width='4'/><circle cx='100' cy='60' r='10' fill='#3b82f6'/><circle cx='300' cy='60' r='10' fill='#3b82f6'/><circle cx='200' cy='180' r='10' fill='#3b82f6'/><rect x='185' y='105' width='30' height='30' rx='5' fill='#10b981'/><polygon points='180,110 200,95 220,110' fill='#f59e0b'/><rect x='85' y='165' width='30' height='30' rx='5' fill='#10b981'/><polygon points='80,170 100,155 120,170' fill='#f59e0b'/><path d='M 100,60 L 200,60 L 200,105' fill='none' stroke='#f59e0b' stroke-width='3' stroke-dasharray='4'/><path d='M 200,180 L 200,135' fill='none' stroke='#ef4444' stroke-width='3' stroke-dasharray='4'/><text x='215' y='150' font-family='sans-serif' font-weight='bold' font-size='10' fill='#e11d48'>우회 경로 확보</text><text x='110' y='45' font-family='sans-serif' font-weight='bold' font-size='11' fill='#1e293b'>신뢰도 극대화 망상 배전</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🎯",
+      "title": "원 하나로 들여다보는 송전 상태! 전력원선도",
+      "content": "송전선에서 보낼 수 있는 전력의 한계를 원으로 한눈에 볼 수 있도록 시각화한 지도가 바로 전력원선도입니다. 가로축을 유효전력(실제 일하는 에너지), 세로축을 무효전력(낭비 에너지)으로 두고 원을 그리면 이 안에서 보낼 수 있는 최대전력량과 송전 효율, 필요한 역률 조상 설비의 용량까지 마법처럼 한눈에 보인답니다.",
+      "visual": "가로축 유효전력 P와 세로축 무효전력 Q 좌표계 위에 원형으로 그려진 전력원선도의 원리와 안전 한계 영역 도식입니다.",
+      "exam_point": "전력원선도의 가로축은 유효전력 P, 세로축은 무효전력 Q입니다. 이 지도를 그릴 때 필요한 3요소인 '선로정수', '송수전단 전압', '전압간 위상차'를 묻는 문제가 단골 출제되니 통째로 외워두세요!",
+      "svg": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' rx='20' fill='#f8fafc'/><line x1='50' y1='130' x2='350' y2='130' stroke='#64748b' stroke-width='2'/><polygon points='350,130 340,125 340,135' fill='#64748b'/><line x1='180' y1='30' x2='180' y2='220' stroke='#64748b' stroke-width='2'/><polygon points='180,30 175,40 185,40' fill='#64748b'/><text x='300' y='150' font-family='sans-serif' font-weight='bold' font-size='11' fill='#1e293b'>유효전력 P</text><text x='190' y='45' font-family='sans-serif' font-weight='bold' font-size='11' fill='#1e293b'>무효전력 Q</text><circle cx='140' cy='110' r='70' fill='none' stroke='#8b5cf6' stroke-width='3'/><line x1='140' y1='110' x2='200' y2='75' stroke='#ef4444' stroke-width='2'/><circle cx='200' cy='75' r='5' fill='#ef4444'/><circle cx='140' cy='110' r='4' fill='#8b5cf6'/><line x1='140' y1='110' x2='200' y2='110' stroke='#94a3b8' stroke-width='1' stroke-dasharray='3'/><line x1='200' y1='110' x2='200' y2='75' stroke='#94a3b8' stroke-width='1' stroke-dasharray='3'/><text x='210' y='70' font-family='sans-serif' font-size='10' fill='#ef4444'>현재 운전점</text><text x='80' y='60' font-family='sans-serif' font-weight='bold' font-size='12' fill='#8b5cf6'>전력 한계 영역 (원선도)</text></svg>"
+    }
+  ]
+}

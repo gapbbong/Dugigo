@@ -1,0 +1,57 @@
+{
+  "subject": "전기기기",
+  "unit": "동기기, 변압기, 직류기 핵심 기출",
+  "set": 7,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "📐",
+      "title": "델타(Δ)와 와이(Y)의 만남: 전압을 1.732배 점프하는 비결!",
+      "content": "단상 변압기 3대를 1차측은 삼각형 모양의 델타(Δ)로, 2차측은 별 모양의 와이(Y)로 엮으면 전압 상승 효과가 발생해요. Y결선 특유의 구조 덕분에 선간전압이 개별 상전압보다 루트 3배만큼 커지기 때문입니다. 마치 징검다리를 연결하듯 전압을 한 단계 증폭시켜서 보내는 것이죠. 이로 인해 높은 송전 전압을 얻기가 매우 유리해집니다.",
+      "visual": "왼쪽의 삼각형 델타 결선에서 오른쪽의 와이 결선으로 넘어가며 전압이 루트 3배 커지는 상호작용 도식",
+      "exam_point": "1차 Δ - 2차 Y 결선 시 권수비가 a라면, 1차측 단자전압 V1 = aV / √3 이고, 1차 선전류 I1 = (√3 * I) / a 입니다. 2차측 Y결선에 의한 전압 상승 요소를 반드시 공식에 대입하세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M50 150 L100 70 L150 150 Z\" fill=\"none\" stroke=\"#6366f1\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"150\" r=\"6\" fill=\"#4f46e5\"/><circle cx=\"100\" cy=\"70\" r=\"6\" fill=\"#4f46e5\"/><circle cx=\"150\" cy=\"150\" r=\"6\" fill=\"#4f46e5\"/><text x=\"100\" y=\"180\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#1e1b4b\" text-anchor=\"middle\">1차 측 Delta (Δ)</text><path d=\"M280 110 L330 110 M330 110 L355 150 M330 110 L355 70\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"4\"/><circle cx=\"280\" cy=\"110\" r=\"6\" fill=\"#d97706\"/><circle cx=\"355\" cy=\"150\" r=\"6\" fill=\"#d97706\"/><circle cx=\"355\" cy=\"70\" r=\"6\" fill=\"#d97706\"/><text x=\"315\" y=\"180\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#1e1b4b\" text-anchor=\"middle\">2차 측 Y</text><path d=\"M180 110 L220 110\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><polygon points=\"220,106 230,110 220,114\" fill=\"#10b981\"/><text x=\"205\" y=\"95\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#047857\" text-anchor=\"middle\">x √3 배</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🏗️",
+      "title": "동기발전기의 뼈대, 단락비(Ks)가 크다는 것의 의미",
+      "content": "단락비는 쉽게 말해 발전기의 '체급'을 나타내는 지표예요. 단락비가 크다는 것은 철심이 크고 튼튼한 '철기계'임을 뜻하며, 든든한 뼈대 덕분에 전력 계통에서 매우 훌륭한 안정도를 가집니다. 내부 저항(임피던스)이 작아서 전류가 넉넉히 흘러도 전압이 쉽게 흔들리지 않죠. 다만 몸집이 커서 가격이 무겁고 비싸다는 단점이 있습니다.",
+      "visual": "단락비(Ks)가 커지면 %임피던스가 작아지는 반비례 저울 형태의 정밀 도식화",
+      "exam_point": "단락비 공식 Ks = If0 / Ifs = 100 / %Z 를 무조건 암기하세요! 단락비가 큰 발전기는 전기자 반작용이 작고, %임피던스가 작으며, 전압변동률이 작고 안정도가 높습니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f0fdf4\"/><rect x=\"60\" y=\"70\" width=\"100\" height=\"100\" rx=\"10\" fill=\"#10b981\" fill-opacity=\"0.1\" stroke=\"#10b981\" stroke-width=\"3\"/><text x=\"110\" y=\"115\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"24\" fill=\"#065f46\" text-anchor=\"middle\">Ks ⬆</text><text x=\"110\" y=\"145\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#065f46\" text-anchor=\"middle\">단락비 큼</text><rect x=\"240\" y=\"70\" width=\"100\" height=\"100\" rx=\"10\" fill=\"#ef4444\" fill-opacity=\"0.1\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"290\" y=\"115\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"24\" fill=\"#991b1b\" text-anchor=\"middle\">%Z ⬇</text><text x=\"290\" y=\"145\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#991b1b\" text-anchor=\"middle\">임피던스 작음</text><path d=\"M160 120 L240 120\" stroke=\"#94a3b8\" stroke-width=\"4\"/><text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"15\" fill=\"#1e293b\" text-anchor=\"middle\">Ks = 100 / %Z (반비례)</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🏎️",
+      "title": "직권전동기: 밟는 대로 폭발하는 제곱 비례의 법칙!",
+      "content": "직류 직권전동기는 전류가 흘러가는 단 하나의 길에 계자(자석)와 전기자가 직렬로 사이좋게 누워있어요. 전류를 올리면 자석 힘과 회전용 전자기력이 곱으로 동시에 세집니다. 그 덕분에 기동 회전력(토크)이 투입된 전기자 전류의 '제곱'에 비례하여 강력하게 뿜어져 나옵니다. 전철이나 크레인처럼 출발할 때 무지막지한 힘이 필요할 때 가장 알맞은 모터입니다.",
+      "visual": "전기자 전류가 가로축이고 토크가 세로축일 때, 기하급수적으로 휘어 올라가는 포물선 특성 그래프",
+      "exam_point": "직권전동기 토크 비례 조건: 토크는 전기자 전류의 제곱에 비례하고(τ ∝ Ia²), 회전수의 제곱에 반비례합니다(τ ∝ 1/N²). 자기포화가 없을 때의 조건임을 명심하세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#fff7ed\"/><path d=\"M60 200 L340 200 M60 200 L60 40\" stroke=\"#9a3412\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M60 200 Q 150 180 300 60\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"340\" y=\"215\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#9a3412\" text-anchor=\"end\">전류 Ia</text><text x=\"50\" y=\"35\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#9a3412\">토크 τ</text><text x=\"210\" y=\"110\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"18\" fill=\"#c2410c\">τ ∝ Ia²</text><circle cx=\"215\" cy=\"132\" r=\"5\" fill=\"#ea580c\"/><text x=\"210\" y=\"225\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#7c2d12\" text-anchor=\"middle\">직권전동기: 토크는 전류의 제곱에 비례!</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "⚖️",
+      "title": "비율차동계전기: 변압기 안의 '누전'을 지키는 철통 감시자",
+      "content": "변압기 내부에서 숏트(단락)가 나면 들어간 전류와 나오는 전류의 양이 맞지 않게 됩니다. 비율차동계전기는 이 차이점을 눈치채고 사고를 막아주는 수호신이죠. 그런데 변압기가 Δ-Y 결선인 경우에는 양쪽 전류의 위상(타이밍)이 자연스레 꺾여 기계가 오동작할 위험이 있어요. 그래서 신호를 받는 변류기(CT)를 정반대인 Y-Δ로 교차 결선해서 타이밍을 바로잡아 줍니다.",
+      "visual": "변압기 Δ-Y 결선과 변류기(CT) Y-Δ 결선이 서로 보완하며 비율차동계전기로 연결되는 보안 감시 체계도",
+      "exam_point": "변압기 내부보호의 최강 정답은 '비율차동계전기'입니다! 변압기 결선이 Δ-Y라면 오동작 방지를 위해 계전기용 변류기(CT) 결선은 반드시 반대인 Y-Δ로 결선해야 합니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#faf5ff\"/><rect x=\"40\" y=\"80\" width=\"100\" height=\"50\" rx=\"8\" fill=\"#8b5cf6\" fill-opacity=\"0.1\" stroke=\"#8b5cf6\" stroke-width=\"2\"/><text x=\"90\" y=\"110\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#6d28d9\" text-anchor=\"middle\">변압기 Δ-Y</text><rect x=\"260\" y=\"80\" width=\"100\" height=\"50\" rx=\"8\" fill=\"#ec4899\" fill-opacity=\"0.1\" stroke=\"#ec4899\" stroke-width=\"2\"/><text x=\"310\" y=\"110\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#be185d\" text-anchor=\"middle\">변류기 Y-Δ</text><path d=\"M140 105 L260 105\" stroke=\"#3b82f6\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><polygon points=\"205,100 215,105 205,110\" fill=\"#3b82f6\"/><text x=\"200\" y=\"135\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#1d4ed8\" text-anchor=\"middle\">위상차 역결선 보정</text><rect x=\"120\" y=\"170\" width=\"160\" height=\"45\" rx=\"20\" fill=\"#10b981\"/><text x=\"200\" y=\"197\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#ffffff\" text-anchor=\"middle\">🛡️ 비율차동계전기</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🎯",
+      "title": "최대 효율의 밀당: 철손과 동손이 저울을 맞출 때",
+      "content": "변압기를 운전할 때 발생하는 손실은 크게 늘 고정적인 '철손(Pi)'과, 전류가 흘러 부하가 커질 때마다 늘어나는 '동손(Pc)'으로 나뉩니다. 이 두 손실의 크기가 완벽히 한 치의 오차도 없이 일치하는 지점에서 변압기의 효율은 비로소 최고를 달성하게 됩니다. 마치 세금(고정비)과 영업 재료비(변동비)의 비중이 완벽한 밸런스를 이뤄 순이익이 극대화되는 황금비율의 순간 같죠.",
+      "visual": "고정손(철손) 블록과 부하손(동손) 블록이 정확하게 평형을 이루고 있는 최대 효율 메커니즘 도식",
+      "exam_point": "최대 효율 조건은 철손(Pi) = 동손(Pc) 일 때입니다. 부하율이 1/m 이라면 Pi = (1/m)² * Pc 공식이 성립합니다. 90% 부하(1/m = 0.9)라면 손실비 Pi/Pc = 0.9² = 0.81이 됩니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f0f9ff\"/><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#0284c7\" stroke-width=\"2\"/><rect x=\"80\" y=\"100\" width=\"60\" height=\"100\" rx=\"5\" fill=\"#0284c7\" fill-opacity=\"0.8\"/><text x=\"110\" y=\"90\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#0369a1\" text-anchor=\"middle\">철손 (Pi)</text><text x=\"110\" y=\"150\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#ffffff\" text-anchor=\"middle\">고정손</text><rect x=\"260\" y=\"100\" width=\"60\" height=\"100\" rx=\"5\" fill=\"#f43f5e\" fill-opacity=\"0.8\"/><text x=\"290\" y=\"90\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#be123c\" text-anchor=\"middle\">동손 (Pc)</text><text x=\"290\" y=\"150\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#ffffff\" text-anchor=\"middle\">부하손</text><circle cx=\"200\" cy=\"100\" r=\"15\" fill=\"#eab308\"/><text x=\"200\" y=\"104\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#ffffff\" text-anchor=\"middle\">=</text><text x=\"200\" y=\"225\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#0f172a\" text-anchor=\"middle\">Pi = Pc 일 때 최대효율 달성!</text></svg>"
+    }
+  ]
+}

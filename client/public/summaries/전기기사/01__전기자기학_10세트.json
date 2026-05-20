@@ -1,0 +1,57 @@
+{
+  "subject": "전기자기학",
+  "unit": "전기기사 필기 핵심 요약",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "🌊",
+      "title": "전속선은 욕심쟁이? 유전율이 큰 쪽으로 휜다!",
+      "content": "유전율(ε)은 전하를 머금을 수 있는 일종의 '스펀지 능력'이에요. 서로 다른 두 유전체가 만나는 경계면에서, 전속선은 마치 물줄기가 건조한 스펀지 쪽으로 빨려 들어가듯 유전율이 더 큰 유전체 쪽으로 모여들며 꺾이게 됩니다. 이때 경계면을 밀고 당기는 맥스웰 응력(힘)은 항상 유전율이 큰 쪽에서 작은 쪽으로 작용하여 경계면을 끌어당긴답니다.",
+      "visual": "서로 다른 유전율을 가진 두 매질의 경계면에서 전속선이 굴절하는 현상과 힘의 방향 도식화",
+      "exam_point": "전속선은 유전율이 '큰' 매질로 모이고, 전기력선은 '작은' 매질로 모입니다. 경계면에 작용하는 힘은 언제나 유전율이 [큰 쪽 → 작은 쪽]으로 향합니다!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"20\" y=\"125\" width=\"360\" height=\"105\" rx=\"10\" fill=\"#eff6ff\"/><rect x=\"20\" y=\"20\" width=\"360\" height=\"105\" rx=\"10\" fill=\"#fffbeb\"/><line x1=\"20\" y1=\"125\" x2=\"380\" y2=\"125\" stroke=\"#cbd5e1\" stroke-width=\"3\" stroke-dasharray=\"5,5\"/><path d=\"M 60,40 L 150,125 L 200,210\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\" marker-end=\"url(#arrow)\"/><path d=\"M 140,40 L 230,125 L 280,210\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><path d=\"M 210,95 Q 210,125 180,155\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"3\" stroke-dasharray=\"3,3\"/><text x=\"30\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#b45309\">유전체 1 (작은 ε₂)</text><text x=\"30\" y=\"200\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4ed8\">유전체 2 (큰 ε₁)</text><text x=\"240\" y=\"115\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#ef4444\">작용하는 힘 (F)</text><path d=\"M 230,120 L 230,80\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><polygon points=\"230,73 225,83 235,83\" fill=\"#ef4444\"/></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🔮",
+      "title": "동글동글 금속구, 그릇 크기는 오직 반지름이 결정한다!",
+      "content": "외딴섬처럼 홀로 떠 있는 반지름 a의 동그란 금속구가 전기를 담을 수 있는 그릇의 용량(정전용량 C)은 얼마나 될까요? 신기하게도 복잡한 조건 없이 오직 금속구의 반지름(a) 하나에만 비례합니다! 우주 공간(진공)이 가진 근본적인 전기 수용도 상수인 4πε₀에 반지름 a를 툭 곱해주기만 하면 이 동그란 전하 그릇의 크기가 바로 완성됩니다.",
+      "visual": "반지름 a를 가진 독립 도체구와 방사형으로 뻗어나가는 전기력선 및 전하 분포",
+      "exam_point": "독립 구도체의 정전용량 공식: C = 4πε₀a [F]. 시험에서는 반지름 '제곱'이 아니라 그냥 '반지름'에 비례한다는 점이 단골 출제 포인트입니다!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><circle cx=\"200\" cy=\"125\" r=\"50\" fill=\"url(#sphereGrad)\" stroke=\"#6366f1\" stroke-width=\"2\"/><defs><radialGradient id=\"sphereGrad\" cx=\"30%\" cy=\"30%\" r=\"70%\"><stop offset=\"0%\" stop-color=\"#e0e7ff\"/><stop offset=\"100%\" stop-color=\"#818cf8\" /></radialGradient></defs><line x1=\"200\" y1=\"125\" x2=\"245\" y2=\"100\" stroke=\"#475569\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><text x=\"215\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\">a</text><circle cx=\"200\" cy=\"125\" r=\"4\" fill=\"#334155\"/><line x1=\"200\" y1=\"65\" x2=\"200\" y2=\"35\" stroke=\"#f43f5e\" stroke-width=\"2\"/><line x1=\"200\" y1=\"185\" x2=\"200\" y2=\"215\" stroke=\"#f43f5e\" stroke-width=\"2\"/><line x1=\"140\" y1=\"125\" x2=\"110\" y2=\"125\" stroke=\"#f43f5e\" stroke-width=\"2\"/><line x1=\"260\" y1=\"125\" x2=\"290\" y2=\"125\" stroke=\"#f43f5e\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"65\" r=\"6\" fill=\"#f43f5e\"/><text x=\"197\" y=\"69\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ffffff\">+</text><circle cx=\"260\" cy=\"125\" r=\"6\" fill=\"#f43f5e\"/><text x=\"257\" y=\"129\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ffffff\">+</text><text x=\"110\" y=\"230\" font-family=\"sans-serif\" font-size=\"18\" font-weight=\"bold\" fill=\"#4f46e5\">C = 4πε₀a [F]</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🌀",
+      "title": "환상 솔레노이드, 감으면 감을수록 커지는 전기적 관성!",
+      "content": "인덕턴스(L)는 전류의 급격한 변화를 방해하여 현재 흐름을 유지하려는 '전기적 관성'입니다. 도넛 모양 철심(환상 솔레노이드)에 코일을 정성스럽게 감을 때, 이 관성의 크기는 놀랍게도 코일을 감은 횟수(N)의 제곱에 비례해서 증가합니다. 코일을 2배 더 감으면 방해하려는 성질은 무려 4배나 강력해지는 마법을 부리죠!",
+      "visual": "도넛 모양의 철심에 촘촘하게 감겨 있는 코일과 내부 자기력선의 순환 표현",
+      "exam_point": "환상 솔레노이드 자기인덕턴스 L = (μ * S * N²) / (2 * pi * r) [H]. 인덕턴스는 권수 N의 '제곱'에 비례하고 평균 반지름 r에는 '반비례'합니다!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><circle cx=\"200\" cy=\"125\" r=\"80\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"35\"/><circle cx=\"200\" cy=\"125\" r=\"80\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1\" stroke-dasharray=\"4,4\"/><path d=\"M 120,125 Q 115,100 135,80 M 145,70 Q 170,55 200,60 M 215,60 Q 245,70 255,95 M 265,110 Q 270,135 250,155 M 240,165 Q 215,185 185,180 M 170,175 Q 140,165 130,140\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/><text x=\"160\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\">철심 (μ)</text><text x=\"215\" y=\"160\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#ea580c\">권수 N회</text><line x1=\"200\" y1=\"125\" x2=\"270\" y2=\"165\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"125\" r=\"3\" fill=\"#0f172a\"/><text x=\"235\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">r</text><text x=\"120\" y=\"225\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">L ∝ N² (인덕턴스는 권수 제곱 비례)</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "빛보다 느려지는 마법, 매질 속 전자파의 달리기",
+      "content": "아무것도 없는 텅 빈 진공 속에서 전자파는 초속 30만 km라는 우주 최고 속도로 신나게 달립니다. 하지만 유전율(ε_s)과 투자율(μ_s)이라는 장애물이 가득한 매질 속에 들어서면 발목을 잡혀 속도가 뚝 떨어지고 말아요. 마치 평지를 달리던 육상 선수가 깊은 모래밭에 빠져 헉헉대며 속도가 줄어드는 것과 같습니다.",
+      "visual": "진공 영역에서 빠른 주파수의 파형이 밀도가 높은 매질로 들어가며 파장과 속도가 줄어드는 현상",
+      "exam_point": "매질 내 전파속도 v = v₀ / √(ε_s * μ_s). 만약 비유전율과 비투자율이 각각 2라면 전파속도는 원래 빛 속도의 딱 절반(1/2)이 됩니다!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"200\" y=\"20\" width=\"180\" height=\"210\" rx=\"10\" fill=\"#f1f5f9\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"230\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 20,125 Q 45,65 70,125 T 120,125 T 170,125 T 200,125 Q 215,95 230,125 T 260,125 T 290,125 T 320,125 T 350,125 T 380,125\" fill=\"none\" stroke=\"#06b6d4\" stroke-width=\"3\"/><text x=\"40\" y=\"50\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0891b2\">진공 (속도 v₀ = 3×10⁸)</text><text x=\"220\" y=\"50\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#475569\">매질 (속도 v &lt; v₀)</text><text x=\"215\" y=\"200\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">v = v₀ / √(ε_s·μ_s)</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🧲",
+      "title": "자석의 지독한 집착과 기억력, 히스테리시스 곡선",
+      "content": "외부에서 아무리 강한 자기장으로 유혹했다가 유혹을 거두어도, 강자성체는 그 짜릿했던 순간의 기억(잔류자기)을 완전히 잊지 못하고 몸에 품고 있어요. 이 남겨진 미련을 완전히 지워주려면 반대 방향으로 모질게 힘(보자력)을 가해 주어야 하죠. 평생 자력을 품어야 하는 '영구자석'은 이 기억력과 고집이 모두 엄청나게 강해야만 한답니다.",
+      "visual": "가로축 자기장 H와 세로축 자속밀도 B의 관계를 나타내는 넓은 히스테리시스 루프(B-H 곡선)",
+      "exam_point": "영구자석의 조건: 잔류자기, 보자력, 루프 면적 모두 '커야' 함! 반면 전자석은 잔류자기는 크되, 보자력과 루프 면적이 '작아야' 손실이 없습니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"125\" x2=\"350\" y2=\"125\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"220\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 100,180 Q 140,180 200,60 Q 260,60 300,70 Q 260,70 200,190 Q 140,190 100,180\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"60\" r=\"4\" fill=\"#dc2626\"/><text x=\"208\" y=\"58\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">잔류자기(Br)</text><circle cx=\"147\" cy=\"125\" r=\"4\" fill=\"#3b82f6\"/><text x=\"105\" y=\"115\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#3b82f6\">보자력(Hc)</text><text x=\"340\" y=\"145\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#64748b\">H (자기장)</text><text x=\"210\" y=\"45\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#64748b\">B (자속밀도)</text><text x=\"60\" y=\"225\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#991b1b\">영구자석은 잔류자기와 보자력 모두 대(大)!</text></svg>"
+    }
+  ]
+}

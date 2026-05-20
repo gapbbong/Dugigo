@@ -1,0 +1,57 @@
+{
+  "subject": "전기자기학",
+  "unit": "전기자기학 핵심 이론",
+  "set": 3,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "🌀",
+      "title": "원통 도체의 안과 밖, 자계 분포의 이중주",
+      "content": "무한히 긴 원통 도체에 전류가 흐르면 그 주변에는 보이지 않는 자계 회오리가 생겨납니다. 신기하게도 도체 외부에서는 중심에서 멀어질수록 자계가 점점 약해지지만, 도체 내부로 들어가면 중심축에서 표면으로 나아갈수록 전류를 감싸는 면적이 넓어져 자계의 세기가 오히려 비례해서 강해집니다. 마치 꿀샘 중심에서 밖으로 걸어 나올수록 향기가 점점 진해지다가, 꽃 밖을 완전히 벗어나면 바람에 흩날려 향기가 약해지는 현상과 닮았습니다.",
+      "visual": "원통 도체의 단면 및 내부(비례)와 외부(반비례) 자계 세기 분포 그래프",
+      "exam_point": "시험에서는 내부 자계(H_in ∝ r)와 외부 자계(H_out ∝ 1/r) 공식을 묻습니다. 내부 공식은 H = (I * r) / (2 * π * a²) 임을 암기하고 비례 관계를 꼭 기억하세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><circle cx=\"120\" cy=\"125\" r=\"50\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" stroke-width=\"2\"/><circle cx=\"120\" cy=\"125\" r=\"25\" fill=\"none\" stroke=\"#cbd5e1\" stroke-dasharray=\"4\"/><circle cx=\"120\" cy=\"125\" r=\"3\" fill=\"#475569\"/><line x1=\"120\" y1=\"125\" x2=\"170\" y2=\"125\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#ef4444\">r = a</text><line x1=\"210\" y1=\"180\" x2=\"370\" y2=\"180\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"220\" y1=\"70\" x2=\"220\" y2=\"190\" stroke=\"#475569\" stroke-width=\"2\"/><path d=\"M 220 180 L 280 90 Q 310 130 360 160\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><line x1=\"280\" y1=\"90\" x2=\"280\" y2=\"180\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><text x=\"210\" y=\"60\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\">H (자계)</text><text x=\"360\" y=\"195\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\">r</text><text x=\"235\" y=\"120\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#3b82f6\">H ∝ r</text><text x=\"310\" y=\"115\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#3b82f6\">H ∝ 1/r</text><text x=\"275\" y=\"195\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">a</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "📐",
+      "title": "유전체 경계면을 통과하는 전기의 굴절 법칙",
+      "content": "서로 다른 유전율을 가진 두 유전체가 만나는 국경선에서는 전기가 꺾여 지나갑니다. 전계(E)는 경계면에 평행하게 흐르려는 성질(접선 성분)이 서로 같고, 전속밀도(D)는 경계면을 뚫고 지나가려는 성질(법선 성분)이 똑같습니다. 유전율이 더 큰 물질 속으로 전기가 들어갈 때 법선 방향으로 바짝 꺾이게 되는데, 이는 아스팔트를 달리던 자동차가 비포장도로로 들어설 때 진행 방향이 굴절되는 원리와 아주 비슷합니다.",
+      "visual": "두 유전체의 경계면에서 전기력선이 굴절되는 모양과 입사각, 굴절각 도식",
+      "exam_point": "전계 E는 접선 성분이 같다(E1 sinθ1 = E2 sinθ2), 전속밀도 D는 법선 성분이 같다(D1 cosθ1 = D2 cosθ2)를 꼭 구분하여 암기하세요. 유전율과 굴절각 탄젠트 값은 비례합니다!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"40\" y=\"40\" width=\"320\" height=\"80\" fill=\"#eff6ff\" rx=\"10\"/><rect x=\"40\" y=\"130\" width=\"320\" height=\"80\" fill=\"#faf5ff\" rx=\"10\"/><line x1=\"40\" y1=\"125\" x2=\"360\" y2=\"125\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"200\" y1=\"50\" x2=\"200\" y2=\"200\" stroke=\"#64748b\" stroke-dasharray=\"4\"/><path d=\"M 100 60 L 200 125 L 260 190\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"205,128 200,125 203,120\" fill=\"#3b82f6\"/><polygon points=\"235,163 260,190 253,195\" fill=\"#3b82f6\"/><text x=\"50\" y=\"70\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">유전율 ε1</text><text x=\"50\" y=\"160\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#6b21a8\">유전율 ε2 (ε2 &gt; ε1)</text><text x=\"175\" y=\"90\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">θ1</text><text x=\"215\" y=\"160\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#6b21a8\">θ2</text><text x=\"130\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">E1</text><text x=\"245\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">E2</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🔗",
+      "title": "밀고 당기는 코일의 연대, 합성 인덕턴스",
+      "content": "인덕턴스는 전류의 변화를 방해하려는 '전기적인 관성'입니다. 두 코일을 가깝게 배치하면 서로의 자속을 공유하는 '상호 인덕턴스(M)'가 만들어집니다. 이때 두 코일의 자속이 서로 같은 방향으로 응원하도록 감겨 있으면(가동 결합) 전체 인덕턴스가 커지고, 서로 방해하는 방향이면(차동 결합) 아주 작아집니다. 결합계수(k)는 이 둘이 얼마나 끈끈한 자속 파트너인지를 결정하는 척도입니다.",
+      "visual": "가동 결합과 차동 결합에 따른 두 코일의 상호 유도 작용 도식",
+      "exam_point": "가속하는 결합은 L = L1 + L2 + 2M이고, 방해하는 결합은 L = L1 + L2 - 2M입니다. 결합계수 공식 M = k * √(L1 * L2)와의 연립 문제가 매회 출제되니 공식을 확실히 마스터하세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"60\" y=\"100\" width=\"100\" height=\"40\" rx=\"5\" fill=\"#3b82f6\" fill-opacity=\"0.2\" stroke=\"#3b82f6\" stroke-width=\"2\"/><rect x=\"240\" y=\"100\" width=\"100\" height=\"40\" rx=\"5\" fill=\"#10b981\" fill-opacity=\"0.2\" stroke=\"#10b981\" stroke-width=\"2\"/><path d=\"M 160 120 C 200 80, 200 80, 240 120\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"5\"/><polygon points=\"235,115 240,120 238,110\" fill=\"#f59e0b\"/><text x=\"95\" y=\"125\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\">L1</text><text x=\"275\" y=\"125\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#065f46\">L2</text><text x=\"185\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#d97706\">M</text><rect x=\"40\" y=\"170\" width=\"320\" height=\"50\" rx=\"10\" fill=\"#f1f5f9\"/><text x=\"55\" y=\"200\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\">가동 결합 (+) : L = L1 + L2 + 2M</text><text x=\"215\" y=\"200\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\">|  차동 (-) : L = L1 + L2 - 2M</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "📡",
+      "title": "빛의 속도로 흐르는 에너지, 포인팅 벡터",
+      "content": "공간을 뚫고 뻗어나가는 무선 통신 신호와 빛의 정체는 바로 전자파입니다. 전계(E)와 자계(H)가 서로 90도 각도로 직교하면서 한 치의 어긋남 없이 완벽한 같은 위상으로 진동하여 앞으로 힘차게 나아갑니다. 이때 전자파가 단위 시간당 단위 면적을 통과하며 전달하는 에너지 흐름의 크기와 방향을 알려주는 나침반이 바로 '포인팅 벡터(P)'입니다.",
+      "visual": "서로 직각을 이루며 진행 방향으로 뻗어나가는 전계(E), 자계(H), 포인팅 벡터(P)의 입체적 방향 관계",
+      "exam_point": "시험에서는 포인팅 벡터의 정의식 P = E × H [W/m²]와 크기 식 P = E²/η = ηH²을 묻습니다. 전계와 자계가 항상 '동위상'으로 전파된다는 점이 오답 포인트로 자주 나오니 헷갈리지 마세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><line x1=\"60\" y1=\"125\" x2=\"340\" y2=\"125\" stroke=\"#475569\" stroke-width=\"3\"/><polygon points=\"340,120 350,125 340,130\" fill=\"#475569\"/><path d=\"M 60 125 Q 110 50, 160 125 Q 210 200, 260 125 Q 310 50, 340 125\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><path d=\"M 60 125 Q 110 160, 160 125 Q 210 90, 260 125 Q 310 160, 340 125\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"3\"/><text x=\"100\" y=\"70\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">전계 (E)</text><text x=\"95\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\">자계 (H)</text><text x=\"300\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\">진행방향 (P)</text><rect x=\"110\" y=\"195\" width=\"180\" height=\"35\" rx=\"5\" fill=\"#e2e8f0\"/><text x=\"125\" y=\"217\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">P = E × H  [W/m²]</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🎈",
+      "title": "도체 표면을 팽팽하게 당기는 정전응력",
+      "content": "대전된 평행판 도체 사이에는 보이지 않는 전기력선이 가득 차 있습니다. 이때 도체 판 표면에 모인 전하들은 서로 같은 극성끼리 밀어내고, 반대편 판의 다른 극성 전하를 세게 끌어당기며 표면 전체를 밖으로 팽팽하게 당기는 인장력을 만들어 냅니다. 이 힘을 '정전응력'이라고 부르며, 팽창한 바람선이 바깥쪽으로 압력을 받아 둥글게 늘어나는 원리와 유사합니다.",
+      "visual": "두 개의 평행 전극판 사이에 형성되는 전계와 판을 서로 끌어당기는 정전 인장력 도식",
+      "exam_point": "단위면적당 작용하는 정전응력 공식 f = (ρs² / 2ε0) = (1/2) * ε0 * E² [N/m²]은 아주 단골 문제입니다! 힘 f는 전계 E의 제곱에 비례하고 유전율 ε0에 비례한다는 점을 기억하세요.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"80\" y=\"60\" width=\"240\" height=\"20\" rx=\"5\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\"/><rect x=\"80\" y=\"160\" width=\"240\" height=\"20\" rx=\"5\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"90\" y=\"75\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#ef4444\">+ + + + + + + + + + + + + +</text><text x=\"92\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#3b82f6\">-  -  -  -  -  -  -  -  -  -  -  -  -  -</text><line x1=\"120\" y1=\"85\" x2=\"120\" y2=\"155\" stroke=\"#10b981\" stroke-width=\"2\"/><line x1=\"200\" y1=\"85\" x2=\"200\" y2=\"155\" stroke=\"#10b981\" stroke-width=\"2\"/><line x1=\"280\" y1=\"85\" x2=\"280\" y2=\"155\" stroke=\"#10b981\" stroke-width=\"2\"/><polygon points=\"120,155 116,147 124,147\" fill=\"#10b981\"/><polygon points=\"200,155 196,147 204,147\" fill=\"#10b981\"/><polygon points=\"280,155 276,147 284,147\" fill=\"#10b981\"/><line x1=\"200\" y1=\"55\" x2=\"200\" y2=\"30\" stroke=\"#f59e0b\" stroke-width=\"3\"/><polygon points=\"200,25 195,35 205,35\" fill=\"#f59e0b\"/><line x1=\"200\" y1=\"185\" x2=\"200\" y2=\"210\" stroke=\"#f59e0b\" stroke-width=\"3\"/><polygon points=\"200,215 195,205 205,205\" fill=\"#f59e0b\"/><text x=\"215\" y=\"35\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#d97706\">당기는 힘 (f)</text><text x=\"215\" y=\"115\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#059669\">전계 (E)</text></svg>"
+    }
+  ]
+}

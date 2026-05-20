@@ -1,0 +1,57 @@
+{
+  "subject": "전기기기",
+  "unit": "전기기기",
+  "set": 2,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "🔄",
+      "title": "발전소의 심장, 왜 자석(계자)만 빙글빙글 돌릴까?",
+      "content": "수만 볼트의 엄청난 고전압 전기를 만드는 발전기에서 무겁고 복잡한 코일뭉치(전기자)를 고속 회전시키는 것은 기계적으로 매우 위험합니다. 그래서 우리는 비교적 가볍고 튼튼한 전자석(계자)을 중심에 두고 빙글빙글 돌립니다. 고전압이 흐르는 발전 코일은 바깥쪽(고정자)에 안전하게 고정해 두는 것이죠. 이처럼 자석이 도는 방식을 '회전계자형'이라고 하며, 우리나라 거의 모든 발전소의 동기발전기가 이 방식을 사용합니다.",
+      "visual": "회전계자형 동기발전기의 단면 도식화. 바깥쪽 고정자 코일과 내부에서 회전하는 자극(N, S) 및 자기력선 흐름.",
+      "exam_point": "교류 동기발전기는 '회전계자형'을 채택합니다. 전기자가 고정되어 있어 고전압 절연이 쉽고, 기계적으로 매우 튼튼하여 고속 회전에 유리하기 때문입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"15\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"125\" r=\"80\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"4\" stroke-dasharray=\"6,6\"/><circle cx=\"200\" cy=\"125\" r=\"45\" fill=\"#3b82f6\" fill-opacity=\"0.1\" stroke=\"#3b82f6\" stroke-width=\"3\"/><path d=\"M 160,125 A 40,40 0 0,1 240,125\" fill=\"#ef4444\"/><path d=\"M 240,125 A 40,40 0 0,1 160,125\" fill=\"#3b82f6\"/><text x=\"185\" y=\"115\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#ffffff\">N</text><text x=\"185\" y=\"145\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#ffffff\">S</text><path d=\"M 200,30 L 200,45 M 200,205 L 200,220 M 80,125 L 95,125 M 305,125 L 320,125\" stroke=\"#10b981\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"175\" y=\"25\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#10b981\">고정자 권선 (A상)</text><path d=\"M 200,125 A 60,60 0 0,1 200,65\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 200,125 A 60,60 0 0,0 200,185\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 255,100 A 70,70 0 0,1 255,150\" fill=\"none\" stroke=\"#475569\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/><path d=\"M 265,110 A 15,15 0 0,1 265,140\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"270,135 265,143 260,135\" fill=\"#64748b\"/><text x=\"280\" y=\"130\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#475569\">회전 방향</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🎢",
+      "title": "V-곡선의 비밀, 역률을 조절하는 동기 마법사",
+      "content": "동기전동기는 계통의 건강을 책임지는 조상기(역률 조정기) 역할을 할 수 있습니다. 동기전동기에 들어가는 여자전류를 마구 높여주면(과여자), 마치 콘덴서처럼 작동하여 앞선 전류(진상)를 보냅니다. 반대로 전류를 덜 주면(부족여자), 리액터처럼 작용하여 뒤진 전류(지상)를 흘립니다. 이 아름다운 변화의 궤적이 알파벳 'V'자를 닮았다고 하여 '위상특성곡선(V-곡선)'이라고 부릅니다.",
+      "visual": "전기자 전류(Ia)와 계자 전류(If)의 관계를 나타낸 V-곡선 그래프. 최저점에서 역률 100%를 달성하고 좌측 부족여자(지상), 우측 과여자(진상) 영역 표시.",
+      "exam_point": "시험 단골 출제! ① 최저점일 때 역률=1 ② 과여자 운전 시 콘덴서(진상)로 작용하여 역률 개선 ③ 부족여자 운전 시 리액터(지상)로 작용하여 과보상 억제.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"15\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><line x1=\"60\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"200\" stroke=\"#475569\" stroke-width=\"2\"/><path d=\"M 80,60 Q 180,210 320,70\" fill=\"none\" stroke=\"#4f46e5\" stroke-width=\"4\"/><line x1=\"183\" y1=\"160\" x2=\"183\" y2=\"200\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><circle cx=\"183\" cy=\"157\" r=\"5\" fill=\"#ef4444\"/><text x=\"130\" y=\"225\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#475569\">계자전류 (If)</text><text x=\"30\" y=\"30\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#475569\">전기자전류 (Ia)</text><rect x=\"75\" y=\"80\" width=\"80\" height=\"35\" rx=\"5\" fill=\"#3b82f6\" fill-opacity=\"0.1\"/><text x=\"80\" y=\"95\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#2563eb\">부족여자 (L)</text><text x=\"80\" y=\"110\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#1e40af\">리액터 / 지상</text><rect x=\"245\" y=\"80\" width=\"80\" height=\"35\" rx=\"5\" fill=\"#10b981\" fill-opacity=\"0.1\"/><text x=\"250\" y=\"95\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#059669\">과여자 (C)</text><text x=\"250\" y=\"110\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#065f46\">콘덴서 / 진상</text><text x=\"155\" y=\"150\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#ef4444\">역률 cosθ = 1</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🌊",
+      "title": "분포권과 단절권, 전기의 삐죽한 노이즈 깎아내기",
+      "content": "발전기에서 만들어진 날것의 교류 파형은 찌그러진 모난 모양(고조파)을 품고 있습니다. 이를 그대로 쓰면 전기 기기가 금방 고장 납니다. 그래서 우리는 권선을 한 구멍에 다 몰아넣지 않고 여러 구멍에 고루 나누어 감는 '분포권'과, 코일 간격을 극 간격보다 살짝 좁게 감는 '단절권'을 씁니다. 비록 나오는 전압 크기는 쥐꼬리만큼 줄어들지만, 거친 노이즈(고조파)가 말끔히 깎여나가 정교하고 예쁜 사인파 교류가 완성됩니다.",
+      "visual": "단절권/분포권 미사용 시 찌그러진 계단식 파형과 채용 후 부드럽게 다듬어진 사인파(정현파)의 비교 도식.",
+      "exam_point": "분포권과 단절권의 사용 목적은 단 하나, '고조파를 제거하여 기전력의 파형을 개선'하는 것입니다! 단점으로는 집중권/전절권에 비해 유기기전력이 감소합니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"15\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><line x1=\"40\" y1=\"125\" x2=\"360\" y2=\"125\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"210\" stroke=\"#64748b\" stroke-width=\"1.5\"/><path d=\"M 60,125 L 80,60 L 140,60 L 160,125 L 180,190 L 240,190 L 260,125 L 280,60 L 340,60\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><path d=\"M 60,125 Q 110,25 160,125 T 260,125 T 360,125\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><circle cx=\"110\" cy=\"75\" r=\"4\" fill=\"#3b82f6\"/><text x=\"120\" y=\"80\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#3b82f6\">개선 후 정현파</text><circle cx=\"110\" cy=\"60\" r=\"4\" fill=\"#f43f5e\"/><text x=\"120\" y=\"55\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#f43f5e\">개선 전 고조파 파형</text><rect x=\"230\" y=\"160\" width=\"120\" height=\"45\" rx=\"5\" fill=\"#475569\" fill-opacity=\"0.1\"/><text x=\"240\" y=\"178\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#334155\">분포권/단절권 효과</text><text x=\"240\" y=\"195\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#059669\">고조파 제거, 파형 개선</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "🩺",
+      "title": "변압기 3대 시험법, 뜯지 않고 속을 들여다보는 기술",
+      "content": "거대한 변압기의 성능을 알아내기 위해 매번 분해할 수는 없습니다. 그래서 우리는 영리한 세 가지 청진기를 사용합니다. '권선저항 측정'으로 내부 구리선의 기초 체력을 재고, 2차 측을 열어둔 채 전류를 흘리는 '무부하 시험'으로 놀고 있을 때 빠져나가는 열인 철손을 진단합니다. 마지막으로 2차 측을 완전히 묶어버리는 '단락 시험'으로 정격 전류를 흘려 일할 때 발생하는 동손(임피던스)을 측정하여 변압기의 완벽한 복제 지도(등가회로)를 완성합니다.",
+      "visual": "변압기 등가회로 도식. 여자 회로(무부하 시험 대상)와 권선 저항 및 누설 리액턴스(단락 시험 대상)의 도해.",
+      "exam_point": "변압기 등가회로 작성을 위한 필수 시험 3가지는 '권선저항측정, 무부하 시험, 단락 시험'입니다! 이 시험들로 변압기의 '절연 내력(버티는 전압)'은 알 수 없습니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"15\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><rect x=\"170\" y=\"90\" width=\"60\" height=\"80\" rx=\"5\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"40\" y1=\"70\" x2=\"130\" y2=\"70\" stroke=\"#475569\" stroke-width=\"2\"/><path d=\"M 130,70 L 140,60 L 150,80 L 160,60 L 170,80 L 180,70\" fill=\"none\" stroke=\"#475569\" stroke-width=\"2\"/><path d=\"M 180,70 L 190,60 A 8,8 0 0,1 210,60 A 8,8 0 0,1 230,60 L 240,70\" fill=\"none\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"240\" y1=\"70\" x2=\"360\" y2=\"70\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"40\" y1=\"180\" x2=\"360\" y2=\"180\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"100\" y1=\"70\" x2=\"100\" y2=\"110\" stroke=\"#475569\" stroke-width=\"2\"/><path d=\"M 100,110 L 90,115 L 110,125 L 90,135 L 110,145 L 100,150\" fill=\"none\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"100\" y1=\"150\" x2=\"100\" y2=\"180\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"120\" y=\"135\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#ef4444\">Exciting (철손)</text><text x=\"55\" y=\"50\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#3b82f6\">r₁ (저항)</text><text x=\"190\" y=\"50\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#10b981\">x₁ (리액턴스)</text><rect x=\"35\" y=\"205\" width=\"150\" height=\"30\" rx=\"5\" fill=\"#ef4444\" fill-opacity=\"0.1\"/><text x=\"45\" y=\"224\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#b91c1c\">무부하시험 → 철손, 여자임피던스</text><rect x=\"215\" y=\"205\" width=\"150\" height=\"30\" rx=\"5\" fill=\"#10b981\" fill-opacity=\"0.1\"/><text x=\"225\" y=\"224\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#047857\">단락시험 → 동손, 임피던스전압</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "⚖️",
+      "title": "유도전동기 비례추이, 출발할 땐 저항이 해결사!",
+      "content": "무거운 기차나 공장 기계를 처음 움직이려 할 때, 유도전동기는 무지막지한 힘(기동토크)이 필요합니다. 이때 권선형 유도전동기의 로터 회전자에 외부 저항을 슬그머니 끼워 넣으면 신기하게도 기동 토크가 크게 솟구쳐 오릅니다. 속도가 올라감에 따라 이 외부 저항을 점차 줄여주면, 전동기는 처음부터 끝까지 최대의 힘을 유지하며 부드럽게 가속할 수 있습니다. 이를 '비례하여 이동한다' 해서 '비례추이'라고 부릅니다.",
+      "visual": "속도(슬립)에 따른 토크 곡선 변화. 회전자 외부 저항 R의 값이 커질수록 최대 토크를 내는 지점(슬립)이 정지 상태(기동 시) 쪽으로 비례해서 이동하는 현상 그래프.",
+      "exam_point": "암기 필수 기동토크 매칭 공식: $R = (\\frac{1}{s} - 1)r_2$. 기동 시(s=1) 토크를 극대화하기 위해 삽입하는 2차 외부 저항 계산 문제가 매우 자주 출제됩니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"15\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><line x1=\"60\" y1=\"200\" x2=\"340\" y2=\"200\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"60\" y1=\"50\" x2=\"60\" y2=\"200\" stroke=\"#475569\" stroke-width=\"2\"/><path d=\"M 60,110 Q 120,60 170,180 L 320,200\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"2,2\"/><path d=\"M 60,95 Q 160,60 220,180 L 320,200\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><path d=\"M 60,60 Q 220,60 270,180 L 320,200\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><circle cx=\"220\" cy=\"60\" r=\"4\" fill=\"#ef4444\"/><text x=\"210\" y=\"45\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#ef4444\">최대토크</text><text x=\"320\" y=\"215\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#475569\">Ns (동기속도)</text><text x=\"45\" y=\"215\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#ef4444\">0 (정지-기동)</text><path d=\"M 90,90 Q 150,75 210,105\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"130\" y=\"115\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#10b981\">저항 증가 (R자승)</text><text x=\"35\" y=\"40\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#475569\">토크 (T)</text></svg>"
+    }
+  ]
+}

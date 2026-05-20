@@ -1,0 +1,57 @@
+{
+  "subject": "전기자기학",
+  "unit": "전기자기학 핵심 개념 완성",
+  "set": 6,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "⛰️",
+      "title": "전위는 산의 높이, 전계는 경사도! 전위경도의 비밀",
+      "content": "전위(V)를 산의 높이라고 생각하면, 전계(E)는 그 산의 경사도(기울기)와 같습니다. 비가 오면 물이 가장 가파른 경사를 따라 아래로 흘러내리듯, 전하도 전위가 가장 급격히 감소하는 방향으로 힘을 받습니다. 그래서 전계의 세기는 전위의 기울기(경도)에 마이너스(-) 부호를 붙인 것과 같습니다. 수식으로는 전계가 전위의 음의 기울기라는 것을 직관적으로 보여줍니다.",
+      "visual": "전위의 높낮이를 등고선처럼 표현한 야트막한 언덕과 가파른 경사면을 따라 흐르는 전하의 이동 방향(전계 E)을 3D 느낌의 산 모양으로 도식화한 그래픽",
+      "exam_point": "E = -grad V = -∇V 공식을 반드시 암기하세요! 시험에서 전계의 방향과 전위경도 방향은 서로 '반대' 부호(-)라는 점을 이용한 오답 함정이 아주 자주 출제됩니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 40 200 Q 150 60 260 150 T 360 200\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 100 150 Q 150 80 220 120\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><path d=\"M 140 100 Q 155 85 170 95\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><circle cx=\"152\" cy=\"87\" r=\"8\" fill=\"#f59e0b\"/><path d=\"M 152 87 L 195 130\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#ef4444\"/></marker></defs><text x=\"135\" y=\"70\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#d97706\">전하 (Q)</text><text x=\"210\" y=\"145\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#ef4444\">전계 E = -∇V</text><text x=\"70\" y=\"225\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#475569\">저전위 (Low V)</text><text x=\"280\" y=\"225\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#475569\">고전위 (High V)</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "❄️",
+      "title": "전류를 보냈더니 차가워진다? 펠티에 효과",
+      "content": "서로 다른 두 금속을 접합하고 전류를 흘리면, 신기하게도 한쪽 접점에서는 열을 흡수하여 얼음처럼 차가워지고 다른 쪽 접점에서는 열을 방출하여 뜨거워집니다. 이 현상을 '펠티에 효과'라고 하며 소음과 진동이 없는 전자냉동기, 와인 셀러 등의 핵심 원리로 쓰입니다. 온도차를 주어 전기를 만드는 '제벡 효과'와 정반대되는 현상입니다.",
+      "visual": "서로 다른 두 금속 루프에 전류가 흐를 때, 한쪽 접점은 푸른 빛(흡열/냉각), 다른 쪽 접점은 붉은 빛(발열/온열)으로 변하는 회로 도식",
+      "exam_point": "전류를 흘려 '열 변화(흡열/발열)'를 유도하는 것은 펠티에 효과! 반대로 온도차를 주어 '기전력(전기)'을 만드는 것은 제벡 효과! 두 관계를 바꾸어 출제하는 오답 유형을 정복하세요.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 100 125 A 70 70 0 0 1 300 125\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"8\" stroke-linecap=\"round\"/><path d=\"M 100 125 A 70 70 0 0 0 300 125\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"8\" stroke-linecap=\"round\"/><circle cx=\"100\" cy=\"125\" r=\"16\" fill=\"#60a5fa\" fill-opacity=\"0.6\"/><circle cx=\"100\" cy=\"125\" r=\"6\" fill=\"#1d4ed8\"/><circle cx=\"300\" cy=\"125\" r=\"16\" fill=\"#fca5a5\" fill-opacity=\"0.6\"/><circle cx=\"300\" cy=\"125\" r=\"6\" fill=\"#b91c1c\"/><line x1=\"200\" y1=\"195\" x2=\"200\" y2=\"220\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"180\" y1=\"207\" x2=\"220\" y2=\"207\" stroke=\"#475569\" stroke-width=\"4\"/><path d=\"M 100 125 L 100 207 L 180 207\" fill=\"none\" stroke=\"#475569\" stroke-width=\"2\"/><path d=\"M 300 125 L 300 207 L 220 207\" fill=\"none\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"55\" y=\"100\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#1d4ed8\">흡열점 (Cooling)</text><text x=\"285\" y=\"100\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#b91c1c\">발열점 (Heating)</text><text x=\"160\" y=\"50\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#3b82f6\">금속 A</text><text x=\"160\" y=\"175\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#ef4444\">금속 B</text><text x=\"188\" y=\"235\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#475569\">전원</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "↕️",
+      "title": "전기력선의 꺾임! 유전체 경계면 조건",
+      "content": "유전율이 서로 다른 두 유전체가 만날 때 전기력선은 경계면에서 굴절하게 됩니다. 이때 경계면과 평행한 성분의 '전계(E)'는 양쪽 유전체에서 서로 같고(접선성분 연속), 경계면에 수직인 성분의 '전속밀도(D)'는 양쪽에서 서로 같습니다(법선성분 연속). 이 조건 때문에 유전율이 큰 유전체 쪽으로 전기력선이 모여들며 굴절각이 결정됩니다.",
+      "visual": "유전율이 다른 두 경계면을 통과하면서 전기력선이 굴절하는 형태와 수평/수직 벡터 성분을 깔끔한 색상 대비로 나타낸 도식",
+      "exam_point": "암기공식: '전계는 접선성분이 같다(E1 sinθ1 = E2 sinθ2)', '전속밀도는 법선성분이 같다(D1 cosθ1 = D2 cosθ2)'. 특히 탄젠트 비율 공식인 'tanθ1 / tanθ2 = ε1 / ε2'는 계산 문제 단골 출제 대상입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"20\" y=\"125\" width=\"360\" height=\"100\" fill=\"#f1f5f9\" rx=\"10\"/><line x1=\"20\" y1=\"125\" x2=\"380\" y2=\"125\" stroke=\"#475569\" stroke-width=\"3\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"220\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"5,5\"/><path d=\"M 100 50 L 200 125 L 340 200\" fill=\"none\" stroke=\"#8b5cf6\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M 170 125 A 30 30 0 0 1 175 106\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\"/><path d=\"M 230 125 A 30 30 0 0 0 248 142\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\"/><text x=\"40\" y=\"80\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#6366f1\">유전체 1 (ε₁)</text><text x=\"40\" y=\"170\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#475569\">유전체 2 (ε₂)</text><text x=\"160\" y=\"95\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#d97706\">θ₁</text><text x=\"235\" y=\"160\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#d97706\">θ₂</text><text x=\"260\" y=\"80\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#8b5cf6\">E₁ 접선연속 (E_t1 = E_t2)</text><text x=\"260\" y=\"170\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#475569\">D₂ 법선연속 (D_n1 = D_n2)</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "🧲",
+      "title": "전류가 만드는 자석 힘, 비오-사바르 법칙",
+      "content": "미소한 길이의 도선에 흐르는 전류(I dl)가 아주 먼 곳의 한 점 P에 미치는 자기장(dH)의 크기는 어떻게 구할까요? 자기장은 도선에 흐르는 전류 세기에 비례하고, 사잇각의 사인 값(sinθ)에 비례하며, 거리의 제곱(r²)에 반비례합니다. 이 비오-사바르 법칙은 눈에 보이지 않는 미시적 전류와 거시적 자기장의 세계를 완벽하게 연결하는 공식입니다.",
+      "visual": "전류가 흐르는 가상의 도선에서 임의의 미소 조각 dl을 지정하고, 거기서부터 거리 r만큼 떨어진 점 P 사이에 작용하는 각도와 자기장 벡터 dH를 입체적으로 형상화한 그래픽",
+      "exam_point": "시험문제에서는 수식 dH = (I·dl·sinθ)/(4πr²) 자체를 찾거나 비례 관계를 묻습니다. '거리의 제곱에 반비례'하고 'sinθ에 비례'한다는 점만 명확히 기억하면 틀릴 이유가 없습니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 60 180 Q 120 150 160 140 T 320 120\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"4\"/><path d=\"M 140 145 L 180 135\" fill=\"none\" stroke=\"#ec4899\" stroke-width=\"8\" stroke-linecap=\"round\"/><line x1=\"160\" y1=\"140\" x2=\"280\" y2=\"60\" stroke=\"#06b6d4\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><circle cx=\"280\" cy=\"60\" r=\"6\" fill=\"#0891b2\"/><path d=\"M 195 131 A 35 35 0 0 0 180 127\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\"/><text x=\"190\" y=\"120\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#d97706\">θ</text><text x=\"130\" y=\"175\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#ec4899\">미소전류소 (I dl)</text><text x=\"210\" y=\"110\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#0891b2\">거리 (r)</text><text x=\"295\" y=\"65\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#0891b2\">P 점</text><text x=\"250\" y=\"40\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#10b981\">dH (자기장)</text><path d=\"M 280 60 L 260 25\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" marker-end=\"url(#green-arrow)\"/><defs><marker id=\"green-arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#10b981\"/></marker></defs></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "🔗",
+      "title": "매질 속에 숨겨진 단짝, L과 C의 곱",
+      "content": "송전선로나 평행 도선 주변에는 자기 에너지를 보관하는 인덕턴스(L)와 정전 에너지를 보관하는 정전용량(C)이 무조건 공존합니다. 놀랍게도 도선의 모양, 굵기, 간격이 아무리 복잡하게 바뀌어도 이 둘의 단위길이당 곱(LC)은 매질 고유의 유전율(ε)과 투자율(μ)의 곱과 완벽하게 일치합니다. 즉, 물리적인 형상 설계와 무관하게 매질이 동일하면 LC 곱은 늘 일정합니다.",
+      "visual": "두 개의 평행 원형 도선 단면 주변으로 둥글게 형성되는 자기력선(L을 상징)과 두 도선 사이를 직진하는 전기력선(C를 상징)의 아름다운 합성 레이아웃",
+      "exam_point": "절대공식: LC = με를 무조건 외우세요! 진공이나 공기 중이라면 LC = μ₀ε₀가 성립하므로, L과 C 중 한쪽 값만 계산할 수 있으면 반대편 값은 공식 대입만으로 즉시 풀립니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><circle cx=\"130\" cy=\"125\" r=\"20\" fill=\"#3b82f6\"/><circle cx=\"270\" cy=\"125\" r=\"20\" fill=\"#ef4444\"/><text x=\"125\" y=\"130\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"16\" fill=\"#ffffff\">+</text><text x=\"266\" y=\"130\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"16\" fill=\"#ffffff\">-</text><path d=\"M 150 125 Q 200 100 250 125\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/><path d=\"M 150 125 Q 200 80 250 125\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/><path d=\"M 150 125 Q 200 150 250 125\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/><path d=\"M 150 125 Q 200 170 250 125\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/><circle cx=\"130\" cy=\"125\" r=\"35\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><circle cx=\"130\" cy=\"125\" r=\"50\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"75\" y=\"65\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#d97706\">인덕턴스 L (자계)</text><text x=\"235\" y=\"65\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#059669\">정전용량 C (전계)</text><rect x=\"130\" y=\"190\" width=\"140\" height=\"35\" fill=\"#1e293b\" rx=\"8\"/><text x=\"147\" y=\"213\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"15\" fill=\"#38bdf8\">LC = μ · ε</text></svg>"
+    }
+  ]
+}

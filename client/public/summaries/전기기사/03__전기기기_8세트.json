@@ -1,0 +1,57 @@
+{
+  "subject": "전기기기",
+  "unit": "직류기, 동기기, 변압기, 유도기, 전력변환기",
+  "set": 8,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "emoji": "🛡️",
+      "title": "속도가 만들어낸 전동기 방패, 역기전력",
+      "content": "직류전동기에 처음 전압을 가해 기동할 때는 멈춰 있기 때문에 내부의 역기전력이 제로(0) 상태입니다. 이 때문에 처음에는 엄청난 크기의 전기자 전류가 쏟아져 들어오게 됩니다. 하지만 전동기가 회전하기 시작하면 스스로 발전기가 되어 입력 전압에 대항하는 '역기전력(E)'이라는 방패를 만들어 냅니다. 속도가 점점 올라갈수록 이 역기전력 방패도 커지기 때문에 전기자 전류는 안전하게 감소하게 됩니다.",
+      "visual": "속도 증가에 따라 역기전력(E) 방패가 커지면서 입력 전류(Ia)를 억제하는 상호작용 도식화",
+      "exam_point": "속도 N이 상승하면 역기전력 E(=kΦN)가 상승하고, 이에 따라 전기자 전류 Ia = (V-E)/Ra는 감소합니다! 기동 전류 제어의 핵심 원리입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><circle cx=\"200\" cy=\"125\" r=\"50\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\" stroke-dasharray=\"6 4\"/><circle cx=\"200\" cy=\"125\" r=\"40\" fill=\"#e2e8f0\"/><text x=\"200\" y=\"130\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"24\" fill=\"#1e293b\" text-anchor=\"middle\">M</text><path d=\"M 100 125 L 150 125\" stroke=\"#10b981\" stroke-width=\"4\" marker-end=\"url(#arrow)\"/><text x=\"110\" y=\"115\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#10b981\">입력전압 V</text><path d=\"M 250 125 L 210 125\" stroke=\"#ef4444\" stroke-width=\"4\"/><text x=\"260\" y=\"115\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#ef4444\">역기전력 E</text><path d=\"M 200 40 C 250 40, 270 70, 260 100\" fill=\"none\" stroke=\"#8b5cf6\" stroke-width=\"3\" stroke-dasharray=\"4\"/><text x=\"280\" y=\"65\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#8b5cf6\">속도 N 증가</text><text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#0f172a\" text-anchor=\"middle\">Ia = (V - E) / Ra</text></svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "emoji": "🚧",
+      "title": "변압기 통행세의 정체, 임피던스 전압",
+      "content": "변압기의 진짜 실력을 평가하기 위해 2차측을 구리선으로 완전히 묶어버리는(단락) 시험을 수행합니다. 이 상태에서 1차측 전압을 0부터 살살 올리다 보면, 1차측에 딱 '정격 전류'가 흐르게 되는 순간이 오는데 이때의 입력 전압을 바로 '임피던스 전압(Vz)'이라고 부릅니다. 이는 전류가 변압기 내부의 깐깐한 임피던스(저항과 리액턴스)를 통과할 때 발생하는 전압 강하, 즉 변압기가 원천적으로 징수하는 통행세의 크기를 뜻합니다.",
+      "visual": "변압기 2차측 단락 상태에서 1차측 정격전류 도달 시 인가 전압인 임피던스 전압 계측 원리 도식화",
+      "exam_point": "임피던스 전압(Vz)은 변압기 내부 전압강하와 같습니다. '단락시험'을 통해 %임피던스, 동손, 전압변동률을 계산하기 위한 필수 데이터입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"130\" y=\"70\" width=\"140\" height=\"100\" rx=\"10\" fill=\"none\" stroke=\"#475569\" stroke-width=\"12\"/><path d=\"M 100 90 L 130 90 M 100 110 L 130 110 M 100 130 L 130 130 M 100 150 L 130 150\" stroke=\"#f59e0b\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M 270 90 L 300 90 M 270 110 L 300 110 M 270 130 L 300 130 M 270 150 L 300 150\" stroke=\"#3b82f6\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M 300 90 L 320 90 L 320 150 L 300 150\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"345\" y=\"125\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#ef4444\" text-anchor=\"middle\">단락(Short)</text><text x=\"80\" y=\"125\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#f59e0b\" text-anchor=\"middle\">Vz 인가</text><text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"15\" fill=\"#0f172a\" text-anchor=\"middle\">변압기 단락 시험 (Short-Circuit)</text><text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#334155\" text-anchor=\"middle\">1차 정격전류 유입시 Vz = I1 * Z12</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "emoji": "🔄",
+      "title": "속도에 비례해 요동치는 주파수와 기전력",
+      "content": "동기발전기에서 전기가 만들어지는 핵심 비결은 자석이 코일 주변을 팽팽 도는 것입니다. 발전기를 돌리는 물리적인 회전 속도(Ns)는 주파수(f)와 한 몸처럼 비례하여 움직입니다. 주파수가 올라가면 코일을 관통하는 자속의 변화율 속도가 빨라지기 때문에 유도기전력(E) 역시 정비례하며 상승하게 됩니다. 만약 발전기 속도를 2배로 높인다면 주파수도 2배가 되고, 우리가 얻는 기전력 전압도 정확히 2배로 시원하게 껑충 뛰어오릅니다.",
+      "visual": "회전 속도가 900에서 1800rpm으로 증가할 때 주파수와 유도기전력이 정비례하여 2배로 증가하는 구조도",
+      "exam_point": "동기속도 공식 Ns = 120f/P와 기전력 공식 E = 4.44 f Φ N Kw는 필수! 속도가 2배가 되면 주파수(f)가 2배가 되어 기전력(E)도 결국 2배가 됩니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"30\" y=\"80\" width=\"90\" height=\"80\" rx=\"8\" fill=\"#e0f2fe\" stroke=\"#0284c7\" stroke-width=\"2\"/><text x=\"75\" y=\"110\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#0369a1\" text-anchor=\"middle\">속도 (Ns)</text><text x=\"75\" y=\"140\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"16\" fill=\"#0284c7\" text-anchor=\"middle\">2배 UP</text><rect x=\"155\" y=\"80\" width=\"90\" height=\"80\" rx=\"8\" fill=\"#f3e8ff\" stroke=\"#7c3aed\" stroke-width=\"2\"/><text x=\"200\" y=\"110\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#6d28d9\" text-anchor=\"middle\">주파수 (f)</text><text x=\"200\" y=\"140\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"16\" fill=\"#7c3aed\" text-anchor=\"middle\">2배 UP</text><rect x=\"280\" y=\"80\" width=\"90\" height=\"80\" rx=\"8\" fill=\"#ecfdf5\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"325\" y=\"110\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#047857\" text-anchor=\"middle\">기전력 (E)</text><text x=\"325\" y=\"140\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"16\" fill=\"#059669\" text-anchor=\"middle\">2배 UP</text><path d=\"M 125 120 L 150 120\" stroke=\"#64748b\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 145 115 L 150 120 L 145 125\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"3\"/><path d=\"M 250 120 L 275 120\" stroke=\"#64748b\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M 270 115 L 275 120 L 270 125\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"3\"/><text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#334155\" text-anchor=\"middle\">Ns ∝ f ∝ E (정비례 관계)</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "emoji": "⚡",
+      "title": "스위치로 전압을 밀어 올리는 부스트 컨버터",
+      "content": "낮은 직류 전압을 높은 전압으로 뻥튀기해 주는 부스트(Boost) 컨버터의 비결은 인덕터(코일)의 에너지 보존 성질에 있습니다. 스위치를 닫으면 인덕터에 전류가 가득 차며 에너지가 축적됩니다. 그 후 스위치를 여는 순간, 축적된 에너지가 입력 전압 위에 마치 파도처럼 더해져 높은 전압으로 출력이 방출됩니다! 이때 누르는 시간 비율인 '듀티비(D)'가 클수록 출력 전압은 강력하게 승압됩니다.",
+      "visual": "부스트 컨버터 회로의 간소화 도식 및 듀티비에 따른 전압 상승 공식 시각화",
+      "exam_point": "부스트 컨버터의 출력 전압 공식 Vout = Vin / (1-D)는 무조건 시험에 나옵니다. 입력 45V, D=0.6이면 45 / (1-0.6) = 112.5V가 정답!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M 40 160 L 80 160\" stroke=\"#475569\" stroke-width=\"3\"/><circle cx=\"40\" cy=\"160\" r=\"5\" fill=\"#475569\"/><path d=\"M 80 160 C 85 150, 95 150, 100 160 C 105 170, 115 170, 120 160 C 125 150, 135 150, 140 160\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"4\"/><text x=\"110\" y=\"135\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\">L (인덕터)</text><path d=\"M 140 160 L 190 160\" stroke=\"#475569\" stroke-width=\"3\"/><path d=\"M 190 160 L 190 190\" stroke=\"#475569\" stroke-width=\"3\"/><path d=\"M 190 160 L 230 160\" stroke=\"#475569\" stroke-width=\"3\"/><polygon points=\"230,150 230,170 245,160\" fill=\"#10b981\"/><line x1=\"245\" y1=\"150\" x2=\"245\" y2=\"170\" stroke=\"#10b981\" stroke-width=\"3\"/><path d=\"M 245 160 L 320 160\" stroke=\"#475569\" stroke-width=\"3\"/><circle cx=\"320\" cy=\"160\" r=\"5\" fill=\"#475569\"/><circle cx=\"190\" cy=\"190\" r=\"4\" fill=\"#ef4444\"/><line x1=\"190\" y1=\"190\" x2=\"205\" y2=\"175\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"225\" y=\"195\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#ef4444\">SW (D = 0.6)</text><rect x=\"90\" y=\"35\" width=\"220\" height=\"45\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#1e40af\" stroke-width=\"2\"/><text x=\"200\" y=\"63\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"15\" fill=\"#1e40af\" text-anchor=\"middle\">Vout = Vin / (1 - D)</text><text x=\"200\" y=\"225\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#334155\" text-anchor=\"middle\">D가 커질수록 출력 전압은 시원하게 승압!</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "emoji": "📈",
+      "title": "힘은 그대로, 위치만 이동하는 비례추이",
+      "content": "3상 권선형 유도전동기를 기동할 때 가변 저항을 2차측 회로에 추가하면 환상적인 제어가 가능해집니다. 이를 '비례추이'라고 부르는데, 외부 저항을 증가시키면 최대 토크의 최고점 크기는 전혀 변하지 않으면서, 그 최고점을 만드는 슬립(속도 지점)의 위치만 기동 시점(s=1) 쪽으로 스르륵 이동하게 됩니다. 그 덕분에 기동 전류는 크게 줄이고 정작 필요한 기동 토크(출발하는 힘)는 획기적으로 불릴 수 있습니다.",
+      "visual": "2차 저항값(R2) 증가에 따라 최대토크 크기는 유지된 채 기동 시점(s=1) 쪽으로 이동하는 토크-슬립 곡선 그래프",
+      "exam_point": "가장 많이 틀리는 오답 함정! 2차 저항을 변화시켜도 '최대 토크의 값은 언제나 일정하며 변하지 않는다'는 성질을 반드시 기억하세요!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><line x1=\"60\" y1=\"200\" x2=\"340\" y2=\"200\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"60\" y1=\"50\" x2=\"60\" y2=\"200\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"45\" y=\"60\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#475569\">토크 T</text><text x=\"340\" y=\"215\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#475569\">슬립 s</text><text x=\"60\" y=\"215\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#475569\">0 (동기속도)</text><text x=\"300\" y=\"215\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#ef4444\">1 (기동시)</text><line x1=\"50\" y1=\"90\" x2=\"320\" y2=\"90\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"4\"/><text x=\"345\" y=\"94\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#475569\">Tmax (일정)</text><path d=\"M 60 200 Q 100 90, 140 150 T 300 180\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><path d=\"M 60 200 Q 150 90, 220 110 T 300 110\" fill=\"none\" stroke=\"#8b5cf6\" stroke-width=\"3\"/><path d=\"M 60 200 Q 210 90, 300 90\" fill=\"none\" stroke=\"#ec4899\" stroke-width=\"3\"/><text x=\"110\" y=\"180\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#3b82f6\">R2 (기본)</text><text x=\"210\" y=\"150\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#8b5cf6\">R2_mid</text><text x=\"285\" y=\"120\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"10\" fill=\"#ec4899\">R2_high</text></svg>"
+    }
+  ]
+}
