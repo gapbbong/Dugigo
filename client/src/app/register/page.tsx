@@ -104,7 +104,7 @@ export default function RegisterPage() {
       // 이메일 인증 없이 바로 프로필 생성 및 가입 완료
       const { error: profileError } = await supabase
         .from('dukigo_profiles')
-        .insert({
+        .upsert({
           id: authData.user?.id,
           username: formData.username,
           display_name: formData.username,

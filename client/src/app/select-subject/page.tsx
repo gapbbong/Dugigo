@@ -58,6 +58,56 @@ export default function SelectSubjectPage() {
   const [pwForm, setPwForm] = useState({ newPw: '', confirmPw: '' });
   const [pwStatus, setPwStatus] = useState<{ type: 'idle' | 'loading' | 'success' | 'error'; message: string }>({ type: 'idle', message: '' });
 
+  // 학번/이름 복구 모달 상태
+  const [showNameModal, setShowNameModal] = useState(false);
+  const [newNameInput, setNewNameInput] = useState('');
+  const [nameStatus, setNameStatus] = useState<{ type: 'idle' | 'loading' | 'success' | 'error'; message: string }>({ type: 'idle', message: '' });
+
+  const handleUpdateName = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const trimmed = newNameInput.trim();
+    if (!trimmed || trimmed.length < 5) {
+      setNameStatus({ type: 'error', message: '학번과 이름을 포함하여 5자 이상 입력해주세요.' });
+      return;
+    }
+    const hasNumber = /[0-9]/.test(trimmed);
+    const hasKorean = /[가-힣]/.test(trimmed);
+    if (!hasNumber || !hasKorean) {
+      setNameStatus({ type: 'error', message: '학번(숫자)과 이름(한글)을 모두 입력해주세요. (예: 20405홍길동)' });
+      return;
+    }
+
+    setNameStatus({ type: 'loading', message: '학번/이름을 등록하고 있습니다...' });
+    try {
+      const { error } = await supabase
+        .from('dukigo_profiles')
+        .update({
+          username: trimmed,
+          display_name: trimmed,
+          name: trimmed
+        })
+        .eq('id', user.id);
+
+      if (error) throw error;
+
+      setUser((prev: any) => ({
+        ...prev,
+        username: trimmed,
+        display_name: trimmed,
+        name: trimmed
+      }));
+
+      setNameStatus({ type: 'success', message: '성공적으로 저장되었습니다!' });
+      setTimeout(() => {
+        setShowNameModal(false);
+        setNameStatus({ type: 'idle', message: '' });
+      }, 1500);
+    } catch (err: any) {
+      console.error('[UPDATE_NAME_ERROR]', err);
+      setNameStatus({ type: 'error', message: err.message || '저장 중 오류가 발생했습니다.' });
+    }
+  };
+
   const handleUpdatePassword = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!pwForm.newPw || pwForm.newPw.length < 6) {
@@ -111,6 +161,15 @@ export default function SelectSubjectPage() {
 
       const { data: profile } = await supabase.from('dukigo_profiles').select('*').eq('id', currentUser.id).single();
       setUser({ ...currentUser, ...profile });
+
+      // 학생인데 한글 실명이 누락된 경우 감지하여 학번/이름 입력 유도
+      if (profile?.role?.toLowerCase() === 'student') {
+        const hasKorean = /[가-힣]/.test(profile.display_name || '');
+        const isDefault = !profile.display_name || profile.display_name === '수험생';
+        if (isDefault || !hasKorean) {
+          setShowNameModal(true);
+        }
+      }
 
       if (profile?.role?.toLowerCase() === 'teacher' || currentUser.email === 'serv@kakao.com') {
         setIsTeacher(true);
@@ -458,6 +517,67 @@ export default function SelectSubjectPage() {
                   className="w-full btn-primary font-black py-4 rounded-xl transition-all flex items-center justify-center gap-2 mt-6 h-14 text-sm shadow-lg shadow-brand-500/20 disabled:opacity-70"
                 >
                   {pwStatus.type === 'loading' ? '변경 중...' : '비밀번호 변경 확정'}
+                </button>
+              </form>
+            </motion.div>
+          </>
+        )}
+
+        {/* 학번/이름 누락 복구 모달 */}
+        {showNameModal && (
+          <>
+            <motion.div 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              exit={{ opacity: 0 }} 
+              className="fixed inset-0 z-[100] bg-slate-900/60 backdrop-blur-sm" 
+            />
+            <motion.div 
+              initial={{ scale: 0.95, opacity: 0, y: 20 }} 
+              animate={{ scale: 1, opacity: 1, y: 0 }} 
+              exit={{ scale: 0.95, opacity: 0, y: 20 }} 
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[101] w-full max-w-[440px] bg-white rounded-[2.5rem] p-8 md:p-10 shadow-2xl border border-slate-100 text-slate-900"
+            >
+              <div className="flex justify-between items-center mb-6">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center font-black">
+                    <GraduationCap size={20} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-black tracking-tight text-slate-900">학번/이름 등록</h3>
+                    <p className="text-xs font-bold text-slate-400">교사 관제를 위해 학번과 실명을 정확히 등록해주세요</p>
+                  </div>
+                </div>
+              </div>
+
+              <form onSubmit={handleUpdateName} className="space-y-4">
+                <div>
+                  <label className="block text-xs font-black text-slate-600 mb-1.5 pl-1">학번 및 이름 입력 <span className="text-rose-500 font-bold">(예: 20405홍길동)</span></label>
+                  <div className="relative">
+                    <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"><GraduationCap size={18} /></div>
+                    <input
+                      type="text"
+                      placeholder="학번과 이름을 함께 입력 (5자 이상)"
+                      value={newNameInput}
+                      onChange={e => setNewNameInput(e.target.value)}
+                      className="w-full bg-slate-50 border-2 border-transparent focus:border-brand-500/30 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold placeholder:text-slate-400 focus:outline-none focus:bg-white transition-all shadow-sm"
+                      autoFocus
+                    />
+                  </div>
+                </div>
+
+                {nameStatus.type !== 'idle' && (
+                  <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className={`p-4 rounded-xl text-xs font-bold flex items-center gap-2 ${nameStatus.type === 'error' ? 'bg-rose-50 text-rose-600' : nameStatus.type === 'success' ? 'bg-emerald-50 text-emerald-600' : 'bg-brand-50 text-brand-600'}`}>
+                    <AlertCircle size={16} className="shrink-0" />
+                    {nameStatus.message}
+                  </motion.div>
+                )}
+
+                <button
+                  disabled={nameStatus.type === 'loading'}
+                  className="w-full btn-primary font-black py-4 rounded-xl transition-all flex items-center justify-center gap-2 mt-6 h-14 text-sm shadow-lg shadow-brand-500/20 disabled:opacity-70"
+                >
+                  {nameStatus.type === 'loading' ? '등록 중...' : '등록 완료'}
                 </button>
               </form>
             </motion.div>
