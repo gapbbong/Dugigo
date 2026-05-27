@@ -1,0 +1,139 @@
+{
+  "subject": "정보처리기능사",
+  "unit": "01. 소프트웨어 개발 기초",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/01__소프트웨어_개발_기초_1_slide_1.png",
+      "emoji": "💡",
+      "title": "추상화와 소프트웨어 개발 제약조건",
+      "content": "추상화는 복잡한 시스템의 불필요한 세부사항을 숨기고 핵심 기능만 보여주는 기법입니다. 이는 마치 지도를 볼 때 도로의 모든 자갈이 아닌 주요 경로만 보는 것과 같습니다. 소프트웨어 개발 시, 하드웨어 환경, 기존 소프트웨어 연동, 실행 절차 등은 개발의 범위를 정하는 중요한 제약조건이 됩니다. 개발자는 이러한 제약조건을 고려하여 프로그램을 설계해야 합니다.",
+      "visual": "A simplified diagram showing a complex system being reduced to its core components. On one side, a detailed cityscape, on the other, a simple road map with key routes highlighted. Below, icons representing hardware, interconnected software, and a flowchart for execution, labeled as 'Constraints'. Korean text in high quality font.",
+      "exam_point": "추상화: 불필요한 세부 사항 생략, 핵심 특징 추출. 제약조건(Constraint): 하드웨어, 소프트웨어 연동, 실행 절차.",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/01__소프트웨어_개발_기초_1_slide_2.png",
+      "emoji": "⚙️",
+      "title": "DevOps와 지속적 통합/배포 (CI/CD)",
+      "content": "DevOps는 개발(Development)과 운영(Operations)을 통합하여 소프트웨어 개발과 배포 과정을 빠르고 효율적으로 만드는 문화이자 방법론입니다. 지속적인 통합(CI)은 개발자들이 작성한 코드를 자주 통합하고 자동으로 빌드, 테스트하여 오류를 조기에 발견합니다. 지속적인 제공/배포(CD)는 CI를 통해 안정화된 소프트웨어를 언제든 배포할 수 있는 상태로 유지합니다. 이는 마치 요리사가 신선한 재료를 바로 손님상에 내놓을 수 있도록 준비하는 과정과 같습니다.",
+      "visual": "A circular flow diagram illustrating DevOps. One half shows 'Development' with code and test icons, the other half shows 'Operations' with deploy and monitor icons. Arrows connect them in a continuous loop. Smaller icons for CI (merge, build, test) and CD (release, deploy) are also shown. Korean text in high quality font.",
+      "exam_point": "DevOps: 개발+운영 통합, 개발 주기 단축. CI: 코드 빈번 통합, 자동 빌드/테스트, 조기 결함 발견. CD: 자동 빌드/테스트 후 언제든지 배포 가능 상태 유지.",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/01__소프트웨어_개발_기초_1_slide_3.png",
+      "emoji": "🖥️",
+      "title": "운영체제(OS)의 핵심 역할",
+      "content": "운영체제(OS)는 컴퓨터 하드웨어와 사용자, 응용 프로그램 사이에서 다리 역할을 하는 시스템 소프트웨어입니다. 마치 오케스트라의 지휘자처럼, 컴퓨터의 모든 자원을 효율적으로 관리하고 프로그램을 원활하게 실행하도록 돕습니다. 예를 들어, 웹 브라우저나 워드 프로세서 같은 응용 프로그램이 작동하려면 운영체제가 필수적입니다. 하나의 시스템에는 하나의 운영체제가 설치되어 모든 소프트웨어를 관리합니다.",
+      "visual": "A layered diagram showing 'Hardware' at the bottom, 'Operating System' in the middle, and 'Application Software' and 'User' at the top. Arrows indicate interaction between layers. A conductor icon represents the OS managing resources. Korean text in high quality font.",
+      "exam_point": "운영체제(OS): 하드웨어-응용 프로그램 중간, 시스템 자원 관리, 시스템 소프트웨어. 하나의 시스템에 하나의 OS.",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/01__소프트웨어_개발_기초_1_slide_4.png",
+      "emoji": "📚",
+      "title": "DBMS의 장점과 데이터 모델의 구분",
+      "content": "DBMS(데이터베이스 관리 시스템)는 데이터를 체계적으로 저장하고 관리하는 소프트웨어입니다. 마치 도서관에서 책을 효율적으로 관리해주는 사서와 같습니다. DBMS를 사용하면 데이터 중복을 줄이고 일관성을 유지하며, 여러 사용자가 동시에 데이터를 공유할 수 있습니다. 하지만, 초기 도입 시 소프트웨어 및 하드웨어 비용, 전문 인력 필요 등으로 인해 전산화 비용은 증가할 수 있습니다. 데이터 모델은 데이터 간의 관계를 어떻게 표현하는지에 따라 관계형, 계층형, 망형 등으로 구분됩니다.",
+      "visual": "A diagram showing a central 'Database' icon with multiple 'User' icons connected to it, illustrating data sharing. Below, a balance scale with 'Benefits' (data consistency, sharing) on one side and 'Costs' (SW/HW, expert) on the other. Another section shows three distinct icons for different data models (e.g., table for relational, tree for hierarchical, graph for network). Korean text in high quality font.",
+      "exam_point": "DBMS 장점: 중복 감소, 일관성 유지, 데이터 공유. 단점: 초기 비용 증가. 데이터 모델 구분 기준: 데이터 간의 관계 표현 방식.",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/01__소프트웨어_개발_기초_1_slide_5.png",
+      "emoji": "🏗️",
+      "title": "데이터베이스 설계의 5단계",
+      "content": "데이터베이스 설계는 건물을 짓는 것과 유사하게 여러 단계를 거쳐 진행됩니다. 먼저 '사용자 요구사항 분석'으로 무엇을 원하는지 파악합니다. 다음 '개념적 설계'에서 E-R 모델 등으로 데이터의 핵심 구조를 잡습니다. 이어서 '논리적 설계' 단계에서는 특정 DBMS에 독립적인 데이터 모델을 만들며, 이 단계를 '데이터 모델링'이라고도 합니다. 마지막으로 '물리적 설계'에서는 실제 저장 방식과 성능을 고려하고, 최종적으로 '구현'합니다. 트랜잭션 모델링은 주로 논리적 설계 단계에서 수행됩니다.",
+      "visual": "A clear flowchart illustrating the 5 stages of database design. Each stage is a distinct box connected by an arrow, showing progression. Korean text in high quality font.",
+      "exam_point": "설계 단계 순서: 요구사항 분석 → 개념적 설계 → 논리적 설계(데이터 모델링) → 물리적 설계 → 구현. 물리적 설계: 저장 레코드 양식, 성능 고려. 논리적 설계 = 데이터 모델링.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"14\"><rect x=\"20\" y=\"30\" width=\"100\" height=\"40\" rx=\"5\" fill=\"#e0f7fa\" stroke=\"#00bcd4\" stroke-width=\"1\"/><text x=\"70\" y=\"55\" text-anchor=\"middle\" fill=\"#263238\">요구사항</text><path d=\"M120 50 H150\" stroke=\"#424242\" stroke-width=\"1\" fill=\"none\" marker-end=\"url(#arrowhead)\"/><rect x=\"150\" y=\"30\" width=\"100\" height=\"40\" rx=\"5\" fill=\"#e0f7fa\" stroke=\"#00bcd4\" stroke-width=\"1\"/><text x=\"200\" y=\"55\" text-anchor=\"middle\" fill=\"#263238\">개념적 설계</text><path d=\"M250 50 H280\" stroke=\"#424242\" stroke-width=\"1\" fill=\"none\" marker-end=\"url(#arrowhead)\"/><rect x=\"280\" y=\"30\" width=\"100\" height=\"40\" rx=\"5\" fill=\"#e0f7fa\" stroke=\"#00bcd4\" stroke-width=\"1\"/><text x=\"330\" y=\"55\" text-anchor=\"middle\" fill=\"#263238\">논리적 설계</text><path d=\"M330 70 V100 H200\" stroke=\"#424242\" stroke-width=\"1\" fill=\"none\" marker-end=\"url(#arrowhead)\"/><rect x=\"150\" y=\"110\" width=\"100\" height=\"40\" rx=\"5\" fill=\"#e0f7fa\" stroke=\"#00bcd4\" stroke-width=\"1\"/><text x=\"200\" y=\"135\" text-anchor=\"middle\" fill=\"#263238\">물리적 설계</text><path d=\"M250 130 H280\" stroke=\"#424242\" stroke-width=\"1\" fill=\"none\" marker-end=\"url(#arrowhead)\"/><rect x=\"280\" y=\"110\" width=\"100\" height=\"40\" rx=\"5\" fill=\"#e0f7fa\" stroke=\"#00bcd4\" stroke-width=\"1\"/><text x=\"330\" y=\"135\" text-anchor=\"middle\" fill=\"#263238\">구현</text><defs><marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#424242\"/></marker></defs></g><text x=\"200\" y=\"200\" text-anchor=\"middle\" font-size=\"16\" fill=\"#263238\">데이터 모델링 (논리적 설계)</text></svg>"
+    },
+    {
+      "id": 6,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/01__소프트웨어_개발_기초_1_slide_6.png",
+      "emoji": "📊",
+      "title": "관계 데이터 모델 핵심 용어",
+      "content": "관계 데이터 모델에서 데이터는 표와 같은 형태로 저장되며, 이 표를 '릴레이션'이라고 합니다. 릴레이션의 행은 각각의 데이터 레코드를 의미하는 '튜플'입니다. 표의 열은 데이터의 특정 항목을 나타내는 '속성(Attribute)'이며, 이 속성의 개수를 '차수(Degree)'라고 부릅니다. 릴레이션에 포함된 튜플의 개수는 '카디널리티(Cardinality)'라고 합니다. '도메인'은 각 속성이 가질 수 있는 값의 종류와 범위를 정의합니다.",
+      "visual": "A simple table (relation) with labeled rows (tuples) and columns (attributes). Annotations point to 'Relation', 'Tuple', 'Attribute', 'Degree' (count of columns), 'Cardinality' (count of rows), and 'Domain' (values allowed in a column). Korean text in high quality font.",
+      "exam_point": "릴레이션: 표. 튜플: 행(레코드). 속성: 열(필드). 차수(Degree): 속성 개수. 카디널리티(Cardinality): 튜플 개수. 도메인: 속성이 취할 수 있는 원자값 집합.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"14\"><rect x=\"50\" y=\"50\" width=\"300\" height=\"120\" fill=\"#ffffff\" stroke=\"#607d8b\" stroke-width=\"1\"/><!-- Header --><rect x=\"50\" y=\"50\" width=\"100\" height=\"30\" fill=\"#e0f2f7\" stroke=\"#607d8b\" stroke-width=\"1\"/><text x=\"100\" y=\"70\" text-anchor=\"middle\" fill=\"#263238\">속성1</text><rect x=\"150\" y=\"50\" width=\"100\" height=\"30\" fill=\"#e0f2f7\" stroke=\"#607d8b\" stroke-width=\"1\"/><text x=\"200\" y=\"70\" text-anchor=\"middle\" fill=\"#263238\">속성2</text><rect x=\"250\" y=\"50\" width=\"100\" height=\"30\" fill=\"#e0f2f7\" stroke=\"#607d8b\" stroke-width=\"1\"/><text x=\"300\" y=\"70\" text-anchor=\"middle\" fill=\"#263238\">속성3</text><text x=\"300\" y=\"200\" text-anchor=\"middle\" fill=\"#263238\">차수 (Degree): 3</text><path d=\"M290 190 L270 180\" stroke=\"#424242\" stroke-width=\"1\" marker-end=\"url(#arrowhead)\"/><path d=\"M260 65 L275 65\" stroke=\"#424242\" stroke-width=\"1\" marker-end=\"url(#arrowhead)\"/><text x=\"320\" y=\"65\" text-anchor=\"start\" fill=\"#263238\">속성</text><!-- Row 1 --><rect x=\"50\" y=\"80\" width=\"100\" height=\"30\" fill=\"#ffffff\" stroke=\"#607d8b\" stroke-width=\"1\"/><text x=\"100\" y=\"100\" text-anchor=\"middle\" fill=\"#263238\">값1</text><rect x=\"150\" y=\"80\" width=\"100\" height=\"30\" fill=\"#ffffff\" stroke=\"#607d8b\" stroke-width=\"1\"/><text x=\"200\" y=\"100\" text-anchor=\"middle\" fill=\"#263238\">값A</text><rect x=\"250\" y=\"80\" width=\"100\" height=\"30\" fill=\"#ffffff\" stroke=\"#607d8b\" stroke-width=\"1\"/><text x=\"300\" y=\"100\" text-anchor=\"middle\" fill=\"#263238\">데이터X</text><path d=\"M40 95 H20\" stroke=\"#424242\" stroke-width=\"1\" marker-end=\"url(#arrowhead)\"/><text x=\"10\" y=\"100\" text-anchor=\"start\" fill=\"#263238\">튜플</text><path d=\"M40 125 H20\" stroke=\"#424242\" stroke-width=\"1\" marker-end=\"url(#arrowhead)\"/><text x=\"10\" y=\"130\" text-anchor=\"start\" fill=\"#263238\">튜플</text><path d=\"M40 155 H20\" stroke=\"#424242\" stroke-width=\"1\" marker-end=\"url(#arrowhead)\"/><text x=\"10\" y=\"160\" text-anchor=\"start\" fill=\"#263238\">튜플</text><!-- Row 2 --><rect x=\"50\" y=\"110\" width=\"100\" height=\"30\" fill=\"#ffffff\" stroke=\"#607d8b\" stroke-width=\"1\"/><text x=\"100\" y=\"130\" text-anchor=\"middle\" fill=\"#263238\">값2</text><rect x=\"150\" y=\"110\" width=\"100\" height=\"30\" fill=\"#ffffff\" stroke=\"#607d8b\" stroke-width=\"1\"/><text x=\"200\" y=\"130\" text-anchor=\"middle\" fill=\"#263238\">값B</text><rect x=\"250\" y=\"110\" width=\"100\" height=\"30\" fill=\"#ffffff\" stroke=\"#607d8b\" stroke-width=\"1\"/><text x=\"300\" y=\"130\" text-anchor=\"middle\" fill=\"#263238\">데이터Y</text><!-- Row 3 --><rect x=\"50\" y=\"140\" width=\"100\" height=\"30\" fill=\"#ffffff\" stroke=\"#607d8b\" stroke-width=\"1\"/><text x=\"100\" y=\"160\" text-anchor=\"middle\" fill=\"#263238\">값3</text><rect x=\"150\" y=\"140\" width=\"100\" height=\"30\" fill=\"#ffffff\" stroke=\"#607d8b\" stroke-width=\"1\"/><text x=\"200\" y=\"160\" text-anchor=\"middle\" fill=\"#263238\">값C</text><rect x=\"250\" y=\"140\" width=\"100\" height=\"30\" fill=\"#ffffff\" stroke=\"#607d8b\" stroke-width=\"1\"/><text x=\"300\" y=\"160\" text-anchor=\"middle\" fill=\"#263238\">데이터Z</text><text x=\"150\" y=\"190\" text-anchor=\"middle\" fill=\"#263238\">카디널리티 (Cardinality): 3</text><text x=\"200\" y=\"35\" text-anchor=\"middle\" font-weight=\"bold\" fill=\"#263238\">릴레이션 (표)</text><defs><marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#424242\"/></marker></defs></g><text x=\"100\" y=\"220\" text-anchor=\"middle\" fill=\"#263238\">도메인: 속성이 가질 수 있는 값의 집합</text></svg>"
+    },
+    {
+      "id": 7,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/01__소프트웨어_개발_기초_1_slide_7.png",
+      "emoji": "🔗",
+      "title": "E-R 모델(개체-관계 모델)의 이해",
+      "content": "E-R 모델(Entity-Relationship Model)은 현실 세계의 데이터를 '개체', '속성', '관계'로 나누어 시각적으로 표현하는 방법입니다. 마치 가계도를 그리듯 데이터 간의 연결을 보여줍니다. E-R 다이어그램에서는 개체는 사각형으로, 개체의 특징인 속성은 타원(타원형)으로, 개체들 사이의 연관성인 관계는 마름모(다이아몬드)로 표현합니다. 오각형은 표준 E-R 모델 기호가 아니며, 오너-멤버 관계는 망(네트워크) 데이터 모델의 특징입니다.",
+      "visual": "A simple E-R diagram showing basic elements: a rectangle for 'Entity', an ellipse for 'Attribute' connected to the entity, and a diamond for 'Relationship' connecting two entities. Labels clearly identify each shape. Korean text in high quality font.",
+      "exam_point": "E-R 모델 표현: 개체(사각형), 관계(마름모/다이아몬드), 속성(타원). 오각형 X. 오너-멤버 관계: 망 데이터 모델.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"14\"><!-- Entity 1 --><rect x=\"30\" y=\"100\" width=\"80\" height=\"40\" rx=\"5\" fill=\"#cfd8dc\" stroke=\"#455a64\" stroke-width=\"1\"/><text x=\"70\" y=\"125\" text-anchor=\"middle\" fill=\"#263238\">개체1</text><!-- Attribute for Entity 1 --><ellipse cx=\"70\" cy=\"60\" rx=\"40\" ry=\"20\" fill=\"#e0f7fa\" stroke=\"#00bcd4\" stroke-width=\"1\"/><text x=\"70\" y=\"65\" text-anchor=\"middle\" fill=\"#263238\">속성A</text><line x1=\"70\" y1=\"80\" x2=\"70\" y2=\"100\" stroke=\"#424242\" stroke-width=\"1\"/><!-- Relationship --><polygon points=\"150,120 180,140 210,120 180,100\" fill=\"#ffecb3\" stroke=\"#ffb300\" stroke-width=\"1\"/><text x=\"180\" y=\"125\" text-anchor=\"middle\" fill=\"#263238\">관계</text><line x1=\"110\" y1=\"120\" x2=\"150\" y2=\"120\" stroke=\"#424242\" stroke-width=\"1\"/><line x1=\"210\" y1=\"120\" x2=\"250\" y2=\"120\" stroke=\"#424242\" stroke-width=\"1\"/><!-- Entity 2 --><rect x=\"250\" y=\"100\" width=\"80\" height=\"40\" rx=\"5\" fill=\"#cfd8dc\" stroke=\"#455a64\" stroke-width=\"1\"/><text x=\"290\" y=\"125\" text-anchor=\"middle\" fill=\"#263238\">개체2</text><!-- Attribute for Entity 2 --><ellipse cx=\"290\" cy=\"60\" rx=\"40\" ry=\"20\" fill=\"#e0f7fa\" stroke=\"#00bcd4\" stroke-width=\"1\"/><text x=\"290\" y=\"65\" text-anchor=\"middle\" fill=\"#263238\">속성B</text><line x1=\"290\" y1=\"80\" x2=\"290\" y2=\"100\" stroke=\"#424242\" stroke-width=\"1\"/><!-- Labels --><text x=\"70\" y=\"170\" text-anchor=\"middle\" font-size=\"12\" fill=\"#263238\">사각형: 개체</text><text x=\"180\" y=\"170\" text-anchor=\"middle\" font-size=\"12\" fill=\"#263238\">마름모: 관계</text><text x=\"290\" y=\"170\" text-anchor=\"middle\" font-size=\"12\" fill=\"#263238\">타원: 속성</text><text x=\"200\" y=\"220\" text-anchor=\"middle\" font-size=\"12\" fill=\"#e53935\">오각형은 E-R 모델 표준 기호 아님</text></g></svg>"
+    },
+    {
+      "id": 8,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/01__소프트웨어_개발_기초_1_slide_8.png",
+      "emoji": "🌐",
+      "title": "OSI 7계층 참조 모델",
+      "content": "OSI 7계층 모델은 컴퓨터 네트워크 통신 과정을 7단계로 표준화한 참조 모델입니다. 마치 건물을 짓는 설계도처럼, 각 층이 정해진 역할과 책임을 가지고 통신이 원활하게 이루어지도록 돕습니다. 이 모델은 총 7개의 계층으로 구성되어 있으며, 각 계층은 독립적인 기능을 수행하지만 서로 협력하여 데이터를 주고받습니다. 가장 상위 계층인 제7계층은 '응용 계층(Application Layer)'으로, 사용자가 직접 접하는 서비스와 관련된 기능을 담당합니다.",
+      "visual": "A vertical stack diagram showing the 7 layers of the OSI model. Each layer is clearly labeled with its name and number (e.g., Layer 7: Application). Arrows indicate data flow up and down the stack. The top layer (Application) is highlighted. Korean text in high quality font.",
+      "exam_point": "OSI 7계층: 7개의 계층, 표준 참조 모델. 최상위 계층: 응용 계층(제7계층).",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"14\"><rect x=\"100\" y=\"20\" width=\"200\" height=\"30\" rx=\"5\" fill=\"#bbdefb\" stroke=\"#42a5f5\" stroke-width=\"1\"/><text x=\"200\" y=\"40\" text-anchor=\"middle\" fill=\"#1565c0\">7. 응용 계층</text><rect x=\"100\" y=\"50\" width=\"200\" height=\"30\" rx=\"5\" fill=\"#e3f2fd\" stroke=\"#90caf9\" stroke-width=\"1\"/><text x=\"200\" y=\"70\" text-anchor=\"middle\" fill=\"#1e88e5\">6. 표현 계층</text><rect x=\"100\" y=\"80\" width=\"200\" height=\"30\" rx=\"5\" fill=\"#e3f2fd\" stroke=\"#90caf9\" stroke-width=\"1\"/><text x=\"200\" y=\"100\" text-anchor=\"middle\" fill=\"#1e88e5\">5. 세션 계층</text><rect x=\"100\" y=\"110\" width=\"200\" height=\"30\" rx=\"5\" fill=\"#bbdefb\" stroke=\"#42a5f5\" stroke-width=\"1\"/><text x=\"200\" y=\"130\" text-anchor=\"middle\" fill=\"#1565c0\">4. 전송 계층</text><rect x=\"100\" y=\"140\" width=\"200\" height=\"30\" rx=\"5\" fill=\"#e3f2fd\" stroke=\"#90caf9\" stroke-width=\"1\"/><text x=\"200\" y=\"160\" text-anchor=\"middle\" fill=\"#1e88e5\">3. 네트워크 계층</text><rect x=\"100\" y=\"170\" width=\"200\" height=\"30\" rx=\"5\" fill=\"#e3f2fd\" stroke=\"#90caf9\" stroke-width=\"1\"/><text x=\"200\" y=\"190\" text-anchor=\"middle\" fill=\"#1e88e5\">2. 데이터 링크 계층</text><rect x=\"100\" y=\"200\" width=\"200\" height=\"30\" rx=\"5\" fill=\"#e3f2fd\" stroke=\"#90caf9\" stroke-width=\"1\"/><text x=\"200\" y=\"220\" text-anchor=\"middle\" fill=\"#1e88e5\">1. 물리 계층</text></g></svg>"
+    },
+    {
+      "id": 9,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/01__소프트웨어_개발_기초_1_slide_9.png",
+      "emoji": "🚚",
+      "title": "OSI 7계층: 전송 계층의 역할",
+      "content": "OSI 7계층 중 제4계층인 '전송 계층(Transport Layer)'은 송신자와 수신자 간에 신뢰성 있는 데이터 전송을 담당합니다. 이 계층은 데이터를 정확하고 효율적으로 전달하기 위해 논리적인 연결 통로를 만들고 관리합니다. 또한, 데이터 패킷의 정상적인 전달 여부를 확인하여, 손실되거나 오류가 발생한 데이터를 재전송하는 등 신뢰성을 보장하는 중요한 기능을 수행합니다. 이는 마치 우편물이 제대로 도착했는지 확인하고 필요하면 다시 보내는 우체국처럼 작동합니다.",
+      "visual": "Two computers connected by a dotted line, representing a 'logical connection'. Data packets are shown flowing between them, with a 'checkmark' icon for successful delivery and a 'refresh' icon for retransmission. A small shield icon indicates reliability. Korean text in high quality font.",
+      "exam_point": "전송 계층(Transport Layer): 종단 간(End-to-End) 신뢰성 있는 전송, 논리적 연결 통로 생성/관리, 패킷 전달 및 수신 검사.",
+      "svg": ""
+    },
+    {
+      "id": 10,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/01__소프트웨어_개발_기초_1_slide_10.png",
+      "emoji": "💬",
+      "title": "TCP/IP 및 주요 프로토콜",
+      "content": "TCP/IP는 인터넷 통신의 핵심 규약으로, 다양한 프로토콜로 구성됩니다. 이 중 '전송 계층'에는 TCP(Transmission Control Protocol)와 UDP(User Datagram Protocol)가 속하여 데이터를 안정적으로 또는 빠르게 전송합니다. 최근 IoT 환경에서는 저전력 및 불안정한 네트워크에서 효율적인 메시징을 위해 'MQTT(Message Queuing Telemetry Transport)' 프로토콜이 자주 사용됩니다. 또한, 웹 서버에서 동적인 콘텐츠를 생성하는 데 사용되는 'ASP(Active Server Pages)'는 마이크로소프트에서 개발한 서버용 스크립트 언어입니다.",
+      "visual": "Icons representing different protocols: a handshake for TCP, a fast-forward button for UDP, a small connected device/cloud for MQTT, and a server with a script icon for ASP. Each icon has its respective name. Korean text in high quality font.",
+      "exam_point": "TCP/IP 전송 계층: TCP, UDP. IoT 환경 프로토콜: MQTT(발행-구독, 가벼운 메시징). 서버용 스크립트: ASP(마이크로소프트, IIS 환경).",
+      "svg": ""
+    },
+    {
+      "id": 11,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/01__소프트웨어_개발_기초_1_slide_11.png",
+      "emoji": "🔍",
+      "title": "소프트웨어 테스트: 블랙박스 vs 화이트박스",
+      "content": "소프트웨어 테스트는 개발된 프로그램의 품질을 확인하는 과정입니다. 크게 '블랙박스 테스트'와 '화이트박스 테스트'로 나뉩니다. 블랙박스 테스트는 소프트웨어의 내부 구조를 알지 못하는 상태에서 외부 동작과 기능에 초점을 맞춰 테스트합니다. 마치 기계의 외부 버튼만 보고 조작하는 것과 같습니다. 반면, 화이트박스 테스트는 프로그램의 내부 코드와 논리 구조를 분석하여 테스트합니다. 조건 검사, 루프 검사, 기초 경로 검사 등은 화이트박스 테스트 기법에 해당합니다.",
+      "visual": "Two distinct boxes. One is a solid black box with external buttons and inputs/outputs, labeled 'Black-Box Testing'. The other is a transparent or wireframe box showing internal circuitry/code logic, labeled 'White-Box Testing'. Arrows indicate testing actions. Korean text in high quality font.",
+      "exam_point": "블랙박스 테스트: 내부 구조 모름, 기능/외부 동작 확인. 화이트박스 테스트: 내부 구조 분석, 조건 검사, 루프 검사, 기초 경로 검사.",
+      "svg": ""
+    },
+    {
+      "id": 12,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/01__소프트웨어_개발_기초_1_slide_12.png",
+      "emoji": "✅",
+      "title": "소프트웨어 테스트 단계 및 종류",
+      "content": "소프트웨어 테스트는 여러 단계를 거쳐 진행됩니다. 가장 작은 단위인 모듈을 테스트하는 '단위 테스트'로 시작합니다. 이후 모듈들을 결합하며 '통합 테스트'를, 시스템 전체를 점검하는 '시스템 테스트'를 수행합니다. 최종적으로 사용자가 요구사항을 충족하는지 확인하는 '인수 테스트'를 거칩니다. 개발자 장소에서 사용자가 하는 테스트는 '알파 검사'이고, 실제 환경에서 사용자가 하는 테스트는 '베타 검사'입니다. 'Validation(확인)'은 사용자 요구사항 충족 여부를, 'Verification(검증)'은 명세서에 따른 구현 여부를 점검합니다.",
+      "visual": "A linear flowchart showing the standard software testing sequence: Unit Test → Integration Test → System Test → Acceptance Test. Below this flow, two separate icons/sections for Alpha Test (developer + user) and Beta Test (real user environment). Also, distinct labels for Validation and Verification. Korean text in high quality font.",
+      "exam_point": "테스트 순서: 단위 → 통합 → 시스템 → 인수 테스트. 단위 테스트: 최소 모듈. 알파 검사: 개발자 장소, 사용자. 베타 검사: 실사용자 환경. Validation(확인): 사용자 요구사항. Verification(검증): 명세서 구현.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"14\"><rect x=\"20\" y=\"30\" width=\"80\" height=\"40\" rx=\"5\" fill=\"#e8f5e9\" stroke=\"#4caf50\" stroke-width=\"1\"/><text x=\"60\" y=\"55\" text-anchor=\"middle\" fill=\"#1b5e20\">단위 테스트</text><path d=\"M100 50 H120\" stroke=\"#424242\" stroke-width=\"1\" fill=\"none\" marker-end=\"url(#arrowhead)\"/><rect x=\"120\" y=\"30\" width=\"80\" height=\"40\" rx=\"5\" fill=\"#e8f5e9\" stroke=\"#4caf50\" stroke-width=\"1\"/><text x=\"160\" y=\"55\" text-anchor=\"middle\" fill=\"#1b5e20\">통합 테스트</text><path d=\"M200 50 H220\" stroke=\"#424242\" stroke-width=\"1\" fill=\"none\" marker-end=\"url(#arrowhead)\"/><rect x=\"220\" y=\"30\" width=\"80\" height=\"40\" rx=\"5\" fill=\"#e8f5e9\" stroke=\"#4caf50\" stroke-width=\"1\"/><text x=\"260\" y=\"55\" text-anchor=\"middle\" fill=\"#1b5e20\">시스템 테스트</text><path d=\"M300 50 H320\" stroke=\"#424242\" stroke-width=\"1\" fill=\"none\" marker-end=\"url(#arrowhead)\"/><rect x=\"320\" y=\"30\" width=\"80\" height=\"40\" rx=\"5\" fill=\"#e8f5e9\" stroke=\"#4caf50\" stroke-width=\"1\"/><text x=\"360\" y=\"55\" text-anchor=\"middle\" fill=\"#1b5e20\">인수 테스트</text><text x=\"200\" y=\"90\" text-anchor=\"middle\" font-weight=\"bold\" fill=\"#263238\">사용자 테스트 유형</text><rect x=\"50\" y=\"110\" width=\"120\" height=\"40\" rx=\"5\" fill=\"#fffde7\" stroke=\"#ffeb3b\" stroke-width=\"1\"/><text x=\"110\" y=\"135\" text-anchor=\"middle\" fill=\"#f57f17\">알파 검사</text><text x=\"110\" y=\"155\" text-anchor=\"middle\" font-size=\"12\" fill=\"#f57f17\">(개발자 장소 + 사용자)</text><rect x=\"230\" y=\"110\" width=\"120\" height=\"40\" rx=\"5\" fill=\"#fffde7\" stroke=\"#ffeb3b\" stroke-width=\"1\"/><text x=\"290\" y=\"135\" text-anchor=\"middle\" fill=\"#f57f17\">베타 검사</text><text x=\"290\" y=\"155\" text-anchor=\"middle\" font-size=\"12\" fill=\"#f57f17\">(실사용자 환경)</text><text x=\"200\" y=\"190\" text-anchor=\"middle\" font-weight=\"bold\" fill=\"#263238\">V&V (확인 및 검증)</text><rect x=\"40\" y=\"205\" width=\"150\" height=\"30\" rx=\"5\" fill=\"#e0f7fa\" stroke=\"#00bcd4\" stroke-width=\"1\"/><text x=\"115\" y=\"225\" text-anchor=\"middle\" fill=\"#263238\">Validation (확인): 요구사항 충족</text><rect x=\"210\" y=\"205\" width=\"150\" height=\"30\" rx=\"5\" fill=\"#e0f7fa\" stroke=\"#00bcd4\" stroke-width=\"1\"/><text x=\"285\" y=\"225\" text-anchor=\"middle\" fill=\"#263238\">Verification (검증): 명세서 구현</text><defs><marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#424242\"/></marker></defs></g></svg>"
+    }
+  ]
+}

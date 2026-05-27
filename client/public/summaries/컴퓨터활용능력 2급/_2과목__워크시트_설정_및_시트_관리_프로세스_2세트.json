@@ -1,0 +1,205 @@
+{
+  "subject": "컴퓨터활용능력 2급",
+  "unit": "[2과목] 워크시트 설정 및 시트 관리 프로세스",
+  "set": 2,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_1.png",
+      "emoji": "🗑️",
+      "title": "되돌릴 수 없는 삭제! 시트 관리의 기본",
+      "content": "워크시트를 삭제하면 모든 데이터가 영구히 사라져요. 이 작업은 엑셀에서 유일하게 '실행 취소(Ctrl+Z)'가 불가능한 아주 위험한 작업이니 신중해야 해요. 새로운 시트는 Shift+F11로 현재 시트 왼쪽에 삽입되며, 시트를 복사하면 자동으로 이름 뒤에 숫자가 붙어요. 여러 시트를 선택하면 [그룹] 상태가 된답니다.",
+      "visual": "A diagram showing a warning sign (🚫) next to a trash can icon (🗑️) with '시트 삭제' Korean text in high quality font. Below that, a keyboard icon with 'Shift + F11' leading to a '+' sheet icon. A sheet icon with '(2)' suffix.",
+      "exam_point": "워크시트 삭제는 실행 취소(Ctrl+Z) 불가! 새 시트 삽입: Shift+F11. 복사 시 이름 (2) 자동 부여.",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_2.png",
+      "emoji": "⌨️",
+      "title": "엑셀의 언어! 데이터 입력과 셀 이동",
+      "content": "엑셀은 입력된 내용을 보고 숫자, 날짜, 시간, 분수 등으로 자동 인식해요. 예를 들어 '01:02AM'은 시간으로, '0 1/4'은 분수로 인식하죠. 하지만 숫자 앞에 작은따옴표(')를 붙이면 무조건 텍스트로 만들 수 있어요. 데이터를 입력한 후 Home 키를 누르면 현재 행의 첫 열(A열)로 이동하고, Esc 키는 입력 중인 내용을 취소해요.",
+      "visual": "A cell with '01:02AM' right-aligned, another cell with '0 1/4' right-aligned, and a cell with \"'1234\" left-aligned. An arrow from a cell in column C to column A of the same row with 'Home' key. A red 'X' icon next to 'Esc' key.",
+      "exam_point": "'0 1/4' (분수), '1월30일' (날짜)는 숫자로 인식. 숫자 앞에 ' 붙이면 텍스트. Home 키: 현재 행 A열 이동. Ctrl+Home: A1 이동. Esc: 입력 취소.",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_3.png",
+      "emoji": "🔄",
+      "title": "쭉~ 드래그! 똑똑한 자동 채우기",
+      "content": "엑셀의 채우기 핸들은 규칙을 파악해 데이터를 자동으로 채워줘요. '가-011'처럼 문자와 숫자가 섞이면 숫자만 1씩 증가하고, '01월 15일' 같은 날짜는 기본적으로 1일씩 증가해요. 숫자만 있는 셀을 그냥 드래그하면 복사되지만, Ctrl 키를 누른 채 드래그하면 1씩 증가하는 연속 데이터가 만들어진답니다.",
+      "visual": "A cell '가-011' dragging down to '가-012', '가-013'. Another cell '01월 15일' dragging down to '01월 16일', '01월 17일'. A cell '10.1' dragging down to '11.1', '12.1', '13.1' with a small 'Ctrl' key icon next to the drag arrow.",
+      "exam_point": "문자+숫자: 숫자 1씩 증가. 날짜: 1일씩 증가. 숫자만: 그냥 드래그(복사), Ctrl+드래그(1씩 증가). 문자+숫자: 그냥 드래그(1씩 증가), Ctrl+드래그(복사).",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_4.png",
+      "emoji": "🖨️",
+      "title": "척척 인쇄! 페이지 설정 마스터",
+      "content": "인쇄 영역은 각 시트에 개별적으로 설정돼요. 숨겨진 행이나 열, 그리고 배경 그림은 인쇄되지 않는다는 점을 기억하세요. 차트만 선택해서 인쇄하면 페이지에 꽉 차게 출력된답니다. [페이지 설정] 대화상자는 용지 방향, 여백, 배율 등을 정하지만, 프린터 선택이나 인쇄 부수 지정은 [인쇄] 메뉴에서 해요. [인쇄 미리 보기]에서 열 너비나 여백을 조절하면 실제 워크시트에도 반영돼요.",
+      "visual": "A printer icon printing a document with a chart, visually showing hidden rows being excluded. A 'Page Setup' dialog box with 'Sheet' and 'Margins' tabs highlighted. A 'Print Preview' screen with adjustable column width and margin lines.",
+      "exam_point": "인쇄 영역 시트별 적용. 숨겨진 행/열 인쇄 X. 차트만 선택 인쇄 O. 페이지 설정 vs 인쇄 메뉴 기능 구분. 미리 보기에서 열 너비/여백 조정은 원본 반영. [시트] 탭: 메모/눈금선 인쇄 설정.",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_5.png",
+      "emoji": "💬",
+      "title": "똑똑한 메모 & 자동 고침 활용법",
+      "content": "메모는 셀 데이터에 대한 설명을 추가하는 기능이에요. 셀을 이동하면 메모도 함께 움직이지만, [서식 지우기]로는 메모가 삭제되지 않아요. 메모를 지우려면 [모두 지우기]나 [메모 지우기]를 사용해야 합니다. 또한, 엑셀의 '자동 고침' 기능은 '(tel)'을 '☎'처럼 미리 설정된 문자나 기호로 자동으로 변환해주는 똑똑한 기능이랍니다.",
+      "visual": "A cell with a red triangle indicating a memo, next to a sticky note icon. An arrow showing a cell being moved, with the memo moving with it. A crossed-out icon for 'Format Painter' over a memo. A text bubble with '(tel)' changing to '☎' via an arrow, representing auto-correction. Korean text in high quality font.",
+      "exam_point": "메모 삭제: [모두 지우기] 또는 [메모 지우기] (서식 지우기로는 삭제 X). 셀 이동 시 메모도 함께 이동. 자동 고침: (tel) → ☎. 자동 완성: 같은 열 데이터만.",
+      "svg": ""
+    },
+    {
+      "id": 6,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_6.png",
+      "emoji": "🤖",
+      "title": "작업 자동화! 매크로 이름 규칙 정복",
+      "content": "매크로는 복잡하고 반복적인 작업을 기록하여 한 번에 실행하게 해주는 자동화 기능이에요. 매크로 이름은 반드시 문자로 시작해야 하며, 공백이나 특정 특수문자는 사용할 수 없어요. 단, 언더바(_)는 예외적으로 허용된답니다. 매크로 바로 가기 키가 엑셀의 기본 단축키와 중복되면 매크로가 우선권을 가지니 주의하세요.",
+      "visual": "A stylized robot icon performing a sequence of tasks automatically. A text box showing 'Macro_Name' with a green check and 'Macro Name' with a red X, illustrating valid/invalid names. A keyboard with 'Ctrl+C' and 'Macro Priority' text, indicating macro's precedence. Korean text in high quality font.",
+      "exam_point": "매크로 이름: 공백 불가, 문자로 시작 (언더바(_) 허용). 바로 가기 키: 기본 엑셀 단축키보다 우선. 기록은 '실행' 중심. 저장 위치: 현재 통합 문서, 새 통합 문서, 개인용 매크로 통합 문서.",
+      "svg": ""
+    },
+    {
+      "id": 7,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_7.png",
+      "emoji": "▶️",
+      "title": "매크로 실행! 어디에 연결할까?",
+      "content": "매크로는 반복 작업을 효율적으로 처리하는 멋진 기능이에요. 도형이나 단추 같은 그래픽 개체에 매크로를 지정하여 클릭 한 번으로 실행할 수 있어요. 또한, 매크로 기록 시 설정한 바로 가기 키(Ctrl + 영문자)를 누르거나, [Alt]+[F8]로 매크로 대화상자를 열어 직접 선택해 실행할 수도 있죠. 하지만 엑셀의 셀 자체에는 매크로를 직접 연결할 수 없어요.",
+      "visual": "A button icon labeled '매크로 실행' Korean text in high quality font. A keyboard icon showing 'Ctrl + (key)'. A dialog box with a list of macro names and a 'Run' button. A cell icon with a red X over it.",
+      "exam_point": "셀에는 매크로 직접 연결 불가! 실행 방법: 도형/단추 클릭, 바로 가기 키, [매크로] 대화상자.",
+      "svg": ""
+    },
+    {
+      "id": 8,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_8.png",
+      "emoji": "🔗",
+      "title": "수식 복사의 마법! 셀 참조 마스터",
+      "content": "셀 참조는 수식을 복사할 때 셀 주소가 변하는 방식을 정하는 규칙이에요. '상대 참조(D4)'는 복사하는 셀의 위치에 따라 주소가 함께 변하고, '절대 참조($D$3)'는 어디로 복사해도 항상 그 셀을 고정해서 참조해요. '혼합 참조(D$3)'는 행이나 열 중 하나만 고정하여 유연하게 사용할 수 있어요. 이를 잘 활용하면 수식을 정확하고 빠르게 복사할 수 있답니다.",
+      "visual": "A 3x3 grid of cells. One cell 'D4' with an arrow showing it changing to 'E5' when copied (relative). Another cell '$D$3' staying '$D$3' (absolute). A third cell 'D$3' with an arrow showing it changing to 'E$3' (mixed, row fixed).",
+      "exam_point": "상대 참조: (A1) 위치 따라 변함. 절대 참조: ($A$1) 항상 고정. 혼합 참조: ($A1, A$1) 행/열 중 하나 고정. F4 키로 전환.",
+      "svg": ""
+    },
+    {
+      "id": 9,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_9.png",
+      "emoji": "🔍",
+      "title": "수직 탐색의 왕! VLOOKUP 함수 사용법",
+      "content": "VLOOKUP 함수는 마치 책에서 단어를 찾아 뜻을 확인하는 것과 같아요. 첫 번째 인수로 '찾을 값'을, 두 번째 인수로 '찾을 범위'를 지정해요. 이때 찾을 범위는 F4 키를 눌러 절대 참조($)로 고정해야 수식을 복사해도 변하지 않아요. 세 번째는 찾은 범위에서 몇 번째 열의 값을 가져올지, 마지막은 '정확히 일치(FALSE)'할지 '유사 일치(TRUE)'할지를 선택해요.",
+      "visual": "A table diagram with columns labeled '상품코드', '단가'. An arrow from a '찾을 값' (e.g., 'AA-10') to the '상품코드' column. Another arrow from the row found (e.g., AA-10) to the '단가' column, indicating the '열 번호'. A small '$' icon over the '찾을 범위' to represent absolute reference. Korean text in high quality font.",
+      "exam_point": "VLOOKUP(찾을 값, 찾을 범위(절대 참조), 열 번호, [FALSE/TRUE]). 범위는 첫 번째 열이 기준. 문자 데이터/정렬 안 된 표: FALSE(0).",
+      "svg": ""
+    },
+    {
+      "id": 10,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_10.png",
+      "emoji": "🧩",
+      "title": "겹겹이 쌓는 지식! 중첩 함수 파헤치기",
+      "content": "함수를 중첩할 때는 안쪽 함수부터 차례대로 계산해요. 예를 들어 'VLOOKUP(LARGE(...))'는 먼저 LARGE 함수로 '찾을 값'을 구하고, 그 값을 VLOOKUP 함수의 첫 번째 인수로 사용해요. VLOOKUP은 언제나 '찾을 범위'의 '첫 번째 열'에서 값을 찾고, 지정된 열 번호에 해당하는 데이터를 가져와요. 마지막 인수인 0은 정확히 일치하는 값을 찾는다는 뜻이에요.",
+      "visual": "Two nested boxes: outer 'VLOOKUP', inner 'LARGE'. An arrow showing the output of LARGE function feeding into the input of VLOOKUP function. A table with a '번호' column (A) and '수학' column (E). Highlight '4번째로 큰 값 (5)' in column A, then trace to row '5' and highlight value '88' in column E. Korean text in high quality font.",
+      "exam_point": "중첩 함수는 안쪽부터 계산. VLOOKUP: 범위의 첫 번째 열 기준, 열 번호 정확히 세기. FALSE(0): 정확히 일치, TRUE(1): 유사 일치. LARGE(범위, k): k번째로 큰 값.",
+      "svg": ""
+    },
+    {
+      "id": 11,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_11.png",
+      "emoji": "🤔",
+      "title": "YES or NO? 조건부 함수 IF/AND/OR",
+      "content": "IF 함수는 '만약 ~라면 A, 아니라면 B'와 같이 조건에 따라 다른 값을 출력해요. 여러 조건을 동시에 만족해야 할 때는 AND 함수를, 여러 조건 중 하나라도 만족하면 될 때는 OR 함수를 사용해요. 이들을 조합하면 '직무 90점 이상이거나, (국사와 상식 모두 80점 이상)'과 같은 복잡한 조건을 구현할 수 있답니다.",
+      "visual": "A flowchart starting with a diamond '조건?' (Condition?). Two paths '참' (True) and '거짓' (False). Under '조건', two more diamonds '조건 A' and '조건 B'. Cond A and Cond B are connected by 'AND' for one path, and 'OR' for another. Korean text in high quality font.",
+      "exam_point": "IF(조건, 참일 때 값, 거짓일 때 값). AND(조건1, 조건2,...): 모두 참일 때만 참. OR(조건1, 조건2,...): 하나라도 참이면 참. '공백'은 \"\"로 표시.",
+      "svg": ""
+    },
+    {
+      "id": 12,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_12.png",
+      "emoji": "🔢",
+      "title": "조건에 맞는 개수 세기! COUNTIF",
+      "content": "COUNTIF 함수는 지정된 '범위'에서 '조건'에 맞는 셀이 몇 개인지 세어줘요. 예를 들어 학점별 학생 수를 구할 때 사용하죠. 수식을 아래로 채울 경우 학점 범위는 항상 고정되어야 하므로 '$B$3:$B$10'처럼 절대 참조($)로 만들어야 해요. 반면, 조건(A학점, B학점 등)은 아래로 내려가면서 변해야 하므로 'D3'처럼 상대 참조로 두어야 한답니다.",
+      "visual": "A table with '학점' column and '학생수' column. An arrow from a range of grades ($B$3:$B$10) to a COUNTIF function, with D3 as a condition. Visually show $B$3:$B$10 as a fixed range and D3 changing to D4, D5, etc. Korean text in high quality font.",
+      "exam_point": "COUNTIF(범위, 조건). 범위는 절대 참조($)로 고정, 조건은 상대 참조로 설정. SUMIF, AVERAGEIF도 '범위, 조건' 순서. COUNT: 숫자 셀만, COUNTA: 비어있지 않은 셀 모두.",
+      "svg": ""
+    },
+    {
+      "id": 13,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_13.png",
+      "emoji": "📊",
+      "title": "연산자와 함수의 미묘한 차이",
+      "content": "MAX, COUNT, COUNTA 함수는 비어있지 않거나 숫자/논리값을 세거나 가장 큰 값을 찾아줘요. 이때 함수에 직접 입력된 'TRUE'는 숫자 1로, 숫자로 보이는 텍스트는 숫자로 인식해요. 하지만 산술 연산자(+)는 텍스트와 숫자를 더할 수 없어 오류를 띄우죠. 반면 SUM 함수는 텍스트를 무시하고 숫자만 합산하는 너그러운 특징이 있어요. ROUND 함수는 자릿수 0은 소수점 첫째 자리, -1은 일의 자리에서 반올림해요.",
+      "visual": "A cell showing '=\"텍스트\" + 10' resulting in '#VALUE!' Korean text in high quality font. Another cell showing '=SUM(\"텍스트\", 10)' resulting in '10'. A number '215.143' being rounded to '200' with 'ROUND(value, -2)'.",
+      "exam_point": "함수 인수: TRUE(1), '숫자'(숫자). 산술 연산자(+): 텍스트+숫자 = #VALUE!. SUM 함수: 범위 내 텍스트 무시하고 숫자만 합산. ROUND(값, 0): 소수점 첫째 자리에서 반올림, ROUND(값, -1): 일의 자리에서 반올림.",
+      "svg": ""
+    },
+    {
+      "id": 14,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_14.png",
+      "emoji": "🔍",
+      "title": "원하는 데이터만! 필터 활용 마스터",
+      "content": "필터는 방대한 데이터 중에서 특정 조건에 맞는 레코드만 화면에 표시하는 기능이에요. 자동 필터에서 '성별=남'과 '지역=서울'처럼 다른 열에 조건을 걸면 자동으로 AND 조건으로 결합돼요. 필터링된 상태에서 정렬을 하면 화면에 보이는 레코드들만을 대상으로 정렬이 이루어져요. 고급 필터는 원본을 유지하며 다른 장소에 결과를 복사할 수도 있답니다.",
+      "visual": "A funnel icon over a table, visually showing only specific rows (e.g., '남', '서울') remaining while others are hidden. A Venn diagram of '성별=남' and '지역=서울' intersecting to show an 'AND' condition. A table showing filtered (visible) rows being sorted. Korean text in high quality font.",
+      "exam_point": "자동 필터: 다른 필드 = AND 조건. 필터링 후 정렬: 보이는 레코드만 정렬. 고급 필터: 다른 장소 복사 가능. 같은 행: AND, 다른 행: OR (고급 필터).",
+      "svg": ""
+    },
+    {
+      "id": 15,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_15.png",
+      "emoji": "🏷️",
+      "title": "내 맘대로 이름 짓기! 이름 정의",
+      "content": "이름 정의는 셀이나 범위에 '매출액'처럼 쉬운 이름을 붙여 수식에서 편리하게 참조하는 기능이에요. 이름은 기본적으로 '절대참조' 방식을 사용해서 어디서든 고정된 범위를 가리킨답니다. 이름에는 공백을 포함할 수 없으며, 반드시 문자나 밑줄(_)로 시작해야 해요. 한 번 정의된 이름은 해당 통합 문서의 다른 시트에서도 자유롭게 사용할 수 있어요.",
+      "visual": "A cell range A1:C10 -> text label '매출액' in a box. An arrow showing '$A$1:$C$10' for '매출액'. A text box with 'My Name' (red X) and 'My_Name' (green check). Two sheet tabs, showing '매출액' being used on both. Korean text in high quality font.",
+      "exam_point": "이름은 기본적으로 절대 참조. 공백 불가, 문자/_로 시작. 대소문자 구별 X. 다른 시트에서도 사용 가능. 단축키: Ctrl+F3(이름 관리자), F3(수식에 이름 넣기).",
+      "svg": ""
+    },
+    {
+      "id": 16,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_16.png",
+      "emoji": "➕",
+      "title": "그룹별 요약! 부분합의 핵심 기능",
+      "content": "부분합은 데이터를 특정 기준에 따라 그룹으로 묶고, 각 그룹별로 합계, 평균 같은 통계 값을 계산해주는 기능이에요. 부분합을 실행하기 전에는 반드시 기준이 될 필드를 오름차순이나 내림차순으로 '정렬'해야 해요. '새로운 값으로 대치' 항목에 체크되어 있으면 기존 부분합이 사라지고 새로운 부분합이 만들어지니, 중첩 부분합을 원한다면 이 체크를 해제해야 한답니다.",
+      "visual": "A table with data sorted by a column (e.g., '지역'). A group of rows (e.g., '서울') collapsing to show a subtotal. A checkbox labeled '새로운 값으로 대치' with a red X (indicating it should be unchecked for nested subtotals). Korean text in high quality font.",
+      "exam_point": "부분합 실행 전 기준 필드 정렬 필수! '새로운 값으로 대치' 체크 해제 시 중첩 부분합 가능. '모두 제거'로 부분합 전체 삭제.",
+      "svg": ""
+    },
+    {
+      "id": 17,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_17.png",
+      "emoji": "📈",
+      "title": "생생하게 보여주는 차트의 비밀",
+      "content": "엑셀 차트는 원본 데이터와 '실시간으로 연동'되는 똑똑한 개체예요. 원본 셀의 값이 바뀌면 차트도 즉시 업데이트된답니다. 셀의 표시 형식(예: 통화, 백분율)을 변경하면 차트에도 반영되죠. 하지만 [홈] 탭의 [서식 지우기]는 셀 서식을 지우는 기능이라 차트 요소의 서식에는 영향을 주지 않아요. 차트 서식은 [차트 도구] 탭에서 관리해야 해요.",
+      "visual": "A spreadsheet with changing data. An arrow from the changing data to a dynamic bar chart that updates in real-time. A chart with various elements (title, legend, axis). A crossed-out 'Format Painter' icon over a chart element, implying it doesn't work. Korean text in high quality font.",
+      "exam_point": "차트는 원본 데이터와 실시간 연동 (값, 표시 형식). [홈] 탭의 [서식 지우기]는 차트 서식에 영향 X. 차트 종류에 따라 행/열 전환 가능.",
+      "svg": ""
+    },
+    {
+      "id": 18,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_2_slide_18.png",
+      "emoji": "📊",
+      "title": "차트 해설사! 범례 설정 노하우",
+      "content": "범례는 차트의 데이터 계열이 무엇을 의미하는지 색상과 이름으로 알려주는 중요한 요소예요. 범례 서식에서 '상단', '하단' 등 정해진 위치를 선택하면 그림 영역이 자동으로 조정되어 겹치지 않게 배치돼요. 하지만 마우스로 범례를 직접 드래그하여 이동하거나 크기를 변경하는 '수동' 설정의 경우, 그림 영역의 크기나 위치는 자동으로 조정되지 않는다는 점을 꼭 기억해야 해요.",
+      "visual": "A bar chart with a legend. The legend moving to a preset position (e.g., '상단'), causing the chart plot area to automatically shrink. The legend being dragged manually to an arbitrary position, overlapping the chart plot area without auto-resizing. Korean text in high quality font.",
+      "exam_point": "범례 수동 이동/크기 변경 시 그림 영역 크기/위치 자동 조정 X. 정해진 위치 배치 시 그림 영역 자동 조정 O. 범례에는 차트 제목 표시 X (데이터 계열만).",
+      "svg": ""
+    }
+  ]
+}

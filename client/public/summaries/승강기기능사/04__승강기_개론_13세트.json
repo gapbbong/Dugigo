@@ -1,0 +1,183 @@
+{
+  "subject": "승강기기능사",
+  "unit": "04. 승강기 개론",
+  "set": 13,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_1.png",
+      "emoji": "👷",
+      "title": "안전한 작업의 시작: 작업 중지 및 보호구 지급 기준",
+      "content": "산업 현장에서는 작업자의 안전이 가장 중요합니다. 폭발, 화재 등 급박한 위험이 있거나, 비, 눈 등 기상 상태가 몹시 나쁠 때는 즉시 작업을 중지해야 해요. 위험한 작업에는 반드시 적절한 보호구를 착용해야 하는데, 이는 작업자의 생명을 지키는 기본 원칙입니다. 올바른 보호구 착용은 사고를 예방하고 부상을 최소화하는 데 결정적인 역할을 합니다.",
+      "visual": "A vibrant illustration of a construction site with various safety hazards (e.g., falling objects, fire, bad weather). Workers are shown wearing different types of protective gear (hard hat, safety glasses, safety harness, safety shoes, welding mask, heat-resistant clothing). A clear 'STOP' sign is prominently displayed in the center. Korean text in high quality font: '작업 중지 조건', '보호구 지급 기준'.",
+      "exam_point": "작업 중지 조건: 급박한 위험, 기상악화, 가스농도 25% 이상. 보호구 종류: 안전모(낙하/비래/추락 위험), 안전대(2m 이상 추락 위험), 보안면(용접 불꽃), 보안경(비산물/유해액체), 안전화(맞음/끼임/감전), 절연용 보호구(감전), 방열복(고열 화상).",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_2.png",
+      "emoji": "🛤️",
+      "title": "엘리베이터의 길: 주행안내 레일의 규격",
+      "content": "마치 기차가 선로를 따라 움직이듯, 엘리베이터 카도 주행안내 레일을 따라 안전하고 부드럽게 오르내립니다. 이 레일에도 각각의 무게와 강도에 따라 정해진 규격이 있어요. T형 주행안내 레일의 규격은 1m당 중량으로 표시되는데, 이는 레일의 강도를 나타내는 중요한 지표가 됩니다. 주로 5m 단위로 제작되어 현장에 설치됩니다.",
+      "visual": "A simplified, clean vector illustration of an elevator car running along a T-shaped guide rail. The guide rail has segments of 5m. Next to the rail, a label indicates 'T형 주행안내 레일' and examples like '13K, 18K, 24K, 30K', with a small icon representing weight (e.g., a balance scale or a weight symbol). A ruler icon indicates '길이 1m당 중량'. Korean text in high quality font.",
+      "exam_point": "레일 제조 단위: 5m. T형 주행안내 레일 규격: K는 길이 1m당 중량을 의미 (예: 13K는 1m당 13kg).",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_3.png",
+      "emoji": " pulley",
+      "title": "미끄러짐 없는 움직임: 권상 도르래와 로프",
+      "content": "엘리베이터를 움직이는 권상 도르래는 로프와의 마찰력을 최대로 활용하여 카를 안전하게 올리고 내립니다. 마치 운동화 밑창이 미끄럼 방지 무늬가 있듯이, 도르래의 로프 홈도 미끄러짐을 방지하기 위해 '언더컷형'으로 설계됩니다. 이 홈의 형태와 로프 직경 대비 도르래 직경 비율은 엘리베이터의 견인 능력과 안전에 매우 중요합니다.",
+      "visual": "A detailed illustration of a traction sheave with an 'undercut' rope groove. Show a cross-section of the groove. An elevator rope is depicted sitting in the groove. On the side, show a ratio 'Sheave Diameter / Rope Diameter' with a '> 40' symbol. Another icon illustrates '높은 마찰력 = 낮은 미끄러짐'. Korean text in high quality font.",
+      "exam_point": "언더컷형 홈 사용 이유: 마찰계수를 높여 미끄러짐 방지. 피치직경과 로프 공칭직경 비율: 로프 가닥수 관계없이 최소 40 이상 (주택용은 30 이상). 미끄러짐 방지 조건: 가속도가 작을수록, 권부각이 클수록, 마찰계수가 클수록.",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_4.png",
+      "emoji": "👤",
+      "title": "엘리베이터의 용도별 기준: 정원과 속도",
+      "content": "엘리베이터는 어떤 목적으로 사용되느냐에 따라 정원과 속도 등 핵심적인 성능 기준이 달라집니다. 예를 들어, 주택용 엘리베이터는 주로 거주자의 편의를 위해 설계되며, 소방구조용 엘리베이터는 비상 상황 시 소방대원의 신속한 활동을 위해 높은 속도 기준을 가집니다. 각 용도에 맞는 정확한 기준을 이해하는 것이 중요합니다.",
+      "visual": "Two distinct panels. Left panel: '주택용 엘리베이터' with an icon of a house and people. A calculation '1인당 75kg' is shown. Right panel: '소방구조용 엘리베이터' with a fire truck/firefighter icon. A speedometer icon shows '> 1 m/s'. Korean text in high quality font.",
+      "exam_point": "주택용 엘리베이터 정원 산출: 1인당 75kg 기준. 소방구조용 엘리베이터 운행속도: 최소 1m/s 이상.",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_5.png",
+      "emoji": "💧",
+      "title": "유압의 힘: 유압식 엘리베이터와 과속조절기",
+      "content": "유압식 엘리베이터는 기름의 압력을 이용해 카를 움직이는 방식입니다. 그중 '직접식'은 카의 바로 아래에 플런저를 연결하여 유압으로 직접 카를 들어 올리죠. 어떤 엘리베이터든 안전은 최우선! 과속조절기는 카가 정해진 속도보다 빠르게 내려갈 때 비상 브레이크를 작동시켜 승객의 안전을 지키는 중요한 장치입니다.",
+      "visual": "A schematic diagram showing a hydraulic elevator 'direct type'. A car is directly on top of a hydraulic cylinder/plunger. Arrows indicate upward/downward movement with fluid. On the side, a section showing different types of overspeed governors (e.g., a 'disk type' or 'fly ball type' simplified icon) with a label '과속조절기 종류'. Korean text in high quality font.",
+      "exam_point": "유압식 엘리베이터 직접식: 카 하부에 램(실린더) 또는 플런저를 직접 설치. 과속조절기 종류: 롤 세이프티형(GR형), 디스크형(GD형), 플라이볼형(GF형).",
+      "svg": ""
+    },
+    {
+      "id": 6,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_6.png",
+      "emoji": "📊",
+      "title": "엘리베이터 운전의 효율: 방식과 배치",
+      "content": "엘리베이터는 건물의 규모와 교통량에 따라 다양한 운전 방식과 배치 전략을 가집니다. '단식 자동운전'은 가장 먼저 눌린 호출에만 응답하는 단순한 방식이죠. 여러 대의 엘리베이터를 건물 중앙에 '집중 배치'하면, 운전 효율이 크게 높아지고 승객의 대기 시간이 줄어들 뿐만 아니라, 설치 공간과 비용 면에서도 유리한 점이 많습니다.",
+      "visual": "Left panel: A simplified flowchart for '단식 자동운전' showing a single request queue and sequential service. 'First in, First served' text. Right panel: A building blueprint with multiple elevator shafts concentrated in one area, labeled '집중 배치'. Advantages like '운전 효율 증가', '대기 시간 단축', '설치 비용 절감' are shown as bullet points with small icons. Korean text in high quality font.",
+      "exam_point": "단식 자동운전: 먼저 등록된 호출에만 응답, 완료 전 다른 호출 미수락. 엘리베이터 집중 배치 효과: 운전 효율 증가, 대기 시간 단축, 설치 비용 절감.",
+      "svg": ""
+    },
+    {
+      "id": 7,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_7.png",
+      "emoji": "📐",
+      "title": "에스컬레이터의 안전한 경사도와 설계",
+      "content": "에스컬레이터는 승객이 서서 이동하는 운반 장치이므로, 안전하고 편안한 탑승을 위해 경사도가 매우 중요합니다. 너무 가파르면 넘어질 위험이 커지죠. 그래서 엄격한 안전 기준에 따라 경사각이 제한되며, 비상시를 대비한 방화셔터 연동 정지 장치와 같은 안전 설계도 필수적으로 고려되어야 합니다.",
+      "visual": "A side view of an escalator with its inclination angle clearly marked as '경사도'. An arrow points to the angle, stating '< 30° (일반)'. A smaller note indicates '6m 이하, 0.5m/s 이하 시 < 35°'. Below, a small diagram shows a fire shutter closing near the escalator, with a 'STOP' icon and '연동 정지 장치' text. Korean text in high quality font.",
+      "exam_point": "에스컬레이터 경사도: 일반적으로 30° 초과 금지. 층고 6m 이하, 공칭속도 0.5m/s 이하 시 35°까지 허용. 안전 설계: 방화셔터 연동 자동 정지 장치(손잡이 반환부 단면에서 2m 이내 설치 시).",
+      "svg": ""
+    },
+    {
+      "id": 8,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_8.png",
+      "emoji": "🚶‍♀️",
+      "title": "무빙워크의 안전 규격: 경사도와 정지 거리",
+      "content": "수평보행기, 즉 무빙워크는 긴 거리를 편안하게 이동시켜주는 장치입니다. 경사가 있는 무빙워크의 경우, 사용자의 안전을 위해 경사각도가 제한됩니다. 또한, 비상시에는 정해진 거리 이내에 멈춰야 하는데, 이 '정지 거리' 또한 중요한 안전 기준입니다. 디딤면의 미끄럼 방지 여부도 경사도 기준에 영향을 미칩니다.",
+      "visual": "A side view of a moving walk (수평보행기). The inclination is marked as '< 12°'. Below, a table or graphic shows '공칭속도 0.75m/s' and '정지거리 0.40m ~ 1.50m'. A separate icon shows a 'comb plate' at the end of the moving walk, with a '❌' over a '디딤판 구성요소 아님' label. Korean text in high quality font.",
+      "exam_point": "무빙워크/수평보행기 경사도: 12° 이하. 디딤면이 미끄럼 방지 구조가 아닌 경우 경사도 12° 이하. 공칭속도 0.75m/s 정지거리: 0.40m ~ 1.50m. 디딤판 구성요소가 아닌 것: 끼임방지 빗(comb).",
+      "svg": ""
+    },
+    {
+      "id": 9,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_9.png",
+      "emoji": "🎯",
+      "title": "정확하고 안전하게: 착상 정확도와 보호난간",
+      "content": "엘리베이터가 승강장에 정확히 멈추는 것은 승객의 안전과 직결됩니다. 카 문턱과 승강장 문턱 사이의 수직 거리를 나타내는 '착상 정확도'는 매우 정밀하게 관리되어야 합니다. 또한, 승강기 유지보수 작업 시 작업자의 추락을 막기 위한 '보호난간'은 높이, 구성, 강도 등 엄격한 안전 기준에 따라 설치되어야 합니다. 이 두 가지는 엘리베이터 안전의 핵심 요소입니다.",
+      "visual": "Left panel: A close-up illustration of an elevator car door and landing door, showing the 'vertical distance' between thresholds. The distance is labeled '착상 정확도 (±10mm 이내)'. Right panel: A diagram of an elevator car roof with a '보호난간' (handrail) at the edge. Labels indicate its height and components (손잡이, 중간 봉). Korean text in high quality font.",
+      "exam_point": "착상 정확도: ±10mm 이내. 보호난간 구성: 손잡이와 1/2 높이 중간 봉. 높이 기준: 수평거리 0.5m 이하 시 0.7m 이상, 0.5m 초과 시 1.1m 이상. 카 지붕 가장자리로부터 0.15m 이내 위치. 수평거리 0.1m 이상 (승강로 부품과). 수직 1,000N 힘에 50mm 초과 변형 없이 견딤.",
+      "svg": ""
+    },
+    {
+      "id": 10,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_10.png",
+      "emoji": "🔄",
+      "title": "스스로 조절하는 힘: 되먹임(피드백) 제어",
+      "content": "자동차의 크루즈 컨트롤처럼, 되먹임(피드백) 제어는 시스템의 출력값을 다시 입력값과 비교하여 오차를 줄이는 방식입니다. 목표와 현재 상태의 차이를 끊임없이 확인하고 조절하는 것이죠. 개루프 제어계와 달리, 폐루프 제어계에만 존재하는 '되먹임 루프'와 이를 위한 '비교 장치'가 핵심이며, 이는 제어의 정확성을 크게 높여줍니다.",
+      "visual": "A simplified block diagram comparing Open-Loop Control vs. Closed-Loop (Feedback) Control. Open-loop has 'Input -> Controller -> Process -> Output'. Closed-loop has 'Input -> Comparator -> Controller -> Process -> Output', with a 'Sensor' providing 'Feedback' from 'Output' back to the 'Comparator'. The 'Comparator' is highlighted as '가장 중요한 장치'. Korean text in high quality font.",
+      "exam_point": "되먹임(피드백) 제어 가장 중요한 장치: 입력과 출력을 비교하는 장치(비교부). 폐루프 제어계에만 있는 구성요소: 되먹임(피드백) 루프, 검출부, 비교부. 특징: 정확성 증가, 발진 경향성.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"20\" y=\"25\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" font-weight=\"bold\">개루프 제어계 (Open-Loop Control)</text><rect x=\"20\" y=\"40\" width=\"60\" height=\"30\" fill=\"#add8e6\" rx=\"5\"/><text x=\"50\" y=\"59\" font-family=\"Arial\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">입력</text><line x1=\"80\" y1=\"55\" x2=\"100\" y2=\"55\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><rect x=\"100\" y=\"40\" width=\"60\" height=\"30\" fill=\"#add8e6\" rx=\"5\"/><text x=\"130\" y=\"59\" font-family=\"Arial\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">제어기</text><line x1=\"160\" y1=\"55\" x2=\"180\" y2=\"55\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><rect x=\"180\" y=\"40\" width=\"60\" height=\"30\" fill=\"#add8e6\" rx=\"5\"/><text x=\"210\" y=\"59\" font-family=\"Arial\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">프로세스</text><line x1=\"240\" y1=\"55\" x2=\"260\" y2=\"55\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><rect x=\"260\" y=\"40\" width=\"60\" height=\"30\" fill=\"#add8e6\" rx=\"5\"/><text x=\"290\" y=\"59\" font-family=\"Arial\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">출력</text><text x=\"20\" y=\"100\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" font-weight=\"bold\">폐루프 제어계 (Closed-Loop Control)</text><rect x=\"20\" y=\"115\" width=\"60\" height=\"30\" fill=\"#87ceeb\" rx=\"5\"/><text x=\"50\" y=\"134\" font-family=\"Arial\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">입력</text><line x1=\"80\" y1=\"130\" x2=\"95\" y2=\"130\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><circle cx=\"100\" cy=\"130\" r=\"5\" fill=\"#add8e6\"/><text x=\"100\" y=\"130\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\">+</text><line x1=\"105\" y1=\"130\" x2=\"120\" y2=\"130\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><rect x=\"120\" y=\"115\" width=\"60\" height=\"30\" fill=\"#87ceeb\" rx=\"5\"/><text x=\"150\" y=\"134\" font-family=\"Arial\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">제어기</text><line x1=\"180\" y1=\"130\" x2=\"200\" y2=\"130\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><rect x=\"200\" y=\"115\" width=\"60\" height=\"30\" fill=\"#87ceeb\" rx=\"5\"/><text x=\"230\" y=\"134\" font-family=\"Arial\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">프로세스</text><line x1=\"260\" y1=\"130\" x2=\"280\" y2=\"130\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><rect x=\"280\" y=\"115\" width=\"60\" height=\"30\" fill=\"#87ceeb\" rx=\"5\"/><text x=\"310\" y=\"134\" font-family=\"Arial\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">출력</text><line x1=\"310\" y1=\"145\" x2=\"310\" y2=\"180\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><rect x=\"280\" y=\"180\" width=\"60\" height=\"30\" fill=\"#90ee90\" rx=\"5\"/><text x=\"310\" y=\"199\" font-family=\"Arial\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">검출부</text><line x1=\"280\" y1=\"195\" x2=\"110\" y2=\"195\" stroke=\"#333\" stroke-width=\"1.5\"/><line x1=\"110\" y1=\"195\" x2=\"110\" y2=\"135\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><circle cx=\"100\" cy=\"130\" r=\"5\" fill=\"#add8e6\"/><text x=\"100\" y=\"145\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\">-</text><text x=\"100\" y=\"170\" font-family=\"Arial\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\" font-weight=\"bold\">비교 장치</text><defs><marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#333\"/></marker></defs></svg>"
+    },
+    {
+      "id": 11,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_11.png",
+      "emoji": "⚙️",
+      "title": "정확한 움직임을 위한: P, PI, D, PID 제어",
+      "content": "제어 시스템은 목표에 도달하기 위해 다양한 방식으로 오차를 조절합니다. P(비례) 제어는 오차에 비례하여 반응하지만, 목표에 완전히 도달하지 못하는 '잔류 편차'를 남길 수 있어요. PI, D, PID 제어는 이러한 단점을 보완하며, 특히 PID 제어는 비례, 적분, 미분 요소를 모두 활용하여 가장 정밀하고 안정적인 제어를 가능하게 합니다.",
+      "visual": "A visual comparison of P, PI, D, PID control actions on a graph showing 'Output' vs 'Time' tracking a 'Set Point'. P control shows an offset (잔류 편차). D control shows quick response to change. PI control removes offset but can be slow. PID control shows fast, accurate, stable response. Text labels 'P제어: 잔류편차, 간헐현상', 'I제어: 잔류편차 제거', 'D제어: 빠른 반응', 'PID제어: 정밀 제어' are associated with their respective curves. Korean text in high quality font.",
+      "exam_point": "P(비례) 제어: 잔류편차 발생, 간헐현상 특징. PI(비례+적분) 제어: 잔류편차 제거(적분), 반응속도 느림. D(미분) 제어: 오차 변화율에 반응, 빠른 안정화. PID 제어: P+I+D 결합, 가장 안정적이고 정확한 제어.",
+      "svg": ""
+    },
+    {
+      "id": 12,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_12.png",
+      "emoji": "🧮",
+      "title": "논리 회로의 지름길: 불 대수식 간소화",
+      "content": "논리 회로를 설계할 때는 복잡한 논리식을 최대한 간단하게 만드는 것이 중요합니다. 마치 긴 문장을 짧고 명확하게 줄이듯이, 불 대수식도 간소화 법칙을 활용하여 효율적으로 표현할 수 있습니다. 이를 통해 더 적은 부품으로 회로를 만들고, 시스템의 성능을 향상시킬 수 있습니다.",
+      "visual": "Two examples of Boolean algebra simplification. First: 'Y = ABC + AC' simplified to 'AC(B+1) = AC * 1 = AC'. Second: 'A + ĀB' simplified to 'A + B'. Use clear mathematical notation with arrows showing the simplification steps. Korean text in high quality font: '불 대수식 간소화'.",
+      "exam_point": "불 대수식 간소화: $ABC + AC = AC(B+1) = AC$. $A + \\overline{A} \\cdot B = A + B$. (불 대수 법칙: $B+1=1$, $A+A = A$, $A \\cdot 1 = A$, $A+\\overline{A}=1$).",
+      "svg": ""
+    },
+    {
+      "id": 13,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_13.png",
+      "emoji": "🔌",
+      "title": "논리 게이트의 변신: 드모르간 법칙",
+      "content": "논리 게이트는 컴퓨터와 같은 디지털 시스템의 기본적인 구성 요소입니다. 특정 그림의 논리 기호는 NAND 게이트를 나타내며, 이는 두 입력값이 모두 '참'일 때만 '거짓'을 출력하는 게이트입니다. 드모르간 법칙은 이러한 논리식을 다른 형태로 바꾸어 표현할 수 있게 해주며, 회로를 분석하거나 설계할 때 매우 유용하게 사용됩니다.",
+      "visual": "A clear diagram of a NAND gate symbol (AND gate with a bubble at the output). Below it, the logical expression 'X = ĀB̄' (incorrect, should be A·B with bar over it, or Ā+B̄) and its equivalent using De Morgan's Law: 'X = Ā + B̄' (negative OR gate symbol). Show the original NAND gate: AND symbol with a circle at the output, with inputs A and B. Show the equivalent negative OR gate: OR symbol with circles at inputs A and B. Korean text in high quality font: 'NAND 게이트', '드모르간 법칙'.",
+      "exam_point": "NAND 게이트 논리식: $\\overline{A \\cdot B}$. 드모르간 법칙: $\\overline{A \\cdot B} = \\overline{A} + \\overline{B}$ (NAND는 negative OR과 같음). $\\overline{A+B} = \\overline{A} \\cdot \\overline{B}$ (NOR는 negative AND와 같음).",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"20\" y=\"25\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" font-weight=\"bold\">NAND 게이트</text><path d=\"M50 60 L80 60 A30 30 0 0 1 80 100 L50 100 Z\" fill=\"#a8dadc\" stroke=\"#333\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"70\" x2=\"50\" y2=\"70\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><line x1=\"20\" y1=\"90\" x2=\"50\" y2=\"90\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><circle cx=\"90\" cy=\"80\" r=\"5\" fill=\"#333\" stroke=\"#333\" stroke-width=\"1.5\"/><line x1=\"95\" y1=\"80\" x2=\"120\" y2=\"80\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><text x=\"10\" y=\"73\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\">A</text><text x=\"10\" y=\"93\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\">B</text><text x=\"130\" y=\"83\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\">$\\overline{A \\cdot B}$</text><text x=\"20\" y=\"140\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" font-weight=\"bold\">드모르간 법칙 (De Morgan's Law)</text><text x=\"20\" y=\"165\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\">$\\overline{A \\cdot B} = \\overline{A} + \\overline{B}$</text><text x=\"20\" y=\"185\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\">$\\overline{A+B} = \\overline{A} \\cdot \\overline{B}$</text><text x=\"20\" y=\"215\" font-family=\"Arial\" font-size=\"10\" fill=\"#333\">(NAND 게이트는 negative OR과 같음)</text><text x=\"20\" y=\"230\" font-family=\"Arial\" font-size=\"10\" fill=\"#333\">(NOR 게이트는 negative AND와 같음)</text><path d=\"M230 160 C230 150, 240 140, 250 140 S270 150, 270 160 C270 170, 260 180, 250 180 S230 170, 230 160 Z\" fill=\"#a8dadc\" stroke=\"#333\" stroke-width=\"1.5\"/><line x1=\"210\" y1=\"150\" x2=\"230\" y2=\"150\" stroke=\"#333\" stroke-width=\"1.5\"/><circle cx=\"220\" cy=\"150\" r=\"5\" fill=\"#333\" stroke=\"#333\" stroke-width=\"1.5\"/><line x1=\"210\" y1=\"170\" x2=\"230\" y2=\"170\" stroke=\"#333\" stroke-width=\"1.5\"/><circle cx=\"220\" cy=\"170\" r=\"5\" fill=\"#333\" stroke=\"#333\" stroke-width=\"1.5\"/><line x1=\"270\" y1=\"160\" x2=\"290\" y2=\"160\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><text x=\"300\" y=\"163\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\">$\\overline{A} + \\overline{B}$</text><defs><marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#333\"/></marker></defs></svg>"
+    },
+    {
+      "id": 14,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_14.png",
+      "emoji": "🅿️",
+      "title": "좁은 공간의 해결사: 기계식 주차 설비",
+      "content": "도심의 한정된 공간에서 더 많은 차량을 주차하기 위해 기계식 주차 설비가 활용됩니다. 다양한 종류가 있지만, 그중 '2단식 주차장치'는 상하 2단으로 차량을 배치하고, 하단 운반기를 이동시켜 상단 차량을 출고하는 방식입니다. 이처럼 주차 공간을 입체적으로 활용하여 효율성을 높이는 것이 기계식 주차 장치의 핵심입니다.",
+      "visual": "A simplified 3D illustration of a '2단식 주차장치' (two-level parking system). Two cars are shown, one on an upper platform, one on a lower. Arrows indicate the lower platform moving horizontally to allow the upper platform to descend for car retrieval. Labels for '상단 운반기' and '하단 운반기' are clearly visible. Korean text in high quality font.",
+      "exam_point": "2단식 주차장치: 주차구획 2단 배치, 하단 운반기 수평 이동으로 상단 운반기 하강 출고. 기계식 주차장치 종류: 2단식(승강식, 승강횡행식), 수평순환식, 수직순환식, 다층순환식.",
+      "svg": ""
+    },
+    {
+      "id": 15,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_15.png",
+      "emoji": "📏",
+      "title": "정밀한 측정: 다이얼 게이지 보관 및 취급",
+      "content": "다이얼 게이지는 아주 미세한 길이 변화나 흔들림을 측정하는 정밀 기구입니다. 마치 섬세한 시계를 다루듯이, 조심스럽게 다루고 보관해야 정확한 측정을 유지할 수 있어요. 충격이나 진동은 물론, 온도 변화나 습기, 먼지 등에도 취약하므로 항상 청결하고 안전한 곳에 보관하는 것이 중요합니다.",
+      "visual": "An illustration of a dial gauge. Around it, several icons represent good and bad practices: a 'drop' icon with a '🚫' for no shock/vibration; a 'thermometer' icon for stable temperature; a 'water droplet' icon with a '🚫' for no moisture; a 'clean cloth' icon for cleaning; a 'case' icon for proper storage. Korean text in high quality font: '다이얼 게이지 보관 및 취급 주의사항'.",
+      "exam_point": "다이얼 게이지 보관 및 취급 주의사항: 충격 및 진동 금지, 청결 유지, 적정 온도/습도 유지, 전용 케이스 보관, 측정 범위 내 사용.",
+      "svg": ""
+    },
+    {
+      "id": 16,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_13_slide_16.png",
+      "emoji": "🌬️",
+      "title": "압력과 힘의 원리: 진공 펌프와 활차 장치",
+      "content": "우리가 일상생활에서 사용하는 많은 기계들은 압력이나 힘의 원리를 이용합니다. 진공 펌프는 용기 안의 공기를 외부로 빼내어 대기압보다 낮은 '진공 상태'를 만드는 장치입니다. 반면 활차 장치, 즉 도르래는 무거운 물건을 들어 올릴 때 힘의 방향을 바꾸어 주거나 힘을 증폭시켜 작업을 훨씬 편리하게 만들어 줍니다.",
+      "visual": "Left panel: A simplified diagram of a 'vacuum pump' extracting air from a sealed container, with arrows showing air being pulled out and a 'low pressure' label inside the container. Right panel: An illustration of a 'fixed pulley system' (고정 도르래). A weight 'W' is attached to one end of a rope, and a force 'P' is applied to the other end. An arrow shows that the force direction is changed. Text indicates 'P=W (힘의 방향 전환)'. Korean text in high quality font.",
+      "exam_point": "진공 펌프: 용기 내 압력을 대기압 이하로 유지하기 위해 기체를 배출하는 장치. 활차 장치(고정 도르래): 힘에 이득은 없으나 힘의 방향을 바꿀 수 있음.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"20\" y=\"25\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" font-weight=\"bold\">진공 펌프 (Vacuum Pump)</text><rect x=\"20\" y=\"40\" width=\"150\" height=\"80\" rx=\"10\" fill=\"#e0f7fa\" stroke=\"#333\" stroke-width=\"1.5\"/><circle cx=\"95\" cy=\"80\" r=\"20\" fill=\"#add8e6\"/><path d=\"M95 60 L95 40 M95 40 C110 40, 110 50, 95 50\" stroke=\"#333\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M95 60 L120 40 M95 60 L120 80\" stroke=\"#333\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M95 100 L95 120 M95 120 C110 120, 110 110, 95 110\" stroke=\"#333\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M95 100 L120 120 M95 100 L120 80\" stroke=\"#333\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95\" y=\"100\" font-family=\"Arial\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">펌프</text><path d=\"M170 80 L190 80\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><text x=\"95\" y=\"60\" font-family=\"Arial\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">저압</text><text x=\"195\" y=\"75\" font-family=\"Arial\" font-size=\"10\" fill=\"#333\">기체 배출</text><text x=\"20\" y=\"150\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" font-weight=\"bold\">활차 장치 (고정 도르래)</text><circle cx=\"270\" cy=\"170\" r=\"30\" fill=\"#add8e6\" stroke=\"#333\" stroke-width=\"1.5\"/><circle cx=\"270\" cy=\"170\" r=\"5\" fill=\"#333\"/><line x1=\"270\" y1=\"140\" x2=\"270\" y2=\"110\" stroke=\"#333\" stroke-width=\"1.5\"/><rect x=\"260\" y=\"90\" width=\"20\" height=\"20\" fill=\"#778899\" stroke=\"#333\" stroke-width=\"1.5\"/><path d=\"M240 170 A30 30 0 0 0 270 200 L270 230\" stroke=\"#333\" stroke-width=\"1.5\"/><rect x=\"230\" y=\"230\" width=\"20\" height=\"20\" fill=\"#ffb3b3\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"240\" y=\"245\" font-family=\"Arial\" font-size=\"10\" fill=\"#333\">W</text><path d=\"M300 170 A30 30 0 0 1 270 140 L270 110\" stroke=\"#333\" stroke-width=\"1.5\"/><path d=\"M300 170 L300 230\" stroke=\"#333\" stroke-width=\"1.5\"/><path d=\"M300 230 L320 230\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><text x=\"305\" y=\"245\" font-family=\"Arial\" font-size=\"10\" fill=\"#333\">P</text><text x=\"270\" y=\"200\" font-family=\"Arial\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">P = W</text><text x=\"270\" y=\"215\" font-family=\"Arial\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">(힘의 방향 전환)</text><defs><marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#333\"/></marker></defs></svg>"
+    }
+  ]
+}

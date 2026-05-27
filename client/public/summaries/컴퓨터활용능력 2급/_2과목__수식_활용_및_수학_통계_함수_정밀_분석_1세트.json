@@ -1,0 +1,205 @@
+{
+  "subject": "컴퓨터활용능력 2급",
+  "unit": "[2과목] 수식 활용 및 수학/통계 함수 정밀 분석",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_1.png",
+      "emoji": "📊",
+      "title": "시나리오 요약 보고서: 정적 데이터의 이해",
+      "content": "시나리오 요약 보고서는 다양한 가상 상황을 설정하여 결과값의 변화를 예측하는 분석 도구예요. 하지만 한 번 생성된 보고서는 작성 시점의 데이터를 고정하여 보여주는 '정적(Static)'인 결과물입니다. 따라서 원본 데이터나 시나리오 관리자에서 값을 수정하더라도 요약 보고서에 자동으로 반영되지 않아요. 변경된 내용을 확인하고 싶다면 보고서를 꼭 다시 생성해야 합니다.",
+      "visual": "A diagram showing a spreadsheet on the left with changing input values (e.g., '노트북 판매량'). On the right, a 'Scenario Summary Report' with static numbers. A large red 'X' or '🚫' over an arrow attempting to automatically update the report. Highlight Korean text '시나리오 요약 보고서', '정적', '자동 반영 안 됨'. Use clean, modern icons for a spreadsheet and a report.",
+      "exam_point": "시나리오 요약 보고서는 '정적(Static)' 결과물. 원본 데이터 변경 시 '자동 반영 안 됨', 반드시 '다시 생성'. 피벗 테이블과 함께 '자동 업데이트(계산)된다'는 오답 지문 주의!",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_2.png",
+      "emoji": "🎯",
+      "title": "목표값 찾기: 결과로 원인을 역추적",
+      "content": "목표값 찾기는 수식의 '결과값(목표)'은 알고 있지만, 그 결과를 만들기 위해 필요한 '입력값(원인)'을 모를 때 사용하는 '역산' 기능이에요. 마치 탐정이 결과를 보고 원인을 추리하는 것과 같아요. 대화상자의 '수식 셀'에는 반드시 수식이 있어야 하고, '값을 바꿀 셀'은 수식이 없는 일반 숫자(상수)여야 합니다. '찾는 값'에는 목표로 하는 숫자를 직접 입력하며, 셀 주소를 넣을 수 없어요.",
+      "visual": "A clear, intuitive flowchart for '목표값 찾기'. Start with a '수식 셀 (결과)' rectangle, an arrow pointing to a '찾는 값 (목표 숫자)' rectangle. Another arrow pointing from '찾는 값' to '값을 바꿀 셀 (원인 숫자)' rectangle. Use question marks to emphasize finding the unknown. Label these rectangles with Korean text '수식 셀 (예: 평균)', '찾는 값 (예: 40)', '값을 바꿀 셀 (예: 판매량)'. Emphasize the flow of '결과 → 원인'.",
+      "exam_point": "목표값 찾기 = '역산' 기능. '수식 셀'은 수식 필수, '값을 바꿀 셀'은 상수 필수. '찾는 값'은 반드시 상수(숫자) 직접 입력. 바꿀 수 있는 입력값은 '1개'만 가능. '수·찾·바' 순서 기억!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"30\" y=\"30\" width=\"100\" height=\"50\" rx=\"10\" fill=\"#e0f2f7\" stroke=\"#81d4fa\" stroke-width=\"2\"/><text x=\"80\" y=\"58\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#263238\">수식 셀</text><path d=\"M135 55 H165 L155 45 M165 55 L155 65\" fill=\"none\" stroke=\"#607d8b\" stroke-width=\"2\"/><rect x=\"170\" y=\"30\" width=\"100\" height=\"50\" rx=\"10\" fill=\"#e0f2f7\" stroke=\"#81d4fa\" stroke-width=\"2\"/><text x=\"220\" y=\"58\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#263238\">찾는 값</text><path d=\"M275 55 H305 L295 45 M305 55 L295 65\" fill=\"none\" stroke=\"#607d8b\" stroke-width=\"2\"/><rect x=\"310\" y=\"30\" width=\"100\" height=\"50\" rx=\"10\" fill=\"#e0f2f7\" stroke=\"#81d4fa\" stroke-width=\"2\"/><text x=\"360\" y=\"58\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#263238\">값을 바꿀 셀</text><text x=\"220\" y=\"110\" font-family=\"Arial\" font-size=\"16\" text-anchor=\"middle\" fill=\"#3f51b5\">\"결과(수식)를 위해 원인(입력값)은?\"</text><path d=\"M200 120 V140\" stroke=\"#3f51b5\" stroke-width=\"2\" marker-end=\"url(#arrowhead)\"/><defs><marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#3f51b5\"/></marker></defs><text x=\"200\" y=\"160\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#424242\">수식 셀: 계산된 결과 (예: 평균 E4)</text><text x=\"200\" y=\"180\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#424242\">찾는 값: 목표로 하는 숫자 (예: 40)</text><text x=\"200\" y=\"200\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#424242\">값을 바꿀 셀: 조정할 입력값 (예: 노트북 판매량 B4)</text></svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_3.png",
+      "emoji": "🤖",
+      "title": "매크로의 마법: 자동화와 이름 규칙",
+      "content": "매크로는 자주 반복하는 여러 단계의 작업 과정을 기록하여 클릭 한 번으로 똑같이 재현하는 '작업 자동화' 기능이에요. 엑셀에 내장된 VBA(Visual Basic for Applications) 언어로 작동하며, 한번 만든 매크로는 언제든지 삭제하거나 편집할 수 있습니다. 매크로 이름은 반드시 문자나 밑줄(_)로 시작해야 하고, 공백(띄어쓰기)은 절대 포함할 수 없어요. 'A1'처럼 셀 주소와 혼동될 수 있는 이름도 사용할 수 없습니다.",
+      "visual": "A diagram illustrating the macro recording process. On the left, an icon of a 'play' button or 'record' button. An arrow pointing to a 'VBA Code' icon, then to a 'Macro Name' text box. Below the Macro Name, show examples of allowed names (e.g., 'My_Macro', '작업자동화') and disallowed names (e.g., 'My Macro', '1stMacro', 'A1') with red 'X's. Emphasize 'Korean text in high quality font' for labels.",
+      "exam_point": "'작업 자동화', 'VBA 내장', '언제든 삭제/편집 가능'. 매크로 이름 규칙: '문자 또는 밑줄(_)로 시작', '공백(띄어쓰기) 금지', '숫자로 시작 금지', '셀 주소 형식(A1) 금지'.",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_4.png",
+      "emoji": "⚡",
+      "title": "매크로 실행: 단축키와 개체 활용법",
+      "content": "매크로는 다양한 방법으로 실행할 수 있어요. [개발 도구] 탭의 [매크로] 대화상자([Alt]+[F8])를 통해서 실행하거나, 빠른 실행 도구 모음에 아이콘을 추가하여 실행할 수 있습니다. 또한, 도형, 그림, 단추 같은 '개체'에 매크로를 연결하여 클릭으로 실행하는 것도 가능해요. 하지만 일반 '셀'에는 매크로를 직접 지정할 수 없습니다. 매크로 바로 가기 키는 [Ctrl]과 영문자 조합으로만 가능하며, [Alt] 키는 사용할 수 없어요.",
+      "visual": "A visual representation of macro execution methods. Show icons for: 1. Keyboard (Ctrl+Key combination). 2. A button/shape on a spreadsheet. 3. A menu bar with '개발 도구' tab highlighted. 4. A red 'X' over a cell with a mouse cursor trying to assign a macro. Highlight 'Ctrl + A' and 'Alt + F8'. Include Korean text for '개발 도구', '바로 가기 키', '개체 지정', '셀 지정 불가'.",
+      "exam_point": "매크로 실행 방법: [Alt]+[F8] 대화상자, 빠른 실행 도구 모음, '그래픽 개체(도형, 그림, 단추) 연결'. '일반 셀에는 매크로 직접 지정 불가'. 바로 가기 키는 'Ctrl' + 영문자 조합만 가능, 'Alt' 키 불가. 기존 엑셀 단축키와 겹치면 매크로가 '우선' 실행.",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_5.png",
+      "emoji": "➕",
+      "title": "수학/정보 함수: POWER, MOD, COLUMN, TRUNC",
+      "content": "이 함수들은 엑셀의 계산력을 높여주는 도구들입니다. `POWER(숫자, 지수)`는 숫자를 '지수'만큼 거듭제곱해요. `MOD(숫자, 나눌_수)`는 나눗셈의 '나머지'를 구해줍니다. `COLUMN(셀)`은 해당 셀이 몇 번째 '열'에 있는지 숫자로 반환하고, `TRUNC(숫자)`는 소수점 아래를 '버리고' 정수 부분만 남겨요. `TRUNC`는 양수일 때 `INT`와 같지만, 음수에서는 다른 결과를 준다는 점을 꼭 기억하세요.",
+      "visual": "Illustrate each function with simple icons or examples. POWER: A small '2^3 = 8' or a lightning bolt. MOD: Two numbers with a remainder shown (e.g., 9 ÷ 2 = 4 R 1). COLUMN: A spreadsheet column 'C' highlighting number '3'. TRUNC: A number '8.73' with '.73' being cut off, resulting in '8'. Show TRUNC(-3.5) = -3 and INT(-3.5) = -4 visually contrasting. Korean labels for function names.",
+      "exam_point": "`POWER(5, 3)` → `125` (5*3=15 아님!). `MOD(9, 2)` → `1`. `COLUMN(C5)` → `3`. `TRUNC(8.73)` → `8`. `TRUNC`와 `INT`의 '음수 처리 차이' 주의 (`TRUNC(-3.5)` → `-3`, `INT(-3.5)` → `-4`).",
+      "svg": ""
+    },
+    {
+      "id": 6,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_6.png",
+      "emoji": "✂️",
+      "title": "정밀한 숫자/텍스트 처리: ROUND, LEFT, MID, TRUNC",
+      "content": "`ROUND(숫자, 자릿수)` 함수는 지정한 자릿수에서 숫자를 '반올림'해줘요. 예를 들어 자릿수가 1이면 소수점 둘째 자리에서 반올림하여 첫째 자리까지 표시합니다. `LEFT(텍스트, 개수)`는 텍스트의 '왼쪽'에서, `MID(텍스트, 시작위치, 개수)`는 지정한 '중간 위치'에서 원하는 글자 수만큼 추출합니다. `TRUNC(숫자)`는 소수점 이하를 '무조건 버리는' 함수입니다. 공백도 한 글자로 취급하는 것을 잊지 마세요!",
+      "visual": "Show examples for each function. ROUND: '12.34' with a pointer to '4' saying '버림 (Drop)', result '12.3'. LEFT: 'KOREA' with 'KO' highlighted. MID: '대한상공회의소' with '상공' highlighted (starting from 3rd char). TRUNC: '-8.6' with '.6' cut, resulting in '-8'. Use clear, simple diagrams. Korean labels for functions.",
+      "exam_point": "`ROUND(12.34, 1)` → `12.3` (4는 버림). `LEFT(\"KOREA\", 2)` → `\"KO\"`. `MID(\"대한상공회의소\", 3, 2)` → `\"상공\"`. `TRUNC(-8.6)` → `-8`. `ROUND` 계열 3형제(ROUND, ROUNDUP, ROUNDDOWN) 기능 차이. `MID` 함수의 '시작위치'는 1부터 시작.",
+      "svg": ""
+    },
+    {
+      "id": 7,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_7.png",
+      "emoji": "⬆️",
+      "title": "ROUND 계열 함수: 반올림, 올림, 내림의 차이",
+      "content": "`ROUND(숫자, 자릿수)`는 가장 일반적인 '반올림'을 수행해요 (0~4는 버리고, 5~9는 올림). `ROUNDUP(숫자, 자릿수)`은 소수점 이하를 '무조건 올림'하며, `ROUNDDOWN(숫자, 자릿수)`은 소수점 이하를 '무조건 내림(절사)'합니다. `LEFT(텍스트, 개수)`는 숫자를 대상으로 해도 결과는 '문자' 형식으로 추출합니다. 자릿수 인수가 양수면 소수점 아래, 0이면 정수, 음수면 소수점 위를 의미해요.",
+      "visual": "A table comparing ROUND, ROUNDUP, ROUNDDOWN for '123.654' with '2' decimal places. Show how '123.65', '123.66', '123.65' are derived. Briefly illustrate LEFT('123.654', 6) -> '123.65'. Use different colored arrows or icons for up, down, and round. Korean function names and results.",
+      "exam_point": "`ROUND(123.654, 2)` → `123.65`. `ROUNDUP(123.654, 2)` → `123.66`. `ROUNDDOWN(123.654, 2)` → `123.65`. `LEFT` 함수는 숫자를 텍스트로 처리. ROUND 계열 '자릿수' 인수: '양수(소수점 아래)', '0(정수)', '음수(소수점 위)'의 의미.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"200\" y=\"25\" font-family=\"Arial\" font-size=\"16\" text-anchor=\"middle\" fill=\"#3f51b5\">ROUND 계열 함수 비교 (대상: 123.654, 자릿수: 2)</text><rect x=\"40\" y=\"50\" width=\"100\" height=\"40\" fill=\"#e0f7fa\" stroke=\"#00bcd4\" stroke-width=\"1\"/><text x=\"90\" y=\"75\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#263238\">ROUND</text><rect x=\"40\" y=\"95\" width=\"100\" height=\"40\" fill=\"#e0f7fa\" stroke=\"#00bcd4\" stroke-width=\"1\"/><text x=\"90\" y=\"120\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#263238\">ROUNDUP</text><rect x=\"40\" y=\"140\" width=\"100\" height=\"40\" fill=\"#e0f7fa\" stroke=\"#00bcd4\" stroke-width=\"1\"/><text x=\"90\" y=\"165\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#263238\">ROUNDDOWN</text><rect x=\"150\" y=\"50\" width=\"100\" height=\"40\" fill=\"#f0f4c3\" stroke=\"#cddc39\" stroke-width=\"1\"/><text x=\"200\" y=\"75\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#263238\">123.65</text><rect x=\"150\" y=\"95\" width=\"100\" height=\"40\" fill=\"#fff9c4\" stroke=\"#ffeb3b\" stroke-width=\"1\"/><text x=\"200\" y=\"120\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#263238\">123.66</text><rect x=\"150\" y=\"140\" width=\"100\" height=\"40\" fill=\"#f0f4c3\" stroke=\"#cddc39\" stroke-width=\"1\"/><text x=\"200\" y=\"165\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#263238\">123.65</text><text x=\"200\" y=\"200\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#424242\">LEFT(123.654, 6) → \"123.65\" (텍스트)</text><text x=\"200\" y=\"220\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#616161\">*소수점도 1글자로 계산, 결과는 문자열</text></svg>"
+    },
+    {
+      "id": 8,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_8.png",
+      "emoji": "➖",
+      "title": "정수화 함수 심층 분석: INT, TRUNC, ROUNDDOWN",
+      "content": "`DAVERAGE`는 조건에 맞는 데이터의 평균을 구해주는 데이터베이스 함수예요. 이렇게 구해진 실수 값을 정수로 만들 때, `INT`는 자신보다 작거나 같은 가장 가까운 정수로 내림 합니다. `TRUNC`와 `ROUNDDOWN(숫자, 0)`은 소수점 아래를 단순히 잘라 버려요. 양수일 때는 이 세 함수가 모두 같은 결과를 주지만, 음수일 때는 `INT`가 다른 결과를 내므로 이 차이점을 반드시 기억해야 합니다.",
+      "visual": "A diagram contrasting INT, TRUNC, ROUNDDOWN(0). Show a positive number (e.g., 12.66) going through each, all yielding 12. Then show a negative number (e.g., -12.6) going through each, with INT yielding -13 and TRUNC/ROUNDDOWN yielding -12. Highlight the difference. Use Korean function names.",
+      "exam_point": "양수일 때 `INT`, `TRUNC`, `ROUNDDOWN(0)`은 결과가 '동일'. **음수 처리 차이**: `INT(-12.6)` → `-13`, `TRUNC(-12.6)` → `-12`. `DAVERAGE`는 데이터베이스 함수.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"200\" y=\"25\" font-family=\"Arial\" font-size=\"16\" text-anchor=\"middle\" fill=\"#3f51b5\">정수화 함수 비교: INT vs TRUNC vs ROUNDDOWN(0)</text><text x=\"200\" y=\"45\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#616161\">(DAVERAGE 결과 예: 12.666...)</text><rect x=\"40\" y=\"60\" width=\"320\" height=\"70\" rx=\"10\" fill=\"#e8f5e9\" stroke=\"#a5d6a7\" stroke-width=\"1\"/><text x=\"80\" y=\"85\" font-family=\"Arial\" font-size=\"14\" fill=\"#2e7d32\">=INT(12.66...)</text><text x=\"100\" y=\"110\" font-family=\"Arial\" font-size=\"14\" fill=\"#2e7d32\">=TRUNC(12.66...)</text><text x=\"120\" y=\"98\" font-family=\"Arial\" font-size=\"14\" fill=\"#2e7d32\">→ 12</text><text x=\"220\" y=\"85\" font-family=\"Arial\" font-size=\"14\" fill=\"#2e7d32\">=ROUNDDOWN(12.66..., 0)</text><text x=\"240\" y=\"110\" font-family=\"Arial\" font-size=\"14\" fill=\"#2e7d32\">=ROUND(12.66..., 0)</text><text x=\"260\" y=\"98\" font-family=\"Arial\" font-size=\"14\" fill=\"#d32f2f\">→ 13</text><rect x=\"40\" y=\"140\" width=\"320\" height=\"70\" rx=\"10\" fill=\"#ffe0b2\" stroke=\"#ffb74d\" stroke-width=\"1\"/><text x=\"80\" y=\"165\" font-family=\"Arial\" font-size=\"14\" fill=\"#e65100\">=INT(-12.6)</text><text x=\"100\" y=\"190\" font-family=\"Arial\" font-size=\"14\" fill=\"#e65100\">→ -13</text><text x=\"220\" y=\"165\" font-family=\"Arial\" font-size=\"14\" fill=\"#e65100\">=TRUNC(-12.6)</text><text x=\"240\" y=\"190\" font-family=\"Arial\" font-size=\"14\" fill=\"#e65100\">=ROUNDDOWN(-12.6, 0)</text><text x=\"260\" y=\"178\" font-family=\"Arial\" font-size=\"14\" fill=\"#e65100\">→ -12</text><text x=\"200\" y=\"225\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#424242\">*양수일 때는 모두 같지만, 음수일 때 INT와 TRUNC는 다릅니다!</text></svg>"
+    },
+    {
+      "id": 9,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_9.png",
+      "emoji": "🧅",
+      "title": "중첩 텍스트 함수: 양파 껍질 벗기기 (LOWER, MID, LEFT)",
+      "content": "여러 함수가 중첩된 수식은 양파 껍질을 까듯이 가장 안쪽 괄호부터 순서대로 계산해야 해요. 먼저 `LOWER(\"GOOD MORNING\")`처럼 모든 대문자를 소문자로 바꾸는 작업부터 시작합니다. 그 다음 `MID(텍스트, 시작위치, 개수)` 함수를 사용해 원하는 부분의 텍스트를 추출하는데, 이때 **공백(Space)도 하나의 글자로 세어야** 정확한 결과를 얻을 수 있어요. 마지막으로 `LEFT` 함수로 최종 문자열의 왼쪽에서 다시 원하는 개수만큼 가져옵니다.",
+      "visual": "A visual step-by-step breakdown of the nested function. Start with 'GOOD MORNING'. Step 1: LOWER -> 'good morning'. Step 2: MID(..., 3, 6) -> 'od mor' (highlighting 'o', 'd', ' ', 'm', 'o', 'r'). Step 3: LEFT(..., 2) -> 'od'. Use clear arrows and labels for each step. Emphasize 'Korean text in high quality font'.",
+      "exam_point": "중첩 함수는 '가장 안쪽 괄호'부터 계산. '공백(Space)도 한 글자'로 취급. `LOWER` (소문자), `UPPER` (대문자), `PROPER` (첫 글자 대문자)는 세트. `MID(텍스트, 시작위치, 개수)`에서 '시작위치'는 1부터 시작.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"200\" y=\"25\" font-family=\"Arial\" font-size=\"16\" text-anchor=\"middle\" fill=\"#3f51b5\">수식: =LEFT(MID(LOWER(\"GOOD MORNING\"), 3, 6), 2)</text><text x=\"30\" y=\"60\" font-family=\"Arial\" font-size=\"14\" fill=\"#424242\">1. LOWER(\"GOOD MORNING\")</text><path d=\"M200 70 V90\" stroke=\"#607d8b\" stroke-width=\"2\" marker-end=\"url(#arrowhead_small)\"/><text x=\"200\" y=\"98\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#e91e63\">→ \"good morning\"</text><text x=\"30\" y=\"130\" font-family=\"Arial\" font-size=\"14\" fill=\"#424242\">2. MID(\"good morning\", 3, 6)</text><path d=\"M200 140 V160\" stroke=\"#607d8b\" stroke-width=\"2\" marker-end=\"url(#arrowhead_small)\"/><text x=\"200\" y=\"168\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#e91e63\">→ \"od mor\"</text><text x=\"30\" y=\"200\" font-family=\"Arial\" font-size=\"14\" fill=\"#424242\">3. LEFT(\"od mor\", 2)</text><path d=\"M200 210 V230\" stroke=\"#607d8b\" stroke-width=\"2\" marker-end=\"url(#arrowhead_small)\"/><text x=\"200\" y=\"238\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#e91e63\">→ \"od\"</text><defs><marker id=\"arrowhead_small\" markerWidth=\"8\" markerHeight=\"5\" refX=\"0\" refY=\"2.5\" orient=\"auto\"><polygon points=\"0 0, 8 2.5, 0 5\" fill=\"#607d8b\"/></marker></defs></svg>"
+    },
+    {
+      "id": 10,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_10.png",
+      "emoji": "🧐",
+      "title": "텍스트 함수 중첩: 공백도 한 글자!",
+      "content": "이 문제는 `LEFT`, `RIGHT`, `MID` 함수가 중첩되었을 때 결과값을 정확히 예측하는 능력을 묻습니다. 엑셀의 문자열 함수에서는 **공백(Space)도 하나의 엄연한 글자로 취급**하여 계산해야 해요. 여러 함수가 겹쳐 있다면 가장 안쪽 함수부터 차례대로 풀어나가면서 각 단계의 결과값을 메모하는 것이 실수를 방지하는 좋은 방법입니다. `MID` 함수의 '시작위치'는 항상 1부터 시작한다는 점도 잊지 마세요.",
+      "visual": "A visual step-by-step example for one of the complex text function nesting (e.g., =RIGHT(MID(\"Sound of Music\", 5, 6), 3)). Step 1: MID(\"Sound of Music\", 5, 6) -> \"d of M\". Step 2: RIGHT(\"d of M\", 3) -> \"f M\". Emphasize the spaces in the text. Highlight '공백 = 1글자'. Korean text for functions and results.",
+      "exam_point": "중첩 함수는 '안에서 밖으로' 계산. '공백도 한 글자'로 취급. `LEFT(텍스트, 개수)`, `RIGHT(텍스트, 개수)`, `MID(텍스트, 시작위치, 개수)`의 정확한 인수 사용법 암기. `MID` '시작위치'는 1부터.",
+      "svg": ""
+    },
+    {
+      "id": 11,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_11.png",
+      "emoji": "🚻",
+      "title": "주민등록번호 성별 판별: MID & CHOOSE/IF",
+      "content": "주민등록번호에서 성별을 추출하는 문제는 컴활 시험에 자주 출제되는 유형이에요. `MID(텍스트, 시작위치, 개수)` 함수를 사용해 주민등록번호의 8번째 글자(성별 구분 숫자)를 정확히 추출하는 것이 첫 단계입니다. 추출된 숫자를 `CHOOSE` 함수의 인덱스 번호로 사용하여 1이면 \"남\", 2이면 \"여\"를 선택하게 할 수 있어요. 또는 `IF` 함수와 비교 연산자를 활용하여 성별을 판별할 수도 있습니다.",
+      "visual": "A diagram showing a 주민등록번호 string (e.g., '851010-1234567'). Highlight the 8th character '1'. An arrow pointing from '1' to a 'MID(A1, 8, 1)' function box. Then arrows pointing to two options: CHOOSE(..., '남', '여') -> '남' or IF(..., '남', '여') -> '남'. Use Korean labels. Illustrate the selection logic.",
+      "exam_point": "`MID(셀, 8, 1)`로 8번째 문자 1개 추출. `CHOOSE(MID(A1,8,1), \"남\", \"여\")` 또는 `IF(MID(A1,8,1)=\"1\", \"남\", \"여\")` 조합. `MID` 함수의 인수 순서(셀, 시작위치, 개수) 주의.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"200\" y=\"25\" font-family=\"Arial\" font-size=\"16\" text-anchor=\"middle\" fill=\"#3f51b5\">주민등록번호 성별 판별</text><rect x=\"50\" y=\"60\" width=\"300\" height=\"40\" rx=\"10\" fill=\"#e0f7fa\" stroke=\"#00bcd4\" stroke-width=\"1\"/><text x=\"200\" y=\"85\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#263238\">A1: 851010-1234567</text><circle cx=\"135\" cy=\"80\" r=\"15\" fill=\"#ffeb3b\" stroke=\"#ffc107\" stroke-width=\"2\"/><text x=\"135\" y=\"85\" font-family=\"Arial\" font-size=\"16\" text-anchor=\"middle\" fill=\"#d32f2f\">1</text><path d=\"M135 100 V120\" stroke=\"#607d8b\" stroke-width=\"2\" marker-end=\"url(#arrowhead_small)\"/><rect x=\"100\" y=\"120\" width=\"200\" height=\"40\" rx=\"10\" fill=\"#e8f5e9\" stroke=\"#a5d6a7\" stroke-width=\"1\"/><text x=\"200\" y=\"145\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#2e7d32\">MID(A1, 8, 1) → \"1\"</text><path d=\"M200 160 V180\" stroke=\"#607d8b\" stroke-width=\"2\" marker-end=\"url(#arrowhead_small)\"/><rect x=\"30\" y=\"180\" width=\"160\" height=\"40\" rx=\"10\" fill=\"#fff3e0\" stroke=\"#ffb74d\" stroke-width=\"1\"/><text x=\"110\" y=\"205\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#e65100\">CHOOSE(\"1\", \"남\", \"여\")</text><rect x=\"210\" y=\"180\" width=\"160\" height=\"40\" rx=\"10\" fill=\"#fff3e0\" stroke=\"#ffb74d\" stroke-width=\"1\"/><text x=\"290\" y=\"205\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#e65100\">IF(\"1\"=\"1\", \"남\", \"여\")</text><text x=\"200\" y=\"235\" font-family=\"Arial\" font-size=\"16\" text-anchor=\"middle\" fill=\"#3f51b5\">결과: 남</text><defs><marker id=\"arrowhead_small\" markerWidth=\"8\" markerHeight=\"5\" refX=\"0\" refY=\"2.5\" orient=\"auto\"><polygon points=\"0 0, 8 2.5, 0 5\" fill=\"#607d8b\"/></marker></defs></svg>"
+    },
+    {
+      "id": 12,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_12.png",
+      "emoji": "🔢",
+      "title": "조건부 개수 세기: COUNTIF와 AVERAGE 조합",
+      "content": "`COUNTIF(범위, 조건)` 함수는 지정된 범위에서 조건에 맞는 셀의 개수를 세는 데 사용돼요. 이때 조건 부분에 `AVERAGE`와 같은 함수를 함께 사용할 때는 아주 중요합니다! `\">=\"` 같은 비교 연산자는 반드시 큰따옴표(\"\")로 묶어주고, 뒤에 오는 `AVERAGE()` 함수나 셀 주소는 `&` (연결 연산자)를 통해 합쳐줘야 해요. `AVERAGE` 함수까지 따옴표 안에 넣으면 엑셀이 계산식으로 인식하지 못하고 오류가 발생합니다.",
+      "visual": "A clear formula structure for COUNTIF with AVERAGE. Show a text box for '=COUNTIF(범위, \" >= \" & AVERAGE(범위))'. Highlight '\" >= \"' in one color and '& AVERAGE(범위)' in another. Below, show a common mistake: '=COUNTIF(범위, \" >= AVERAGE(범위)\")' with a big red 'X'. Use Korean labels.",
+      "exam_point": "`COUNTIF(범위, \">=\"&AVERAGE(범위))` 형식 암기. 조건에 함수 사용 시 '\"연산자\"&함수/셀주소' 형식 필수. '함수까지 따옴표 안에 넣는 오답' 주의. `SUMIF`, `AVERAGEIF`에도 동일하게 적용.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"200\" y=\"30\" font-family=\"Arial\" font-size=\"16\" text-anchor=\"middle\" fill=\"#3f51b5\">COUNTIF + AVERAGE 조합 (평균 초과 개수 세기)</text><rect x=\"30\" y=\"60\" width=\"340\" height=\"60\" rx=\"10\" fill=\"#e8f5e9\" stroke=\"#a5d6a7\" stroke-width=\"2\"/><text x=\"200\" y=\"95\" font-family=\"Arial\" font-size=\"18\" text-anchor=\"middle\" fill=\"#2e7d32\">=COUNTIF(C2:C8, <tspan fill=\"#ff5722\">\">=\"</tspan><tspan fill=\"#4caf50\">&AVERAGE(C2:C8)</tspan>)</text><text x=\"200\" y=\"135\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#616161\">✔ 올바른 형식: 연산자는 따옴표 안에, 함수는 밖에 &로 연결!</text><rect x=\"30\" y=\"160\" width=\"340\" height=\"60\" rx=\"10\" fill=\"#ffe0b2\" stroke=\"#ffb74d\" stroke-width=\"2\"/><text x=\"200\" y=\"195\" font-family=\"Arial\" font-size=\"18\" text-anchor=\"middle\" fill=\"#e65100\">=COUNTIF(C2:C8, <tspan fill=\"#f44336\">\">=AVERAGE(C2:C8)\"</tspan>)</text><text x=\"200\" y=\"225\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#e65100\">❌ 틀린 형식: 함수까지 따옴표 안에 넣으면 텍스트로 인식!</text></svg>"
+    },
+    {
+      "id": 13,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_13.png",
+      "emoji": "⭐",
+      "title": "기호 반복 출력: REPT와 COUNTIF의 콜라보",
+      "content": "`REPT(텍스트, 횟수)` 함수는 특정 텍스트나 기호를 지정된 횟수만큼 반복해서 표시해주는 유용한 함수예요. 이때 반복 횟수는 `COUNTIF(범위, 조건)` 함수로 특정 조건을 만족하는 셀의 개수를 세어 결정할 수 있습니다. `COUNTIF`의 범위는 수식을 아래로 채워도 변하지 않도록 절대 참조($)로 고정하고, 조건은 아래로 내려가면서 D4, D5 등으로 변해야 하므로 상대 참조를 사용하는 것이 중요해요.",
+      "visual": "A spreadsheet snippet showing '학점' column and '♣' column. In the '♣' column, show the formula '=REPT(\"♣\", COUNTIF($B$3:$B$10, D3))'. Highlight '♣' (text), 'COUNTIF(...)' (횟수), '$B$3:$B$10' (절대 참조), 'D3' (상대 참조). Show the output of '♣♣♣' for a count of 3. Korean labels.",
+      "exam_point": "`REPT(\"기호\", COUNTIF(절대_범위, 조건_셀))` 조합. `REPT` 인수는 '반복할 텍스트' 먼저, '반복 횟수' 나중. `COUNTIF` 인수는 '범위' 먼저, '조건' 나중. 절대 참조($)와 상대 참조의 올바른 활용.",
+      "svg": ""
+    },
+    {
+      "id": 14,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_14.png",
+      "emoji": "⚖️",
+      "title": "중첩 IF와 COUNTIF: 다중 조건 논리",
+      "content": "이 문제처럼 여러 가지 조건을 순서대로 판단하여 다른 결과값을 표시해야 할 때는 `IF` 함수를 중첩해서 사용합니다. 먼저 `COUNTIF` 함수로 90점 이상인 과목의 개수를 세어 조건을 만들 수 있어요. 중요한 점은 **가장 까다로운 조건(예: 2개 모두 90점 이상)**을 앞에 배치하고, 그 다음 조건(예: 1개만 90점 이상)을 뒤에 배치해야 한다는 것입니다. 이렇게 해야 모든 조건이 올바르게 평가될 수 있습니다.",
+      "visual": "A flowchart for the nested IF/COUNTIF logic. Start with 'COUNTIF(B2:C2, \">=90\")' -> '개수'. Then IF(개수=2) -> '진급'. ELSE IF(개수=1) -> '대기'. ELSE -> '공백'. Use clear arrows and decision diamonds. Emphasize the order of conditions. Korean labels.",
+      "exam_point": "중첩 `IF`문은 '범위가 좁은(까다로운) 조건'을 '먼저' 처리. `COUNTIF(범위, 조건)`의 형식. 조건에 비교 연산자(>=)가 들어갈 때는 반드시 큰따옴표(\"\")를 붙여야 함.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"200\" y=\"25\" font-family=\"Arial\" font-size=\"16\" text-anchor=\"middle\" fill=\"#3f51b5\">다중 조건 처리: 중첩 IF + COUNTIF</text><rect x=\"100\" y=\"50\" width=\"200\" height=\"40\" rx=\"10\" fill=\"#e0f7fa\" stroke=\"#00bcd4\" stroke-width=\"1\"/><text x=\"200\" y=\"75\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#263238\">COUNTIF(B2:C2, \">=90\") → 개수</text><path d=\"M200 90 V110\" stroke=\"#607d8b\" stroke-width=\"2\" marker-end=\"url(#arrowhead_small)\"/><polygon points=\"180 110, 220 110, 200 130\" fill=\"#ffc107\" stroke=\"#ffa000\" stroke-width=\"1\"/><text x=\"200\" y=\"120\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#424242\">개수=2?</text><path d=\"M200 130 V150\" stroke=\"#607d8b\" stroke-width=\"2\" marker-end=\"url(#arrowhead_small)\"/><rect x=\"160\" y=\"150\" width=\"80\" height=\"30\" rx=\"5\" fill=\"#c8e6c9\" stroke=\"#81c784\" stroke-width=\"1\"/><text x=\"200\" y=\"170\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#2e7d32\">\"진급\"</text><path d=\"M240 165 H260 L250 155 M260 165 L250 175\" fill=\"none\" stroke=\"#607d8b\" stroke-width=\"2\"/><polygon points=\"270 165, 310 165, 290 185\" fill=\"#ffc107\" stroke=\"#ffa000\" stroke-width=\"1\"/><text x=\"290\" y=\"175\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#424242\">개수=1?</text><path d=\"M290 185 V205\" stroke=\"#607d8b\" stroke-width=\"2\" marker-end=\"url(#arrowhead_small)\"/><rect x=\"250\" y=\"205\" width=\"80\" height=\"30\" rx=\"5\" fill=\"#fff3e0\" stroke=\"#ffb74d\" stroke-width=\"1\"/><text x=\"290\" y=\"225\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#e65100\">\"대기\"</text><path d=\"M330 220 H350 L340 210 M350 220 L340 230\" fill=\"none\" stroke=\"#607d8b\" stroke-width=\"2\"/><rect x=\"350\" y=\"215\" width=\"40\" height=\"30\" rx=\"5\" fill=\"#f8fafc\" stroke=\"#bdbdbd\" stroke-width=\"1\"/><text x=\"370\" y=\"235\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#424242\">\"\"</text><defs><marker id=\"arrowhead_small\" markerWidth=\"8\" markerHeight=\"5\" refX=\"0\" refY=\"2.5\" orient=\"auto\"><polygon points=\"0 0, 8 2.5, 0 5\" fill=\"#607d8b\"/></marker></defs></svg>"
+    },
+    {
+      "id": 15,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_15.png",
+      "emoji": "📅",
+      "title": "날짜/시간 데이터와 핵심 함수",
+      "content": "엑셀은 날짜를 1900년 1월 1일을 1로 하는 '정수(일련번호)'로, 시간을 하루 24시간을 1로 하는 '소수'로 관리해요. 그래서 날짜 데이터에 숫자를 더하고 빼는 사칙연산이 가능합니다. `TODAY()`는 시스템의 현재 '날짜'만, `NOW()`는 현재 '날짜와 시간'을 모두 반환해요. `YEAR()`, `MONTH()`, `DAY()` 함수는 특정 날짜에서 연도, 월, 일을 각각 추출할 수 있습니다.",
+      "visual": "A timeline showing '1900-01-01' as '1', and a future date as a larger integer. A circle for '24시간 = 1', with '낮 12시 = 0.5'. Show icons for TODAY() -> calendar, NOW() -> calendar + clock. YEAR(TODAY()) -> '2023'. Emphasize 'Korean text in high quality font'.",
+      "exam_point": "날짜 = '정수', 시간 = '소수'. `TODAY()`는 '날짜만', `NOW()`는 '날짜+시간'. `YEAR()`, `MONTH()`, `DAY()`로 각 구성 요소 추출. `WEEKDAY` 함수는 '숫자(1~7)' 반환, 요일(문자) 반환 아님. `DATE(년, 월, 일)`에서 월/일 범위 초과 시 '오류 발생 안 함', 자동 계산됨.",
+      "svg": ""
+    },
+    {
+      "id": 16,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_16.png",
+      "emoji": "❌",
+      "title": "엑셀 오류 메시지 해독법",
+      "content": "엑셀에서 수식 계산 중 문제가 발생하면, 각 상황에 맞는 오류 메시지를 표시해줘요. 마치 의사가 증상으로 병명을 진단하는 것과 같죠. `#VALUE!`는 수식에 잘못된 '인수나 피연산자'가 사용되거나 '데이터 형식'이 일치하지 않을 때 발생합니다. `#DIV/0!`는 숫자를 '0으로 나눴을' 때, `#NAME?`는 함수 이름 '오타'나 정의되지 않은 이름, 또는 텍스트의 '큰따옴표 누락' 시 나타나요. `#NUM!`은 '숫자 관련 문제'가 있을 때 표시됩니다.",
+      "visual": "A series of distinct error icons/symbols for each message. #VALUE! with a mixed data type (text+number). #DIV/0! with a '÷0' symbol. #NAME? with a misspelled function name. #NUM! with a 'too big' or 'invalid math' symbol. Use clear Korean labels for the error messages and their causes.",
+      "exam_point": "`#VALUE!`: '잘못된 인수/피연산자', '데이터 형식 불일치'. `#DIV/0!`: '0으로 나눔'. `#NAME?`: '함수 이름 오타', '정의되지 않은 이름', '큰따옴표 누락'. `#NUM!`: '숫자 관련 문제(범위, 유효성)'. 각 오류의 '키워드'로 암기!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"200\" y=\"25\" font-family=\"Arial\" font-size=\"16\" text-anchor=\"middle\" fill=\"#3f51b5\">엑셀 오류 메시지별 원인</text><rect x=\"20\" y=\"50\" width=\"170\" height=\"70\" rx=\"10\" fill=\"#fce4ec\" stroke=\"#f48fb1\" stroke-width=\"1\"/><text x=\"105\" y=\"65\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#e91e63\">#VALUE!</text><text x=\"105\" y=\"85\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#e91e63\">잘못된 인수/피연산자</text><text x=\"105\" y=\"100\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#e91e63\">데이터 형식 불일치</text><rect x=\"210\" y=\"50\" width=\"170\" height=\"70\" rx=\"10\" fill=\"#e3f2fd\" stroke=\"#90caf9\" stroke-width=\"1\"/><text x=\"295\" y=\"65\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#2196f3\">#DIV/0!</text><text x=\"295\" y=\"85\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#2196f3\">숫자를 0으로 나눔</text><rect x=\"20\" y=\"140\" width=\"170\" height=\"70\" rx=\"10\" fill=\"#fffde7\" stroke=\"#fff176\" stroke-width=\"1\"/><text x=\"105\" y=\"155\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#ffc107\">#NAME?</text><text x=\"105\" y=\"175\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#ffc107\">함수 이름 오타</text><text x=\"105\" y=\"190\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#ffc107\">따옴표 누락</text><rect x=\"210\" y=\"140\" width=\"170\" height=\"70\" rx=\"10\" fill=\"#f1f8e9\" stroke=\"#aed581\" stroke-width=\"1\"/><text x=\"295\" y=\"155\" font-family=\"Arial\" font-size=\"14\" text-anchor=\"middle\" fill=\"#4caf50\">#NUM!</text><text x=\"295\" y=\"175\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#4caf50\">유효하지 않은 숫자</text><text x=\"295\" y=\"190\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#4caf50\">숫자 범위 초과</text></svg>"
+    },
+    {
+      "id": 17,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_17.png",
+      "emoji": "🏷️",
+      "title": "이름 정의: 셀에 별명 붙이기 규칙",
+      "content": "엑셀에서 복잡한 셀 주소 대신 '매출현황'처럼 직관적인 이름을 지정하면 수식의 가독성을 높이고 절대 참조처럼 편리하게 사용할 수 있어요. 이름은 최대 255자까지 가능하지만, 첫 글자는 반드시 문자나 밑줄(_) 또는 역슬래시(\\)로 시작해야 합니다. '슬래시(/)'나 숫자로 시작할 수 없어요! 또한, 이름에는 '공백'을 포함할 수 없으며, 엑셀은 이름의 대소문자를 구분하지 않습니다. (예: 'Sum'과 'sum'은 같은 이름)",
+      "visual": "A split diagram. On the left, a complex cell range (e.g., A1:C10) with an arrow pointing to a 'Name Box' showing '매출현황'. On the right, a list of name rules with checkmarks/crosses: '문자/_/\\ 시작' (✔), '숫자/슬래시(/) 시작' (❌), '공백 포함' (❌), '최대 255자' (✔), '대소문자 미구분' (✔). Korean text labels.",
+      "exam_point": "이름 정의 규칙: '최대 255자'. '문자, 밑줄(_), 역슬래시(\\)로 시작' 가능. '숫자, 슬래시(/)로 시작 불가'. '공백(띄어쓰기) 포함 불가'. '대소문자 구분 안 함'. '셀 주소 형식(예: A1) 사용 불가'.",
+      "svg": ""
+    },
+    {
+      "id": 18,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__수식_활용_및_수학_통계_함수_정밀_분석_1_slide_18.png",
+      "emoji": "📈",
+      "title": "차트 데이터 계열 서식: 시각화의 비밀",
+      "content": "차트의 데이터 계열 서식은 막대 그래프의 모양을 조절하여 데이터를 더 효과적으로 보여주는 기능이에요. '계열 겹치기'는 여러 막대가 서로 얼마나 겹치거나 떨어질지 조절하며, 양수(+)는 겹치게, 음수(-)는 떨어지게 합니다. '간격 너비'는 막대 간의 공간을 조절하죠. 서로 단위가 다른 데이터 계열은 '보조 축'을 설정하여 차트의 가독성을 높일 수 있으며, 특정 계열만 차트 종류를 바꿔 '혼합형 차트'도 만들 수 있어요.",
+      "visual": "Illustrate '계열 겹치기' with two bar graphs: one with positive overlap (bars merging), another with negative (bars separating). Show '간격 너비' with bars changing thickness based on gap. An icon for '보조 축' showing two different scales on left and right axes. Use Korean labels for all features. Keep it simple and intuitive.",
+      "exam_point": "'계열 겹치기': '양수(+) → 겹침', '음수(-) → 벌어짐'. '간격 너비'는 막대 간 간격. '보조 축'은 단위가 다른 계열에 사용. '혼합형 차트' 생성 가능.",
+      "svg": ""
+    }
+  ]
+}

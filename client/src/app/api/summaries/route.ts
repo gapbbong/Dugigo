@@ -81,7 +81,7 @@ export async function GET(req: NextRequest) {
       
       const classify = (q: any) => {
         const text = ((q.question || '') + ' ' + (q.explanation || '')).toLowerCase();
-        const isSubject1 = q.subject === "컴퓨터 일반";
+        const isSubject1 = q.subject && q.subject.includes("컴퓨터 일반");
         if (subject === '컴퓨터활용능력 2급') {
           if (isSubject1) {
             if (/윈도우|windows|바로 가기|제어판|탐색기|작업 표시줄|부팅|레지스트리|시스템 도구|스풀링|인터럽트|포맷/.test(text)) return "[1과목] Windows OS 환경 설정 및 시스템 관리";
@@ -103,7 +103,13 @@ export async function GET(req: NextRequest) {
             return "[2과목] 스프레드시트 일반 기타 심화 분석";
           }
         }
-        if (subject === '전기공사산업기사' || subject === '승강기기능사' || subject === '전기기능사') {
+        if (subject === '승강기기능사') {
+          if (/저항|전류|전압|직류|교류|콘덴서|인덕턴스|전자기|자계|전동기|발전기|브리지|오옴|플레밍/.test(text)) return "01. 전기이론";
+          if (/응력|하중|모멘트|볼트|너트|베어링|기어|풀리|재료역학|압축|인장/.test(text)) return "02. 기계일반";
+          if (/안전관리|일상점검|정기검사|유지관리|비상벨|안전장치|보수|점검/.test(text)) return "03. 승강기 점검 및 보수";
+          return "04. 승강기 개론";
+        }
+        if (subject === '전기공사산업기사' || subject === '전기기능사') {
           if (/조명|광도|럭스|루멘|전열|조도|광속|칸델라|글로브|휘도|램프|반사율|투과율/.test(text)) return "01. 조명 및 전열";
           if (/전지|배터리|축전지|전기화학|패러데이|전해|금속막대|도금|이온/.test(text)) return "02. 전기화학 및 배터리";
           if (/펌프|권상|엘리베이터|에스컬레이터|기중기|용접|가열|건조|공작기계/.test(text)) return "03. 전동기 응용";
@@ -201,6 +207,11 @@ export async function GET(req: NextRequest) {
       1. **문장 제한**: 'content' 필드는 반드시 **4문장 이내**, **250자 이내**로 작성하세요.
       2. **비유 활용**: 어려운 용어는 일상적인 비유(예: CPU = 두뇌, RAM = 책상)를 사용해 한 문장으로 정의하세요.
       3. **톤앤매너**: 누구나 쉽게 이해할 수 있는 친숙한 언어를 사용하되, 대상 연령을 직접 언급하지 마세요.
+    ` : subject.includes('정보처리') ? `
+      [정보처리기능사 요약 규칙]
+      1. **문장 제한**: 'content' 필드는 반드시 **4문장 이내**, **250자 이내**로 작성하세요.
+      2. **비유 활용**: 어려운 IT 용어는 일상적인 비유(예: 데이터베이스 = 도서관, 프로토콜 = 대화 규칙)를 사용해 친절하게 한 문장으로 정의하세요.
+      3. **톤앤매너**: 친절하고 명확하게 설명하되, 특정 연령대(초등/중등)를 지칭하는 표현은 절대 쓰지 마세요.
     ` : '';
 
     const prompt = `
@@ -215,7 +226,11 @@ export async function GET(req: NextRequest) {
       2. **이미지 생성 프롬프트(visual)**: 이미지 내부에 한글이 들어갈 경우 글자가 깨지지 않도록 'Korean text in high quality font' 등의 지시어를 포함하고, 복잡한 텍스트보다는 직관적인 도식과 아이콘 묘사 위주로 작성하세요.
       3. **이모지(emoji)**: 각 슬라이드 주제에 어울리는 거대하고 화려한 이모지를 하나씩 지정하세요.
       4. **콘텐츠 구성**: 'content' 필드는 친절한 설명(4문장/250자 이내), 'exam_point' 필드는 시험에 나오는 수치나 키워드 위주로 작성하세요.
-      5. **형식**: 반드시 유효한 JSON 형식으로만 응답하세요.
+      5. **🎨 SVG 벡터 그래픽 적극 활용**: 
+         - 회로도, 흐름도, 데이터 구조(스택, 큐 등), 그래프, 표 등 시각적 도식이 필수적인 개념을 설명할 때는 반드시 깔끔한 반응형 SVG 코드 (\`<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">...</svg>\`)를 \`svg\` 필드에 포함하세요.
+         - 부드럽고 가독성 좋은 라이트 테마 배경을 채택하고 (예: \`<rect width="400" height="250" rx="20" fill="#f8fafc"/>\` 또는 세련된 그라디언트 적용), 도형(rect, circle, line, path, polygon) 및 가독성 좋은 텍스트(\`<text>\`)를 정확한 좌표로 배치하세요.
+         - 단순 텍스트 설명이라 도식이 전혀 필요 없는 경우에는 \`svg\` 필드를 빈 문자열(\`""\`)로 설정하세요.
+      6. **형식**: 반드시 유효한 JSON 형식으로만 응답하세요.
 
       [입력 데이터 (기출문제)]
       ${contextQuestions}
@@ -234,7 +249,8 @@ export async function GET(req: NextRequest) {
             "title": "슬라이드 제목",
             "content": "친절한 설명 (4문장/250자 이내)",
             "visual": "이미지 생성용 상세 묘사",
-            "exam_point": "시험 출제 포인트"
+            "exam_point": "시험 출제 포인트",
+            "svg": "400x250 비율의 SVG 코드 또는 빈 문자열 (\\\"\\\")"
           }
         ]
       }

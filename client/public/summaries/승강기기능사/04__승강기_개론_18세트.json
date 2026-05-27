@@ -1,0 +1,194 @@
+{
+  "subject": "승강기기능사",
+  "unit": "04. 승강기 개론",
+  "set": 18,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_1.png",
+      "emoji": "🏆",
+      "title": "승강기기능사 04. 승강기 개론 (18세트) - 합격으로 가는 길",
+      "content": "승강기 기능사 합격을 위한 여정에 오신 것을 환영합니다! 이 슬라이드는 승강기 개론의 핵심 내용을 쉽고 명확하게 이해할 수 있도록 구성되었습니다. 시험에 자주 나오는 중요한 개념들을 중심으로 핵심만 짚어드릴게요. 함께 승강기 전문가로 한 걸음 더 나아가봅시다!",
+      "visual": "A vibrant and professional graphic with 'Elevator Mechanic's License' (승강기기능사) as the main title. Below it, '04. Elevator Introduction' (04. 승강기 개론) and 'Set 18' are displayed. A stylized elevator car icon moving upwards, surrounded by positive symbols like a checkmark and a lightbulb, indicating learning and success. Use high-quality Korean text for all labels.",
+      "exam_point": "승강기기능사 합격 목표, 핵심 개념 정리, 기출 문제 기반 학습",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_2.png",
+      "emoji": "👷‍♀️",
+      "title": "안전의 시작: 산업안전보건법의 목적",
+      "content": "산업안전보건법은 작업장에서 일하는 모든 사람의 안전과 건강을 지키기 위한 중요한 약속이에요. 마치 집에서 가족의 안전을 위해 지켜야 할 규칙과 같습니다. 이 법은 사고를 미리 막고, 쾌적한 환경을 조성하여 모두가 안전하게 일할 수 있도록 돕는 것을 목적으로 합니다.",
+      "visual": "An illustration of a worker wearing a hard hat, surrounded by safety signs and symbols like a shield and a heart. A thought bubble above the worker's head shows 'Safety First'. Text overlay: '산업안전보건법 목적' (Purpose of Industrial Safety and Health Act). High-quality Korean text.",
+      "exam_point": "산업재해 예방, 쾌적한 작업환경 조성, 노무 제공자 안전·보건 유지·증진",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_3.png",
+      "emoji": "⚡",
+      "title": "보이지 않는 위험: 정전기 화재·폭발 방지",
+      "content": "겨울철 스웨터 벗을 때 '찌릿'하는 정전기, 이게 큰 불씨가 될 수 있습니다. 정전기는 눈에 보이지 않지만, 특정 환경에서는 큰 불꽃을 일으켜 화재나 폭발로 이어질 수 있어요. 특히 가연성 물질이 있는 곳에서는 더욱 위험하죠. 이런 위험을 막기 위해 우리는 확실한 접지, 도전성 재료 사용, 가습 및 제전장치 설치 등 다양한 노력을 해야 합니다.",
+      "visual": "A diagram showing static electricity prevention methods. On the left, a stylized spark or lightning bolt icon representing static electricity. On the right, three distinct icons: a grounding symbol (three lines decreasing in length), an icon of a person using a spray bottle for humidification, and an icon of a specialized 'anti-static' device or material. Arrows point from the spark to the prevention methods. Use high-quality Korean text for labels like '접지 (Grounding)', '가습 (Humidification)', '제전장치 (Anti-static device)'.",
+      "exam_point": "접지, 도전성 재료 사용, 가습, 제전장치",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M100 85 L120 125 L80 125 Z\" fill=\"#fca5a5\"/><path d=\"M100 165 L120 125 L80 125 Z\" fill=\"#fca5a5\" transform=\"rotate(180 100 125)\"/><circle cx=\"100\" cy=\"125\" r=\"40\" fill=\"#fca5a5\" opacity=\"0.7\"/><path d=\"M100 95 L110 115 L90 115 Z\" fill=\"#ffffff\"/><path d=\"M100 155 L110 135 L90 135 Z\" fill=\"#ffffff\" transform=\"rotate(180 100 145)\"/><text x=\"100\" y=\"125\" font-family=\"Arial\" font-size=\"20\" fill=\"#333\" text-anchor=\"middle\" dominant-baseline=\"middle\">💥</text><rect x=\"180\" y=\"80\" width=\"180\" height=\"30\" rx=\"5\" fill=\"#e0f2fe\"/><text x=\"270\" y=\"95\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">1. 확실한 접지</text><rect x=\"180\" y=\"120\" width=\"180\" height=\"30\" rx=\"5\" fill=\"#e0f2fe\"/><text x=\"270\" y=\"135\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">2. 도전성 재료 사용</text><rect x=\"180\" y=\"160\" width=\"180\" height=\"30\" rx=\"5\" fill=\"#e0f2fe\"/><text x=\"270\" y=\"175\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">3. 제전장치 및 가습</text></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_4.png",
+      "emoji": "🧐",
+      "title": "사고의 뿌리: 재해의 인적 요인 분석",
+      "content": "안전사고는 기계적인 문제뿐만 아니라, 사람의 행동이나 상태 때문에 발생하는 경우가 많아요. 이를 '인적 요인'이라고 합니다. 예를 들어, 피로, 부주의, 지식 부족, 무리한 작업 등이 대표적인 인적 요인입니다. 하지만, 설비 고장이나 작업 환경 문제는 인적 요인이 아닌 다른 요인으로 분류된답니다.",
+      "visual": "A visual distinction between 'Human Factors' and 'Non-Human Factors' in accident causes. On the left, a thought bubble with icons representing 'Fatigue' (tired face), 'Inattention' (question mark), and 'Lack of Knowledge' (empty brain). Label this as '인적 요인 (Human Factors)'. On the right, icons representing 'Equipment Failure' (broken gear) and 'Environmental Issues' (rain cloud). Label this as '비인적 요인 (Non-Human Factors)'. A large 'X' between the two sections indicating what is NOT a human factor. Use high-quality Korean text.",
+      "exam_point": "인적 요인: 개체 요인(피로, 부주의, 질병), 행동 요인(지식 부족, 작업 미숙, 무리한 작업)",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"50\" y=\"40\" width=\"120\" height=\"170\" rx=\"10\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"110\" y=\"60\" font-family=\"Arial\" font-size=\"16\" fill=\"#333\" text-anchor=\"middle\" font-weight=\"bold\">인적 요인</text><circle cx=\"110\" cy=\"100\" r=\"10\" fill=\"#a78bfa\"/><text x=\"110\" y=\"100\" font-family=\"Arial\" font-size=\"12\" fill=\"#fff\" text-anchor=\"middle\">🤔</text><text x=\"110\" y=\"125\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\" text-anchor=\"middle\">부주의, 피로</text><circle cx=\"110\" cy=\"155\" r=\"10\" fill=\"#a78bfa\"/><text x=\"110\" y=\"155\" font-family=\"Arial\" font-size=\"12\" fill=\"#fff\" text-anchor=\"middle\">🏃‍♀️</text><text x=\"110\" y=\"180\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\" text-anchor=\"middle\">무지, 무리한 행동</text><path d=\"M170 125 H230\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><text x=\"200\" y=\"115\" font-family=\"Arial\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\">vs</text><rect x=\"230\" y=\"40\" width=\"120\" height=\"170\" rx=\"10\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"290\" y=\"60\" font-family=\"Arial\" font-size=\"16\" fill=\"#333\" text-anchor=\"middle\" font-weight=\"bold\">비인적 요인</text><circle cx=\"290\" cy=\"100\" r=\"10\" fill=\"#fca5a5\"/><text x=\"290\" y=\"100\" font-family=\"Arial\" font-size=\"12\" fill=\"#fff\" text-anchor=\"middle\">⚙️</text><text x=\"290\" y=\"125\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\" text-anchor=\"middle\">설비 고장</text><circle cx=\"290\" cy=\"155\" r=\"10\" fill=\"#fca5a5\"/><text x=\"290\" y=\"155\" font-family=\"Arial\" font-size=\"12\" fill=\"#fff\" text-anchor=\"middle\">🌧️</text><text x=\"290\" y=\"180\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\" text-anchor=\"middle\">환경 문제</text></svg>"
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_5.png",
+      "emoji": "⚖️",
+      "title": "엘리베이터의 심장: 균형추의 역할",
+      "content": "엘리베이터 카가 혼자 무겁게 움직이지 않도록, 반대편에는 '균형추'라는 무거운 추가 매달려 있어요. 마치 시소를 탈 때 반대편에 친구가 앉아 균형을 맞춰주는 것과 같습니다. 이 균형추 덕분에 모터는 훨씬 적은 힘으로 카를 움직일 수 있고, 전기도 절약되며 안정적인 운행이 가능해집니다.",
+      "visual": "A simplified cross-section diagram of an elevator shaft. On one side, an elevator car is shown. On the opposite side, a counterweight is depicted. A main sheave (pulley) is at the top, with ropes connecting the car and the counterweight over it. Arrows indicate the counteracting forces. Labels: '카 (Car)', '균형추 (Counterweight)', '권상기 (Hoisting machine)'. Use high-quality Korean text.",
+      "exam_point": "카 반대측 권상로프, 중량 균형, 구동토크 평균화, 안정화",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"50\" y=\"50\" width=\"60\" height=\"100\" fill=\"#a78bfa\" rx=\"5\"/><text x=\"80\" y=\"100\" font-family=\"Arial\" font-size=\"16\" fill=\"#fff\" text-anchor=\"middle\">카</text><line x1=\"80\" y1=\"50\" x2=\"80\" y2=\"20\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"80\" y1=\"20\" x2=\"320\" y2=\"20\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"320\" y1=\"20\" x2=\"320\" y2=\"50\" stroke=\"#333\" stroke-width=\"2\"/><rect x=\"290\" y=\"50\" width=\"60\" height=\"100\" fill=\"#fca5a5\" rx=\"5\"/><text x=\"320\" y=\"100\" font-family=\"Arial\" font-size=\"16\" fill=\"#fff\" text-anchor=\"middle\">균형추</text><circle cx=\"200\" cy=\"20\" r=\"20\" fill=\"#fcd34d\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"200\" y=\"20\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">모터</text><line x1=\"80\" y1=\"150\" x2=\"80\" y2=\"200\" stroke=\"#ccc\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"200\" stroke=\"#ccc\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><path d=\"M80 150 C80 170, 320 170, 320 150\" stroke=\"#333\" stroke-width=\"2\" fill=\"none\"/></svg>"
+    },
+    {
+      "id": 6,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_6.png",
+      "emoji": "🛑",
+      "title": "엘리베이터 안전 지킴이: 방호장치와 개문출발 방지",
+      "content": "승강기는 승객의 안전을 위해 다양한 방호장치를 갖추고 있어요. 그중 중요한 것이 '개문출발 방지'와 '도어 인터록 장치'입니다. 문이 완전히 닫히지 않은 상태에서 카가 움직이거나, 허용된 층이 아닌 곳에서 문이 열리는 것을 막아줘요. 마치 자동차 문이 잠기지 않으면 출발하지 않는 것과 같죠.",
+      "visual": "A schematic diagram illustrating an elevator car, a landing door, and the interlock mechanism. Show the landing door locked when the car is not at the floor, and a safety switch activating only when the door is securely closed. Icons for 'Door Lock' and 'Safety Switch'. Emphasize the connection between the door status and car movement. Use high-quality Korean text for labels like '카 (Car)', '승강장 문 (Landing Door)', '문 잠금 장치 (Door Locking Device)', '문 안전 스위치 (Door Safety Switch)'.",
+      "exam_point": "개문출발 방지(문 열림 상태 운행 정지), 도어 인터록(문 잠금 장치, 문 안전 스위치)",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"50\" y=\"50\" width=\"80\" height=\"150\" fill=\"#e0e7ff\" rx=\"5\"/><rect x=\"130\" y=\"50\" width=\"80\" height=\"150\" fill=\"#bfdbfe\" rx=\"5\"/><text x=\"90\" y=\"125\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">카</text><text x=\"170\" y=\"125\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">승강장 문</text><rect x=\"250\" y=\"70\" width=\"100\" height=\"40\" fill=\"#fff\" stroke=\"#94a3b8\" stroke-width=\"1\" rx=\"5\"/><text x=\"300\" y=\"90\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">문 잠금 장치</text><rect x=\"250\" y=\"140\" width=\"100\" height=\"40\" fill=\"#fff\" stroke=\"#94a3b8\" stroke-width=\"1\" rx=\"5\"/><text x=\"300\" y=\"160\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">문 안전 스위치</text><path d=\"M210 100 L245 90\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><path d=\"M210 160 L245 150\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#arrowhead)\"/><defs><marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#333\" /></marker></defs></svg>"
+    },
+    {
+      "id": 7,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_7.png",
+      "emoji": "💧",
+      "title": "유압 엘리베이터의 안전 밸브: 릴리프 밸브와 체크 밸브",
+      "content": "유압 엘리베이터에는 유압 회로의 안전을 지키는 중요한 밸브들이 있어요. '릴리프 밸브'는 회로의 압력이 너무 높아지면 자동으로 열려 과도한 압력을 낮춰주는 역할을 합니다. '체크 밸브'는 오일이 한쪽 방향으로만 흐르게 하여, 카가 갑자기 내려가는 역행 현상을 방지해 주는 중요한 부품입니다.",
+      "visual": "A diagram illustrating a relief valve and a check valve in a hydraulic system. For the relief valve, show a pressure gauge and a valve opening to release excess pressure to a tank. For the check valve, show a one-way flow with an arrow and a simple valve mechanism preventing reverse flow. Use high-quality Korean text for labels like '릴리프 밸브 (Relief Valve)', '체크 밸브 (Check Valve)', '압력 (Pressure)', '오일 흐름 (Oil Flow)'.",
+      "exam_point": "릴리프 밸브(압력 조절, 과도 압력 상승 방지), 체크 밸브(한쪽 방향 오일 흐름, 카 역행 방지)",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M50 125 L100 125 L100 100 L120 100 L120 150 L100 150 L100 125 Z\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"125\" r=\"10\" fill=\"#fcd34d\"/><text x=\"110\" y=\"125\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\" text-anchor=\"middle\">P</text><path d=\"M120 125 L170 125\" stroke=\"#333\" stroke-width=\"2\"/><path d=\"M100 100 L120 100 A20 20 0 0 1 120 150 L100 150 Z\" fill=\"#ccc\" opacity=\"0.5\" stroke=\"#333\" stroke-width=\"1\"/><text x=\"110\" y=\"80\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">릴리프 밸브</text><rect x=\"230\" y=\"100\" width=\"80\" height=\"50\" fill=\"#e0f2fe\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"230 125, 250 100, 250 150\" fill=\"#a78bfa\"/><line x1=\"200\" y1=\"125\" x2=\"230\" y2=\"125\" stroke=\"#333\" stroke-width=\"2\" marker-end=\"url(#arrowhead2)\"/><line x1=\"310\" y1=\"125\" x2=\"340\" y2=\"125\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"270\" y=\"80\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">체크 밸브</text><defs><marker id=\"arrowhead2\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#333\" /></marker></defs></svg>"
+    },
+    {
+      "id": 8,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_8.png",
+      "emoji": "⬆️⬇️",
+      "title": "유압 엘리베이터의 숨겨진 힘: 1:2 로핑 방식",
+      "content": "유압 엘리베이터의 '1:2 로핑 방식'은 실린더의 움직임보다 카가 두 배 더 많이 이동하게 하는 똑똑한 방법이에요. 마치 도르래를 사용해 적은 힘으로 무거운 물건을 더 높이 올리는 것과 같습니다. 실린더의 플런저가 1미터 올라가면, 카는 로프를 통해 2미터 상승하여 효율적인 공간 활용을 가능하게 합니다.",
+      "visual": "A simplified diagram of a 1:2 roping hydraulic elevator. Show a hydraulic cylinder with a plunger, a sheave (pulley) on top of the plunger, and a rope running from a fixed point, over the sheave, and down to the elevator car. Annotate the plunger's 1m movement and the car's 2m movement with arrows. Labels: '카 (Car)', '플런저 (Plunger)', '시브 (Sheave)', '1m 상승', '2m 상승'. Use high-quality Korean text.",
+      "exam_point": "1:2 로핑(플런저 1m 상승 시 카 2m 상승), 백플런저 방식(1:2 로핑), 사이드플런저 방식(2:4 로핑)",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"50\" y=\"50\" width=\"60\" height=\"100\" fill=\"#a78bfa\" rx=\"5\"/><text x=\"80\" y=\"100\" font-family=\"Arial\" font-size=\"16\" fill=\"#fff\" text-anchor=\"middle\">카</text><line x1=\"80\" y1=\"50\" x2=\"80\" y2=\"20\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"80\" y1=\"20\" x2=\"200\" y2=\"20\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"20\" r=\"15\" fill=\"#fcd34d\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"200\" y=\"20\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\" text-anchor=\"middle\">시브</text><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"100\" stroke=\"#333\" stroke-width=\"2\"/><rect x=\"180\" y=\"100\" width=\"40\" height=\"100\" fill=\"#bfdbfe\" rx=\"5\"/><text x=\"200\" y=\"150\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\" text-anchor=\"middle\">플런저</text><path d=\"M200 200 L200 230\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"250\" y=\"80\" font-family=\"Arial\" font-size=\"16\" fill=\"#333\">플런저 1m ↑</text><path d=\"M250 90 L270 90 M260 80 L260 100\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"250\" y=\"150\" font-family=\"Arial\" font-size=\"16\" fill=\"#333\">카 2m ↑</text><path d=\"M250 160 L270 160 M260 150 L260 170\" stroke=\"#333\" stroke-width=\"2\"/></svg>"
+    },
+    {
+      "id": 9,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_9.png",
+      "emoji": "🚶‍♀️",
+      "title": "움직이는 길: 수평보행기 주의사항",
+      "content": "수평보행기는 이동의 편의를 제공하지만, 안전하게 이용하기 위한 규칙들이 있습니다. 손잡이를 꼭 잡고, 걷거나 뛰지 않으며, 어린이나 노약자는 보호자와 함께 이용해야 해요. 유모차나 손수레는 사용 가능하지만, 가능하면 엘리베이터를 이용하고, 부득이할 경우 접어서 타는 것이 안전합니다.",
+      "visual": "An illustration of a moving walkway with stick figures demonstrating correct usage (holding handrail, standing still) and incorrect usage (running, not holding). Show common warning signs like 'Hold Handrail', 'No Running', 'Children with Guardian'. Emphasize the allowed usage for strollers (folded). Use high-quality Korean text for warning signs.",
+      "exam_point": "손잡이 잡기, 걷거나 뛰지 않기, 보호자 동반, 안전선 안쪽 서기, 유모차/손수레(접어서 탑승)",
+      "svg": ""
+    },
+    {
+      "id": 10,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_10.png",
+      "emoji": "🤲",
+      "title": "에스컬레이터의 손잡이: 놓치지 마세요!",
+      "content": "에스컬레이터 손잡이는 디딤판, 팰릿 또는 벨트의 실제 속도와 거의 동일하게 움직여야 해요. 너무 빠르거나 느리면 위험할 수 있기 때문이죠. 이 손잡이는 정상 운행 중 반대 방향으로 450N의 힘으로 당겨도 멈추지 않도록 튼튼하게 설계되어 있어, 갑작스러운 상황에서도 승객을 안전하게 지지합니다.",
+      "visual": "A side view of an escalator with a visible handrail. Annotate the handrail's speed relation to the steps (e.g., '+2% speed'). Illustrate a hand holding the handrail. Show an arrow indicating force (450N) being applied against the handrail's movement, with a checkmark indicating it doesn't stop. Use high-quality Korean text for labels like '손잡이 속도 (Handrail Speed)', '450N'.",
+      "exam_point": "손잡이 속도: 디딤판 속도와 -0% ~ +2% 공차, 450N 힘으로 당겨도 정지되지 않음",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><path d=\"M50 200 L150 100 L250 200 L350 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"10\"/><path d=\"M40 100 A100 50 0 0 1 100 50 A100 50 0 0 1 160 100\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"15\" stroke-linecap=\"round\"/><path d=\"M240 100 A100 50 0 0 1 300 50 A100 50 0 0 1 360 100\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"15\" stroke-linecap=\"round\"/><text x=\"100\" y=\"170\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">디딤판</text><text x=\"300\" y=\"170\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">디딤판</text><text x=\"100\" y=\"75\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">손잡이</text><text x=\"300\" y=\"75\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">손잡이</text><path d=\"M200 120 L200 150 M190 130 L210 130\" stroke=\"#fca5a5\" stroke-width=\"3\"/><text x=\"200\" y=\"100\" font-family=\"Arial\" font-size=\"14\" fill=\"#fca5a5\" text-anchor=\"middle\">힘 450N</text><path d=\"M100 130 L120 130 M110 120 L110 140\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"130\" y=\"130\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\">속도 +2%</text></svg>"
+    },
+    {
+      "id": 11,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_11.png",
+      "emoji": "🚫",
+      "title": "로프식 엘리베이터: 미끄러지지 않게!",
+      "content": "로프식 엘리베이터에서 권상 도르래와 로프가 미끄러지면 아주 위험해요. 미끄러짐을 방지하려면 도르래에 로프가 감기는 각도(권부각)를 크게 하고, 로프의 부담을 줄이기 위해 속도를 완만하게 조절해야 합니다. 또한, 보상 케이블을 설치하여 카와 균형추의 중량 균형을 맞추는 것도 매우 중요해요.",
+      "visual": "A diagram of a main sheave (pulley) with a rope. Illustrate the 'angle of wrap' (권부각) and how a larger angle prevents slip. Show a 'slow speed' indicator and a balanced car/counterweight system. Indicate factors that prevent rope slip. Use high-quality Korean text for labels like '권상 도르래 (Main Sheave)', '로프 (Rope)', '권부각 (Angle of Wrap)', '속도 완만 (Gentle Speed)', '균형추 (Counterweight)'.",
+      "exam_point": "권부각 크게, 속도 완만하게, 보상 케이블 설치, 카와 균형추 중량 같게",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><circle cx=\"200\" cy=\"100\" r=\"60\" fill=\"#e0f2fe\" stroke=\"#333\" stroke-width=\"2\"/><path d=\"M150 70 L150 130 C150 160, 250 160, 250 130 L250 70\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"8\"/><text x=\"200\" y=\"100\" font-family=\"Arial\" font-size=\"16\" fill=\"#333\" text-anchor=\"middle\">권상 도르래</text><text x=\"200\" y=\"200\" font-family=\"Arial\" font-size=\"16\" fill=\"#333\" text-anchor=\"middle\">로프</text><rect x=\"50\" y=\"50\" width=\"10\" height=\"150\" fill=\"#a78bfa\"/><rect x=\"340\" y=\"50\" width=\"10\" height=\"150\" fill=\"#a78bfa\"/><text x=\"100\" y=\"180\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\">권부각 크게</text><path d=\"M100 170 L100 150 M90 160 L110 160\" stroke=\"#fca5a5\" stroke-width=\"2\"/><text x=\"300\" y=\"180\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\">속도 완만히</text><path d=\"M300 170 L300 150 M290 160 L310 160\" stroke=\"#fca5a5\" stroke-width=\"2\"/></svg>"
+    },
+    {
+      "id": 12,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_12.png",
+      "emoji": "🔌",
+      "title": "전선 연결의 황금률: 안전 우선 순서",
+      "content": "전선 작업은 항상 안전을 최우선으로 해야 합니다. 전선을 연결할 때는 전기를 사용하는 기기(부하)에 선을 먼저 연결하고, 그 다음에 전원 콘센트에 꽂아야 해요. 반대로 전선을 분리할 때는 전원 콘센트부터 뽑고, 그 다음에 기기에서 선을 빼야 안전합니다. 접지선은 항상 가장 먼저 연결하고, 가장 나중에 분리해야 하는 중요한 보호선이에요.",
+      "visual": "A flow diagram showing the correct sequence for connecting and disconnecting electrical wires. One path for 'Connection' (부하 -> 전원) and another path for 'Disconnection' (전원 -> 부하). Emphasize the grounding wire's special rule (first to connect, last to disconnect). Use high-quality Korean text for '연결 (Connection)', '철거 (Disconnection)', '전원 (Power Source)', '부하 (Load)', '접지선 (Grounding Wire)'.",
+      "exam_point": "연결: 부하 먼저, 전원 나중. 철거: 전원 먼저, 부하 나중. 접지선: 연결 시 먼저, 철거 시 나중",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"50\" y=\"80\" width=\"80\" height=\"60\" fill=\"#e0f2fe\" rx=\"5\"/><text x=\"90\" y=\"110\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">전원</text><rect x=\"270\" y=\"80\" width=\"80\" height=\"60\" fill=\"#fca5a5\" rx=\"5\"/><text x=\"310\" y=\"110\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">부하</text><path d=\"M130 110 L270 110\" stroke=\"#333\" stroke-width=\"2\" marker-end=\"url(#arrowhead3)\"/><text x=\"200\" y=\"70\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">연결: 부하 먼저</text><path d=\"M270 170 L130 170\" stroke=\"#333\" stroke-width=\"2\" marker-end=\"url(#arrowhead4)\"/><text x=\"200\" y=\"190\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">철거: 전원 먼저</text><defs><marker id=\"arrowhead3\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#333\" /></marker><marker id=\"arrowhead4\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"10 0, 0 3.5, 10 7\" fill=\"#333\" /></marker></defs></svg>"
+    },
+    {
+      "id": 13,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_13.png",
+      "emoji": "💡",
+      "title": "일률의 단위: 와트 (W)",
+      "content": "'일률'은 1초 동안 얼마나 많은 일을 했는지를 나타내는 물리량이에요. 전구의 밝기가 몇 와트(W)인지 생각하면 이해하기 쉽습니다. 1와트(W)는 1초 동안 1줄(J)의 일을 할 수 있는 일률과 같아요. 즉, 1[J/s]와 1[W]는 같은 의미로 사용되는 단위랍니다.",
+      "visual": "A large, clear equation showing '1W = 1 J/s'. Below this, list other equivalent units or related formulas like '1W = 1N·m/s' and '1W = 1V·1A'. Use a lightbulb icon to represent power/work. Use high-quality Korean text for all labels.",
+      "exam_point": "1W = 1J/s = 1N·m/s = 1kg·m²/s³ = 1V·1A. 전력량(Wh) = W × 시간(s)",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><circle cx=\"100\" cy=\"125\" r=\"50\" fill=\"#fcd34d\"/><text x=\"100\" y=\"125\" font-family=\"Arial\" font-size=\"30\" fill=\"#333\" text-anchor=\"middle\">1W</text><text x=\"250\" y=\"125\" font-family=\"Arial\" font-size=\"30\" fill=\"#333\" text-anchor=\"middle\">=</text><circle cx=\"300\" cy=\"125\" r=\"50\" fill=\"#e0f2fe\"/><text x=\"300\" y=\"125\" font-family=\"Arial\" font-size=\"30\" fill=\"#333\" text-anchor=\"middle\">1J/s</text><rect x=\"50\" y=\"180\" width=\"300\" height=\"40\" fill=\"#fff\" stroke=\"#94a3b8\" stroke-width=\"1\"/><text x=\"200\" y=\"200\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">1W = 1N·m/s = 1kg·m²/s³ = 1V·1A</text></svg>"
+    },
+    {
+      "id": 14,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_14.png",
+      "emoji": "📏",
+      "title": "정밀한 측정 도구: 마이크로미터",
+      "content": "마이크로미터는 나사의 원리를 이용해 길이를 아주 정밀하게 측정하는 도구예요. 머리카락 굵기나 종이 두께처럼 미세한 길이를 잴 때 사용됩니다. 일반 자로는 잴 수 없는 0.01mm 단위의 작은 길이까지 정확하게 측정할 수 있어 정밀 기계 부품 제작 등에 필수적으로 사용됩니다.",
+      "visual": "An illustration of a micrometer measuring a small object. Highlight the thimble and sleeve with clear markings showing how precise measurements are read. Show a zoomed-in section indicating 0.01mm precision. Use high-quality Korean text for labels like '마이크로미터 (Micrometer)', '0.01mm 정밀 측정 (0.01mm Precision Measurement)'.",
+      "exam_point": "나사의 원리 이용, 길이 정밀 측정 (0.01mm 단위), 나사 1회전 시 나사산 간 거리 이동",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"50\" y=\"100\" width=\"300\" height=\"50\" fill=\"#cbd5e1\" rx=\"5\"/><rect x=\"80\" y=\"80\" width=\"20\" height=\"90\" fill=\"#a78bfa\" rx=\"3\"/><rect x=\"300\" y=\"80\" width=\"20\" height=\"90\" fill=\"#a78bfa\" rx=\"3\"/><line x1=\"100\" y1=\"125\" x2=\"300\" y2=\"125\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"200\" y=\"115\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\" text-anchor=\"middle\">측정 대상</text><path d=\"M300 125 A40 40 0 0 1 300 170\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"300\" cy=\"170\" r=\"10\" fill=\"#fcd34d\"/><text x=\"300\" y=\"170\" font-family=\"Arial\" font-size=\"12\" fill=\"#333\" text-anchor=\"middle\">눈금</text><text x=\"200\" y=\"50\" font-family=\"Arial\" font-size=\"16\" fill=\"#333\" text-anchor=\"middle\">마이크로미터</text><text x=\"200\" y=\"200\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">정밀한 길이 측정 (0.01mm 단위)</text></svg>"
+    },
+    {
+      "id": 15,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_15.png",
+      "emoji": "🔢",
+      "title": "스위치 회로의 논리: AND와 OR 게이트",
+      "content": "전기 회로에서 스위치를 어떻게 연결하느냐에 따라 다른 논리 동작을 합니다. 여러 스위치가 '직렬'로 연결되면 모든 스위치가 닫혀야 전기가 통하는데, 이를 'AND(논리곱)' 게이트라고 해요. 반대로 스위치들이 '병렬'로 연결되면, 어느 하나만 닫혀도 전기가 통하는데, 이를 'OR(논리합)' 게이트라고 합니다.",
+      "visual": "Two circuit diagrams: one showing two switches in series connected to a lightbulb, representing an AND gate. The other showing two switches in parallel connected to a lightbulb, representing an OR gate. Next to each circuit, show its corresponding logic gate symbol. Use high-quality Korean text for '직렬 연결 (Series Connection) - AND', '병렬 연결 (Parallel Connection) - OR'.",
+      "exam_point": "직렬 연결 = AND 게이트 (논리곱), 병렬 연결 = OR 게이트 (논리합)",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><text x=\"100\" y=\"40\" font-family=\"Arial\" font-size=\"16\" fill=\"#333\" font-weight=\"bold\">직렬 연결 (AND)</text><line x1=\"50\" y1=\"70\" x2=\"100\" y2=\"70\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"100\" cy=\"70\" r=\"5\" fill=\"#333\"/><line x1=\"100\" y1=\"70\" x2=\"150\" y2=\"70\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"70\" r=\"5\" fill=\"#333\"/><line x1=\"150\" y1=\"70\" x2=\"200\" y2=\"70\" stroke=\"#333\" stroke-width=\"2\"/><path d=\"M250 50 H270 C285 50, 285 90, 270 90 H250 V50 Z\" fill=\"#e0f2fe\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"260\" y=\"70\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">AND</text><text x=\"100\" y=\"140\" font-family=\"Arial\" font-size=\"16\" fill=\"#333\" font-weight=\"bold\">병렬 연결 (OR)</text><line x1=\"50\" y1=\"170\" x2=\"70\" y2=\"170\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"70\" y1=\"170\" x2=\"180\" y2=\"170\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"70\" y1=\"200\" x2=\"180\" y2=\"200\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"180\" y1=\"170\" x2=\"200\" y2=\"170\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"180\" y1=\"200\" x2=\"200\" y2=\"200\" stroke=\"#333\" stroke-width=\"2\"/><path d=\"M250 150 C260 140, 280 140, 290 150 C280 160, 260 160, 250 150 Z\" fill=\"#e0f2fe\" stroke=\"#333\" stroke-width=\"2\"/><path d=\"M250 150 A30 30 0 0 1 250 190 L270 190 A30 30 0 0 1 290 150 L270 150 Z\" fill=\"#e0f2fe\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"270\" y=\"170\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\" text-anchor=\"middle\">OR</text><circle cx=\"100\" cy=\"170\" r=\"5\" fill=\"#333\"/><circle cx=\"100\" cy=\"200\" r=\"5\" fill=\"#333\"/></svg>"
+    },
+    {
+      "id": 16,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_16.png",
+      "emoji": "🚗",
+      "title": "편리한 주차: 자동차용 승강기 턴테이블",
+      "content": "좁은 주차 공간에서 자동차를 효율적으로 주차하고 출차하기 위해 '주차장용 턴테이블'이 사용됩니다. 이 장치는 자동차가 승강기 위에 올라서면 자동으로 차량의 방향을 전환시켜 운전자가 항상 전진 방향으로 차를 넣고 뺄 수 있도록 도와줘요. 주차의 편리성과 공간 활용도를 크게 높여주는 똑똑한 기술입니다.",
+      "visual": "An illustration of a circular turntable with a car on it. Arrows indicate the rotation of the turntable and the forward movement of the car for entry and exit. Show how the car can always enter and exit facing forward. Labels: '주차장용 턴테이블 (Parking Turntable)', '전진 입/출고 (Forward Entry/Exit)'. Use high-quality Korean text.",
+      "exam_point": "주차장용 턴테이블, 차량 방향 전환, 항상 전진 방향 입출고, 좁은 공간 활용",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><circle cx=\"200\" cy=\"125\" r=\"80\" fill=\"#e0f2fe\" stroke=\"#333\" stroke-width=\"2\"/><rect x=\"150\" y=\"100\" width=\"100\" height=\"50\" fill=\"#a78bfa\" rx=\"5\"/><circle cx=\"160\" cy=\"110\" r=\"5\" fill=\"#333\"/><circle cx=\"160\" cy=\"140\" r=\"5\" fill=\"#333\"/><circle cx=\"240\" cy=\"110\" r=\"5\" fill=\"#333\"/><circle cx=\"240\" cy=\"140\" r=\"5\" fill=\"#333\"/><rect x=\"175\" y=\"115\" width=\"50\" height=\"20\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1\"/><text x=\"200\" y=\"127\" font-family=\"Arial\" font-size=\"10\" fill=\"#333\" text-anchor=\"middle\">CAR</text><path d=\"M200 125 L200 80\" stroke=\"#fca5a5\" stroke-width=\"2\" marker-end=\"url(#arrowhead5)\"/><text x=\"220\" y=\"70\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\">입고 방향</text><path d=\"M200 125 L200 170\" stroke=\"#60a5fa\" stroke-width=\"2\" marker-end=\"url(#arrowhead6)\"/><text x=\"220\" y=\"180\" font-family=\"Arial\" font-size=\"14\" fill=\"#333\">출고 방향</text><defs><marker id=\"arrowhead5\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#fca5a5\" /></marker><marker id=\"arrowhead6\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#60a5fa\" /></marker></defs></svg>"
+    },
+    {
+      "id": 17,
+      "style": "Expert",
+      "image": "/summaries/승강기기능사/04__승강기_개론_18_slide_17.png",
+      "emoji": "✅",
+      "title": "핵심 요약 및 학습 전략",
+      "content": "오늘 우리는 승강기 개론의 주요 개념들을 함께 살펴보았습니다. 정전기 안전, 산업안전보건법, 승강기 주요 부품의 역할 등 시험에 자주 출제되는 중요한 내용들을 다시 한번 정리해 보세요. 반복 학습과 문제풀이를 통해 지식을 더욱 단단하게 만들고, 자신감을 가지고 다음 단계로 나아가세요!",
+      "visual": "A visually appealing summary slide with a large checkmark icon. Around it, smaller icons representing key topics covered: a shield for safety, a gear for components, a droplet for hydraulics, and a ruler for measurements. A stylized 'brain' or 'knowledge' icon at the center. Use high-quality Korean text for '핵심 요약 (Key Summary)', '학습 전략 (Learning Strategy)'.",
+      "exam_point": "전체 내용 복습, 관련 기출문제 풀이, 수치 및 기능에 대한 정확한 이해",
+      "svg": ""
+    }
+  ]
+}

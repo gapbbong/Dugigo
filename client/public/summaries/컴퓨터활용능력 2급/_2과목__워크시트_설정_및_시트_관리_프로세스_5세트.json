@@ -1,0 +1,238 @@
+{
+  "subject": "컴퓨터활용능력 2급",
+  "unit": "[2과목] 워크시트 설정 및 시트 관리 프로세스",
+  "set": 5,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_1.png",
+      "emoji": "📊",
+      "title": "차트 수정: 종류, 행/열 전환, 구성 요소",
+      "content": "차트를 수정하는 것은 데이터의 시각적 표현 방식을 바꾸는 중요한 작업입니다. 차트 종류 변경은 차트의 기본 형태를 바꾸는 것이고, 행/열 전환은 X축과 범례 데이터의 위치를 서로 바꾸는 것입니다. 또한, 세로 축 보조 눈금이나 범례 위치 조정을 통해 세부적인 디자인을 변경할 수 있습니다. 헷갈리기 쉬운 개념들을 정확히 구분하는 것이 중요해요!",
+      "visual": "A before-and-after chart comparison. The 'before' chart is a clustered column chart with a legend at the bottom. The 'after' chart is a stacked column chart with a legend at the top. An arrow points from 'before' to 'after', with labels indicating '차트 종류 변경 (누적 세로 막대형)', '행/열 전환', and '범례 위치 변경 (상단)'. A red 'X' mark is next to a description '세로 축 보조 눈금 없음'. Korean text in high quality font.",
+      "exam_point": "차트 종류(누적/묶은), 행/열 전환(X축↔범례), 보조 눈금(미세 선) vs 보조 축(새로운 축) 구분. 틀린 설명으로 '보조 눈금 추가'가 자주 출제됩니다.",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_2.png",
+      "emoji": "➕",
+      "title": "데이터 개수 세기: COUNT 계열 함수",
+      "content": "엑셀에서 특정 조건에 맞는 셀의 개수를 세는 함수는 다양합니다. COUNTBLANK는 범위 내 '비어 있는 셀'의 개수를 찾아줍니다. COUNT는 오직 '숫자 데이터(날짜/시간 포함)'만 들어 있는 셀의 개수를 세는 반면, COUNTA는 '비어 있지 않은 모든 셀' (숫자, 문자 모두 포함)의 개수를 세어줍니다. 이 세 함수를 정확히 구분하는 것이 핵심이에요!",
+      "visual": "A visual representation of an Excel range A1:A7 with various data types: text, empty cells, numbers. Three thought bubbles above the range, labeled 'COUNTBLANK (빈 칸 세기)', 'COUNT (숫자만 세기)', 'COUNTA (모두 세기)'. Lines connect the bubbles to the relevant cells they would count. Korean text in high quality font.",
+      "exam_point": "COUNT: 숫자만, COUNTA: 비어있지 않은 모든 셀, COUNTBLANK: 빈 셀만. 텍스트 셀은 COUNT에서 제외됩니다.",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_3.png",
+      "emoji": "🔍",
+      "title": "조건부 평균: DAVERAGE 함수",
+      "content": "DAVERAGE 함수는 '데이터베이스(전체 표)'에서 설정한 '조건'에 맞는 데이터들만 골라 '평균'을 계산하는 강력한 함수입니다. 마치 '특정 조건을 만족하는 사람들만 모아 평균 키를 재는 것'과 같아요. 인수는 '전체 범위(제목 포함)', '평균을 구할 필드', '조건 범위' 순서로 입력합니다. 특히 첫 번째 인수에는 반드시 필드명(제목)을 포함해야 해요!",
+      "visual": "A diagram illustrating the DAVERAGE function. A large table (database) is at the center. Three arrows point to it from outside, labeled '데이터 범위 (A4:E10)', '평균 필드 ('수확량' 또는 4)', '조건 범위 (A1:C2)'. The condition range shows '품종', '지역', and '사과', '서울' as an example. An arrow points out from the table to a result box '평균값 (12 또는 15)'. Korean text in high quality font.",
+      "exam_point": "DAVERAGE(전체 범위(제목포함), 필드, 조건범위)의 정확한 인수 순서와 범위 지정. 조건 범위의 제목 포함 여부와 AND/OR 조건 (같은 행 = AND, 다른 행 = OR) 구분이 중요합니다.",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_4.png",
+      "emoji": "🔒",
+      "title": "셀 참조의 마법: 혼합 참조",
+      "content": "엑셀에서 수식을 다른 셀로 복사할 때, 셀 주소가 어떻게 변할지 결정하는 것이 '참조'입니다. 달러($) 기호는 '자물쇠'와 같아서, $가 붙은 행이나 열은 수식을 복사해서 옮기더라도 절대 변하지 않고 고정됩니다. 예를 들어, 'A$1'은 행만 고정되고 열은 변하며, '$B1'은 열만 고정되고 행은 변합니다. 이 원리를 이해하면 복잡한 수식도 쉽게 다룰 수 있어요.",
+      "visual": "A grid representing an Excel sheet. Cell D1 contains '=A$1+$B1'. An arrow points from D1 to D3. Below D3, there's a thought bubble showing the resulting formula '=A$1+$B3' and a calculation 'A1(80) + B3(70) = 150'. Visual cues like a small lock icon next to $1 and $B. Korean text in high quality font.",
+      "exam_point": "$가 붙은 행/열은 고정, $가 없는 행/열은 복사 방향(이동한 칸 수)에 따라 상대적으로 변경됩니다. 복사 경로를 정확히 파악해야 합니다.",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_5.png",
+      "emoji": "🏷️",
+      "title": "사용자 지정 서식: 텍스트 vs 숫자",
+      "content": "셀 서식의 '사용자 지정'은 데이터 표시 방식을 내 마음대로 꾸밀 수 있는 강력한 기능입니다. 이때 중요한 것은 '어떤 데이터 종류에 어떤 기호를 쓰느냐'입니다. `@` 기호는 셀에 입력된 '문자(텍스트)' 데이터를 나타내며, `0`, `#`, `G/표준` 등은 '숫자' 데이터를 나타낼 때 사용됩니다. 문자에 숫자용 기호를 사용하면 의도한 대로 표시되지 않으니 주의해야 합니다.",
+      "visual": "Two columns: '입력 값' and '표시 형식'. In '입력 값' column: '김철수' (text) and '100' (number). In '표시 형식' column: '@님' (resulting in '김철수님'), 'G/표준\"원\"' (resulting in '100원'). Arrows connect input to format to output. Symbols `@`, `0`, `#`, `G/표준` are prominently displayed. Korean text in high quality font.",
+      "exam_point": "문자 데이터에는 `@` (골뱅이), 숫자 데이터에는 `0`, `#`, `G/표준`을 사용합니다. 한글은 따옴표 없이 입력해도 자동 적용됩니다.",
+      "svg": ""
+    },
+    {
+      "id": 6,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_6.png",
+      "emoji": "🗓️",
+      "title": "사용자 지정 서식: 날짜와 요일 표시",
+      "content": "날짜 데이터를 원하는 형식으로 표시하고 싶을 때도 사용자 지정 서식을 활용합니다. 특히 요일을 표시하는 방법이 자주 출제돼요. 한글 요일을 나타낼 때는 `a`를 사용하고, 영문 요일을 나타낼 때는 `d`를 사용합니다. `a`가 3개면 '목'처럼 한 글자로, 4개면 '목요일'처럼 세 글자로 표시되고, `d`도 마찬가지로 개수에 따라 영문 약어(Thu) 또는 전체 이름(Thursday)으로 표시됩니다.",
+      "visual": "A table showing date format codes and their examples. Columns: '코드', '설명', '예시'. Rows: 'aaa' -> '한 글자 한글 요일' -> '목', 'aaaa' -> '세 글자 한글 요일' -> '목요일', 'ddd' -> '세 글자 영문 요일' -> 'Thu', 'dddd' -> '전체 영문 요일' -> 'Thursday'. Korean text in high quality font.",
+      "exam_point": "a: 한글 요일 (aaa=한 글자, aaaa=세 글자), d: 영문 요일 (ddd=약어, dddd=전체). 월(`m`) 표시도 유사하게 출제됩니다.",
+      "svg": ""
+    },
+    {
+      "id": 7,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_7.png",
+      "emoji": "🔢",
+      "title": "Excel 고급 옵션: 소수점 자동 삽입",
+      "content": "엑셀의 '소수점 자동 삽입' 기능은 숫자를 입력할 때 번거롭게 소수점을 찍을 필요 없이 자동으로 위치를 조정해주는 편리한 기능입니다. '위치' 설정값이 양수이면 입력한 숫자의 끝에서 왼쪽으로 소수점을 이동시키고 (숫자가 작아짐), 음수이면 오른쪽으로 0을 추가하여 숫자를 크게 만듭니다. 이 기능은 단순히 보여지는 형식이 아니라, '값 자체'를 변화시킨다는 점을 기억하세요!",
+      "visual": "A simple diagram: '입력 숫자: 5'. An arrow points to '소수점 자동 삽입 (위치: 3)'. Another arrow points to '결과: 0.005'. Below, a small note: '양수(3) = 왼쪽 3칸 이동'. Next to it, another note: '음수(-3) = 오른쪽 3칸 이동 (예: 5000)'. Korean text in high quality font.",
+      "exam_point": "위치값 양수 (+)는 소수점 왼쪽 이동 (숫자 작아짐), 음수 (-)는 소수점 오른쪽 이동 및 0 추가 (숫자 커짐). 값 자체가 변함.",
+      "svg": ""
+    },
+    {
+      "id": 8,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_8.png",
+      "emoji": "⌨️",
+      "title": "데이터 입력 및 워크시트 제어 단축키",
+      "content": "엑셀에서 데이터를 빠르고 정확하게 입력하고 화면을 제어하는 단축키는 작업 효율을 크게 높여줍니다. <Alt>+<Enter>는 한 셀 안에서 강제로 줄을 바꿀 때 사용하며, <Ctrl>+<Enter>는 선택한 여러 셀에 동일한 데이터를 한 번에 입력할 때 사용합니다. <Ctrl>+마우스 휠은 화면 확대/축소, <Shift>+<Enter>는 커서를 위쪽 셀로 이동시킵니다. 이 단축키들은 실기에서도 필수예요!",
+      "visual": "Four icons with short descriptions: 'Alt + Enter' with a text box showing two lines of text; 'Ctrl + Enter' with multiple selected cells filling with the same text; 'Ctrl + 휠' with a magnifying glass icon; 'Shift + Enter' with an arrow pointing up from a cell. Korean text in high quality font.",
+      "exam_point": "Alt+Enter (셀 내 줄 바꿈), Ctrl+Enter (동일 데이터 일괄 입력), Ctrl+마우스 휠 (확대/축소), Shift+Enter (커서 위 이동), ScrollLock (포인터 고정, 화면 이동). 열 너비 좁을 때 숫자는 `#####` 표시, 문자는 잘림.",
+      "svg": ""
+    },
+    {
+      "id": 9,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_9.png",
+      "emoji": "➡️",
+      "title": "셀 이동 및 복사 (마우스 드래그)",
+      "content": "엑셀에서 마우스를 이용한 셀 이동과 복사는 매우 직관적입니다. <Ctrl> 키를 누른 채 셀 테두리를 드래그하면 선택 영역이 '복사'됩니다. 반면, <Shift> 키를 누른 채 드래그하면 선택 영역이 다른 셀 사이로 '이동'하면서 삽입됩니다. 이 두 키의 역할을 정확히 구분해야 합니다. 또한, 오피스 클립보드는 최대 24개의 항목을 기억하여 붙여넣을 수 있다는 점도 기억하세요!",
+      "visual": "Two main sections: '복사 (Ctrl + 드래그)' with an icon of two overlapping documents and a hand dragging a selection, and '이동 (Shift + 드래그)' with an icon of a hand dragging a selection into an empty space. A small note about '클립보드: 24개 항목 저장' is at the bottom. Korean text in high quality font.",
+      "exam_point": "Ctrl+드래그(복사), Shift+드래그(이동/삽입). 클립보드는 최대 24개 항목 저장 가능. Ctrl+X는 이동(잘라내기).",
+      "svg": ""
+    },
+    {
+      "id": 10,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_10.png",
+      "emoji": "⬆️",
+      "title": "데이터 오름차순 정렬의 우선순위",
+      "content": "엑셀에서 데이터를 오름차순으로 정렬할 때는 일정한 규칙이 있습니다. 가장 먼저 '숫자' 데이터가 정렬되고, 이어서 '문자' 데이터가 정렬됩니다. 그다음으로 '논리값(FALSE, TRUE)'이 정렬되는데, 이때 FALSE가 TRUE보다 먼저 옵니다. 마지막으로 '오류값'이 정렬되며, 빈 셀은 어떤 정렬 방식에서든 항상 가장 뒤에 위치합니다. 이 순서를 정확히 암기해야 해요!",
+      "visual": "A vertical flow diagram showing the sorting order: '숫자 (0, 1)' -> '문자 (A)' -> '논리값 (FALSE, TRUE)' -> '오류값 (#VALUE!)'. A separate box at the bottom indicates '빈 셀: 항상 마지막'. Korean text in high quality font.",
+      "exam_point": "오름차순 정렬 순서: 숫자 → 문자 → 논리값 (FALSE → TRUE) → 오류값. 빈 셀은 항상 맨 마지막에 옵니다.",
+      "svg": ""
+    },
+    {
+      "id": 11,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_11.png",
+      "emoji": "🗂️",
+      "title": "[보기] 탭의 [창] 그룹 기능",
+      "content": "엑셀 [보기] 탭의 [창] 그룹은 현재 열려 있는 엑셀 '통합 문서(파일 전체)'의 표시 형태를 제어하는 기능을 모아둔 곳입니다. '숨기기'를 누르면 현재 활성화된 통합 문서 전체가 화면에서 사라집니다. '나란히 보기'는 여러 통합 문서를 좌우 또는 위아래로 배치하여 비교할 때 유용하며, '모두 정렬'은 열려 있는 모든 창을 한 번에 정리합니다. 이 기능들은 특정 워크시트가 아닌 통합 문서 전체에 적용됩니다.",
+      "visual": "Icons representing '나란히 보기', '숨기기', '모두 정렬'. A large label '통합 문서 (파일 전체) 제어' emphasizes the scope. A red 'X' next to a '특정 시트 숨기기' icon to clarify the difference. Korean text in high quality font.",
+      "exam_point": "[창] 그룹 기능의 대상은 '통합 문서(파일)'이지, 특정 '워크시트'가 아닙니다. 숨기기도 통합 문서 전체를 숨깁니다.",
+      "svg": ""
+    },
+    {
+      "id": 12,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_12.png",
+      "emoji": "↔️",
+      "title": "창 나누기 vs 틀 고정",
+      "content": "'창 나누기'와 '틀 고정'은 모두 많은 양의 데이터를 볼 때 화면을 효율적으로 분할해주는 기능입니다. 하지만 둘 사이에는 중요한 차이점이 있어요. '창 나누기'는 구분선을 마우스로 드래그하여 원하는 위치로 자유롭게 이동할 수 있지만, '틀 고정'은 한번 설정하면 구분선을 이동시킬 수 없습니다. 또한, 두 기능 모두 화면 보기에만 영향을 줄 뿐, 인쇄 시에는 적용되지 않습니다.",
+      "visual": "A comparison table. Column 1: '특징'. Column 2: '창 나누기'. Column 3: '틀 고정'. Rows: '구분선 이동', '인쇄 적용 여부', '최대 분할'. '창 나누기': '마우스 드래그로 이동 가능', '인쇄 안 됨', '2개 또는 4개'. '틀 고정': '이동 불가 (재설정 필요)', '인쇄 안 됨', '2개 또는 4개'. Korean text in high quality font.",
+      "exam_point": "창 나누기는 구분선 이동 가능, 틀 고정은 불가능. 두 기능 모두 인쇄와는 무관하며, 화면 보기에만 영향을 줍니다. 창 구분선 더블클릭으로 취소 가능.",
+      "svg": ""
+    },
+    {
+      "id": 13,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_13.png",
+      "emoji": "🛑",
+      "title": "엑셀 수식 오류 메시지 파헤치기",
+      "content": "엑셀에서 수식을 잘못 입력하면 다양한 오류 메시지가 나타납니다. 이 오류 메시지들은 수식의 문제점을 알려주는 '진단 코드'와 같아요. #REF!는 수식에서 참조하던 셀이 삭제되었거나 유효하지 않을 때 발생합니다. #VALUE!는 잘못된 데이터 형식이나 인수를 사용했을 때, #DIV/0!은 0으로 나눌 때, #NAME?는 함수 이름을 잘못 입력했을 때 나타납니다. 각 오류의 원인을 정확히 아는 것이 중요해요.",
+      "visual": "A list of common Excel error messages with their corresponding causes. '#REF! (참조 오류)' -> '참조 셀이 삭제되거나 이동', '#VALUE! (값 오류)' -> '잘못된 데이터 형식/인수', '#DIV/0! (나누기 오류)' -> '0 또는 빈 셀로 나누기', '#NAME? (이름 오류)' -> '함수 이름 오타/텍스트 따옴표 누락'. Korean text in high quality font.",
+      "exam_point": "#REF!: 참조 셀 삭제/이동. #VALUE!: 잘못된 인수/데이터 형식. #DIV/0!: 0으로 나누기. #NAME?: 함수명 오타/텍스트 따옴표 누락. 열 너비 부족 시 `#####`는 오류가 아닙니다.",
+      "svg": ""
+    },
+    {
+      "id": 14,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_14.png",
+      "emoji": "🔗",
+      "title": "다른 시트 참조 및 증감률 공식",
+      "content": "다른 워크시트의 셀을 수식으로 참조할 때는 '시트명!셀주소' 형식을 사용합니다. 이때 시트 이름과 셀 주소 사이를 '느낌표(!)'로 구분해야 해요. 다른 엑셀 파일(통합 문서)을 참조할 때는 대괄호(`[]`)를 사용합니다. 증감률을 계산하는 공식은 '(올해 재고비용 - 작년 재고비용) / 작년 재고비용'입니다. 분모에 항상 '기준(작년)' 값을 넣는 것이 핵심이에요!",
+      "visual": "A formula '=(C4 - '1월'!E4) / '1월'!E4 * 100' is displayed. Below it, an illustration with two sheet tabs, '현재 시트' and '1월 시트'. An arrow from '현재 시트' points to C4, and another arrow points from C4 to '1월 시트' E4, emphasizing the '!' for sheet reference. A small note: '시트 참조: !', '파일 참조: [ ]'. Korean text in high quality font.",
+      "exam_point": "다른 시트 참조는 '시트명!셀주소', 다른 파일 참조는 '[파일이름]시트명!셀주소'. 증감률 공식은 (현재-과거)/과거입니다.",
+      "svg": ""
+    },
+    {
+      "id": 15,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_15.png",
+      "emoji": "🖨️",
+      "title": "페이지 레이아웃: 머리글/바닥글 옵션",
+      "content": "[페이지 레이아웃] 보기에서는 인쇄될 모양을 보면서 머리글/바닥글을 직관적으로 편집할 수 있습니다. 이때 '문서에 맞게 배율 조정'은 워크시트의 인쇄 배율이 변할 때 머리글/바닥글의 크기도 자동으로 조절하는 기능입니다. 이는 '여백을 충분히 확보하는 것'과는 관련이 없습니다. 여백을 조정하고 싶다면 [페이지 설정] 대화상자의 [여백] 탭에서 직접 수치를 변경해야 해요.",
+      "visual": "Two distinct icons or text labels: '문서에 맞게 배율 조정' with a resize/zoom icon, and '페이지 여백에 맞추기' with an alignment icon. An 'X' sign is over '배율 조정 = 여백 확보' concept. A thought bubble shows '배율: 글자 크기, 여백: 정렬 위치'. Korean text in high quality font.",
+      "exam_point": "문서에 맞게 배율 조정은 글자 크기 조정, 페이지 여백에 맞추기는 정렬 위치 조정. 둘 다 여백 확보와는 다릅니다. 머리글/바닥글 편집 시 상황별 탭이 나타납니다.",
+      "svg": ""
+    },
+    {
+      "id": 16,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_16.png",
+      "emoji": "📜",
+      "title": "[페이지 설정] 대화상자 - 시트 탭",
+      "content": "[페이지 설정] 대화상자의 [시트] 탭은 인쇄 영역 설정, 반복할 행/열 지정, 그리고 메모(노트)나 눈금선 같은 워크시트 내부 데이터의 인쇄 방식을 결정하는 중요한 곳입니다. 이 탭에서 '메모'를 시트 끝에 모아서 인쇄할지, 화면에 보이는 대로 인쇄할지를 선택할 수 있습니다. 또한, '숨겨진 행이나 열'은 인쇄 영역에 포함되어 있더라도 절대 인쇄되지 않는다는 점을 기억하세요!",
+      "visual": "A screenshot or diagram of the '페이지 설정' dialog, specifically highlighting the '시트' tab. Within the tab, options like '메모/노트 인쇄 위치', '눈금선', '행/열 머리글', '반복할 행/열' are shown. A large 'X' mark is next to a text '숨겨진 행/열 인쇄'. Korean text in high quality font.",
+      "exam_point": "시트 탭에서 메모(노트) 인쇄 위치, 눈금선 인쇄 여부, 반복할 행/열 설정. 숨겨진 행/열은 인쇄되지 않습니다. 간단하게 인쇄 (그래픽 제외).",
+      "svg": ""
+    },
+    {
+      "id": 17,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_17.png",
+      "emoji": "📄",
+      "title": "워크시트 인쇄 관련 기본 설정",
+      "content": "엑셀의 인쇄 기능은 매우 다양하지만, 몇 가지 기본 원칙을 알아두면 실수를 줄일 수 있습니다. 예를 들어, 인쇄 부수는 전체 인쇄 작업에 대해 한 번에 설정하는 것이지, '각 페이지마다 다르게' 설정할 수는 없습니다. [시트] 탭에서는 행/열 머리글이나 눈금선 인쇄 여부, 그리고 매 페이지 상단에 반복할 '인쇄 제목(반복할 행/열)'을 설정할 수 있습니다. 이 기능들을 잘 활용하면 원하는 형태로 인쇄물을 만들 수 있어요.",
+      "visual": "A general print dialog box. Highlight '인쇄 부수' with a note '전체 인쇄에 적용'. Icons for '행/열 머리글 인쇄', '눈금선 인쇄', '인쇄 제목 (반복할 행/열)' are displayed, indicating they are configurable. A red 'X' next to a '페이지별 인쇄 부수 다르게' option. Korean text in high quality font.",
+      "exam_point": "인쇄 부수는 페이지별로 다르게 설정 불가. [시트] 탭에서 행/열 머리글, 눈금선, 인쇄 제목(반복할 행/열), 메모 인쇄 여부 설정 가능. 인쇄 미리보기에서 반복할 행/열 설정 불가능.",
+      "svg": ""
+    },
+    {
+      "id": 18,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_18.png",
+      "emoji": "🔤",
+      "title": "머리글/바닥글 편집 아이콘",
+      "content": "머리글이나 바닥글을 편집할 때 제공되는 명령 단추들은 페이지 번호, 날짜, 파일명 등 특정 정보를 자동으로 삽입해줍니다. 이때 각 아이콘이 어떤 기능을 하는지 정확히 알아야 해요. 특히 엑셀 로고(X)가 그려진 문서 모양 아이콘은 '파일 이름 삽입' 기능을 수행하고, 문서 아래쪽에 작은 탭이 표시된 모양의 아이콘은 '시트 이름 삽입' 기능을 합니다. 이 둘을 혼동하지 않도록 주의하세요!",
+      "visual": "A set of icons commonly found in the Header/Footer Tools tab. 'X' (Excel logo) icon labeled '파일 이름 삽입'. A sheet icon with a tab at the bottom labeled '시트 이름 삽입'. Other icons like '#' for '페이지 번호 삽입', a clock for '시간 삽입', and a picture icon for '그림 삽입'. Korean text in high quality font.",
+      "exam_point": "파일 이름(&[파일]) 아이콘과 시트 이름(&[탭]) 아이콘 구분. 페이지 번호(#)와 전체 페이지 수, 날짜, 시간 등 기본 아이콘 기능 암기.",
+      "svg": ""
+    },
+    {
+      "id": 19,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_19.png",
+      "emoji": "🎯",
+      "title": "데이터 역산의 마법: 목표값 찾기",
+      "content": "'목표값 찾기'는 '결과값(목표)은 알고 있는데, 그 결과를 만들기 위한 입력값(원인)을 모를 때 사용하는 역산 기능'입니다. 마치 '내가 원하는 점수는 아는데, 그걸 위해 몇 문제 더 맞춰야 할지 계산하는 것'과 같아요. 설정 대화상자에서 '수식 셀(결과)'과 '찾는 값(목표)', 그리고 '값을 바꿀 셀(원인)'을 지정합니다. 이때 '값을 바꿀 셀'은 반드시 하나의 셀만 지정할 수 있습니다.",
+      "visual": "A diagram of the '목표값 찾기' dialog box. Three fields: '수식 셀 ($E$4)' -> '평균', '찾는 값 (40)', '값을 바꿀 셀 ($B$4)' -> '노트북 판매량'. Arrows connect these to a central 'Goal Seek' process. A key message: '결과를 위한 원인 찾기'. Korean text in high quality font.",
+      "exam_point": "목표값 찾기는 결과(수식 셀)를 알고 원인(값을 바꿀 셀)을 찾는 기능. '값을 바꿀 셀'은 반드시 '하나의 셀'이어야 하며, 수식이 아닌 값을 입력해야 합니다. '찾는 값'은 숫자 상수만 입력 가능.",
+      "svg": ""
+    },
+    {
+      "id": 20,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_20.png",
+      "emoji": "🎨",
+      "title": "조건부 서식: 행 전체에 색칠하기",
+      "content": "조건부 서식을 사용하여 특정 조건에 맞는 '행 전체'에 서식을 적용하려면 '혼합 참조'를 정확하게 사용해야 합니다. 수식 작성 시 '=$B2'와 같이 '열 이름 앞에만 달러($) 기호'를 붙여야 합니다. 이렇게 하면 서식이 옆 칸으로 이동할 때도 항상 B열과 C열의 값을 참조할 수 있고, 아래 행으로 내려가면서 각 행의 조건에 맞게 서식이 적용됩니다. 열에만 $를 붙이는 것이 핵심이에요!",
+      "visual": "An Excel table with 'EXCEL 점수 (B열)' and 'ACCESS 점수 (C열)'. A conditional formatting rule is shown: '=$B2+$C2<=170'. A red dotted line highlights '행 전체' for the formatted rows. An arrow points to the formula and highlights '$B' and '$C'. Korean text in high quality font.",
+      "exam_point": "조건부 서식으로 '행 전체' 서식 지정 시, 수식은 '=$열번호행번호' (예: =$B2) 형식으로 작성해야 합니다. 절대 참조는 모든 셀이 특정 셀만 참조하게 만듭니다.",
+      "svg": ""
+    },
+    {
+      "id": 21,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_5_slide_21.png",
+      "emoji": "🛡️",
+      "title": "매크로 보안 설정 이해하기",
+      "content": "매크로는 엑셀 작업을 자동화하여 편리하게 해주지만, 악성 코드에 이용될 수도 있어 '보안 설정'이 중요합니다. 엑셀 파일을 열었을 때 '보안 경고' 노란색 메시지 바와 함께 '콘텐츠 사용' 버튼이 나타난다면, 이는 '모든 매크로 제외(알림 표시)' 설정이 적용된 것입니다. 이 설정은 매크로 실행을 일단 차단하되, 사용자에게 실행 여부를 알려주고 선택권을 줍니다. 엑셀의 기본 보안 설정이기도 해요.",
+      "visual": "An Excel screenshot showing a yellow '보안 경고' message bar at the top, with text '매크로를 사용할 수 없도록 설정했습니다. 콘텐츠 사용' and a clickable '콘텐츠 사용' button. Below, a list of macro security options: '모든 매크로 제외(알림 표시)' checked, '모든 매크로 포함' unchecked. Korean text in high quality font.",
+      "exam_point": "보안 경고 메시지바와 '콘텐츠 사용' 버튼은 '모든 매크로 제외(알림 표시)' 설정. 엑셀의 기본 보안 설정. 매크로 파일 확장자는 `.xlsm`.",
+      "svg": ""
+    }
+  ]
+}

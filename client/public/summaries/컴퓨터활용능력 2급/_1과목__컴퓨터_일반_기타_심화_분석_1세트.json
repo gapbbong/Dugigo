@@ -1,0 +1,117 @@
+{
+  "subject": "컴퓨터활용능력 2급",
+  "unit": "[1과목] 컴퓨터 일반 기타 심화 분석",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_1과목__컴퓨터_일반_기타_심화_분석_1_slide_1.png",
+      "emoji": "💡",
+      "title": "환영합니다! 컴활 2급 핵심 이론, 완벽 정리!",
+      "content": "국내 최고의 IT/기술 자격증 교육 전문가와 함께 컴퓨터활용능력 2급 '컴퓨터 일반 기타 심화 분석' 단원을 정복해 봐요. 핵심 개념을 쉽고 빠르게 익혀 시험에서 고득점을 받을 수 있도록 도와드릴게요. 준비되셨나요? 그럼 지금부터 함께 출발해볼까요! 🚀",
+      "visual": "A vibrant digital classroom with a smiling, confident female instructor gesturing towards a large interactive screen displaying '컴퓨터활용능력 2급' and '컴퓨터 일반'. The classroom is modern and brightly lit, with stylized tech icons floating around. Korean text in high quality font.",
+      "exam_point": "컴퓨터 일반 과목의 핵심 이론과 고득점 전략을 학습합니다.",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_1과목__컴퓨터_일반_기타_심화_분석_1_slide_2.png",
+      "emoji": "🖨️",
+      "title": "레이저 프린터: 빠르고 조용한 인쇄의 왕!",
+      "content": "레이저 프린터는 복사기처럼 정전기를 이용해 가루 잉크(토너)를 종이에 찍어내는 방식이에요. 때리는 방식이 아니라서 소음이 적고, 한 페이지를 통째로 빠르게 인쇄하죠. 해상도도 높고, 인쇄 속도는 PPM(Page Per Minute)으로 측정해요. 📄",
+      "visual": "A sleek, modern laser printer actively printing pages. Steam or light trails emanate from the printing tray to symbolize speed and precision. In the background, a small icon of a photocopier is visible, linking the two. Korean text in high quality font on screen: '레이저 프린터', '빠른 속도', '토너 사용'.",
+      "exam_point": "비충격식, 토너 사용, 빠른 속도, 높은 해상도, 속도 단위 PPM. '드럼식, 체인식, 밴드식'은 라인 프린터(충격식)에 해당함.",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_1과목__컴퓨터_일반_기타_심화_분석_1_slide_3.png",
+      "emoji": "↔️",
+      "title": "정보 전송 방식: 데이터의 소통 방식 3가지",
+      "content": "데이터가 오가는 방식은 크게 세 가지가 있어요. 라디오처럼 한 방향으로만 듣는 '단방향', 무전기처럼 번갈아가며 말하는 '반이중', 그리고 전화기처럼 동시에 주고받는 '전이중' 방식이죠. 각 방식은 데이터의 흐름과 동시성에 차이가 있답니다. 🛣️",
+      "visual": "Three distinct lanes on a highway, each representing a data transmission mode. The first lane has cars only going in one direction (simplex). The second lane has cars alternating directions, using a stoplight (half-duplex). The third lane has cars going in both directions simultaneously (full-duplex). Each lane has a label in Korean.",
+      "exam_point": "단방향(Simplex) - TV, 라디오. 반이중(Half-Duplex) - 무전기. 전이중(Full-Duplex) - 전화기, LAN. 예시와 연결하여 암기!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g transform=\"translate(20, 30)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"60\" rx=\"8\" fill=\"#E0F7FA\" stroke=\"#00BCD4\" stroke-width=\"1\"/><path d=\"M10 30 L100 30\" stroke=\"#26C6DA\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/><text x=\"55\" y=\"20\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#37474F\">단방향 (Simplex)</text><text x=\"55\" y=\"40\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#607D8B\">(TV, 라디오)</text></g><g transform=\"translate(145, 30)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"60\" rx=\"8\" fill=\"#FFFDE7\" stroke=\"#FFEB3B\" stroke-width=\"1\"/><path d=\"M10 25 L100 25\" stroke=\"#FFD54F\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/><path d=\"M100 35 L10 35\" stroke=\"#FFD54F\" stroke-width=\"3\" marker-end=\"url(#arrow)\" opacity=\"0.5\"/><text x=\"55\" y=\"20\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#37474F\">반이중 (Half-Duplex)</text><text x=\"55\" y=\"40\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#607D8B\">(무전기)</text></g><g transform=\"translate(270, 30)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"60\" rx=\"8\" fill=\"#E8F5E9\" stroke=\"#4CAF50\" stroke-width=\"1\"/><path d=\"M10 25 L100 25\" stroke=\"#66BB6A\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/><path d=\"M100 35 L10 35\" stroke=\"#66BB6A\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/><text x=\"55\" y=\"20\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#37474F\">전이중 (Full-Duplex)</text><text x=\"55\" y=\"40\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#607D8B\">(전화기, LAN)</text></g><defs><marker id=\"arrow\" markerWidth=\"8\" markerHeight=\"8\" refX=\"5\" refY=\"3\" orient=\"auto\" markerUnits=\"strokeWidth\"><path d=\"M0,0 L0,6 L6,3 z\" fill=\"#37474F\"/></marker></defs></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_1과목__컴퓨터_일반_기타_심화_분석_1_slide_4.png",
+      "emoji": "🌐",
+      "title": "근거리 통신망 (LAN): 내 손안의 작은 네트워크",
+      "content": "LAN은 학교나 사무실처럼 가까운 공간에서 컴퓨터들이 데이터를 빠르게 주고받고 자원을 공유하는 통신망이에요. 전송 거리가 짧아 신호 감쇄가 적고 에러가 낮다는 장점이 있죠. 주로 전화기처럼 동시에 송수신이 가능한 '전이중' 방식을 사용한답니다. 🏠",
+      "visual": "A stylized network diagram showing multiple computers, a printer, and a server connected within a small office or home environment. Wires connect the devices, and small data packets flow between them. A label 'LAN' is prominently displayed in the center. Korean text in high quality font: '데이터 공유', '빠른 속도'.",
+      "exam_point": "Local Area Network, 자원 공유, 고속 전송, 낮은 에러율, 주로 전이중(Full-Duplex) 방식. WAN(광역 통신망)과 비교하여 기억.",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_1과목__컴퓨터_일반_기타_심화_분석_1_slide_5.png",
+      "emoji": "⏱️",
+      "title": "컴퓨터 연산 속도 단위: 찰나의 순간을 재다",
+      "content": "컴퓨터가 얼마나 빨리 계산하는지는 아주 작은 시간 단위로 측정해요. 밀리초(ms)보다 마이크로초(µs)가 빠르고, 마이크로초보다 나노초(ns)가, 나노초보다 피코초(ps)가 더 빠르답니다. 숫자가 작아질수록 연산 속도는 더욱 빨라져요! 마치 마라톤 선수들의 기록처럼, 찰나의 순간을 쪼개서 누가 더 빨리 도착하는지 재는 것과 같아요. 💨",
+      "visual": "A visual representation of a timeline with shrinking segments. From left to right: a larger segment labeled 'ms', then smaller 'µs', even smaller 'ns', and finally the tiniest 'ps', with an arrow indicating 'faster'. Each segment has a small clock icon. Korean text in high quality font: '밀리초', '마이크로초', '나노초', '피코초'.",
+      "exam_point": "속도 순서 (느린 것 → 빠른 것): 밀리초(ms) > 마이크로초(µs) > 나노초(ns) > 피코초(ps). 암기법: '밀-마-나-피' (fs, as도 참고).",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"125\" x2=\"350\" y2=\"125\" stroke=\"#90A4AE\" stroke-width=\"2\"/><polygon points=\"350,125 340,120 340,130\" fill=\"#90A4AE\"/><text x=\"355\" y=\"125\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#37474F\" alignment-baseline=\"middle\">빠른 속도</text><g transform=\"translate(50,0)\"><rect x=\"0\" y=\"100\" width=\"80\" height=\"50\" rx=\"5\" fill=\"#FFEBEE\" stroke=\"#EF5350\" stroke-width=\"1\"/><text x=\"40\" y=\"125\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"16\" fill=\"#C62828\">ms</text><text x=\"40\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#C62828\">밀리초</text></g><g transform=\"translate(130,0)\"><rect x=\"0\" y=\"100\" width=\"70\" height=\"50\" rx=\"5\" fill=\"#FFF3E0\" stroke=\"#FF9800\" stroke-width=\"1\"/><text x=\"35\" y=\"125\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"16\" fill=\"#EF6C00\">μs</text><text x=\"35\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#EF6C00\">마이크로초</text></g><g transform=\"translate(200,0)\"><rect x=\"0\" y=\"100\" width=\"60\" height=\"50\" rx=\"5\" fill=\"#E8F5E9\" stroke=\"#4CAF50\" stroke-width=\"1\"/><text x=\"30\" y=\"125\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"16\" fill=\"#388E3C\">ns</text><text x=\"30\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#388E3C\">나노초</text></g><g transform=\"translate(260,0)\"><rect x=\"0\" y=\"100\" width=\"50\" height=\"50\" rx=\"5\" fill=\"#E3F2FD\" stroke=\"#2196F3\" stroke-width=\"1\"/><text x=\"25\" y=\"125\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"16\" fill=\"#1976D2\">ps</text><text x=\"25\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#1976D2\">피코초</text></g></svg>"
+    },
+    {
+      "id": 6,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_1과목__컴퓨터_일반_기타_심화_분석_1_slide_6.png",
+      "emoji": " 분류",
+      "title": "컴퓨터 분류 기준: 무엇이 다를까요?",
+      "content": "컴퓨터는 크게 세 가지 기준으로 나눌 수 있어요. 어떤 데이터를 다루는지(디지털/아날로그), 얼마나 강력한 성능을 가졌는지(슈퍼/마이크로), 그리고 어떤 목적으로 쓰이는지(범용/특수용)에 따라서요. 컴퓨터를 백과사전처럼 종류별로 나누는 기준이라고 생각하면 돼요. 📚",
+      "visual": "A tree-like diagram showing 'Computer Classification' at the root, branching out into three main categories: '데이터 취급 형태', '처리 능력', '사용 용도'. Each branch has a unique icon representing its concept (e.g., data icon, power icon, target icon). Korean text in high quality font.",
+      "exam_point": "분류 기준 3가지: ①데이터 취급 형태, ②처리 능력, ③사용 용도. 각 분류 기준별 컴퓨터 종류를 정확히 연결하는 것이 중요.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"125\" y=\"20\" width=\"150\" height=\"40\" rx=\"10\" fill=\"#BBDEFB\" stroke=\"#2196F3\" stroke-width=\"1\"/><text x=\"200\" y=\"45\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"16\" fill=\"#1976D2\">컴퓨터 분류</text><line x1=\"200\" y1=\"60\" x2=\"200\" y2=\"80\" stroke=\"#90CAF9\" stroke-width=\"2\"/><path d=\"M200,80 L80,110 L80,150 L200,180 L320,150 L320,110 Z\" fill=\"none\" stroke=\"#90CAF9\" stroke-width=\"2\"/><rect x=\"30\" y=\"100\" width=\"100\" height=\"50\" rx=\"8\" fill=\"#E8F5E9\" stroke=\"#4CAF50\" stroke-width=\"1\"/><text x=\"80\" y=\"120\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#388E3C\">데이터 취급 형태</text><text x=\"80\" y=\"138\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"10\" fill=\"#388E3C\">(디지털, 아날로그, 하이브리드)</text><rect x=\"150\" y=\"100\" width=\"100\" height=\"50\" rx=\"8\" fill=\"#FFF3E0\" stroke=\"#FF9800\" stroke-width=\"1\"/><text x=\"200\" y=\"120\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#EF6C00\">처리 능력</text><text x=\"200\" y=\"138\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"10\" fill=\"#EF6C00\">(슈퍼, 메인, 미니, 마이크로)</text><rect x=\"270\" y=\"100\" width=\"100\" height=\"50\" rx=\"8\" fill=\"#FFEBEE\" stroke=\"#EF5350\" stroke-width=\"1\"/><text x=\"320\" y=\"120\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#C62828\">사용 용도</text><text x=\"320\" y=\"138\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"10\" fill=\"#C62828\">(범용, 특수)</text></svg>"
+    },
+    {
+      "id": 7,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_1과목__컴퓨터_일반_기타_심화_분석_1_slide_7.png",
+      "emoji": "🔢",
+      "title": "데이터 취급 형태별 분류: 디지털, 아날로그, 하이브리드",
+      "content": "컴퓨터는 다루는 데이터 형태에 따라 디지털, 아날로그, 하이브리드로 분류돼요. 디지털은 숫자를 세듯이 정확한 데이터를, 아날로그는 온도처럼 연속적인 값을 처리하고, 하이브리드는 이 둘을 합친 방식이랍니다. 디지털은 주사위 눈금처럼 딱 떨어지는 값, 아날로그는 물의 흐름처럼 끊김 없는 값이라고 생각해보세요. 💧",
+      "visual": "Three distinct thought bubbles or processing units. One unit has '0' and '1' binary code, representing Digital. Another has a wavy line representing a continuous signal, for Analog. The third unit shows a blend of binary code and wavy lines, representing Hybrid. Each unit is labeled in Korean. Korean text in high quality font.",
+      "exam_point": "데이터 형태별 분류: 디지털 컴퓨터(이산 데이터), 아날로그 컴퓨터(연속 데이터), 하이브리드 컴퓨터(혼합). '데스크톱'은 처리 능력에 따른 분류.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g transform=\"translate(30, 30)\"><rect x=\"0\" y=\"0\" width=\"100\" height=\"100\" rx=\"10\" fill=\"#E3F2FD\" stroke=\"#2196F3\" stroke-width=\"1\"/><path d=\"M20 30 L80 30 M20 50 L80 50 M20 70 L80 70\" stroke=\"#1976D2\" stroke-width=\"2\"/><circle cx=\"30\" cy=\"30\" r=\"5\" fill=\"#1976D2\"/><circle cx=\"50\" cy=\"50\" r=\"5\" fill=\"#1976D2\"/><circle cx=\"70\" cy=\"70\" r=\"5\" fill=\"#1976D2\"/><text x=\"50\" y=\"120\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#1976D2\">디지털</text><text x=\"50\" y=\"140\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"10\" fill=\"#1976D2\">(이산 데이터)</text></g><g transform=\"translate(150, 30)\"><rect x=\"0\" y=\"0\" width=\"100\" height=\"100\" rx=\"10\" fill=\"#FFF3E0\" stroke=\"#FF9800\" stroke-width=\"1\"/><path d=\"M10 50 Q30 30 50 50 T90 50\" stroke=\"#EF6C00\" stroke-width=\"3\" fill=\"none\"/><text x=\"50\" y=\"120\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#EF6C00\">아날로그</text><text x=\"50\" y=\"140\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"10\" fill=\"#EF6C00\">(연속 데이터)</text></g><g transform=\"translate(270, 30)\"><rect x=\"0\" y=\"0\" width=\"100\" height=\"100\" rx=\"10\" fill=\"#E8F5E9\" stroke=\"#4CAF50\" stroke-width=\"1\"/><path d=\"M20 20 L80 20 M20 40 L80 40\" stroke=\"#388E3C\" stroke-width=\"2\"/><path d=\"M10 70 Q30 50 50 70 T90 70\" stroke=\"#388E3C\" stroke-width=\"3\" fill=\"none\"/><text x=\"50\" y=\"120\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#388E3C\">하이브리드</text><text x=\"50\" y=\"140\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"10\" fill=\"#388E3C\">(혼합)</text></g></svg>"
+    },
+    {
+      "id": 8,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_1과목__컴퓨터_일반_기타_심화_분석_1_slide_8.png",
+      "emoji": "⚖️",
+      "title": "디지털 vs 아날로그: 핵심 차이점 비교",
+      "content": "디지털 컴퓨터는 계산기처럼 이산적인 데이터를 논리 회로로 처리하며 범용으로 쓰여요. 반면, 아날로그 컴퓨터는 온도계처럼 연속적인 데이터를 증폭 회로로 처리하며 미적분 계산에 특화된 특수 목적용이죠. 디지털 컴퓨터는 꼼꼼한 계산 전문가, 아날로그 컴퓨터는 유연한 측정 전문가와 같아요. 📊",
+      "visual": "A two-column comparison table, clearly distinguishing Digital and Analog computers across key characteristics: Data (이산 vs 연속), Circuit (논리 회로 vs 증폭 회로), Operation (산술/논리 vs 미적분), Purpose (범용 vs 특수 목적), Program (필요 vs 불필요). Use icons next to each characteristic for clarity. Korean text in high quality font.",
+      "exam_point": "디지털: 이산 데이터, 논리 회로, 산술/논리 연산, 범용, 프로그램 필요. 아날로그: 연속 데이터, 증폭 회로, 미적분 연산, 특수 목적, 프로그램 불필요. 특징 교차 출제 주의!",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><rect x=\"20\" y=\"20\" width=\"360\" height=\"210\" rx=\"10\" fill=\"#FFFFFF\" stroke=\"#CFD8DC\" stroke-width=\"1\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"230\" stroke=\"#CFD8DC\" stroke-width=\"1\"/><line x1=\"20\" y1=\"60\" x2=\"380\" y2=\"60\" stroke=\"#CFD8DC\" stroke-width=\"1\"/><text x=\"110\" y=\"40\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"16\" fill=\"#37474F\">디지털 (Digital)</text><text x=\"290\" y=\"40\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"16\" fill=\"#37474F\">아날로그 (Analog)</text><text x=\"110\" y=\"80\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#607D8B\">이산 데이터 (Discrete)</text><text x=\"290\" y=\"80\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#607D8B\">연속 데이터 (Continuous)</text><text x=\"110\" y=\"110\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#607D8B\">논리 회로 (Logic Circuit)</text><text x=\"290\" y=\"110\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#607D8B\">증폭 회로 (Amplifier Circuit)</text><text x=\"110\" y=\"140\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#607D8B\">산술/논리 연산 (Arithmetic/Logic)</text><text x=\"290\" y=\"140\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#607D8B\">미적분 연산 (Calculus)</text><text x=\"110\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#607D8B\">범용 (General Purpose)</text><text x=\"290\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#607D8B\">특수 목적 (Special Purpose)</text><text x=\"110\" y=\"200\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#607D8B\">프로그램 필요 (Program Needed)</text><text x=\"290\" y=\"200\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#607D8B\">프로그램 불필요 (No Program)</text></svg>"
+    },
+    {
+      "id": 9,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_1과목__컴퓨터_일반_기타_심화_분석_1_slide_9.png",
+      "emoji": "🌟",
+      "title": "처리 능력별 분류: 크기별 컴퓨터 세상 & 웨어러블!",
+      "content": "컴퓨터는 성능에 따라 슈퍼컴퓨터부터 메인프레임, 미니컴퓨터를 거쳐 우리 주변의 마이크로컴퓨터(PC)까지 다양해요. 특히 웨어러블 컴퓨터는 스마트 워치처럼 몸에 착용하고 다니는 초소형 마이크로컴퓨터랍니다. 슈퍼컴퓨터는 거대한 두뇌를 가진 국가대표 박사님, 웨어러블은 손목에 찬 똑똑한 비서 같아요. ⌚",
+      "visual": "A hierarchy diagram showing different computer types by size and power, from a huge supercomputer at the top (with a powerful brain icon) down to smaller computers like mainframes, mini-computers, and finally a tiny smartwatch representing a wearable computer at the bottom. Arrows indicate decreasing size/power. Korean text in high quality font.",
+      "exam_point": "처리 능력 순: 슈퍼컴퓨터 > 메인프레임 컴퓨터 > 미니컴퓨터 > 마이크로컴퓨터(워크스테이션, 데스크톱, 노트북, 웨어러블). 웨어러블은 '착용형' 컴퓨터.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g><rect x=\"130\" y=\"20\" width=\"140\" height=\"35\" rx=\"8\" fill=\"#FFEBEE\" stroke=\"#EF5350\" stroke-width=\"1\"/><text x=\"200\" y=\"42\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#C62828\">슈퍼컴퓨터</text><line x1=\"200\" y1=\"55\" x2=\"200\" y2=\"70\" stroke=\"#90A4AE\" stroke-width=\"1\" marker-end=\"url(#arrow_down)\"/></g><g><rect x=\"110\" y=\"70\" width=\"180\" height=\"35\" rx=\"8\" fill=\"#FFF3E0\" stroke=\"#FF9800\" stroke-width=\"1\"/><text x=\"200\" y=\"92\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#EF6C00\">메인프레임 컴퓨터</text><line x1=\"200\" y1=\"105\" x2=\"200\" y2=\"120\" stroke=\"#90A4AE\" stroke-width=\"1\" marker-end=\"url(#arrow_down)\"/></g><g><rect x=\"90\" y=\"120\" width=\"220\" height=\"35\" rx=\"8\" fill=\"#E8F5E9\" stroke=\"#4CAF50\" stroke-width=\"1\"/><text x=\"200\" y=\"142\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#388E3C\">미니컴퓨터</text><line x1=\"200\" y1=\"155\" x2=\"200\" y2=\"170\" stroke=\"#90A4AE\" stroke-width=\"1\" marker-end=\"url(#arrow_down)\"/></g><g><rect x=\"70\" y=\"170\" width=\"260\" height=\"35\" rx=\"8\" fill=\"#E3F2FD\" stroke=\"#2196F3\" stroke-width=\"1\"/><text x=\"200\" y=\"192\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#1976D2\">마이크로컴퓨터</text><text x=\"200\" y=\"210\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"10\" fill=\"#1976D2\">(데스크톱, 워크스테이션, 웨어러블)</text></g><defs><marker id=\"arrow_down\" markerWidth=\"8\" markerHeight=\"8\" refX=\"3\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#90A4AE\" transform=\"rotate(90 3 3)\"/></marker></defs></svg>"
+    },
+    {
+      "id": 10,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_1과목__컴퓨터_일반_기타_심화_분석_1_slide_10.png",
+      "emoji": "💨",
+      "title": "SATA 인터페이스: HDD/SSD 고속 연결의 비결",
+      "content": "SATA는 하드디스크를 컴퓨터에 연결하는 방식 중 하나로, 데이터를 한 줄로 빠르게 주고받는 '직렬' 방식이에요. 옛날 방식보다 전송 속도가 훨씬 빠르고, 컴퓨터를 끄지 않고도 장치를 연결할 수 있는 '핫 플러그인' 기능을 지원하죠. SATA는 데이터를 빠르게 나르는 고속도로 직렬 차선과 같아요. 🏎️",
+      "visual": "A stylized diagram showing a SATA cable connecting a hard drive (HDD/SSD icon) to a motherboard (circuit board icon). The SATA cable is depicted as a thin, single line with an arrow indicating fast, serial data flow. A small icon showing a plug being inserted while a device is running represents 'hot plug-in'. Korean text in high quality font: 'SATA (Serial ATA)', '직렬 방식', '핫 플러그인'.",
+      "exam_point": "SATA = Serial ATA (직렬 방식), 빠른 전송 속도, 핫 플러그인 지원, CMOS 자동 설정, 얇은 케이블로 통풍에 유리. IDE(PATA)는 병렬 방식.",
+      "svg": ""
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "subject": "정보처리기능사",
+  "unit": "05. 애플리케이션 테스트 관리",
+  "set": 3,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/05__애플리케이션_테스트_관리_3_slide_1.png",
+      "emoji": "📁",
+      "title": "DOS 파일/디렉터리 기본 명령어 (내부 명령어)",
+      "content": "도스의 내부 명령어는 COMMAND.COM에 내장되어 있어 별도의 파일 없이 즉시 실행됩니다. 이는 컴퓨터의 파일과 폴더를 정리하고 다루는 기본적인 도구들에 비유할 수 있습니다. DIR은 파일 목록을, CD는 디렉터리 이동을, REN은 파일 이름 변경을, COPY는 파일 복사를 담당합니다. DEL은 파일을 삭제하는 데 사용됩니다.",
+      "visual": "A stylized computer screen showing DOS prompt with commands like DIR, CD, REN, COPY, DEL. Icons representing files and folders are arranged neatly. Emphasize 'Internal Commands' in Korean text in high quality font.",
+      "exam_point": "DIR(파일 목록), CD(디렉터리 변경), REN(파일 이름 변경), COPY(파일 복사), DEL(파일 삭제)은 내부 명령어.",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/05__애플리케이션_테스트_관리_3_slide_2.png",
+      "emoji": "🛠️",
+      "title": "DOS 고급/외부 명령어 (디스크/디렉터리 관리)",
+      "content": "도스의 외부 명령어는 별도의 실행 파일이 필요하며, 디스크나 파일 시스템을 더 깊이 관리합니다. 이는 컴퓨터의 디스크와 폴더를 더 강력하게 관리하는 전문가 도구에 비유할 수 있습니다. CHKDSK는 디스크 오류를 검사하고 수정하며, XCOPY는 하위 디렉터리까지 포함하여 파일들을 복사합니다. DELTREE는 하위 디렉터리와 파일을 모두 포함하여 디렉터리를 한 번에 삭제할 수 있는 강력한 명령어입니다.",
+      "visual": "A magnifying glass inspecting a hard drive icon with 'CHKDSK' text, a flowing arrow representing 'XCOPY' moving files and folders, and a trash bin icon with 'DELTREE' text indicating complete deletion. Emphasize 'External Commands' in Korean text in high quality font.",
+      "exam_point": "CHKDSK(디스크 검사), XCOPY(하위 디렉터리 포함 복사), DELTREE(하위 디렉터리 포함 삭제). XCOPY와 CHKDSK는 외부 명령어.",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/05__애플리케이션_테스트_관리_3_slide_3.png",
+      "emoji": "⚙️",
+      "title": "DOS 환경 설정 파일 (CONFIG.SYS)",
+      "content": "CONFIG.SYS 파일은 MS-DOS 시스템이 부팅될 때 필요한 초기 환경을 설정하는 데 사용됩니다. 이는 컴퓨터가 처음 켜질 때 필요한 설정들을 담은 메모장에 비유할 수 있습니다. 장치 드라이버를 로드하거나 시스템 버퍼, 파일 핸들 개수 등을 지정할 수 있습니다. 이 파일은 반드시 부팅 드라이브의 루트 디렉터리에 존재해야 시스템이 인식하여 적용합니다.",
+      "visual": "A computer booting up, with a small text file icon labeled 'CONFIG.SYS' at the root of a drive structure. Gears and setup icons around it. Emphasize 'Boot Configuration' and 'Root Directory' in Korean text in high quality font.",
+      "exam_point": "CONFIG.SYS는 부팅 시 초기 환경 설정, 반드시 부팅 드라이브 루트 디렉터리에 존재.",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/05__애플리케이션_테스트_관리_3_slide_4.png",
+      "emoji": "📜",
+      "title": "UNIX 기본 명령어 (파일/디렉터리 탐색)",
+      "content": "UNIX 시스템에서 pwd(Print Working Directory) 명령어는 현재 작업 중인 디렉터리의 전체 경로를 화면에 출력하여 사용자의 현재 위치를 알려줍니다. 이는 도서관에서 내 위치를 확인하고 책 목록을 보는 방법에 비유할 수 있습니다. ls(list) 명령어는 현재 디렉터리에 어떤 파일이나 하위 디렉터리가 있는지 목록을 나열해줍니다. 이 명령어들은 UNIX 환경에서 파일 시스템을 탐색하는 기본 도구입니다.",
+      "visual": "A terminal window displaying UNIX commands 'pwd' showing a path and 'ls' showing a list of files and directories. Icons representing a map for 'pwd' and a list for 'ls'. Emphasize 'UNIX Commands' in Korean text in high quality font.",
+      "exam_point": "pwd(현재 디렉터리 절대 경로 출력), ls(파일/디렉터리 목록 나열). UNIX 편집기는 ed, vi, ex.",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/05__애플리케이션_테스트_관리_3_slide_5.png",
+      "emoji": "🗂️",
+      "title": "UNIX 파일 시스템 유형",
+      "content": "UNIX 파일 시스템은 데이터를 효율적으로 저장하고 관리하기 위해 여러 유형으로 파일을 구분합니다. 이는 도서관의 책을 일반 도서, 잡지, 참고 자료 등으로 분류하는 방식과 유사합니다. 주요 유형으로는 일반적인 문서나 실행 파일인 '일반 파일', 다른 파일을 포함하는 '디렉터리 파일', 그리고 입출력 장치와 상호작용하는 '특수 파일(장치 파일)'이 있습니다. '슈퍼유저 파일'과 같은 별도의 파일 시스템 유형은 존재하지 않습니다.",
+      "visual": "Three distinct icons representing: a document for '일반 파일', a folder for '디렉터리 파일', and a printer/scanner for '특수 파일 (장치 파일)'. A cross mark over an imaginary '슈퍼유저 파일' icon. Emphasize 'UNIX File System Types' in Korean text in high quality font.",
+      "exam_point": "UNIX 파일 시스템 유형: 일반 파일, 디렉터리 파일, 특수 파일(장치 파일). 슈퍼유저 파일은 해당 없음.",
+      "svg": ""
+    },
+    {
+      "id": 6,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/05__애플리케이션_테스트_관리_3_slide_6.png",
+      "emoji": "🔄",
+      "title": "언어 번역기와 프로그램 실행 과정",
+      "content": "인터프리터는 소스 코드를 한 줄씩 즉시 번역하고 실행하는 반면, 컴파일러는 전체 코드를 한 번에 목적 코드로 변환합니다. 이는 외국어 편지를 번역하고, 주소록을 찾아 우체통에 넣어 보내는 과정에 비유할 수 있습니다. 변환된 목적 코드는 링커에 의해 필요한 다른 코드와 연결되어 실행 파일이 되고, 이 실행 파일은 로더에 의해 메모리에 적재되어 실제 실행됩니다. 로더는 언어 번역기에 해당하지 않습니다.",
+      "visual": "A flowchart showing '소스 코드' -> '컴파일러/인터프리터' -> '목적 코드' -> '링커' -> '실행 파일' -> '로더' -> '실행'. Each step should have a distinct icon. Korean text in high quality font for labels.",
+      "exam_point": "인터프리터(한 줄씩 번역 실행), 컴파일러→(목적 코드)→링커→로더→실행. 로더는 번역기가 아님.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"14\"><rect x=\"20\" y=\"30\" width=\"80\" height=\"30\" rx=\"5\" fill=\"#e0f2fe\" stroke=\"#38bcf8\" stroke-width=\"1\"/><text x=\"60\" y=\"50\" text-anchor=\"middle\" fill=\"#0284c7\">소스 코드</text><path d=\"M100 45 L120 45\" stroke=\"#6b7280\" stroke-width=\"1\" marker-end=\"url(#arrowhead)\"/><rect x=\"120\" y=\"30\" width=\"100\" height=\"30\" rx=\"5\" fill=\"#e0f2fe\" stroke=\"#38bcf8\" stroke-width=\"1\"/><text x=\"170\" y=\"50\" text-anchor=\"middle\" fill=\"#0284c7\">컴파일러/인터프리터</text><path d=\"M220 45 L240 45\" stroke=\"#6b7280\" stroke-width=\"1\" marker-end=\"url(#arrowhead)\"/><rect x=\"240\" y=\"30\" width=\"80\" height=\"30\" rx=\"5\" fill=\"#e0f2fe\" stroke=\"#38bcf8\" stroke-width=\"1\"/><text x=\"280\" y=\"50\" text-anchor=\"middle\" fill=\"#0284c7\">목적 코드</text><path d=\"M320 45 L340 45\" stroke=\"#6b7280\" stroke-width=\"1\" marker-end=\"url(#arrowhead)\"/><rect x=\"340\" y=\"30\" width=\"60\" height=\"30\" rx=\"5\" fill=\"#e0f2fe\" stroke=\"#38bcf8\" stroke-width=\"1\"/><text x=\"370\" y=\"50\" text-anchor=\"middle\" fill=\"#0284c7\">링크</text><path d=\"M370 60 L370 80 L290 80 L290 100\" stroke=\"#6b7280\" stroke-width=\"1\" marker-end=\"url(#arrowhead)\"/><rect x=\"260\" y=\"100\" width=\"80\" height=\"30\" rx=\"5\" fill=\"#e0f2fe\" stroke=\"#38bcf8\" stroke-width=\"1\"/><text x=\"300\" y=\"120\" text-anchor=\"middle\" fill=\"#0284c7\">실행 파일</text><path d=\"M280 130 L280 150 L200 150 L200 170\" stroke=\"#6b7280\" stroke-width=\"1\" marker-end=\"url(#arrowhead)\"/><rect x=\"160\" y=\"170\" width=\"80\" height=\"30\" rx=\"5\" fill=\"#e0f2fe\" stroke=\"#38bcf8\" stroke-width=\"1\"/><text x=\"200\" y=\"190\" text-anchor=\"middle\" fill=\"#0284c7\">로더</text><path d=\"M200 200 L200 220 L120 220 L120 230\" stroke=\"#6b7280\" stroke-width=\"1\" marker-end=\"url(#arrowhead)\"/><rect x=\"80\" y=\"220\" width=\"80\" height=\"30\" rx=\"5\" fill=\"#e0f2fe\" stroke=\"#38bcf8\" stroke-width=\"1\"/><text x=\"120\" y=\"240\" text-anchor=\"middle\" fill=\"#0284c7\">실행</text></g><defs><marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#6b7280\"/></marker></defs></svg>"
+    },
+    {
+      "id": 7,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/05__애플리케이션_테스트_관리_3_slide_7.png",
+      "emoji": "🔍",
+      "title": "애플리케이션 테스트 전략 및 도구",
+      "content": "화이트박스 테스트는 프로그램 내부 구조와 코드를 분석하고, 블랙박스 테스트는 소프트웨어의 외부 기능에만 초점을 맞춥니다. 이는 제품을 검사할 때, 겉모습만 보는지(블랙박스), 내부 부품까지 해부하는지(화이트박스)에 비유할 수 있습니다. 스텁은 하향식 통합 테스트 시 아직 개발되지 않은 하위 모듈을 임시로 대체하는 모듈입니다. 살충제 패러독스는 같은 테스트를 반복하면 새로운 결함이 발견되지 않는 현상을 말하며, 테스트 케이스의 지속적인 업데이트가 필요함을 강조합니다.",
+      "visual": "A split image: one side showing internal code structure with gears (White-box testing), the other side showing an external user interface (Black-box testing). A 'stub' module icon plugging into a larger system. A magnifying glass with an 'X' over it for pesticide paradox. Korean text in high quality font for key terms.",
+      "exam_point": "화이트박스(내부 구조, 경로), 블랙박스(외부 기능, 경계값 분석). 스텁(하향식 테스트 시 미완성 모듈 대체). 살충제 패러독스(동일 테스트 반복 시 결함 발견 감소).",
+      "svg": ""
+    },
+    {
+      "id": 8,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/05__애플리케이션_테스트_관리_3_slide_8.png",
+      "emoji": "⚠️",
+      "title": "사용자 인터페이스(UI) 설계 원칙 (오류 메시지)",
+      "content": "좋은 사용자 인터페이스(UI)는 사용자에게 명확하고 친절한 정보를 제공해야 합니다. 이는 누군가에게 잘못을 알려줄 때, 말뿐 아니라 표정, 손짓 등을 사용해 더 잘 전달하는 것과 같습니다. 특히 오류 메시지를 설계할 때는 텍스트 정보에만 의존하지 않고, 색상, 소리, 진동 등 다양한 시청각적 요소를 적절히 활용하여 사용자가 오류 상황을 즉각적으로 인지하고 이해할 수 있도록 해야 합니다. 단순히 글자만으로는 충분하지 않을 수 있습니다.",
+      "visual": "A UI error message dialog box. The message itself is in clear text, with an additional visual alert (e.g., a red border or exclamation mark icon) and a speaker icon suggesting an audible alert. Emphasize 'Clarity' and 'Multi-sensory Feedback' in Korean text in high quality font.",
+      "exam_point": "UI 오류 메시지: 텍스트 외 시청각 요소(색상, 소리) 활용하여 명확하게 인지하도록 설계.",
+      "svg": ""
+    },
+    {
+      "id": 9,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/05__애플리케이션_테스트_관리_3_slide_9.png",
+      "emoji": "🚦",
+      "title": "교착 상태 (Deadlock) 발생 조건",
+      "content": "교착 상태(Deadlock)는 여러 프로세스가 서로 점유하고 있는 자원을 기다리며 무한히 대기하는 현상입니다. 이는 여러 자동차가 교차로에서 서로 길을 양보하지 않고 멈춰버려 아무도 움직이지 못하는 상황에 비유할 수 있습니다. 교착 상태가 발생하기 위한 필요 충분 조건은 상호 배제, 점유와 대기, 비선점, 마지막으로 환형 대기(순환 대기)의 네 가지입니다. 이 조건들이 모두 충족될 때 교착 상태가 발생할 수 있습니다.",
+      "visual": "Four interlocking gears or arrows forming a cycle, each labeled with one of the deadlock conditions: 상호 배제, 점유와 대기, 비선점, 환형 대기. A 'Deadlock' warning sign in the center. Korean text in high quality font for conditions.",
+      "exam_point": "교착 상태 발생 조건: 상호 배제, 점유와 대기, 비선점, 환형 대기. '선점'은 교착 상태를 해결하는 방법 중 하나이지 발생 조건이 아님.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"14\"><circle cx=\"100\" cy=\"70\" r=\"30\" fill=\"#a7f3d0\" stroke=\"#10b981\" stroke-width=\"1\"/><text x=\"100\" y=\"75\" text-anchor=\"middle\" fill=\"#047857\">상호 배제</text><circle cx=\"300\" cy=\"70\" r=\"30\" fill=\"#a7f3d0\" stroke=\"#10b981\" stroke-width=\"1\"/><text x=\"300\" y=\"75\" text-anchor=\"middle\" fill=\"#047857\">점유와 대기</text><circle cx=\"100\" cy=\"180\" r=\"30\" fill=\"#a7f3d0\" stroke=\"#10b981\" stroke-width=\"1\"/><text x=\"100\" y=\"185\" text-anchor=\"middle\" fill=\"#047857\">비선점</text><circle cx=\"300\" cy=\"180\" r=\"30\" fill=\"#a7f3d0\" stroke=\"#10b981\" stroke-width=\"1\"/><text x=\"300\" y=\"185\" text-anchor=\"middle\" fill=\"#047857\">환형 대기</text><path d=\"M130 70 L270 70\" stroke=\"#6b7280\" stroke-width=\"2\" marker-end=\"url(#arrowhead_1)\"/><path d=\"M300 100 L300 150\" stroke=\"#6b7280\" stroke-width=\"2\" marker-end=\"url(#arrowhead_1)\"/><path d=\"M270 180 L130 180\" stroke=\"#6b7280\" stroke-width=\"2\" marker-end=\"url(#arrowhead_1)\"/><path d=\"M100 150 L100 100\" stroke=\"#6b7280\" stroke-width=\"2\" marker-end=\"url(#arrowhead_1)\"/><text x=\"200\" y=\"125\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#ef4444\">DEADLOCK</text></g><defs><marker id=\"arrowhead_1\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#6b7280\"/></marker></defs></svg>"
+    },
+    {
+      "id": 10,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/05__애플리케이션_테스트_관리_3_slide_10.png",
+      "emoji": "💾",
+      "title": "백업 및 복구 전략 (RPO, 상호 계약형, 스토리지 동기화, 클라우드 백업)",
+      "content": "RPO(Recovery Point Objective)는 재해 발생 시 최대로 허용 가능한 데이터 손실 시점을 의미합니다. 이는 중요한 물건을 잃어버렸을 때, '언제까지의 상태로 되돌릴 수 있는지'와 '어떻게 복구할지'를 정하는 것과 같습니다. 상호 계약형 백업은 비슷한 기업끼리 재해 발생 시 서로의 전산 자원을 활용하도록 미리 계약하는 방식입니다. 스토리지 동기화는 실시간 데이터 복제를 통해 서버 자원 사용을 최소화하며 높은 복원력을 제공합니다. 클라우드 백업은 편리하지만, 보안 정책이나 대용량 데이터 전송 속도 등에서 제약이 있을 수 있습니다.",
+      "visual": "A timeline with 'RPO' marked as a critical point. Two interlocking hands symbolizing 'Mutual Aid Agreement'. Two servers with a synchronized data flow icon. A cloud icon with a lock and caution sign indicating 'Cloud Backup Considerations'. Korean text in high quality font for terms.",
+      "exam_point": "RPO(최대 데이터 손실 허용 시점), 상호 계약형(기업 간 자원 공유), 스토리지 동기화(실시간 복제, 서버 자원 최소화), 클라우드 백업(보안/위치/속도 제약).",
+      "svg": ""
+    },
+    {
+      "id": 11,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/05__애플리케이션_테스트_관리_3_slide_11.png",
+      "emoji": "💻",
+      "title": "시스템 운영 방식 및 인터페이스 (온라인 실시간, 시분할, CLI, GUI)",
+      "content": "온라인 실시간 시스템은 데이터가 즉각적으로 처리되고 반영되어야 하는 좌석 예약 같은 업무에 적합합니다. 시분할 시스템은 CPU 시간을 매우 짧게 나누어 여러 사용자에게 할당함으로써, 동시에 많은 사용자가 시스템을 사용하는 것처럼 느끼게 합니다. CLI(Command Line Interface)는 명령어를 직접 입력하는 방식이며, GUI(Graphical User Interface)는 아이콘이나 메뉴를 클릭하여 작업을 수행하는 방식입니다. 이는 대화 방식으로, '키보드로 직접 말하는 것'과 '아이콘을 눌러 대화하는 것'에 비유할 수 있습니다.",
+      "visual": "Four distinct sections: 1. A plane/train seat booking interface (Online Real-time). 2. A multi-user icon sharing a single CPU (Time-sharing). 3. A terminal window with text input (CLI). 4. A desktop screen with colorful icons and menus (GUI). Korean text in high quality font for each title.",
+      "exam_point": "온라인 실시간(좌석 예약 등), 시분할(CPU 시간 공유), CLI(명령어 직접 입력), GUI(아이콘/메뉴 사용).",
+      "svg": ""
+    },
+    {
+      "id": 12,
+      "style": "Expert",
+      "image": "/summaries/정보처리기능사/05__애플리케이션_테스트_관리_3_slide_12.png",
+      "emoji": "📊",
+      "title": "데이터 디스크 용량 계산",
+      "content": "데이터 디스크의 실제 필요 용량은 데이터와 백업 영역의 합계에 파일 시스템 오버헤드, 데이터 디스크 여유율, RAID 여유율 등을 모두 곱하여 계산합니다. 이는 이삿짐을 싸기 위해 총 필요한 상자 개수를 여유 공간까지 고려하여 계산하는 것과 같습니다. 이 계산은 저장 공간을 계획할 때 발생할 수 있는 추가적인 공간 요구 사항들을 미리 반영하기 위함입니다. 정확한 계산을 통해 필요한 디스크 자원을 확보할 수 있습니다.",
+      "visual": "A formula displayed prominently: (데이터 영역 + 백업 영역) × 파일 시스템 오버헤드 × 데이터 디스크 여유율 × RAID 여유율. Alongside it, icons representing a stack of data disks, a calculator, and a bar chart showing capacity. Korean text in high quality font for labels.",
+      "exam_point": "총 용량 = (데이터 영역 + 백업 영역) × 파일 시스템 오버헤드 × 데이터 디스크 여유율 × RAID 여유율. 계산식 암기 및 적용. 예: (300 + 100) * 1.1 * 1.25 * 1.3 = 715GB.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"16\" fill=\"#1a202c\"><text x=\"20\" y=\"50\">총 용량 = (데이터 영역 + 백업 영역)</text><text x=\"20\" y=\"80\">× 파일 시스템 오버헤드</text><text x=\"20\" y=\"110\">× 데이터 디스크 여유율</text><text x=\"20\" y=\"140\">× RAID 여유율</text><rect x=\"20\" y=\"170\" width=\"360\" height=\"60\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#38bcf8\" stroke-width=\"1\"/><text x=\"30\" y=\"195\" font-size=\"14\" fill=\"#0284c7\">예시: (300GB + 100GB) × 1.1 × 1.25 × 1.3</text><text x=\"30\" y=\"215\" font-size=\"18\" font-weight=\"bold\" fill=\"#0284c7\">= 715 GB</text></g></svg>"
+    }
+  ]
+}

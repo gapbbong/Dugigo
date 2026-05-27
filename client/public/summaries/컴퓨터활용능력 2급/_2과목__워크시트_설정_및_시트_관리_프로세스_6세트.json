@@ -1,0 +1,18 @@
+{
+  "subject": "컴퓨터활용능력 2급",
+  "unit": "[2과목] 워크시트 설정 및 시트 관리 프로세스",
+  "set": 6,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_6_slide_1.png",
+      "emoji": "🎯",
+      "title": "자동 필터: 원하는 데이터만 쏙쏙! 🔎",
+      "content": "자동 필터는 방대한 데이터에서 필요한 정보만 빠르게 찾아주는 강력한 도구예요. 마치 수많은 옷 중에서 내가 원하는 색깔과 사이즈의 옷만 쏙쏙 골라내는 것과 같아요. 여러 조건(열)을 설정하면 이 모든 조건을 동시에 만족하는 'AND' 방식으로 작동하며, 필터링된 결과는 눈에 보이는 데이터에만 적용됩니다. 특히, 자동 필터의 정렬 기능은 기본적으로 영문 대소문자를 구분하지 않는다는 점을 꼭 기억하세요!",
+      "visual": "An Excel spreadsheet interface with a column header showing an active filter icon (a funnel). Some rows are clearly hidden, and only specific data rows are visible. A prominent magnifying glass icon is overlaid, symbolizing filtering. Clean, modern design. Include Korean text in high quality font: '자동 필터', 'AND 조건', '대소문자 구분 안 함', '상위 10'",
+      "exam_point": "여러 열(필드) 조건 → 반드시 AND 조건\n정렬 시 영문 대·소문자 기본 구분 안 함\n필터링 결과는 보이는 셀만 대상\n자동 필터 고유 기능: 상위 10(Top 10)\n고급 필터: OR 조건 가능",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect width=\"400\" height=\"250\" rx=\"15\" fill=\"#f8fafc\"/>\n\n  <!-- Arrowhead definition -->\n  <defs>\n    <marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\">\n      <polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#666\" />\n    </marker>\n  </defs>\n\n  <!-- Original Data -->\n  <rect x=\"20\" y=\"50\" width=\"100\" height=\"60\" fill=\"#e0f2fe\" rx=\"5\" stroke=\"#90cdf4\" stroke-width=\"1\"/>\n  <text x=\"70\" y=\"85\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#222\" text-anchor=\"middle\">원본 데이터</text>\n  \n  <line x1=\"120\" y1=\"80\" x2=\"160\" y2=\"80\" stroke=\"#666\" stroke-width=\"2\" marker-end=\"url(#arrowhead)\"/>\n\n  <!-- Filter Processing (AND Condition) -->\n  <rect x=\"160\" y=\"30\" width=\"140\" height=\"100\" fill=\"#fff\" stroke=\"#90cdf4\" stroke-width=\"1\" rx=\"8\"/>\n  <text x=\"230\" y=\"55\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#3182ce\" text-anchor=\"middle\">조건 설정</text>\n  <!-- Filter Funnel Icon -->\n  <path d=\"M190 70 L270 70 L255 100 L205 100 Z M230 100 L230 115 L233 115 L233 100 Z\" fill=\"#4299e1\" stroke=\"#2b6cb0\" stroke-width=\"1\"/>\n  <text x=\"230\" y=\"85\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#fff\" text-anchor=\"middle\">AND</text>\n  \n  <line x1=\"300\" y1=\"80\" x2=\"340\" y2=\"80\" stroke=\"#666\" stroke-width=\"2\" marker-end=\"url(#arrowhead)\"/>\n\n  <!-- Filtered Result -->\n  <rect x=\"340\" y=\"50\" width=\"100\" height=\"60\" fill=\"#c6f6d5\" rx=\"5\" stroke=\"#81c784\" stroke-width=\"1\"/>\n  <text x=\"390\" y=\"85\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#222\" text-anchor=\"middle\">필터링 결과</text>\n\n  <!-- Key Points -->\n  <rect x=\"20\" y=\"145\" width=\"360\" height=\"85\" fill=\"#fff\" stroke=\"#feb2b2\" stroke-width=\"1\" rx=\"8\"/>\n  <text x=\"30\" y=\"165\" font-family=\"Arial, sans-serif\" font-size=\"13\" fill=\"#c53030\">💡 시험 핵심 💡</text>\n  <text x=\"30\" y=\"185\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#222\">• 여러 열 조건: 'AND' (고급 필터는 'OR' 가능)</text>\n  <text x=\"30\" y=\"200\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#222\">• 정렬: 영문 대소문자 기본 구분 X</text>\n  <text x=\"30\" y=\"215\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#222\">• 자동 필터 고유 기능: '상위 10'</text>\n</svg>"
+    }
+  ]
+}

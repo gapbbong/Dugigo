@@ -1,0 +1,238 @@
+{
+  "subject": "컴퓨터활용능력 2급",
+  "unit": "[2과목] 워크시트 설정 및 시트 관리 프로세스",
+  "set": 4,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_1.png",
+      "emoji": "📊",
+      "title": "차트 편집 핵심: 3차원 & 단축키",
+      "content": "차트는 워크시트의 보이는 데이터만 표시해요. 행/열을 숨기면 차트에서도 해당 데이터가 사라진답니다. 특히 3차원 차트는 다른 종류의 차트와 섞을 수 없으며, 혼합형 차트는 2차원 차트에서만 가능해요. 여러 데이터 계열을 동시에 선택해도 차트 종류는 한 번에 바꿀 수 없어요.",
+      "visual": "A simple bar chart with some hidden rows/columns. A separate 3D chart with a 'No Mix' sign. A visual representation of F11 key creating a new chart sheet and Alt+F1 creating an embedded chart. Korean text in high quality font: '3차원 차트 혼합 불가', 'F11: 새 차트 시트', 'Alt+F1: 현재 시트 삽입'.",
+      "exam_point": "✔️ 3차원 차트는 혼합형 불가 및 추세선 추가 불가. ✔️ F11 (새 차트 시트), Alt+F1 (현재 시트 삽입) 단축키 암기. ✔️ 숨겨진 데이터는 차트에 표시되지 않음.",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_2.png",
+      "emoji": "🔮",
+      "title": "가상 분석: 시나리오 & 데이터 표",
+      "content": "시나리오는 다양한 가상 상황에 따라 결과가 어떻게 변하는지 예측하는 도구예요. 이때 변경될 셀은 최대 32개까지 지정할 수 있으며, '설명'은 필수가 아닌 선택 사항이랍니다. 데이터 표는 변수의 변화에 따른 결과값을 표 형태로 보여주지만, 결과는 배열 수식으로 입력되어 부분 수정이나 삭제가 불가능해요.",
+      "visual": "A stylized representation of a spreadsheet with 'What-If Analysis' icon. A small table showing input cells (max 32) leading to an output cell. Another table with a 'Data Table' header and a '🚫Partial Edit' symbol. Korean text in high quality font: '시나리오: 변경 셀 최대 32개', '설명: 선택 사항', '데이터 표: 부분 수정/삭제 불가'.",
+      "exam_point": "✔️ 시나리오 변경 셀 최대 32개. ✔️ 시나리오 '설명'은 선택 사항. ✔️ 데이터 표는 배열 수식으로, 부분 수정/삭제 불가.",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_3.png",
+      "emoji": "🎯",
+      "title": "가상 분석: 목표값 찾기",
+      "content": "목표값 찾기는 결과값은 알지만, 그 결과를 만들기 위한 입력값을 모를 때 역으로 찾아주는 똑똑한 기능이에요. 대화 상자에서는 '수식 셀'에 결과 셀을, '찾는 값'에 목표 숫자를, '값을 바꿀 셀'에 변경될 입력 셀을 순서대로 지정해야 해요. '찾는 값'에는 직접 숫자를 입력해야 하고, 셀 주소는 사용할 수 없어요.",
+      "visual": "A diagram illustrating 'Goal Seek' flow: 'Goal Value' (e.g., 500000) -> 'Formula Cell' (e.g., G12) -> 'Changing Cell' (e.g., G3). Korean text in high quality font: '수식 셀 (결과)', '찾는 값 (목표 숫자)', '값을 바꿀 셀 (원인)', '⭐수-값-바!'.",
+      "exam_point": "✔️ 목표값 찾기 순서: 수식 셀 → 찾는 값 → 값을 바꿀 셀 (수-값-바). ✔️ '찾는 값'에는 숫자만 직접 입력 가능, 셀 주소 불가.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g transform=\"translate(50, 40)\"><rect x=\"0\" y=\"0\" width=\"100\" height=\"40\" rx=\"5\" fill=\"#e0f2f7\" stroke=\"#00a7e1\" stroke-width=\"1\"/><text x=\"50\" y=\"25\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#000\" text-anchor=\"middle\" font-weight=\"bold\">수식 셀</text></g><g transform=\"translate(150, 40)\"><rect x=\"0\" y=\"0\" width=\"100\" height=\"40\" rx=\"5\" fill=\"#e0f2f7\" stroke=\"#00a7e1\" stroke-width=\"1\"/><text x=\"50\" y=\"25\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#000\" text-anchor=\"middle\" font-weight=\"bold\">찾는 값</text></g><g transform=\"translate(250, 40)\"><rect x=\"0\" y=\"0\" width=\"100\" height=\"40\" rx=\"5\" fill=\"#e0f2f7\" stroke=\"#00a7e1\" stroke-width=\"1\"/><text x=\"50\" y=\"25\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#000\" text-anchor=\"middle\" font-weight=\"bold\">바꿀 셀</text></g><path d=\"M100 60 L150 60\" stroke=\"#888\" stroke-width=\"2\" marker-end=\"url(#arrowhead)\"/><path d=\"M250 60 L150 60\" stroke=\"#888\" stroke-width=\"2\" marker-end=\"url(#arrowhead)\" transform=\"rotate(180, 200, 60)\"/><text x=\"200\" y=\"100\" font-family=\"Arial, sans-serif\" font-size=\"18\" fill=\"#e63946\" text-anchor=\"middle\" font-weight=\"bold\">⭐ 수-값-바! ⭐</text><defs><marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#888\"/></marker></defs></svg>"
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_4.png",
+      "emoji": "🖨️",
+      "title": "페이지 설정 (인쇄 미리 보기 & 시트 탭)",
+      "content": "페이지 설정의 '시트' 탭에서는 인쇄될 눈금선, 행/열 머리글, 메모 위치 등을 정할 수 있어요. 하지만 숨겨진 행이나 열은 아무리 인쇄 영역을 넓게 잡아도 인쇄되지 않는답니다. '인쇄 미리 보기' 상태에서는 인쇄 영역이나 인쇄 제목(반복할 행/열)은 설정할 수 없고, '자동 맞춤'으로 한 페이지에 인쇄할 수 있어요.",
+      "visual": "A screenshot mockup of Excel's Page Setup dialog, highlighting the 'Sheet' tab options like 'Gridlines', 'Row and column headings', 'Print comments'. A 'No Print' icon over a hidden row. A preview window showing disabled 'Print Area' and 'Print Titles' options. Korean text in high quality font: '숨김 영역 인쇄 불가', '미리 보기에서 인쇄 제목 설정 불가', '자동 맞춤: 1페이지 인쇄'.",
+      "exam_point": "✔️ 숨겨진 행/열은 인쇄되지 않음. ✔️ [페이지 설정]-[시트] 탭에서 눈금선, 머리글, 메모 인쇄 여부 설정. ✔️ [인쇄 미리 보기]에서는 인쇄 영역/인쇄 제목 설정 불가. ✔️ 인쇄 배율 최대 400%.",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_5.png",
+      "emoji": "📝",
+      "title": "머리글/바닥글 편집",
+      "content": "머리글/바닥글 편집은 각 페이지에 반복될 정보를 넣는 기능이에요. 여기서 중요한 건 각 아이콘이 어떤 정보를 삽입하는지 정확히 아는 것이죠. 예를 들어, 시트 이름 삽입 아이콘은 엑셀 하단의 시트 탭 모양을 하고 있답니다. 파일 경로와 시트 이름 아이콘을 헷갈리지 않도록 주의하세요!",
+      "visual": "A simplified toolbar showing common Header/Footer icons: a small image icon, a # page number icon, a clock icon, a document icon for file name, a folder+document icon for file path, and a sheet tab icon for sheet name. Highlight the sheet tab icon and the file path/name icons. Korean text in high quality font: '그림 삽입', '페이지 번호', '현재 시간', '파일 경로/이름', '시트 이름'.",
+      "exam_point": "✔️ 파일 경로, 파일 이름, 시트 이름 등 각 아이콘의 기능 정확히 숙지. ✔️ '파일'과 '시트' 관련 아이콘 구분 필수. (예: 시트 이름 아이콘은 시트 탭 모양).",
+      "svg": ""
+    },
+    {
+      "id": 6,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_6.png",
+      "emoji": "⚙️",
+      "title": "매크로 기록 설정",
+      "content": "매크로 기록은 반복 작업을 자동화하는 유용한 기능이에요. 매크로 이름은 첫 글자가 문자여야 하고, 공백이나 특수문자는 사용할 수 없으며 밑줄(_)은 허용돼요. 바로 가기 키는 영문자만 가능하고, 대문자를 쓰면 Ctrl+Shift 조합이 돼요. '개인용 매크로 통합 문서'에 저장하면 모든 엑셀 문서에서 사용할 수 있답니다.",
+      "visual": "A simplified dialog box for 'Record Macro', showing fields for 'Macro name', 'Shortcut key', 'Store macro in', and 'Description'. Highlight specific rules next to each field: 'No spaces/special chars' next to name, 'Ctrl+Shift for Caps' next to shortcut, 'Personal.xlsb (all workbooks)' next to store in. Korean text in high quality font: '매크로 이름 (문자로 시작, 공백 불가)', '바로 가기 키 (대문자=Ctrl+Shift)', '저장 위치 (개인용 매크로 통합 문서)'.",
+      "exam_point": "✔️ 매크로 이름 규칙: 첫 글자 문자, 공백/특수문자 불가 ( _ 만 가능). ✔️ 바로 가기 키 대문자 입력 시 Ctrl+Shift 자동 추가. ✔️ '개인용 매크로 통합 문서'는 Personal.xlsb에 저장되어 모든 문서에서 사용 가능. ✔️ 매크로 이름 변경은 VBE에서만 가능.",
+      "svg": ""
+    },
+    {
+      "id": 7,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_7.png",
+      "emoji": "↕️",
+      "title": "정렬 및 필터의 숨김 처리",
+      "content": "엑셀에서 정렬은 데이터를 특정 기준에 맞춰 재배열하는 기능이에요. 중요한 건 '숨겨진 행이나 열'은 정렬 대상에서 제외된다는 점! 즉, 숨겨진 데이터는 정렬 시 움직이지 않아요. 정렬 기준은 최대 64개까지 설정할 수 있으며, 글꼴 색이나 셀 색 등 다양한 기준으로 정렬할 수 있답니다.",
+      "visual": "A spreadsheet snippet with some rows/columns visually 'hidden' (greyed out or with a small gap). An arrow pointing from the hidden area to a '🚫' symbol. A list of sorting criteria examples (Text, Numbers, Color, Icon). Korean text in high quality font: '숨겨진 행/열 정렬 제외', '최대 64개 기준', '색상 정렬 가능'.",
+      "exam_point": "✔️ 숨겨진 행/열은 정렬 대상에서 제외됨. ✔️ 정렬 기준 최대 64개. ✔️ 글꼴 색, 셀 색, 아이콘으로 정렬 가능. ✔️ 기본 정렬은 행 단위 (위쪽에서 아래쪽).",
+      "svg": ""
+    },
+    {
+      "id": 8,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_8.png",
+      "emoji": "🪄",
+      "title": "자동 채우기 핸들 마스터",
+      "content": "자동 채우기 핸들을 사용할 때는 선택된 셀의 개수와 Ctrl 키 사용 여부에 따라 결과가 달라져요. 숫자 1개를 선택하고 Ctrl 키를 누른 채 드래그하면 1씩 증가하고, 2개의 숫자를 선택하고 그냥 드래그하면 두 수의 차이만큼 증가해요. 하지만 2개의 숫자를 선택하고 Ctrl 키를 누르면 두 숫자의 패턴이 반복 복사된답니다.",
+      "visual": "Four small tables illustrating autofill scenarios: 1) A1=2, drag -> 2,2,2; 2) A1=2, Ctrl+drag -> 2,3,4; 3) A1=2, A2=4, drag -> 2,4,6; 4) A1=2, A2=4, Ctrl+drag -> 2,4,2. Highlight the Ctrl key effect. Korean text in high quality font: '1개 셀+Ctrl=1씩 증가', '2개 셀+그냥=차이만큼 증가', '2개 셀+Ctrl=패턴 복사'.",
+      "exam_point": "✔️ 숫자 1개 + Ctrl 드래그 = 1씩 증가. ✔️ 숫자 2개 + 그냥 드래그 = 등차수열 (차이만큼 증가). ✔️ 숫자 2개 + Ctrl 드래그 = 패턴 반복 복사. ✔️ 문자/문자 혼합은 숫자와 반대로 작동 (Ctrl 누르면 복사).",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"12\"><text x=\"20\" y=\"30\" font-weight=\"bold\">1. 숫자 1개 + Ctrl 드래그: 1씩 증가</text><rect x=\"20\" y=\"40\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"35\" y=\"55\" text-anchor=\"middle\">2</text><rect x=\"50\" y=\"40\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"65\" y=\"55\" text-anchor=\"middle\">3</text><rect x=\"80\" y=\"40\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"95\" y=\"55\" text-anchor=\"middle\">4</text><text x=\"130\" y=\"55\" font-size=\"10\" fill=\"#00a7e1\" font-weight=\"bold\">A1에 2 입력 후 Ctrl 누르고 드래그</text></g><g font-family=\"Arial, sans-serif\" font-size=\"12\"><text x=\"20\" y=\"100\" font-weight=\"bold\">2. 숫자 2개 + 그냥 드래그: 차이만큼 증가</text><rect x=\"20\" y=\"110\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"35\" y=\"125\" text-anchor=\"middle\">2</text><rect x=\"50\" y=\"110\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"65\" y=\"125\" text-anchor=\"middle\">4</text><rect x=\"80\" y=\"110\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"95\" y=\"125\" text-anchor=\"middle\">6</text><text x=\"130\" y=\"125\" font-size=\"10\" fill=\"#e63946\" font-weight=\"bold\">A1:2, A2:4 선택 후 그냥 드래그</text></g><g font-family=\"Arial, sans-serif\" font-size=\"12\"><text x=\"20\" y=\"170\" font-weight=\"bold\">3. 숫자 2개 + Ctrl 드래그: 패턴 반복</text><rect x=\"20\" y=\"180\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"35\" y=\"195\" text-anchor=\"middle\">2</text><rect x=\"50\" y=\"180\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"65\" y=\"195\" text-anchor=\"middle\">4</text><rect x=\"80\" y=\"180\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"95\" y=\"195\" text-anchor=\"middle\">2</text><text x=\"130\" y=\"195\" font-size=\"10\" fill=\"#00a7e1\" font-weight=\"bold\">A1:2, A2:4 선택 후 Ctrl 누르고 드래그</text></g></svg>"
+    },
+    {
+      "id": 9,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_9.png",
+      "emoji": "📌",
+      "title": "메모 관리 및 인쇄",
+      "content": "메모는 셀에 대한 추가 설명으로, 실제 데이터와 별개로 존재해요. 따라서 [Delete] 키로 셀 데이터를 지워도 메모는 삭제되지 않고 그대로 남아요. 메모를 지우려면 마우스 오른쪽 클릭 메뉴나 [지우기] 기능으로 '메모 지우기'를 선택해야 한답니다. [페이지 설정]의 [시트] 탭에서 메모의 인쇄 위치를 지정할 수 있어요.",
+      "visual": "A spreadsheet cell with a red triangle indicating a memo. A 'Delete' key icon with a '🚫' symbol over it when pointing to the memo. A right-click menu showing 'Delete Memo'. A Page Setup dialog screenshot highlighting 'Print comments' options (None, As displayed on sheet, At end of sheet). Korean text in high quality font: 'Delete 키로 메모 삭제 불가', '메모 삭제 메뉴 이용', '메모 인쇄 위치 설정 가능'.",
+      "exam_point": "✔️ [Delete] 키는 셀 내용만 삭제, 메모는 삭제되지 않음. ✔️ [페이지 설정]-[시트] 탭에서 메모 인쇄 위치 설정 가능 (기본은 인쇄 안 됨). ✔️ 메모는 삽입된 셀과 함께 이동하며, 서식 지정 가능.",
+      "svg": ""
+    },
+    {
+      "id": 10,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_10.png",
+      "emoji": "📑",
+      "title": "복사/붙여넣기: 상대 참조 이해",
+      "content": "엑셀의 수식은 기본적으로 '상대 참조'를 따라요. 예를 들어, '=A1'은 '나의 한 칸 위에 있는 값'을 참조하라는 의미죠. 이 셀을 다른 곳으로 복사하면, 수식도 붙여넣는 위치에 맞춰 상대적으로 변환된답니다. '선택하여 붙여넣기'에서 '모두'를 선택하면 원본 셀의 수식과 속성이 그대로 덮어씌워져요.",
+      "visual": "A diagram showing A1=100. A2 has formula '=A1'. An arrow from A2 to A3, with the formula changing from '=A1' to '=A2' upon copy/paste. Show A3's value as 100. Korean text in high quality font: 'A1: 100', 'A2: =A1 (100)', 'A3 (복사): =A2 (100)', '상대 참조 원리'.",
+      "exam_point": "✔️ 복사/붙여넣기 시 상대 참조 원리에 따라 수식 변경. ✔️ '선택하여 붙여넣기 - 모두'는 수식과 속성 모두 복사. ✔️ 절대 참조($)가 없는 한 셀 주소는 상대적으로 변환됨.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"14\"><rect x=\"50\" y=\"40\" width=\"60\" height=\"30\" stroke=\"#aaa\" fill=\"#f0f0f0\"/><text x=\"80\" y=\"60\" text-anchor=\"middle\">A1</text><rect x=\"110\" y=\"40\" width=\"80\" height=\"30\" stroke=\"#aaa\" fill=\"#fff\"/><text x=\"150\" y=\"60\" text-anchor=\"middle\">100</text></g><g font-family=\"Arial, sans-serif\" font-size=\"14\"><rect x=\"50\" y=\"80\" width=\"60\" height=\"30\" stroke=\"#aaa\" fill=\"#f0f0f0\"/><text x=\"80\" y=\"100\" text-anchor=\"middle\">A2</text><rect x=\"110\" y=\"80\" width=\"80\" height=\"30\" stroke=\"#aaa\" fill=\"#fff\"/><text x=\"150\" y=\"100\" text-anchor=\"middle\">=A1</text></g><path d=\"M150 115 L150 145\" stroke=\"#888\" stroke-width=\"2\" marker-end=\"url(#arrowhead)\"/><text x=\"150\" y=\"130\" text-anchor=\"middle\" font-size=\"12\" fill=\"#555\">복사</text><g font-family=\"Arial, sans-serif\" font-size=\"14\"><rect x=\"50\" y=\"150\" width=\"60\" height=\"30\" stroke=\"#aaa\" fill=\"#f0f0f0\"/><text x=\"80\" y=\"170\" text-anchor=\"middle\">A3</text><rect x=\"110\" y=\"150\" width=\"80\" height=\"30\" stroke=\"#aaa\" fill=\"#fff\"/><text x=\"150\" y=\"170\" text-anchor=\"middle\">=A2</text></g><text x=\"250\" y=\"100\" font-family=\"Arial, sans-serif\" font-size=\"16\" fill=\"#00a7e1\" font-weight=\"bold\">상대 참조 원리!</text><text x=\"250\" y=\"130\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#555\">A2가 A1을 참조하듯,</text><text x=\"250\" y=\"150\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#555\">A3는 A2를 참조!</text><text x=\"250\" y=\"180\" font-family=\"Arial, sans-serif\" font-size=\"14\" fill=\"#e63946\" font-weight=\"bold\">결과: A2 값인 100</text><defs><marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#888\"/></marker></defs></svg>"
+    },
+    {
+      "id": 11,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_11.png",
+      "emoji": "🔍",
+      "title": "INDEX & RANK 함수 활용",
+      "content": "INDEX 함수는 지정한 범위 내에서 행 번호와 열 번호에 해당하는 값을 찾아주는 '데이터 좌표 찾기' 함수예요. 이때 행/열 번호는 워크시트 전체가 아닌 '지정한 범위'를 기준으로 1부터 시작한다는 점이 중요해요. RANK 함수는 지정된 범위 내에서 특정 값의 순위를 구하며, 내림차순(큰 값이 1등)은 옵션 0(생략), 오름차순(작은 값이 1등)은 옵션 1을 사용해요.",
+      "visual": "A simplified table. A formula 'INDEX(B2:D9, 2, 3)' with arrows pointing to the range B2:D9, then to the 2nd row *within that range* (which is row 3 in sheet), and the 3rd column *within that range* (which is column D in sheet). Another small table for RANK.EQ showing values and their ranks. Korean text in high quality font: 'INDEX(범위, 행, 열)', '범위 내에서 1부터 시작', 'RANK.EQ(값, 범위, 0/1)', '0=내림차순, 1=오름차순'.",
+      "exam_point": "✔️ INDEX 함수는 지정된 범위 내에서 행/열 번호 기준. ✔️ RANK 함수에서 범위는 절대 참조($) 필수. ✔️ 내림차순 0(생략), 오름차순 1 옵션.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"12\"><rect x=\"40\" y=\"40\" width=\"320\" height=\"120\" stroke=\"#00a7e1\" stroke-width=\"2\" fill=\"none\" rx=\"5\"/><text x=\"10\" y=\"65\" fill=\"#888\">B</text><text x=\"10\" y=\"85\" fill=\"#888\">C</text><text x=\"10\" y=\"105\" fill=\"#888\">D</text><text x=\"10\" y=\"125\" fill=\"#888\">E</text><text x=\"10\" y=\"145\" fill=\"#888\">F</text><text x=\"10\" y=\"165\" fill=\"#888\">G</text><text x=\"55\" y=\"25\" fill=\"#888\">2</text><text x=\"95\" y=\"25\" fill=\"#888\">3</text><text x=\"135\" y=\"25\" fill=\"#888\">4</text><text x=\"175\" y=\"25\" fill=\"#888\">5</text><text x=\"215\" y=\"25\" fill=\"#888\">6</text><text x=\"255\" y=\"25\" fill=\"#888\">7</text><text x=\"295\" y=\"25\" fill=\"#888\">8</text><text x=\"335\" y=\"25\" fill=\"#888\">9</text><text x=\"60\" y=\"60\" text-anchor=\"middle\">A-001</text><text x=\"100\" y=\"60\" text-anchor=\"middle\">1500</text><text x=\"140\" y=\"60\" text-anchor=\"middle\">1700</text><text x=\"180\" y=\"60\" text-anchor=\"middle\">1860</text><text x=\"220\" y=\"60\" text-anchor=\"middle\">1450</text><text x=\"260\" y=\"60\" text-anchor=\"middle\">2320</text><text x=\"300\" y=\"60\" text-anchor=\"middle\">1000</text><text x=\"340\" y=\"60\" text-anchor=\"middle\">900</text><text x=\"60\" y=\"80\" text-anchor=\"middle\">B-001</text><text x=\"100\" y=\"80\" text-anchor=\"middle\">1000</text><text x=\"140\" y=\"80\" text-anchor=\"middle\">1750</text><text x=\"180\" y=\"80\" text-anchor=\"middle\">1700</text><text x=\"220\" y=\"80\" text-anchor=\"middle\">1000</text><text x=\"260\" y=\"80\" text-anchor=\"middle\">23200</text><text x=\"300\" y=\"80\" text-anchor=\"middle\">1000</text><text x=\"340\" y=\"80\" text-anchor=\"middle\">900</text><text x=\"60\" y=\"100\" text-anchor=\"middle\">C-001</text><text x=\"100\" y=\"100\" text-anchor=\"middle\">1000</text><text x=\"140\" y=\"100\" text-anchor=\"middle\">1750</text><text x=\"180\" y=\"100\" text-anchor=\"middle\">1700</text><text x=\"220\" y=\"100\" text-anchor=\"middle\">1000</text><text x=\"260\" y=\"100\" text-anchor=\"middle\">23200</text><text x=\"300\" y=\"100\" text-anchor=\"middle\">1000</text><text x=\"340\" y=\"100\" text-anchor=\"middle\">900</text><text x=\"60\" y=\"120\" text-anchor=\"middle\">D-001</text><text x=\"100\" y=\"120\" text-anchor=\"middle\">1000</text><text x=\"140\" y=\"120\" text-anchor=\"middle\">1750</text><text x=\"180\" y=\"120\" text-anchor=\"middle\">1700</text><text x=\"220\" y=\"120\" text-anchor=\"middle\">1000</text><text x=\"260\" y=\"120\" text-anchor=\"middle\">23200</text><text x=\"300\" y=\"120\" text-anchor=\"middle\">1000</text><text x=\"340\" y=\"120\" text-anchor=\"middle\">900</text><text x=\"60\" y=\"140\" text-anchor=\"middle\">E-001</text><text x=\"100\" y=\"140\" text-anchor=\"middle\">1000</text><text x=\"140\" y=\"140\" text-anchor=\"middle\">1750</text><text x=\"180\" y=\"140\" text-anchor=\"middle\">1700</text><text x=\"220\" y=\"140\" text-anchor=\"middle\">1000</text><text x=\"260\" y=\"140\" text-anchor=\"middle\">23200</text><text x=\"300\" y=\"140\" text-anchor=\"middle\">1000</text><text x=\"340\" y=\"140\" text-anchor=\"middle\">900</text><text x=\"40\" y=\"190\" font-weight=\"bold\" fill=\"#00a7e1\">=INDEX(B2:D9, 2, 3)</text><text x=\"40\" y=\"210\" fill=\"#555\">→ 범위 [B2:D9]의 2번째 행, 3번째 열 값</text><text x=\"40\" y=\"230\" fill=\"#e63946\" font-weight=\"bold\">결과: 23200</text></g></svg>"
+    },
+    {
+      "id": 12,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_12.png",
+      "emoji": "⁉️",
+      "title": "만능 문자 검색 (와일드카드)",
+      "content": "엑셀에서 '*'는 모든 문자를, '?'는 한 글자를 대신하는 만능 문자(와일드카드)예요. 만약 이 만능 문자 자체를 텍스트로 찾고 싶다면, 해당 문자 앞에 물결표(~) 기호를 붙여주세요. 예를 들어, '*'를 찾으려면 '~*'라고 입력해야 한답니다. 물결표 자체를 찾을 때는 '~~'를 사용해요.",
+      "visual": "A magnifying glass icon searching for '*'. A '?' icon. A 'tilde' (~) symbol next to '*' and '?' to show how to search for them as literal characters. Korean text in high quality font: '* (모든 문자)', '? (한 글자)', '찾는 방법: ~* , ~?'.",
+      "exam_point": "✔️ 만능 문자('*', '?') 자체를 찾을 때는 앞에 물결표(~)를 붙임. (예: ~*, ~?). ✔️ 물결표(~) 자체를 찾을 때는 '~~'를 입력.",
+      "svg": ""
+    },
+    {
+      "id": 13,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_13.png",
+      "emoji": "🎯",
+      "title": "고급 필터: 고유한 목록 추출",
+      "content": "고급 필터에서 '조건 범위'를 비워두면 모든 데이터를 대상으로 필터링해요. 특정 열의 고유한 목록만 추출하고 싶을 때는 [복사 위치]에 해당 필드명만 지정하고, '동일한 레코드는 하나만' 옵션을 체크하면 된답니다. 이 기능은 원본 데이터에서 중복을 제거한 유일한 값들만 뽑아낼 때 매우 유용해요.",
+      "visual": "A simplified screenshot of the Advanced Filter dialog box, showing 'Criteria range' as blank, 'Copy to' pointing to a single cell (e.g., A12 for '학과명'), and 'Unique records only' checkbox ticked. An example table with duplicate '학과명' and a filtered result table showing only unique '학과명' values. Korean text in high quality font: '조건 범위 비움 = 전체 데이터', '복사 위치에 필드명 = 해당 열만', '동일한 레코드는 하나만 = 중복 제거'.",
+      "exam_point": "✔️ 조건 범위가 비어있으면 모든 데이터 대상. ✔️ '복사 위치'에 필드명만 지정 시 해당 열만 추출. ✔️ '동일한 레코드는 하나만' 옵션은 중복 제거 후 고유 목록 추출.",
+      "svg": ""
+    },
+    {
+      "id": 14,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_14.png",
+      "emoji": "↔️",
+      "title": "VLOOKUP & HLOOKUP 함수",
+      "content": "VLOOKUP과 HLOOKUP은 표에서 원하는 값을 찾아주는 함수로, 표의 방향에 따라 선택해요. VLOOKUP은 데이터가 세로(열) 방향으로 나열될 때, HLOOKUP은 가로(행) 방향으로 나열될 때 사용하죠. 마지막 인수는 '정확히 일치(FALSE/0)' 또는 '유사 일치(TRUE/1)'를 선택하며, 학점이나 세율처럼 범위로 찾는 경우는 주로 유사 일치(TRUE)를 사용해요.",
+      "visual": "A simple table with data arranged vertically (columns). An arrow pointing to 'VLOOKUP'. Another table with data arranged horizontally (rows). An arrow pointing to 'HLOOKUP'. A 'TRUE' and 'FALSE' icon with their meanings (approximate/exact match). Korean text in high quality font: 'VLOOKUP: 세로 표', 'HLOOKUP: 가로 표', 'TRUE: 유사 일치 (범위)', 'FALSE: 정확히 일치'.",
+      "exam_point": "✔️ 세로 표는 VLOOKUP, 가로 표는 HLOOKUP. ✔️ VLOOKUP/HLOOKUP의 첫 번째 열/행이 검색 기준. ✔️ FALSE/0는 정확히 일치, TRUE/1은 유사 일치 (생략 가능). ✔️ 유사 일치 시 참조 범위는 반드시 오름차순 정렬 필수.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"12\"><rect x=\"20\" y=\"30\" width=\"100\" height=\"80\" stroke=\"#888\" fill=\"#e3f2fd\"/><text x=\"70\" y=\"45\" font-weight=\"bold\" text-anchor=\"middle\">A</text><text x=\"70\" y=\"65\" text-anchor=\"middle\">10</text><text x=\"70\" y=\"85\" text-anchor=\"middle\">20</text><text x=\"70\" y=\"105\" text-anchor=\"middle\">30</text><path d=\"M130 70 L170 70\" stroke=\"#e63946\" stroke-width=\"2\" marker-end=\"url(#arrowhead_red)\"/><text x=\"150\" y=\"60\" fill=\"#e63946\">세로</text><text x=\"145\" y=\"80\" fill=\"#e63946\" font-weight=\"bold\">VLOOKUP</text></g><g font-family=\"Arial, sans-serif\" font-size=\"12\"><rect x=\"200\" y=\"30\" width=\"150\" height=\"50\" stroke=\"#888\" fill=\"#e3f2fd\"/><text x=\"225\" y=\"45\" font-weight=\"bold\" text-anchor=\"middle\">A</text><text x=\"275\" y=\"45\" font-weight=\"bold\" text-anchor=\"middle\">B</text><text x=\"325\" y=\"45\" font-weight=\"bold\" text-anchor=\"middle\">C</text><text x=\"225\" y=\"70\" text-anchor=\"middle\">10</text><text x=\"275\" y=\"70\" text-anchor=\"middle\">20</text><text x=\"325\" y=\"70\" text-anchor=\"middle\">30</text><path d=\"M360 55 L390 55\" stroke=\"#00a7e1\" stroke-width=\"2\" marker-end=\"url(#arrowhead_blue)\"/><text x=\"375\" y=\"45\" fill=\"#00a7e1\">가로</text><text x=\"375\" y=\"65\" fill=\"#00a7e1\" font-weight=\"bold\">HLOOKUP</text></g><g font-family=\"Arial, sans-serif\" font-size=\"12\"><rect x=\"20\" y=\"130\" width=\"150\" height=\"40\" stroke=\"#888\" fill=\"#fff\" rx=\"5\"/><text x=\"95\" y=\"155\" font-weight=\"bold\" text-anchor=\"middle\">TRUE (1): 유사 일치</text><rect x=\"20\" y=\"180\" width=\"150\" height=\"40\" stroke=\"#888\" fill=\"#fff\" rx=\"5\"/><text x=\"95\" y=\"205\" font-weight=\"bold\" text-anchor=\"middle\">FALSE (0): 정확히 일치</text></g><defs><marker id=\"arrowhead_red\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#e63946\"/></marker><marker id=\"arrowhead_blue\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#00a7e1\"/></marker></defs></svg>"
+    },
+    {
+      "id": 15,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_15.png",
+      "emoji": "🔒",
+      "title": "시트 보호 vs 통합 문서 보호",
+      "content": "시트 보호는 셀의 데이터 수정을 막는 '내용 보안'이라면, 통합 문서 보호는 시트의 삽입, 삭제, 이름 변경 등 '구조 보안'을 담당해요. 시트 보호 시 '잠긴 셀 선택'은 보호 대화상자에서 설정하고, '숨김'은 수식 입력줄에 수식이 보이지 않게 하는 기능이에요. 시트 보호 암호는 필수가 아니며, 설정하지 않으면 누구나 해제할 수 있어요.",
+      "visual": "Two distinct icons: a shield over a single sheet (Sheet Protection) and a shield over a workbook icon (Workbook Protection). Under Sheet Protection, show 'Locked Cells 🚫Edit' and 'Hidden Formulas 🤫'. Under Workbook Protection, show '🚫Add/Delete/Rename Sheets'. Korean text in high quality font: '시트 보호: 내용 수정 방지', '통합 문서 보호: 시트 구조 변경 방지', '암호 선택 사항'.",
+      "exam_point": "✔️ 시트 보호는 셀 내용 수정 방지. '잠금'은 수정 불가, '숨김'은 수식 숨김. ✔️ 통합 문서 보호는 시트 삽입/삭제/이름 변경 등 구조 변경 방지. ✔️ 시트 보호 시 암호 설정은 선택 사항.",
+      "svg": ""
+    },
+    {
+      "id": 16,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_16.png",
+      "emoji": "🏷️",
+      "title": "차트 구성 요소: 데이터 레이블",
+      "content": "데이터 레이블은 차트의 막대나 선 위에 데이터의 실제 값이나 항목 이름을 직접 표시하는 기능이에요. 마치 이름표처럼 데이터가 어떤 값을 가지고 있는지 직관적으로 보여주죠. 범례는 데이터 계열의 색상과 이름을 매칭하고, 차트 제목은 차트 전체의 주제를 나타내며, 데이터 표는 차트 아래에 원본 데이터를 표 형태로 보여줘요.",
+      "visual": "A simple bar chart. Highlight the numbers directly above each bar (e.g., 100, 99, 65) and label them 'Data Labels'. Show small icons for other chart elements: a legend box, a 'Chart Title' area, and a mini table for 'Data Table'. Korean text in high quality font: '데이터 레이블: 값 직접 표시', '범례', '차트 제목', '데이터 표'.",
+      "exam_point": "✔️ 데이터 레이블: 데이터의 실제 값/항목 이름을 차트 위에 직접 표시. ✔️ 데이터 레이블과 데이터 표 구분 (표는 차트 아래 격자).",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g transform=\"translate(50, 50)\"><rect x=\"0\" y=\"0\" width=\"300\" height=\"150\" fill=\"#fff\" stroke=\"#ccc\" stroke-width=\"1\"/><!-- Chart Title Placeholder --><text x=\"150\" y=\"-15\" font-family=\"Arial, sans-serif\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#333\">차트 제목</text><!-- Bars --><rect x=\"40\" y=\"90\" width=\"40\" height=\"50\" fill=\"#00a7e1\"/><rect x=\"100\" y=\"60\" width=\"40\" height=\"80\" fill=\"#e63946\"/><rect x=\"160\" y=\"110\" width=\"40\" height=\"30\" fill=\"#2a9d8f\"/><rect x=\"220\" y=\"70\" width=\"40\" height=\"70\" fill=\"#ffc107\"/><!-- Data Labels --><text x=\"60\" y=\"80\" font-family=\"Arial, sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#333\">50</text><text x=\"120\" y=\"50\" font-family=\"Arial, sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#333\">80</text><text x=\"180\" y=\"100\" font-family=\"Arial, sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#333\">30</text><text x=\"240\" y=\"60\" font-family=\"Arial, sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#333\">70</text><path d=\"M60 80 L60 140 M120 50 L120 140 M180 100 L180 140 M240 60 L240 140\" stroke=\"#eee\" stroke-width=\"1\" stroke-dasharray=\"2,2\"/><line x1=\"20\" y1=\"140\" x2=\"280\" y2=\"140\" stroke=\"#888\" stroke-width=\"1\"/><!-- Axis Labels --><text x=\"60\" y=\"155\" font-family=\"Arial, sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#555\">항목1</text><text x=\"120\" y=\"155\" font-family=\"Arial, sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#555\">항목2</text><text x=\"180\" y=\"155\" font-family=\"Arial, sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#555\">항목3</text><text x=\"240\" y=\"155\" font-family=\"Arial, sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#555\">항목4</text><!-- Data Label Annotation --><rect x=\"280\" y=\"60\" width=\"10\" height=\"10\" fill=\"#fff\" stroke=\"#888\" stroke-width=\"1\"/><text x=\"295\" y=\"68\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#333\" font-weight=\"bold\">데이터 레이블</text><path d=\"M275 65 Q265 65 255 70\" stroke=\"#888\" stroke-width=\"1\" marker-end=\"url(#arrowhead_black)\"/></g><defs><marker id=\"arrowhead_black\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#888\"/></marker></defs></svg>"
+    },
+    {
+      "id": 17,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_17.png",
+      "emoji": "🙈",
+      "title": "행/열 숨기기 및 해제",
+      "content": "'행/열 숨기기'는 데이터를 삭제하는 것이 아니라, 해당 행의 높이나 열의 너비를 '0'으로 만들어서 화면에 일시적으로 보이지 않게 하는 기능이에요. 숨겨진 행/열은 인쇄되지 않으며, 정렬 대상에서도 제외된답니다. 숨겨진 영역을 포함하여 범위를 지정한 후 행 높이나 열 너비를 조절하면 숨기기를 해제할 수 있어요.",
+      "visual": "A spreadsheet snippet showing a hidden row (e.g., row 3) with a small line instead of full row, and a hidden column (e.g., column C) similarly. Two arrows showing 'drag to unhide'. Icons for 'No Print' and 'No Sort' pointing to the hidden areas. Korean text in high quality font: '숨기기 = 높이/너비 0', '드래그로 숨기기 해제', '인쇄/정렬 시 제외'.",
+      "exam_point": "✔️ 숨기기는 높이/너비를 0으로 설정, 데이터 삭제 아님. ✔️ 숨겨진 행/열은 인쇄되지 않고, 정렬 대상에서 제외. ✔️ 숨기기 해제는 숨겨진 영역 포함 드래그 후 크기 조절 또는 [숨기기 취소] 메뉴 이용. ✔️ 행 숨기기: Ctrl+9, 열 숨기기: Ctrl+0.",
+      "svg": ""
+    },
+    {
+      "id": 18,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_18.png",
+      "emoji": "🌈",
+      "title": "조건부 서식: ROW & MOD 함수",
+      "content": "조건부 서식에서 특정 행 전체에 서식을 적용하려면 ROW() 함수로 행 번호를 가져온 다음, MOD() 함수로 나머지 값을 활용해요. 예를 들어, 짝수 행에 서식을 지정하려면 MOD(ROW(), 2)의 결과가 0인지 확인하는 수식을 사용해요. 홀수 행은 나머지가 1인지 확인하면 된답니다.",
+      "visual": "A small spreadsheet grid with alternating colored rows (e.g., Row 2, 4, 6 are colored). A formula box showing '=MOD(ROW(), 2)=0' with an arrow pointing to the colored even rows. A 'ROW()' function icon returning row numbers, and 'MOD(number, divisor)' returning remainder. Korean text in high quality font: 'ROW(): 현재 행 번호', 'MOD(숫자, 나눌 수): 나머지 값', 'MOD(ROW(), 2)=0 (짝수 행)', 'MOD(ROW(), 2)=1 (홀수 행)'.",
+      "exam_point": "✔️ 짝수 행 서식: =MOD(ROW(), 2)=0. ✔️ 홀수 행 서식: =MOD(ROW(), 2)=1. ✔️ COLUMN() 함수는 열 번호를 반환.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"12\"><rect x=\"50\" y=\"40\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"65\" y=\"55\" text-anchor=\"middle\">A1</text><rect x=\"80\" y=\"40\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"95\" y=\"55\" text-anchor=\"middle\">B1</text><rect x=\"110\" y=\"40\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"125\" y=\"55\" text-anchor=\"middle\">C1</text><rect x=\"50\" y=\"60\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#e0f2f7\"/><text x=\"65\" y=\"75\" text-anchor=\"middle\">A2</text><rect x=\"80\" y=\"60\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#e0f2f7\"/><text x=\"95\" y=\"75\" text-anchor=\"middle\">B2</text><rect x=\"110\" y=\"60\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#e0f2f7\"/><text x=\"125\" y=\"75\" text-anchor=\"middle\">C2</text><rect x=\"50\" y=\"80\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"65\" y=\"95\" text-anchor=\"middle\">A3</text><rect x=\"80\" y=\"80\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"95\" y=\"95\" text-anchor=\"middle\">B3</text><rect x=\"110\" y=\"80\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#fff\"/><text x=\"125\" y=\"95\" text-anchor=\"middle\">C3</text><rect x=\"50\" y=\"100\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#e0f2f7\"/><text x=\"65\" y=\"115\" text-anchor=\"middle\">A4</text><rect x=\"80\" y=\"100\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#e0f2f7\"/><text x=\"95\" y=\"115\" text-anchor=\"middle\">B4</text><rect x=\"110\" y=\"100\" width=\"30\" height=\"20\" stroke=\"#ccc\" fill=\"#e0f2f7\"/><text x=\"125\" y=\"115\" text-anchor=\"middle\">C4</text><text x=\"180\" y=\"70\" font-weight=\"bold\" fill=\"#00a7e1\">=MOD(ROW(), 2) = 0</text><text x=\"180\" y=\"90\" fill=\"#555\">-> 짝수 행에 서식 지정</text><text x=\"180\" y=\"120\" font-weight=\"bold\" fill=\"#e63946\">=MOD(ROW(), 2) = 1</text><text x=\"180\" y=\"140\" fill=\"#555\">-> 홀수 행에 서식 지정</text><path d=\"M160 70 L175 70\" stroke=\"#888\" stroke-width=\"1\" marker-end=\"url(#arrowhead_black)\"/><path d=\"M160 120 L175 120\" stroke=\"#888\" stroke-width=\"1\" marker-end=\"url(#arrowhead_black)\"/></g><defs><marker id=\"arrowhead_black\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#888\"/></marker></defs></svg>"
+    },
+    {
+      "id": 19,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_19.png",
+      "emoji": "🔖",
+      "title": "이름 정의 및 규칙",
+      "content": "엑셀에서 특정 범위에 이름을 정의하면 수식에 셀 주소 대신 이름을 사용할 수 있어 편리해요. 이름의 첫 글자는 반드시 문자, 밑줄(_), 백슬래시(\\)로 시작해야 하며, 공백(띄어쓰기)이나 특수문자는 사용할 수 없어요. '선택 영역에서 이름 만들기' 기능을 쓰면 공백은 밑줄로 자동 변환된답니다. 정의된 이름은 기본적으로 통합 문서 전체에서 사용 가능해요.",
+      "visual": "A simplified 'Define Name' dialog box. A red 'X' over '123_Name' (starts with number) and 'My Name' (has space). A green checkmark over 'Name_123' and '_MyName'. A spreadsheet snippet showing a range A2:D5, and a Name Box at the top left showing a defined name for a selected area. Korean text in high quality font: '이름 규칙: 문자, _, \\로 시작', '공백/특수문자 불가', '자동 변환: 공백 -> _', '범위: 통합 문서 전체'.",
+      "exam_point": "✔️ 이름의 첫 글자는 문자, 밑줄(_), 백슬래시(\\)만 가능 (숫자 불가). ✔️ 이름에 공백 및 대부분의 특수문자 사용 불가 ( _ 만 가능). ✔️ '선택 영역에서 이름 만들기' 시 공백은 밑줄로 자동 변환. ✔️ 정의된 이름은 기본적으로 통합 문서(모든 시트)에서 사용 가능.",
+      "svg": ""
+    },
+    {
+      "id": 20,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_ 프로세스_4_slide_20.png",
+      "emoji": "✂️",
+      "title": "텍스트 나누기 기능",
+      "content": "'텍스트 나누기'는 한 셀에 뭉쳐있는 데이터를 구분 기호(쉼표, 탭, 공백 등)나 일정한 너비를 기준으로 여러 개의 열로 쪼개어 분리하는 기능이에요. 마치 긴 국수 가닥을 잘라주는 가위처럼 데이터를 깔끔하게 정리해준답니다. 데이터를 특정 기준으로 분리해야 할 때 주로 사용해요.",
+      "visual": "A visual of a single cell 'A1' containing '서울,1,국어,2008'. An arrow pointing to four separate cells 'A1', 'B1', 'C1', 'D1' containing '서울', '1', '국어', '2008' respectively. A small icon representing 'Text to Columns' and 'Delimiter: Comma'. Korean text in high quality font: '데이터 텍스트 나누기', '구분 기호 (쉼표, 공백 등)', '일정한 너비'.",
+      "exam_point": "✔️ 한 셀의 데이터를 구분 기호(쉼표 등)나 너비를 기준으로 여러 열로 분리할 때 사용. ✔️ [데이터] 탭의 [데이터 도구] 그룹에 위치.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"14\"><rect x=\"50\" y=\"40\" width=\"250\" height=\"40\" stroke=\"#00a7e1\" stroke-width=\"2\" fill=\"#e3f2fd\" rx=\"5\"/><text x=\"175\" y=\"65\" text-anchor=\"middle\" fill=\"#333\" font-weight=\"bold\">서울,1,국어,2008</text></g><path d=\"M175 90 L175 120\" stroke=\"#888\" stroke-width=\"2\" marker-end=\"url(#arrowhead_black)\"/><text x=\"175\" y=\"105\" text-anchor=\"middle\" font-size=\"12\" fill=\"#555\">텍스트 나누기</text><g font-family=\"Arial, sans-serif\" font-size=\"14\"><rect x=\"50\" y=\"130\" width=\"60\" height=\"40\" stroke=\"#e63946\" fill=\"#fff\" rx=\"5\"/><text x=\"80\" y=\"155\" text-anchor=\"middle\" fill=\"#333\">서울</text><rect x=\"110\" y=\"130\" width=\"60\" height=\"40\" stroke=\"#e63946\" fill=\"#fff\" rx=\"5\"/><text x=\"140\" y=\"155\" text-anchor=\"middle\" fill=\"#333\">1</text><rect x=\"170\" y=\"130\" width=\"60\" height=\"40\" stroke=\"#e63946\" fill=\"#fff\" rx=\"5\"/><text x=\"200\" y=\"155\" text-anchor=\"middle\" fill=\"#333\">국어</text><rect x=\"230\" y=\"130\" width=\"70\" height=\"40\" stroke=\"#e63946\" fill=\"#fff\" rx=\"5\"/><text x=\"265\" y=\"155\" text-anchor=\"middle\" fill=\"#333\">2008</text></g><text x=\"175\" y=\"200\" font-family=\"Arial, sans-serif\" font-size=\"16\" fill=\"#00a7e1\" font-weight=\"bold\">쉼표(,)를 기준으로 분리!</text><defs><marker id=\"arrowhead_black\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#888\"/></marker></defs></svg>"
+    },
+    {
+      "id": 21,
+      "style": "Expert",
+      "image": "/summaries/컴퓨터활용능력 2급/_2과목__워크시트_설정_및_시트_관리_프로세스_4_slide_21.png",
+      "emoji": "🏆",
+      "title": "CHOOSE & RANK 함수 조합",
+      "content": "CHOOSE 함수는 첫 번째 인수의 숫자에 따라 나열된 목록 중 해당하는 위치의 값을 선택하는 함수예요. 여기에 RANK 함수로 구한 순위를 첫 번째 인수로 활용하면, 순위에 따라 다른 값을 출력할 수 있답니다. RANK 함수는 옵션이 없으면 내림차순(큰 값이 1등)으로 순위를 매겨요.",
+      "visual": "A diagram showing 'D2 (170)' -> 'RANK(D2, $D$2:$D$5)' -> '3 (3rd Rank)'. This '3' then feeds into 'CHOOSE(3, '천하', '대한', '영광', '기쁨')' resulting in '영광'. Korean text in high quality font: 'CHOOSE(인덱스, 값1, 값2, ...)', 'RANK(값, 범위, [옵션])', '3위 = 영광'.",
+      "exam_point": "✔️ RANK 함수로 순위 구하기 (옵션 생략 시 내림차순). ✔️ CHOOSE 함수가 RANK 결과값을 인덱스로 활용. ✔️ CHOOSE 함수 목록은 1부터 시작.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\"/><g font-family=\"Arial, sans-serif\" font-size=\"14\"><rect x=\"50\" y=\"40\" width=\"80\" height=\"30\" stroke=\"#00a7e1\" fill=\"#e3f2fd\" rx=\"5\"/><text x=\"90\" y=\"60\" text-anchor=\"middle\" fill=\"#333\">D2 (170)</text><path d=\"M135 55 L165 55\" stroke=\"#888\" stroke-width=\"2\" marker-end=\"url(#arrowhead_black)\"/><rect x=\"170\" y=\"40\" width=\"150\" height=\"30\" stroke=\"#00a7e1\" fill=\"#e3f2fd\" rx=\"5\"/><text x=\"245\" y=\"60\" text-anchor=\"middle\" fill=\"#333\">RANK(D2, $D$2:$D$5)</text><path d=\"M325 55 L355 55\" stroke=\"#888\" stroke-width=\"2\" marker-end=\"url(#arrowhead_black)\"/><rect x=\"360\" y=\"40\" width=\"30\" height=\"30\" stroke=\"#e63946\" fill=\"#fff2f0\" rx=\"5\"/><text x=\"375\" y=\"60\" text-anchor=\"middle\" fill=\"#e63946\">3</text></g><path d=\"M375 75 L375 105\" stroke=\"#888\" stroke-width=\"2\" marker-end=\"url(#arrowhead_black)\"/><text x=\"375\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" fill=\"#555\">인덱스</text><g font-family=\"Arial, sans-serif\" font-size=\"14\"><rect x=\"50\" y=\"110\" width=\"300\" height=\"30\" stroke=\"#2a9d8f\" fill=\"#e6fff8\" rx=\"5\"/><text x=\"200\" y=\"130\" text-anchor=\"middle\" fill=\"#333\">CHOOSE(<tspan fill=\"#e63946\">3</tspan>, \"천하\", \"대한\", \"영광\", \"기쁨\")</text></g><path d=\"M200 145 L200 175\" stroke=\"#888\" stroke-width=\"2\" marker-end=\"url(#arrowhead_black)\"/><text x=\"200\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" fill=\"#555\">결과</text><g font-family=\"Arial, sans-serif\" font-size=\"20\" font-weight=\"bold\" fill=\"#00a7e1\"><text x=\"200\" y=\"205\" text-anchor=\"middle\">영광</text></g><defs><marker id=\"arrowhead_black\" markerWidth=\"10\" markerHeight=\"7\" refX=\"0\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 10 3.5, 0 7\" fill=\"#888\"/></marker></defs></svg>"
+    }
+  ]
+}
