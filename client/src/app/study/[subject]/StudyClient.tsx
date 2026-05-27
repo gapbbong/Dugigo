@@ -145,25 +145,59 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
       try {
         const fetchUnit = unitFilter;
-        const sizeParam = setSize ? `&size=${setSize}` : '';
-        const res = await fetch(`/api/summaries?subject=${encodeURIComponent(subject)}&unit=${encodeURIComponent(fetchUnit)}&set=${setNum}${sizeParam}`);
+        const cleanUnit = fetchUnit.replace(/\s*\(\d+부\)$/, '').trim();
+        const safeUnitName = cleanUnit.replace(/[^a-z0-9가-힣]/gi, '_');
+        const summaryFileName = `${safeUnitName}_${setNum}세트.json`;
+        const staticUrl = `/summaries/${encodeURIComponent(subject)}/${encodeURIComponent(summaryFileName)}`;
         
-        if (res.ok) {
-          const data = await res.json();
-          if (data.slides && data.slides.length > 0) {
-            setSlideData(data.slides);
-            setSummaryProgress(100);
-            
-            const hideKey = `dugigo_hide_summary_${subject}_${unitFilter}_${setNum}`;
-            const isHidden = localStorage.getItem(hideKey) === 'true';
-            setHideAutoSummary(isHidden);
+        let data: any = null;
+        let success = false;
 
-            if (!isHidden) setAiSliderOpen(true);
-          } else {
-            throw new Error('No slides generated');
+        // 1차 시도: CDN/Static 파일에서 직접 다운로드 (배포 환경에서 극도로 안정적이며 API 람다를 타지 않음)
+        try {
+          const staticRes = await fetch(staticUrl);
+          if (staticRes.ok) {
+            const staticData = await staticRes.json();
+            if (staticData.slides && staticData.slides.length > 0) {
+              data = staticData;
+              success = true;
+              console.log('Successfully loaded summary from static asset cache:', staticUrl);
+            }
           }
+        } catch (staticErr) {
+          console.warn('Failed to load static summary, falling back to API:', staticErr);
+        }
+
+        // 2차 시도: Static 로딩 실패 시 기존 백엔드 API 호출 (On-demand 생성 fallback)
+        if (!success) {
+          const sizeParam = setSize ? `&size=${setSize}` : '';
+          const apiRes = await fetch(`/api/summaries?subject=${encodeURIComponent(subject)}&unit=${encodeURIComponent(fetchUnit)}&set=${setNum}${sizeParam}`);
+          
+          if (apiRes.ok) {
+            const apiData = await apiRes.json();
+            if (apiData.slides && apiData.slides.length > 0) {
+              data = apiData;
+              success = true;
+              console.log('Successfully generated/loaded summary from API');
+            } else {
+              throw new Error('No slides in API response');
+            }
+          } else {
+            throw new Error(`API request failed with status: ${apiRes.status}`);
+          }
+        }
+
+        if (success && data) {
+          setSlideData(data.slides);
+          setSummaryProgress(100);
+          
+          const hideKey = `dugigo_hide_summary_${subject}_${unitFilter}_${setNum}`;
+          const isHidden = localStorage.getItem(hideKey) === 'true';
+          setHideAutoSummary(isHidden);
+
+          if (!isHidden) setAiSliderOpen(true);
         } else {
-          throw new Error('API request failed');
+          throw new Error('Failed to fetch summary from both static assets and API');
         }
       } catch (e) {
         console.error('Summary generation failed:', e);
@@ -835,7 +869,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
           </button>
           
-          {(unitFilter && setNum && !isSummaryError) && (
+          {(unitFilter && setNum) && (
             <button 
               onClick={() => {
                 if (slideData && slideData.length > 0) {
@@ -850,7 +884,9 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               className={`group relative px-3 py-1.5 md:px-6 md:py-2.5 rounded-2xl text-xs md:text-base font-black transition-all flex items-center gap-2 shadow-lg backdrop-blur-xl border border-white/40 overflow-hidden ${
                 slideData && slideData.length > 0 
                 ? 'bg-white/30 text-brand-700 hover:bg-white/50 hover:scale-105 active:scale-95' 
-                : 'bg-slate-100/50 text-slate-400 cursor-wait'
+                : isSummaryError
+                  ? 'bg-red-50/80 text-red-600 hover:bg-red-100 hover:text-red-700 cursor-pointer hover:scale-105 active:scale-95'
+                  : 'bg-slate-100/50 text-slate-400 cursor-wait'
               }`}
             >
               {isGenerating && !slideData && (
@@ -861,7 +897,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   transition={{ ease: "linear" }}
                 />
               )}
-              <Sparkles className={`w-3.5 h-3.5 md:w-5 md:h-5 ${slideData && slideData.length > 0 ? 'text-brand-600 animate-pulse' : 'text-slate-400'}`} />
+              <Sparkles className={`w-3.5 h-3.5 md:w-5 md:h-5 ${slideData && slideData.length > 0 ? 'text-brand-600 animate-pulse' : isSummaryError ? 'text-red-500' : 'text-slate-400'}`} />
               <span className="relative z-10">
                 {slideData && slideData.length > 0 
                   ? '학습' 
