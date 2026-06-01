@@ -437,20 +437,31 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     setReportStatus('sending');
     try {
       const { data: userData } = await supabase.auth.getUser();
-      await fetch('/api/reports', {
+      
+      // Parse year and question number safely to match DB integer constraints
+      const yearInt = currentQuestion.year ? parseInt(String(currentQuestion.year).replace(/[^0-9]/g, '')) : null;
+      const questionNumInt = currentQuestion.number ? parseInt(String(currentQuestion.number).replace(/[^0-9]/g, '')) : null;
+
+      const res = await fetch('/api/reports', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           question_id: currentQuestion.id,
           subject,
-          year: currentQuestion.year,
+          year: isNaN(yearInt as number) ? null : yearInt,
           round: currentQuestion.round,
-          question_num: currentQuestion.question_num,
+          question_num: isNaN(questionNumInt as number) ? null : questionNumInt,
           user_id: userData.user?.id,
           report_type: reportType,
           comment: reportComment,
         }),
       });
+
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({}));
+        throw new Error(errorData.error || 'Failed to submit report');
+      }
+
       setReportStatus('done');
       setTimeout(() => {
         setReportOpen(false);
@@ -458,7 +469,9 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         setReportComment('');
         setReportStatus('idle');
       }, 1500);
-    } catch {
+    } catch (err: any) {
+      console.error('Report submission error:', err);
+      alert(`신고 제출에 실패했습니다: ${err.message || '알 수 없는 오류'}`);
       setReportStatus('idle');
     }
   };

@@ -45,17 +45,45 @@ CREATE TABLE IF NOT EXISTS dukigo_study_logs (
   session_id UUID REFERENCES dukigo_study_sessions(id) ON DELETE CASCADE,
   user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
   subject TEXT NOT NULL,
-  question_id TEXT NOT NULL,
+  question_id TEXT, -- Nullable
   category TEXT, -- 단원명 또는 문제 유형 (취약 파트 분석용)
-  is_correct BOOLEAN NOT NULL,
+  is_correct BOOLEAN, -- Nullable
   user_answer TEXT,
-  solved_at TIMESTAMPTZ DEFAULT NOW()
+  solved_at TIMESTAMPTZ DEFAULT NOW(),
+  action_type TEXT,
+  unit TEXT,
+  set_num INT,
+  total_questions INT,
+  correct_questions INT,
+  duration_seconds INT,
+  end_time TIMESTAMPTZ
 );
 
 CREATE INDEX IF NOT EXISTS idx_dukigo_study_logs_user ON dukigo_study_logs(user_id);
 CREATE INDEX IF NOT EXISTS idx_dukigo_study_logs_category ON dukigo_study_logs(subject, category);
 
--- 4. 보상 및 리워드 요청 (실질적 보상 연계)
+-- 4. 교사 그룹 관리 테이블 (Teacher Groups)
+CREATE TABLE IF NOT EXISTS dukigo_teacher_groups (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  name TEXT NOT NULL,
+  members TEXT[] DEFAULT '{}'::text[],
+  teacher_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- 5. 학생 오답 노트 테이블 (Wrong Answers)
+CREATE TABLE IF NOT EXISTS dukigo_wrong_answers (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
+  question_id TEXT NOT NULL,
+  subject TEXT NOT NULL,
+  unit TEXT,
+  set_num INT,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  UNIQUE(user_id, question_id)
+);
+
+-- 6. 보상 및 리워드 요청 (실질적 보상 연계)
 -- 목적: 발전기금 기반 목표 달성자 필터링 및 시상 상태 관리
 CREATE TABLE IF NOT EXISTS dukigo_reward_claims (
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
@@ -78,16 +106,24 @@ ALTER TABLE dukigo_profiles ENABLE ROW LEVEL SECURITY;
 ALTER TABLE dukigo_study_sessions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE dukigo_study_logs ENABLE ROW LEVEL SECURITY;
 ALTER TABLE dukigo_reward_claims ENABLE ROW LEVEL SECURITY;
+ALTER TABLE dukigo_teacher_groups ENABLE ROW LEVEL SECURITY;
+ALTER TABLE dukigo_wrong_answers ENABLE ROW LEVEL SECURITY;
 
 -- Profiles: 누구나 자신의 프로필 조회 가능, 수정은 제한적
 CREATE POLICY "Users can view own profile" ON dukigo_profiles FOR SELECT TO authenticated USING (auth.uid() = id);
--- 교사는 소속 학생들의 프로필 조회 가능하도록 추가 정책 필요
 
 -- Sessions: 본인의 세션만 생성/수정/조회 가능
 CREATE POLICY "Users can manage own sessions" ON dukigo_study_sessions FOR ALL TO authenticated USING (auth.uid() = user_id);
 
 -- Logs: 본인의 로그만 생성/조회 가능
 CREATE POLICY "Users can manage own logs" ON dukigo_study_logs FOR ALL TO authenticated USING (auth.uid() = user_id);
+
+-- Teacher Groups
+CREATE POLICY "Users can manage own teacher groups" ON dukigo_teacher_groups FOR ALL USING (auth.uid() = teacher_id);
+CREATE POLICY "Anyone can view teacher groups" ON dukigo_teacher_groups FOR SELECT TO authenticated USING (true);
+
+-- Wrong Answers
+CREATE POLICY "Users can manage own wrong answers" ON dukigo_wrong_answers FOR ALL USING (auth.uid() = user_id);
 
 -- Rewards: 본인의 리워드만 조회/생성 가능
 CREATE POLICY "Users can view own claims" ON dukigo_reward_claims FOR SELECT TO authenticated USING (auth.uid() = user_id);
@@ -98,3 +134,5 @@ CREATE POLICY "Service role full access on profiles" ON dukigo_profiles FOR ALL 
 CREATE POLICY "Service role full access on sessions" ON dukigo_study_sessions FOR ALL TO service_role USING (true);
 CREATE POLICY "Service role full access on logs" ON dukigo_study_logs FOR ALL TO service_role USING (true);
 CREATE POLICY "Service role full access on claims" ON dukigo_reward_claims FOR ALL TO service_role USING (true);
+CREATE POLICY "Service role full access on teacher groups" ON dukigo_teacher_groups FOR ALL TO service_role USING (true);
+CREATE POLICY "Service role full access on wrong answers" ON dukigo_wrong_answers FOR ALL TO service_role USING (true);

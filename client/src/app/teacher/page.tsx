@@ -4,7 +4,8 @@ import { supabase } from '@/lib/supabase';
 import { 
   Users, Target, Clock, AlertTriangle, TrendingUp, Search, 
   ChevronRight, ChevronLeft, Award, PlusCircle, Filter, 
-  FolderPlus, UserPlus, CheckCircle2, MoreVertical, Trash2
+  FolderPlus, UserPlus, CheckCircle2, MoreVertical, Trash2,
+  Flag
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -27,7 +28,7 @@ export default function TeacherDashboard() {
     totalStudents: 0,
     avgAccuracy: 0,
     todayActive: 0,
-    suspiciousCount: 0
+    pendingReports: 0
   });
   const [searchTerm, setSearchTerm] = useState('');
   const [modalSearch, setModalSearch] = useState('');
@@ -75,6 +76,13 @@ export default function TeacherDashboard() {
         .eq('teacher_id', user.id);
       
       if (!groupErr) setGroups(dbGroups || []);
+
+      // Fetch pending reports count
+      const { count: reportCount, error: reportErr } = await supabase
+        .from('dukigo_question_reports')
+        .select('*', { count: 'exact', head: true })
+        .eq('status', 'pending');
+      if (reportErr) console.error('Failed to fetch pending reports count:', reportErr);
 
       let profileQuery = supabase.from('dukigo_profiles').select('*');
       if (!ownerFlag) {
@@ -142,7 +150,7 @@ export default function TeacherDashboard() {
         totalStudents: ownerFlag ? (activeRole === 'student' ? studentsOnly.length : teachersOnly.length) : processed.length,
         avgAccuracy: tQuestions > 0 ? Math.round((tCorrect / tQuestions) * 100) : 0,
         todayActive: activeSet.size,
-        suspiciousCount: 0
+        pendingReports: reportCount || 0
       });
 
     } catch (err) {
@@ -290,7 +298,7 @@ export default function TeacherDashboard() {
           <StatCard label={isOwner && activeRole === 'teacher' ? "교사수" : "학생수"} value={stats.totalStudents} icon={<Users />} color="text-blue-600" bg="bg-blue-50" />
           <StatCard label="정답률" value={`${stats.avgAccuracy}%`} icon={<Target />} color="text-emerald-600" bg="bg-emerald-50" />
           <StatCard label="오늘" value={stats.todayActive} icon={<Clock />} color="text-brand-600" bg="bg-brand-50" />
-          <StatCard label="이상" value={stats.suspiciousCount} icon={<AlertTriangle />} color="text-rose-600" bg="bg-rose-50" />
+          <StatCard label="문항오류 신고" value={stats.pendingReports} icon={<Flag />} color="text-rose-600" bg="bg-rose-50" />
         </div>
 
         {/* 종목 필터 */}
