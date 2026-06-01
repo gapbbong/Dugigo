@@ -1,0 +1,62 @@
+{
+  "subject": "한국사검정시험",
+  "unit": "04. 조선 시대(전기)",
+  "set": 2,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__2_slide_1.png",
+      "emoji": "💥",
+      "title": "사화의 시대: 훈구와 사림의 갈등",
+      "content": "조선 건국 후 지배 세력은 훈구파와 사림파로 나뉘어 치열한 정치적 대립을 겪었습니다. 사림은 주로 중종 시대 조광조를 중심으로 개혁을 추진했지만, 훈구 세력의 반발로 기묘사화 등 4대 사화를 겪으며 큰 피해를 입었죠. 특히 명종 대 외척 싸움이 촉발한 을사사화는 사림이 더욱 탄압받는 계기가 되었습니다. 하지만 사림은 서원과 향약을 기반으로 향촌에서 꾸준히 세력을 키우며 결국 선조 대에 정국을 주도하게 됩니다.",
+      "visual": "A visual representation of two opposing groups, '훈구파' and '사림파', clashing. A timeline showing the '4대 사화' (무오사화, 갑자사화, 기묘사화, 을사사화) with explosion icons. A scholar figure (사림) growing from a small seed to a strong tree, symbolizing resilience and growth in the countryside (서원, 향약). Korean text in high quality font for '훈구파', '사림파', '4대 사화', '을사사화', '서원', '향약'.",
+      "exam_point": "4대 사화 (무오, 갑자, 기묘, 을사), 훈구파 vs 사림파, 조광조, 을사사화 (윤원형 vs 윤임, 1545년), 서원과 향약.",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__2_slide_2.png",
+      "emoji": "⚔️",
+      "title": "왜란의 불길: 전 국토를 휩쓴 임진왜란",
+      "content": "1592년, 일본의 침략으로 임진왜란이 발발하며 조선은 건국 이래 최대의 위기를 맞았습니다. 일본군에게 육상에서 밀리며 국왕은 피란길에 올랐지만, 이순신 장군은 명량 해전 등에서 수군을 이끌고 혁혁한 전과를 올리며 왜군의 보급로를 차단했습니다. 또한, 의병장 곽재우, 조헌, 김충선(사야가) 등이 전국 각지에서 자발적으로 일어나 왜군에 맞서 싸우며 전쟁의 흐름을 바꾸는 데 크게 기여했습니다. 명나라의 원군도 참전하며 장기전으로 이어졌습니다.",
+      "visual": "A map of Korea showing arrows indicating the Japanese invasion routes. A dramatic ship battle scene with cannon fire and Korean warships, representing Admiral Yi Sun-sin's victories. Figures representing civilians with makeshift weapons fighting against Japanese soldiers, symbolizing the 의병 (righteous army). Korean text in high quality font for '임진왜란', '이순신', '명량 해전', '의병', '곽재우', '조헌', '김충선'.",
+      "exam_point": "임진왜란 (1592년 발발), 이순신 (명량 해전), 의병 (곽재우, 조헌, 김충선), 명의 원군.",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__2_slide_3.png",
+      "emoji": "🛠️",
+      "title": "위기 속 변화: 비변사 격상과 훈련도감 설치",
+      "content": "임진왜란이라는 초유의 사태를 겪으며 조선은 기존 제도의 한계를 절감하고 여러 변화를 겪었습니다. 삼포왜란을 계기로 임시 기구였던 비변사는 국방 문제를 논의하는 최고 기구로 격상되었고, 왜군의 조총 부대에 대응하기 위해 삼수병(포수, 사수, 살수)으로 구성된 훈련도감이 설치되었습니다. 전쟁이 끝난 후에는 황폐해진 국토와 백성들의 삶을 재건하기 위한 노력과 더불어, 일본에 포로 송환을 요청하는 회답겸쇄환사를 파견하는 등 외교적 복구 활동도 활발하게 이루어졌습니다.",
+      "visual": "A diagram illustrating the expansion of the '비변사' from a small council to a powerful central governing body. Three distinct soldier figures (포수, 사수, 살수) representing the '훈련도감' and its specialized units. An image of Korean delegates on a journey by ship to Japan, symbolizing the '회답겸쇄환사' for prisoner repatriation. Korean text in high quality font for '비변사', '훈련도감', '삼수병', '회답겸쇄환사'.",
+      "exam_point": "임진왜란 중 비변사 격상 (기능 확대), 훈련도감 설치 (1593년, 삼수병), 전후 포로 송환 (회답겸쇄환사).",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__2_slide_4.png",
+      "emoji": "🎓",
+      "title": "실천을 강조한 학풍: 남명 조식과 의병정신",
+      "content": "조선 전기 유학은 퇴계 이황과 남명 조식이 영남학파의 양대 산맥을 이루며 발전했습니다. 특히 남명 조식은 지리산 산천재에서 학문을 닦으며 '경(敬)'과 '의(義)'를 강조, 실천하는 삶을 중시했습니다. 그의 제자들은 스승의 가르침을 이어받아 임진왜란 발발 시 곽재우, 정인홍 등 수많은 의병장으로 활약하며 국난 극복에 앞장섰습니다. 이러한 조식의 학풍은 이후 북인 세력의 정신적 기반이 되는 등 조선 사회에 큰 영향을 미쳤습니다.",
+      "visual": "An illustration of a scholar (남명 조식) meditating or studying in a serene mountain setting, specifically '산천재'. Arrows pointing from the scholar to a group of brave figures fighting, representing his disciples becoming '의병장' (e.g., 곽재우, 정인홍). Icons for the Chinese characters '敬' (respect) and '義' (righteousness). Korean text in high quality font for '남명 조식', '산천재', '경(敬)과 의(義)', '곽재우', '정인홍', '북인'.",
+      "exam_point": "남명 조식 (경과 의 강조, 산천재), 제자 곽재우, 정인홍 (의병장 활약), 북인 세력의 정신적 지주.",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__2_slide_5.png",
+      "emoji": "✨",
+      "title": "조선의 문화유산: 종묘와 빛나는 기록들",
+      "content": "조선은 유교 국가로서 왕실의 조상들에게 제사를 지내는 공간인 종묘를 매우 중요하게 여겼습니다. 종묘는 역대 왕과 왕비의 신위를 모시고 국가적 제사를 지내는 곳이며, 그 제례와 제례악은 유네스코 인류무형문화유산으로 등재되어 있습니다. 또한, 조선왕조실록, 승정원일기, 의궤, 일성록 등은 왕조의 역사와 국정 운영을 생생하게 기록한 소중한 유네스코 세계기록유산으로, 당시의 정치, 사회, 문화를 이해하는 데 귀중한 자료가 됩니다. 특히 일성록은 정조가 직접 국정 전반을 기록한 일기로 유명합니다.",
+      "visual": "An elegant illustration of the Jongmyo Shrine architecture. Various icons representing ancient historical records: open books for '조선왕조실록', scrolls for '승정원일기', ornate albums for '의궤', and a diary for '일성록'. A prominent UNESCO logo with text '세계유산' (World Heritage). Korean text in high quality font for '종묘', '종묘제례악', '조선왕조실록', '승정원일기', '의궤', '일성록', '유네스코 세계기록유산'.",
+      "exam_point": "종묘 (역대 왕과 왕비 신위, 제사), 종묘제례/제례악 (유네스코 인류무형문화유산), 조선왕조실록, 승정원일기, 의궤, 일성록 (유네스코 세계기록유산), 일성록 (정조의 국정 일기).",
+      "svg": ""
+    }
+  ]
+}
