@@ -574,6 +574,16 @@ export default function SelectSubjectPage() {
                 >
                   {nameStatus.type === 'loading' ? '등록 중...' : '등록 완료'}
                 </button>
+
+                <div className="text-center mt-4">
+                  <button
+                    type="button"
+                    onClick={() => supabase.auth.signOut().then(() => router.push('/login'))}
+                    className="text-xs font-bold text-slate-400 hover:text-rose-500 transition-colors"
+                  >
+                    다른 계정으로 로그인 (로그아웃)
+                  </button>
+                </div>
               </form>
             </motion.div>
           </>
