@@ -1,0 +1,62 @@
+{
+  "subject": "한국사검정시험",
+  "unit": "01. 선사 시대와 국가의 형성",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/01__선사_시대와_국가의_형성_1_slide_1.png",
+      "emoji": "👣",
+      "title": "인류의 첫걸음: 구석기와 신석기",
+      "content": "우리 역사의 첫 시작, 구석기 시대 사람들은 뗀석기를 사용하며 먹을 것을 찾아 끊임없이 이동했습니다. 동굴이나 막집에서 살며 불을 사용했죠. 신석기 시대에 들어서면서 농경이 시작되고 정착 생활이 이루어졌고, 빗살무늬 토기로 식량을 저장하고 가락바퀴와 뼈바늘로 옷을 만드는 등 생활에 큰 변화가 찾아왔습니다.",
+      "visual": "A split image showing two distinct scenes. The left side depicts the Paleolithic Age: a primitive human figure, a hand-axe (주먹도끼), a cave entrance, and a small fire, symbolizing mobile life. The right side depicts the Neolithic Age: a human figure tending a small patch of cultivated land, a pit-house (움집), and a large, intricately patterned comb-pattern pottery (빗살무늬 토기), symbolizing settled life and early agriculture. Both scenes should be distinct yet harmonized. Korean text labels '구석기 시대' and '신석기 시대' in high quality font.",
+      "exam_point": "구석기: 뗀석기, 이동 생활, 주먹도끼. 신석기: 농경 시작, 정착 생활, 빗살무늬 토기, 가락바퀴, 뼈바늘, 움집.",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/01__선사_시대와_국가의_형성_1_slide_2.png",
+      "emoji": "✨",
+      "title": "새로운 변화: 청동기와 철기 시대",
+      "content": "청동기 시대에는 농업 생산력의 증가로 사유 재산과 계급이 발생했고, 지배층의 위엄을 보여주는 거대한 고인돌이 축조되었습니다. 비파형 동검과 미송리식 토기가 대표적인 유물이죠. 이후 철기 시대에는 철제 농기구와 무기가 보편화되어 생산성이 더욱 향상되었으며, 거푸집을 이용한 세형 동검 제작과 명도전, 반량전 같은 화폐도 사용되기 시작했습니다.",
+      "visual": "A split image. The left side illustrates the Bronze Age: a prominent dolmen (고인돌) with a simplified figure of a leader, and a symbolic representation of a bronze dagger (비파형 동검). The right side illustrates the Iron Age: a figure using an iron plow or hoe (철제 농기구) in a field, and small icons of iron weapons and ancient coins (명도전, 반량전) to denote trade and advanced tools. Korean text labels '청동기 시대' and '철기 시대' in high quality font.",
+      "exam_point": "청동기: 사유 재산, 계급 발생, 고인돌, 벼농사 시작, 비파형 동검, 미송리식 토기. 철기: 철제 농기구/무기, 세형 동검, 거푸집, 명도전, 반량전.",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/01__선사_시대와_국가의_형성_1_slide_3.png",
+      "emoji": "👑",
+      "title": "국가의 탄생: 고조선과 초기 철기 국가들",
+      "content": "한반도 최초의 국가인 고조선은 단군왕검이 건국하고 8조법으로 사회를 다스렸습니다. 철기 시대로 접어들며 부여, 고구려, 옥저, 동예, 삼한 등 여러 초기 국가가 발전했죠. 부여의 영고와 사출도, 고구려의 동맹과 제가회의, 동예의 무천과 책화, 그리고 삼한의 소도와 뛰어난 철 생산 능력은 각 나라의 독특한 특징입니다.",
+      "visual": "A simplified map of the Korean peninsula and Manchuria. Highlighted regions for Gojoseon, Buyeo, Goguryeo, Okjeo, Dongye, and Samhan. Each region should have a distinct icon representing its key characteristic: Gojoseon (a simplified bronze dagger), Buyeo (a horse and an arrow), Goguryeo (a warrior helmet), Okjeo/Dongye (a local leader '읍군·삼로' icon or specific products like '반어피' for Dongye), Samhan (an iron ingot). Korean text labels for each state name (고조선, 부여, 고구려, 옥저, 동예, 삼한) in high quality font.",
+      "exam_point": "고조선: 단군왕검, 8조법, 위만조선. 부여: 사출도, 영고. 고구려: 동맹, 제가회의. 동예: 무천, 책화, 단궁/과하마/반어피. 삼한: 소도, 철 생산 (변한-가야), 천군.",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/01__선사_시대와_국가의_형성_1_slide_4.png",
+      "emoji": "⚔️",
+      "title": "패권을 향한 질주: 삼국의 전성기",
+      "content": "삼국은 한강 유역을 차지하기 위해 치열하게 경쟁했습니다. 4세기 백제는 근초고왕 때 전성기를 맞아 평양성을 공격하기도 했습니다. 5세기에는 고구려가 광개토대왕과 장수왕을 거치며 최전성기를 누렸고, 장수왕은 한성(서울)을 함락시켜 백제를 웅진으로 천도하게 했습니다. 6세기 신라는 법흥왕과 진흥왕 때 한강 유역을 확보하며 삼국의 주역으로 떠올랐습니다.",
+      "visual": "A dynamic infographic or timeline illustrating the shifting balance of power among the Three Kingdoms. Use three distinct colors for Baekje, Goguryeo, and Silla. Show a progression across three main periods: 4th century (Baekje dominance, e.g., a strong Baekje icon), 5th century (Goguryeo dominance, e.g., an expanding Goguryeo icon), and 6th century (Silla rising, e.g., Silla securing the Han River area). Small icons representing key kings or events (e.g., 근초고왕, 장수왕, 진흥왕). Korean text labels '4세기 백제', '5세기 고구려', '6세기 신라' in high quality font.",
+      "exam_point": "백제: 근초고왕 (평양성 공격). 고구려: 장수왕 (한성 함락), 고국원왕 전사. 신라: 진흥왕 (한강 유역 확보), 성왕 관산성 전투 전사. 4/5/6세기 전성기 흐름.",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/01__선사_시대와_국가의_형성_1_slide_5.png",
+      "emoji": "🛡️",
+      "title": "민족 통일과 남북국 시대의 개막",
+      "content": "신라는 당과 연합하여 백제와 고구려를 멸망시켰습니다. 백제 부흥 운동(복신, 흑치상지)과 고구려 부흥 운동(검모잠, 안승)이 있었으나 실패했죠. 신라는 이후 당과의 나당 전쟁에서 매소성 전투와 기벌포 전투를 승리로 이끌며 삼국 통일을 완성했습니다. 북쪽에서는 고구려 유민들이 대조영을 중심으로 발해를 건국하고, '해동성국'이라 불리며 5경 15부 62주의 효율적인 지방 제도를 갖추었습니다.",
+      "visual": "A map depicting the late Three Kingdoms period and the subsequent Unified Silla and Balhae. Start with the three kingdoms. Then, show arrows indicating the fall of Baekje and Goguryeo. Prominently feature the unified territory of Silla in the south and the emerging territory of Balhae in the north. Icons representing key battles (e.g., swords clashing for Gibeolpo) and revival movements. For Balhae, display a symbolic representation of its 5경 15부 62주 administrative structure. Korean text labels '삼국 통일', '나당 전쟁', '발해 건국', '5경 15부 62주' in high quality font.",
+      "exam_point": "신라 삼국통일: 나당 연합, 백제/고구려 부흥 운동 (복신, 흑치상지, 검모잠, 안승), 나당 전쟁 (매소성, 기벌포). 발해: 대조영, 5경 15부 62주, 해동성국.",
+      "svg": ""
+    }
+  ]
+}

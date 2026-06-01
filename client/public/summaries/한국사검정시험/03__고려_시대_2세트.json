@@ -1,0 +1,47 @@
+{
+  "subject": "한국사검정시험",
+  "unit": "03. 고려 시대",
+  "set": 2,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/03__고려_시대_2_slide_1.png",
+      "emoji": "🏰",
+      "title": "고려의 사회 시스템과 수도 개경",
+      "content": "고려 시대에는 백성을 위한 다양한 사회 복지 제도가 운영되었는데, 특히 환자에게 약을 지급하는 혜민국과 빈민 구제를 위한 제위보, 동·서 대비원 등이 있었습니다. 교육기관으로는 국자감 내 전문 강좌인 7재(강예재 포함)가 중요했습니다. 또한, 고려의 수도 개경은 거란의 침입 이후 강감찬의 건의로 외성인 나성이 축조되어 방어 체제를 강화했음을 기억해야 합니다.",
+      "visual": "A vibrant, cartoon-style illustration showing various Goryeo social institutions: a building with a '藥' (medicine) sign representing Hye-min-guk, a symbol of a helping hand for Jae-wi-bo, and academic scrolls for the Gukjagam's 7-jae. In the background, a fortified city wall (Naseong) with the silhouette of a palace (Manwoldae) and a banner with '개경' (Gaegyeong) in Korean text in high quality font.",
+      "exam_point": "사회 복지: 제위보(광종), 동·서 대비원, 혜민국(예종). 교육: 국자감 7재. 수도 개경: 만월대, 나성(강감찬)."
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/03__고려_시대_2_slide_2.png",
+      "emoji": "🎨",
+      "title": "고려의 빛나는 예술과 건축",
+      "content": "고려는 독자적이고 화려한 문화유산을 꽃피웠습니다. 고려 초에는 호족의 세력을 반영하여 논산 관촉사 석조 미륵보살 입상처럼 거대하고 지방색이 강한 불상이 제작되었습니다. 공예 분야에서는 비색 청자에 상감 기법이 더해진 상감 청자가 절정기를 이루며 강진 등지에서 생산되었습니다. 건축에서는 주심포 양식의 목조 건축물이 발달했는데, 봉정사 극락전, 부석사 무량수전, 수덕사 대웅전이 대표적입니다.",
+      "visual": "A visually appealing illustration in a cartoon style. On one side, a giant, stylized Buddhist statue (representing Gwancheoksa Seokjo Mireukbosal Ipsang) with emphasis on its scale. In the center, a beautiful Goryeo celadon vase (Sang-gam Cheong-ja) with intricate inlaid patterns. On the other side, a majestic wooden temple building with a distinct roof style (representing Jusimpo architecture like Sudeoksa Daeungjeon). Key terms like '상감 청자', '논산 관촉사', '주심포' are subtly integrated as high-quality Korean text.",
+      "exam_point": "불상: 논산 관촉사 석조 미륵보살 입상(은진미륵, 호족 세력, 거대함, 지방색). 공예: 상감 청자(고려 대표 유물, 강진). 건축: 주심포 양식 (봉정사 극락전, 부석사 무량수전, 수덕사 대웅전)."
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/03__고려_시대_2_slide_3.png",
+      "emoji": "⚔️",
+      "title": "몽골 침략과 고려의 항전",
+      "content": "고려는 13세기부터 몽골의 거듭된 침략에 시달렸습니다. 특히 김윤후 장군은 처인성 전투에서 몽골의 살리타를 사살하고, 충주성 전투에서는 노비 문서를 불태우며 민심을 결집하여 몽골군에 맞서 싸웠습니다. 무신 정권은 몽골군의 압박에 맞서 장기 항전을 위해 강화도로 도읍을 옮겼으며, 이후 삼별초가 끝까지 항몽 투쟁을 이어갔습니다.",
+      "visual": "A dramatic, dynamic illustration in a cartoon style. On one side, a fierce Goryeo general (Kim Yun-hu) leading soldiers with a burning scroll (representing burning slave registers). In the background, a fortified island (Ganghwa Island) with a palace silhouette, emphasizing the relocation of the capital. Above, a stylized Mongol army approaching. Emphasize the spirit of resistance. Korean text '몽골 침략', '강화 천도' in high quality font.",
+      "exam_point": "몽골 침입: 김윤후 (처인성, 충주산성). 항전: 강화도 천도 (무신 정권), 삼별초 항쟁."
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/03__고려_시대_2_slide_4.png",
+      "emoji": "🎭",
+      "title": "원 간섭기: 혼란과 몽골풍의 유행",
+      "content": "몽골의 침략 이후, 고려는 원 간섭기에 접어들며 정치적 혼란과 사회 변화를 겪었습니다. 이 시기 원나라 세력을 등에 업은 친원 세력인 권문세족이 득세하여 국정을 농단했습니다. 지배층을 중심으로 몽골의 풍습인 변발과 호복이 유행했으며, 원나라에 바칠 매를 관리하는 응방이나 정동행성 같은 기구가 설치되어 내정 간섭이 심화되었습니다. 이는 고려 사회의 전반적인 변화를 가져왔습니다.",
+      "visual": "A bustling, detailed illustration in a cartoon style depicting the Yuan Intervention Period. Focus on visual contrasts: a group of 'Gwonmun Sejok' (권문세족) dressed in 'Mongol-style' clothing (변발, 호복), looking influential and arrogant. In the background, symbols of Yuan influence like '응방' (a hawk/falcon cage) and '정동행성' (a stylized government building with Yuan flags). The atmosphere should convey both luxury and political tension. High-quality Korean text '원 간섭기', '권문세족', '변발 호복' is included.",
+      "exam_point": "원 간섭기 특징: 권문세족 득세, 몽골풍(변발, 호복) 유행, 응방·정동행성 설치."
+    }
+  ]
+}

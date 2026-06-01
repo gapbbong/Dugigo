@@ -1,0 +1,62 @@
+{
+  "subject": "한국사검정시험",
+  "unit": "02. 삼국 시대와 남북국 시대",
+  "set": 3,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_3_slide_1.png",
+      "emoji": "🏞️",
+      "title": "삼국 시대의 여명: 건국과 초기 발전",
+      "content": "우리 역사의 주요 기틀을 다진 삼국 시대의 시작을 알아봅시다. 고구려는 주몽, 백제는 온조, 신라는 박혁거세에 의해 건국되며 각자의 영역을 확장했습니다. 특히 고구려는 옥저와 동예를 복속하며 강국의 면모를 보였고, 백제는 한강 유역을 기반으로 성장했습니다. 신라 역시 진한 소국들을 통합하며 점차 세력을 넓혀갔습니다.",
+      "visual": "A stylized map showing the early territories of Goguryeo, Baekje, and Silla. Each kingdom is represented by a unique color and a clear, simple icon (e.g., a mountain for Goguryeo, a river for Baekje, a star for Silla). Founding kings (주몽, 온조, 박혁거세) are subtly indicated near their respective kingdoms. High-quality Korean text for kingdom names.",
+      "exam_point": "고구려(주몽, 졸본→국내성), 백제(온조, 위례성), 신라(박혁거세, 경주), 옥저/동예 복속(고구려), 마한/진한 통합",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_3_slide_2.png",
+      "emoji": "⚔️",
+      "title": "삼국의 전성기: 왕들의 위대한 업적",
+      "content": "삼국은 각기 다른 시기에 전성기를 맞이하며 영토를 확장하고 국가 체제를 정비했습니다. 4세기에는 백제 근초고왕이 마한을 통합하고 요서 지방까지 진출하며 최전성기를 구가했습니다. 5세기에는 고구려 광개토대왕과 장수왕이 넓은 영토를 확보하며 중국 왕조와 대등한 위치에 섰습니다. 6세기에는 신라 진흥왕이 화랑도를 개편하고 한강 유역을 차지하며 삼국 통일의 기반을 마련했습니다.",
+      "visual": "Three distinct panels, each representing a century and a kingdom's golden age. Panel 1: Baekje (4세기), King Geunchogo with a map extending to Liaoxi. Panel 2: Goguryeo (5세기), King Gwanggaeto and King Jangsu with a vast map and a stele icon. Panel 3: Silla (6세기), King Jinheung with a Hwarang icon and a map showing Silla's expansion. High-quality Korean text for kings' names and centuries.",
+      "exam_point": "백제 근초고왕(4세기, 마한 통합, 요서 진출), 고구려 광개토대왕/장수왕(5세기, 평양 천도, 중원 고구려비), 신라 진흥왕(6세기, 화랑도, 대가야 병합, 북한산 순수비)",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_3_slide_3.png",
+      "emoji": "🤝",
+      "title": "피할 수 없는 결전: 삼국 통일의 과정",
+      "content": "신라는 당과 연합하여 백제(660년)와 고구려(668년)를 차례로 멸망시키며 삼국 통일의 대업을 추진했습니다. 하지만 나당 동맹 이후 당이 한반도 전체를 지배하려 하자, 신라는 당에 맞서 나당 전쟁을 벌였습니다. 매소성 전투와 기벌포 전투에서 당군을 물리치고 676년 삼국 통일을 완성했습니다. 비록 외세의 도움을 받았지만, 민족의식을 바탕으로 대동강 이남의 영토를 통합했다는 의의가 있습니다.",
+      "visual": "A timeline or flowchart illustrating the unification process. Start with Silla and Tang alliance symbols. Then, two red 'X' marks over Baekje and Goguryeo. Finally, a clash between Silla and Tang symbols, leading to a unified Silla map. Key dates (660, 668, 676) and battle names (매소성, 기벌포) are visible. High-quality Korean text for event names.",
+      "exam_point": "나당 동맹(백제 멸망 660년, 고구려 멸망 668년), 나당 전쟁(매소성 전투, 기벌포 전투), 삼국 통일 676년, 대동강 이남 통일",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_3_slide_4.png",
+      "emoji": "🌟",
+      "title": "빛나는 통일 신라: 안정과 문화의 꽃",
+      "content": "통일 신라는 삼국 통일 후 전제 왕권을 강화하고 안정적인 통치 체제를 구축했습니다. 신문왕은 귀족 세력을 억압하고 관료전을 지급하며 왕권을 안정시켰고, 9주 5소경의 지방 행정 제도를 완성했습니다. 불국사, 석굴암과 같은 위대한 불교 예술 작품이 찬란하게 꽃피었으며, 유교 교육과 과학 기술도 크게 발전했습니다. 하지만 골품제의 모순은 육두품의 불만을 키웠습니다.",
+      "visual": "A vibrant illustration of unified Silla's cultural and political achievements. A central image of Bulguksa or Seokguram, surrounded by smaller icons representing: King Sinmun (crown), 9 provinces/5 small capitals (map outline), a scholar (유교), and Cheomseongdae (science). A subtle fractured icon could represent Golpumje. High-quality Korean text for key names and concepts.",
+      "exam_point": "신문왕(전제 왕권 강화, 관료전 지급, 녹읍 폐지, 9주 5소경), 골품제, 불국사, 석굴암, 원효, 의상, 설총",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_3_slide_5.png",
+      "emoji": "🦁",
+      "title": "북방의 자존심: 발해, 해동성국을 이루다",
+      "content": "통일 신라 시대, 만주에서는 고구려 유민인 대조영이 발해를 건국하여 고구려의 기상과 문화를 계승했습니다. 무왕은 당의 침략에 맞서 장문휴를 보내 산둥반도를 공격하는 등 강경책을 펼쳤고, 문왕은 '삼성 육부'의 통치 체제를 확립했습니다. 특히 선왕 때에는 광대한 영토를 차지하고 해동성국(海東盛國)이라 불릴 만큼 전성기를 누렸습니다. 발해는 고구려의 온돌과 불상을 계승하며 독자적인 문화를 발전시켰습니다.",
+      "visual": "A powerful image of Balhae's rise. King Dae Joyeong (대조영) on a horse, overlooking a vast northern landscape. A '해동성국' banner flies overhead. Icons representing the '삼성 육부' (three ministries, six departments) system and traditional Goguryeo elements like an '온돌' (ondol) symbol. A map showing Balhae's extensive territory during its golden age. High-quality Korean text for king's names and '해동성국'.",
+      "exam_point": "대조영(건국), 무왕(대당 강경책), 문왕(삼성 육부), 선왕(해동성국), 5경 15부 62주, 고구려 계승(온돌, 불상)",
+      "svg": ""
+    }
+  ]
+}

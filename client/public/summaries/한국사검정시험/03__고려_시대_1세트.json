@@ -1,0 +1,51 @@
+{
+  "subject": "한국사검정시험",
+  "unit": "03. 고려 시대",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/03__고려_시대_1_slide_1.png",
+      "emoji": "👑",
+      "title": "고려 초기: 왕권 강화의 시작",
+      "content": "태조 왕건은 고려를 건국하고 호족 세력을 포섭하며 안정화를 꾀했습니다. 특히 광종은 노비안검법, 과거제 실시, 공복 제정, 연호 사용 등 강력한 정책으로 호족을 견제하고 황제권을 강화하여 고려 왕조의 기틀을 다졌습니다. 이는 중앙 집권 체제의 중요한 출발점이 되었습니다.",
+      "visual": "A vibrant, illustrative image showing a king (symbolizing Gwangjong) with a crown, surrounded by icons representing his reforms: chains breaking (for 노비안검법), a quill pen (for 과거제), colorful robes (for 공복 제정), and a calendar/sun (for 연호 사용). Korean text '고려 광종', '왕권 강화' in high quality font.",
+      "exam_point": "광종: 노비안검법, 과거제 실시, 공복 제정, 연호(광덕, 준풍) 사용. 태조: 호족 포섭(사심관, 기인).",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/03__고려_시대_1_slide_2.png",
+      "emoji": "🏛️",
+      "title": "성종 시대: 중앙 집권 체제의 완성",
+      "content": "고려 성종은 최승로의 시무 28조를 적극 수용하여 통치 체제를 대대적으로 정비했습니다. 전국에 12목을 설치하고 지방관을 파견하여 중앙의 통제력을 강화했으며, 유학 교육 기관인 국자감을 정비하여 유교적 통치 이념을 확립하는 데 힘썼습니다. 이는 고려의 중앙 집권화를 본격화하는 계기가 됩니다.",
+      "visual": "An image illustrating a central government building connected by dotted lines to twelve smaller, identical buildings (representing 12목). Next to the central building, a scholar with a scroll (symbolizing 최승로의 시무 28조) and a book (for 국자감). Korean text '고려 성종', '12목 설치', '최승로 시무 28조' in high quality font.",
+      "exam_point": "성종: 최승로의 시무 28조, 12목 설치 및 지방관 파견, 국자감 정비.",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/03__고려_시대_1_slide_3.png",
+      "emoji": "⚔️",
+      "title": "문벌 귀족 사회의 부침과 국방",
+      "content": "고려 중기 문벌 귀족 사회는 왕위 다툼(왕규의 난, 강조의 정변)과 권력 투쟁(이자겸의 난)으로 혼란을 겪었습니다. 한편, 북방의 여진족은 고려를 위협했고, 이에 윤관의 건의로 별무반이 창설되어 여진을 정벌하고 동북 9성을 축조하는 등 자주적인 국방 노력을 기울였습니다. 이러한 사건들은 고려사의 중요한 전환점이 됩니다.",
+      "visual": "A timeline diagram showing three distinct events: '왕규의 난', '강조의 정변', '이자겸의 난' with arrows indicating their chronological order. Below, an image of a soldier with a banner (별무반) and a fortress (동북 9성) defending against a northern threat (여진족). Korean text '왕규의 난', '강조의 정변', '이자겸의 난', '윤관', '별무반', '동북 9성' in high quality font.",
+      "exam_point": "주요 사건 순서: 왕규의 난 → 강조의 정변 → 이자겸의 난. 대외 관계: 윤관의 별무반, 여진 정벌, 동북 9성.",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/03__고려_시대_1_slide_4.png",
+      "emoji": "🚢",
+      "title": "활기 넘쳤던 고려의 경제 활동",
+      "content": "고려 시대에는 국제 무역이 활발하게 이루어졌으며, 수도 개경의 벽란도는 국제 무역항으로 번성했습니다. 송, 거란, 여진, 일본 등 다양한 나라와 교역하며 고려청자 등이 수출되었습니다. 또한 활구(은병)와 같은 화폐가 유통되었고, 서적점, 다점 같은 관영 상점이 운영되었으며 경시서가 시장을 감독하는 등 상업 활동이 활발했습니다.",
+      "visual": "An illustration of a bustling port (벽란도) with ships from various countries. In the foreground, merchants are exchanging goods and a person holding a distinct silver bottle-shaped coin (활구, 은병). Icons for '서적점' (books), '다점' (tea), and '경시서' (market supervisor). Korean text '벽란도', '활구(은병)', '국제 무역' in high quality font.",
+      "exam_point": "경제: 벽란도(국제 무역항), 활구(은병) 유통, 서적점/다점 등 관영 상점, 경시서의 시전 감독.",
+      "svg": ""
+    }
+  ]
+}

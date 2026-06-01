@@ -1,0 +1,62 @@
+{
+  "subject": "한국사검정시험",
+  "unit": "02. 삼국 시대와 남북국 시대",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_1_slide_1.png",
+      "emoji": "🚀",
+      "title": "삼국 시대의 태동과 발전",
+      "content": "고구려, 백제, 신라는 한반도의 주도권을 두고 경쟁하며 각기 다른 특성을 지닌 국가로 성장했습니다. 고구려는 북방에서 강력한 군사력을, 백제는 해상 무역을 통해 전성기를 맞았으며, 신라는 중앙 집권 체제를 강화하며 국가 기틀을 다졌습니다. 각국은 불교 수용과 율령 반포를 통해 통치 이념을 확립하고 고유한 문화를 발전시켰습니다.",
+      "visual": "A timeline showing three distinct arrows (Goguryeo, Baekje, Silla) ascending, symbolizing growth and development. Each arrow has a small icon representing its strength: a helmet for Goguryeo, a ship for Baekje, a crown for Silla. Background map of Korea showing the general territories of the three kingdoms. Include Korean text for '고구려', '백제', '신라' in high quality font.",
+      "exam_point": "고구려(광개토대왕, 장수왕), 백제(근초고왕, 무령왕), 신라(법흥왕, 진흥왕), 율령 반포, 불교 공인.",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_1_slide_2.png",
+      "emoji": "⚔️",
+      "title": "삼국의 치열한 경쟁과 통일 기반",
+      "content": "삼국은 서로의 영토와 영향력을 확장하기 위해 끊임없이 대립하고 연합했습니다. 특히 백제와 고구려는 신라를 견제하며 세력을 과시했고, 신라는 나당 동맹을 통해 반격을 모색했습니다. 이 과정에서 가야는 신라에 의해 병합되며 삼국 시대는 새로운 통일의 움직임을 맞이하게 됩니다.",
+      "visual": "A stylized battle scene illustration with warrior figures representing Goguryeo, Baekje, and Silla. One warrior (Silla) is depicted shaking hands with another (Tang, represented by a distant ship), while fighting others. A map icon with an arrow pointing to the fall of Gaya. Include Korean text for '나당동맹', '가야 병합' in high quality font.",
+      "exam_point": "나당 동맹, 백제 멸망(660), 고구려 멸망(668), 매소성 전투, 기벌포 전투, 가야 병합 (대가야 562, 금관가야 532).",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_1_slide_3.png",
+      "emoji": "🏰",
+      "title": "남북국 시대: 발해, 해동성국을 꿈꾸다",
+      "content": "고구려 유민 대조영은 동모산에 발해를 건국하며(698년) 고구려 계승 의식을 분명히 했습니다. 무왕은 당의 등주를 공격(732년, 장문휴)하여 강력한 대외 정책을 펼쳤고, 문왕은 3성 6부를 정비하며 당의 문물을 수용하여 '해동성국'의 기반을 다졌습니다. 발해는 고구려의 전통을 이어받아 독자적인 문화를 꽃피웠습니다.",
+      "visual": "A grand, fortified castle or palace (representing Balhae) on a mountain peak (Dongmosan). On one side, illustrate a warrior on a ship attacking a distant city (representing King Mu's attack on Dengzhou by Jang Mun-hyu). On the other side, show scholars or officials engaging in diplomacy and cultural exchange (representing King Mun's policies). A banner with '해동성국 (海東盛國)' in high quality font.",
+      "exam_point": "대조영 (건국), 동모산, 무왕 (장문휴, 등주 공격), 문왕 (3성 6부), 해동성국, 고구려 계승 의식.",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_1_slide_4.png",
+      "emoji": "🌟",
+      "title": "통일 신라의 전성기와 문화",
+      "content": "삼국 통일 이후 신라는 안정기를 맞이하며 정치, 경제, 사회, 문화 전반에 걸쳐 큰 발전을 이루었습니다. 불국사, 석굴암, 성덕대왕 신종 등 찬란한 불교 예술이 꽃피웠고, 당나라와 활발한 교류를 통해 국제적인 문화를 형성했습니다. 이 시기는 신라가 가장 번성했던 황금기로 평가됩니다.",
+      "visual": "Iconic images of Unified Silla's cultural achievements: a stylized Buddha statue (Sokkuram), a pagoda (Dabotap or Seokgatap), and a temple structure (Bulguksa). Use a subtle background showing a map of a unified Silla. Include Korean text for '불국사', '석굴암', '성덕대왕 신종' in high quality font.",
+      "exam_point": "불국사, 석굴암, 성덕대왕 신종, 골품제, 국학, 장보고(청해진).",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_1_slide_5.png",
+      "emoji": "🔄",
+      "title": "후삼국 시대의 혼란과 고려 통일",
+      "content": "통일 신라 말기에는 왕위 쟁탈전과 진골 귀족의 전횡으로 중앙의 통제력이 약화되고 지방에서는 호족 세력이 성장했습니다. 결국 견훤의 후백제와 궁예의 후고구려가 등장하며 후삼국 시대를 열었고, 왕건이 고려를 건국하여 일리천 전투를 통해 후삼국을 통일하며 새로운 시대를 열었습니다.",
+      "visual": "A dynamic scene depicting the decline of Silla and the rise of Later Three Kingdoms. In the background, a crumbling Silla palace. In the foreground, three distinct figures representing Gyeon Hwon (Hubaekje), Gung Ye (Hugoguryeo), and Wang Geon (Goryeo), with Wang Geon eventually emerging victorious. A map showing the division into three later kingdoms, then reunified. Include Korean text for '후백제', '후고구려', '고려', '일리천 전투' in high quality font.",
+      "exam_point": "통일 신라 말기 혼란 (호족, 6두품 반발), 후삼국 시대 (후백제-견훤, 후고구려-궁예), 왕건 (고려 건국), 일리천 전투(936), 신라 항복(935), 견훤 귀순(935).",
+      "svg": ""
+    }
+  ]
+}

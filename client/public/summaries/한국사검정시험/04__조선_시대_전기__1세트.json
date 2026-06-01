@@ -1,0 +1,62 @@
+{
+  "subject": "한국사검정시험",
+  "unit": "04. 조선 시대(전기)",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__1_slide_1.png",
+      "emoji": "👑",
+      "title": "조선 건국과 왕권 강화의 시작",
+      "content": "고려 말 신진 사대부와 신흥 무인 세력의 연합으로 이성계가 조선을 건국하고 한양으로 천도했습니다. 태종 이방원은 왕자의 난을 거쳐 즉위한 후 6조 직계제와 호패법을 시행하여 강력한 왕권 중심의 중앙집권 체제를 확립했습니다. 이는 조선 초기 국가 운영의 기틀을 마련하는 중요한 과정이었습니다. 조선은 태조부터 태종에 이르는 시기 동안 안정적인 기반을 다졌습니다.",
+      "visual": "A grand, stylized illustration of Joseon Dynasty's founding. In the center, a strong, regal figure (representing Taejo or Taejong) sits on a throne, with symbolic elements of a unified nation around him. On one side, a scroll with '6조 직계제' and '호패법' written in high quality Korean text. On the other side, an image of a new capital city (Hanyang) with walls. The overall color scheme should be majestic and authoritative, with subtle traditional Korean patterns.",
+      "exam_point": "위화도 회군 (이성계), 한양 천도, 태종 (6조 직계제, 호패법, 의정부 기능 약화)",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__1_slide_2.png",
+      "emoji": "✨",
+      "title": "세종대왕: 민본 통치와 찬란한 문화",
+      "content": "세종대왕은 백성 중심의 애민 사상을 바탕으로 조선의 황금기를 이끌었습니다. 한글 창제는 물론, 집현전을 통한 학문 연구 장려, 측우기, 해시계 등 과학 기술 발전, 농사직설 편찬으로 농업 기술 향상에 기여했습니다. 또한 사군육진을 개척하여 국방력을 강화하며 내실과 외치를 모두 성공적으로 다져 조선의 기틀을 확고히 했습니다.",
+      "visual": "An illustrative slide depicting Sejong the Great, looking wise and benevolent, surrounded by his achievements. On one side, a representation of Hangul characters (훈민정음) beautifully calligraphed. On the other, icons of scientific instruments like a rain gauge (측우기) and sundial (해시계), alongside books (농사직설) and a map showing '사군육진'. The atmosphere should be bright and intellectual, with traditional Korean artistic elements.",
+      "exam_point": "훈민정음, 집현전, 측우기, 해시계, 자격루, 농사직설, 사군육진",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__1_slide_3.png",
+      "emoji": "📜",
+      "title": "『경국대전』과 통치 체제의 완성",
+      "content": "세조는 왕위 찬탈 후 왕권 강화를 위해 강력한 정책을 추진했으며, 『경국대전』 편찬을 시작하여 조선의 법전 정비에 착수했습니다. 성종 때 『경국대전』이 마침내 완성되어 반포됨으로써 조선은 통치 질서와 법적 체계를 확립했습니다. 이는 조선의 정치, 경제, 사회, 문화 전반을 규율하는 기본 법전으로, 안정적인 국가 운영의 근간이 되었습니다.",
+      "visual": "A dignified image centered around a large, open book labeled '경국대전' in high quality Korean text. Surrounding the book are symbolic elements representing the established governmental structure of Joseon, such as a traditional Korean government building, civil officials, and legal scales. The color palette should evoke order and tradition, with an emphasis on clarity and importance.",
+      "exam_point": "세조 (경국대전 편찬 시작), 성종 (경국대전 완성 및 반포), 육전체제 확립, 법치국가",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__1_slide_4.png",
+      "emoji": "⚔️",
+      "title": "훈구와 사림의 대립: 4대 사화",
+      "content": "조선 중기에 이르러 건국 공신 세력인 훈구파와 지방에 기반을 둔 신진 사대부 세력인 사림파가 중앙 정계에서 대립하기 시작했습니다. 이들의 권력 다툼은 연산군과 중종 시기에 무오사화, 갑자사화, 기묘사화, 을사사화 등 네 차례의 '사화'로 폭발했습니다. 이 사화들을 통해 많은 사림이 피해를 입었으나, 결국 사림 세력은 점차 성장하여 조선 후기 정치의 주류로 자리 잡게 됩니다.",
+      "visual": "A dynamic illustration depicting the conflict between two distinct groups: the established '훈구' (represented by ornate, older-style officials) and the rising '사림' (represented by scholarly, perhaps younger figures). A visual metaphor for conflict, like subtly clashing swords or opposing banners, should be present. The background can hint at the royal court or a scholarly setting. Clearly label '훈구' and '사림' in high quality Korean text. Include a timeline or simple icons for the '4대 사화'.",
+      "exam_point": "훈구파, 사림파, 4대 사화 (무오사화, 갑자사화, 기묘사화, 을사사화), 연산군, 중종",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__1_slide_5.png",
+      "emoji": "🌍",
+      "title": "조선 전기의 대외 관계와 국방",
+      "content": "조선은 명나라에 사대(事大)하고 여진과 일본에는 교린(交隣) 정책을 펼치는 '사대교린'의 외교 기조를 유지했습니다. 북방의 여진족을 막기 위해 4군 6진을 개척하고, 남방의 왜구를 방어하고자 노력했습니다. 삼포 왜란 이후에는 계해약조를 맺어 제한적인 교역을 허용하며 평화적인 관계를 유지하려 했고, 이는 조선의 국방 안정과 실리 추구에 기여했습니다.",
+      "visual": "A map-like illustration of the Korean peninsula with surrounding regions (China, Jurchen territories, Japan). Arrows and symbols should represent the '사대교린' foreign policy: a large, respectful arrow pointing to Ming China, and smaller, balanced arrows towards Jurchen and Japan. Icons representing '4군 6진' (fortifications) in the north and naval defenses or trade ships in the south (계해약조). Labels '명', '여진', '일본' in high quality Korean text are crucial.",
+      "exam_point": "사대교린, 4군 6진 (세종), 삼포 왜란 (중종), 계해약조 (세종), 왜구",
+      "svg": ""
+    }
+  ]
+}

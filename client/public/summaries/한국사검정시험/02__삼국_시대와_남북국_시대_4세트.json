@@ -1,0 +1,62 @@
+{
+  "subject": "한국사검정시험",
+  "unit": "02. 삼국 시대와 남북국 시대",
+  "set": 4,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_4_slide_1.png",
+      "emoji": "👑",
+      "title": "왕권 강화의 시작: 신문왕의 등장",
+      "content": "삼국 통일 후 신라는 무열왕계 김씨 왕실을 중심으로 왕권을 강화하기 시작했습니다. 특히 신문왕은 통일 초기의 왕권에 도전하는 세력들을 제압하고 강력한 중앙 집권 체제를 확립했습니다. 이를 통해 통일 신라의 전성기를 이끌 기반을 마련하였으며, 신라 사회의 안정과 발전에 크게 기여했습니다. 그의 개혁은 통일 신라 중대의 황금기를 여는 결정적인 출발점이 되었습니다.",
+      "visual": "A majestic Korean king (King Sinmun) figure, wearing elaborate royal robes and a golden crown. He holds a scroll or an edict, symbolizing his reforms and decrees. His expression is resolute and powerful. Behind him, subtle symbols of a strong central authority and royal power are visible, like a stylized dragon or royal seal. The overall atmosphere is grand and authoritative. Korean text in high quality font: '신문왕의 통치 개혁'.",
+      "exam_point": "통일신라 왕권 강화, 신문왕, 무열왕계, 중앙 집권.",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_4_slide_2.png",
+      "emoji": "🗺️",
+      "title": "효율적 지방 통치: 9주 5소경",
+      "content": "통일 신라는 넓어진 영토를 효율적으로 다스리기 위해 전국을 '9주'로 나누고 지방관을 파견했습니다. 이는 모든 지역을 중앙 정부의 통제 아래 두려는 시도였습니다. 또한, 수도 금성이 동남쪽에 치우쳐 있던 지리적 한계를 극복하고 지역 균형 발전을 꾀하고자 '5소경'을 설치했습니다. 5소경에는 수도의 귀족과 주민을 이주시켜 통치력을 강화하고 문화적 중심지로 육성했습니다.",
+      "visual": "A simplified, clear map of unified Silla. The map is divided into 9 distinct regions, labeled as '주' (Joo). Five smaller, highlighted circles or star icons represent the '소경' (Sogyeong) scattered across the map, particularly to balance the distant capital. Arrows or lines show central control extending from the capital to these regions. Korean text in high quality font: '9주 5소경 체제'.",
+      "exam_point": "9주 5소경, 수도 편중 보완, 지방 통치 체제, 통일 신라.",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_4_slide_3.png",
+      "emoji": "💰",
+      "title": "귀족 세력 견제: 녹읍 폐지 & 관료전 지급",
+      "content": "신문왕은 강력한 왕권을 확립하기 위해 귀족 세력을 약화시키는 경제 개혁을 단행했습니다. 기존에 귀족에게 토지와 함께 노동력 징발권까지 주었던 '녹읍'을 폐지했습니다. 대신 귀족들에게 조세만 수취할 수 있는 '관료전'을 지급하여 그들의 경제적 기반과 인적 지배력을 제한했습니다. 이로써 국가가 직접 토지와 백성을 지배하게 되어 중앙 집권력이 크게 강화되었습니다.",
+      "visual": "Two contrasting panels visually representing the '녹읍' and '관료전' reforms. On the left panel (representing '녹읍'), show a noble figure collecting both sacks of grain (taxes) and chains or tools (labor). The text '녹읍' is prominent. On the right panel (representing '관료전'), show a noble figure collecting only sacks of grain (taxes). The text '관료전' is prominent. A broken chain or a liberated figure could be subtly included in the background of the right panel, symbolizing reduced noble power. Korean text in high quality font: '녹읍 폐지 & 관료전 지급'.",
+      "exam_point": "녹읍 폐지, 관료전 지급, 신문왕, 왕권 강화, 귀족 세력 견제.",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_4_slide_4.png",
+      "emoji": "🛡️",
+      "title": "민족 융합의 군대: 9서당 10정",
+      "content": "신문왕은 통일 신라의 군사력을 재편하고 민족 통합을 이루기 위한 군사 개혁을 추진했습니다. 중앙군으로 '9서당'을, 지방군으로 '10정'을 설치하여 국방력을 강화했습니다. 특히 9서당에는 신라뿐만 아니라 고구려와 백제 유민들까지 포함시켜 편성함으로써, 민족 융합 정책의 상징적인 역할을 수행했습니다. 이는 통일 이후 사회적 통합과 국방력 강화를 동시에 추구한 중요한 조치였습니다.",
+      "visual": "A unified and diverse group of soldiers standing in formation, wearing similar but subtly distinct armors or emblems indicating their origins (Silla, Goguryeo, Baekje). They are all united under a single, prominent banner representing Unified Silla. A large shield or a sword icon is present, symbolizing military strength and unity. Korean text in high quality font: '9서당 10정 & 민족 융합'.",
+      "exam_point": "9서당, 10정, 민족 융합, 고구려/백제 유민 통합, 군사 제도 정비.",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/02__삼국_시대와_남북국_시대_4_slide_5.png",
+      "emoji": "✨",
+      "title": "통일 신라의 기틀 마련: 신문왕 개혁의 의미",
+      "content": "신문왕의 개혁은 통일 신라가 진정한 의미의 중앙 집권 국가로 발돋움하는 결정적인 계기가 되었습니다. 그는 강력한 왕권을 바탕으로 국학을 설립하여 유교 교육을 진흥하고, 토지 제도와 군사 제도를 정비하여 정치적 안정과 사회 통합을 이루었습니다. 그의 업적은 통일 신라 중대 전성기의 기반을 굳건히 다졌으며, 후대 왕조에도 큰 영향을 미쳤습니다. 신문왕은 통일 신라사의 가장 위대한 개혁 군주 중 한 명으로 평가받습니다.",
+      "visual": "A majestic and stable architectural structure, resembling a well-built temple or palace, symbolizing the strong foundation of Unified Silla. A large, ornate golden crown sits prominently atop the structure, signifying the powerful and centralized monarchy. Stylized books or scrolls could be near the base, representing the establishment of Gukhak and educational reforms. The overall image conveys stability, strength, and enlightenment. Korean text in high quality font: '신문왕 개혁의 의미와 영향'.",
+      "exam_point": "신문왕 업적 총정리, 중앙 집권 체제 확립, 국학 설립, 통일 신라 전성기 기반.",
+      "svg": ""
+    }
+  ]
+}

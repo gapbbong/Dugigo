@@ -33,8 +33,14 @@ export async function GET(req: NextRequest) {
   const summaryFileName = `${safeUnitName}_${set}세트.json`;
   const fallbackFileName = `${cleanUnit.replace(/^\d+\.\s*/, '').replace(/[^a-z0-9가-힣]/gi, '_')}_${set}세트.json`;
 
-  const summariesBase = path.join(process.cwd(), 'public', 'summaries');
-  const srcSummariesBase = path.join(process.cwd(), 'src', 'summaries');
+  let baseDir = process.cwd();
+  // 만약 process.cwd()가 client 상위 폴더이고, client 폴더가 존재한다면 client 폴더 안을 base로 잡음
+  if (!fs.existsSync(path.join(baseDir, 'public', 'summaries')) && fs.existsSync(path.join(baseDir, 'client', 'public', 'summaries'))) {
+    baseDir = path.join(baseDir, 'client');
+  }
+
+  const summariesBase = path.join(baseDir, 'public', 'summaries');
+  const srcSummariesBase = path.join(baseDir, 'src', 'summaries');
   
   const publicPath = path.join(summariesBase, subject, summaryFileName);
   const fallbackPublicPath = path.join(summariesBase, subject, fallbackFileName);
@@ -63,7 +69,7 @@ export async function GET(req: NextRequest) {
     const targetDir = path.dirname(summaryPath);
     if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir, { recursive: true });
 
-    const dataBase = path.join(process.cwd(), 'src', 'data');
+    const dataBase = path.join(baseDir, 'src', 'data');
     const dataDir = path.join(dataBase, subject);
     
     if (!dataDir.startsWith(dataBase)) throw new Error('Invalid data access');
@@ -190,12 +196,16 @@ export async function GET(req: NextRequest) {
         ? filteredByUnit 
         : filteredByUnit.slice((parseInt(set) - 1) * size, parseInt(set) * size);
         
-      const uniqueQuestions = Array.from(new Map(setQuestions.map((q: any) => [q.question, q])).values());
+      const uniqueQuestions = Array.from(new Map(setQuestions.map((q: any) => [q.question, q])).values())
+        .map((q: any) => ({
+          number: q.number,
+          question: q.question,
+          choices: q.choices,
+          answer: q.answer,
+          explanation: q.explanation
+        }));
       contextQuestions = JSON.stringify(uniqueQuestions);
     }
-
-    const genAI = new GoogleGenerativeAI(getApiKey());
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
     const subjectPrompt = subject.includes('전기') || subject.includes('승강기') ? `
       [기술 자격증 특화 규칙]
@@ -256,7 +266,32 @@ export async function GET(req: NextRequest) {
       }
     `;
 
-    const result = await model.generateContent(prompt);
+    let result;
+    let lastError;
+    const maxAttempts = 3;
+    let delay = 1000;
+
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
+      try {
+        const apiKey = getApiKey();
+        const genAI = new GoogleGenerativeAI(apiKey);
+        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+        result = await model.generateContent(prompt);
+        break;
+      } catch (err: any) {
+        lastError = err;
+        console.warn(`Gemini generation attempt ${attempt + 1} failed:`, err.message);
+        if (attempt < maxAttempts - 1) {
+          await new Promise(resolve => setTimeout(resolve, delay));
+          delay *= 2;
+        }
+      }
+    }
+
+    if (!result) {
+      throw lastError || new Error('Failed to generate content after multiple attempts');
+    }
+
     const text = result.response.text();
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     if (!jsonMatch) throw new Error('Failed to extract JSON from AI response');
