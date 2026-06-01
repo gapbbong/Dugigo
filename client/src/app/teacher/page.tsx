@@ -21,6 +21,7 @@ export default function TeacherDashboard() {
   const [isMemberModalOpen, setIsMemberModalOpen] = useState(false);
   const [newGroupName, setNewGroupName] = useState('');
   const [activeRole, setActiveRole] = useState<'student' | 'teacher'>('student');
+  const [sortBy, setSortBy] = useState<'recent' | 'number' | 'name'>('recent');
   
   const [stats, setStats] = useState({
     totalStudents: 0,
@@ -44,7 +45,7 @@ export default function TeacherDashboard() {
 
   useEffect(() => {
     applyFilters();
-  }, [selectedSubject, selectedGroup, searchTerm, allStudents, groups, activeRole]);
+  }, [selectedSubject, selectedGroup, searchTerm, allStudents, groups, activeRole, sortBy]);
 
   const fetchSubjects = async () => {
     try {
@@ -169,6 +170,38 @@ export default function TeacherDashboard() {
       const lower = searchTerm.toLowerCase();
       filtered = filtered.filter(s => s.username.toLowerCase().includes(lower) || (s.id || '').toLowerCase().includes(lower));
     }
+
+    const getStudentNumber = (username: string) => {
+      const match = username.match(/^\d+/);
+      return match ? parseInt(match[0]) : 99999999;
+    };
+
+    const getStudentName = (username: string) => {
+      return username.replace(/[0-9]/g, '').trim() || username;
+    };
+
+    // Apply sorting
+    if (sortBy === 'recent') {
+      filtered.sort((a, b) => {
+        if (a.lastActive === '기록 없음' && b.lastActive === '기록 없음') return 0;
+        if (a.lastActive === '기록 없음') return 1;
+        if (b.lastActive === '기록 없음') return -1;
+        return new Date(b.lastActive).getTime() - new Date(a.lastActive).getTime();
+      });
+    } else if (sortBy === 'number') {
+      filtered.sort((a, b) => {
+        const numA = getStudentNumber(a.username);
+        const numB = getStudentNumber(b.username);
+        return numA - numB;
+      });
+    } else if (sortBy === 'name') {
+      filtered.sort((a, b) => {
+        const nameA = getStudentName(a.username);
+        const nameB = getStudentName(b.username);
+        return nameA.localeCompare(nameB, 'ko');
+      });
+    }
+
     setStudents(filtered);
 
     // Update stats whenever filters change to reflect the current view
@@ -312,15 +345,38 @@ export default function TeacherDashboard() {
         </div>
 
         {/* List Header */}
-        <div className="flex items-center justify-between">
-          <h2 className="text-lg font-black text-slate-900 flex items-center gap-2">
-            {isOwner && activeRole === 'teacher' ? (
-              <><Award className="text-brand-600" /> 교사 목록</>
-            ) : (
-              <><Users className="text-brand-600" /> 학생 목록</>
-            )}
-          </h2>
-          <p className="text-sm font-bold text-slate-400">총 <span className="text-brand-600">{students.length}</span>명</p>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 pb-3">
+          <div className="flex items-center gap-3">
+            <h2 className="text-lg font-black text-slate-900 flex items-center gap-2">
+              {isOwner && activeRole === 'teacher' ? (
+                <><Award className="text-brand-600" /> 교사 목록</>
+              ) : (
+                <><Users className="text-brand-600" /> 학생 목록</>
+              )}
+            </h2>
+            <p className="text-xs font-bold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full">총 <span className="text-brand-600">{students.length}</span>명</p>
+          </div>
+          
+          <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl text-xs font-bold shadow-inner flex-shrink-0 self-end sm:self-auto">
+            <button 
+              onClick={() => setSortBy('recent')} 
+              className={`px-3 py-1.5 rounded-lg transition-all ${sortBy === 'recent' ? 'bg-white text-brand-600 shadow-sm font-black' : 'text-slate-500 hover:text-slate-800'}`}
+            >
+              최근 학습순
+            </button>
+            <button 
+              onClick={() => setSortBy('number')} 
+              className={`px-3 py-1.5 rounded-lg transition-all ${sortBy === 'number' ? 'bg-white text-brand-600 shadow-sm font-black' : 'text-slate-500 hover:text-slate-800'}`}
+            >
+              학번순
+            </button>
+            <button 
+              onClick={() => setSortBy('name')} 
+              className={`px-3 py-1.5 rounded-lg transition-all ${sortBy === 'name' ? 'bg-white text-brand-600 shadow-sm font-black' : 'text-slate-500 hover:text-slate-800'}`}
+            >
+              이름순
+            </button>
+          </div>
         </div>
 
         {/* 학생 카드 목록 */}
