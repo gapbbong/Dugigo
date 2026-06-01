@@ -85,8 +85,17 @@ export default function TeacherDashboard() {
       const { data: profiles, error: profileErr } = await profileQuery;
       if (profileErr) throw profileErr;
 
-      const { data: logs, error: logErr } = await supabase.from('dukigo_study_logs').select('*');
-      if (logErr) throw logErr;
+      const { data: { session } } = await supabase.auth.getSession();
+      const resLogs = await fetch('/api/teacher/logs', {
+        headers: {
+          'Authorization': `Bearer ${session?.access_token || ''}`
+        }
+      });
+      if (!resLogs.ok) {
+        const errorData = await resLogs.json();
+        throw new Error(errorData.error || 'Failed to fetch study logs');
+      }
+      const { logs } = (await resLogs.json()) as { logs: any[] };
 
       const todayStr = new Date().toISOString().split('T')[0];
       let tCorrect = 0, tQuestions = 0;

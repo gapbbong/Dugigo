@@ -102,7 +102,7 @@ export async function GET(req: NextRequest) {
     };
 
     const scrub = (q: any) => {
-      const { yr, rd } = extractYearRound(q, subject);
+      const { yr, rd } = extractYearRound(q, subject || undefined);
 
       return {
         id: q.metadata?.id || q.id || `${yr}_${rd}_${q.number || q.question_no || ''}`,

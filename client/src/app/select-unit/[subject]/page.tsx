@@ -128,7 +128,10 @@ export default function SelectUnitPage() {
     const allScores = relevantLogs
       .sort((a, b) => new Date(a.end_time || 0).getTime() - new Date(b.end_time || 0).getTime())
       .map(log => Math.round(((log.correct_questions || 0) / (log.total_questions || expectedTotal)) * 100));
-    return { count, bestScore, total, accuracy, allScores };
+    const correctCounts = relevantLogs
+      .sort((a, b) => new Date(a.end_time || 0).getTime() - new Date(b.end_time || 0).getTime())
+      .map(log => log.correct_questions || 0);
+    return { count, bestScore, total, accuracy, allScores, correctCounts };
   };
 
   const handleSelectExam = (exam: Exam) => {
@@ -236,6 +239,7 @@ export default function SelectUnitPage() {
                         key={unit.name} 
                         onClick={() => router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unit.name)}&set=1&size=${unit.count}${unit.range ? `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}` : ''}`)}
                         className="h-24 bg-white border border-slate-100 rounded-2xl flex flex-col items-center justify-center hover:border-orange-300 transition-all relative group overflow-hidden"
+                        title={stats ? `최근 5회 맞은 개수: ${stats.correctCounts.slice(-5).map(c => `${c}개`).join(', ')}` : undefined}
                       >
                         {stats && (
                           <div className="absolute top-1.5 right-1.5 px-1.5 py-0.5 bg-orange-600 text-white text-[8px] font-black rounded-md shadow-sm">
@@ -244,6 +248,11 @@ export default function SelectUnitPage() {
                         )}
                         <span className="text-2xl font-black tracking-tighter text-slate-800">{String(idx + 1).padStart(2, '0')}</span>
                         <span className="text-[9px] font-black uppercase text-slate-400">공략</span>
+                        {stats && (
+                          <span className="text-[8px] font-bold text-orange-600 mt-1 z-10 leading-none">
+                            {stats.correctCounts.slice(-5).join(', ')}개
+                          </span>
+                        )}
                       </button>
                     );
                   })}
@@ -283,6 +292,7 @@ export default function SelectUnitPage() {
                             key={sIdx} 
                             onClick={() => router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unit.name)}&set=${sIdx+1}&size=30${unit.range ? `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}` : ''}`)}
                             className="h-24 bg-white border border-slate-100 rounded-2xl flex flex-col items-center justify-center hover:border-violet-300 transition-all relative group overflow-hidden"
+                            title={stats ? `최근 5회 맞은 개수: ${stats.correctCounts.slice(-5).map(c => `${c}개`).join(', ')}` : undefined}
                           >
                             {/* 횟수 뱃지 */}
                             {stats && (
@@ -292,7 +302,12 @@ export default function SelectUnitPage() {
                             )}
 
                             <span className="text-2xl font-black tracking-tighter text-slate-800">{setNum}</span>
-                            <span className="text-[9px] font-black uppercase text-slate-400">세트</span>
+                            <span className="text-[9px] font-black text-slate-400">세트 ({Math.min(30, unit.count - sIdx * 30)}문항)</span>
+                            {stats && (
+                              <span className="text-[8px] font-bold text-violet-600 mt-1 z-10 leading-none">
+                                {stats.correctCounts.slice(-5).join(', ')}개
+                              </span>
+                            )}
 
                             {/* 미니 막대 그래프 */}
                             {stats && (

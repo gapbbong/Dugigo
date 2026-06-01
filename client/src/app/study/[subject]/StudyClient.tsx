@@ -34,6 +34,17 @@ const LEVEL_TITLES = [
   "영웅", "전설", "신화", "초월자"
 ];
 
+const generateUUID = () => {
+  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
+    return crypto.randomUUID();
+  }
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    const r = Math.random() * 16 | 0;
+    const v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+};
+
 export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) {
   const params = useParams();
   const router = useRouter();
@@ -47,6 +58,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [answers, setAnswers] = useState<{questionId: string, isCorrect: boolean}[]>([]);
   const [startTime] = useState(Date.now());
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const [studyLogId, setStudyLogId] = useState(() => generateUUID());
   const [showSummary, setShowSummary] = useState(false); // 초기값은 false
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -462,6 +474,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     })));
     setElapsedSeconds(0);
     setIsFinished(false);
+    setStudyLogId(generateUUID());
   };
 
   const handlePrev = () => {
@@ -481,9 +494,41 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     window.location.href = nextUrl;
   };
 
+  const saveProgressLog = async (currentQuestions: any[]) => {
+    try {
+      const { data: userData } = await supabase.auth.getUser();
+      if (!userData.user) return;
+
+      const answeredQuestions = currentQuestions.filter(q => q.selectedIndex !== null && q.selectedIndex !== undefined);
+      if (answeredQuestions.length === 0) return;
+
+      const correctCount = answeredQuestions.filter(q => q.isCurrentCorrect).length;
+
+      const { error } = await supabase.from('dukigo_study_logs').upsert({
+        id: studyLogId,
+        user_id: userData.user.id,
+        action_type: 'solving',
+        subject: subject,
+        unit: unitFilter,
+        set_num: setNum ? parseInt(setNum) : null,
+        total_questions: currentQuestions.length,
+        correct_questions: correctCount,
+        duration_seconds: Math.max(1, Math.floor((Date.now() - startTime) / 1000)),
+        end_time: new Date().toISOString()
+      });
+
+      if (error) {
+        console.error('Failed to save progress log:', error.message);
+      }
+    } catch (err) {
+      console.error('Error saving progress log:', err);
+    }
+  };
+
   const handleNext = () => {
     if (!isAnswered) return;
     setLastActionTime(Date.now());
+    saveProgressLog(questions);
     if (currentIndex < questions.length - 1) {
       setDirection(1);
       setCurrentIndex(prev => prev + 1);
@@ -578,7 +623,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         }));
 
         await Promise.all([
-          supabase.from('dukigo_study_logs').insert({
+          supabase.from('dukigo_study_logs').upsert({
+            id: studyLogId,
             user_id: userData.user.id,
             action_type: 'set_complete',
             subject: subject,
@@ -589,7 +635,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             duration_seconds: Math.max(1, Math.floor((lastActionTime - startTime) / 1000)),
             end_time: new Date().toISOString()
           }).then(({ error }) => {
-            if (error) console.error('Study log insert error:', error.message);
+            if (error) console.error('Study log upsert error:', error.message);
           }),
           // 오답 저장
           wrongQuestions.length > 0 ? supabase.from('dukigo_wrong_answers').upsert(wrongQuestions) : Promise.resolve(),
@@ -822,6 +868,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   setCurrentIndex(0);
                   setIsFinished(false);
                   setLastActionTime(Date.now());
+                  setStudyLogId(generateUUID());
                 }} 
                 className="py-5 rounded-2xl bg-rose-50 border-2 border-rose-200 text-rose-600 font-black text-lg hover:bg-rose-100 transition-all flex items-center justify-center gap-2"
               >
