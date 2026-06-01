@@ -29,7 +29,7 @@ export default function RegisterPage() {
 
   const checkUsername = async (username: string) => {
     if (role === 'teacher' && username.length < 2) return;
-    if (role === 'student' && username.length < 6) return;
+    if (role === 'student' && !/^\d{4,5}[가-힣]+$/.test(username)) return;
     setIsUsernameUnique('checking');
     try {
       const { data } = await supabase
@@ -37,10 +37,40 @@ export default function RegisterPage() {
         .select('username')
         .eq('username', username)
         .single();
-      if (data) setIsUsernameUnique('duplicate');
-      else setIsUsernameUnique('unique');
+      if (data) {
+        setIsUsernameUnique('duplicate');
+        setStatus({ type: 'error', message: '이미 사용 중인 정보입니다.' });
+      } else {
+        setIsUsernameUnique('unique');
+        setStatus({ type: 'idle', message: '' });
+      }
     } catch (err) {
       setIsUsernameUnique('unique');
+    }
+  };
+
+  const handleUsernameBlur = async () => {
+    const username = formData.username.trim();
+    if (!username) return;
+
+    if (role === 'student') {
+      if (!/^\d{4,5}[가-힣]+$/.test(username)) {
+        setStatus({
+          type: 'error',
+          message: '학번(4~5자리 숫자)과 이름(공백 없는 한글)을 정확히 입력해 주세요. (예: 3412홍길동)'
+        });
+      } else {
+        await checkUsername(username);
+      }
+    } else {
+      if (username.length < 2) {
+        setStatus({
+          type: 'error',
+          message: '아이디는 2글자 이상이어야 합니다.'
+        });
+      } else {
+        await checkUsername(username);
+      }
     }
   };
 
@@ -48,7 +78,9 @@ export default function RegisterPage() {
     if (role === 'teacher') {
       if (formData.username.length < 2) return '아이디는 2글자 이상이어야 합니다.';
     } else {
-      if (formData.username.length < 6) return '학번이름은 6글자 이상이어야 합니다.';
+      if (!/^\d{4,5}[가-힣]+$/.test(formData.username)) {
+        return '학번(4~5자리 숫자)과 이름(공백 없는 한글)을 정확히 입력해 주세요. (예: 3412홍길동)';
+      }
     }
     if (isUsernameUnique === 'duplicate') return '이미 사용 중인 정보입니다.';
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) return '유효한 이메일 형식이 아닙니다.';
@@ -200,17 +232,41 @@ export default function RegisterPage() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   {/* 역할 선택기 */}
                   <div className="flex bg-slate-100 p-1.5 rounded-2xl mb-4">
-                    <button type="button" onClick={() => setRole('student')} className={`flex-1 py-3 rounded-xl text-sm font-black transition-all ${role === 'student' ? 'bg-white text-brand-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`}>학생</button>
-                    <button type="button" onClick={() => setRole('teacher')} className={`flex-1 py-3 rounded-xl text-sm font-black transition-all ${role === 'teacher' ? 'bg-white text-brand-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`}>교사</button>
+                    <button 
+                      type="button" 
+                      onClick={() => {
+                        setRole('student');
+                        setStatus({ type: 'idle', message: '' });
+                      }} 
+                      className={`flex-1 py-3 rounded-xl text-sm font-black transition-all ${role === 'student' ? 'bg-white text-brand-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`}
+                    >
+                      학생
+                    </button>
+                    <button 
+                      type="button" 
+                      onClick={() => {
+                        setRole('teacher');
+                        setStatus({ type: 'idle', message: '' });
+                      }} 
+                      className={`flex-1 py-3 rounded-xl text-sm font-black transition-all ${role === 'teacher' ? 'bg-white text-brand-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`}
+                    >
+                      교사
+                    </button>
                   </div>
 
                   <div className="space-y-3">
                     <InputGroup 
                       icon={<User className="w-5 h-5" />} 
                       type="text" 
-                      placeholder={role === 'teacher' ? "아이디 (2자 이상)" : "학번이름 (예: 20405홍길동, 6자 이상)"} 
+                      placeholder={role === 'teacher' ? "아이디 (2자 이상)" : "학번이름 (예: 3412홍길동)"} 
                       value={formData.username}
-                      onChange={(e: any) => setFormData({ ...formData, username: e.target.value.replace(/\s/g, '') })}
+                      onChange={(e: any) => {
+                        setFormData({ ...formData, username: e.target.value.replace(/\s/g, '') });
+                        if (status.type === 'error' && (status.message.includes('학번') || status.message.includes('아이디') || status.message.includes('사용 중'))) {
+                          setStatus({ type: 'idle', message: '' });
+                        }
+                      }}
+                      onBlur={handleUsernameBlur}
                     />
                     {role === 'teacher' && (
                       <InputGroup 

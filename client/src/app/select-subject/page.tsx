@@ -66,14 +66,11 @@ export default function SelectSubjectPage() {
   const handleUpdateName = async (e: React.FormEvent) => {
     e.preventDefault();
     const trimmed = newNameInput.trim();
-    if (!trimmed || trimmed.length < 5) {
-      setNameStatus({ type: 'error', message: '학번과 이름을 포함하여 5자 이상 입력해주세요.' });
-      return;
-    }
-    const hasNumber = /[0-9]/.test(trimmed);
-    const hasKorean = /[가-힣]/.test(trimmed);
-    if (!hasNumber || !hasKorean) {
-      setNameStatus({ type: 'error', message: '학번(숫자)과 이름(한글)을 모두 입력해주세요. (예: 20405홍길동)' });
+    if (!/^\d{4,5}[가-힣]+$/.test(trimmed)) {
+      setNameStatus({
+        type: 'error',
+        message: '학번(4~5자리 숫자)과 이름(공백 없는 한글)을 정확히 입력해 주세요. (예: 3412홍길동)'
+      });
       return;
     }
 
@@ -220,11 +217,10 @@ export default function SelectSubjectPage() {
           });
       }
 
-      // 학생인데 한글 실명이 누락된 경우 감지하여 학번/이름 입력 유도
+      // 학생인데 학번/이름 형식에 맞지 않는 경우 프로필 완성 강제
       if (profile?.role?.toLowerCase() === 'student') {
-        const hasKorean = /[가-힣]/.test(profile.display_name || '');
-        const isDefault = !profile.display_name || profile.display_name === '수험생';
-        if (isDefault || !hasKorean) {
+        const isValidFormat = /^\d{4,5}[가-힣]+$/.test(profile.display_name || '');
+        if (!isValidFormat) {
           setShowNameModal(true);
         }
       }
@@ -556,9 +552,9 @@ export default function SelectSubjectPage() {
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"><GraduationCap size={18} /></div>
                     <input
                       type="text"
-                      placeholder="학번과 이름을 함께 입력 (5자 이상)"
+                      placeholder="학번과 이름을 함께 입력 (예: 3412홍길동)"
                       value={newNameInput}
-                      onChange={e => setNewNameInput(e.target.value)}
+                      onChange={e => setNewNameInput(e.target.value.replace(/\s/g, ''))}
                       className="w-full bg-slate-50 border-2 border-transparent focus:border-brand-500/30 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold placeholder:text-slate-400 focus:outline-none focus:bg-white transition-all shadow-sm"
                       autoFocus
                     />
