@@ -918,7 +918,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   }
 
   return (
-    <div className="min-h-screen relative flex flex-col text-slate-800">
+    <div className="min-h-screen relative flex flex-col text-slate-800 dark:text-slate-200">
       <div className="mesh-bg" />
       <nav className="sticky top-0 z-50 px-4 py-2 glass-card border-none bg-white/40 backdrop-blur-md flex justify-between items-center h-12 md:h-20 md:px-8 md:py-4">
         <div className="flex items-center gap-2 md:gap-4 shrink-0">
@@ -1230,7 +1230,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                             remapExplanation(currentQuestion.explanation, currentQuestion.shuffledOptionsIdx)
                               .split('\n')
                               .map((line: string, i: number) => (
-                                <p key={i} className="leading-relaxed text-sm md:text-xl font-bold">{renderMath(line)}</p>
+                                <p key={i} className="leading-relaxed text-sm md:text-xl font-bold text-slate-800 dark:text-slate-200">{renderMath(line)}</p>
                               ))
                           )}
                         </div>
