@@ -9,6 +9,23 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const getLocalDateString = (date: Date) => {
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+};
+
+const formatToLocalTime = (isoString: string) => {
+  if (!isoString) return '기록 없음';
+  try {
+    const d = new Date(isoString);
+    if (isNaN(d.getTime())) return isoString;
+    const pad = (n: number) => String(n).padStart(2, '0');
+    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+  } catch (e) {
+    return isoString;
+  }
+};
+
 export default function TeacherDashboard() {
   const [students, setStudents] = useState<any[]>([]);
   const [allStudents, setAllStudents] = useState<any[]>([]); 
@@ -106,7 +123,7 @@ export default function TeacherDashboard() {
       }
       const { logs } = (await resLogs.json()) as { logs: any[] };
 
-      const todayStr = new Date().toISOString().split('T')[0];
+      const localTodayStr = getLocalDateString(new Date());
       let tCorrect = 0, tQuestions = 0;
       let activeSet = new Set();
 
@@ -114,20 +131,28 @@ export default function TeacherDashboard() {
         const sLogs = logs?.filter(l => l.user_id === student.id) || [];
         const sSubs = Array.from(new Set(sLogs.map(l => l.subject))).filter(Boolean);
         
-        let sTotalQ = 0, sCorrect = 0, sDur = 0, lastA = '기록 없음';
+        let sTotalQ = 0, sCorrect = 0, sDur = 0;
+        let lastActiveIso = '';
 
         sLogs.forEach(log => {
           sTotalQ += log.total_questions || 0;
           sCorrect += log.correct_questions || 0;
           sDur += log.duration_seconds || 0;
-          if (log.end_time?.startsWith(todayStr)) activeSet.add(student.id);
-          if (lastA === '기록 없음' || new Date(log.end_time) > new Date(lastA)) {
-            lastA = log.end_time?.replace('T', ' ').split('.')[0] || lastA;
+          if (log.end_time) {
+            const logLocalDate = getLocalDateString(new Date(log.end_time));
+            if (logLocalDate === localTodayStr) {
+              activeSet.add(student.id);
+            }
+            if (!lastActiveIso || new Date(log.end_time) > new Date(lastActiveIso)) {
+              lastActiveIso = log.end_time;
+            }
           }
         });
 
         tQuestions += sTotalQ;
         tCorrect += sCorrect;
+
+        const lastActiveTime = lastActiveIso ? new Date(lastActiveIso).getTime() : 0;
 
         return {
           ...student,
@@ -135,7 +160,8 @@ export default function TeacherDashboard() {
           totalQuestions: sTotalQ,
           accuracy: sTotalQ > 0 ? Math.round((sCorrect / sTotalQ) * 100) : 0,
           totalDuration: sDur,
-          lastActive: lastA,
+          lastActive: lastActiveIso ? formatToLocalTime(lastActiveIso) : '기록 없음',
+          lastActiveTime,
           subjectsStudied: sSubs,
           guessingCount: 0
         };
@@ -191,10 +217,7 @@ export default function TeacherDashboard() {
     // Apply sorting
     if (sortBy === 'recent') {
       filtered.sort((a, b) => {
-        if (a.lastActive === '기록 없음' && b.lastActive === '기록 없음') return 0;
-        if (a.lastActive === '기록 없음') return 1;
-        if (b.lastActive === '기록 없음') return -1;
-        return new Date(b.lastActive).getTime() - new Date(a.lastActive).getTime();
+        return (b.lastActiveTime || 0) - (a.lastActiveTime || 0);
       });
     } else if (sortBy === 'number') {
       filtered.sort((a, b) => {
@@ -298,7 +321,7 @@ export default function TeacherDashboard() {
           <StatCard label={isOwner && activeRole === 'teacher' ? "교사수" : "학생수"} value={stats.totalStudents} icon={<Users />} color="text-blue-600" bg="bg-blue-50" />
           <StatCard label="정답률" value={`${stats.avgAccuracy}%`} icon={<Target />} color="text-emerald-600" bg="bg-emerald-50" />
           <StatCard label="오늘" value={stats.todayActive} icon={<Clock />} color="text-brand-600" bg="bg-brand-50" />
-          <StatCard label="문항오류 신고" value={stats.pendingReports} icon={<Flag />} color="text-rose-600" bg="bg-rose-50" />
+          <StatCard label="문항오류 신고" value={stats.pendingReports} icon={<Flag />} color="text-rose-600" bg="bg-rose-50" onClick={() => window.location.href = '/admin/reports'} />
         </div>
 
         {/* 종목 필터 */}
@@ -480,9 +503,14 @@ export default function TeacherDashboard() {
   );
 }
 
-function StatCard({ label, value, icon, color, bg }: any) {
+function StatCard({ label, value, icon, color, bg, onClick }: any) {
   return (
-    <div className="bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col gap-1.5 items-center md:items-start">
+    <div 
+      onClick={onClick}
+      className={`bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col gap-1.5 items-center md:items-start ${
+        onClick ? 'cursor-pointer hover:shadow-md transition-all active:scale-[0.98]' : ''
+      }`}
+    >
       <div className={`w-10 h-10 ${bg} ${color} rounded-lg flex items-center justify-center mb-1`}>{React.cloneElement(icon, { size: 18 })}</div>
       <div className="text-[10px] md:text-xs font-black text-slate-400 uppercase text-center md:text-left">{label}</div>
       <div className="text-base md:text-2xl font-black text-slate-900">{value}</div>
