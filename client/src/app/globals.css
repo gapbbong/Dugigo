@@ -40,6 +40,12 @@
   .explanation-table tr:hover {
     background: #2d2d38 !important;
   }
+  .explanation-table,
+  .explanation-table p,
+  .explanation-table span,
+  .explanation-table div {
+    color: #e2e8f0 !important;
+  }
 }
 
 body {
