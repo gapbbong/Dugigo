@@ -1022,7 +1022,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             <motion.div key={currentIndex} custom={direction} initial={{ opacity: 0, x: direction > 0 ? 50 : -50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: direction > 0 ? -50 : 50 }} transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }} className="flex-1 flex flex-col gap-4 md:gap-6">
               <div className="space-y-4 md:space-y-8">
                 <div className="flex items-center gap-3">
-                  <span className="px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 text-brand-600 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase">
+                  <span className="px-3 py-1 md:px-4 md:py-1.5 bg-brand-50 dark:bg-brand-950/40 text-brand-600 dark:text-brand-400 text-[10px] md:text-base font-black tracking-widest rounded-full uppercase">
                     {getQuestionBadgeText(currentQuestion, currentIndex)}
                   </span>
                   {currentQuestion.frequency > 1 && (
@@ -1034,7 +1034,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                           ? 'bg-amber-500 text-white border-amber-400' 
                           : currentQuestion.frequency >= 3 
                             ? 'bg-slate-600 text-white border-slate-500' 
-                            : 'bg-orange-50 text-orange-600 border-orange-200'
+                            : 'bg-orange-50 dark:bg-orange-950/30 text-orange-600 dark:text-orange-400 border-orange-200 dark:border-orange-900/40'
                       }`}
                     >
                       <Zap className={`w-3 h-3 md:w-4 md:h-4 ${currentQuestion.frequency >= 5 ? 'animate-pulse' : ''}`} />
@@ -1085,7 +1085,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   <motion.div 
                     initial={{ opacity: 0, y: 10 }} 
                     animate={{ opacity: 1, y: 0 }} 
-                    className="bg-white/50 p-4 md:p-6 rounded-[2rem] border border-white/60 shadow-sm flex justify-center empty:hidden"
+                    className="bg-white/50 dark:bg-white/5 p-4 md:p-6 rounded-[2rem] border border-white/60 dark:border-white/10 shadow-sm flex justify-center empty:hidden"
                     id={`img-container-${currentIndex}`}
                   >
                     <img 
