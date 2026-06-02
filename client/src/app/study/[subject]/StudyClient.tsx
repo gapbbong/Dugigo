@@ -769,13 +769,13 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     if (text.includes('<pre>') && text.includes('</pre>')) {
       const parts = text.split(/(<pre>[\s\S]*?<\/pre>)/g);
       return (
-        <div className="text-xl md:text-4xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">
+        <div className="text-xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">
           {parts.map((part, i) => {
             if (part.startsWith('<pre>') && part.endsWith('</pre>')) {
               const codeContent = part.slice(5, -6).trim();
               return (
-                <div key={i} className="my-6 p-5 md:p-8 bg-[#f8fafc] border-2 border-slate-200 rounded-3xl text-left overflow-x-auto shadow-inner tracking-normal">
-                  <pre className="font-mono text-sm md:text-xl text-slate-800 whitespace-pre-wrap leading-relaxed">{codeContent}</pre>
+                <div key={i} className="my-6 p-5 md:p-8 bg-[#f8fafc] dark:bg-[#1a1c20] border-2 border-slate-200 dark:border-slate-800 rounded-3xl text-left overflow-x-auto shadow-inner tracking-normal">
+                  <pre className="font-mono text-sm md:text-xl text-slate-800 dark:text-slate-200 whitespace-pre-wrap leading-relaxed">{codeContent}</pre>
                 </div>
               );
             }
@@ -788,13 +788,13 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     if (text.includes('```')) {
       const parts = text.split(/(```[\s\S]*?```)/g);
       return (
-        <div className="text-lg md:text-2xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">
+        <div className="text-lg md:text-2xl font-bold text-slate-900 dark:text-slate-100 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">
           {parts.map((part, i) => {
             if (part.startsWith('```') && part.endsWith('```')) {
               const codeContent = part.slice(3, -3).replace(/^[a-z]*\n/i, '').trim();
               return (
-                <div key={i} className="my-6 p-5 md:p-8 bg-[#f8fafc] border-2 border-slate-200 rounded-3xl text-left overflow-x-auto shadow-inner tracking-normal">
-                  <pre className="font-mono text-sm md:text-xl text-slate-800 whitespace-pre-wrap leading-relaxed">{codeContent}</pre>
+                <div key={i} className="my-6 p-5 md:p-8 bg-[#f8fafc] dark:bg-[#1a1c20] border-2 border-slate-200 dark:border-slate-800 rounded-3xl text-left overflow-x-auto shadow-inner tracking-normal">
+                  <pre className="font-mono text-sm md:text-xl text-slate-800 dark:text-slate-200 whitespace-pre-wrap leading-relaxed">{codeContent}</pre>
                 </div>
               );
             }
@@ -810,18 +810,18 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       const codePart = text.slice(firstDoubleNewline + 2).trim();
       
       return (
-        <div className="text-lg md:text-2xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">
+        <div className="text-lg md:text-2xl font-bold text-slate-900 dark:text-slate-100 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">
           <span>{renderMath(questionPart)}</span>
           {codePart && (
-            <div className="my-6 p-5 md:p-8 bg-[#f8fafc] border-2 border-slate-200 rounded-3xl text-left overflow-x-auto shadow-inner tracking-normal">
-              <pre className="font-mono text-sm md:text-xl text-slate-800 whitespace-pre-wrap leading-relaxed">{codePart}</pre>
+            <div className="my-6 p-5 md:p-8 bg-[#f8fafc] dark:bg-[#1a1c20] border-2 border-slate-200 dark:border-slate-800 rounded-3xl text-left overflow-x-auto shadow-inner tracking-normal">
+              <pre className="font-mono text-sm md:text-xl text-slate-800 dark:text-slate-200 whitespace-pre-wrap leading-relaxed">{codePart}</pre>
             </div>
           )}
         </div>
       );
     }
     
-    return <h2 className="text-lg md:text-2xl font-bold text-slate-900 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">{renderMath(text)}</h2>;
+    return <h2 className="text-lg md:text-2xl font-bold text-slate-900 dark:text-slate-100 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">{renderMath(text)}</h2>;
   };
 
   const formatTime = (seconds: number) => {
@@ -972,13 +972,13 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         </div>
 
         <div className="flex-1 flex justify-center px-2 md:px-4">
-          <span className="text-[12px] md:text-xl font-black tracking-tight text-slate-800 uppercase whitespace-nowrap overflow-hidden text-ellipsis max-w-[140px] md:max-w-none">
+          <span className="text-[12px] md:text-xl font-black tracking-tight text-slate-800 dark:text-slate-200 uppercase whitespace-nowrap overflow-hidden text-ellipsis max-w-[140px] md:max-w-none">
             {unitFilter ? `${unitFilter}${setNum ? ` · 세트 ${setNum}` : ''}` : `${subject} 기출학습`}
           </span>
         </div>
 
         <div className="flex items-center gap-3 md:gap-8 shrink-0">
-          <div className="hidden md:flex items-center gap-2 text-2xl font-black text-slate-900 bg-white/30 px-4 py-2 rounded-2xl border border-white/40 backdrop-blur-md">
+          <div className="hidden md:flex items-center gap-2 text-2xl font-black text-slate-900 dark:text-slate-100 bg-white/30 dark:bg-black/20 px-4 py-2 rounded-2xl border border-white/40 dark:border-white/10 backdrop-blur-md">
             <BarChart3 className="w-6 h-6 text-brand-500" /> {currentIndex + 1} / {questions.length}
           </div>
           
@@ -992,13 +992,13 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             
             <div className="flex items-center gap-1.5 bg-white/40 backdrop-blur-md px-2 py-1 md:px-4 md:py-2 rounded-xl border border-white/40 shadow-sm">
               <ShieldCheck className="w-3 h-3 md:w-5 md:h-5 text-brand-600" />
-              <span className="text-[10px] md:text-sm font-black text-slate-800">
+              <span className="text-[10px] md:text-sm font-black text-slate-800 dark:text-slate-200">
                 {userProfile ? (LEVEL_TITLES[Math.min(11, Math.floor((userProfile.exp_points || 0) / 1000))] || "입문자") : "입문자"}
               </span>
             </div>
             <div className="flex items-center gap-1.5 bg-white/40 backdrop-blur-md px-2 py-1 md:px-4 md:py-2 rounded-xl border border-white/40 shadow-sm">
               <Thermometer className="w-3 h-3 md:w-5 md:h-5 text-rose-500" />
-              <span className="text-[10px] md:text-sm font-black text-slate-800">
+              <span className="text-[10px] md:text-sm font-black text-slate-800 dark:text-slate-200">
                 {userProfile ? Math.min(100, (userProfile.current_temp || 0) + 36.5).toFixed(1) : "36.5"}°C
               </span>
             </div>
@@ -1109,15 +1109,15 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   const isCorrect = idx === currentQuestion.correctShuffledIndex;
                   const isAnswered = currentQuestion.selectedIndex !== null;
                   if (choice === "" && idx > 0) return null;
-                  let styleStr = "glass-card bg-white/50 hover:bg-white text-slate-700 hover:text-brand-600 cursor-pointer";
+                  let styleStr = "glass-card bg-white/50 dark:bg-white/10 hover:bg-white dark:hover:bg-white/20 text-slate-700 dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 cursor-pointer";
                   if (isAnswered) {
-                    if (isCorrect) styleStr = "bg-emerald-50 text-emerald-700 border-emerald-300 shadow-[0_0_20px_rgba(16,185,129,0.15)] ring-1 ring-emerald-400 scale-[1.01]";
-                    else if (isSelected) styleStr = "bg-rose-50 text-rose-600 border-rose-200 ring-1 ring-rose-400 opacity-80";
+                    if (isCorrect) styleStr = "bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 border-emerald-300 dark:border-emerald-800 shadow-[0_0_20px_rgba(16,185,129,0.15)] ring-1 ring-emerald-400 scale-[1.01]";
+                    else if (isSelected) styleStr = "bg-rose-50 dark:bg-rose-950/30 text-rose-600 dark:text-rose-400 border-rose-200 dark:border-rose-800 ring-1 ring-rose-400 opacity-80";
                     else styleStr = "opacity-35 grayscale pointer-events-none";
                   }
                   return (
                     <motion.button key={idx} whileTap={!isAnswered ? { scale: 0.98 } : {}} disabled={isAnswered} onClick={() => handleAnswer(idx)} className={`group w-full px-3 py-2 md:px-8 md:py-5 rounded-2xl md:rounded-[2rem] border-2 flex items-center gap-3 md:gap-6 transition-all duration-300 text-left relative overflow-hidden ${styleStr}`}>
-                      <div className={`w-7 h-7 md:w-10 md:h-10 shrink-0 rounded-xl md:rounded-2xl flex items-center justify-center font-black text-sm md:text-base transition-all shadow-sm ${isAnswered ? (isCorrect ? 'bg-emerald-500 text-white' : isSelected ? 'bg-rose-500 text-white' : 'bg-slate-100 text-slate-400') : 'bg-brand-50 text-brand-600 group-hover:bg-brand-600 group-hover:text-white'}`}>
+                      <div className={`w-7 h-7 md:w-10 md:h-10 shrink-0 rounded-xl md:rounded-2xl flex items-center justify-center font-black text-sm md:text-base transition-all shadow-sm ${isAnswered ? (isCorrect ? 'bg-emerald-500 text-white' : isSelected ? 'bg-rose-500 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500') : 'bg-brand-50 dark:bg-brand-950/40 text-brand-600 dark:text-brand-400 group-hover:bg-brand-600 group-hover:text-white'}`}>
                         {isAnswered && isCorrect ? <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5" /> : isAnswered && isSelected && !isCorrect ? <XCircle className="w-4 h-4 md:w-5 md:h-5" /> : idx + 1}
                       </div>
                       <span className="text-base md:text-xl font-bold flex-1 leading-relaxed flex flex-col gap-3">
@@ -1181,8 +1181,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               {/* 정오 결과 + 해설 배너 */}
               <AnimatePresence>
                 {currentQuestion.selectedIndex !== null && (
-                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={`mt-3 md:mt-4 rounded-3xl overflow-hidden border-2 ${currentQuestion.isCurrentCorrect ? 'border-emerald-200' : 'border-rose-200'} bg-white shadow-xl shadow-black/5`}>
-                    <div className={`px-6 py-4 md:px-8 md:py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 ${currentQuestion.isCurrentCorrect ? 'bg-emerald-50/50' : 'bg-rose-50/50'}`}>
+                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={`mt-3 md:mt-4 rounded-3xl overflow-hidden border-2 ${currentQuestion.isCurrentCorrect ? 'border-emerald-200 dark:border-emerald-900/50' : 'border-rose-200 dark:border-rose-900/50'} bg-white dark:bg-[#151518] shadow-xl shadow-black/5`}>
+                    <div className={`px-6 py-4 md:px-8 md:py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 ${currentQuestion.isCurrentCorrect ? 'bg-emerald-50/50 dark:bg-emerald-950/20' : 'bg-rose-50/50 dark:bg-rose-950/20'}`}>
                       <div className="flex items-center gap-4">
                         {currentQuestion.isCurrentCorrect && (
                           <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center shrink-0 bg-emerald-100 text-emerald-600">
@@ -1207,13 +1207,13 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                               const praiseText = praises[currentIndex % praises.length];
                               return (
                                 <>
-                                  <h4 className="text-xl md:text-2xl font-black mb-1 text-emerald-700">정답입니다!</h4>
-                                  <p className="text-sm md:text-base font-bold text-emerald-600">{praiseText}</p>
+                                  <h4 className="text-xl md:text-2xl font-black mb-1 text-emerald-700 dark:text-emerald-400">정답입니다!</h4>
+                                  <p className="text-sm md:text-base font-bold text-emerald-600 dark:text-emerald-400/80">{praiseText}</p>
                                 </>
                               );
                             })()
                           ) : (
-                            <p className="text-xl md:text-3xl font-black text-rose-700 py-1 md:py-2 leading-relaxed word-break-keep-all">
+                            <p className="text-xl md:text-3xl font-black text-rose-700 dark:text-rose-400 py-1 md:py-2 leading-relaxed word-break-keep-all">
                               정답은 [ {currentQuestion.correctShuffledIndex !== -1 ? `${currentQuestion.correctShuffledIndex + 1}번. ${currentQuestion.shuffledOptions[currentQuestion.correctShuffledIndex]}` : '데이터 오류'} ] 입니다. 💪
                             </p>
                           )}
@@ -1221,8 +1221,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                       </div>
                     </div>
                     {currentQuestion.explanation && (
-                      <div className="p-6 md:p-8 bg-white border-t border-slate-100">
-                        <p className="text-xs md:text-base font-black uppercase tracking-widest text-slate-900 mb-1.5">해설</p>
+                      <div className="p-6 md:p-8 bg-white dark:bg-[#151518] border-t border-slate-100 dark:border-slate-800">
+                        <p className="text-xs md:text-base font-black uppercase tracking-widest text-slate-900 dark:text-slate-300 mb-1.5">해설</p>
                         <div className="space-y-0.5 explanation-table">
                           {currentQuestion.explanation.includes('<table') ? (
                             <div dangerouslySetInnerHTML={{ __html: remapExplanation(currentQuestion.explanation, currentQuestion.shuffledOptionsIdx) }} />
@@ -1236,7 +1236,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                         </div>
                       </div>
                     )}
-                    <div className={`px-4 py-2 flex justify-end ${currentQuestion.isCurrentCorrect ? 'bg-emerald-50' : 'bg-rose-50'} border-t ${currentQuestion.isCurrentCorrect ? 'border-emerald-100' : 'border-rose-100'}`}>
+                    <div className={`px-4 py-2 flex justify-end ${currentQuestion.isCurrentCorrect ? 'bg-emerald-50 dark:bg-emerald-950/20' : 'bg-rose-50 dark:bg-rose-950/20'} border-t ${currentQuestion.isCurrentCorrect ? 'border-emerald-100 dark:border-emerald-900/30' : 'border-rose-100 dark:border-rose-900/30'}`}>
                       <button onClick={() => setReportOpen(true)} className="flex items-center gap-1.5 text-xs md:text-base font-black text-slate-500 hover:text-rose-500 transition-colors"><Flag className="w-3.5 h-3.5 md:w-4 h-4" /> 문항 오류 신고</button>
                     </div>
                   </motion.div>

@@ -23,6 +23,23 @@
     --glass-bg: rgba(15, 15, 20, 0.7);
     --glass-border: rgba(255, 255, 255, 0.1);
   }
+
+  .explanation-table table {
+    background: #1e1e24 !important;
+    border-color: #2e2e38 !important;
+  }
+  .explanation-table th {
+    background: #25252d !important;
+    border-color: #2e2e38 !important;
+    color: #94a3b8 !important;
+  }
+  .explanation-table td {
+    border-color: #2e2e38 !important;
+    color: #e2e8f0 !important;
+  }
+  .explanation-table tr:hover {
+    background: #2d2d38 !important;
+  }
 }
 
 body {
