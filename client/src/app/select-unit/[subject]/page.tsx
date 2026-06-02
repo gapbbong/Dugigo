@@ -161,7 +161,7 @@ export default function SelectUnitPage() {
   let runningSetCount = 1;
 
   return (
-    <div className="min-h-screen relative text-slate-800 font-sans pb-32">
+    <div className="min-h-screen relative text-slate-800 dark:text-slate-200 font-sans pb-32">
       <div className="mesh-bg" />
 
       {/* Header */}
@@ -177,7 +177,7 @@ export default function SelectUnitPage() {
               <ChevronLeft size={24} className="group-hover:-translate-x-0.5 transition-transform" />
             </button>
             <div className="flex items-center gap-2 overflow-hidden">
-              <h2 className="text-xl md:text-3xl font-black text-slate-900 leading-tight whitespace-nowrap overflow-hidden text-ellipsis">{subject}</h2>
+              <h2 className="text-xl md:text-3xl font-black text-slate-900 dark:text-slate-100 leading-tight whitespace-nowrap overflow-hidden text-ellipsis">{subject}</h2>
             </div>
           </div>
 
@@ -216,7 +216,7 @@ export default function SelectUnitPage() {
         <div className="mb-8 flex items-center justify-between gap-4">
           <motion.h1 className="text-lg md:text-2xl font-black tracking-tight leading-tight">
             <span className="text-blue-500">두</span>꺼운 <span className="text-emerald-500">기</span>능사 책 대신<br className="sm:hidden" />
-            <span className="text-rose-500">고</span>민말고 <span className="text-slate-900 font-black">두기고</span>
+            <span className="text-rose-500">고</span>민말고 <span className="text-slate-900 dark:text-slate-100 font-black">두기고</span>
           </motion.h1>
         </div>
 
@@ -226,7 +226,7 @@ export default function SelectUnitPage() {
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-orange-600 rounded-xl flex items-center justify-center text-white"><Zap size={20} /></div>
-                <h2 className="text-xl md:text-3xl font-black text-slate-900">자주 나왔던 문항 공략</h2>
+                <h2 className="text-xl md:text-3xl font-black text-slate-900 dark:text-slate-100">자주 나왔던 문항 공략</h2>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -238,7 +238,7 @@ export default function SelectUnitPage() {
                       <button 
                         key={unit.name} 
                         onClick={() => router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unit.name)}&set=1&size=${unit.count}${unit.range ? `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}` : ''}`)}
-                        className="h-24 bg-white border border-slate-100 rounded-2xl flex flex-col items-center justify-center hover:border-orange-300 transition-all relative group overflow-hidden"
+                        className="h-24 bg-white dark:bg-white/5 border border-slate-100 dark:border-slate-800/50 rounded-2xl flex flex-col items-center justify-center hover:border-orange-300 transition-all relative group overflow-hidden"
                         title={stats ? `최근 5회 맞은 개수: ${stats.correctCounts.slice(-5).map(c => `${c}개`).join(', ')}` : undefined}
                       >
                         {stats && (
@@ -246,7 +246,7 @@ export default function SelectUnitPage() {
                             {stats.count}회
                           </div>
                         )}
-                        <span className="text-2xl font-black tracking-tighter text-slate-800">{String(idx + 1).padStart(2, '0')}</span>
+                        <span className="text-2xl font-black tracking-tighter text-slate-800 dark:text-slate-200">{String(idx + 1).padStart(2, '0')}</span>
                         <span className="text-[9px] font-black uppercase text-slate-400">공략</span>
                         {stats && (
                           <span className="text-[8px] font-bold text-orange-600 mt-1 z-10 leading-none">
@@ -267,7 +267,7 @@ export default function SelectUnitPage() {
           <div className="flex items-center justify-between mb-5">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-violet-600 rounded-xl flex items-center justify-center text-white"><Sparkles size={20} /></div>
-              <h2 className="text-xl md:text-3xl font-black text-slate-900">단원별 핵심 공략</h2>
+              <h2 className="text-xl md:text-3xl font-black text-slate-900 dark:text-slate-100">단원별 핵심 공략</h2>
             </div>
             <button onClick={() => setIsUnitsCollapsed(!isUnitsCollapsed)} className="px-3 py-1.5 bg-white/50 border border-brand-100 rounded-lg text-xs font-black">{isUnitsCollapsed ? '펼치기' : '접기'}</button>
           </div>
@@ -280,7 +280,7 @@ export default function SelectUnitPage() {
                   <div key={unit.name} className="glass-card p-6 rounded-[2rem] border border-white/60">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-8 h-8 bg-violet-50 rounded-lg flex items-center justify-center text-violet-600 font-black text-xs">{unitIndex}</div>
-                      <h4 className="text-sm font-black truncate">{unit.name}</h4>
+                      <h4 className="text-sm font-black truncate dark:text-slate-200">{unit.name}</h4>
                     </div>
                     <div className="grid grid-cols-3 gap-3">
                       {Array.from({ length: unitSetCount }).map((_, sIdx) => {
@@ -291,17 +291,17 @@ export default function SelectUnitPage() {
                           <button 
                             key={sIdx} 
                             onClick={() => router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unit.name)}&set=${sIdx+1}&size=30${unit.range ? `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}` : ''}`)}
-                            className="h-24 bg-white border border-slate-100 rounded-2xl flex flex-col items-center justify-center hover:border-violet-300 transition-all relative group overflow-hidden"
+                            className="h-24 bg-white dark:bg-white/5 border border-slate-100 dark:border-slate-800/50 rounded-2xl flex flex-col items-center justify-center hover:border-violet-300 transition-all relative group overflow-hidden"
                             title={stats ? `최근 5회 맞은 개수: ${stats.correctCounts.slice(-5).map(c => `${c}개`).join(', ')}` : undefined}
                           >
                             {/* 횟수 뱃지 */}
                             {stats && (
-                              <div className="absolute top-1.5 right-1.5 px-1.5 py-0.5 bg-violet-600 text-white text-[8px] font-black rounded-md shadow-sm">
+                              <div className="absolute top-1.5 right-1.5 bg-violet-600 text-white text-[8px] font-black rounded-md shadow-sm px-1.5 py-0.5">
                                 {stats.count}회
                               </div>
                             )}
 
-                            <span className="text-2xl font-black tracking-tighter text-slate-800">{setNum}</span>
+                            <span className="text-2xl font-black tracking-tighter text-slate-800 dark:text-slate-200">{setNum}</span>
                             <span className="text-[9px] font-black text-slate-400">세트 ({Math.min(30, unit.count - sIdx * 30)}문항)</span>
                             {stats && (
                               <span className="text-[8px] font-bold text-violet-600 mt-1 z-10 leading-none">
@@ -337,7 +337,7 @@ export default function SelectUnitPage() {
           <div className="flex items-center justify-between mb-5">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white"><Calendar size={20} /></div>
-              <h2 className="text-xl md:text-3xl font-black text-slate-900">연도별 기출 정복</h2>
+              <h2 className="text-xl md:text-3xl font-black text-slate-900 dark:text-slate-100">연도별 기출 정복</h2>
             </div>
             <button onClick={() => setIsExamsCollapsed(!isExamsCollapsed)} className="px-3 py-1.5 bg-white/50 border border-indigo-100 rounded-lg text-xs font-black">{isExamsCollapsed ? '펼치기' : '접기'}</button>
           </div>
@@ -347,9 +347,9 @@ export default function SelectUnitPage() {
                 <button
                   key={exam.name}
                   onClick={() => handleSelectExam(exam)}
-                  className="p-5 bg-white border border-slate-100 rounded-[1.5rem] hover:border-indigo-300 transition-all text-left group"
+                  className="p-5 bg-white dark:bg-white/5 border border-slate-100 dark:border-slate-800/50 rounded-[1.5rem] hover:border-indigo-300 transition-all text-left group"
                 >
-                  <h4 className="text-2xl font-black tracking-tighter text-slate-800 mb-1 group-hover:text-indigo-600 transition-colors">{exam.name}</h4>
+                  <h4 className="text-2xl font-black tracking-tighter text-slate-800 dark:text-slate-200 mb-1 group-hover:text-indigo-600 transition-colors">{exam.name}</h4>
                   <p className="text-[9px] font-black uppercase text-slate-400">{exam.count}문항</p>
                 </button>
               ))}
@@ -363,7 +363,7 @@ export default function SelectUnitPage() {
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-fuchsia-600 rounded-xl flex items-center justify-center text-white"><Sparkles size={20} /></div>
-                <h2 className="text-xl md:text-3xl font-black text-slate-900">족집게 예상 문제</h2>
+                <h2 className="text-xl md:text-3xl font-black text-slate-900 dark:text-slate-100">족집게 예상 문제</h2>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -371,11 +371,11 @@ export default function SelectUnitPage() {
                 <button
                   key={exam.name}
                   onClick={() => handleSelectExam(exam)}
-                  className="glass-card p-6 rounded-[2rem] border-2 border-fuchsia-100 hover:border-fuchsia-400 transition-all flex items-center justify-between group"
+                  className="glass-card p-6 rounded-[2rem] border-2 border-fuchsia-100 dark:border-fuchsia-950/40 hover:border-fuchsia-400 transition-all flex items-center justify-between group"
                 >
                   <div className="text-left">
                     <span className="inline-block px-2 py-0.5 bg-fuchsia-100 text-fuchsia-600 text-[10px] font-black rounded-full mb-2">높은 적중률 보장</span>
-                    <h4 className="text-lg font-black text-slate-800 group-hover:text-fuchsia-600 transition-colors">{exam.name}</h4>
+                    <h4 className="text-lg font-black text-slate-800 dark:text-slate-200 group-hover:text-fuchsia-600 transition-colors">{exam.name}</h4>
                     <p className="text-xs font-black text-slate-400">데이터가 엄선한 2025년 적중 족집게</p>
                   </div>
                   <div className="w-12 h-12 bg-fuchsia-50 rounded-full flex items-center justify-center text-fuchsia-600 group-hover:scale-110 transition-transform">

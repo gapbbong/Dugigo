@@ -347,9 +347,9 @@ export default function SelectSubjectPage() {
 
       <main className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 pt-6 md:pt-16">
         <div className="mb-10 md:mb-14 text-center md:text-left">
-          <h1 className="text-3xl md:text-6xl font-black text-slate-900 italic mb-4 leading-tight tracking-tighter">"{randomQuote}"</h1>
+          <h1 className="text-3xl md:text-6xl font-black text-slate-900 dark:text-slate-100 italic mb-4 leading-tight tracking-tighter">"{randomQuote}"</h1>
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-2">
-            <p className="text-lg md:text-2xl font-bold text-slate-500 italic">
+            <p className="text-lg md:text-2xl font-bold text-slate-500 dark:text-slate-400 italic">
               환영합니다, <span className="text-brand-600 font-black">{user?.display_name || user?.email?.split('@')[0]}</span>님! 👋
             </p>
             <div className="flex items-center gap-3">
@@ -380,8 +380,8 @@ export default function SelectSubjectPage() {
                   <Icon size={28} className="hidden md:block" />
                 </div>
                 <div className="flex items-center gap-2 md:gap-4 overflow-hidden">
-                  <span className="text-slate-900 font-black italic text-base md:text-xl">{index + 1}.</span>
-                  <h3 className="text-base md:text-xl font-black text-slate-900 tracking-tight whitespace-nowrap">
+                  <span className="text-slate-900 dark:text-slate-100 font-black italic text-base md:text-xl">{index + 1}.</span>
+                  <h3 className="text-base md:text-xl font-black text-slate-900 dark:text-slate-100 tracking-tight whitespace-nowrap">
                     {subject}
                   </h3>
                 </div>
