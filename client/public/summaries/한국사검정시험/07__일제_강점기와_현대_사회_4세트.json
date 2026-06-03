@@ -1,0 +1,51 @@
+{
+  "subject": "한국사검정시험",
+  "unit": "07. 일제 강점기와 현대 사회",
+  "set": 4,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/07__일제_강점기와_현대_사회_4_slide_1.png",
+      "emoji": "🇰🇷",
+      "title": "대한민국 정부 수립과 6.25 전쟁",
+      "content": "광복 후 혼란 속에서 1948년 5월 10일, 대한민국 최초의 민주적 보통선거인 5.10 총선거를 통해 제헌 국회가 구성되었습니다. 그러나 제주 4·3 사건으로 일부 지역은 선거가 무효화되는 아픔을 겪었습니다. 이후 1950년 6월 25일, 민족상잔의 비극인 6·25 전쟁이 발발하였고, 인천 상륙 작전으로 전세가 역전되기도 했습니다. 전쟁 중에는 피란지 부산에서 이승만 정부의 권력 강화를 위한 발췌 개헌이 이루어지기도 했습니다.",
+      "visual": "A timeline starting from 1948. First point: a ballot box and '5.10 총선거' Korean text, with a small map of Jeju island showing a 'X' mark. Second point: a tank and an airplane icon with '6·25 전쟁' Korean text, pointing to a map of Korea showing the battle lines. Third point: a scroll or document icon with '발췌 개헌' Korean text, near a war-torn city backdrop. Use clear, vibrant colors and a clean, modern design. Korean text in high quality font.",
+      "exam_point": "1948년 5.10 총선거 (제헌 국회의원), 제주 4·3 사건 (선거 무효), 1950년 6·25 전쟁, 인천 상륙 작전, 발췌 개헌 (전시 중, 대통령 직선제).",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/07__일제_강점기와_현대_사회_4_slide_2.png",
+      "emoji": "🗳️",
+      "title": "이승만 정부: 개헌을 통한 권력 강화",
+      "content": "이승만 정부는 장기 집권을 위해 헌법을 개정하려는 시도를 여러 차례 하였습니다. 6.25 전쟁 중인 1952년, 피란지 부산에서 대통령 직선제와 양원제를 골자로 하는 '발췌 개헌(1차)'을 강행했습니다. 이어 1954년에는 '초대 대통령'에 한해 중임 제한을 철폐하는 '사사오입 개헌(2차)'을 추진했습니다. 이는 국회 재적 의원 2/3의 찬성을 채우지 못했음에도 불구하고, 반올림 논리를 적용해 통과시킨 초유의 사건이었습니다.",
+      "visual": "A diagram showing a large scale. On one side, a ballot box with '민주주의' Korean text. On the other side, a crown and scepter with '권력' Korean text, heavily outweighing the ballot box. Below the scale, two distinct boxes: '1차 발췌 개헌 (1952)' with an arrow pointing to '대통령 직선제', and '2차 사사오입 개헌 (1954)' with an arrow pointing to '초대 대통령 중임 제한 철폐'. A calculator icon with the number '135' and '四捨五入' (사사오입) Korean text, representing the controversial arithmetic. Use a serious, historical tone with clear, distinct elements. Korean text in high quality font.",
+      "exam_point": "1952년 발췌 개헌 (1차), 1954년 사사오입 개헌 (2차), 초대 대통령 중임 제한 철폐, 이승만 대통령의 장기 집권 시도.",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/07__일제_강점기와_현대_사회_4_slide_3.png",
+      "emoji": "🏗️",
+      "title": "박정희 정부: 고도 성장과 유신 독재",
+      "content": "1960년대부터 박정희 정부는 '경제 개발 5개년 계획'을 추진하며 수출 주도형 경제 성장을 이끌었습니다. 1970년 경부 고속 도로 개통은 성장의 상징이었고, 1977년에는 수출액 100억 달러를 달성하는 금자탑을 세웠습니다. 하지만 이러한 경제 성장의 이면에는 1972년 '유신 헌법' 제정을 통한 독재 체제 강화가 있었습니다. 대통령에게 초월적인 권한을 부여하고 '긴급 조치'를 발동하며, '통일 주체 국민 회의'를 통한 간선제로 대통령을 선출했습니다.",
+      "visual": "A split screen or two distinct sections. Left side (Economic Growth): Icons representing economic development – a factory, a highway (경부 고속 도로 with Korean text), an upward trending graph, and a ship with '수출 100억 달러 (1977)' Korean text. Right side (Authoritarianism): Icons representing political repression – a gavel, a constitution scroll with '유신 헌법 (1972)' Korean text, chains, '긴급 조치' Korean text, and a ballot box with a 'X' mark and '통일 주체 국민 회의' Korean text. The two sections are visually connected to show simultaneous development. Korean text in high quality font.",
+      "exam_point": "박정희 정부, 경제 개발 5개년 계획, 경부 고속 도로 (1970), 수출 100억 달러 (1977), 유신 헌법 (1972), 긴급 조치, 통일 주체 국민 회의.",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/07__일제_강점기와_현대_사회_4_slide_4.png",
+      "emoji": "✊",
+      "title": "유신 독재에 대한 저항과 그 종말",
+      "content": "박정희 정부의 유신 독재는 강력한 저항에 부딪혔습니다. 노동자 전태일의 분신(1970)과 농민들의 함평 고구마 피해 보상 운동(1976)은 소외된 계층의 울부짖음이었습니다. 장준하 등이 주도한 개헌 청원 백만인 서명 운동(1973)은 민주화를 향한 열망을 보여주었으며, YH 무역 사건(1979)은 유신 체제의 억압적인 단면을 드러냈습니다. 이러한 저항은 결국 부마 민주 항쟁으로 이어졌고, 10·26 사태로 유신 체제는 막을 내렸습니다.",
+      "visual": "A series of impactful protest icons arranged chronologically. First: a burning book or a worker's silhouette with '전태일 분신 (1970)' Korean text. Second: a farmer holding a damaged potato with '함평 고구마 피해 보상 운동 (1976)' Korean text. Third: a hand signing a petition with '개헌 청원 백만인 서명 운동 (1973)' Korean text. Fourth: a factory building with a large protest banner and 'YH 무역 사건 (1979)' Korean text. Fifth: a large crowd of people with protest signs and '부마 민주 항쟁' Korean text. Finally, a symbol of a fallen authoritarian structure or a broken chain, representing the end of the regime with '유신 체제 종말' Korean text. Korean text in high quality font.",
+      "exam_point": "전태일 분신 (1970), 함평 고구마 피해 보상 운동 (1976), 개헌 청원 백만인 서명 운동 (1973), YH 무역 사건 (1979), 부마 민주 항쟁, 10·26 사태.",
+      "svg": ""
+    }
+  ]
+}

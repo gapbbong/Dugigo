@@ -1,0 +1,40 @@
+{
+  "subject": "한국사검정시험",
+  "unit": "07. 일제 강점기와 현대 사회",
+  "set": 2,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/07__일제_강점기와_현대_사회_2_slide_1.png",
+      "emoji": "📰",
+      "title": "개항기 사회 변화와 근대 신문의 등장",
+      "content": "1882년 임오군란 이후 조선의 대내외 정세는 급변했습니다. 일본과는 제물포 조약, 청과는 조청상민수륙무역장정을 체결하여 외국 상인의 내지 통상권이 확대되었죠. 한편, 정부는 박문국에서 우리나라 최초의 근대 신문인 한성순보를 발행하여 개화 사상을 전파하려 노력했습니다. 이 시기는 격동의 시대, 조선 사회의 변화를 보여주는 중요한 지점입니다.",
+      "visual": "A timeline starting from 1882. On the left, an icon representing the 'Imo Gullan' (e.g., soldiers rioting) with '임오군란' in high quality Korean font. In the center, two scroll icons representing 'treaties', with '제물포 조약' and '조청상민수륙무역장정' in high quality Korean font, connected by arrows showing expanded trade routes (merchant icon). On the right, an old newspaper icon with '한성순보' in high quality Korean font, indicating its publication by Bakmun-guk (박문국).",
+      "exam_point": "임오군란(1882): 민겸호 피살, 제물포 조약, 조청상민수륙무역장정(청 상인 내지 통상권, 한성 개점권). 한성순보(1883): 박문국 발행, 10일마다 발행(순한문), 최초의 근대 신문.",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/07__일제_강점기와_현대_사회_2_slide_2.png",
+      "emoji": "🏛️",
+      "title": "대한제국의 근대화와 국권 수호 노력",
+      "content": "아관파천 이후 고종은 덕수궁(경운궁)으로 환궁하여 대한제국을 선포하고 근대 국가 건설에 힘썼습니다. 덕수궁 내 돈덕전과 석조전 같은 서구식 건축물을 통해 근대적 면모를 과시했죠. 하지만 1905년 을사늑약으로 외교권을 상실하자, 고종은 헤이그 만국 평화 회의에 특사를 파견하여 국제사회에 부당함을 알리려 노력했습니다. 이는 나라를 지키려는 절박한 의지의 표현이었습니다.",
+      "visual": "In the center, a detailed illustration of 'Deoksugung Seokjojeon' (덕수궁 석조전) with '덕수궁' in high quality Korean font. Above it, an arrow pointing from a 'Russian Legation' icon to a 'palace' icon with '고종 환궁' in high quality Korean font. Below, a scroll icon representing the 'Eulsa Treaty' (을사늑약) with a crossed-out diplomat icon, indicating loss of diplomacy. To the right, three figures (envoys) standing before a 'world map' icon with '헤이그 특사' in high quality Korean font, symbolizing international appeal. '대한제국' title prominently displayed.",
+      "exam_point": "덕수궁(경운궁): 아관파천 후 고종 환궁, 돈덕전(국빈 접대), 중명전(을사늑약 체결), 석조전(제1차 미소 공동 위원회). 을사늑약(1905): 외교권 박탈. 헤이그 특사(1907): 을사늑약 부당성 폭로 시도, 고종 강제 퇴위, 한일 신협약(정미 7조약), 군대 해산 초래.",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/07__일제_강점기와_현대_사회_2_slide_3.png",
+      "emoji": "🔥",
+      "title": "국권 피탈기의 의병 항쟁: 정미의병",
+      "content": "1907년 고종의 강제 퇴위와 군대 해산은 전국적인 의병 항쟁인 정미의병을 촉발했습니다. 해산된 군인들이 의병에 합류하며 전투력이 크게 강화되었고, 이들은 13도 창의군을 결성하여 서울 진공 작전을 전개하기도 했습니다. 윤희순 같은 여성 의병장도 활약하며 독립 의지를 불태웠습니다. 이는 일제에 맞선 민족의 강력한 저항을 보여주는 상징적인 사건입니다.",
+      "visual": "A dynamic scene depicting the 'Jeongmi Righteous Army' (정미의병). In the center, a group of armed righteous army soldiers with a flag displaying '13도 창의군' in high quality Korean font. On the left, an icon of a 'broken crown' representing '고종 강제 퇴위' (Gojong's forced abdication). On the right, an icon of a 'broken sword' representing '군대 해산' (military disbandment), with arrows pointing towards the righteous army. An arrow indicates '서울 진공 작전' towards a simplified map of Seoul. A distinct icon for '여성 의병장 윤희순' (female righteous army leader Yoon Hee-sun) is also present.",
+      "exam_point": "정미의병(1907): 고종 강제 퇴위, 군대 해산이 배경. 해산 군인 합류. 13도 창의군: 이인영, 허위 등 지도, 서울 진공 작전 전개, 국제법상 '교전 단체' 인정 요구. 여성 의병장 윤희순: '안사람 의병가' 창작.",
+      "svg": ""
+    }
+  ]
+}

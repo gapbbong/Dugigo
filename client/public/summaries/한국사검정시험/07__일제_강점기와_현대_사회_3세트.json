@@ -1,0 +1,62 @@
+{
+  "subject": "한국사검정시험",
+  "unit": "07. 일제 강점기와 현대 사회",
+  "set": 3,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/07__일제_강점기와_현대_사회_3_slide_1.png",
+      "emoji": "💪",
+      "title": "1920년대: 실력 양성 운동",
+      "content": "1920년대는 3.1 운동 이후 문화통치 시기와 맞물려 민족의 실력을 키우려는 다양한 운동이 전개되었습니다. 대표적으로 '내 살림 내 것으로'를 외치며 우리 상품 사용을 독려한 물산 장려 운동과 민족 교육을 위한 민립 대학 설립 운동이 있었습니다. 이 운동들은 일제의 경제 침탈과 식민 교육 정책에 맞서 민족 자립 역량을 키우려 노력했습니다.",
+      "visual": "A vibrant illustration showing two main themes. On the left, a stack of Korean products with '내 살림 내 것으로' Korean text, surrounded by people (men from '자작회' and women from '토산 애용 부인회') supporting the '물산 장려 운동'. On the right, a large book symbolizing a university building with '민립대학' Korean text, with a crowd of people donating coins, representing '한민족 1천만, 한 사람이 1원씩' slogan for '민립 대학 설립 운동'. A subtle image of '이상재' and '이승훈' can be seen near the university. Use bright, encouraging colors with Korean text in high quality font.",
+      "exam_point": "물산 장려 운동 (조만식, 평양, 자작회, 토산 애용 부인회), 민립 대학 설립 운동 (이상재, 이승훈, '한민족 1천만, 한 사람이 1원씩', 경성 제국 대학 개교로 좌절).",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/07__일제_강점기와_현대_사회_3_slide_2.png",
+      "emoji": "⛓️",
+      "title": "1930년대 후반~1940년대: 민족 말살 통치",
+      "content": "일본이 중일 전쟁과 태평양 전쟁을 확대하면서 한반도에 전시 동원 체제를 강요하고, 민족 말살 통치를 본격화했습니다. 국가총동원법을 제정하여 인적·물적 자원을 대대적으로 수탈하고, 한국인의 정체성을 지우려 황국신민서사 암송 등 내선일체 정책을 강요했습니다. 이 시기는 우리의 모든 것을 빼앗으려 했던 가장 암울한 시기였습니다.",
+      "visual": "A stark, somber illustration depicting the harshness of the '민족 말살 통치' period. On the left, a Japanese soldier forcing a Korean person to bow and recite '황국신민서사' (Korean text in high quality font). In the center, a conveyor belt symbolizing resource extraction, with a factory in the background and signs like '공출' and '배급' (Korean text in high quality font). On the right, a group of Koreans, including women in '몸빼' (Korean text in high quality font), being mobilized for labor or military service ('징용', '정신대'). Use muted, oppressive colors to convey the suffering.",
+      "exam_point": "태평양 전쟁, 국가총동원법 (1938), 민족 말살 통치, 황국신민서사, 징용, 징병, 정신대, 공출, 배급, 애국반, 몸빼.",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/07__일제_강점기와_현대_사회_3_slide_3.png",
+      "emoji": "🌟",
+      "title": "대한민국 임시 정부: 독립의 구심점",
+      "content": "대한민국 임시 정부는 3.1 운동 이후 수립되어 독립운동의 구심점 역할을 했습니다. 국내외 비밀 행정망(연통제, 교통국)을 구축하고 독립 공채를 발행하여 자금을 조달했으며, 구미 위원부를 통해 이승만을 중심으로 외교 활동을 펼쳤습니다. 특히 조소앙의 삼균주의를 건국 강령으로 채택하여 새로운 국가 건설의 이념적 토대를 마련했습니다.",
+      "visual": "An inspiring illustration of the '대한민국 임시 정부'. In the center, a map of Korea with arrows extending to other countries (e.g., USA for '구미 위원부') symbolizing diplomatic efforts. Surrounding the map are icons representing key activities: '독립 공채' (coins/money bag), '연통제/교통국' (a secret messenger/radio waves), and a document with '삼균주의' (Korean text in high quality font) written on it, representing the '건국 강령' proposed by '조소앙'. A small '이승만' portrait can be seen near the '구미 위원부' representation. Use patriotic and hopeful colors.",
+      "exam_point": "독립 공채, 구미 위원부 (이승만), 연통제, 교통국, 조소앙, 삼균주의 (정치·경제·교육 균등), 건국 강령 (1941), 한국광복군 (1940 충칭).",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/07__일제_강점기와_현대_사회_3_slide_4.png",
+      "emoji": "🎓",
+      "title": "대한제국기: 근대 교육의 시작",
+      "content": "대한제국 시기에는 근대적 교육 제도의 도입을 통해 민족 역량 강화와 근대화를 추구했습니다. 1895년 교육 입국 조서 반포 이후 한성 사범 학교, 외국어 학교 등 관립 학교가 설립되어 신학문 보급에 앞장섰습니다. 또한 아펜젤러, 스크랜턴 같은 선교사들에 의해 배재 학당, 이화 학당과 같은 사립 학교들이 세워지며 근대 교육의 지평을 넓혔습니다.",
+      "visual": "A historical illustration depicting the dawn of modern education. In the foreground, a group of students in traditional Korean attire, but holding modern textbooks and pens, symbolizing the blend of tradition and new learning. In the background, two distinct school buildings: one representing '관립 학교' (e.g., '한성 사범 학교') with a government seal, and another representing '사립 학교' (e.g., '배재 학당', '이화 학당') with a cross or a missionary symbol. A scroll with '교육 입국 조서 1895' (Korean text in high quality font) is prominently displayed. Use academic and progressive tones.",
+      "exam_point": "교육 입국 조서 (1895), 관립 학교 (한성 사범 학교, 외국어 학교), 사립 학교 (배재 학당(1885), 이화 학당(1886)), 선교사.",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/07__일제_강점기와_현대_사회_3_slide_5.png",
+      "emoji": "🕊️",
+      "title": "현대 사회: 제주 4·3 사건",
+      "content": "해방 후 혼란스러운 상황 속에서 제주도에서는 단독 선거에 반대하며 무장 봉기가 발생했습니다. 이는 미군정의 강경 진압과 맞물려 수많은 제주도민이 희생당하는 비극으로 이어졌습니다. 오랜 침묵 끝에 김대중 정부 시기에 '진상 규명 및 희생자 명예 회복을 위한 특별법'이 제정되어 국가 차원의 진실 규명과 화해 노력이 시작되었습니다.",
+      "visual": "A poignant illustration representing the '제주 4·3 사건'. The central image shows a map of Jeju Island, with a crack or a tear, symbolizing the division and pain. Around it, silhouette figures depict both armed conflict (soldiers) and innocent civilians (families, children), representing the widespread tragedy. A '단독 선거 반대' (Korean text in high quality font) sign is visible. In the background, a new dawn with a dove flying, symbolizing '진상 규명 및 명예 회복을 위한 특별법' (Korean text in high quality font) passed during the '김대중 정부'. Use a solemn yet hopeful color palette.",
+      "exam_point": "제주 4·3 사건, 단독 선거 반대, 5·10 총선거 무효 (제주), 김대중 정부, 진상 규명 및 희생자 명예 회복을 위한 특별법.",
+      "svg": ""
+    }
+  ]
+}

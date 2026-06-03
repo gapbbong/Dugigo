@@ -763,11 +763,19 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     return `Q. ${parts.join(' ')} - ${num}번`;
   };
 
+  // 질문 텍스트 앞에 "9.", "11." 같은 문항 번호가 중복 포함된 경우 제거
+  const stripLeadingQuestionNumber = (text: string): string => {
+    if (!text) return text;
+    return text.replace(/^\s*\d{1,2}[\.\.] ?/, '').trimStart();
+  };
+
   const renderQuestionText = (text: string) => {
     if (!text) return null;
+    // 문항 번호 접두사 제거 (예: "9. 밑줄 그은" → "밑줄 그은")
+    const cleanedText = stripLeadingQuestionNumber(text);
     
-    if (text.includes('<pre>') && text.includes('</pre>')) {
-      const parts = text.split(/(<pre>[\s\S]*?<\/pre>)/g);
+    if (cleanedText.includes('<pre>') && cleanedText.includes('</pre>')) {
+      const parts = cleanedText.split(/(<pre>[\s\S]*?<\/pre>)/g);
       return (
         <div className="text-xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">
           {parts.map((part, i) => {
@@ -785,8 +793,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       );
     }
 
-    if (text.includes('```')) {
-      const parts = text.split(/(```[\s\S]*?```)/g);
+    if (cleanedText.includes('```')) {
+      const parts = cleanedText.split(/(```[\s\S]*?```)/g);
       return (
         <div className="text-lg md:text-2xl font-bold text-slate-900 dark:text-slate-100 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">
           {parts.map((part, i) => {
@@ -804,10 +812,10 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       );
     }
     
-    if (text.includes('\n\n')) {
-      const firstDoubleNewline = text.indexOf('\n\n');
-      const questionPart = text.slice(0, firstDoubleNewline);
-      const codePart = text.slice(firstDoubleNewline + 2).trim();
+    if (cleanedText.includes('\n\n')) {
+      const firstDoubleNewline = cleanedText.indexOf('\n\n');
+      const questionPart = cleanedText.slice(0, firstDoubleNewline);
+      const codePart = cleanedText.slice(firstDoubleNewline + 2).trim();
       
       return (
         <div className="text-lg md:text-2xl font-bold text-slate-900 dark:text-slate-100 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">
@@ -821,7 +829,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       );
     }
     
-    return <h2 className="text-lg md:text-2xl font-bold text-slate-900 dark:text-slate-100 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">{renderMath(text)}</h2>;
+    return <h2 className="text-lg md:text-2xl font-bold text-slate-900 dark:text-slate-100 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">{renderMath(cleanedText)}</h2>;
   };
 
   const formatTime = (seconds: number) => {
@@ -1121,10 +1129,18 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                         {isAnswered && isCorrect ? <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5" /> : isAnswered && isSelected && !isCorrect ? <XCircle className="w-4 h-4 md:w-5 md:h-5" /> : idx + 1}
                       </div>
                       <span className="text-base md:text-xl font-bold flex-1 leading-relaxed flex flex-col gap-3">
-                        {choice.endsWith('.webp') ? (
+                        {/\.(webp|jpg|jpeg|png|gif)$/i.test(choice) ? (
+                          // 선택지 자체가 이미지 파일명인 경우 (예: history_64_adv_q16_c1.webp)
                           <div className="flex justify-center py-2">
                             <img 
-                              src={choice.startsWith('/') ? choice : (choice.startsWith('history_') ? `/summaries/한국사검정시험/${choice}` : (choice.startsWith('lit2_') ? `/summaries/컴퓨터활용능력 2급/${choice}` : choice))} 
+                              src={(() => {
+                                if (choice.startsWith('/') || choice.startsWith('http')) return choice;
+                                if (choice.startsWith('history_')) return `/summaries/한국사검정시험/${choice}`;
+                                if (choice.startsWith('lit2_')) return `/summaries/컴퓨터활용능력 2급/${choice}`;
+                                if (choice.startsWith('vis_') || subject.includes('시각디자인')) return `/summaries/시각디자인산업기사/${choice}`;
+                                if (choice.startsWith('ae_') || subject.includes('자동화설비')) return `/images/subjects/자동화설비(생산자동화)기능사/${choice}`;
+                                return choice;
+                              })()} 
                               alt={`Choice ${idx + 1}`}
                               className="max-h-[140px] md:max-h-[250px] object-contain rounded-xl"
                               onError={(e) => { (e.target as HTMLElement).parentElement!.style.display = 'none'; }}

@@ -1,0 +1,62 @@
+{
+  "subject": "한국사검정시험",
+  "unit": "04. 조선 시대(전기)",
+  "set": 4,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__4_slide_1.png",
+      "emoji": "⚔️",
+      "title": "1910년대 무단 통치: 칼과 총의 시대",
+      "content": "일제는 1910년대에 헌병 경찰을 통해 무자비한 무단 통치를 실시했습니다. 조선 태형령을 제정하여 한국인에게만 가혹한 체벌을 가했으며, 토지 조사 사업으로 농민의 토지를 빼앗고, 회사령을 통해 기업 설립을 통제했습니다. 조선 물산 공진회와 같은 행사로 식민 통치의 성과를 과시하려 했습니다.",
+      "visual": "A stylized image depicting a Japanese Gendarmerie Police officer with a sword, next to a map of Korea with land parcels being confiscated. Below are icons representing factories under strict control and a large exhibition hall. Korean text in high quality font: '1910년대 무단 통치', '헌병 경찰', '조선 태형령', '토지 조사 사업', '회사령'.",
+      "exam_point": "시기: 1910년대. 키워드: 헌병 경찰제, 토지 조사 사업, 회사령(허가제), 조선 태형령, 조선 물산 공진회(1915).",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__4_slide_2.png",
+      "emoji": "🎭",
+      "title": "1920년대 문화 통치: 기만과 분열의 정책",
+      "content": "일제는 3.1 운동 이후 '문화 통치'를 표방했지만, 실상은 민족 분열을 꾀하는 기만적인 통치였습니다. 보통학교 수업 연한을 연장한 제2차 조선 교육령(1922)으로 교육 기회를 늘리는 듯했으나, 고등 교육은 제한하여 민족 지도자 양성을 막았습니다. 이에 대항하여 조선 민립 대학 설립 운동이 전개되었습니다.",
+      "visual": "An image with two masks, one smiling (representing 'culture') and one frowning (representing 'deception'). Below, a school building with a '6년' sign, and then a group of students protesting for higher education. Korean text in high quality font: '1920년대 문화 통치', '제2차 조선 교육령 (6년)', '민립 대학 설립 운동'.",
+      "exam_point": "시기: 1920년대. 키워드: 문화 통치(겉과 속), 제2차 조선 교육령(1922, 보통학교 6년), 조선 민립 대학 기성회(1923).",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__4_slide_3.png",
+      "emoji": "💪",
+      "title": "민족 경제 자립 운동: 물산 장려 운동",
+      "content": "일제의 관세 철폐 시도에 맞서 우리 민족은 경제적 자립을 위한 '물산 장려 운동'을 전개했습니다. 조만식을 중심으로 평양에서 시작되어 전국으로 확산된 이 운동은 '조선 사람 조선 것', '내 살림 내 것으로'라는 구호를 내걸고 국산품 애용과 민족 기업 육성을 강조했습니다. 이는 우리 경제를 지키려는 민족의 의지를 보여주었습니다.",
+      "visual": "An image showing hands building a strong pillar made of Korean products. Above, a portrait of Jo Man-sik. Below, a factory icon and a shopping cart filled with local goods. Korean text in high quality font: '물산 장려 운동', '조만식', '내 살림 내 것으로', '조선 사람 조선 것', '관세 철폐 반대'.",
+      "exam_point": "시기: 1920년대 초. 키워드: 조만식, 평양, '조선 사람 조선 것', '내 살림 내 것으로', 조선 관세령 폐지 반대, 국산품 애용.",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__4_slide_4.png",
+      "emoji": "🤝",
+      "title": "항일 운동의 두 축: 신간회와 의열단",
+      "content": "1920년대 항일 운동은 다양한 형태로 전개되었습니다. 합법적 투쟁의 대표인 '신간회'는 민족 유일당 운동의 결실로, 광주 학생 항일 운동 시 진상 조사단을 파견하며 학생 운동을 지원했습니다. 한편, '의열단'은 김원봉의 주도로 조직되어 신채호의 '조선 혁명 선언'을 지침으로 삼고 김익상, 김상옥 등 단원들이 주요 일제 기관에 폭탄을 투척하는 과감한 무장 투쟁을 벌였습니다.",
+      "visual": "A split image: Left side shows people marching peacefully under a banner for '신간회' (Shin-gan-hoe) and a magnifying glass looking at the '광주 학생 항일 운동'. Right side shows a bomb icon and a silhouette of a person throwing it, with a fiery background representing '의열단' (Eui-yeol-dan) and a list of names like '김익상, 김상옥'. Korean text in high quality font: '신간회', '광주 학생 항일 운동', '의열단', '김원봉, 김익상, 김상옥'.",
+      "exam_point": "신간회(1927): 민족 유일당 운동, 광주 학생 항일 운동 진상 조사단 파견. 의열단(1919): 김원봉, 조선 혁명 선언, 무장 투쟁, 김익상/김상옥/나석주 활동.",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__4_slide_5.png",
+      "emoji": "🗣️",
+      "title": "민족 문화 수호: 조선어학회의 활동",
+      "content": "일제가 우리말과 글을 말살하려던 시기, '조선어학회'는 민족 문화와 정신을 지키는 데 앞장섰습니다. 최현배, 이극로 등 주시경의 제자들이 중심이 되어 한글 맞춤법 통일안(1933)과 표준어 사정안을 제정하여 우리말의 체계를 확립했습니다. 또한, <한글> 잡지를 발행하고 '조선말 큰사전' 편찬을 추진하며 우리말 연구와 보급에 힘썼습니다.",
+      "visual": "An image of an open book with Korean characters (한글) prominently displayed, surrounded by various linguistic symbols. Portraits of scholars like Choi Hyeon-bae and Lee Geuk-ro are subtly integrated. A large dictionary icon is also present. Korean text in high quality font: '조선어학회', '한글 맞춤법 통일안', '표준어 사정안', '조선말 큰사전'.",
+      "exam_point": "시기: 1920~1940년대. 키워드: 최현배, 이극로, 한글 맞춤법 통일안(1933), 표준어 사정안, 조선말 큰사전, 잡지 <한글> 발행, 조선어학회 사건(1942).",
+      "svg": ""
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "subject": "한국사검정시험",
+  "unit": "04. 조선 시대(전기)",
+  "set": 3,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__3_slide_1.png",
+      "emoji": "👑",
+      "title": "조선 후기 왕권 강화와 탕평 정치",
+      "content": "조선 후기 영조와 정조는 왕권 강화를 위한 개혁 정치를 추진했습니다. 영조는 쇠퇴한 통치 규범을 재정비한 《속대전》을 편찬하고, 균역법 시행으로 민생을 안정시켰습니다. 정조는 규장각, 초계문신제, 장용영을 설치하여 강력한 왕권을 확립하고 개혁을 이끌었습니다. 숙종 시기 환국 정치는 붕당 간의 다툼을 심화시켰습니다.",
+      "visual": "A vibrant illustration of King Yeongjo and King Jeongjo in their royal robes, standing beside a large scroll titled '속대전' and '규장각'. Below them, a timeline showing '숙종 (환국)', '영조 (탕평책, 균역법)', '정조 (초계문신제, 수원 화성)' with arrows indicating reform and strengthening of royal power. Use intuitive icons like a balance scale for T'angpyeong-chaek, a scroll for laws, and a fort for military. Korean text in high quality font.",
+      "exam_point": "영조: 속대전, 균역법, 준천사, 신문고 부활, 탕평비. 정조: 규장각, 초계문신제, 장용영, 수원 화성. 숙종: 환국(경신, 기사, 갑술).",
+      "svg": ""
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__3_slide_2.png",
+      "emoji": "📚",
+      "title": "실학의 발달과 근대 지향",
+      "content": "조선 후기에는 사회 문제 해결을 위한 새로운 학문인 실학이 발전했습니다. 특히 정약용은 『목민심서』, 『경세유표』 등 다양한 저술을 통해 실학을 집대성한 인물입니다. 그는 서양의 기술서인 『기기도설』을 참고하여 거중기를 설계하고, 이를 활용하여 수원 화성을 효율적으로 축조하는 데 기여했습니다.",
+      "visual": "An illustration of Dasan Jeong Yak-yong, holding a brush and scroll. Around him, floating icons representing his key achievements: an open book labeled '목민심서', a blueprint of a '거중기' lifting a stone, and a stylized '수원 화성' gate. A thought bubble above his head showing '기기도설' and innovative ideas. Korean text in high quality font.",
+      "exam_point": "정약용: 목민심서, 경세유표, 흠흠신서, 기기도설, 거중기, 수원 화성, 다산초당.",
+      "svg": ""
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__3_slide_3.png",
+      "emoji": "🎨",
+      "title": "조선 후기 문화와 예술의 황금기",
+      "content": "조선 후기에는 경제 발달과 함께 서민 의식이 성장하며 문화·예술 분야에서 새로운 흐름이 나타났습니다. 겸재 정선은 우리 고유의 산천을 사실적으로 그린 진경산수화의 대가로 <인왕제색도>가 대표적입니다. 단원 김홍도는 서민의 삶을 해학적으로 묘사한 풍속화로 유명하며, <서당>, <씨름> 등의 작품을 남겼습니다.",
+      "visual": "A split image showing two distinct painting styles. On one side, a landscape painting in the style of Jeong Seon's '인왕제색도', with '겸재 정선' clearly visible. On the other side, a vibrant genre painting (풍속화) depicting people wrestling or at a traditional school, in the style of Kim Hong-do's '씨름도' or '서당', with '단원 김홍도' visible. Artistic tools like brushes and inkstones are placed around. Korean text in high quality font.",
+      "exam_point": "정선: 진경산수화, 인왕제색도, 금강전도. 김홍도: 풍속화, 서당, 씨름, 무동. 신윤복 (풍속화 비교).",
+      "svg": ""
+    },
+    {
+      "id": 4,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__3_slide_4.png",
+      "emoji": "🤝",
+      "title": "변화하는 사회, 전문직 중인의 부상",
+      "content": "조선 후기에는 상업의 발달과 대외 교류의 증가로 기술직 중인의 사회적 역할과 지위가 크게 향상되었습니다. 특히 역관은 외국어 교육 기관인 사역원에서 체계적인 교육을 받았습니다. 그들은 '노걸대언해'와 같은 실용 교재로 외국어를 익혔으며, 사신 활동을 통해 '팔포 무역'으로 막대한 부를 축적하기도 했습니다.",
+      "visual": "An illustration of a Joseon-era '역관' (interpreter) dressed in official attire, standing between a Korean scholar and a foreign merchant, facilitating communication. Around them, icons representing '사역원' (an educational building), an open book titled '노걸대언해', and a bag of money with '팔포 무역' written on it. Arrows pointing to increased status and wealth. Korean text in high quality font.",
+      "exam_point": "중인, 역관, 사역원, 노걸대언해, 팔포 무역, 신분 상승.",
+      "svg": ""
+    },
+    {
+      "id": 5,
+      "style": "Expert",
+      "image": "/summaries/한국사검정시험/04__조선_시대_전기__3_slide_5.png",
+      "emoji": "🏯",
+      "title": "조선 궁궐, 역사적 상징과 아픔",
+      "content": "조선의 법궁인 경복궁은 임진왜란 때 소실된 후 흥선대원군에 의해 중건되었지만, 일제에 의해 권위가 훼손되고 조선 물산 공진회가 개최되는 아픔을 겪었습니다. 창경궁은 일제에 의해 동물원으로 변모하여 '창경원'이라 불렸고, 덕수궁은 제1차 미소 공동 위원회 개최 장소로 사용되는 등 근대사의 주요 무대였습니다.",
+      "visual": "A collage-style image featuring iconic Joseon palaces. The central focus is '경복궁' with its majestic gates. Surrounding it are smaller depictions of '창경궁' (with a subtle hint of animals or '창경원' sign) and '덕수궁 석조전' (with a symbol for international meetings like '미소공위'). Overlaid elements can show the shift from grandeur to colonial era challenges. Korean text in high quality font.",
+      "exam_point": "경복궁: 흥선대원군 중건, 조선 물산 공진회. 창경궁: 창경원(동물원). 덕수궁: 덕수궁 석조전(미소공위). 경희궁: 서궐.",
+      "svg": ""
+    }
+  ]
+}
