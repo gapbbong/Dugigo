@@ -1099,7 +1099,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     <img 
                       src={imgSrc} 
                       alt="Question Diagram" 
-                      className="max-h-[200px] md:max-h-[300px] object-contain rounded-xl"
+                      className={`object-contain rounded-xl ${subject === '한국사검정시험' ? 'max-h-[230px] md:max-h-[345px]' : 'max-h-[200px] md:max-h-[300px]'}`}
                       onError={(e) => { 
                         (e.target as HTMLElement).style.display = 'none'; 
                         const container = document.getElementById(`img-container-${currentIndex}`);
