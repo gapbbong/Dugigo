@@ -1,0 +1,692 @@
+[
+  {
+    "number": 1,
+    "question": "네트워크 프로토콜의 3요소 중 데이터의 형식이나 신호 레벨 등을 정의하는 것은?",
+    "answer": 1,
+    "explanation": "프로토콜의 3요소는 구문(Syntax), 의미(Semantics), 타이밍(Timing)이며, 구문은 데이터의 형식이나 신호 레벨을 정의합니다.",
+    "choices": [
+      "구문(Syntax)",
+      "타이밍(Timing)",
+      "의미(Semantics)",
+      "대역폭(Bandwidth)",
+      "처리량(Throughput)"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 2,
+    "question": "OSI 7계층 중 물리적 복제나 전송 오류를 제어하며, 인접한 노드 간의 데이터 전송을 담당하는 계층은?",
+    "answer": 5,
+    "explanation": "데이터 링크 계층은 물리적 복제나 전송 오류를 제어하고 인접한 노드 간의 데이터 전송을 담당합니다.",
+    "choices": [
+      "물리 계층",
+      "응용 계층",
+      "전송 계층",
+      "네트워크 계층",
+      "데이터링크 계층"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 3,
+    "question": "다음 중 3계층(네트워크 계층)에서 동작하며 최적의 경로를 설정하는 장비는?",
+    "answer": 3,
+    "explanation": "라우터는 네트워크 계층(3계층)에서 동작하며, 최적의 경로를 설정하는 역할을 합니다.",
+    "choices": [
+      "허브",
+      "리피터",
+      "라우터",
+      "브리지",
+      "L2 스위치"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 4,
+    "question": "IPv6 주소 체계에 대한 설명으로 옳은 것은?",
+    "answer": 4,
+    "explanation": "IPv6는 128비트 주소 체계이며, 16비트씩 8부분으로 구성되고, 16진수로 표기하며 콜론(:)으로 구분합니다.",
+    "choices": [
+      "32비트 주소 체계이다.",
+      "주소 자동 설정 기능이 없다.",
+      "8비트씩 4부분으로 구성된다.",
+      "주소를 16진수로 표기하며 콜론(:)으로 구분한다.",
+      "유니캐스트, 멀티캐스트, 브로드캐스트 방식을 사용한다."
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 5,
+    "question": "TCP 프로토콜의 특징이 아닌 것은?",
+    "answer": 4,
+    "explanation": "TCP는 연결 지향형 프로토콜로 신뢰성 있는 전송을 보장하지만, 비연결형 방식인 UDP보다 전송 속도가 느립니다.",
+    "choices": [
+      "연결 지향형 방식이다.",
+      "신뢰성 있는 전송을 보장한다.",
+      "흐름 제어 및 혼잡 제어 기능을 수행한다.",
+      "비연결형으로 전송 속도가 UDP보다 빠르다.",
+      "경계가 없는 바이트 스트림 서비스를 제공한다."
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 6,
+    "question": "IP 패킷이 네트워크에서 무한 루프를 도는 것을 방지하기 위한 헤더 정보는?",
+    "answer": 4,
+    "explanation": "TTL(Time To Live)은 IP 패킷이 네트워크에서 무한 루프를 도는 것을 방지하기 위한 헤더 정보입니다.",
+    "choices": [
+      "Protocol",
+      "Checksum",
+      "Identification",
+      "TTL(Time To Live)",
+      "Source IP Address"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 7,
+    "question": "HTTP, FTP, SMTP 등 사용자 서비스가 위치하는 OSI 계층은?",
+    "answer": 4,
+    "explanation": "HTTP, FTP, SMTP와 같은 사용자 서비스는 OSI 7계층의 응용 계층(Application Layer)에 해당합니다.",
+    "choices": [
+      "전송 계층",
+      "세션 계층",
+      "표현 계층",
+      "응용 계층",
+      "네트워크 계층"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 8,
+    "question": "C 클래스 대역의 사설 IP 주소 범위로 옳은 것은?",
+    "answer": 3,
+    "explanation": "C 클래스 대역의 사설 IP 주소 범위는 192.168.0.0 ~ 192.168.255.255 입니다. 제공된 선택지 5번이 올바른 범위입니다. (172.16.0.0 ~ 172.31.255.255는 B클래스 사설 IP 주소 범위)",
+    "choices": [
+      "10.0.0.0 ~ 10.255.255.255",
+      "127.0.0.0 ~ 127.255.255.255",
+      "172.16.0.0 ~ 172.31.255.255",
+      "224.0.0.0 ~ 239.255.255.255",
+      "192.168.0.0 ~ 192.168.255.255"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 9,
+    "question": "서브넷 마스크(Subnet Mask)의 주요 목적은?",
+    "answer": 5,
+    "explanation": "서브넷 마스크의 주요 목적은 네트워크 ID와 호스트 ID를 구분하는 것입니다.",
+    "choices": [
+      "데이터의 암호화",
+      "패킷의 전송 경로 최적화",
+      "하드웨어 MAC 주소 확인",
+      "도메인 네임을 IP 주소로 변환",
+      "네트워크 ID와 호스트 ID의 구분"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 10,
+    "question": "데이터 전송 시 에러를 검출하고 교정하기 위해 사용하는 방식이 아닌 것은?",
+    "answer": 4,
+    "explanation": "암호화(Encryption)는 데이터의 기밀성을 보장하는 기술이며, 에러 검출 및 교정과는 관련이 없습니다.",
+    "choices": [
+      "해밍 코드",
+      "패리티 비트",
+      "체크섬(Checksum)",
+      "암호화(Encryption)",
+      "CRC(순환 중복 검사)"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 11,
+    "question": "운영체제의 가장 핵심적인 부분으로 자원 관리 및 하드웨어 제어를 담당하는 프로그램은?",
+    "answer": 5,
+    "explanation": "커널(Kernel)은 운영체제의 핵심 부분으로 자원 관리 및 하드웨어 제어를 담당합니다.",
+    "choices": [
+      "쉘(Shell)",
+      "컴파일러",
+      "유틸리티",
+      "드라이버",
+      "커널(Kernel)"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 12,
+    "question": "리눅스(Linux) 시스템의 특징으로 틀린 것은?",
+    "answer": 4,
+    "explanation": "리눅스는 CLI 환경뿐만 아니라 GUI 환경도 지원합니다.",
+    "choices": [
+      "오픈 소스 기반이다.",
+      "다중 사용자 및 다중 작업을 지원한다.",
+      "유닉스(UNIX)와 높은 호환성을 가진다.",
+      "CLI(Command Line Interface) 환경만 지원한다.",
+      "다양한 배포판(Ubuntu, CentOS 등)이 존재한다."
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 13,
+    "question": "프로세스가 실행을 위해 CPU를 할당받기 위해 기다리는 상태는?",
+    "answer": 4,
+    "explanation": "프로세스가 CPU를 할당받기 위해 기다리는 상태는 준비(Ready) 상태입니다.",
+    "choices": [
+      "생성(New) 상태",
+      "종료(Exit) 상태",
+      "대기(Wait) 상태",
+      "준비(Ready) 상태",
+      "실행(Running) 상태"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 14,
+    "question": "프로세스 스케줄링 중 이미 할당된 CPU를 다른 프로세스가 강제로 뺏을 수 있는 방식은?",
+    "answer": 4,
+    "explanation": "선점(Preemptive) 스케줄링은 CPU를 할당받은 프로세스가 실행 중에라도 다른 프로세스에게 CPU를 강제로 빼앗길 수 있는 방식입니다.",
+    "choices": [
+      "정적 스케줄링",
+      "수동 스케줄링",
+      "우선순위 스케줄링",
+      "선점(Preemptive) 스케줄링",
+      "비선점(Non-preemptive) 스케줄링"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 15,
+    "question": "교착상태(Deadlock) 발생의 4가지 필수 조건에 해당하지 않는 것은?",
+    "answer": 3,
+    "explanation": "교착상태 발생의 4가지 필수 조건은 상호 배제, 점유와 대기, 비선점, 환형 대기입니다. 자원 공유는 필수 조건이 아닙니다.",
+    "choices": [
+      "비선점",
+      "상호 배제",
+      "자원 공유",
+      "환형 대기",
+      "점유와 대기"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 16,
+    "question": "페이지 교체 알고리즘 중 가장 오랫동안 사용되지 않은 페이지를 먼저 교체하는 방식은?",
+    "answer": 3,
+    "explanation": "LRU(Least Recently Used) 페이지 교체 알고리즘은 가장 오랫동안 사용되지 않은 페이지를 먼저 교체하는 방식입니다. Optimal 알고리즘은 미래에 사용되지 않을 페이지를 교체하는 방식입니다.",
+    "choices": [
+      "FIFO",
+      "LIFO",
+      "Optimal",
+      "LRU(Least Recently Used)",
+      "LFU(Least Frequently Used)"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 17,
+    "question": "운영체제의 성능 평가 기준 중 \"시스템이 단위 시간 당 처리하는 작업량\"을 의미하는 것은?",
+    "answer": 3,
+    "explanation": "처리 능력(Throughput)은 시스템이 단위 시간 당 처리하는 작업량을 의미합니다.",
+    "choices": [
+      "신뢰도(Reliability)",
+      "가용성(Availability)",
+      "처리 능력(Throughput)",
+      "응답 시간(Response Time)",
+      "반환 시간(Turnaround Time)"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 18,
+    "question": "기억장치 관리 기법 중 단편화 해결을 위해 빈 공간을 한쪽으로 모으는 작업은?",
+    "answer": 4,
+    "explanation": "압축(Compaction)은 단편화 해결을 위해 빈 공간을 한쪽으로 모으는 작업입니다.",
+    "choices": [
+      "배치(Placement)",
+      "할당(Allocation)",
+      "통합(Coalescing)",
+      "압축(Compaction)",
+      "교체(Replacement)"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 19,
+    "question": "가상 기억장치 구현 기법 중 프로그램을 가변적인 논리적 단위로 나누어 관리하는 기법은?",
+    "answer": 5,
+    "explanation": "세그먼테이션(Segmentation) 기법은 프로그램을 가변적인 논리적 단위로 나누어 관리하는 가상 기억장치 구현 기법입니다.",
+    "choices": [
+      "뱅킹(Banking) 기법",
+      "페이징(Paging) 기법",
+      "스와핑(Swapping) 기법",
+      "오버레이(Overlay) 기법",
+      "세그먼테이션(Segmentation) 기법"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 20,
+    "question": "유닉스(UNIX) 시스템에서 파일의 권한을 변경하는 명령어는?",
+    "answer": 4,
+    "explanation": "chmod 명령어는 유닉스 시스템에서 파일의 권한을 변경하는 명령어입니다. chown 명령어는 파일의 소유자를 변경하는 명령어입니다.",
+    "choices": [
+      "ls",
+      "cp",
+      "mv",
+      "chown",
+      "chmod"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 21,
+    "question": "데이터베이스의 특징 중 \"사용자가 요청한 내용을 실시간으로 처리하여 응답한다\"는 것은?",
+    "answer": 4,
+    "explanation": "실시간 접근성은 사용자의 요청에 대해 실시간으로 응답하는 데이터베이스의 특징입니다.",
+    "choices": [
+      "동시 공용",
+      "데이터 독립성",
+      "계속적인 변화",
+      "실시간 접근성",
+      "내용에 의한 참조"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 22,
+    "question": "관계형 데이터베이스에서 열(Column)의 개수를 의미하는 용어는?",
+    "answer": 2,
+    "explanation": "관계형 데이터베이스에서 열(Column)의 개수를 차수(Degree)라고 합니다.",
+    "choices": [
+      "튜플(Tuple)",
+      "차수(Degree)",
+      "도메인(Domain)",
+      "어트리뷰트(Attribute)",
+      "카디널리티(Cardinality)"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 23,
+    "question": "SQL 언어 중 데이터의 구조를 정의하고 변경하는 DDL에 해당하는 명령은?",
+    "answer": 4,
+    "explanation": "CREATE 명령어는 SQL에서 데이터베이스 객체(테이블 등)의 구조를 정의하는 DDL(Data Definition Language)에 해당합니다.",
+    "choices": [
+      "SELECT",
+      "INSERT",
+      "UPDATE",
+      "CREATE",
+      "GRANT"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 24,
+    "question": "트랜잭션의 특성 중 \"연산 결과는 시스템 오류가 발생해도 영구적으로 반영되어야 한다\"는 것은?",
+    "answer": 4,
+    "explanation": "영속성(Durability)은 트랜잭션의 특성 중 하나로, 연산 결과가 시스템 오류 발생 시에도 영구적으로 반영되어야 함을 의미합니다.",
+    "choices": [
+      "원자성(Atomicity)",
+      "무결성(Integrity)",
+      "격리성(Isolation)",
+      "영속성(Durability)",
+      "일관성(Consistency)"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 25,
+    "question": "다음 중 관계 대수의 순수 관계 연산자가 아닌 것은?",
+    "answer": 1,
+    "explanation": "Join은 관계 대수의 일반 관계 연산자이며, 순수 관계 연산자는 Select, Project, Division입니다. Union, Difference, Cartesian Product도 일반 관계 연산자에 속합니다.",
+    "choices": [
+      "Join",
+      "Union",
+      "Select",
+      "Project",
+      "Division"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 26,
+    "question": "개체-관계(E-R) 모델에서 '속성'을 나타내는 기호는?",
+    "answer": 1,
+    "explanation": "E-R 모델에서 속성(Attribute)은 타원(Ellipse)으로 표현됩니다.",
+    "choices": [
+      "타원",
+      "마름모",
+      "사각형",
+      "삼각형",
+      "오각형"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 27,
+    "question": "미들웨어 중 웹 브라우저의 요청을 받아 동적인 콘텐츠를 생성하고 처리하는 서버는?",
+    "answer": 5,
+    "explanation": "WAS(Web Application Server)는 웹 브라우저의 요청을 받아 동적인 콘텐츠를 생성하고 처리하는 서버입니다.",
+    "choices": [
+      "ORB",
+      "MOM",
+      "RPC",
+      "Web Server",
+      "WAS(Web Application Server)"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 28,
+    "question": "분산 시스템 미들웨어 기술 중 원격지의 프로시저를 로컬처럼 호출하는 방식은?",
+    "answer": 5,
+    "explanation": "RPC(Remote Procedure Call)는 분산 시스템 미들웨어 기술 중 하나로, 원격지의 프로시저를 로컬처럼 호출하는 방식입니다.",
+    "choices": [
+      "EAI",
+      "MOM",
+      "Legacy",
+      "TP Monitor",
+      "RPC(Remote Procedure Call)"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 29,
+    "question": "메시지 기반의 비동기식 데이터 전달을 지원하는 미들웨어는?",
+    "answer": 5,
+    "explanation": "MOM(Message Oriented Middleware)은 메시지 기반의 비동기식 데이터 전달을 지원하는 미들웨어입니다.",
+    "choices": [
+      "RPC",
+      "ORB",
+      "Legacy",
+      "Web Server",
+      "MOM(Message Oriented Middleware)"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 30,
+    "question": "데이터베이스 이상(Anomaly) 현상의 종류가 아닌 것은?",
+    "answer": 4,
+    "explanation": "데이터베이스 이상 현상에는 삽입 이상, 삭제 이상, 갱신 이상이 있으며, 검색 이상은 이상 현상에 해당하지 않습니다.",
+    "choices": [
+      "삽입 이상",
+      "삭제 이상",
+      "갱신 이상",
+      "검색 이상",
+      "수정 이상"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 31,
+    "question": "데이터베이스 스키마나 테이블을 생성, 변경, 삭제할 때 사용하는 SQL 명령어 그룹인 DDL(데이터 정의어)에 해당하지 않는 명령어는?",
+    "answer": 4,
+    "explanation": "SELECT 명령어는 데이터를 조회하는 DML(Data Manipulation Language)에 해당하며, DDL에 속하지 않습니다.",
+    "choices": [
+      "DROP",
+      "ALTER",
+      "CREATE",
+      "SELECT",
+      "RENAME"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 32,
+    "question": "데이터베이스 테이블에 저장되어 있는 데이터를 검색, 삽입, 삭제, 변경할 때 사용하는 DML(데이터 조작어)의 명령어 연결이 올바르지 않은 것은?",
+    "answer": 5,
+    "explanation": "GRANT 명령어는 사용자에게 권한을 부여하는 DCL(Data Control Language)에 해당하며, DML에 속하지 않습니다.",
+    "choices": [
+      "삽입-INSERT",
+      "삭제-DELETE",
+      "변경-UPDATE",
+      "검색-SELECT",
+      "권한 부여-GRANT"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 33,
+    "question": "데이터베이스 관리자(DBA)가 데이터 관리를 목적으로 권한을 부여하거나 취소할 때 사용하는 DCL(데이터 제어어) 명령어로만 짝지어진 것은?",
+    "answer": 2,
+    "explanation": "GRANT는 권한 부여, REVOKE는 권한 취소에 사용되는 DCL 명령어입니다.",
+    "choices": [
+      "ALTER, DROP",
+      "GRANT, REVOKE",
+      "INSERT, DELETE",
+      "SELECT, UPDATE",
+      "COMMIT, ROLLBACK"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 34,
+    "question": "데이터베이스 트랜잭션 또는 조작 작업이 비정상적으로 작동하여 데이터베이스를 원래의 상태(작업 이전 상태)로 복구하기 위해 사용하는 DCL 명령어는?",
+    "answer": 5,
+    "explanation": "ROLLBACK 명령어는 데이터베이스 트랜잭션 작업이 비정상적으로 작동했을 때, 이전 상태로 복구하기 위해 사용됩니다.",
+    "choices": [
+      "DROP",
+      "GRANT",
+      "COMMIT",
+      "REVOKE",
+      "ROLLBACK"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 35,
+    "question": "컴퓨터나 원거리 통신 장비 사이에서 신뢰성 있고 정확한 메시지를 주고받기 위해 정의한 양식 또는 통신 규약의 명칭은?",
+    "answer": 2,
+    "explanation": "프로토콜(Protocol)은 컴퓨터나 통신 장비 간에 메시지를 주고받기 위한 통신 규약입니다.",
+    "choices": [
+      "네트워크",
+      "프로토콜",
+      "도메인",
+      "인터페이스",
+      "알고리즘"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 36,
+    "question": "OSI 7계층 중 다수의 중개 시스템(네트워크) 내에서 목적지까지 가는 가장 최적의 경로를 선택(라우팅)하도록 지원하며, 대표적인 장비로 라우터가 속하는 계층은?",
+    "answer": 5,
+    "explanation": "네트워크 계층(Network Layer)은 라우팅 기능을 담당하며, 라우터가 대표적인 장비입니다.",
+    "choices": [
+      "물리 계층",
+      "전송 계층",
+      "세션 계층",
+      "응용 계층",
+      "네트워크 계층"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 37,
+    "question": "OSI 7계층의 전송 계층(Transport Layer)에 대응되는 TCP/IP 계층 모델의 명칭으로 바른 것은?",
+    "answer": 2,
+    "explanation": "OSI 7계층의 전송 계층은 TCP/IP 모델의 인터넷 계층에 해당합니다.",
+    "choices": [
+      "응용 계층",
+      "인터넷 계층",
+      "트랜스포트 계층",
+      "데이터 링크 계층",
+      "네트워크 액세스 계층"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 38,
+    "question": "TCP와 UDP 프로토콜의 특성에 대한 설명 중 데이터 전송의 신뢰성을 보장하기 위해 수신 측의 상태와 수신 여부를 단계별로 체크하며 데이터를 전송하는 프로토콜은?",
+    "answer": 2,
+    "explanation": "TCP(Transmission Control Protocol)는 신뢰성 있는 데이터 전송을 보장하는 연결 지향형 프로토콜입니다.",
+    "choices": [
+      "IP",
+      "TCP",
+      "UDP",
+      "ARP",
+      "ICMP"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 39,
+    "question": "OSI 7계층 중 데이터의 흐름 제어와 오류 제어를 수행하고, 송수신지의 물리 주소(MAC)를 지정하며 대표적 장비로 NIC와 L2 스위치가 속하는 계층은?",
+    "answer": 5,
+    "explanation": "데이터 링크 계층은 흐름 제어, 오류 제어, 물리 주소(MAC)를 이용한 데이터 전송을 담당하며, NIC와 L2 스위치가 대표적인 장비입니다.",
+    "choices": [
+      "물리 계층",
+      "전송 계층",
+      "세션 계층",
+      "응용 계층",
+      "데이터 링크 계층"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 40,
+    "question": "개념적 데이터 모델의 대표적인 도구인 E-R 다이어그램(ERD)의 구성요소와 그 표기 기호의 연결이 올바른 것은?",
+    "answer": 4,
+    "explanation": "E-R 다이어그램에서 관계는 마름모(Diamond)로, 속성은 타원(Ellipse)으로 표현됩니다.",
+    "choices": [
+      "관계 - 사각형",
+      "속성 - 마름모",
+      "개체 - 동그라미",
+      "속성 - 타원",
+      "관계 - 정삼각형"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 41,
+    "question": "OSI 7계층의 각 계층별 역할과 대표 장비 및 프로토콜의 연결이 가장 올바르지 않은 것은?",
+    "answer": 4,
+    "explanation": "응용 계층은 사용자 인터페이스를 제공하며, TCP/IP 모델에서는 응용 계층에 해당합니다. 인터넷 계층은 OSI 7계층의 네트워크 계층에 해당합니다.",
+    "choices": [
+      "물리 계층 - 허브, 리피터 등 실제 장비들을 연결하기 위한 연결 장치",
+      "데이터 링크 계층 - 브리지, 스위치를 통해 오류와 흐름을 제어하여 신뢰성 있는 데이터 전송",
+      "전송 계층 - 목적지 간에 전송 제어와 에러를 관리하는 계층으로 TCP와 UDP 프로토콜이 작동함",
+      "응용 계층 - 메일, 웹 등 사용자가 직접 사용하는 프로그램을 위치하며 TCP/IP의 인터넷 계층에 대응됨",
+      "표현 계층 - 코드나 문자 등을 번역하고 데이터의 압축, 해제, 보안 기능을 담당하며 호스트나 일반 PC가 해당함"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 42,
+    "question": "SQL 명령어 중 테이블의 스키마나 필드/속성을 구조적으로 변경하고자 할 때 사용하는 DDL 명령어는?",
+    "answer": 2,
+    "explanation": "ALTER 명령어는 SQL에서 테이블의 구조(스키마, 필드 등)를 변경할 때 사용하는 DDL입니다.",
+    "choices": [
+      "DROP",
+      "ALTER",
+      "GRANT",
+      "SELECT",
+      "UPDATE"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 43,
+    "question": "다음 중 데이터베이스 사용자에 대한 권한 부여 및 취소, 트랜잭션의 제어(완료 및 복구) 등을 수행하는 DCL(데이터 제어어) 명령어가 아닌 것은?",
+    "answer": 5,
+    "explanation": "TRUNCATE 명령어는 테이블의 모든 데이터를 삭제하는 DML(Data Manipulation Language)에 해당하며, DCL에 속하지 않습니다.",
+    "choices": [
+      "GRANT",
+      "REVOKE",
+      "COMMIT",
+      "ROLLBACK",
+      "TRUNCATE"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 44,
+    "question": "SQL 명령어의 분류와 설명으로 옳지 않은 것은?",
+    "answer": 5,
+    "explanation": "CREATE 명령어는 DDL(Data Definition Language)에 속하며, 데이터베이스 사용자 계정 생성은 DCL(Data Control Language)의 GRANT 명령어로 수행합니다.",
+    "choices": [
+      "ALTER-DDL에 속하며 필드나 속성을 변경할 때 사용한다.",
+      "SELECT-DML에 속하며 조건에 맞는 데이터를 검색할 때 사용한다.",
+      "DELETE-DML에 속하며 테이블의 조건에 맞는 데이터를 삭제할 때 사용한다.",
+      "COMMIT-DCL에 속하며 데이터베이스 조작 작업이 정상적으로 완료되었음을 알린다.",
+      "CREATE-DML에 속하며 새로운 데이터베이스 사용자 계정에게 권한을 부여할 때 사용한다."
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 45,
+    "question": "네트워크 분류 중 국가, 대륙과 같이 광범위한 지역을 연결하며 거리에 제약이 없는 반면, LAN에 비해 상대적으로 전송 속도가 느리고 에러율이 높은 네트워크 형태는?",
+    "answer": 2,
+    "explanation": "WAN(Wide Area Network)은 국가, 대륙 등 광범위한 지역을 연결하는 네트워크로, LAN에 비해 속도가 느리고 에러율이 높습니다.",
+    "choices": [
+      "LAN",
+      "WAN",
+      "MAN",
+      "PAN",
+      "WLAN"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  },
+  {
+    "number": 46,
+    "question": "ERD(E-R Diagram)에서 사물 또는 사건으로 정의되며, 다이어그램 상에서 '사각형'으로 표기하는 구성 요소는 무엇인가?",
+    "answer": 3,
+    "explanation": "E-R 다이어그램에서 사물 또는 사건을 나타내는 개체(Entity)는 사각형으로 표기됩니다.",
+    "choices": [
+      "속성(Attribute)",
+      "관계(Relationship)",
+      "개체(Entity, 엔티티)",
+      "도메인(Domain)",
+      "인스턴스(Instance)"
+    ],
+    "sub_unit": "02. 응용SW 기초 기술 활용",
+    "frequency": 1
+  }
+]
