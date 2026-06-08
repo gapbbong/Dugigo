@@ -19,6 +19,7 @@ const SUBJECT_CONFIGS = [
   { subject_id: 'ELEVATOR', folder: '승강기기능사', file: 'MASTER_DB.json' },
   { subject_id: 'ELECTRICITY', folder: '전기기능사', file: 'MASTER_DB.json' },
   { subject_id: 'INFOPRO', folder: '정보처리기능사', file: 'MASTER_DB.json' },
+  { subject_id: 'INFOPRO_IND', folder: '정보처리산업기사', file: 'MASTER_DB.json' },
   { subject_id: 'LITERACY_2', folder: '컴퓨터활용능력 2급', file: 'Literacy2_MASTER_DB.json' },
   { subject_id: 'PRODUCTION_AUTO', folder: '자동화설비(생산자동화)기능사', file: 'Automation_Equipment_MASTER_DB.json' },
   { subject_id: 'ELECTRIC_CONSTRUCTION', folder: '전기공사산업기사', file: 'Electric_Construction_MASTER_DB.json' },
@@ -28,11 +29,20 @@ const SUBJECT_CONFIGS = [
 
 async function syncAllSubjects() {
   console.log("=================================================");
-  console.log(" 🚀 DugiGo 마스터 DB -> Supabase 클라우드 전면 동기화 ");
+  console.log(" 🚀 DugiGo 마스터 DB -> Supabase 클라우드 동기화 ");
   console.log(` 🌐 타겟 DB: ${supabaseUrl}`);
   console.log("=================================================\n");
 
-  for (const conf of SUBJECT_CONFIGS) {
+  const filterSubject = process.argv[2];
+  const targets = filterSubject 
+    ? SUBJECT_CONFIGS.filter(c => c.subject_id === filterSubject)
+    : SUBJECT_CONFIGS;
+
+  if (filterSubject) {
+    console.log(`🎯 필터링 동기화 구동: [${filterSubject}] 과목만 선택적으로 업로드합니다.`);
+  }
+
+  for (const conf of targets) {
     const fullPath = path.resolve(process.cwd(), 'src', 'data', conf.folder, conf.file);
     if (!fs.existsSync(fullPath)) {
       console.warn(`⚠️ [SKIP] 파일을 찾을 수 없습니다: ${conf.folder}/${conf.file}`);

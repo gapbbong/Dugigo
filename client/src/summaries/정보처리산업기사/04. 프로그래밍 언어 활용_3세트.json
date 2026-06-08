@@ -1,0 +1,52 @@
+{
+  "subject": "정보처리산업기사",
+  "unit": "04. 프로그래밍 언어 활용",
+  "set": 3,
+  "slides": [
+    {
+      "id": 1,
+      "title": "중복 코드를 박멸하는 '레시피', 함수의 탄생!",
+      "content": "함수는 매번 똑같은 요리법을 새로 쓰지 않고 한 번 적어둔 레시피를 재사용하는 것과 같습니다. 자주 쓰이는 코드를 하나로 묶어 필요할 때마다 호출함으로써 코드 중복을 완전히 없애고 소프트웨어의 재사용성을 극대화합니다.",
+      "visual": "🧩 함수(Function) = 코드 재사용 + 중복 제거",
+      "exam_point": "함수의 최대 강점은 '코드 재사용성 극대화'와 '중복 제거'입니다. 똑같은 코드를 여러 번 쓸 필요가 없게 만드는 주인공이 바로 함수라는 점을 기억하세요!",
+      "svg": "<svg viewBox='0 0 600 300' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg' style='background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); font-family: sans-serif;'><defs><linearGradient id='funcGrad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='#6366f1'/><stop offset='100%' stop-color='#a855f7'/></linearGradient></defs><g transform='translate(50, 50)'><rect x='0' y='50' width='100' height='100' rx='15' fill='#334155'/><text x='50' y='105' fill='#94a3b8' font-size='14' text-anchor='middle' font-weight='bold'>INPUT</text><text x='50' y='125' fill='#38bdf8' font-size='12' text-anchor='middle'>데이터</text><path d='M110,100 L180,100' stroke='#6366f1' stroke-width='4' fill='none' stroke-dasharray='5,5'/><polygon points='180,95 190,100 180,105' fill='#6366f1'/><rect x='200' y='20' width='160' height='160' rx='20' fill='url(#funcGrad)' stroke='#c084fc' stroke-width='2'/><text x='280' y='90' fill='#ffffff' font-size='18' text-anchor='middle' font-weight='bold'>FUNCTION</text><text x='280' y='115' fill='#f1f5f9' font-size='12' text-anchor='middle'>재사용 가능한 코드</text><text x='280' y='135' fill='#f1f5f9' font-size='12' text-anchor='middle'>[ 레시피 블록 ]</text><path d='M370,100 L440,100' stroke='#a855f7' stroke-width='4' fill='none'/><polygon points='440,95 450,100 440,105' fill='#a855f7'/><rect x='460' y='50' width='100' height='100' rx='15' fill='#334155'/><text x='510' y='105' fill='#94a3b8' font-size='14' text-anchor='middle' font-weight='bold'>OUTPUT</text><text x='510' y='125' fill='#4ade80' font-size='12' text-anchor='middle'>결과 도출</text></g><text x='300' y='260' fill='#94a3b8' font-size='14' text-anchor='middle'>\"한 번 정의하고 무한으로 호출하는 마법\"</text></svg>",
+      "image": "/summaries/정보처리산업기사/slide_04. 프로그래밍 언어 활용_3_1.webp"
+    },
+    {
+      "id": 2,
+      "title": "복잡한 코드를 깔끔한 정리함으로, 함수의 효과!",
+      "content": "뒤엉킨 케이블선처럼 복잡한 프로그램을 기능별 깔끔한 정리함에 나누어 담는 과정이 바로 함수화입니다. 프로그램 전체 구조가 한눈에 볼 수 있도록 극적으로 단순해지며, 고장 난 부분만 신속하게 고치면 되기 때문에 유지보수가 혁신적으로 쉬워집니다.",
+      "visual": "🗃️ 구조 단순화 + 유지보수 편의성 극대화",
+      "exam_point": "함수를 사용하면 복잡했던 전체 프로그램의 '구조가 단순화'되고 에러 수정 등의 '유지보수가 용이'해집니다. 이 효과를 반대로 설명하는 보기는 반드시 걸러내세요!",
+      "svg": "<svg viewBox='0 0 600 300' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg' style='background: linear-gradient(135deg, #0f172a 0%, #022c22 100%); font-family: sans-serif;'><g transform='translate(50, 40)'><rect x='10' y='30' width='180' height='160' rx='10' fill='#1e293b' stroke='#f43f5e' stroke-width='2'/><text x='100' y='60' fill='#f43f5e' font-size='14' text-anchor='middle' font-weight='bold'>AS-IS (복잡한 구조)</text><path d='M30,90 Q80,170 110,80 T170,150' stroke='#f43f5e' stroke-width='2' fill='none'/><path d='M40,150 Q120,70 150,160' stroke='#f43f5e' stroke-width='1.5' fill='none'/><circle cx='100' cy='120' r='10' fill='#f43f5e' opacity='0.7'/><text x='100' y='210' fill='#f43f5e' font-size='12' text-anchor='middle'>스파게티 코드 (난해함)</text><path d='M215,110 L265,110' stroke='#94a3b8' stroke-width='3' fill='none'/><polygon points='265,105 275,110 265,115' fill='#94a3b8'/><rect x='290' y='30' width='210' height='160' rx='10' fill='#1e293b' stroke='#10b981' stroke-width='2'/><text x='395' y='60' fill='#10b981' font-size='14' text-anchor='middle' font-weight='bold'>TO-BE (함수화 적용)</text><rect x='315' y='80' width='70' height='35' rx='5' fill='#064e3b' stroke='#34d399' stroke-width='1.5'/><text x='350' y='102' fill='#a7f3d0' font-size='11' text-anchor='middle'>기능 A</text><rect x='415' y='80' width='70' height='35' rx='5' fill='#064e3b' stroke='#34d399' stroke-width='1.5'/><text x='450' y='102' fill='#a7f3d0' font-size='11' text-anchor='middle'>기능 B</text><rect x='365' y='135' width='70' height='35' rx='5' fill='#064e3b' stroke='#34d399' stroke-width='1.5'/><text x='400' y='157' fill='#a7f3d0' font-size='11' text-anchor='middle'>기능 C</text><text x='395' y='210' fill='#10b981' font-size='12' text-anchor='middle'>단순한 구조 / 유지보수 용이</text></g></svg>",
+      "image": "/summaries/정보처리산업기사/slide_04. 프로그래밍 언어 활용_3_2.webp"
+    },
+    {
+      "id": 3,
+      "title": "거대한 시스템을 조립식 블록으로, 모듈화!",
+      "content": "모듈화는 거대하고 복잡한 소프트웨어를 완벽히 독립된 규격화 블록(모듈) 단위로 나누어 제작하는 첨단 건축 공법과 같습니다. 전체 프로그램의 논리적 복잡성을 대폭 낮추고 고장 위험을 분산하여 시스템의 안전성과 가독성을 극대화합니다.",
+      "visual": "🧱 모듈화 = 복잡성 대폭 감소 + 독립된 블록화",
+      "exam_point": "모듈화의 핵심 효과는 복잡성을 '감소'시키는 것입니다. 시험 문제 중 '모듈화가 프로그램 논리의 복잡성을 증가시킨다'는 선지는 절대적 오답입니다!",
+      "svg": "<svg viewBox='0 0 600 300' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg' style='background: linear-gradient(135deg, #0f172a 0%, #1e1e38 100%); font-family: sans-serif;'><g transform='translate(80, 50)'><rect x='0' y='40' width='110' height='90' rx='10' fill='#1e293b' stroke='#38bdf8' stroke-width='2' stroke-dasharray='4,4'/><text x='55' y='80' fill='#38bdf8' font-size='14' text-anchor='middle' font-weight='bold'>모듈 A</text><text x='55' y='100' fill='#94a3b8' font-size='11' text-anchor='middle'>독립적 연산</text><rect x='140' y='40' width='110' height='90' rx='10' fill='#1e293b' stroke='#38bdf8' stroke-width='2' stroke-dasharray='4,4'/><text x='195' y='80' fill='#38bdf8' font-size='14' text-anchor='middle' font-weight='bold'>모듈 B</text><text x='195' y='100' fill='#94a3b8' font-size='11' text-anchor='middle'>독립적 연산</text><rect x='280' y='40' width='110' height='90' rx='10' fill='#1e293b' stroke='#38bdf8' stroke-width='2' stroke-dasharray='4,4'/><text x='335' y='80' fill='#38bdf8' font-size='14' text-anchor='middle' font-weight='bold'>모듈 C</text><text x='335' y='100' fill='#94a3b8' font-size='11' text-anchor='middle'>독립적 연산</text><path d='M55,130 L195,180 L335,130' fill='none' stroke='#f59e0b' stroke-width='2'/><circle cx='195' cy='180' r='15' fill='#f59e0b'/><text x='195' y='184' fill='#0f172a' font-size='11' text-anchor='middle' font-weight='bold'>통합</text><text x='195' y='220' fill='#f59e0b' font-size='14' text-anchor='middle' font-weight='bold'>복잡성 감소 (Complexity Down)</text></g></svg>",
+      "image": "/summaries/정보처리산업기사/slide_04. 프로그래밍 언어 활용_3_3.webp"
+    },
+    {
+      "id": 4,
+      "title": "일렬로 늘어선 기차 칸, 메모리를 지배하는 배열!",
+      "content": "배열은 똑같은 크기의 기차 객실들이 고유한 번호표(인덱스)를 달고 빈틈없이 줄지어 서 있는 자료구조입니다. 반드시 '동일한 타입'의 데이터만 모아서 메모리의 '연속적인 주소 공간'에 빈틈없이 보관하여 초고속 데이터 처리를 보장합니다.",
+      "visual": "🚃 배열(Array) = 동일 자료형 + 연속 메모리 공간",
+      "exam_point": "배열의 양대 정의는 '동일한 자료형'과 '연속적인 메모리 공간'입니다. '서로 다른 형태의 데이터를 흩어지게 저장한다'는 묘사는 오답입니다!",
+      "svg": "<svg viewBox='0 0 600 300' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg' style='background: linear-gradient(135deg, #0f172a 0%, #172554 100%); font-family: sans-serif;'><g transform='translate(50, 60)'><rect x='10' y='50' width='90' height='70' rx='8' fill='#1e293b' stroke='#06b6d4' stroke-width='3'/><text x='55' y='90' fill='#ffffff' font-size='20' text-anchor='middle' font-weight='bold'>[0]</text><rect x='105' y='50' width='90' height='70' rx='8' fill='#1e293b' stroke='#06b6d4' stroke-width='3'/><text x='150' y='90' fill='#ffffff' font-size='20' text-anchor='middle' font-weight='bold'>[1]</text><rect x='200' y='50' width='90' height='70' rx='8' fill='#1e293b' stroke='#06b6d4' stroke-width='3'/><text x='245' y='90' fill='#ffffff' font-size='20' text-anchor='middle' font-weight='bold'>[2]</text><rect x='295' y='50' width='90' height='70' rx='8' fill='#1e293b' stroke='#06b6d4' stroke-width='3'/><text x='340' y='90' fill='#ffffff' font-size='20' text-anchor='middle' font-weight='bold'>[3]</text><rect x='390' y='50' width='90' height='70' rx='8' fill='#1e293b' stroke='#06b6d4' stroke-width='3'/><text x='435' y='90' fill='#ffffff' font-size='20' text-anchor='middle' font-weight='bold'>[4]</text><text x='250' y='165' fill='#38bdf8' font-size='15' text-anchor='middle' font-weight='bold'>연속적인 주소 공간 (Contiguous Memory)</text><text x='250' y='190' fill='#94a3b8' font-size='13' text-anchor='middle'>모든 상자 안에는 오직 \"동일한 데이터 타입\"만 저장!</text></g></svg>",
+      "image": "/summaries/정보처리산업기사/slide_04. 프로그래밍 언어 활용_3_4.webp"
+    },
+    {
+      "id": 5,
+      "title": "한눈에 정리하는 프로그래밍 언어 활용 핵심 공식!",
+      "content": "구조적 프로그래밍의 중심에는 함수, 모듈화, 배열이 존재합니다. 함수로 중복을 완전히 박멸하고, 독립적인 모듈들로 시스템의 복잡성을 길들이며, 연속된 구조인 배열로 정밀하게 데이터를 저장하는 흐름을 통합적으로 기억해 보세요.",
+      "visual": "🏗️ 함수(중복 제거) ➡️ 모듈화(구조화) ➡️ 배열(메모리 효율)",
+      "exam_point": "유지보수 향상(함수), 시스템 복잡도 하락(모듈화), 동일한 타입의 연속 저장(배열) 이 세 가지 속성은 기출 선지에서 뒤바뀌어 출제되니 꼼꼼히 매칭해두세요!",
+      "svg": "<svg viewBox='0 0 600 300' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg' style='background: linear-gradient(135deg, #0f172a 0%, #3b0764 100%); font-family: sans-serif;'><g transform='translate(50, 40)'><rect x='20' y='20' width='140' height='100' rx='10' fill='#1e1b4b' stroke='#818cf8' stroke-width='2'/><text x='90' y='65' fill='#818cf8' font-size='16' text-anchor='middle' font-weight='bold'>1. 함수</text><text x='90' y='95' fill='#e2e8f0' font-size='12' text-anchor='middle'>중복 코드 제거</text><rect x='180' y='20' width='140' height='100' rx='10' fill='#1e1b4b' stroke='#c084fc' stroke-width='2'/><text x='250' y='65' fill='#c084fc' font-size='16' text-anchor='middle' font-weight='bold'>2. 모듈화</text><text x='250' y='95' fill='#e2e8f0' font-size='12' text-anchor='middle'>복잡성 감소</text><rect x='340' y='20' width='140' height='100' rx='10' fill='#1e1b4b' stroke='#22d3ee' stroke-width='2'/><text x='410' y='65' fill='#22d3ee' font-size='16' text-anchor='middle' font-weight='bold'>3. 배열</text><text x='410' y='95' fill='#e2e8f0' font-size='12' text-anchor='middle'>연속 메모리 확보</text><rect x='20' y='150' width='460' height='60' rx='8' fill='#120626' stroke='#e879f9' stroke-width='1'/><text x='250' y='185' fill='#f472b6' font-size='15' text-anchor='middle' font-weight='bold'>★ 유지보수 용이 + 개발 생산성 고속 극대화 ★</text></g></svg>",
+      "image": "/summaries/정보처리산업기사/slide_04. 프로그래밍 언어 활용_3_5.webp"
+    }
+  ]
+}
