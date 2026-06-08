@@ -92,7 +92,7 @@ def check_chunk_spell(api_key, questions_chunk):
             err_msg = e.read().decode('utf-8')
             print(f"Attempt {attempt+1} - HTTP Error {e.code}: {e.reason}\n{err_msg}")
             if e.code == 429 or e.code == 503:
-                time.sleep(5)
+                time.sleep(15)
                 continue
             break
         except Exception as e:
@@ -202,7 +202,7 @@ def main():
         else:
             print(f"Warning: Failed to check spelling for chunk {chunk[0]['number']}-{chunk[-1]['number']}")
         
-        time.sleep(1) # API Rate Limit 방지용 딜레이
+        time.sleep(4) # API Rate Limit 방지용 딜레이
         
     # 3. 리포트 생성
     print("Generating report...")
