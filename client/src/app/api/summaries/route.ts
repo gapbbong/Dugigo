@@ -32,6 +32,7 @@ export async function GET(req: NextRequest) {
   const safeUnitName = cleanUnit.replace(/[^a-z0-9가-힣]/gi, '_');
   const summaryFileName = `${safeUnitName}_${set}세트.json`;
   const fallbackFileName = `${cleanUnit.replace(/^\d+\.\s*/, '').replace(/[^a-z0-9가-힣]/gi, '_')}_${set}세트.json`;
+  const originalFileName = `${cleanUnit}_${set}세트.json`;
 
   let baseDir = process.cwd();
   // 만약 process.cwd()가 client 상위 폴더이고, client 폴더가 존재한다면 client 폴더 안을 base로 잡음
@@ -46,15 +47,22 @@ export async function GET(req: NextRequest) {
   const fallbackPublicPath = path.join(summariesBase, subject, fallbackFileName);
   const srcPath = path.join(srcSummariesBase, subject, summaryFileName);
   const fallbackSrcPath = path.join(srcSummariesBase, subject, fallbackFileName);
+  const originalPublicPath = path.join(summariesBase, subject, originalFileName);
+  const originalSrcPath = path.join(srcSummariesBase, subject, originalFileName);
   
   // Verify path is within allowed base directories
   if (!publicPath.startsWith(summariesBase) && !srcPath.startsWith(srcSummariesBase)) {
     return NextResponse.json({ error: "Access denied" }, { status: 403 });
   }
+  if (!originalPublicPath.startsWith(summariesBase) && !originalSrcPath.startsWith(srcSummariesBase)) {
+    return NextResponse.json({ error: "Access denied" }, { status: 403 });
+  }
 
-  const summaryPath = fs.existsSync(publicPath) ? publicPath : 
+  const summaryPath = fs.existsSync(originalPublicPath) ? originalPublicPath : 
+                    (fs.existsSync(originalSrcPath) ? originalSrcPath : 
+                    (fs.existsSync(publicPath) ? publicPath : 
                     (fs.existsSync(fallbackPublicPath) ? fallbackPublicPath : 
-                    (fs.existsSync(srcPath) ? srcPath : fallbackSrcPath));
+                    (fs.existsSync(srcPath) ? srcPath : fallbackSrcPath))));
 
   if (fs.existsSync(summaryPath)) {
     try {
