@@ -172,6 +172,7 @@ export default function SelectSubjectPage() {
         const getPriority = (name: string) => {
           if (name.includes('한국사')) return 100;
           if (name.includes('전기기사')) return 101;
+          if (name.includes('정보처리산업기사')) return 102;
           return 0;
         };
         const pa = getPriority(a);
