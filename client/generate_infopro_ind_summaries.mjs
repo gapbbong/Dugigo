@@ -137,7 +137,7 @@ async function processAll() {
       const outputPath = path.join(targetDir, `${unitName}_${setNum}세트.json`);
       
       // Force overwrite to reconstruct summaries for the newly aligned set sizes
-      const forceOverwrite = true;
+      const forceOverwrite = false;
       if (fs.existsSync(outputPath) && !forceOverwrite) {
         console.log(`  [Skipping] ${unitName} Set ${setNum} (Already exists)`);
         continue;
