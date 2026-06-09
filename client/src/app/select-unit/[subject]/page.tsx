@@ -285,12 +285,27 @@ export default function SelectUnitPage() {
                     <div className="grid grid-cols-3 gap-3">
                       {Array.from({ length: unitSetCount }).map((_, sIdx) => {
                         const setNum = runningSetCount++;
-                        const stats = getSetStats(unit.name, sIdx + 1, 30);
+                        
+                        let setQuestionsCount = Math.min(30, unit.count - sIdx * 30);
+                        if (subject === '정보처리산업기사') {
+                          if (unit.name.includes("애플리케이션 테스트 수행") || unit.name.includes("01")) {
+                            setQuestionsCount = 15;
+                          } else if (unit.name.includes("응용SW 기초 기술 활용") || unit.name.includes("02")) {
+                            setQuestionsCount = 23;
+                          } else if (unit.name.includes("프로그래밍 언어 응용") || unit.name.includes("03")) {
+                            setQuestionsCount = 27;
+                          } else if (unit.name.includes("프로그래밍 언어 활용") || unit.name.includes("04")) {
+                            if (sIdx === 0 || sIdx === 1) setQuestionsCount = 21;
+                            else if (sIdx === 2) setQuestionsCount = 22;
+                          }
+                        }
+
+                        const stats = getSetStats(unit.name, sIdx + 1, setQuestionsCount);
 
                         return (
                           <button 
                             key={sIdx} 
-                            onClick={() => router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unit.name)}&set=${sIdx+1}&size=30${unit.range ? `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}` : ''}`)}
+                            onClick={() => router.push(`/study/${encodeURIComponent(subject)}?unit=${encodeURIComponent(unit.name)}&set=${sIdx+1}&size=${setQuestionsCount}${unit.range ? `&rStart=${unit.range[0]}&rEnd=${unit.range[1]}` : ''}`)}
                             className="h-24 bg-white dark:bg-white/5 border border-slate-100 dark:border-slate-800/50 rounded-2xl flex flex-col items-center justify-center hover:border-violet-300 transition-all relative group overflow-hidden"
                             title={stats ? `최근 5회 맞은 개수: ${stats.correctCounts.slice(-5).map(c => `${c}개`).join(', ')}` : undefined}
                           >
@@ -302,7 +317,7 @@ export default function SelectUnitPage() {
                             )}
 
                             <span className="text-2xl font-black tracking-tighter text-slate-800 dark:text-slate-200">{setNum}</span>
-                            <span className="text-[9px] font-black text-slate-400">세트 ({Math.min(30, unit.count - sIdx * 30)}문항)</span>
+                            <span className="text-[9px] font-black text-slate-400">세트 ({setQuestionsCount}문항)</span>
                             {stats && (
                               <span className="text-[8px] font-bold text-violet-600 mt-1 z-10 leading-none">
                                 {stats.correctCounts.slice(-5).join(', ')}개

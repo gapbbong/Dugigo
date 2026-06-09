@@ -299,9 +299,39 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     const isYearMode = !!searchParamsProps?.year;
     
     // 단원별/빈출 쪼개기 시 API 내부 파트별 슬라이싱과 일치하도록 세트 번호 기반으로 오프셋 계산
-    const initialStart = (parseInt(setNum || '1') - 1) * parseInt(setSize || '30');
-    const initialLimit = isYearMode ? 1000 : parseInt(setSize || '30');
+    let initialStart = (parseInt(setNum || '1') - 1) * parseInt(setSize || '30');
+    let initialLimit = isYearMode ? 1000 : parseInt(setSize || '30');
     
+    if (subject === '정보처리산업기사' && !isYearMode && unitFilter) {
+      const localSetNum = parseInt(setNum || '1');
+      if (unitFilter.includes("애플리케이션 테스트 수행") || unitFilter.includes("01")) {
+        initialStart = 0;
+        initialLimit = 15;
+      } else if (unitFilter.includes("응용SW 기초 기술 활용") || unitFilter.includes("02")) {
+        if (localSetNum === 1) {
+          initialStart = 0;
+          initialLimit = 23;
+        } else if (localSetNum === 2) {
+          initialStart = 23;
+          initialLimit = 23;
+        }
+      } else if (unitFilter.includes("프로그래밍 언어 응용") || unitFilter.includes("03")) {
+        initialStart = 0;
+        initialLimit = 27;
+      } else if (unitFilter.includes("프로그래밍 언어 활용") || unitFilter.includes("04")) {
+        if (localSetNum === 1) {
+          initialStart = 0;
+          initialLimit = 21;
+        } else if (localSetNum === 2) {
+          initialStart = 21;
+          initialLimit = 21;
+        } else if (localSetNum === 3) {
+          initialStart = 42;
+          initialLimit = 22;
+        }
+      }
+    }
+
     setLoading(true);
     fetchQuestions(initialStart, initialLimit);
   }, [paramsReady, setNum, setSize, rStart, fetchQuestions, searchParamsProps]);

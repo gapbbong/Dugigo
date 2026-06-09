@@ -136,13 +136,44 @@ async function processAll() {
     for (let setNum = 1; setNum <= totalSets; setNum++) {
       const outputPath = path.join(targetDir, `${unitName}_${setNum}세트.json`);
       
-      if (fs.existsSync(outputPath)) {
+      // Force overwrite to reconstruct summaries for the newly aligned set sizes
+      const forceOverwrite = true;
+      if (fs.existsSync(outputPath) && !forceOverwrite) {
         console.log(`  [Skipping] ${unitName} Set ${setNum} (Already exists)`);
         continue;
       }
 
-      const startIdx = (setNum - 1) * setSize;
-      const chunk = questions.slice(startIdx, startIdx + setSize);
+      let startIdx = (setNum - 1) * setSize;
+      let chunkLimit = setSize;
+
+      if (unitName.includes("애플리케이션 테스트 수행") || unitName.includes("01")) {
+        startIdx = 0;
+        chunkLimit = 15;
+      } else if (unitName.includes("응용SW 기초 기술 활용") || unitName.includes("02")) {
+        if (setNum === 1) {
+          startIdx = 0;
+          chunkLimit = 23;
+        } else if (setNum === 2) {
+          startIdx = 23;
+          chunkLimit = 23;
+        }
+      } else if (unitName.includes("프로그래밍 언어 응용") || unitName.includes("03")) {
+        startIdx = 0;
+        chunkLimit = 27;
+      } else if (unitName.includes("프로그래밍 언어 활용") || unitName.includes("04")) {
+        if (setNum === 1) {
+          startIdx = 0;
+          chunkLimit = 21;
+        } else if (setNum === 2) {
+          startIdx = 21;
+          chunkLimit = 21;
+        } else if (setNum === 3) {
+          startIdx = 42;
+          chunkLimit = 22;
+        }
+      }
+
+      const chunk = questions.slice(startIdx, startIdx + chunkLimit);
 
       console.log(`  [Generating] ${unitName} Set ${setNum}...`);
       const slides = await generateSummaries(chunk, unitName, setNum);
