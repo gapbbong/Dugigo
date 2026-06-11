@@ -3,14 +3,15 @@
     "year": 2026,
     "round": "01",
     "number": 1,
-    "question": "다음 중 구조적 프로그래밍에서 사용하는 기본 제어 구조로 옳은 것만을 <보기>에서 있는 대로 고른 것은?",
+    "question": "다음 중 구조적 프로그래밍에서 사용하는 기본 제어 구조로 옳은 것만을 <보기>에서 있는 대로 고른 것은?\n\n<보기>\nㄱ. 순차(Sequence)\nㄴ. 선택(Selection)\nㄷ. 반복(Iteration)\nㄹ. 분기(Branch)",
     "answer": 3,
     "explanation": "구조적 프로그래밍은 순차, 선택, 반복의 세 가지 기본 제어 구조를 사용합니다. 분기(Branch)는 구조적 프로그래밍에서 지양하는 GOTO문과 관련이 있습니다.",
     "choices": [
-      "ㄱ. 순차(Sequence)",
-      "ㄴ. 선택(Selection)",
-      "ㄷ. 반복(Iteration)",
-      "ㄹ. 분기(Branch)"
+      "ㄱ, ㄴ",
+      "ㄱ, ㄷ",
+      "ㄱ, ㄴ, ㄷ",
+      "ㄱ, ㄴ, ㄹ",
+      "ㄴ, ㄷ, ㄹ"
     ],
     "sub_unit": "04. 프로그래밍 언어 활용",
     "frequency": 1
@@ -70,7 +71,7 @@
     "year": 2026,
     "round": "01",
     "number": 5,
-    "question": "프로그램의 기본 제어 구조(순차, 선택, 반복)에 대한 설명 중 가장 타당하지 않은 것은?\n선택 구조는 반드시 goto 문을 사용해야 한다.",
+    "question": "프로그램의 기본 제어 구조(순차, 선택, 반복)에 대한 설명 중 가장 타당하지 않은 것은?\n\n선택 구조는 반드시 goto 문을 사용해야 한다.",
     "answer": 3,
     "explanation": "반복 구조는 특정 조건이 만족될 때까지 명령문을 반복 수행하는 구조입니다. 순차 구조는 명령문을 순서대로 실행하는 것이고, 선택 구조는 조건에 따라 실행 흐름이 달라지는 것입니다.",
     "choices": [
@@ -138,7 +139,7 @@
     "year": 2026,
     "round": "01",
     "number": 9,
-    "question": "다음 C 코드의 실행 결과로 가장 적절한 것은?",
+    "question": "다음 C 코드의 실행 결과로 가장 적절한 것은?\n\n```c\n#include <stdio.h>\nint main() {\n    printf(\"Hello, World!\\n\");\n    return 0;\n}\n```",
     "answer": 3,
     "explanation": "주어진 C 코드는 표준 출력 라이브러리(stdio.h)를 포함하고, main 함수 내에서 \"Hello, World!\\n\" 문자열을 출력한 후 0을 반환합니다. 따라서 \"Hello, World!\"가 화면에 출력됩니다.",
     "choices": [
@@ -574,7 +575,7 @@
   },
   {
     "number": 35,
-    "question": "다음 C 코드에서 포인터 변수는?",
+    "question": "다음 C 코드에서 포인터 변수는?\n\n```c\nint num = 10;\nint *ptr = &num;\n```",
     "answer": 5,
     "explanation": "포인터 변수는 자료형 뒤에 '*'가 붙으며, 변수명 'ptr'이 포인터 변수입니다.",
     "choices": [
@@ -589,7 +590,7 @@
   },
   {
     "number": 36,
-    "question": "다음 C 코드에서 &num의 의미로 가장 적절한 것은?",
+    "question": "다음 C 코드에서 &num의 의미로 가장 적절한 것은?\n\n```c\nint num = 10;\nint *ptr = &num;\n```",
     "answer": 3,
     "explanation": "&num은 변수 num의 메모리 주소를 나타냅니다.",
     "choices": [
@@ -604,7 +605,7 @@
   },
   {
     "number": 37,
-    "question": "다음 C 코드의 실행 결과로 옳은 것은?",
+    "question": "다음 C 코드의 실행 결과로 옳은 것은?\n\n```c\nint num = 10;\nint *ptr = &num;\n// printf(\"%d\", *ptr);\n```",
     "answer": 5,
     "explanation": "*ptr은 포인터 변수 ptr이 가리키는 메모리 주소에 저장된 값, 즉 num의 값인 10을 출력합니다.",
     "choices": [
@@ -904,7 +905,7 @@
   },
   {
     "number": 57,
-    "question": "다음 C 코드의 실행 결과로 가장 적절한 것은?",
+    "question": "다음 C 코드의 실행 결과로 가장 적절한 것은?\n\n```c\n#include <stdio.h>\nint main() {\n    int age = 20;\n    if (age >= 19) {\n        printf(\"성인입니다.\");\n    } else {\n        printf(\"미성년자입니다.\");\n    }\n    return 0;\n}\n```",
     "answer": 3,
     "explanation": "age가 20이므로 if 조건(age >= 19)이 참이 되어 \"성인입니다.\"가 출력됩니다.",
     "choices": [

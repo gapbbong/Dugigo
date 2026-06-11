@@ -842,10 +842,12 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       );
     }
     
-    if (cleanedText.includes('\n\n')) {
-      const firstDoubleNewline = cleanedText.indexOf('\n\n');
-      const questionPart = cleanedText.slice(0, firstDoubleNewline);
-      const codePart = cleanedText.slice(firstDoubleNewline + 2).trim();
+    if (cleanedText.includes('\n')) {
+      const isDouble = cleanedText.includes('\n\n');
+      const delimiter = isDouble ? '\n\n' : '\n';
+      const firstNewline = cleanedText.indexOf(delimiter);
+      const questionPart = cleanedText.slice(0, firstNewline);
+      const codePart = cleanedText.slice(firstNewline + delimiter.length).trim();
       
       return (
         <div className="text-lg md:text-2xl font-bold text-slate-900 dark:text-slate-100 leading-[1.6] md:leading-[1.4] break-keep tracking-normal">
@@ -1160,7 +1162,6 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                       </div>
                       <span className="text-base md:text-xl font-bold flex-1 leading-relaxed flex flex-col gap-3">
                         {/\.(webp|jpg|jpeg|png|gif)$/i.test(choice) ? (
-                          // 선택지 자체가 이미지 파일명인 경우 (예: history_64_adv_q16_c1.webp)
                           <div className="flex justify-center py-2">
                             <img 
                               src={(() => {
@@ -1181,7 +1182,15 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                             {currentQuestion.shuffledChoiceImgs?.[idx] && (
                               <div className="flex justify-center py-1">
                                 <img 
-                                  src={`/images/subjects/자동화설비(생산자동화)기능사/${currentQuestion.shuffledChoiceImgs[idx]}`}
+                                  src={(() => {
+                                    const imgName = currentQuestion.shuffledChoiceImgs[idx];
+                                    if (imgName.startsWith('/') || imgName.startsWith('http')) return imgName;
+                                    if (imgName.startsWith('history_')) return `/summaries/한국사검정시험/${imgName}`;
+                                    if (imgName.startsWith('lit2_')) return `/summaries/컴퓨터활용능력 2급/${imgName}`;
+                                    if (imgName.startsWith('vis_') || subject.includes('시각디자인')) return `/summaries/시각디자인산업기사/${imgName}`;
+                                    if (imgName.startsWith('ae_') || subject.includes('자동화설비')) return `/images/subjects/자동화설비(생산자동화)기능사/${imgName}`;
+                                    return imgName;
+                                  })()}
                                   alt={`Choice Image ${idx + 1}`}
                                   className="max-h-[120px] md:max-h-[200px] object-contain rounded-lg border border-slate-100 p-1 bg-white"
                                   onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}

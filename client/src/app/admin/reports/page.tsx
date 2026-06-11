@@ -151,7 +151,7 @@ export default function AdminReportsPage() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="text-xs font-black text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
-                        Q.{r.year}-{r.round}-{r.question_num}
+                        Q.{r.year ? `${r.year}-` : ''}{r.round}-{r.question_num}
                       </span>
                       <span className="text-xs font-bold text-slate-600">{r.subject}</span>
                       <span className={`text-xs font-black px-2 py-0.5 rounded-full ${
