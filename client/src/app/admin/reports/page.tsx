@@ -18,6 +18,23 @@ const STATUS_LABELS: Record<string, string> = {
   ignored: '무시됨',
 };
 
+const parseComment = (commentStr: string) => {
+  if (!commentStr) return { text: '', screenshot: null };
+  const trimmed = commentStr.trim();
+  if (trimmed.startsWith('{') && trimmed.endsWith('}')) {
+    try {
+      const parsed = JSON.parse(trimmed);
+      return {
+        text: parsed.text || '',
+        screenshot: parsed.screenshot || null
+      };
+    } catch (e) {
+      // ignore parsing error, treat as raw string
+    }
+  }
+  return { text: commentStr, screenshot: null };
+};
+
 export default function AdminReportsPage() {
   const [tab, setTab] = useState<'pending' | 'resolved' | 'ignored'>('pending');
   const [reports, setReports] = useState<any[]>([]);
@@ -27,6 +44,7 @@ export default function AdminReportsPage() {
   const [editQuestion, setEditQuestion] = useState<any>(null);
   const [saving, setSaving] = useState(false);
   const [actionLoading, setActionLoading] = useState<string | null>(null);
+  const [previewImg, setPreviewImg] = useState<string | null>(null);
 
   const fetchReports = useCallback(async () => {
     setLoading(true);
@@ -182,12 +200,32 @@ export default function AdminReportsPage() {
                     >
                       <div className="px-5 pb-5 border-t border-slate-100 pt-4 space-y-4">
                         {/* 학생 코멘트 */}
-                        {r.comment && (
-                          <div className="bg-slate-50 rounded-xl p-3">
-                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">학생 설명</p>
-                            <p className="text-sm text-slate-700 font-medium">{r.comment}</p>
-                          </div>
-                        )}
+                        {(() => {
+                          const parsed = parseComment(r.comment);
+                          return (
+                            (parsed.text || parsed.screenshot) && (
+                              <div className="bg-slate-50 rounded-xl p-4 space-y-3">
+                                {parsed.text && (
+                                  <div>
+                                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">학생 설명</p>
+                                    <p className="text-sm text-slate-700 font-medium whitespace-pre-wrap">{parsed.text}</p>
+                                  </div>
+                                )}
+                                {parsed.screenshot && (
+                                  <div>
+                                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">첨부된 화면 캡처</p>
+                                    <div className="relative w-full max-w-[200px] aspect-[4/3] rounded-lg overflow-hidden border border-slate-200 cursor-pointer shadow-sm group" onClick={() => setPreviewImg(parsed.screenshot)}>
+                                      <img src={parsed.screenshot} alt="Student Report Screenshot" className="object-cover w-full h-full group-hover:scale-105 transition-transform" />
+                                      <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-[11px] font-black transition-opacity">
+                                        클릭해서 크게 보기
+                                      </div>
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+                            )
+                          );
+                        })()}
 
                         {/* 문항 수정 에디터 */}
                         {editingId === r.id && editQuestion ? (
@@ -297,6 +335,38 @@ export default function AdminReportsPage() {
           </div>
         )}
       </main>
+      {/* 이미지 미리보기 모달 */}
+      <AnimatePresence>
+        {previewImg && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+            onClick={() => setPreviewImg(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              className="relative max-w-4xl max-h-[90vh] bg-white rounded-2xl overflow-hidden p-2 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button 
+                onClick={() => setPreviewImg(null)}
+                className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+              <img 
+                src={previewImg} 
+                alt="Full Screenshot Preview" 
+                className="max-w-full max-h-[85vh] object-contain rounded-lg"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

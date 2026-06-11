@@ -52,6 +52,7 @@ export default function SelectSubjectPage() {
   const [randomQuote, setRandomQuote] = useState("");
   const [showGuide, setShowGuide] = useState(false);
   const [studentRank, setStudentRank] = useState<{ groupName: string, rank: number, total: number } | null>(null);
+  const [reportStats, setReportStats] = useState<{ total: number; resolved: number } | null>(null);
 
   // 비밀번호 변경 모달 상태
   const [showPwModal, setShowPwModal] = useState(false);
@@ -218,6 +219,21 @@ export default function SelectSubjectPage() {
           });
       }
 
+      // 5. 백그라운드 비동기 로직 (신고 문항 처리 현황 불러오기) - UI 안막음
+      try {
+        const { data: reports } = await supabase.from('dukigo_question_reports')
+          .select('status')
+          .eq('user_id', currentUser.id);
+        
+        if (reports && reports.length > 0) {
+          const total = reports.length;
+          const resolved = reports.filter((r: any) => r.status === 'resolved').length;
+          setReportStats({ total, resolved });
+        }
+      } catch (err) {
+        console.error('[FETCH_REPORTS_ERROR]', err);
+      }
+
       // 학생인데 학번/이름 형식에 맞지 않는 경우 프로필 완성 강제
       if (profile?.role?.toLowerCase() === 'student') {
         const isValidFormat = /^\d{4,5}[가-힣]+$/.test(profile.display_name || '');
@@ -353,13 +369,27 @@ export default function SelectSubjectPage() {
             <p className="text-lg md:text-2xl font-bold text-slate-500 dark:text-slate-400 italic">
               환영합니다, <span className="text-brand-600 font-black">{user?.display_name || user?.email?.split('@')[0]}</span>님! 👋
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 flex-wrap justify-center md:justify-start">
               <button 
                 onClick={() => setShowGuide(true)}
                 className="text-xs md:text-sm font-black text-brand-600 underline underline-offset-4 hover:text-brand-700 transition-all"
               >
                 홈 화면에 추가 방법
               </button>
+              {reportStats && reportStats.total > 0 && (
+                <>
+                  <div className="w-px h-3 bg-slate-300 hidden md:block" />
+                  <span className="text-xs md:text-sm font-bold text-slate-500 bg-white/60 dark:bg-slate-800/40 px-3 py-1 rounded-full border border-slate-200/50 flex items-center gap-1.5 whitespace-nowrap shadow-sm">
+                    📢 신고 문항: <span className="font-black text-brand-600">{reportStats.total}건</span> 
+                    {reportStats.resolved > 0 && (
+                      <>
+                        <span className="text-slate-300">|</span>
+                        수정완료: <span className="font-black text-emerald-600">{reportStats.resolved}건</span>
+                      </>
+                    )}
+                  </span>
+                </>
+              )}
             </div>
           </div>
         </div>

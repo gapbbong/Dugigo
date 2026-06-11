@@ -85,6 +85,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const [reportType, setReportType] = useState('');
   const [reportComment, setReportComment] = useState('');
   const [reportStatus, setReportStatus] = useState<'idle'|'sending'|'done'>('idle');
+  const [includeScreenshot, setIncludeScreenshot] = useState(true);
+  const [screenshotStatus, setScreenshotStatus] = useState<'idle' | 'capturing' | 'success' | 'error'>('idle');
 
   const [unitFilter, setUnitFilter] = useState<string | null>(null);
   const [setNum, setSetNum] = useState<string | null>(null);
@@ -465,12 +467,40 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
   const handleReport = async () => {
     if (!reportType) return;
     setReportStatus('sending');
+    
+    let screenshotBase64 = null;
+    if (includeScreenshot) {
+      setScreenshotStatus('capturing');
+      try {
+        const html2canvas = (await import('html2canvas')).default;
+        const canvas = await html2canvas(document.body, {
+          ignoreElements: (element) => {
+            return element.classList.contains('z-50') || element.closest('.z-50') !== null;
+          },
+          logging: false,
+          useCORS: true,
+          scale: 0.8,
+        });
+        screenshotBase64 = canvas.toDataURL('image/webp', 0.5);
+        setScreenshotStatus('success');
+      } catch (screenshotErr) {
+        console.error('Failed to capture screenshot:', screenshotErr);
+        setScreenshotStatus('error');
+      }
+    }
+
     try {
       const { data: userData } = await supabase.auth.getUser();
       
       // Parse year and question number safely to match DB integer constraints
       const yearInt = currentQuestion.year ? parseInt(String(currentQuestion.year).replace(/[^0-9]/g, '')) : null;
       const questionNumInt = currentQuestion.number ? parseInt(String(currentQuestion.number).replace(/[^0-9]/g, '')) : null;
+
+      // JSON serialization wrapper for comment and screenshot
+      const serializedComment = JSON.stringify({
+        text: reportComment,
+        screenshot: screenshotBase64
+      });
 
       const res = await fetch('/api/reports', {
         method: 'POST',
@@ -483,7 +513,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
           question_num: isNaN(questionNumInt as number) ? null : questionNumInt,
           user_id: userData.user?.id,
           report_type: reportType,
-          comment: reportComment,
+          comment: serializedComment,
         }),
       });
 
@@ -498,11 +528,14 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         setReportType('');
         setReportComment('');
         setReportStatus('idle');
+        setScreenshotStatus('idle');
+        setIncludeScreenshot(true);
       }, 1500);
     } catch (err: any) {
       console.error('Report submission error:', err);
       alert(`신고 제출에 실패했습니다: ${err.message || '알 수 없는 오류'}`);
       setReportStatus('idle');
+      setScreenshotStatus('idle');
     }
   };
 
@@ -1174,7 +1207,17 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                               })()} 
                               alt={`Choice ${idx + 1}`}
                               className="max-h-[140px] md:max-h-[250px] object-contain rounded-xl"
-                              onError={(e) => { (e.target as HTMLElement).parentElement!.style.display = 'none'; }}
+                              onError={(e) => { 
+                                const target = e.target as HTMLImageElement;
+                                target.style.display = 'none';
+                                const parent = target.parentElement;
+                                if (parent && !parent.querySelector('.img-error-fallback')) {
+                                  const fallback = document.createElement('span');
+                                  fallback.className = 'img-error-fallback text-xs font-medium text-rose-500 flex items-center gap-1 py-1';
+                                  fallback.innerHTML = '⚠️ 이미지를 불러오지 못했습니다.';
+                                  parent.appendChild(fallback);
+                                }
+                              }}
                             />
                           </div>
                         ) : (
@@ -1193,7 +1236,17 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                                   })()}
                                   alt={`Choice Image ${idx + 1}`}
                                   className="max-h-[120px] md:max-h-[200px] object-contain rounded-lg border border-slate-100 p-1 bg-white"
-                                  onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                                  onError={(e) => { 
+                                    const target = e.target as HTMLImageElement;
+                                    target.style.display = 'none';
+                                    const parent = target.parentElement;
+                                    if (parent && !parent.querySelector('.img-error-fallback')) {
+                                      const fallback = document.createElement('span');
+                                      fallback.className = 'img-error-fallback text-xs font-medium text-rose-500 flex items-center gap-1 py-1';
+                                      fallback.innerHTML = '⚠️ 이미지를 불러오지 못했습니다.';
+                                      parent.appendChild(fallback);
+                                    }
+                                  }}
                                 />
                               </div>
                             )}
@@ -1334,8 +1387,38 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               ) : (
                 <div className="px-6 py-5 space-y-4">
                   <div className="space-y-2"><p className="text-xs font-black text-slate-500 uppercase tracking-widest">오류 유형</p>{[{ value: 'wrong_answer', label: '정답이 틀린 것 같아요' }, { value: 'wrong_explanation', label: '해설이 이상해요' }, { value: 'broken_text', label: '문제 문장/수식이 깨졌어요' }, { value: 'other', label: '기타' }].map(opt => (<label key={opt.value} className="flex items-center gap-3 p-3 rounded-xl border-2 cursor-pointer transition-all" style={{ borderColor: reportType === opt.value ? '#7c3aed' : '#e2e8f0', background: reportType === opt.value ? '#f5f3ff' : 'white' }}><input type="radio" name="reportType" value={opt.value} checked={reportType === opt.value} onChange={() => setReportType(opt.value)} className="accent-brand-600" /><span className="text-sm font-bold text-slate-700">{opt.label}</span></label>))}</div>
+                  
+                  {/* 스크린샷 캡처 옵션 */}
+                  <div className="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200/60">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-black text-slate-700">현재 화면 캡처 첨부</span>
+                      <span className="text-[10px] text-slate-400 font-bold bg-slate-200/50 px-1.5 py-0.5 rounded">권장</span>
+                    </div>
+                    <input 
+                      type="checkbox" 
+                      checked={includeScreenshot} 
+                      onChange={e => setIncludeScreenshot(e.target.checked)} 
+                      className="w-4 h-4 rounded text-brand-600 focus:ring-brand-500 cursor-pointer accent-brand-600"
+                    />
+                  </div>
+
                   <div><p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-2">추가 설명 (선택)</p><textarea value={reportComment} onChange={e => setReportComment(e.target.value)} placeholder="구체적으로 어떤 부분이 문제인지 적어주세요." rows={3} className="w-full text-sm border-2 border-slate-200 rounded-xl p-3 resize-none focus:outline-none focus:border-brand-400 font-medium text-slate-700 placeholder:text-slate-300" /></div>
-                  <div className="flex gap-3 pt-1"><button onClick={() => setReportOpen(false)} className="flex-1 py-3 rounded-xl border-2 border-slate-200 text-slate-500 font-black text-sm hover:bg-slate-50 transition-all">취소</button><button onClick={handleReport} disabled={!reportType || reportStatus === 'sending'} className="flex-1 py-3 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-black text-sm transition-all disabled:opacity-50 flex items-center justify-center gap-2">{reportStatus === 'sending' ? <Loader2 className="w-4 h-4 animate-spin" /> : <Flag className="w-4 h-4" />}{reportStatus === 'sending' ? '신고 중...' : '신고하기'}</button></div>
+                  <div className="flex gap-3 pt-1">
+                    <button onClick={() => setReportOpen(false)} className="flex-1 py-3 rounded-xl border-2 border-slate-200 text-slate-500 font-black text-sm hover:bg-slate-50 transition-all">취소</button>
+                    <button onClick={handleReport} disabled={!reportType || reportStatus === 'sending'} className="flex-1 py-3 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-black text-sm transition-all disabled:opacity-50 flex items-center justify-center gap-2">
+                      {reportStatus === 'sending' ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          {screenshotStatus === 'capturing' ? '화면 캡처 중...' : '신고 중...'}
+                        </>
+                      ) : (
+                        <>
+                          <Flag className="w-4 h-4" />
+                          신고하기
+                        </>
+                      )}
+                    </button>
+                  </div>
                 </div>
               )}
             </motion.div>
