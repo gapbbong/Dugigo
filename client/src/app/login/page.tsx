@@ -58,7 +58,7 @@ export default function LoginPage() {
       }
 
       setStatus({ type: 'success', message: '환영합니다! 곧 이동합니다.' });
-      setTimeout(() => router.push('/select-subject'), 700);
+      setTimeout(() => router.push('/select-subject'), 300);
     } catch (err: any) {
       console.error('[LOGIN_CATCH_ERROR]', err);
       let errorMessage = err.message || '로그인에 실패했습니다.';

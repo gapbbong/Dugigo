@@ -153,22 +153,34 @@ export default function SelectSubjectPage() {
       // 1. 과목 목록 API 병렬 요청 시작 (미리 던져두기)
       const subjectsPromise = fetch('/api/subjects').then(res => res.json()).catch(() => ({ subjects: [] }));
 
-      const { data: { user: currentUser }, error } = await supabase.auth.getUser();
-      if (!currentUser || error) {
-        await supabase.auth.signOut(); // 파편화된 옛날 로컬 세션 완전 파기
-        router.push('/login');
-        return;
+      // 2. 세션 즉시 확인 (로컬 스토리지 캐시 활용으로 0ms에 가깝게 완료)
+      const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+      let currentUser = session?.user;
+
+      if (!currentUser || sessionError) {
+        // 세션이 없으면 원격 getUser()로 검증 시도 (네트워크 요청)
+        const { data: { user }, error: userError } = await supabase.auth.getUser();
+        if (!user || userError) {
+          await supabase.auth.signOut(); // 파편화된 옛날 로컬 세션 완전 파기
+          router.push('/login');
+          return;
+        }
+        currentUser = user;
       }
 
-      // 2. 프로필 병렬 요청 시작
+      // 3. 프로필 정보 조회와 과목 목록 파싱을 병렬(Promise.all)로 처리하여 대기
       const profilePromise = supabase.from('dukigo_profiles').select('*').eq('id', currentUser.id).single();
-      
-      const { data: profile } = await profilePromise;
+
+      const [profileResult, subjectsData] = await Promise.all([
+        profilePromise,
+        subjectsPromise
+      ]);
+
+      const profile = profileResult.data;
       setUser({ ...currentUser, ...profile });
 
-      // 3. UI 렌더링 블로킹 해제를 위해 과목 목록 렌더링 준비
-      const data = await subjectsPromise;
-      let fetchedSubjects = data.subjects || [];
+      // UI 렌더링 블로킹 해제를 위해 과목 목록 렌더링 준비
+      let fetchedSubjects = subjectsData.subjects || [];
       fetchedSubjects.sort((a: string, b: string) => {
         const getPriority = (name: string) => {
           if (name.includes('한국사')) return 100;
@@ -241,6 +253,16 @@ export default function SelectSubjectPage() {
           setShowNameModal(true);
         }
       }
+
+      // 6. 백그라운드 보안 검증 (메인 렌더링을 막지 않고 세션 만료 여부만 비동기로 확인)
+      supabase.auth.getUser().then(({ data: { user: verifiedUser }, error }) => {
+        if (!verifiedUser || error) {
+          console.warn('[SESSION_EXPIRED] Redirecting to login...');
+          supabase.auth.signOut().then(() => {
+            router.push('/login');
+          });
+        }
+      });
     }
     init();
   }, [router]);
