@@ -384,7 +384,7 @@ export default function SelectSubjectPage() {
         </div>
       </header>
 
-      <main className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 pt-6 md:pt-16">
+      <main className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 pt-3 md:pt-8">
         <div className="mb-10 md:mb-14 text-center md:text-left">
           <h1 className="text-3xl md:text-6xl font-black text-slate-900 dark:text-slate-100 italic mb-4 leading-tight tracking-tighter">"{randomQuote}"</h1>
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-2">
