@@ -436,6 +436,25 @@ export default function SelectUnitPage() {
           </>
         )}
       </AnimatePresence>
+
+      {/* 카카오톡 챗봇 플로팅 버튼 */}
+      <motion.a
+        href={process.env.NEXT_PUBLIC_KAKAO_CHATBOT_URL || 'https://pf.kakao.com/_xxxx'}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed right-6 bottom-6 md:right-8 md:bottom-8 z-[90] flex items-center gap-2 group"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <span className="hidden md:block bg-white/90 backdrop-blur-sm text-slate-800 text-xs font-black px-3.5 py-2 rounded-xl shadow-md border border-slate-200/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          실시간 카톡 문의
+        </span>
+        <div className="w-14 h-14 md:w-16 md:h-16 bg-[#FEE500] hover:bg-[#FCE000] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all border border-[#FEE500]/50 shrink-0">
+          <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-[#191919]">
+            <path d="M12 3c-4.97 0-9 3.185-9 7.115 0 2.51 1.64 4.715 4.14 5.925l-.83 3.035c-.09.34.12.67.46.67.12 0 .24-.04.34-.12l3.54-2.355c.44.08.89.12 1.35.12 4.97 0 9-3.185 9-7.115S16.97 3 12 3z" />
+          </svg>
+        </div>
+      </motion.a>
     </div>
   );
 }
