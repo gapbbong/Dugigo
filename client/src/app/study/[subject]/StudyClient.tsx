@@ -1611,7 +1611,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         href={process.env.NEXT_PUBLIC_KAKAO_CHATBOT_URL || 'https://pf.kakao.com/_xxxx'}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed right-6 bottom-32 md:right-8 md:bottom-8 z-[90] flex items-center gap-2 group"
+        className="fixed right-6 bottom-6 md:right-8 md:bottom-8 z-[90] flex items-center gap-2 group"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
