@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { STATIC_SUBJECT_FILES } from '@/lib/staticSubjects';
+
 export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function GET(req: NextRequest) {
   const sanitize = (str: string | null) => {
@@ -44,38 +47,58 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    if (!fs.existsSync(dataDir)) {
+    const sanitizedSubject = targetSubject.replace(/\s/g, '');
+    const loadedFileData: { file: string; questions: any[] }[] = [];
+
+    if (fs.existsSync(dataDir)) {
+      const allFiles = fs.readdirSync(dataDir);
+      const hasStandardFiles = allFiles.some(f => /^0\d+\./.test(f) && f.endsWith('.json'));
+      const filesToLoad = allFiles
+        .filter(f => {
+          if (!f.endsWith('.json')) return false;
+          if (f.toLowerCase().includes('master')) return false;
+          if (f.includes('_CLEAN') || f.includes('.bak') || f.includes('_BACKUP')) return false;
+          if (hasStandardFiles && /^99\./.test(f)) return false;
+          return true;
+        })
+        .sort((a, b) => {
+          const isAStandard = /^\d+\./.test(a);
+          const isBStandard = /^\d+\./.test(b);
+          if (isAStandard && !isBStandard) return -1;
+          if (!isAStandard && isBStandard) return 1;
+          return 0;
+        });
+
+      filesToLoad.forEach(file => {
+        try {
+          const fileContent = fs.readFileSync(path.join(dataDir, file), 'utf-8');
+          const data = JSON.parse(fileContent);
+          const questions = Array.isArray(data) ? data : (data.questions || []);
+          loadedFileData.push({ file, questions });
+        } catch (e) {
+          console.error(`Error reading ${file}:`, e);
+        }
+      });
+    }
+
+    // Fallback for Vercel Serverless environment if fs fails or returns 0 items
+    if (loadedFileData.length === 0) {
+      const staticFiles = STATIC_SUBJECT_FILES[subject] || STATIC_SUBJECT_FILES[targetSubject] || STATIC_SUBJECT_FILES[sanitizedSubject];
+      if (staticFiles) {
+        staticFiles.forEach(sf => {
+          loadedFileData.push({ file: sf.fileName, questions: sf.data });
+        });
+      }
+    }
+
+    if (loadedFileData.length === 0) {
       return NextResponse.json({ units: [], exams: [] });
     }
 
-    const sanitizedSubject = targetSubject.replace(/\s/g, '');
-
-    const allFiles = fs.readdirSync(dataDir);
-    const masterFile = allFiles.find(f => f.toLowerCase().includes('master') && f.endsWith('.json'));
-    const hasMaster = !!masterFile;
-    
-    // 모든 JSON 파일 읽기 (단원 파일 우선순위 적용을 위해 정렬)
-    const hasStandardFiles = allFiles.some(f => /^0\d+\./.test(f) && f.endsWith('.json'));
-    const filesToLoad = allFiles
-          .filter(f => {
-            if (!f.endsWith('.json')) return false;
-            if (f.toLowerCase().includes('master')) return false;
-            if (f.includes('_CLEAN') || f.includes('.bak') || f.includes('_BACKUP')) return false;
-            // 표준 단원 파일(01~)이 있으면 99. 기타 등 잡동사니 파일 제외 (ID 충돌 방지)
-            if (hasStandardFiles && /^99\./.test(f)) return false;
-            return true;
-          })
-          .sort((a, b) => {
-            const isAStandard = /^\d+\./.test(a);
-            const isBStandard = /^\d+\./.test(b);
-            if (isAStandard && !isBStandard) return -1;
-            if (!isAStandard && isBStandard) return 1;
-            return 0;
-          });
-
     const unitMap = new Map<string, number>();
-    const questionMap = new Map<string, any>(); // 중복 체크용 ID 맵
-    const freqCountMap = new Map<string, number>(); // 텍스트 기반 빈도 측정용
+    const questionMap = new Map<string, any>();
+    const freqCountMap = new Map<string, number>();
+    const examsMap = new Map<string, number>();
 
     const normalize = (text: string) => {
       if (!text) return "";
@@ -186,7 +209,6 @@ export async function GET(req: NextRequest) {
         if (/저압전기설비|고압전기설비|보안거리|가공전선|옥내배선|이격거리/.test(text)) return "18. 저압/고압/특고압 전기설비(KEC)";
         if (/전기철도|분산형|신재생|전기저장장치|태양광/.test(text)) return "19. 전기철도 및 분산형 전원(KEC)";
         
-        // 최후의 수단: q.subject가 있다면 그것을 반환 (이미 분류된 파일에서 읽을 때 유리)
         if (q.subject) {
             if (q.subject.includes("응용")) return "01. 조명 및 전열";
             if (q.subject.includes("전력")) return "05. 송전특성 및 선로정수";
@@ -200,107 +222,79 @@ export async function GET(req: NextRequest) {
       return "기본 단원";
     };
 
-    const examsMap = new Map<string, number>();
+    loadedFileData.forEach(({ file, questions }) => {
+      const fileNameUnit = file.replace(/\.json$/, '').trim();
+      const isStandardUnitFile = /^\d+\./.test(fileNameUnit) || fileNameUnit.includes("족집게");
 
-    filesToLoad.forEach(file => {
-      try {
-        const fileContent = fs.readFileSync(path.join(dataDir, file), 'utf-8');
-        const data = JSON.parse(fileContent);
-        const questions = Array.isArray(data) ? data : (data.questions || []);
+      questions.forEach((q: any) => {
+        const text = (q.question || '').trim();
+        const isPlaceholder = text === '' || 
+                             text.includes('이미지에 지문이 없습니다') || 
+                             text.includes('이미지에 문제 본문 없음') ||
+                             text.includes('내용을 확인할 수 없습니다');
+        const hasImage = !!(q.question_img || q.image);
+        if (isPlaceholder && !hasImage) return;
+
+        const normText = normalize(q.question || "");
+        freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
+
+        const baseId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
+        const qId = isStandardUnitFile ? `${fileNameUnit}__${baseId}` : baseId;
+        const qIdFreqMap = (req as any).qIdFreqMap || new Map<string, number>();
+        qIdFreqMap.set(qId, (qIdFreqMap.get(qId) || 0) + 1);
+        (req as any).qIdFreqMap = qIdFreqMap;
         
-        const fileNameUnit = file.replace(/\.json$/, '').trim();
-        const isStandardUnitFile = /^\d+\./.test(fileNameUnit) || fileNameUnit.includes("족집게");
+        if (questionMap.has(qId)) {
+          const existingQ = questionMap.get(qId);
+          if (q.frequency) {
+            existingQ.frequency = Math.max(Number(existingQ.frequency) || 0, Number(q.frequency));
+          }
+          return;
+        }
 
-        questions.forEach((q: any) => {
-          const text = (q.question || '').trim();
-          const isPlaceholder = text === '' || 
-                               text.includes('이미지에 지문이 없습니다') || 
-                               text.includes('이미지에 문제 본문 없음') ||
-                               text.includes('내용을 확인할 수 없습니다');
-          const hasImage = !!(q.question_img || q.image);
-          if (isPlaceholder && !hasImage) return;
+        const mainUnit = q.subject || "";
+        const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
+        const subUnit = isStandardUnitFile ? fileNameUnit : ((sanitizedSubject === '전기기사' || !mainUnit || baseSubUnit.includes(mainUnit)) ? baseSubUnit : `[${mainUnit}] ${baseSubUnit}`);
 
-          // 빈도 측정을 위한 텍스트 및 ID 정규화 (중복 체크 전에 수행하여 전체 파일 내 빈도 집계)
-          const normText = normalize(q.question || "");
-          freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
+        unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
+        questionMap.set(qId, { ...q, subUnit: subUnit });
 
-          // 고유 ID 생성 로직 (ID 기반 빈도 측정도 병행)
-          // 표준 단원 파일(01.xxx, 02.xxx)에서는 파일명을 ID에 포함 → 과목별 같은 번호 충돌 방지
-          const baseId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
-          const qId = isStandardUnitFile ? `${fileNameUnit}__${baseId}` : baseId;
-          const qIdFreqMap = (req as any).qIdFreqMap || new Map<string, number>();
-          qIdFreqMap.set(qId, (qIdFreqMap.get(qId) || 0) + 1);
-          (req as any).qIdFreqMap = qIdFreqMap;
-          
-          if (questionMap.has(qId)) {
-            // 이미 등록된 문제면 빈도 정보만 업데이트
-            const existingQ = questionMap.get(qId);
-            if (q.frequency) {
-              existingQ.frequency = Math.max(Number(existingQ.frequency) || 0, Number(q.frequency));
-            }
-            return;
+        let y = q.year;
+        let r = q.round;
+        if (!r) r = q.id?.split('_')[1];
+        if (r) {
+          let roundStr = String(r).trim();
+          if (/^\d+$/.test(roundStr)) {
+            roundStr = `${roundStr}회`;
           }
 
-          const mainUnit = q.subject || "";
-          const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
-          const subUnit = isStandardUnitFile ? fileNameUnit : ((sanitizedSubject === '전기기사' || !mainUnit || baseSubUnit.includes(mainUnit)) ? baseSubUnit : `[${mainUnit}] ${baseSubUnit}`);
-
-          unitMap.set(subUnit, (unitMap.get(subUnit) || 0) + 1);
-          questionMap.set(qId, { ...q, subUnit: subUnit });
-
-          // 연도별 기출 집계 추가
-          let y = q.year || data.year;
-          let r = q.round || data.round;
-          
-          if (subject === '컴퓨터활용능력 2급' && q.round_info) {
-            const yearMatch = q.round_info.match(/(\d{4})년/);
-            const roundMatch = q.round_info.match(/(\d+)회/);
-            const sangsiMatch = q.round_info.match(/상시\s*(\d+)/);
-            if (yearMatch) y = yearMatch[1];
-            if (roundMatch) r = roundMatch[1];
-            else if (sangsiMatch) r = `상시${sangsiMatch[1]}`;
+          let examYear = String(y || '').replace(/[^0-9]/g, '').slice(0, 4);
+          if (!examYear) {
+            const yearInRound = roundStr.match(/(19|20)\d{2}/);
+            if (yearInRound) examYear = yearInRound[0];
           }
-          if (!r) r = q.id?.split('_')[1];
-          if (r) {
-            let roundStr = String(r).trim();
-            if (/^\d+$/.test(roundStr)) {
-              roundStr = `${roundStr}회`;
-            }
 
-            // roundStr에서 연도 추출 시도 (전기기사처럼 round에 연도가 포함된 경우)
-            let examYear = String(y || '').replace(/[^0-9]/g, '').slice(0, 4);
-            if (!examYear) {
-              const yearInRound = roundStr.match(/(19|20)\d{2}/);
-              if (yearInRound) examYear = yearInRound[0];
-            }
+          if (!examYear) return;
+          const hasRound = /(\d+\s*회|상시)/.test(roundStr);
+          if (!hasRound) return;
 
-            // 화이트리스트: 연도(4자리)와 회차(회|상시) 모두 있어야만 유효
-            if (!examYear) return; // 연도 불명 → skip
-            const hasRound = /(\d+\s*회|상시)/.test(roundStr);
-            if (!hasRound) return; // 회차 불명 → skip
+          roundStr = roundStr
+            .replace(/(19|20)\d{2}년?\s*/g, '')
+            .replace(/\s*(기출문제|전기기사|과년도|출제문제|기출|기능사|기사)\S*/g, '')
+            .replace(/\s*\(.*?\)/g, '')
+            .trim();
 
-            // roundStr 정리: 연도·과목명·불필요 텍스트 제거 후 회차만 남기기
-            roundStr = roundStr
-              .replace(/(19|20)\d{2}년?\s*/g, '') // "2021년 " 제거
-              .replace(/\s*(기출문제|전기기사|과년도|출제문제|기출|기능사|기사)\S*/g, '') // 과목명 제거
-              .replace(/\s*\(.*?\)/g, '') // 괄호 내용 제거
-              .trim();
-
-            if (/^\d+$/.test(roundStr)) {
-              roundStr = `${roundStr}회`;
-            }
-
-            // 정리 후에도 회차 정보 없으면 skip
-            if (!/(회|상시)/.test(roundStr)) return;
-
-            const suffix = (roundStr.includes('회') || roundStr.includes('상시')) ? '' : '회';
-            const examKey = `${examYear}년 ${roundStr}${suffix}`;
-            examsMap.set(examKey, (examsMap.get(examKey) || 0) + 1);
+          if (/^\d+$/.test(roundStr)) {
+            roundStr = `${roundStr}회`;
           }
-        });
-      } catch (e) {
-        console.error(`Error reading ${file}:`, e);
-      }
+
+          if (!/(회|상시)/.test(roundStr)) return;
+
+          const suffix = (roundStr.includes('회') || roundStr.includes('상시')) ? '' : '회';
+          const examKey = `${examYear}년 ${roundStr}${suffix}`;
+          examsMap.set(examKey, (examsMap.get(examKey) || 0) + 1);
+        }
+      });
     });
 
     const sortedExams = Array.from(examsMap.entries())
@@ -310,7 +304,6 @@ export async function GET(req: NextRequest) {
         isAI: name.includes('예상문제')
       }))
       .sort((a, b) => {
-        // AI 예상 문제는 항상 최상단에 오거나 정렬에서 우선권 부여 가능
         if (a.isAI && !b.isAI) return -1;
         if (!a.isAI && b.isAI) return 1;
         const numA = parseInt(a.name.replace(/\D/g, '')) || 0;
@@ -356,7 +349,6 @@ export async function GET(req: NextRequest) {
       return a[0].localeCompare(b[0]);
     });
 
-    // 빈도 정보 주입 (기본 데이터에 있는 빈도와 계산된 빈도 중 큰 것 선택)
     Array.from(questionMap.values()).forEach((q: any) => {
       const normText = normalize(q.question || "");
       const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
@@ -364,9 +356,7 @@ export async function GET(req: NextRequest) {
       q.frequency = Math.max(Number(q.frequency) || 0, calculatedFreq);
     });
 
-    // 1. [🔥 자주 나왔던 문항] 섹션 구성 (초정밀 중복 제거 - 특수문자/공백/대소문자 무시)
     const uniqueFrequentMap = new Map<string, any>();
-    
 
     Array.from(questionMap.values()).forEach((q: any) => {
       if ((q.frequency || 0) >= 2) {
@@ -393,15 +383,14 @@ export async function GET(req: NextRequest) {
       isAI?: boolean; 
     }[] = [];
 
-    // 정보처리기능사는 빈출 섹션 숨김 (사용자 요청)
     if (frequentQuestions.length > 0 && sanitizedSubject !== '정보처리기능사') {
       const FREQ_PAGE_SIZE = 30;
-      const MAX_FREQ_PARTS = 12; // 사용자 요청: 더 많은 분량의 빈출 문항 노출
+      const MAX_FREQ_PARTS = 12;
       const freqParts = Math.min(MAX_FREQ_PARTS, Math.floor(frequentQuestions.length / FREQ_PAGE_SIZE) + (frequentQuestions.length % FREQ_PAGE_SIZE > 0 ? 1 : 0));
       
       for (let i = 0; i < freqParts; i++) {
         const currentCount = Math.min(FREQ_PAGE_SIZE, frequentQuestions.length - (i * FREQ_PAGE_SIZE));
-        if (currentCount <= 0) continue; // 빈 페이지는 생성 안함
+        if (currentCount <= 0) continue;
 
         finalUnits.push({
           name: `🔥 자주 나왔던 문항 - 공략 ${String(i + 1).padStart(2, '0')}`,
@@ -414,7 +403,6 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    // 단원 쪼개기 로직 (한국사는 쪼개지 않고 전체 노출)
     const MAX_PER_UNIT = (subject === '한국사검정시험' || subject === '한국사능력검정시험') ? 9999 : 150;
     
     prioritizedUnits.forEach(([name, count]) => {

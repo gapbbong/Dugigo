@@ -2,13 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import fsPromises from "fs/promises";
 import path from "path";
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
+import { STATIC_SUBJECT_FILES } from '@/lib/staticSubjects';
 
 let supabase: any = null;
 export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function GET(req: NextRequest) {
   const normalize = (text: string) => {
@@ -145,7 +143,6 @@ export async function GET(req: NextRequest) {
       const roundFilter = sanitize(searchParams.get("round"));
       const unitFilter = sanitize(searchParams.get("unit"));
 
-      // 1. 원본 이름으로 시도
       let targetSubject = subject;
       let baseDataDir = path.resolve(process.cwd(), "src", "data");
       if (!fs.existsSync(baseDataDir)) {
@@ -153,13 +150,11 @@ export async function GET(req: NextRequest) {
       }
       let dataDir = path.resolve(baseDataDir, targetSubject);
 
-      // 2. 없으면 공백 제거 버전으로 시도
       if (!fs.existsSync(dataDir)) {
         targetSubject = subject.replace(/\s/g, '');
         dataDir = path.resolve(baseDataDir, targetSubject);
       }
 
-      // 3. 그래도 없으면 전체 폴더를 돌며 공백 무시하고 매칭되는 것 찾기
       if (!fs.existsSync(dataDir)) {
         if (fs.existsSync(baseDataDir)) {
           const allFolders = fs.readdirSync(baseDataDir).filter(f => fs.statSync(path.join(baseDataDir, f)).isDirectory());
@@ -171,31 +166,53 @@ export async function GET(req: NextRequest) {
         }
       }
 
-      if (!fs.existsSync(dataDir)) {
-        return NextResponse.json({ error: 'Subject folder not found' }, { status: 404 });
+      const sanitizedSubject = targetSubject.replace(/\s/g, '');
+      const loadedFileData: { file: string; questions: any[] }[] = [];
+
+      if (fs.existsSync(dataDir)) {
+        const allDataFiles = fs.readdirSync(dataDir);
+        const hasStandardFiles = allDataFiles.some(f => /^0\d+\./.test(f) && f.endsWith('.json'));
+        const filesToLoad = allDataFiles
+          .filter(file => {
+            if (!file.endsWith('.json')) return false;
+            if (file.toLowerCase().includes('master')) return false;
+            if (file.includes('_CLEAN') || file.includes('.bak') || file.includes('_BACKUP')) return false;
+            if (hasStandardFiles && /^99\./.test(file)) return false;
+            return true;
+          })
+          .sort((a, b) => {
+            const isAStandard = /^\d+\./.test(a);
+            const isBStandard = /^\d+\./.test(b);
+            if (isAStandard && !isBStandard) return -1;
+            if (!isAStandard && isBStandard) return 1;
+            return 0;
+          });
+
+        filesToLoad.forEach(file => {
+          try {
+            const filePath = path.join(dataDir, file);
+            const fileContent = fs.readFileSync(filePath, 'utf-8');
+            const jsonData = JSON.parse(fileContent);
+            const questions = Array.isArray(jsonData) ? jsonData : (jsonData.questions || []);
+            loadedFileData.push({ file, questions });
+          } catch (e) {
+            console.error(`Error reading ${file}:`, e);
+          }
+        });
       }
 
-      const sanitizedSubject = targetSubject.replace(/\s/g, '');
+      if (loadedFileData.length === 0) {
+        const staticFiles = STATIC_SUBJECT_FILES[subject] || STATIC_SUBJECT_FILES[targetSubject] || STATIC_SUBJECT_FILES[sanitizedSubject];
+        if (staticFiles) {
+          staticFiles.forEach(sf => {
+            loadedFileData.push({ file: sf.fileName, questions: sf.data });
+          });
+        }
+      }
 
-      // 모든 JSON 파일 읽기 (단원 파일 우선순위 적용을 위해 정렬)
-      const allDataFiles = fs.readdirSync(dataDir);
-      const hasStandardFiles = allDataFiles.some(f => /^0\d+\./.test(f) && f.endsWith('.json'));
-      const filesToLoad = allDataFiles
-        .filter(file => {
-          if (!file.endsWith('.json')) return false;
-          if (file.toLowerCase().includes('master')) return false;
-          if (file.includes('_CLEAN') || file.includes('.bak') || file.includes('_BACKUP')) return false;
-          // 표준 단원 파일(01~)이 있으면 99. 기타 등 잡동사니 파일 제외 (ID 충돌 → 빈 세트 방지)
-          if (hasStandardFiles && /^99\./.test(file)) return false;
-          return true;
-        })
-        .sort((a, b) => {
-          const isAStandard = /^\d+\./.test(a);
-          const isBStandard = /^\d+\./.test(b);
-          if (isAStandard && !isBStandard) return -1;
-          if (!isAStandard && isBStandard) return 1;
-          return 0;
-        });
+      if (loadedFileData.length === 0) {
+        return NextResponse.json({ error: 'Subject folder not found' }, { status: 404 });
+      }
 
       const classifyQuestion = (sub: string, q: any): string => {
         const text = ((q.question || '') + ' ' + (q.explanation || '')).toLowerCase();
@@ -223,29 +240,29 @@ export async function GET(req: NextRequest) {
           return "[이론] 전기이론";
         }
 
-      if (s === '컴퓨터활용능력2급') {
-        const isSubject1 = q.subject && q.subject.includes("컴퓨터 일반");
-        
-        if (isSubject1) {
-          if (/윈도우|windows|바로 가기|제어판|탐색기|작업 표시줄|부팅|레지스트리|시스템 도구|스풀링|인터럽트|포맷/.test(text)) return "[1과목] Windows OS 환경 설정 및 시스템 관리";
-          if (/폴더|파일|휴지통|속성|검색|옵션|라이브러리/.test(text)) return "[1과목] 파일 관리 시스템 및 자원 최적화";
-          if (/cpu|중앙처리장치|메모리|ram|rom|보조기억|ssd|hdd|usb|바이오스|bios|메인보드|입출력|칩셋|레지스터/.test(text)) return "[1과목] 컴퓨터 하드웨어 아키텍처 분석";
-          if (/비트|바이트|워드|진법|자료|코드|ascii|unicode|유니코드|컴파일러|어셈블러|언어 번역/.test(text)) return "[1과목] 데이터 표현 기술 및 소프트웨어 공학 기초";
-          if (/멀티미디어|그래픽|이미지|동영상|사운드|오디오|코덱|비선형|bmp|jpg|png|gif|avi|mp4|스트리밍/.test(text)) return "[1과목] 디지털 미디어 활용 및 멀티미디어 기술";
-          if (/인터넷|url|ip|tcp|프로토콜|osi|브라우저|도메인|인트라넷|ftp|텔넷|공유기|dns/.test(text)) return "[1과목] 정보 통신 인프라 및 인터넷 네트워크 인프라";
-          if (/보안|바이러스|침해|암호|해킹|방화벽|변조|위조|iot|클라우드|ai|모바일|빅데이터/.test(text)) return "[1과목] 정보 보안 시스템 및 최신 ICT 트렌드";
-          return "[1과목] 컴퓨터 일반 기타 심화 분석";
-        } else {
-          if (/시트|워크시트|통합 문서|보호|숨기기|탭 색|이동|복사|이름 바꾸기/.test(text)) return "[2과목] 워크시트 설정 및 시트 관리 프로세스";
-          if (/셀 서식|사용자 정의|데이터 입력|자동 채우기|선택하여 붙여넣기|조건부 서식|필터|정렬|유효성|텍스트 나누기|중복 데이터/.test(text)) return "[2과목] 셀 서식 및 데이터 편집/유효성 제어";
-          if (/함수|수식|연산자|계산|sum|average|count|max|min|if|rank|today|now|round|abs/.test(text)) return "[2과목] 수식 활용 및 수학/통계 함수 정밀 분석";
-          if (/vlookup|hlookup|match|index|choose|dsum|daverage|left|right|mid|value|text/.test(text)) return "[2과목] 찾기/참조 및 데이터베이스 함수 심화 분석";
-          if (/부분합|피벗|시나리오|목표값|통합|데이터 표|윤곽/.test(text)) return "[2과목] 데이터 분석 모델링 및 분석 도구 활용";
-          if (/차트|그래프|구성 요소|추세선|범례|데이터 레이블/.test(text)) return "[2과목] 데이터 시각화 및 차트 구성 요소 분석";
-          if (/페이지 설정|인쇄|머리글|바닥글|매크로|vba|모듈|프로시저|사용자 정의 폼/.test(text)) return "[2과목] 매크로 자동화 및 인쇄 출력 프로세스 관리";
-          return "[2과목] 스프레드시트 일반 기타 심화 분석";
+        if (s === '컴퓨터활용능력2급') {
+          const isSubject1 = q.subject && q.subject.includes("컴퓨터 일반");
+          
+          if (isSubject1) {
+            if (/윈도우|windows|바로 가기|제어판|탐색기|작업 표시줄|부팅|레지스트리|시스템 도구|스풀링|인터럽트|포맷/.test(text)) return "[1과목] Windows OS 환경 설정 및 시스템 관리";
+            if (/폴더|파일|휴지통|속성|검색|옵션|라이브러리/.test(text)) return "[1과목] 파일 관리 시스템 및 자원 최적화";
+            if (/cpu|중앙처리장치|메모리|ram|rom|보조기억|ssd|hdd|usb|바이오스|bios|메인보드|입출력|칩셋|레지스터/.test(text)) return "[1과목] 컴퓨터 하드웨어 아키텍처 분석";
+            if (/비트|바이트|워드|진법|자료|코드|ascii|unicode|유니코드|컴파일러|어셈블러|언어 번역/.test(text)) return "[1과목] 데이터 표현 기술 및 소프트웨어 공학 기초";
+            if (/멀티미디어|그래픽|이미지|동영상|사운드|오디오|코덱|비선형|bmp|jpg|png|gif|avi|mp4|스트리밍/.test(text)) return "[1과목] 디지털 미디어 활용 및 멀티미디어 기술";
+            if (/인터넷|url|ip|tcp|프로토콜|osi|브라우저|도메인|인트라넷|ftp|텔넷|공유기|dns/.test(text)) return "[1과목] 정보 통신 인프라 및 인터넷 네트워크 인프라";
+            if (/보안|바이러스|침해|암호|해킹|방화벽|변조|위조|iot|클라우드|ai|모바일|빅데이터/.test(text)) return "[1과목] 정보 보안 시스템 및 최신 ICT 트렌드";
+            return "[1과목] 컴퓨터 일반 기타 심화 분석";
+          } else {
+            if (/시트|워크시트|통합 문서|보호|숨기기|탭 색|이동|복사|이름 바꾸기/.test(text)) return "[2과목] 워크시트 설정 및 시트 관리 프로세스";
+            if (/셀 서식|사용자 정의|데이터 입력|자동 채우기|선택하여 붙여넣기|조건부 서식|필터|정렬|유효성|텍스트 나누기|중복 데이터/.test(text)) return "[2과목] 셀 서식 및 데이터 편집/유효성 제어";
+            if (/함수|수식|연산자|계산|sum|average|count|max|min|if|rank|today|now|round|abs/.test(text)) return "[2과목] 수식 활용 및 수학/통계 함수 정밀 분석";
+            if (/vlookup|hlookup|match|index|choose|dsum|daverage|left|right|mid|value|text/.test(text)) return "[2과목] 찾기/참조 및 데이터베이스 함수 심화 분석";
+            if (/부분합|피벗|시나리오|목표값|통합|데이터 표|윤곽/.test(text)) return "[2과목] 데이터 분석 모델링 및 분석 도구 활용";
+            if (/차트|그래프|구성 요소|추세선|범례|데이터 레이블/.test(text)) return "[2과목] 데이터 시각화 및 차트 구성 요소 분석";
+            if (/페이지 설정|인쇄|머리글|바닥글|매크로|vba|모듈|프로시저|사용자 정의 폼/.test(text)) return "[2과목] 매크로 자동화 및 인쇄 출력 프로세스 관리";
+            return "[2과목] 스프레드시트 일반 기타 심화 분석";
+          }
         }
-      }
 
         if (s === '한국사검정시험' || s === '한국사능력검정시험') {
           if (q.sub_unit) return q.sub_unit;
@@ -258,10 +275,11 @@ export async function GET(req: NextRequest) {
           if (/정부 수립|6·25|4·19|5·18|6월 민주 항쟁|민주화|통일/.test(text)) return "현대 사회의 발전";
           return "기타 및 통합";
         }
+
         if (s === '시각디자인산업기사') {
           if (q.subject) return q.subject;
           if (/색채|색상|명도|채도|먼셀|오스트발트|배색|조화|대비|색명|현색계|계시/.test(text)) return "색채학";
-          if (/인쇄|사진|필름|현상|제판|제책|잉크|카메라|노출|광선|렌즈|망점|오프셋|가열|잠상/.test(text)) return "인쇄 및 사진기법";
+          if (/인쇄|사진|필름|현상|제판|제책|잉크|카메라|노출|광선|렌즈|망점|오프셋|감광|잠상/.test(text)) return "인쇄 및 사진기법";
           if (/디자인|기호|광고|마케팅|바우하우스|조형|공간|매니지먼트|아이덴티티|퍼스|게슈탈트/.test(text)) return "시각디자인론";
           return "시각디자인 일반";
         }
@@ -296,6 +314,15 @@ export async function GET(req: NextRequest) {
           if (/KEC|전기설비기술기준|접지시스템|등전위|피뢰시스템/.test(text)) return "17. 공통사항 및 접지(KEC)";
           if (/저압전기설비|고압전기설비|보안거리|가공전선|옥내배선|이격거리/.test(text)) return "18. 저압/고압/특고압 전기설비(KEC)";
           if (/전기철도|분산형|신재생|전기저장장치|태양광/.test(text)) return "19. 전기철도 및 분산형 전원(KEC)";
+          
+          if (q.subject) {
+              if (q.subject.includes("응용")) return "01. 조명 및 전열";
+              if (q.subject.includes("전력")) return "05. 송전특성 및 선로정수";
+              if (q.subject.includes("기기")) return "09. 직류기";
+              if (q.subject.includes("회로")) return "13. 직류회로 및 교류회로 기초";
+              if (q.subject.includes("설비")) return "17. 공통사항 및 접지(KEC)";
+          }
+          return "기본 단원";
         }
 
         return "기본 단원";
@@ -305,198 +332,75 @@ export async function GET(req: NextRequest) {
       const freqCountMap = new Map<string, number>();
       const qIdFreqMap = new Map<string, number>();
 
-      filesToLoad.forEach(file => {
-        try {
-          const filePath = path.join(dataDir, file);
-          const fileContent = fs.readFileSync(filePath, 'utf-8');
-          const jsonData = JSON.parse(fileContent);
-          
-          const fileNameUnit = file.replace(/\.json$/, '').trim();
-          const isStandardUnitFile = /^\d+\./.test(fileNameUnit) || fileNameUnit.includes("족집게");
+      loadedFileData.forEach(({ file, questions }) => {
+        const fileNameUnit = file.replace(/\.json$/, '').trim();
+        const isStandardUnitFile = /^\d+\./.test(fileNameUnit) || fileNameUnit.includes("족집게");
 
-          let fileQuestions: any[] = [];
-          if (Array.isArray(jsonData)) {
-            fileQuestions = jsonData;
-          } else if (jsonData.questions && Array.isArray(jsonData.questions)) {
-            fileQuestions = jsonData.questions;
+        questions.forEach((q: any) => {
+          const text = (q.question || '').trim();
+          const isPlaceholder = text === '' || 
+                               text.includes('이미지에 지문이 없습니다') || 
+                               text.includes('이미지에 문제 본문 없음') ||
+                               text.includes('내용을 확인할 수 없습니다');
+          const hasImage = !!(q.question_img || q.image);
+          if (isPlaceholder && !hasImage) return;
+
+          const normText = normalize(q.question || "");
+          freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
+
+          const baseId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
+          const qId = isStandardUnitFile ? `${fileNameUnit}__${baseId}` : baseId;
+          qIdFreqMap.set(qId, (qIdFreqMap.get(qId) || 0) + 1);
+          
+          if (questionMap.has(qId)) {
+            const existingQ = questionMap.get(qId);
+            if (q.frequency) {
+              existingQ.frequency = Math.max(Number(existingQ.frequency) || 0, Number(q.frequency));
+            }
+            if (!isStandardUnitFile) return;
+            if (fileNameUnit.includes('기타') && existingQ.sub_unit && !existingQ.sub_unit.includes('기타')) return;
           }
 
-          fileQuestions.forEach(q => {
-            const text = (q.question || '').trim();
-            const isPlaceholder = text === '' || 
-                                 text.includes('이미지에 지문이 없습니다') || 
-                                 text.includes('이미지에 문제 본문 없음') ||
-                                 text.includes('내용을 확인할 수 없습니다');
-            const hasImage = !!(q.question_img || q.image);
-            if (isPlaceholder && !hasImage) return;
+          const mainUnit = q.subject || "";
+          const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
+          const subUnit = isStandardUnitFile ? fileNameUnit : ((sanitizedSubject === '전기기사' || !mainUnit || baseSubUnit.includes(mainUnit)) ? baseSubUnit : `[${mainUnit}] ${baseSubUnit}`);
 
-            const normText = normalize(q.question || "");
-            freqCountMap.set(normText, (freqCountMap.get(normText) || 0) + 1);
-
-            // 고유 ID 생성 로직 최적화 (year, round, number 조합 우선)
-            // 표준 단원 파일(01.xxx, 02.xxx)에서는 파일명을 ID에 포함 → 과목별 같은 번호 충돌 방지
-            const baseId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
-            const qId = isStandardUnitFile ? `${fileNameUnit}__${baseId}` : baseId;
-            qIdFreqMap.set(qId, (qIdFreqMap.get(qId) || 0) + 1);
-            
-            // 이미 등록된 문제가 있으면 빈도 정보 업데이트 후 단원 파일이 아니면 패스
-            if (questionMap.has(qId)) {
-              const existingQ = questionMap.get(qId);
-              if (q.frequency) {
-                existingQ.frequency = Math.max(Number(existingQ.frequency) || 0, Number(q.frequency));
-              }
-              if (!isStandardUnitFile) return;
-              // '기타' 단원 파일이 기존의 유효한 단원 분류를 덮어쓰지 않도록 방지
-              if (fileNameUnit.includes('기타') && existingQ.sub_unit && !existingQ.sub_unit.includes('기타')) return;
-            }
-
-            const mainUnit = q.subject || "";
-            const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
-            const subUnit = isStandardUnitFile ? fileNameUnit : ((sanitizedSubject === '전기기사' || !mainUnit || baseSubUnit.includes(mainUnit)) ? baseSubUnit : `[${mainUnit}] ${baseSubUnit}`);
-            
-            questionMap.set(qId, {
-              ...q,
-              sub_unit: subUnit
-            });
-          });
-        } catch (e) {
-          console.error(`Error loading ${file}:`, e);
-        }
+          questionMap.set(qId, { ...q, sub_unit: subUnit });
+        });
       });
 
-      const allQuestions = Array.from(questionMap.values());
-      allQuestions.forEach((q: any) => {
-        const normText = normalize(q.question || "");
-        const qId = q.id || `${q.year || ''}_${q.round || ''}_${q.number}`;
-        const calculatedFreq = Math.max(freqCountMap.get(normText) || 1, qIdFreqMap.get(qId) || 1);
-        q.frequency = Math.max(Number(q.frequency) || 0, calculatedFreq);
-      });
-
-      const UNIT_ORDER: { [key: string]: number } = {
-        "선사시대 및 국가의 형성": 1,
-        "고대 사회 (삼국~남북국)": 2,
-        "중세 사회 (고려 시대)": 3,
-        "근세~근대 태동기 (조선 시대)": 4,
-        "근대 사회의 전개 (개항기)": 5,
-        "일제 강점기": 6,
-        "현대 사회의 발전": 7,
-        "기타 및 통합": 8,
-        "데이터베이스 활용": 10,
-        "애플리케이션 테스트 관리": 11,
-        "운영체제 및 네트워크 기초": 12,
-        "프로그래밍 언어 활용": 13,
-        "소프트웨어 개발 기초": 14,
-        "[이론] 전기이론": 20,
-        "[기기] 전기기기": 21,
-        "[설비] 전기설비": 22,
-        "전기이론": 30,
-        "기계일반": 31,
-        "승강기 개론": 32,
-        "승강기 점검 및 보수": 33,
-        "컴퓨터 일반": 40,
-        "스프레드시트 일반": 41
-      };
-
-      let sorted = allQuestions.sort((a, b) => {
-        const orderA = UNIT_ORDER[a.sub_unit] || 99;
-        const orderB = UNIT_ORDER[b.sub_unit] || 99;
-        
-        if (orderA !== orderB) return orderA - orderB;
-        
-        // 같은 단원 내에서는 회차(round) 순서로 정렬
-        const roundA = parseInt(a.round) || 0;
-        const roundB = parseInt(b.round) || 0;
-        if (roundA !== roundB) return roundA - roundB;
-
-        return (a.number || 0) - (b.number || 0);
-      });
-
-
-      if (unitFilter) {
-        // [🔥 자주 나왔던 문항] 특수 처리
-        if (unitFilter.includes("자주 나왔던 문항") || unitFilter.includes("자주나왔던문항")) {
-          const uniqueMap = new Map<string, any>();
-          
-          allQuestions.forEach((q: any) => {
-            if ((q.frequency || 0) >= 2) {
-              const cleanQuestion = normalize(q.question);
-              const cleanChoices = (q.choices || []).map((c: string) => normalize(c)).join("|");
-              const contentKey = `${cleanQuestion}_${cleanChoices}`;
-              
-              if (!uniqueMap.has(contentKey)) {
-                uniqueMap.set(contentKey, q);
-              }
-            }
-          });
-          
-          sorted = Array.from(uniqueMap.values())
-            .sort((a: any, b: any) => (b.frequency || 0) - (a.frequency || 0));
-        } else {
-          const hasPartFilter = /\s*\(\d+부\)$/.test(unitFilter);
-          const baseUnitFilter = unitFilter.replace(/\s*\(\d+부\)$/, '').trim();
-          const cleanUnitFilter = unitFilter.replace(/^\[.*?\]\s*/g, '').trim();
-          const cleanBaseFilter = baseUnitFilter.replace(/^\[.*?\]\s*/g, '').trim();
-          
-          sorted = sorted.filter(q => {
-            const rawQUnit = (q.sub_unit || q.subject || classifyQuestion(subject, q)).trim();
-            const cleanQUnit = rawQUnit.replace(/^\[.*?\]\s*/g, '').trim();
-
-            if (hasPartFilter) {
-              if (rawQUnit === unitFilter.trim() || cleanQUnit === cleanUnitFilter) return true;
-              if (!/\s*\(\d+부\)$/.test(rawQUnit) && (rawQUnit === baseUnitFilter || cleanQUnit === cleanBaseFilter)) return true;
-              return false;
-            } else {
-              const qCleanUnitNoPart = cleanQUnit.replace(/\s*\(\d+부\)$/, '').trim();
-              return qCleanUnitNoPart === cleanBaseFilter || rawQUnit === baseUnitFilter;
-            }
-          });
-        }
-      }
+      let allQuestions = Array.from(questionMap.values()).map(scrub);
 
       if (yearFilter || roundFilter) {
-        sorted = sorted.filter(q => {
-          const { yr, rd } = extractYearRound(q, subject);
-          const matchYear = !yearFilter || yr.toString().replace(/\s/g, '').includes(yearFilter.toString().replace(/\s/g, ''));
-          const matchRound = !roundFilter || rd.toString().replace(/\s/g, '').includes(roundFilter.toString().replace(/\s/g, ''));
-          return matchYear && matchRound;
+        allQuestions = allQuestions.filter(q => {
+          if (yearFilter && q.year !== yearFilter) return false;
+          if (roundFilter && q.round !== roundFilter) return false;
+          return true;
         });
       }
 
-      // 파트/공략 쪼개기 처리 (단원별/빈출 쪼개기 대응)
-      let finalSorted = sorted;
-      const partMatch = unitFilter?.match(/\(((\d+)부)\)$/) || unitFilter?.match(/공략\s*(\d+)/);
-      if (partMatch) {
-        const partIdx = parseInt(partMatch[2] || partMatch[1]) - 1;
-        const pageSize = unitFilter?.includes("자주 나왔던 문항") ? 30 : 150;
-        const startIdx = partIdx * pageSize;
-        const endIdx = startIdx + pageSize;
-        finalSorted = sorted.slice(startIdx, endIdx);
+      if (unitFilter) {
+        const decodedUnit = decodeURIComponent(unitFilter);
+        allQuestions = allQuestions.filter(q => {
+          const u = q.sub_unit || "";
+          return u === decodedUnit || u.includes(decodedUnit) || decodedUnit.includes(u);
+        });
       }
 
-      const totalCount = finalSorted.length;
-      const paginatedQuestions = finalSorted.slice(start, start + limit);
+      const total = allQuestions.length;
+      const pagedQuestions = allQuestions.slice(start, start + limit);
 
       return NextResponse.json({
-        subject,
-        total: totalCount,
-        questions: paginatedQuestions.map(scrub),
+        total,
         start,
-        limit
+        limit,
+        questions: pagedQuestions
       });
     }
 
-    // Default to examFile logic if no params provided (for backward compatibility)
-    const DEFAULT_DATA_PATH = path.join(process.cwd(), "src/data", "2015_01_questions.json");
-    if (fs.existsSync(DEFAULT_DATA_PATH)) {
-      const data = await fsPromises.readFile(DEFAULT_DATA_PATH, "utf-8");
-      const parsed = JSON.parse(data);
-      const questions = Array.isArray(parsed) ? parsed : parsed.questions || [];
-      return NextResponse.json(questions.map(scrub));
-    }
-
-    return NextResponse.json({ error: "Either subject or examFile is required" }, { status: 400 });
-
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ error: 'Invalid parameters' }, { status: 400 });
+  } catch (err) {
+    console.error('Failed to load questions:', err);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
