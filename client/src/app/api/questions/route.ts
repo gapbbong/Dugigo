@@ -147,7 +147,10 @@ export async function GET(req: NextRequest) {
 
       // 1. 원본 이름으로 시도
       let targetSubject = subject;
-      const baseDataDir = path.resolve(process.cwd(), "src", "data");
+      let baseDataDir = path.resolve(process.cwd(), "src", "data");
+      if (!fs.existsSync(baseDataDir)) {
+        baseDataDir = path.resolve(process.cwd(), "client", "src", "data");
+      }
       let dataDir = path.resolve(baseDataDir, targetSubject);
 
       // 2. 없으면 공백 제거 버전으로 시도

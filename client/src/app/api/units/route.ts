@@ -17,7 +17,10 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const baseDataDir = path.resolve(process.cwd(), 'src', 'data');
+    let baseDataDir = path.resolve(process.cwd(), 'src', 'data');
+    if (!fs.existsSync(baseDataDir)) {
+      baseDataDir = path.resolve(process.cwd(), 'client', 'src', 'data');
+    }
     
     // 1. 원본 이름으로 시도
     let targetSubject = subject;

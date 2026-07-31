@@ -7,7 +7,10 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    const dataDir = path.join(process.cwd(), 'src', 'data');
+    let dataDir = path.resolve(process.cwd(), 'src', 'data');
+    if (!fs.existsSync(dataDir)) {
+      dataDir = path.resolve(process.cwd(), 'client', 'src', 'data');
+    }
     
     if (!fs.existsSync(dataDir)) {
       return NextResponse.json({ subjects: [] });
@@ -16,10 +19,11 @@ export async function GET() {
     // Read directories in src/data
     const items = fs.readdirSync(dataDir, { withFileTypes: true });
     
-    // Filter only directories that actually contain files
+    // Filter only directories that actually contain files (and exclude backup folders)
     const subjects = items
       .filter(item => {
         if (!item.isDirectory()) return false;
+        if (item.name.includes('_backup') || item.name.includes('_BACKUP') || item.name.includes('.bak')) return false;
         const subDirPath = path.join(dataDir, item.name);
         try {
           const files = fs.readdirSync(subDirPath);
