@@ -429,16 +429,23 @@ export async function GET(req: NextRequest) {
           sorted = Array.from(uniqueMap.values())
             .sort((a: any, b: any) => (b.frequency || 0) - (a.frequency || 0));
         } else {
+          const hasPartFilter = /\s*\(\d+부\)$/.test(unitFilter);
           const baseUnitFilter = unitFilter.replace(/\s*\(\d+부\)$/, '').trim();
-          const cleanUnit = baseUnitFilter.replace(/^\[.*?\]\s*/g, '').trim();
+          const cleanUnitFilter = unitFilter.replace(/^\[.*?\]\s*/g, '').trim();
+          const cleanBaseFilter = baseUnitFilter.replace(/^\[.*?\]\s*/g, '').trim();
           
           sorted = sorted.filter(q => {
-            const rawQUnit = q.sub_unit || q.subject || classifyQuestion(subject, q);
-            if (rawQUnit === baseUnitFilter) return true;
-            
-            const qCleanUnit = rawQUnit.replace(/^\[.*?\]\s*/g, '').trim();
-            const filterCleanUnit = baseUnitFilter.replace(/^\[.*?\]\s*/g, '').trim();
-            return qCleanUnit === filterCleanUnit;
+            const rawQUnit = (q.sub_unit || q.subject || classifyQuestion(subject, q)).trim();
+            const cleanQUnit = rawQUnit.replace(/^\[.*?\]\s*/g, '').trim();
+
+            if (hasPartFilter) {
+              if (rawQUnit === unitFilter.trim() || cleanQUnit === cleanUnitFilter) return true;
+              if (!/\s*\(\d+부\)$/.test(rawQUnit) && (rawQUnit === baseUnitFilter || cleanQUnit === cleanBaseFilter)) return true;
+              return false;
+            } else {
+              const qCleanUnitNoPart = cleanQUnit.replace(/\s*\(\d+부\)$/, '').trim();
+              return qCleanUnitNoPart === cleanBaseFilter || rawQUnit === baseUnitFilter;
+            }
           });
         }
       }
