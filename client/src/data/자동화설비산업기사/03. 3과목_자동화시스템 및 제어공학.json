@@ -19,7 +19,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "01. 제어의 기초 및 블록선도"
+        "sub_unit":  "01. 제어의 기초 및 블록선도",
+        "unit_no":  "U16"
     },
     {
         "id":  "ae_ind_2020_2_52",
@@ -41,7 +42,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "01. 제어의 기초 및 블록선도"
+        "sub_unit":  "01. 제어의 기초 및 블록선도",
+        "unit_no":  "U16"
     },
     {
         "id":  "ae_ind_2022_1_60",
@@ -63,7 +65,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "01. 제어의 기초 및 블록선도"
+        "sub_unit":  "01. 제어의 기초 및 블록선도",
+        "unit_no":  "U16"
     },
     {
         "id":  "ae_ind_2022_1_41",
@@ -85,7 +88,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "01. 제어의 기초 및 블록선도"
+        "sub_unit":  "01. 제어의 기초 및 블록선도",
+        "unit_no":  "U16"
     },
     {
         "id":  "ae_ind_2020_1_49",
@@ -107,7 +111,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "01. 제어의 기초 및 블록선도"
+        "sub_unit":  "01. 제어의 기초 및 블록선도",
+        "unit_no":  "U16"
     },
     {
         "id":  "ae_ind_2020_1_53",
@@ -129,7 +134,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "01. 제어의 기초 및 블록선도"
+        "sub_unit":  "01. 제어의 기초 및 블록선도",
+        "unit_no":  "U16"
     },
     {
         "id":  "ae_ind_2020_1_50",
@@ -151,7 +157,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "01. 제어의 기초 및 블록선도"
+        "sub_unit":  "01. 제어의 기초 및 블록선도",
+        "unit_no":  "U16"
     },
     {
         "id":  "ae_ind_2021_1_55",
@@ -173,7 +180,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_1_56",
@@ -195,7 +203,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_1_46",
@@ -217,7 +226,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_1_48",
@@ -239,7 +249,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_2_46",
@@ -261,7 +272,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_2_48",
@@ -283,7 +295,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_1_59",
@@ -305,7 +318,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_2_41",
@@ -327,7 +341,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2020_2_54",
@@ -349,7 +364,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2019_4_45",
@@ -371,7 +387,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2019_4_43",
@@ -393,7 +410,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2019_4_44",
@@ -415,7 +433,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2020_2_57",
@@ -437,7 +456,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2020_2_59",
@@ -459,7 +479,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2020_1_54",
@@ -481,7 +502,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2020_1_60",
@@ -503,7 +525,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_2_50",
@@ -525,7 +548,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2022_2_55",
@@ -547,7 +571,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2022_2_48",
@@ -569,7 +594,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2022_2_54",
@@ -591,7 +617,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2024_2_50",
@@ -613,7 +640,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2023_2_46",
@@ -635,7 +663,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2023_2_54",
@@ -657,7 +686,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_2_54",
@@ -679,7 +709,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_2_55",
@@ -701,7 +732,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_2_51",
@@ -723,7 +755,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_2_52",
@@ -745,7 +778,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_2_58",
@@ -767,7 +801,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_2_59",
@@ -789,7 +824,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_2_56",
@@ -811,7 +847,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_2_57",
@@ -833,7 +870,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2019_4_42",
@@ -855,7 +893,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2017_4_52",
@@ -877,7 +916,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2017_4_57",
@@ -899,7 +939,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2017_4_47",
@@ -921,7 +962,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2017_4_48",
@@ -943,7 +985,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2018_2_55",
@@ -965,7 +1008,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2017_4_60",
@@ -987,7 +1031,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2018_2_43",
@@ -1009,7 +1054,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2017_4_46",
@@ -1031,7 +1077,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2017_2_45",
@@ -1053,7 +1100,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2017_2_46",
@@ -1075,7 +1123,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2017_2_41",
@@ -1097,7 +1146,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2017_2_43",
@@ -1119,7 +1169,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2017_4_41",
@@ -1141,7 +1192,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2017_4_44",
@@ -1163,7 +1215,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2017_2_47",
@@ -1185,7 +1238,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2018_2_56",
@@ -1207,7 +1261,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2019_2_45",
@@ -1229,7 +1284,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2019_2_41",
@@ -1251,7 +1307,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2019_2_43",
@@ -1273,7 +1330,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2019_2_55",
@@ -1295,7 +1353,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2019_2_57",
@@ -1317,7 +1376,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2019_2_48",
@@ -1339,7 +1399,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2019_2_49",
@@ -1361,7 +1422,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2018_4_56",
@@ -1383,7 +1445,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2018_4_43",
@@ -1405,7 +1468,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2018_4_44",
@@ -1427,7 +1491,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2018_2_57",
@@ -1449,7 +1514,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2018_4_54",
@@ -1471,7 +1537,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2018_4_55",
@@ -1493,7 +1560,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2018_4_50",
@@ -1515,7 +1583,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2018_4_53",
@@ -1537,7 +1606,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "02. 시퀀스 제어 및 전기회로"
+        "sub_unit":  "02. 시퀀스 제어 및 전기회로",
+        "unit_no":  "U17"
     },
     {
         "id":  "ae_ind_2021_2_45",
@@ -1559,7 +1629,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2022_1_58",
@@ -1581,7 +1652,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2022_2_41",
@@ -1603,7 +1675,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2021_2_44",
@@ -1625,7 +1698,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2021_1_47",
@@ -1647,7 +1721,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2023_2_51",
@@ -1669,7 +1744,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2023_2_57",
@@ -1691,7 +1767,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2024_2_43",
@@ -1713,7 +1790,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2023_1_51",
@@ -1735,7 +1813,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2022_2_56",
@@ -1757,7 +1836,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2023_1_60",
@@ -1779,7 +1859,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2017_4_54",
@@ -1801,7 +1882,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2018_2_50",
@@ -1823,7 +1905,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2017_2_59",
@@ -1845,7 +1928,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2017_2_53",
@@ -1867,7 +1951,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2017_2_54",
@@ -1889,7 +1974,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2017_2_57",
@@ -1911,7 +1997,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2019_4_49",
@@ -1933,7 +2020,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2019_4_50",
@@ -1955,7 +2043,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2019_4_55",
@@ -1977,7 +2066,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2018_4_46",
@@ -1999,7 +2089,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2018_2_60",
@@ -2021,7 +2112,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "03. PLC 제어 및 로더 프로그램"
+        "sub_unit":  "03. PLC 제어 및 로더 프로그램",
+        "unit_no":  "U18"
     },
     {
         "id":  "ae_ind_2021_2_47",
@@ -2043,7 +2135,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2021_2_49",
@@ -2065,7 +2158,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2022_1_46",
@@ -2087,7 +2181,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2021_2_43",
@@ -2109,7 +2204,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2021_1_42",
@@ -2131,7 +2227,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2021_2_42",
@@ -2153,7 +2250,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2024_1_58",
@@ -2175,7 +2273,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2024_2_56",
@@ -2197,7 +2296,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2024_2_59",
@@ -2219,7 +2319,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2023_2_45",
@@ -2241,7 +2342,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2023_1_45",
@@ -2263,7 +2365,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2023_1_50",
@@ -2285,7 +2388,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2023_1_52",
@@ -2307,7 +2411,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2018_2_44",
@@ -2329,7 +2434,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2018_2_45",
@@ -2351,7 +2457,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2018_4_45",
@@ -2373,7 +2480,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2017_4_43",
@@ -2395,7 +2503,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2017_2_42",
@@ -2417,7 +2526,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2017_2_44",
@@ -2439,7 +2549,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2017_4_42",
@@ -2461,7 +2572,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2020_1_57",
@@ -2483,7 +2595,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2020_2_55",
@@ -2505,7 +2618,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2021_1_41",
@@ -2527,7 +2641,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2020_1_55",
@@ -2549,7 +2664,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2019_2_56",
@@ -2571,7 +2687,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2019_4_41",
@@ -2593,7 +2710,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2020_1_48",
@@ -2615,7 +2733,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "04. 센서 및 변환기"
+        "sub_unit":  "04. 센서 및 변환기",
+        "unit_no":  "U19"
     },
     {
         "id":  "ae_ind_2019_2_54",
@@ -2637,7 +2756,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2024_2_46",
@@ -2659,7 +2779,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2018_2_41",
@@ -2681,7 +2802,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2020_2_49",
@@ -2703,7 +2825,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2020_1_52",
@@ -2725,7 +2848,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2020_1_51",
@@ -2747,7 +2871,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2023_1_44",
@@ -2769,7 +2894,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2022_1_55",
@@ -2791,7 +2917,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2024_2_49",
@@ -2813,7 +2940,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2023_2_60",
@@ -2835,7 +2963,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2024_1_45",
@@ -2857,7 +2986,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2021_1_45",
@@ -2879,7 +3009,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2022_1_43",
@@ -2901,7 +3032,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2022_1_45",
@@ -2923,7 +3055,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2020_1_44",
@@ -2945,7 +3078,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2020_2_44",
@@ -2967,7 +3101,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "05. 제어계 분류 및 서보기구"
+        "sub_unit":  "05. 제어계 분류 및 서보기구",
+        "unit_no":  "U20"
     },
     {
         "id":  "ae_ind_2020_2_60",
@@ -2989,7 +3124,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "06. 산업용 로봇 구조 및 자유도"
+        "sub_unit":  "06. 산업용 로봇 구조 및 자유도",
+        "unit_no":  "U21"
     },
     {
         "id":  "ae_ind_2020_1_43",
@@ -3011,7 +3147,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "06. 산업용 로봇 구조 및 자유도"
+        "sub_unit":  "06. 산업용 로봇 구조 및 자유도",
+        "unit_no":  "U21"
     },
     {
         "id":  "ae_ind_2023_1_42",
@@ -3033,7 +3170,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "06. 산업용 로봇 구조 및 자유도"
+        "sub_unit":  "06. 산업용 로봇 구조 및 자유도",
+        "unit_no":  "U21"
     },
     {
         "id":  "ae_ind_2023_2_44",
@@ -3055,7 +3193,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "06. 산업용 로봇 구조 및 자유도"
+        "sub_unit":  "06. 산업용 로봇 구조 및 자유도",
+        "unit_no":  "U21"
     },
     {
         "id":  "ae_ind_2024_2_42",
@@ -3077,7 +3216,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "06. 산업용 로봇 구조 및 자유도"
+        "sub_unit":  "06. 산업용 로봇 구조 및 자유도",
+        "unit_no":  "U21"
     },
     {
         "id":  "ae_ind_2024_2_41",
@@ -3099,7 +3239,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "06. 산업용 로봇 구조 및 자유도"
+        "sub_unit":  "06. 산업용 로봇 구조 및 자유도",
+        "unit_no":  "U21"
     },
     {
         "id":  "ae_ind_2024_1_47",
@@ -3121,7 +3262,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "06. 산업용 로봇 구조 및 자유도"
+        "sub_unit":  "06. 산업용 로봇 구조 및 자유도",
+        "unit_no":  "U21"
     },
     {
         "id":  "ae_ind_2020_1_41",
@@ -3143,7 +3285,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "06. 산업용 로봇 구조 및 자유도"
+        "sub_unit":  "06. 산업용 로봇 구조 및 자유도",
+        "unit_no":  "U21"
     },
     {
         "id":  "ae_ind_2021_1_60",
@@ -3165,7 +3308,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2017_2_56",
@@ -3187,7 +3331,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2023_2_43",
@@ -3209,7 +3354,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2023_1_56",
@@ -3231,7 +3377,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2022_2_47",
@@ -3253,7 +3400,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2024_1_41",
@@ -3275,7 +3423,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2023_2_55",
@@ -3297,7 +3446,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2017_2_49",
@@ -3319,7 +3469,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2021_1_57",
@@ -3341,7 +3492,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2020_1_42",
@@ -3363,7 +3515,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2020_2_41",
@@ -3385,7 +3538,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2020_2_42",
@@ -3407,7 +3561,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2023_1_55",
@@ -3429,7 +3584,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2022_1_56",
@@ -3451,7 +3607,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2022_1_59",
@@ -3473,7 +3630,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2017_2_48",
@@ -3495,7 +3653,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2021_1_44",
@@ -3517,7 +3676,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2021_1_43",
@@ -3539,7 +3699,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터"
+        "sub_unit":  "07. 로봇 구동 액추에이터 및 모터",
+        "unit_no":  "U22"
     },
     {
         "id":  "ae_ind_2019_4_46",
@@ -3561,7 +3722,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2023_1_46",
@@ -3583,7 +3745,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2023_2_56",
@@ -3605,7 +3768,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2022_1_42",
@@ -3627,7 +3791,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2018_2_46",
@@ -3649,7 +3814,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2017_2_52",
@@ -3671,7 +3837,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2019_2_44",
@@ -3693,7 +3860,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2018_2_58",
@@ -3715,7 +3883,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2023_1_59",
@@ -3737,7 +3906,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2018_2_54",
@@ -3759,7 +3929,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2018_4_42",
@@ -3781,7 +3952,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2020_2_50",
@@ -3803,7 +3975,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2024_1_42",
@@ -3825,7 +3998,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2020_2_47",
@@ -3847,7 +4021,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2017_4_45",
@@ -3869,7 +4044,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2019_4_51",
@@ -3891,7 +4067,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2022_2_42",
@@ -3913,7 +4090,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2023_1_43",
@@ -3935,7 +4113,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2024_2_44",
@@ -3957,7 +4136,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2017_2_60",
@@ -3979,7 +4159,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2018_2_42",
@@ -4001,7 +4182,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2020_1_56",
@@ -4023,7 +4205,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2023_2_48",
@@ -4045,7 +4228,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2019_2_51",
@@ -4067,7 +4251,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2020_1_58",
@@ -4089,7 +4274,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2017_4_55",
@@ -4111,7 +4297,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2017_4_56",
@@ -4133,7 +4320,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2018_4_52",
@@ -4155,7 +4343,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2023_1_48",
@@ -4177,7 +4366,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2023_2_41",
@@ -4199,7 +4389,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2023_1_53",
@@ -4221,7 +4412,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2022_1_57",
@@ -4243,7 +4435,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2022_2_43",
@@ -4265,7 +4458,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2022_2_51",
@@ -4287,7 +4481,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2022_2_45",
@@ -4309,7 +4504,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2022_2_44",
@@ -4331,7 +4527,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2022_2_46",
@@ -4353,7 +4550,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2024_2_45",
@@ -4375,7 +4573,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2024_2_47",
@@ -4397,7 +4596,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2024_1_55",
@@ -4419,7 +4619,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2024_2_55",
@@ -4441,7 +4642,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2024_1_43",
@@ -4463,7 +4665,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2023_2_50",
@@ -4485,7 +4688,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2023_2_53",
@@ -4507,7 +4711,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2024_1_52",
@@ -4529,7 +4734,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2024_1_44",
@@ -4551,7 +4757,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2022_1_49",
@@ -4573,7 +4780,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2019_2_42",
@@ -4595,7 +4803,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2018_4_51",
@@ -4617,7 +4826,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2018_4_41",
@@ -4639,7 +4849,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2018_2_59",
@@ -4661,7 +4872,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2018_4_47",
@@ -4683,7 +4895,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2019_2_60",
@@ -4705,7 +4918,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2017_2_58",
@@ -4727,7 +4941,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2018_2_48",
@@ -4749,7 +4964,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2018_2_51",
@@ -4771,7 +4987,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2017_4_58",
@@ -4793,7 +5010,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2021_1_49",
@@ -4815,7 +5033,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2021_1_50",
@@ -4837,7 +5056,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2021_2_53",
@@ -4859,7 +5079,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2020_1_47",
@@ -4881,7 +5102,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2020_2_58",
@@ -4903,7 +5125,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭"
+        "sub_unit":  "08. 메카트로닉스 및 로봇 티칭",
+        "unit_no":  "U23"
     },
     {
         "id":  "ae_ind_2017_4_53",
@@ -4925,7 +5148,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2021_1_52",
@@ -4947,7 +5171,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2023_1_47",
@@ -4969,7 +5194,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2023_2_47",
@@ -4991,7 +5217,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2023_1_41",
@@ -5013,7 +5240,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2023_1_58",
@@ -5035,7 +5263,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2023_2_42",
@@ -5057,7 +5286,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2023_1_49",
@@ -5079,7 +5309,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2023_1_54",
@@ -5101,7 +5332,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2022_1_51",
@@ -5123,7 +5355,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2022_1_50",
@@ -5145,7 +5378,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2022_1_52",
@@ -5167,7 +5401,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2022_1_54",
@@ -5189,7 +5424,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2022_1_53",
@@ -5211,7 +5447,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2022_2_50",
@@ -5233,7 +5470,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2022_2_52",
@@ -5255,7 +5493,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2023_1_57",
@@ -5277,7 +5516,8 @@
         "year":  2023,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2022_2_53",
@@ -5299,7 +5539,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2022_2_49",
@@ -5321,7 +5562,8 @@
         "year":  2022,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2023_2_49",
@@ -5343,7 +5585,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_1_54",
@@ -5365,7 +5608,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_1_59",
@@ -5387,7 +5631,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_1_60",
@@ -5409,7 +5654,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_2_54",
@@ -5431,7 +5677,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_2_57",
@@ -5453,7 +5700,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_2_60",
@@ -5475,7 +5723,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_2_58",
@@ -5497,7 +5746,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_2_48",
@@ -5519,7 +5769,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_2_51",
@@ -5541,7 +5792,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_2_53",
@@ -5563,7 +5815,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_2_52",
@@ -5585,7 +5838,8 @@
         "year":  2024,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2023_2_59",
@@ -5607,7 +5861,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2023_2_52",
@@ -5629,7 +5884,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2023_2_58",
@@ -5651,7 +5907,8 @@
         "year":  2023,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_1_50",
@@ -5673,7 +5930,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_1_49",
@@ -5695,7 +5953,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_1_51",
@@ -5717,7 +5976,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_1_53",
@@ -5739,7 +5999,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_1_46",
@@ -5761,7 +6022,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2024_1_48",
@@ -5783,7 +6045,8 @@
         "year":  2024,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2019_2_46",
@@ -5805,7 +6068,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2019_2_50",
@@ -5827,7 +6091,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2019_2_47",
@@ -5849,7 +6114,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2018_4_49",
@@ -5871,7 +6137,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2018_4_48",
@@ -5893,7 +6160,8 @@
         "year":  2018,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2019_4_47",
@@ -5915,7 +6183,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2019_4_48",
@@ -5937,7 +6206,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2019_4_53",
@@ -5959,7 +6229,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2019_4_52",
@@ -5981,7 +6252,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2019_2_52",
@@ -6003,7 +6275,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2019_2_53",
@@ -6025,7 +6298,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2019_2_59",
@@ -6047,7 +6321,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2019_2_58",
@@ -6069,7 +6344,8 @@
         "year":  2019,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2017_4_49",
@@ -6091,7 +6367,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2017_4_51",
@@ -6113,7 +6390,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2017_4_50",
@@ -6135,7 +6413,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2017_2_50",
@@ -6157,7 +6436,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2017_2_55",
@@ -6179,7 +6459,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2017_2_51",
@@ -6201,7 +6482,8 @@
         "year":  2017,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2018_2_49",
@@ -6223,7 +6505,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2018_2_53",
@@ -6245,7 +6528,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2018_2_52",
@@ -6267,7 +6551,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2017_4_59",
@@ -6289,7 +6574,8 @@
         "year":  2017,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2018_2_47",
@@ -6311,7 +6597,8 @@
         "year":  2018,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2021_1_53",
@@ -6333,7 +6620,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2020_2_51",
@@ -6355,7 +6643,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2020_2_53",
@@ -6377,7 +6666,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2022_1_44",
@@ -6399,7 +6689,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2022_1_48",
@@ -6421,7 +6712,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2022_1_47",
@@ -6443,7 +6735,8 @@
         "year":  2022,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2021_1_54",
@@ -6465,7 +6758,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2021_1_58",
@@ -6487,7 +6781,8 @@
         "year":  2021,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2021_2_60",
@@ -6509,7 +6804,8 @@
         "year":  2021,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2020_1_46",
@@ -6531,7 +6827,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2020_1_45",
@@ -6553,7 +6850,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2019_4_54",
@@ -6575,7 +6873,8 @@
         "year":  2019,
         "round":  4,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2020_2_45",
@@ -6597,7 +6896,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2020_2_46",
@@ -6619,7 +6919,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2020_2_48",
@@ -6641,7 +6942,8 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2020_1_59",
@@ -6663,7 +6965,8 @@
         "year":  2020,
         "round":  1,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     },
     {
         "id":  "ae_ind_2020_2_43",
@@ -6685,6 +6988,7 @@
         "year":  2020,
         "round":  2,
         "frequency":  1,
-        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리"
+        "sub_unit":  "09. 유연생산(FMS) 및 자동화 팩토리",
+        "unit_no":  "U24"
     }
 ]
