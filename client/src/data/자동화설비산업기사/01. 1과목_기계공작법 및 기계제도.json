@@ -1,5 +1,6 @@
 ﻿[
     {
+        "id":  "ae_ind_2017_2_1",
         "number":  1,
         "question":  "길이가 $50\\text{mm}$인 표준시험편으로 인장시험하여 늘어난 길이가 $55\\text{mm}$였다. 이 시험편의 연신율은?",
         "choices":  [
@@ -13,15 +14,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_2",
         "number":  2,
         "question":  "구성인선에 대한 설명으로 틀린 것은?",
         "choices":  [
@@ -35,15 +36,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_3",
         "number":  3,
         "question":  "절삭저항의 3분력 중 가장 큰 힘이 발생되는 것은?",
         "choices":  [
@@ -57,15 +58,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_4",
         "number":  4,
         "question":  "주로 기어 가공 시 사용하며 치형 모양의 커터로 기어를 다듬는 가공은?",
         "choices":  [
@@ -79,15 +80,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_5",
         "number":  5,
         "question":  "다음은 무엇에 관한 설명인가?\n\n• 3개의 클로를 움직여서 직경이 작은 공작물을 고정하는 데 사용하는 척이다.\n• 주축의 테이퍼 구멍에 슬리브를 꽂은 후 여기에 이것을 끼워서 사용한다.",
         "choices":  [
@@ -101,15 +102,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_6",
         "number":  6,
         "question":  "선반 가공 시 편위량이 $5\\text{mm}$이고, 큰 지름이 $40\\text{mm}$, 전체길이는 $60\\text{mm}$이면 작은 지름은?(단, 테이퍼길이와 전체길이는 같다)",
         "choices":  [
@@ -123,15 +124,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_7",
         "number":  7,
         "question":  "형판이나 모형을 본뜨는 장치를 사용하여 프레스나 단조, 주조용 금형과 같은 복잡한 형상을 높은 밀도로 능률적인 가공이 가능한 기계는?",
         "choices":  [
@@ -145,15 +146,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_8",
         "number":  8,
         "question":  "하향절삭의 특징이 아닌 것은?",
         "choices":  [
@@ -167,15 +168,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_9",
         "number":  9,
         "question":  "일반적으로 밀링머신에서 할 수 없는 작업은?",
         "choices":  [
@@ -189,15 +190,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_10",
         "number":  10,
         "question":  "인서트를 클램프로 고정시킨 후 절삭하는 바이트로 날과 자루가 분리되어 있는 형태는?",
         "choices":  [
@@ -211,15 +212,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_11",
         "number":  11,
         "question":  "연삭숫돌 결합제 중 다음에서 설명하는 것은?\n\n• 대형 숫돌바퀴를 만들 수 있음\n• 고속도강과 같이 균열이 생기기 쉬운 재료를 연삭할 때, 연삭에 의한 발열을 피해야 할 경우에 사용",
         "choices":  [
@@ -233,15 +234,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_12",
         "number":  12,
         "question":  "창성법에 의한 기어 가공용 커터가 아닌 것은?",
         "choices":  [
@@ -255,15 +256,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_13",
         "number":  13,
         "question":  "입방정 질화붕소의 미결정을 결합제를 사용하여 초고압 고온에서 인공 합성한 공구재료로 경도가 다이아몬드의 2/3 정도인 것은?",
         "choices":  [
@@ -277,15 +278,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_14",
         "number":  14,
         "question":  "그림에서 모듈이 2라면 잇수는?",
         "choices":  [
@@ -299,15 +300,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_15",
         "number":  15,
         "question":  "그림과 같은 치수기입법의 명칭은?",
         "choices":  [
@@ -321,15 +322,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_16",
         "number":  16,
         "question":  "$\\phi 50$ H7/g6의 끼워 맞춤은?",
         "choices":  [
@@ -343,15 +344,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_17",
         "number":  17,
         "question":  "스퍼기어의 제도에서 원의 둘레를 일점 쇄선으로 그렸다면 어떤 원을 그린 것인가?",
         "choices":  [
@@ -365,15 +366,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_18",
         "number":  18,
         "question":  "KS B 1311 TG $20 \\times 12 \\times 70$으로 호칭되는 키의 설명으로 옳은 것은?",
         "choices":  [
@@ -387,15 +388,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_19",
         "number":  19,
         "question":  "마이크로미터 눈금이 그림과 같다면 이 길이는?",
         "choices":  [
@@ -409,15 +410,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_20",
         "number":  20,
         "question":  "기계에서 발생하는 소음이나 진동 등과 같은 주위 환경에서 오는 오차 또는 자연현상의 급변 등으로 생기는 오차는?",
         "choices":  [
@@ -431,15 +432,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_2_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_1",
         "number":  1,
         "question":  "지름 $4\\text{cm}$의 연강봉에 $5,000\\text{N}$의 인장력이 걸려 있을 때 재료에 생기는 응력은?",
         "choices":  [
@@ -453,15 +454,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_2",
         "number":  2,
         "question":  "절삭저항의 3분력이 아닌 것은?",
         "choices":  [
@@ -475,15 +476,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_3",
         "number":  3,
         "question":  "구성인선의 생애 순서는?",
         "choices":  [
@@ -497,15 +498,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_4",
         "number":  4,
         "question":  "주조된 구멍이나 이미 뚫은 구멍을 필요한 크기나 정밀한 치수로 넓히는 작업은?",
         "choices":  [
@@ -519,15 +520,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_5",
         "number":  5,
         "question":  "보통선반에서 자동이송장치가 설치되어 있는 부분은?",
         "choices":  [
@@ -541,15 +542,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_6",
         "number":  6,
         "question":  "선반가공 시 테이퍼의 양 끝 지름 중 큰 지름을 $40mm$, 작은 지름을 $30mm$, 테이퍼 전체의 길이를 $60mm$, 테이퍼 부분의 길이를 $54mm$라 할 때 심압대 편위량은?",
         "choices":  [
@@ -563,15 +564,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_7",
         "number":  7,
         "question":  "밀링머신에서 사용하는 절삭공구가 아닌 것은?",
         "choices":  [
@@ -585,15 +586,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_8",
         "number":  8,
         "question":  "상향절삭의 특징이 아닌 것은?",
         "choices":  [
@@ -607,15 +608,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_9",
         "number":  9,
         "question":  "밀링머신에서 직접 분할법을 사용할 때 다음 중 분할이 가능한 등분은?",
         "choices":  [
@@ -629,15 +630,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_10",
         "number":  10,
         "question":  "플랭크 마모라고도 하며 절삭공구의 측면과 가공면과의 마찰에 의하여 발생되는 마모현상으로 주철과 같이 취성이 있는 재료를 절삭할 때 발생하여 절삭날(공구인선)을 파손시키는 마모는?",
         "choices":  [
@@ -651,15 +652,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_11",
         "number":  11,
         "question":  "연삭숫돌입자 중 연삭 깊이가 얕은 정밀 연삭용, 경연삭용, 담금질강, 특수강, 고속도강에 쓰이는 숫돌입자의 기호는?",
         "choices":  [
@@ -673,15 +674,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_12",
         "number":  12,
         "question":  "가는 홈붙이 날을 가진 커터로, 가공된 기어의 면을 매끄럽고 정밀하게 다듬질하는 가공은?",
         "choices":  [
@@ -695,15 +696,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_13",
         "number":  13,
         "question":  "금속조직(Metal Matrix) 내에 세라믹 입자를 분산시킨 복합 재료이며 절삭공구, 다이스, 치과용 드릴 등과 같은 내충격, 내마멸용 공구로 사용하는 것은?",
         "choices":  [
@@ -717,15 +718,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_14",
         "number":  14,
         "question":  "그림과 같이 도시된 단면도의 명칭은?",
         "choices":  [
@@ -739,15 +740,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_15",
         "number":  15,
         "question":  "그림 (가)에 있는 물체의 어떤 투상도가 그림 (나)와 같다면 그림 (나)가 나타내는 것은?",
         "choices":  [
@@ -761,15 +762,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_16",
         "number":  16,
         "question":  "그림과 같은 치수기입법의 명칭은?",
         "choices":  [
@@ -783,15 +784,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_17",
         "number":  17,
         "question":  "M5×2 나사에 대한 설명으로 틀린 것은?",
         "choices":  [
@@ -805,15 +806,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_18",
         "number":  18,
         "question":  "구름베어링 호칭에서 “7206 C DB”라고 표시되어 있다면 이에 대한 설명으로 틀린 것은?",
         "choices":  [
@@ -827,15 +828,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_19",
         "number":  19,
         "question":  "사인바로 각도를 측정하였다. $L=100$이고 $H=30$, $h=12$라면 기울어진 각은?",
         "choices":  [
@@ -849,15 +850,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_20",
         "number":  20,
         "question":  "구멍의 치수가 $\\phi 50_{-0.2}^{+0.2}$일 때 최대 실체 치수를 적용한 구멍의 크기는?",
         "choices":  [
@@ -871,15 +872,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2017_4_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_1",
         "number":  1,
         "question":  "양끝에 나사를 깎은머리 없는 볼트로서 한쪽은 몸에 죄어 놓고, 다른 한쪽에는 결합할 부품을 고정 너트를 끼워 죄는 것은?",
         "choices":  [
@@ -893,15 +894,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_2",
         "number":  2,
         "question":  "가공의 종류를 바르게 설명한 것은?",
         "choices":  [
@@ -915,15 +916,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_3",
         "number":  3,
         "question":  "절삭작업에서 빌트업 에지(Built-up Edge)의 주기로 옳은 것은?",
         "choices":  [
@@ -937,15 +938,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_4",
         "number":  4,
         "question":  "보통선반에서 자동이송장치가 설치되어 있는 부분은?",
         "choices":  [
@@ -959,15 +960,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_5",
         "number":  5,
         "question":  "선반가공 시 테이퍼의 양끝 지름 중 큰 지름을 30mm, 작은 지름을 26mm, 테이퍼 전체의 길이를 50mm, 테이퍼 부분의 길이를 40mm라 할 때 심압 편위량은?",
         "choices":  [
@@ -981,15 +982,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_6",
         "number":  6,
         "question":  "밀링머신으로 작업할 수 없는 것은?",
         "choices":  [
@@ -1003,15 +1004,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_7",
         "number":  7,
         "question":  "하향절삭의 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -1025,15 +1026,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_8",
         "number":  8,
         "question":  "드릴로 구멍을 뚫은 다음 더욱 정밀하게 가공하는 데 사용되는 절삭공구는?",
         "choices":  [
@@ -1047,15 +1048,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_9",
         "number":  9,
         "question":  "연삭 깊이가 얕은 정밀연삭용, 경연삭용, 담금질강, 특수강, 고속도강에 사용하는 연삭숫돌은?",
         "choices":  [
@@ -1069,15 +1070,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_10",
         "number":  10,
         "question":  "연삭 숫돌바퀴를 표시할 때 구성하는 요소가 아닌 것은?",
         "choices":  [
@@ -1091,15 +1092,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_11",
         "number":  11,
         "question":  "주철의 결점인 여리고 약한 인성을 개선하기 위하여 먼저 백주철의 주물을 만들고, 이것을 장시간 열처리하여 탄소의 상태를 분해 또는 소실시켜 인성 또는 연성을 증가시킨 주철은?",
         "choices":  [
@@ -1113,15 +1114,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_12",
         "number":  12,
         "question":  "다음 용도의 선들이 중복되는 부분이 있다. 우선순위대로 나열한 것은?\n\nㄱ. 치수를 이끌어 내기 위한 선\nㄴ. 물체가 보이지 않는 부분의 모양을 나타내기 위한 선\nㄷ. 물체가 보이는 부분의 모양을 나타내기 위한 선\nㄹ. 도형의 중심을 간략하게 표시하기 위한 선",
         "choices":  [
@@ -1135,15 +1136,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_13",
         "number":  13,
         "question":  "기계제도에서 사용하는 치수 공차 및 끼워맞춤과 관련된 용어 설명으로 틀린 것은?",
         "choices":  [
@@ -1157,15 +1158,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_14",
         "number":  14,
         "question":  "투상선이 평행하게 물체를 지나 투상면에 수직으로 닿고 투상된 물체가 투상면에 나란하기 때문에 어떤 물체의 형상도 정확하게 표현할 수 있는 투상도는?",
         "choices":  [
@@ -1179,15 +1180,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_15",
         "number":  15,
         "question":  "브로치(Broach) 가공에 대한 설명으로 틀린 것은?",
         "choices":  [
@@ -1201,15 +1202,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_16",
         "number":  16,
         "question":  "연삭액의 구비조건으로 틀린 것은?",
         "choices":  [
@@ -1223,15 +1224,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_17",
         "number":  17,
         "question":  "기어 피치원의 지름이 $150\\text{mm}$, 모듈이 $5$인 표준형 기어의 잇수는? (단, 비틀림각은 $30^\\circ$이다)",
         "choices":  [
@@ -1245,15 +1246,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_18",
         "number":  18,
         "question":  "연마제를 가공액과 혼합한 후 압축공기와 함께 노즐에서 고속 분사하여 다듬면을 얻는 정밀입자가공은?",
         "choices":  [
@@ -1267,15 +1268,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_19",
         "number":  19,
         "question":  "나사의 도시법에 대한 설명으로 틀린 것은?",
         "choices":  [
@@ -1289,15 +1290,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_20",
         "number":  20,
         "question":  "절삭공구 재료의 구비조건으로 적합하지 않은 것은?",
         "choices":  [
@@ -1311,15 +1312,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_2_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_1",
         "number":  1,
         "question":  "원통 내면 가공 시 내경보다 다소 큰 강철볼(Ball)을 압입하여 통과시켜서 소성 변형을 주고 고정밀도의 치수를 얻는 가공법은?",
         "choices":  [
@@ -1333,15 +1334,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_2",
         "number":  2,
         "question":  "재료 표면에 원하는 성질을 얻기 위해 표면에 열을 가하거나 입히거나 벗기는 작업은?",
         "choices":  [
@@ -1355,15 +1356,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_3",
         "number":  3,
         "question":  "표면의 줄무늬 방향기호에 한 설명으로 맞는 것은?",
         "choices":  [
@@ -1377,15 +1378,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_4",
         "number":  4,
         "question":  "척 핸들을 사용해서 척의 측면에 만들어진 1개의 구멍을 조이면, 3개의 조(Jaw)가 동시에 움직여서 공작물을 고정시키는 선반의 장치는?",
         "choices":  [
@@ -1399,15 +1400,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_5",
         "number":  5,
         "question":  "상향절삭의 특징이 아닌 것은?",
         "choices":  [
@@ -1421,15 +1422,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_6",
         "number":  6,
         "question":  "플랭크 마모라고도 하며 절삭공구의 측면과 가공면과의 마찰에 의하여 발생되는 마모현상으로 주철과 같이 취성이 있는 재료를 절삭할 때 발생하여 절삭날(공구인선)을 파손시키는 마멸은?",
         "choices":  [
@@ -1443,15 +1444,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_7",
         "number":  7,
         "question":  "드릴가공의 불량원인이 아닌 것은?",
         "choices":  [
@@ -1465,15 +1466,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_8",
         "number":  8,
         "question":  "A사에서는 연삭작업 시 안전수칙을 제정하려 한다. 적당하지 않은 것은?",
         "choices":  [
@@ -1487,15 +1488,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_9",
         "number":  9,
         "question":  "다음 중 $M12 \\times 1.5$ 탭을 가공하기 위한 드릴링 작업 기초구멍으로 적합한 것은?",
         "choices":  [
@@ -1509,15 +1510,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_10",
         "number":  10,
         "question":  "다음 \u003c보기\u003e에서 설명하는 작업은?\n\n\u003c보기\u003e\n• 평면연삭법에 비해 절삭 깊이를 크게 한다.\n• 많은 횟수의 테이블 이송으로 연삭 다듬질을 하는 방법이다.\n• 숫돌의 형상 변화가 적고 연삭능률이 높아서 성형 연삭에 주로 응용된다.",
         "choices":  [
@@ -1531,15 +1532,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_11",
         "number":  11,
         "question":  "도면에 가는 실선을 이용하여 등 간격의 사선으로 어느 영역을 표시하였다. 이 영역의 의미는?",
         "choices":  [
@@ -1553,15 +1554,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_12",
         "number":  12,
         "question":  "치수를 표현하는 기호 중 치수와 병용되어 특수한 의미를 나타내는 기호를 적용할 때가 있다. 이 기호에 해당하지 않는 것은?",
         "choices":  [
@@ -1575,15 +1576,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_13",
         "number":  13,
         "question":  "구멍 $50\\text{ }_{+0.009}^{+0.025}$ 에 조립되는 축의 치수가 $50\\text{ }_{-0.016}^{+0}$ 이라면 이는 어떤 끼워맞춤인가?",
         "choices":  [
@@ -1597,15 +1598,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_14",
         "number":  14,
         "question":  "다음 그림에 대한 설명으로 옳은 것은?",
         "choices":  [
@@ -1619,15 +1620,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_15",
         "number":  15,
         "question":  "연삭숫돌의 결함 중 떨림의 발생원인이 아닌 것은?",
         "choices":  [
@@ -1641,15 +1642,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_16",
         "number":  16,
         "question":  "기어가공에서 창성에 의한 절삭법이 아닌 것은?",
         "choices":  [
@@ -1663,15 +1664,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_17",
         "number":  17,
         "question":  "다음 \u003c보기\u003e에서 설명하는 가공은?\n\n\u003c보기\u003e\n· 진폭이 수 mm이고 매분 수백에서 수천의 값을 가지는 진동으로 가공\n· 입도가 낮고 연한 숫돌을 낮은 압력으로 진동하여 가공\n· 매끈하고 방향성이 없고, 표면의 변질부가 적다.",
         "choices":  [
@@ -1685,15 +1686,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_18",
         "number":  18,
         "question":  "그림과 같은 입체도의 평면도로 적당한 것은?",
         "choices":  [
@@ -1707,15 +1708,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_19",
         "number":  19,
         "question":  "KS B 1311 TG $20 \\times 12 \\times 70$으로 호칭되는 키의 설명으로 옳은 것은?",
         "choices":  [
@@ -1729,15 +1730,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_20",
         "number":  20,
         "question":  "알루미나($Al_2O_3$) 분말에 규소(Si) 및 마그네슘(Mg) 등의 산화물이나 그 밖에 다른 산화물의 첨가물을 넣고 소결한 것은?",
         "choices":  [
@@ -1751,15 +1752,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2018_4_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_5",
         "number":  5,
         "question":  "날 여유각이 클 때의 특징으로 옳은 것은?",
         "choices":  [
@@ -1773,15 +1774,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_6",
         "number":  6,
         "question":  "볼트, 너트 등이 닿는 부분을 깎아서 자리를 만드는 작업은?",
         "choices":  [
@@ -1795,15 +1796,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_7",
         "number":  7,
         "question":  "바깥지름 원통연삭에서 연삭숫돌이 숫돌의 반지름 방향으로 이송하면서 공작물을 연삭하는 방식은?",
         "choices":  [
@@ -1817,15 +1818,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_8",
         "number":  8,
         "question":  "래핑, 호닝, 슈퍼피니싱 등 숫돌입자 등을 이용하여 다듬거나 정밀하게 절삭하는 마무리 가공을 일컫는 용어는?",
         "choices":  [
@@ -1839,15 +1840,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_9",
         "number":  9,
         "question":  "절연성의 가공액 내에서 전극과 공작물 사이에서 일어나는 불꽃방전에 의하여 재료를 조금씩 용해시켜 원하는 형상의 제품을 얻는 가공법은?",
         "choices":  [
@@ -1861,15 +1862,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_10",
         "number":  10,
         "question":  "가공형상의 전극을 음극에, 일감을 양극에 장착하고 가까운 거리에 놓은 후 그 사이에 전해액을 분출시키며 전기를 통하게 하면 양극에서 용해·용출현상이 일어나 가공하는 가공법은?",
         "choices":  [
@@ -1883,15 +1884,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_11",
         "number":  11,
         "question":  "브로칭 머신에 대한 설명 중 맞는 것은?",
         "choices":  [
@@ -1905,15 +1906,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_12",
         "number":  12,
         "question":  "다음 중 광물성 기름과 금속성 비누, 물 등을 혼합하여 반고형으로 만든 윤활제는?",
         "choices":  [
@@ -1927,15 +1928,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_13",
         "number":  13,
         "question":  "CNC 가공에 사용하는 코드 중 CNC 기계에 장착된 부수장치들의 동작을 실행하기 위한 것은?",
         "choices":  [
@@ -1949,15 +1950,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_14",
         "number":  14,
         "question":  "절삭유를 사용함으로써 얻을 수 있는 효과가 아닌 것은?",
         "choices":  [
@@ -1971,15 +1972,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_15",
         "number":  15,
         "question":  "기어와 피니언이 맞물렸다. 두 기어의 수치 중 같은 값을 갖는 것은?",
         "choices":  [
@@ -1993,15 +1994,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_16",
         "number":  16,
         "question":  "다음은 기어를 그린 도면이다. 이 그림에서 2점쇄선으로 그린 부분이 나타내는 것은?",
         "choices":  [
@@ -2015,15 +2016,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_17",
         "number":  17,
         "question":  "구멍의 지름 치수가 $\\phi 50^{+0.025}_{-0.012}$ 로 표시되어 있을 때 치수공차는 몇 mm인가?",
         "choices":  [
@@ -2037,15 +2038,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_18",
         "number":  18,
         "question":  "스탬핑 가공 중 특정 형상으로 경화시킨 펀치로 판재의 표면을 압입하여 공동부를 만드는 작업은?",
         "choices":  [
@@ -2059,15 +2060,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_19",
         "number":  19,
         "question":  "한 변의 길이가 2cm인 사각기둥을 양쪽에서 1,000N으로 잡아당길 때 작용하는 응력은?",
         "choices":  [
@@ -2081,15 +2082,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_20",
         "number":  20,
         "question":  "초경합금의 모재 표면에 고경도의 물질인 TiC, TiN를 수 마이크로미터만큼 피복한 합금은?",
         "choices":  [
@@ -2103,15 +2104,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_2_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_1",
         "number":  1,
         "question":  "선반작업 시 안전사항으로 옳은 것은?",
         "choices":  [
@@ -2125,15 +2126,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_2",
         "number":  2,
         "question":  "1대의 드릴링 머신에 다수의 스핀들이 설치되어 1회에 여러 개의 구멍을 동시에 가공할 수 있는 드릴링 머신은?",
         "choices":  [
@@ -2147,15 +2148,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_3",
         "number":  3,
         "question":  "나사의 유효지름을 측정하는 방법이 아닌 것은?",
         "choices":  [
@@ -2169,15 +2170,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_4",
         "number":  4,
         "question":  "밀링가공 시 커터날의 회전 방향과 일감의 이송이 서로 반대 방향일 때의 특징으로 옳은 것은?",
         "choices":  [
@@ -2191,15 +2192,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_5",
         "number":  5,
         "question":  "밀링머신에서 직접 분할법을 사용할 때 다음 중 분할이 가능한 등분은?",
         "choices":  [
@@ -2213,15 +2214,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_6",
         "number":  6,
         "question":  "다음 중 $M10 \\times 1.5$ 탭을 가공하기 위한 드릴링 작업 기초 구멍으로 적합한 것은?",
         "choices":  [
@@ -2235,15 +2236,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_7",
         "number":  7,
         "question":  "센터나 척을 사용하기 어려운 가늘고 긴 원통형의 공작을 통과 이송, 전후 이송, 단 이송 등의 방법을 사용하여 가공하는 원통 연삭법은?",
         "choices":  [
@@ -2257,15 +2258,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_8",
         "number":  8,
         "question":  "지름 $20\\text{cm}$짜리 두께 $2\\text{cm}$의 숫돌바퀴로 길이 $10\\text{cm}$짜리 원통을 연삭할 때 숫돌바퀴의 마모된 부피가 $0.1\\text{cm}^3$이고 원통의 마모된 부피가 $1\\text{cm}^3$라면 연삭비는?",
         "choices":  [
@@ -2279,15 +2280,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_9",
         "number":  9,
         "question":  "경도가 매우 높고 발열이 작은 초경합금, 특수주철 등에 사용하는 숫돌입자는?",
         "choices":  [
@@ -2301,15 +2302,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_10",
         "number":  10,
         "question":  "다음 중 브로칭 작업에서 가장 빠른 가공속도로 작업해야 하는 재료는?",
         "choices":  [
@@ -2323,15 +2324,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_11",
         "number":  11,
         "question":  "기어면을 매끄럽고 정밀하게 다듬질하기 위해 높은 정밀도로 깎여진 가는 홈붙이날 커터로 다듬는 가공은?",
         "choices":  [
@@ -2345,15 +2346,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_12",
         "number":  12,
         "question":  "연마제를 가공액과 혼합한 후 압축공기와 함께 노즐에서 고속 분사하여 다듬면을 얻는 가공은?",
         "choices":  [
@@ -2367,15 +2368,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_13",
         "number":  13,
         "question":  "방전가공의 특징으로 옳지 않은 것은?",
         "choices":  [
@@ -2389,15 +2390,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_14",
         "number":  14,
         "question":  "CNC 가공 명령어 중 위치결정을 의미하는 G코드는?",
         "choices":  [
@@ -2411,15 +2412,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_15",
         "number":  15,
         "question":  "나사를 1회전시킬 때 나사산이 축 방향으로 움직인 거리를 무엇이라고 하는가?",
         "choices":  [
@@ -2433,15 +2434,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_16",
         "number":  16,
         "question":  "다음은 스퍼기어 도면의 일부이다. 이에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -2455,15 +2456,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_17",
         "number":  17,
         "question":  "얇은 판재나 드로잉 가공한 용기의 테두리를 프레스 기계나 선반으로 둥글게 마는 가공법은?",
         "choices":  [
@@ -2477,15 +2478,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_18",
         "number":  18,
         "question":  "기계재료의 성질 중 잘 부서지고 깨지지만 딱딱한 재료에 대한 표현으로 옳은 것은?",
         "choices":  [
@@ -2499,15 +2500,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_19",
         "number":  19,
         "question":  "다음 합금 중 소결하지 않는 합금강은?",
         "choices":  [
@@ -2521,15 +2522,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_20",
         "number":  20,
         "question":  "도면을 그릴 때 단면의 무게중심을 연결한 선에 사용하는 선의 종류는?",
         "choices":  [
@@ -2543,15 +2544,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2019_4_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_1",
         "number":  1,
         "question":  "절삭저항에 배분되는 힘 중 가장 작은 것은?",
         "choices":  [
@@ -2565,15 +2566,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_2",
         "number":  2,
         "question":  "선반에서 가공되는 공작물의 길이가 길어서 회전 중 떨림이 발생하는 재료를 지지하거나 드릴 같은 내경 절삭공구를 고정할 때 사용하는 것은?",
         "choices":  [
@@ -2587,15 +2588,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_3",
         "number":  3,
         "question":  "공구의 윗면 경사면과 마찰하는 재료의 표면은 편평하나 반대쪽 표면은 톱니 모양으로 가공면이 다소 거칠고 공구 손상도 일어나기 쉬운 칩 형태는?",
         "choices":  [
@@ -2609,15 +2610,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_4",
         "number":  4,
         "question":  "3개의 클로를 움직여서 직경이 작은 공작물을 고정하는 데 사용하는 척은?",
         "choices":  [
@@ -2631,15 +2632,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_5",
         "number":  5,
         "question":  "내경과 중심이 같도록 외경을 가공할 때 사용하는 선반의 부속장치는?",
         "choices":  [
@@ -2653,15 +2654,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_6",
         "number":  6,
         "question":  "선반에서 가공할 수 없는 작업은?",
         "choices":  [
@@ -2675,15 +2676,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_7",
         "number":  7,
         "question":  "선반의 공구 경사각에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -2697,15 +2698,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_8",
         "number":  8,
         "question":  "표준 드릴날의 각으로 옳지 않은 것은?",
         "choices":  [
@@ -2719,15 +2720,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_9",
         "number":  9,
         "question":  "보링머신의 크기 표시방법이 아닌 것은?",
         "choices":  [
@@ -2741,15 +2742,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_10",
         "number":  10,
         "question":  "연삭숫돌의 결합제 중 규산나트륨을 주재료로 하고 대형 숫돌바퀴를 만들 수 있는 결합제를 사용한 것은?",
         "choices":  [
@@ -2763,15 +2764,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_11",
         "number":  11,
         "question":  "입도가 거친 연삭숫돌을 선택하는 경우가 아닌 것은?",
         "choices":  [
@@ -2785,15 +2786,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_12",
         "number":  12,
         "question":  "기어가공의 방법 중 생산성이 높고 정밀도가 좋아서 가장 일반적으로 사용되고 있는 창성방법은?",
         "choices":  [
@@ -2807,15 +2808,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_13",
         "number":  13,
         "question":  "방전가공과 전해가공에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -2829,15 +2830,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_14",
         "number":  14,
         "question":  "수기가공과 비교한 CNC 가공의 특징으로 옳지 않은 것은?",
         "choices":  [
@@ -2851,15 +2852,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_15",
         "number":  15,
         "question":  "지름이 1cm인 환봉을 양쪽에서 20kgf로 잡아당길 때 작용하는 인장응력은?(단, $\\pi=3$이라고 한다)",
         "choices":  [
@@ -2873,15 +2874,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_16",
         "number":  16,
         "question":  "보통주철보다 규소 함유량을 적게 하고 적당량의 망간을 가한 쇳물을 주형에 주입할 때, 경도를 필요로 하는 부분을 빨리 냉각시켜 그 부분의 조직만을 백선화시키는 주철은?",
         "choices":  [
@@ -2895,15 +2896,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_17",
         "number":  17,
         "question":  "액상 또는 기체상의 연료성 화재(휘발유, 벤젠 등)의 분류는?",
         "choices":  [
@@ -2917,15 +2918,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_18",
         "number":  18,
         "question":  "제도 시 사용하는 선의 용도가 옳지 않게 연결된 것은?",
         "choices":  [
@@ -2939,15 +2940,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_19",
         "number":  19,
         "question":  "다음 그림을 3각법으로 투상할 때 평면도로 적절한 것은?",
         "choices":  [
@@ -2961,15 +2962,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_20",
         "number":  20,
         "question":  "다음 그림의 상세도 A의 영역을 나타내는 동그라미를 그린 선의 종류로 적절한 것은?",
         "choices":  [
@@ -2983,15 +2984,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_1_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_1",
         "number":  1,
         "question":  "금속재료가 가지고 있는 연성, 전성, 압축성, 가변형성을 이용하는 공작법은?",
         "choices":  [
@@ -3005,15 +3006,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_2",
         "number":  2,
         "question":  "여러 개의 비슷한 절삭날이 달린 공구를 이용하여 일감의 안팎을 절삭하는 작업으로, 대량 생산에 적합한 가공은?",
         "choices":  [
@@ -3027,15 +3028,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_3",
         "number":  3,
         "question":  "선반에서 가늘고 긴 일감이 절삭력과 자중에 의해 휘거나 처짐이 일어나는 것을 방지하기 위한 부속장치는?",
         "choices":  [
@@ -3049,15 +3050,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_4",
         "number":  4,
         "question":  "보통선반과 같이 가공물을 회전시키면서 특정 장치에 $6 \\sim 8$종의 절삭공구를 장착한 후 가공 순서에 맞게 절삭공구를 변경하며 가공하는 선반으로, 동일 제품의 대량 생산에 적합한 선반은?",
         "choices":  [
@@ -3071,15 +3072,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_5",
         "number":  5,
         "question":  "공구가 분당 120회전하고 공구의 회전지름이 5cm일 때 절삭속도는?",
         "choices":  [
@@ -3093,15 +3094,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_6",
         "number":  6,
         "question":  "형판이나 모형을 본뜨는 장치를 사용하여 프레스나 단조, 주조용 금형과 같은 복잡한 형상을 높은 정밀도로 가공이 가능한 것은?",
         "choices":  [
@@ -3115,15 +3116,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_7",
         "number":  7,
         "question":  "경도가 매우 크고 인성이 작은 절삭공구로 공작물을 가공할 때 발생되는 충격으로 공구날이 모서리를 따라 작은 조각으로 떨어져 나가는 현상은?",
         "choices":  [
@@ -3137,15 +3138,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_8",
         "number":  8,
         "question":  "$M10 \\times 1.5$ 탭을 가공하기 위한 드릴링작업 기초 구멍으로 적합한 것은?",
         "choices":  [
@@ -3159,15 +3160,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_9",
         "number":  9,
         "question":  "가공 후 내부식성과 내마모성이 향상되고 가공 표면에 변질층이 생기지 않으며 복잡한 형상의 제품도 절삭 가능한 연삭은?",
         "choices":  [
@@ -3181,15 +3182,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_10",
         "number":  10,
         "question":  "일반적인 연삭숫돌의 검사 순서로 옳은 것은?",
         "choices":  [
@@ -3203,15 +3204,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_11",
         "number":  11,
         "question":  "연삭숫돌의 결함 중 떨림의 발생원인이 아닌 것은?",
         "choices":  [
@@ -3225,15 +3226,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_12",
         "number":  12,
         "question":  "원통 내면가공 시 내경보다 큰 강철 공(Ball)을 압입하여 통과시켜 소성 변형을 주고 고정밀도의 치수를 얻는 가공은?",
         "choices":  [
@@ -3247,15 +3248,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_13",
         "number":  13,
         "question":  "공작기계 절삭유의 구비조건으로 옳지 않은 것은?",
         "choices":  [
@@ -3269,15 +3270,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_14",
         "number":  14,
         "question":  "두 개 또는 그 이상의 다이나 롤러 사이에 재료나 공구 또는 재료와 공구를 함께 회전시켜 재료 내·외부에 공구의 표면 형상을 새기는 특수 압연법은?",
         "choices":  [
@@ -3291,15 +3292,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_15",
         "number":  15,
         "question":  "합금 공구강 강재에 해당하는 재료기호는?",
         "choices":  [
@@ -3313,15 +3314,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_16",
         "number":  16,
         "question":  "표준 고속도강의 비율은?",
         "choices":  [
@@ -3335,15 +3336,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_17",
         "number":  17,
         "question":  "드릴작업의 안전에 관한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -3357,15 +3358,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_18",
         "number":  18,
         "question":  "도면에 굵은 1점쇄선으로 표시되어 있을 경우, 다음 중 어느 경우에 해당되는가?",
         "choices":  [
@@ -3379,15 +3380,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_19",
         "number":  19,
         "question":  "도면기호가 그림과 같이 나타났을 때 투상도 배치로 적절한 것은?",
         "choices":  [
@@ -3401,15 +3402,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_20",
         "number":  20,
         "question":  "투상을 그림처럼 나타냈다면 어떤 투상법인가?",
         "choices":  [
@@ -3423,15 +3424,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2020_2_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_1",
         "number":  1,
         "question":  "다음 그림과 같은 줄눈 모양의 명칭은?",
         "choices":  [
@@ -3445,15 +3446,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_2",
         "number":  2,
         "question":  "굵은 1점쇄선을 사용하는 선으로 가장 적합한 것은?",
         "choices":  [
@@ -3467,15 +3468,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_3",
         "number":  3,
         "question":  "해머작업 시 안전사항으로 옳지 않은 것은?",
         "choices":  [
@@ -3489,15 +3490,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_4",
         "number":  4,
         "question":  "다음 중 장갑을 착용하여야 하는 작업은?",
         "choices":  [
@@ -3511,15 +3512,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_5",
         "number":  5,
         "question":  "다음 중 정면에 들어갈 수 없는 것은?",
         "choices":  [
@@ -3533,15 +3534,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_6",
         "number":  6,
         "question":  "밀링작업에서 원주를 $5^\\circ 30\u0027$씩 등분하려고 한다. 이때 분할판의 구멍열은?",
         "choices":  [
@@ -3555,15 +3556,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_7",
         "number":  7,
         "question":  "일반적으로 보링머신에서 할 수 없는 작업은?",
         "choices":  [
@@ -3577,15 +3578,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_8",
         "number":  8,
         "question":  "브로칭 머신으로 가공할 수 없는 것은?",
         "choices":  [
@@ -3599,15 +3600,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_9",
         "number":  9,
         "question":  "연삭숫돌에서 무딤(Glazing)의 주요원인이 아닌 것은?",
         "choices":  [
@@ -3621,15 +3622,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_10",
         "number":  10,
         "question":  "다음 보기에서 설명하는 정밀입자가공으로 가장 적절한 것은?\n\n[보기]\n입도가 작고 결합도가 작은 숫돌을 공작물에 가볍게 누르고 숫돌을 진동시켜 가공면을 단시간에 매우 매끈한 면으로 초정밀가공하는 가공방법",
         "choices":  [
@@ -3643,15 +3644,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_11",
         "number":  11,
         "question":  "$\\overline{A}B + AB\\overline{C} + ABC$와 같은 것은?",
         "choices":  [
@@ -3665,15 +3666,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_12",
         "number":  12,
         "question":  "1 또는 0과 같이 하나의 입력에 대하여 항상 그에 대응하는 출력을 발생하게 하고, 다음에 새로운 입력이 주어질 때까지 그 상태를 안정적으로 유지하는 회로로, 기억소자로 사용되는 것은?",
         "choices":  [
@@ -3687,15 +3688,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_13",
         "number":  13,
         "question":  "다음 그림에서 스위치 $PBS_1$을 동작시키면 R-a 접점의 동작은?",
         "choices":  [
@@ -3709,15 +3710,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_14",
         "number":  14,
         "question":  "다음 중 위치 검출에 적절하지 않은 것은?",
         "choices":  [
@@ -3731,15 +3732,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_15",
         "number":  15,
         "question":  "각 원의 중심 좌표 치수로 옳은 것은?",
         "choices":  [
@@ -3753,15 +3754,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_16",
         "number":  16,
         "question":  "다음 기하공차의 기호 중 원통도를 나타내는 기호는?",
         "choices":  [
@@ -3775,15 +3776,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_17",
         "number":  17,
         "question":  "수나사, 암나사의 제도방법으로 A, B, C, D에 각각 알맞은 선이 연결된 것은?",
         "choices":  [
@@ -3797,15 +3798,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_18",
         "number":  18,
         "question":  "다음 그림의 (가)와 같은 도면의 명칭은?",
         "choices":  [
@@ -3819,15 +3820,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_19",
         "number":  19,
         "question":  "도면에서 $\\varnothing$ 50 H7/g6로 표기된 끼워맞춤에 관한 내용의 설명으로 틀린 것은?",
         "choices":  [
@@ -3841,15 +3842,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_20",
         "number":  20,
         "question":  "다음 그림의 접점은?",
         "choices":  [
@@ -3863,15 +3864,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_1_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_1",
         "number":  1,
         "question":  "전기적 에너지를 기계적 에너지로 변환시켜 금속, 비금속 등의 재료에 관계없이 정밀가공을 하는 방법은?",
         "choices":  [
@@ -3885,15 +3886,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_2",
         "number":  2,
         "question":  "롤러의 중심거리가 $100\\text{mm}$인 사인바에서 $30^{\\circ}$를 측정하려고 할 때 필요한 게이지 블록은 몇 $\\text{mm}$인가?",
         "choices":  [
@@ -3907,15 +3908,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_3",
         "number":  3,
         "question":  "다음 그림과 같이 선반에서 공작물을 테이퍼 절삭 가공할 때 심압대의 편위거리를 $30\\text{mm}$로 하면, 테이퍼부의 길이 $l$은 몇 $\\text{mm}$인가?",
         "choices":  [
@@ -3929,15 +3930,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_4",
         "number":  4,
         "question":  "연삭비를 옳게 나타낸 것은?",
         "choices":  [
@@ -3951,15 +3952,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_5",
         "number":  5,
         "question":  "칩이 절삭공구의 경사면 위를 미끄러지면서 나갈 때 마찰력에 의하여 경사면 일부가 오목하게 파이는 것은?",
         "choices":  [
@@ -3973,15 +3974,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_6",
         "number":  6,
         "question":  "밀링 상향절삭(Up Cutting)의 설명으로 맞는 것은?",
         "choices":  [
@@ -3995,15 +3996,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_7",
         "number":  7,
         "question":  "절삭저항 3분력이 아닌 것은?",
         "choices":  [
@@ -4017,15 +4018,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_8",
         "number":  8,
         "question":  "지름이 $50\\text{mm}$인 연강 둥근 막대를 선반에서 절삭할 때 주축의 회전수를 $100\\text{rpm}$이라 하면, 절삭속도는 몇 $\\text{m/min}$인가?",
         "choices":  [
@@ -4039,15 +4040,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_9",
         "number":  9,
         "question":  "연삭에서 결합도에 따른 경도의 선정기준 중 결합도가 높은 숫돌(단단한 숫돌)을 사용해야 할 때는?",
         "choices":  [
@@ -4061,15 +4062,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_10",
         "number":  10,
         "question":  "드릴작업의 안전관리에서 틀린 것은?",
         "choices":  [
@@ -4083,15 +4084,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_11",
         "number":  11,
         "question":  "암이나 리브, 림 등의 단면을 나타내기 위해 회전도시 단면도로 나타내려고 한다. 이 단면 현상을 도형 내의 절단한 곳에 겹쳐서 나타낼 때 사용하는 선은?",
         "choices":  [
@@ -4105,15 +4106,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_12",
         "number":  12,
         "question":  "테이퍼핀(Taper Pin)의 호칭지름 표기는?",
         "choices":  [
@@ -4127,15 +4128,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_13",
         "number":  13,
         "question":  "나사 기호의 설명 중 틀린 것은?",
         "choices":  [
@@ -4149,15 +4150,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_14",
         "number":  14,
         "question":  "기어를 도시하는 데 있어서 선의 사용방법으로 맞는 것은?",
         "choices":  [
@@ -4171,15 +4172,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_15",
         "number":  15,
         "question":  "가공 표면의 지시기호에 대한 설명 중 틀린 것은?",
         "choices":  [
@@ -4193,15 +4194,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_16",
         "number":  16,
         "question":  "도면에 굵은 1점쇄선으로 표시되어 있을 경우 다음 중 어느 경우에 해당되는가?",
         "choices":  [
@@ -4215,15 +4216,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_17",
         "number":  17,
         "question":  "다음 그림과 같은 입체도에서 화살표 방향이 정면일 경우 제3각법으로 투상한 도면으로 가장 적합한 것은?",
         "choices":  [
@@ -4237,15 +4238,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_18",
         "number":  18,
         "question":  "NC 공작기계의 움직임을 전기적인 신호로 표시하는 일종의 회전 피드백 장치는?",
         "choices":  [
@@ -4259,15 +4260,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_19",
         "number":  19,
         "question":  "기하공차를 적용할 때 단독 형체에 적용하는 공차는?",
         "choices":  [
@@ -4281,15 +4282,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_20",
         "number":  20,
         "question":  "기하공차의 표시방법 중 원통도 공차를 표시한 것은?",
         "choices":  [
@@ -4303,15 +4304,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2021_2_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_1",
         "number":  1,
         "question":  "다음 단면도 중 옳지 않은 것은?",
         "choices":  [
@@ -4325,15 +4326,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_2",
         "number":  2,
         "question":  "다음 그림과 같은 표준 스퍼기어 도시 도면에서 모듈값은?",
         "choices":  [
@@ -4347,15 +4348,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_3",
         "number":  3,
         "question":  "다음 표면경화 열처리 방법 중 화학적 방법은?",
         "choices":  [
@@ -4369,15 +4370,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_4",
         "number":  4,
         "question":  "다음 그림과 같이 도면에 표시가 되었다면 b영역이 의미하는 내용으로 옳은 것은?",
         "choices":  [
@@ -4391,15 +4392,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_5",
         "number":  5,
         "question":  "기계가공 도면에서 기계가공 방법 기호 중 줄 다듬질 가공기호는?",
         "choices":  [
@@ -4413,15 +4414,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_6",
         "number":  6,
         "question":  "지름이 $50\\text{mm}$인 연강 둥근 막대를 선반에서 절삭할 때 주축의 회전수를 $100\\text{rpm}$이라 하면, 절삭속도는 몇 $\\text{m/min}$인가?",
         "choices":  [
@@ -4435,15 +4436,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_7",
         "number":  7,
         "question":  "보통선반의 심압대에 $\\varnothing 13\\text{mm}$ 이상의 드릴을 고정하는 데 사용하는 도구는?",
         "choices":  [
@@ -4457,15 +4458,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_8",
         "number":  8,
         "question":  "가는 지름의 환봉재 또는 일정 크기의 재료를 빠르게 중심을 찾아 고정하는 선반척은?",
         "choices":  [
@@ -4479,15 +4480,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_9",
         "number":  9,
         "question":  "연삭숫돌의 트루잉(Truing)이 필요한 경우는?",
         "choices":  [
@@ -4501,15 +4502,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_10",
         "number":  10,
         "question":  "다음 그림과 같은 커터를 이용하여 기어를 가공하는 방법은?",
         "choices":  [
@@ -4523,15 +4524,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_11",
         "number":  11,
         "question":  "회전속도가 600rpm, 이송속도가 0.1mm/rev이고, 1회당 $x$방향으로 1mm씩 전진시킨다고 할 때 지름 50mm, 길이 150mm인 공작물을 지름 40mm로 전체 길이를 가공한다면 걸리는 최소 시간은? (단, $x$축 이송시간은 고려하지 않는다)",
         "choices":  [
@@ -4545,15 +4546,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_12",
         "number":  12,
         "question":  "선반작업 시 안전사항으로 틀린 것은?",
         "choices":  [
@@ -4567,15 +4568,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_13",
         "number":  13,
         "question":  "마이크로미터를 사용할 때 주의사항으로 틀린 것은?",
         "choices":  [
@@ -4589,15 +4590,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_14",
         "number":  14,
         "question":  "다음 중 기계적 에너지를 유압에너지로 바꾸는 유압기기는?",
         "choices":  [
@@ -4611,15 +4612,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_15",
         "number":  15,
         "question":  "어느 게이지의 압력이 $8 \\text{kgf/cm}^2$이었다면, 절대압력은 약 몇 $\\text{kgf/cm}^2$인가?",
         "choices":  [
@@ -4633,15 +4634,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_16",
         "number":  16,
         "question":  "$\\overline{\\overline{A}+B} \\cdot B + (C + \\overline{C}) \\cdot \\overline{C} + \\overline{A}$와 같은 것은?",
         "choices":  [
@@ -4655,15 +4656,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_17",
         "number":  17,
         "question":  "센서 선정 시 고려사항으로 옳게 짝지어진 것이 아닌 것은?",
         "choices":  [
@@ -4677,15 +4678,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_18",
         "number":  18,
         "question":  "마이크로 스위치의 장점이 아닌 것은?",
         "choices":  [
@@ -4699,15 +4700,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_19",
         "number":  19,
         "question":  "센서용 검출 변환기에서 제베크 효과(Seebeck Effect)를 이용한 것은?",
         "choices":  [
@@ -4721,15 +4722,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_20",
         "number":  20,
         "question":  "다음 보기에서 설명하는 자동화 기술보전은?\n[보기]\n설비의 건강 상태를 유지하고 고장이 나지 않도록 열화를 방지하기 위한 일상보전, 열화를 측정하기 위한 정기검사 또는 설비보전 열화를 조기에 복원시키기 위한 정비 등을 하는 보전활동",
         "choices":  [
@@ -4743,15 +4744,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_1_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_1",
         "number":  1,
         "question":  "다음 그림과 같은 줄눈 모양의 명칭은?",
         "choices":  [
@@ -4765,15 +4766,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_2",
         "number":  2,
         "question":  "$\\oplus \\phi 0.05 \\textcircled{M} | A$ 에 대한 설명으로 적절하지 않은 것은?",
         "choices":  [
@@ -4787,15 +4788,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_3",
         "number":  3,
         "question":  "다음 표와 그림을 참조할 때 50H7의 아래치수 허용값은?",
         "choices":  [
@@ -4809,15 +4810,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_4",
         "number":  4,
         "question":  "다음 그림과 같이 $96\\text{mm} \\times 16\\text{mm}$의 측정면을 가진 담금질 강제 블록 몇 개를 조합하여 임의의 각도를 만들어 측정하는 각도게이지는?",
         "choices":  [
@@ -4831,15 +4832,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_5",
         "number":  5,
         "question":  "연삭숫돌의 트루잉(Truing)이 필요한 경우는?",
         "choices":  [
@@ -4853,15 +4854,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_6",
         "number":  6,
         "question":  "스폿 페이싱에 대한 설명으로 옳은 것은?",
         "choices":  [
@@ -4875,15 +4876,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_7",
         "number":  7,
         "question":  "밀링가공의 절삭 방향인 상향절삭과 비교한 하향절삭에 대한 설명으로 옳은 것은?",
         "choices":  [
@@ -4897,15 +4898,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_8",
         "number":  8,
         "question":  "드릴가공 시 안전에 관한 설명 중 옳지 않은 것은?",
         "choices":  [
@@ -4919,15 +4920,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_9",
         "number":  9,
         "question":  "선반의 편심가공을 위해 필요한 척은?",
         "choices":  [
@@ -4941,15 +4942,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_10",
         "number":  10,
         "question":  "일반적으로 밀링머신에서 할 수 없는 작업은?",
         "choices":  [
@@ -4963,15 +4964,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_11",
         "number":  11,
         "question":  "일감을 절삭할 때 바이트가 받는 절삭저항의 크기 및 방향에 미치는 영향이 가장 적은 것은?",
         "choices":  [
@@ -4985,15 +4986,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_12",
         "number":  12,
         "question":  "수평(Horizontal) 및 만능 밀링머신(Universal Milling Machine)의 크기를 표시한 것 중 틀린 것은?",
         "choices":  [
@@ -5007,15 +5008,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_13",
         "number":  13,
         "question":  "마이크로 스위치의 장점이 아닌 것은?",
         "choices":  [
@@ -5029,15 +5030,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_14",
         "number":  14,
         "question":  "구멍 $50^{+0.025}_{+0.009}$에 조립되는 축의 치수가 $50^0_{-0.016}$이라면, 이는 어떤 끼워맞춤인가?",
         "choices":  [
@@ -5051,15 +5052,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_15",
         "number":  15,
         "question":  "레버가 오른쪽 그림과 같이 맞춰져 있고, 눈금이 왼쪽과 같을 때 측정값을 바르게 읽은 것은?",
         "choices":  [
@@ -5073,15 +5074,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_16",
         "number":  16,
         "question":  "스트레인 게이지를 이용하여 만들 수 있는 센서는?",
         "choices":  [
@@ -5095,15 +5096,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_17",
         "number":  17,
         "question":  "다음 센서 중 $p$형 반도체와 $n$형 반도체의 접합부에서 발생하는 광기전력 효과를 이용한 센서는?",
         "choices":  [
@@ -5117,15 +5118,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_18",
         "number":  18,
         "question":  "전자개폐기의 철심이 진동할 경우 원인으로 가장 적합한 것은?",
         "choices":  [
@@ -5139,15 +5140,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_19",
         "number":  19,
         "question":  "$50\\text{Hz}$로 설계된 3상 유도전동기를 $60\\text{Hz}$에서 사용하면 나타나는 현상이 아닌 것은?",
         "choices":  [
@@ -5161,15 +5162,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_20",
         "number":  20,
         "question":  "다음 그림의 접점은?",
         "choices":  [
@@ -5183,15 +5184,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2022_2_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_1",
         "number":  1,
         "question":  "구성인선의 생애주기로 옳은 것은?",
         "choices":  [
@@ -5205,15 +5206,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_2",
         "number":  2,
         "question":  "다음 보기에서 설명하는 척은?\n[보기]\n척 핸들을 사용해서 조(Jaw)의 끝부분과 척의 측면이 만나는 곳에 만들어진 4개의 구멍을 각각 조이면, 4개의 조도 각각 움직여 공작물을 고정시킨다.",
         "choices":  [
@@ -5227,15 +5228,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_3",
         "number":  3,
         "question":  "상향절삭의 장점으로 옳은 것은?",
         "choices":  [
@@ -5249,15 +5250,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_4",
         "number":  4,
         "question":  "날끝의 길이 $4\\text{mm}$, 이송 $0.04\\text{mm/rev}$, $400\\text{rpm}$으로 회전하는 드릴이 $28\\text{mm}$ 판을 관통하는 데 걸리는 시간은?",
         "choices":  [
@@ -5271,15 +5272,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_5",
         "number":  5,
         "question":  "밀링머신 구조 중 무거운 금속으로 제작하여 바닥에 고정시켜 진동을 흡수하고 자세를 잡아 주는 부분은?",
         "choices":  [
@@ -5293,15 +5294,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_6",
         "number":  6,
         "question":  "표제란에 기재되는 척도에 관한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5315,15 +5316,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_7",
         "number":  7,
         "question":  "다음 그림과 같이 단면을 표시하는 단면도는?",
         "choices":  [
@@ -5337,15 +5338,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_8",
         "number":  8,
         "question":  "단면도를 나타낼 때 긴 쪽 방향으로 절단하여 도시할 수 있는 것은?",
         "choices":  [
@@ -5359,15 +5360,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_9",
         "number":  9,
         "question":  "다음 그림과 같은 도면에 지시한 기하공차의 설명으로 가장 옳은 것은?",
         "choices":  [
@@ -5381,15 +5382,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_10",
         "number":  10,
         "question":  "서로 물리는 기어와 피니언의 잇수가 $28$개와 $22$개일 때 두 기어의 축간거리는?(단 모듈은 $2$이다)",
         "choices":  [
@@ -5403,15 +5404,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_11",
         "number":  11,
         "question":  "나사 측정방법에 해당하지 않는 것은?",
         "choices":  [
@@ -5425,15 +5426,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_12",
         "number":  12,
         "question":  "피치원의 지름이 $50\\text{mm}$이고, 이의 개수가 $25$개인 기어의 피치($p$)는?",
         "choices":  [
@@ -5447,15 +5448,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_13",
         "number":  13,
         "question":  "$7206$ C DB 볼베어링의 지름은 몇 $\\text{mm}$인가?",
         "choices":  [
@@ -5469,15 +5470,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_14",
         "number":  14,
         "question":  "다음과 같이 측정하는 각도게이지는?",
         "choices":  [
@@ -5491,15 +5492,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_15",
         "number":  15,
         "question":  "다음 그림과 같이 도면에 표시가 되었다면 b영역이 의미하는 내용으로 옳은 것은?",
         "choices":  [
@@ -5513,15 +5514,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_16",
         "number":  16,
         "question":  "다음 그림과 같은 커터를 이용하여 기어를 가공하는 방법은?",
         "choices":  [
@@ -5535,15 +5536,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_17",
         "number":  17,
         "question":  "3상 유도전동기의 회전원리에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5557,15 +5558,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_18",
         "number":  18,
         "question":  "3상 유도모터에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5579,15 +5580,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_19",
         "number":  19,
         "question":  "피스톤 운동이 비스듬한 회전판에 의해 회전운동으로 전환되는 공압모터는?",
         "choices":  [
@@ -5601,15 +5602,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_20",
         "number":  20,
         "question":  "공압모터에 비해 유압모터가 갖는 특징으로 옳지 않은 것은?",
         "choices":  [
@@ -5623,15 +5624,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_1_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_1",
         "number":  1,
         "question":  "빌트 업 에지 현상에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5645,15 +5646,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_2",
         "number":  2,
         "question":  "공작물의 중심을 빨리 맞출 수는 있지만, 공작물의 정밀도는 다소 떨어지며 정해진 중심선에서 작업을 해야 하는 공작물 고정구는?",
         "choices":  [
@@ -5667,15 +5668,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_3",
         "number":  3,
         "question":  "하향절삭에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5689,15 +5690,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_4",
         "number":  4,
         "question":  "절삭속도 일정제어방식과 회전수 일정제어방식에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5711,15 +5712,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_5",
         "number":  5,
         "question":  "공작물을 물고 있는 상태에서 절삭각도를 조절할 수 있는 밀링머신 부속장치는?",
         "choices":  [
@@ -5733,15 +5734,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_6",
         "number":  6,
         "question":  "표제란에 기재되는 척도에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5755,15 +5756,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_7",
         "number":  7,
         "question":  "다음 그림과 같이 도시된 단면도는?",
         "choices":  [
@@ -5777,15 +5778,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_8",
         "number":  8,
         "question":  "단면도법 중 축을 길이 방향으로 단면하지 않는 이유로 옳은 것은?",
         "choices":  [
@@ -5799,15 +5800,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_9",
         "number":  9,
         "question":  "다음 중 파선을 옳게 표시한 것은?",
         "choices":  [
@@ -5821,15 +5822,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_10",
         "number":  10,
         "question":  "다음 도면에 대해 옳게 설명한 것은?",
         "choices":  [
@@ -5843,15 +5844,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_11",
         "number":  11,
         "question":  "다음 중 비접촉식 측정침은?",
         "choices":  [
@@ -5865,15 +5866,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_12",
         "number":  12,
         "question":  "서로 접촉하고 있는 마찰차의 지름이 각각 300mm, 200mm일 때, 원동차가 600rpm으로 회전하고 있다면 종동차의 접촉면에서 속도는 몇 m/s인가?",
         "choices":  [
@@ -5887,15 +5888,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_13",
         "number":  13,
         "question":  "롤러 베어링에서 전동체가 접촉되지 않고 일정한 간격을 유지할 수 있게 하는 것은?",
         "choices":  [
@@ -5909,15 +5910,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_14",
         "number":  14,
         "question":  "밀링작업 시 안전에 관한 사항으로 옳지 않은 것은?",
         "choices":  [
@@ -5931,15 +5932,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_15",
         "number":  15,
         "question":  "다음 선의 용도는?",
         "choices":  [
@@ -5953,15 +5954,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_16",
         "number":  16,
         "question":  "다음 중 치형 모양의 커터로 기어를 다듬는 가공은?",
         "choices":  [
@@ -5975,15 +5976,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_17",
         "number":  17,
         "question":  "강자성체가 영구자석에 접근하면 코일 내 자속의 변화율에 따라 출력 단자 사이에 전압을 발생시켜 물체의 유무를 판단하는 센서는?",
         "choices":  [
@@ -5997,15 +5998,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_18",
         "number":  18,
         "question":  "다음 스위치에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6019,15 +6020,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_19",
         "number":  19,
         "question":  "다음 중 공압모터의 특징에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6041,15 +6042,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_20",
         "number":  20,
         "question":  "다음은 공압모터의 종류 중 하나이다. 어느 형태의 모터인가?",
         "choices":  [
@@ -6063,15 +6064,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2023_2_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_1",
         "number":  1,
         "question":  "다음 그림의 투상법에 해당하는 투상법 기호는?",
         "choices":  [
@@ -6085,15 +6086,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_2",
         "number":  2,
         "question":  "도면에서 열처리를 지시할 때 표면경화 또는 침탄경화해야 할 영역을 지시할 때 사용하는 선은?",
         "choices":  [
@@ -6107,15 +6108,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_3",
         "number":  3,
         "question":  "표면 지시의 기호에서 $C$ 자리에 기재해야 하는 기호는?",
         "choices":  [
@@ -6129,15 +6130,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_4",
         "number":  4,
         "question":  "롤러 베어링의 종류 중 직경이 $5mm$ 이하이고, 롤러의 길이가 직경의 $3\\sim10$배이며, 비교적 큰 레이디얼 부하능력을 가지고 있는 베어링은?",
         "choices":  [
@@ -6151,15 +6152,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_5",
         "number":  5,
         "question":  "다음 기어 가공방법 중 창성에 의한 방법이 아닌 것은?",
         "choices":  [
@@ -6173,15 +6174,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_6",
         "number":  6,
         "question":  "스프링의 제도에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6195,15 +6196,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_7",
         "number":  7,
         "question":  "구성인선에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6217,15 +6218,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_8",
         "number":  8,
         "question":  "드릴에서 날 사이의 공간으로 칩이 빠져나가는 곳의 명칭은?",
         "choices":  [
@@ -6239,15 +6240,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_9",
         "number":  9,
         "question":  "구멍 $50_{0}^{+0.25}$ 이 축 $50_{+0.35}^{+0.5}$ 일 때, 끼워맞춤의 종류는?",
         "choices":  [
@@ -6261,15 +6262,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_10",
         "number":  10,
         "question":  "수직선반의 구성품 중 기둥 앞에서 상하운동을 하는 부분은?",
         "choices":  [
@@ -6283,15 +6284,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_11",
         "number":  11,
         "question":  "연삭숫돌의 3요소가 아닌 것은?",
         "choices":  [
@@ -6305,15 +6306,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_12",
         "number":  12,
         "question":  "나사의 제도에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6327,15 +6328,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_13",
         "number":  13,
         "question":  "기어측정기로 측정하기 적합하지 않은 것은?",
         "choices":  [
@@ -6349,15 +6350,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_14",
         "number":  14,
         "question":  "전기도면에 $F1, F2..$로 표시된 기호가 있다면 이에 대한 설명으로 옳은 것은?",
         "choices":  [
@@ -6371,15 +6372,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_15",
         "number":  15,
         "question":  "손으로 들고 제어할 수 있을 만한 크기 및 동력의 전동모터를 이용하여 절단, 다듬질, 마름질, 구멍뚫기 등의 작업을 하는 공구는?",
         "choices":  [
@@ -6393,15 +6394,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_16",
         "number":  16,
         "question":  "다음 중 광기전력을 이용하는 센서가 아닌 것은?",
         "choices":  [
@@ -6415,15 +6416,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_17",
         "number":  17,
         "question":  "설비의 건강 상태를 유지하고 고장이 나지 않도록 열화를 방지하기 위한 일상보전, 열화를 측정하기 위한 정기검사 또는 설비보전 열화를 조기에 복원시키기 위한 정비 등을 하는 보전활동은?",
         "choices":  [
@@ -6437,15 +6438,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_18",
         "number":  18,
         "question":  "다음 그림의 측정기에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6459,15 +6460,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_19",
         "number":  19,
         "question":  "리미트스위치 이상 시 분해 수리로 문제를 해결할 수 있는 부분은?",
         "choices":  [
@@ -6481,15 +6482,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_20",
         "number":  20,
         "question":  "부하의 이상 때문에 설정된 전류값 이상의 전류가 부하에 흘러 온도가 상승하면 바이메탈에 의해 주접점을 열어 (트립)부하를 보호하고, 이상 전류에 의한 화재를 방지하는 장치는?",
         "choices":  [
@@ -6503,15 +6504,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_1_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_1",
         "number":  1,
         "question":  "등각투상도가 왼쪽 그림과 같다면 제1각법의 표현 방법에 의해 A에 놓일 그림으로 적절한 것은?",
         "choices":  [
@@ -6525,15 +6526,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_1",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_2",
         "number":  2,
         "question":  "다음 중 선이 서로 겹칠 때 가장 위에 표시되는 것은?",
         "choices":  [
@@ -6547,15 +6548,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_2",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_3",
         "number":  3,
         "question":  "구름 볼베어링의 호칭 \u00277206 C DB\u0027일 때 안지름값(mm)은?",
         "choices":  [
@@ -6569,15 +6570,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_3",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_4",
         "number":  4,
         "question":  "기어 제도에 관한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6591,15 +6592,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_4",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_5",
         "number":  5,
         "question":  "절삭 시 발생하는 칩의 종류에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6613,15 +6614,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_5",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_6",
         "number":  6,
         "question":  "절삭공구의 측면(여유면)과 가공면과의 마찰에 의하여 발생되는 마모로, 주철과 같이 취성이 있는 재료를 절삭할 때 발생하여 절삭날(공구인선)을 파손시키는 마모는?",
         "choices":  [
@@ -6635,15 +6636,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_6",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_7",
         "number":  7,
         "question":  "상향절삭의 특징이 아닌 것은?",
         "choices":  [
@@ -6657,15 +6658,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_7",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_8",
         "number":  8,
         "question":  "도시된 단면도의 앞쪽에 있는 형상을 나타낼 때 사용하는 선은?",
         "choices":  [
@@ -6679,15 +6680,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_8",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_9",
         "number":  9,
         "question":  "다음 기하공차 기호의 의미는?",
         "choices":  [
@@ -6701,15 +6702,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_9",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_10",
         "number":  10,
         "question":  "데이텀을 지시할 때 문자기호를 공차 기입틀에 지시할 경우에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6723,15 +6724,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_10",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_11",
         "number":  11,
         "question":  "나사의 종류와 그 기호가 바르게 연결되지 않은 것은?",
         "choices":  [
@@ -6745,15 +6746,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_11",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_12",
         "number":  12,
         "question":  "공작기계의 작동유 성질에 관한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6767,15 +6768,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_12",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_13",
         "number":  13,
         "question":  "기어를 측정하는 도구로 적절하지 않은 것은?",
         "choices":  [
@@ -6789,15 +6790,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_13",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_14",
         "number":  14,
         "question":  "주철의 불순물에 대한 영향을 옳게 설명한 것은?",
         "choices":  [
@@ -6811,15 +6812,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_14",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_15",
         "number":  15,
         "question":  "다음 그림의 핸들에 적용된 나사에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6833,15 +6834,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_15",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_16",
         "number":  16,
         "question":  "지렛대의 원리를 이용하여 손아귀의 힘을 증가시켜 대상물을 구부리고 자르는 등의 일을 하는 공구로 단조강, 공구강, 열처리 강 등을 사용하여 제작한 공구는?",
         "choices":  [
@@ -6855,15 +6856,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_16",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_17",
         "number":  17,
         "question":  "다음 중 적외선센서의 장점이 아닌 것은?",
         "choices":  [
@@ -6877,15 +6878,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_17",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_18",
         "number":  18,
         "question":  "다음 중 감지방법이 다른 센서는?",
         "choices":  [
@@ -6899,15 +6900,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_18",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_19",
         "number":  19,
         "question":  "디지털센서에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6921,15 +6922,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_19",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_20",
         "number":  20,
         "question":  "센서관리를 위한 올바른 사용방법이 아닌 것은?",
         "choices":  [
@@ -6943,12 +6944,11 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "1과목: 기계공작법 및 기계제도",
-        "id":  "ae_ind_2024_2_20",
+        "unit":  "1과목: 기계공작법 및 기계제도",
+        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "1과목: 기계공작법 및 기계제도",
-        "sub_unit":  "1과목: 기계공작법 및 기계제도",
         "frequency":  1
     }
 ]

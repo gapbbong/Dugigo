@@ -1,5 +1,6 @@
 ﻿[
     {
+        "id":  "ae_ind_2017_2_41",
         "number":  41,
         "question":  "문과 문틀에 자석과 스위치를 조합하여 방범용 제어기에 응용되거나, 자동화 시스템의 실린더 위치 감지에 가장 많이 사용되는 비접촉식 장치는?",
         "choices":  [
@@ -13,15 +14,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_42",
         "number":  42,
         "question":  "광전센서 중 포토 트랜지스터, 광사이리스터 등 소형이고 출력이 크며, 전원이 필요 없는 센서류는?",
         "choices":  [
@@ -35,15 +36,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_43",
         "number":  43,
         "question":  "전자개폐기의 철심이 진동할 경우 예상되는 원인으로 가장 가까운 것은?",
         "choices":  [
@@ -57,15 +58,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_44",
         "number":  44,
         "question":  "다음 검출 조작 기능 센서 중 전압 변화형 센서는?",
         "choices":  [
@@ -79,15 +80,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_45",
         "number":  45,
         "question":  "전동기 과부하 보호용 계전기는?",
         "choices":  [
@@ -101,15 +102,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_46",
         "number":  46,
         "question":  "다음 회로의 명칭은?",
         "choices":  [
@@ -123,15 +124,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_47",
         "number":  47,
         "question":  "다음 회로에 대한 설명 중 옳지 않은 것은?",
         "choices":  [
@@ -145,15 +146,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_48",
         "number":  48,
         "question":  "다음 그림의 기호는 무엇을 나타내는가?",
         "choices":  [
@@ -167,15 +168,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_49",
         "number":  49,
         "question":  "클록펄스가 가해질 때마다 출력상태가 반전되는 플립플롭은?",
         "choices":  [
@@ -189,15 +190,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_50",
         "number":  50,
         "question":  "논리기호에 맞는 논리식은?",
         "choices":  [
@@ -211,15 +212,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_51",
         "number":  51,
         "question":  "다음 카르노 맵의 간략식으로 맞는 것은?",
         "choices":  [
@@ -233,15 +234,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_52",
         "number":  52,
         "question":  "유접점회로와 무접점회로에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -255,15 +256,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_53",
         "number":  53,
         "question":  "PLC의 주요 주변기기 중에 프로그램 로더가 하는 역할과 거리가 먼 것은?",
         "choices":  [
@@ -277,15 +278,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_54",
         "number":  54,
         "question":  "다음 유접점 회로를 PLC를 이용하여 코딩할 때 이 명령에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -299,15 +300,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_55",
         "number":  55,
         "question":  "그림과 같은 차트의 논리 게이트는?",
         "choices":  [
@@ -321,15 +322,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_56",
         "number":  56,
         "question":  "매우 큰 힘을 발생시킬 수 있고, 회전력과 직선력으로 사용할 수 있는 로봇 동력원은?",
         "choices":  [
@@ -343,15 +344,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_56",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_57",
         "number":  57,
         "question":  "PLC의 명령어 중 정해진 시간만큼 기다렸다 신호를 내보내는 명령은?",
         "choices":  [
@@ -365,15 +366,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_57",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_58",
         "number":  58,
         "question":  "방향제어 밸브만으로 구성된 것은?",
         "choices":  [
@@ -387,15 +388,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_58",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_59",
         "number":  59,
         "question":  "PLC에서 외부기기와 내부회로를 전기적으로 절연하고 노이즈를 막기 위해 입력부와 출력부에 주로 이용하는 소자는?",
         "choices":  [
@@ -409,15 +410,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_59",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_2_60",
         "number":  60,
         "question":  "작업 공간 내에 흩어져 있는 작업점들의 위치를 미리 정해진 순서대로 통과하게 하는 제어 방식이다. 순차적인 위치 결정 제어라고도 하는 제어 방식은?",
         "choices":  [
@@ -431,15 +432,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_2_60",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 2회",
         "year":  2017,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_41",
         "number":  41,
         "question":  "다음 그림은 어떤 시퀀스 기호인가?",
         "choices":  [
@@ -453,15 +454,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_42",
         "number":  42,
         "question":  "센서 중 감지기의 검출면에 접근하는 물체 또는 주위에 존재하는 물체의 유무를 자기 에너지, 정전 에너지의 변화 등을 이용해 검출하는 무접점 감지기는?",
         "choices":  [
@@ -475,15 +476,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_43",
         "number":  43,
         "question":  "다음 중 고속도로의 과적차량을 검출하기 위해 사용할 센서로 적합한 것은?",
         "choices":  [
@@ -497,15 +498,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_44",
         "number":  44,
         "question":  "부하의 이상 때문에 설정된 전류값 이상의 전류가 부하에 흘러 온도가 상승하면 바이메탈에 의해 주접점을 열어(트립) 부하를 보호하는 제어기기는?",
         "choices":  [
@@ -519,15 +520,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_45",
         "number":  45,
         "question":  "산업용 다관절 로봇이 3차원 공간에서 임의의 위치와 방향에 있는 물체를 잡는데 필요한 자유도는?",
         "choices":  [
@@ -541,15 +542,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_46",
         "number":  46,
         "question":  "문자 기호 OCR은 무엇인가?",
         "choices":  [
@@ -563,15 +564,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_47",
         "number":  47,
         "question":  "다음 회로에 대한 설명으로 옳은 것은?",
         "choices":  [
@@ -585,15 +586,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_48",
         "number":  48,
         "question":  "그림의 접점은?",
         "choices":  [
@@ -607,15 +608,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_49",
         "number":  49,
         "question":  "2개의 입력이 동시에 1이 되었을 때 출력 상태가 불확정 되지 않도록 한 것으로 이때 출력 상태는 반전되는 플립플롭은?",
         "choices":  [
@@ -629,15 +630,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_50",
         "number":  50,
         "question":  "논리 대수로 옳지 않은 것은?",
         "choices":  [
@@ -651,15 +652,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_51",
         "number":  51,
         "question":  "다음 카르노 맵의 간략식으로 맞는 것은?",
         "choices":  [
@@ -673,15 +674,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_52",
         "number":  52,
         "question":  "무접점 릴레이의 장점이 아닌 것은?",
         "choices":  [
@@ -695,15 +696,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_53",
         "number":  53,
         "question":  "1대의 PLC로 여러 개의 제어 대상물을 동작시키는 제어시스템으로 서로 연계된 작업을 실시할 때 사용하고, 1대의 PLC 기계 정지로 다른 기계도 정지되는 단점도 있는 PLC 제어시스템은?",
         "choices":  [
@@ -717,15 +718,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_54",
         "number":  54,
         "question":  "IEC에서 표준화한 PLC 언어 중 도형기반 언어인 것은?",
         "choices":  [
@@ -739,15 +740,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_55",
         "number":  55,
         "question":  "미리 설정된 순서와 조건에 따라 동작의 각 단계를 차례로 진행해 가는 머니풀레이터(Manipulator)로써 설정의 조건을 쉽게 변경할 수 있는 로봇은?",
         "choices":  [
@@ -761,15 +762,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_56",
         "number":  56,
         "question":  "현재 기술로 로봇에 사용하는 동력원이 아닌 것은?",
         "choices":  [
@@ -783,15 +784,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_56",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_57",
         "number":  57,
         "question":  "다음 중 계전기의 구조상 사용되지 않는 요소는?",
         "choices":  [
@@ -805,15 +806,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_57",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_58",
         "number":  58,
         "question":  "논리회로 설계의 순서를 바르게 나타낸 것은?",
         "choices":  [
@@ -827,15 +828,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_58",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_59",
         "number":  59,
         "question":  "절연저항계를 가지고 절연저항을 측정하였더니 $110\\text{k}\\Omega$ 이었다. 누설전류가 $2\\text{mA}$라면 저항에 걸리는 전압은?",
         "choices":  [
@@ -849,15 +850,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_59",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2017_4_60",
         "number":  60,
         "question":  "전자석에 의해 접점을 개폐하는 전자접촉기와 부하의 과전류에 의해 동작하는 열동계전기가 조합된 장치는?",
         "choices":  [
@@ -871,15 +872,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2017_4_60",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2017년 4회",
         "year":  2017,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_41",
         "number":  41,
         "question":  "정해 놓은 순서나 일정한 논리에 의하여 정해진 순서에 따라 제어의 각 단계를 차례로 진행하는 제어를 무엇이라 하는가?",
         "choices":  [
@@ -893,15 +894,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_42",
         "number":  42,
         "question":  "기계설비의 조정 등을 위해서 순간적으로 전동기를 시동·정지시킬 필요가 있을 때 이용하는 회로는?",
         "choices":  [
@@ -915,15 +916,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_43",
         "number":  43,
         "question":  "다음 기호가 나타내는 접점은?",
         "choices":  [
@@ -937,15 +938,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_44",
         "number":  44,
         "question":  "센서 선정 시 고려사항 중 가장 적절하지 않은 것은?",
         "choices":  [
@@ -959,15 +960,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_45",
         "number":  45,
         "question":  "기전력이 다른 두 금속을 접합해서 온도차를 주고 반응토록 한 센서는?",
         "choices":  [
@@ -981,15 +982,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_46",
         "number":  46,
         "question":  "다음 그림과 같은 회로는 무슨 회로인가?",
         "choices":  [
@@ -1003,15 +1004,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_47",
         "number":  47,
         "question":  "다음 중 옳지 않은 것은?",
         "choices":  [
@@ -1025,15 +1026,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_48",
         "number":  48,
         "question":  "다음 그림은 무슨 회로인가?",
         "choices":  [
@@ -1047,15 +1048,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_49",
         "number":  49,
         "question":  "Flip-flop의 종류가 아닌 것은?",
         "choices":  [
@@ -1069,15 +1070,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_50",
         "number":  50,
         "question":  "PLC의 주요 주변기기 중에 프로그램 로더가 하는 역할과 거리가 먼 것은?",
         "choices":  [
@@ -1091,15 +1092,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_51",
         "number":  51,
         "question":  "배타적 OR 회로($EX-OR$ 회로)의 설명으로 올바른 것은?",
         "choices":  [
@@ -1113,15 +1114,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_52",
         "number":  52,
         "question":  "누전차단기의 사용상 주의사항에 관한 설명으로 틀린 것은?",
         "choices":  [
@@ -1135,15 +1136,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_53",
         "number":  53,
         "question":  "$RS-232C$의 전송방식은?",
         "choices":  [
@@ -1157,15 +1158,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_54",
         "number":  54,
         "question":  "PLC의 특수기능 유닛(특수모듈)이 아닌 것은?",
         "choices":  [
@@ -1179,15 +1180,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_55",
         "number":  55,
         "question":  "다음 그림에서 사용된 다이오드의 역할은?",
         "choices":  [
@@ -1201,15 +1202,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_56",
         "number":  56,
         "question":  "다음 회로에 대한 명칭으로 옳은 것은?",
         "choices":  [
@@ -1223,15 +1224,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_56",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_57",
         "number":  57,
         "question":  "회로의 종류 중 외부 신호접점이 닫혀 있는 동안 타이머가 접점의 개폐를 반복하는 회로로 교통신호기 등 일정의 동작을 반복하는 장치에 이용되는 회로는?",
         "choices":  [
@@ -1245,15 +1246,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_57",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_58",
         "number":  58,
         "question":  "무접점회로의 장점이 아닌 것은?",
         "choices":  [
@@ -1267,15 +1268,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_58",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_59",
         "number":  59,
         "question":  "다음 중 순서논리회로의 특징으로 옳은 것은?",
         "choices":  [
@@ -1289,15 +1290,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_59",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_2_60",
         "number":  60,
         "question":  "전자접촉기 여자 상태에서의 이상음에 관한 설명으로 틀린 것은?",
         "choices":  [
@@ -1311,15 +1312,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_2_60",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 2회",
         "year":  2018,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_41",
         "number":  41,
         "question":  "다음 그림의 가산점을 뒤로 이동하는 경우의 등가변환은?",
         "choices":  [
@@ -1333,15 +1334,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_42",
         "number":  42,
         "question":  "어떤 신호가 입력되어 출력신호가 발생한 후에는 입력신호가 제거되어도 그때의 출력 상태를 계속 유지하는 제어방법은?",
         "choices":  [
@@ -1355,15 +1356,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_43",
         "number":  43,
         "question":  "푸시 버튼 스위치를 ON 조작 후 손을 떼어도 릴레이는 자기 접점을 통하여 여자를 계속하는 회로를 무엇이라 하는가?",
         "choices":  [
@@ -1377,15 +1378,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_44",
         "number":  44,
         "question":  "다음 중 접촉식 센서는?",
         "choices":  [
@@ -1399,15 +1400,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_45",
         "number":  45,
         "question":  "근접센서 중 유도형 근접센서가 금속만 검출하는데 반하여 플라스틱, 유리, 도자기, 목재와 같은 절연물, 물, 기름, 약품과 같은 액체도 검출이 가능한 센서는?",
         "choices":  [
@@ -1421,15 +1422,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_46",
         "number":  46,
         "question":  "주차장 관리 프로그램을 PLC를 이용해 작성하려 한다. 다음 중 입력요소에 해당하는 것은?",
         "choices":  [
@@ -1443,15 +1444,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_47",
         "number":  47,
         "question":  "다음 회로와 같은 논리식은?",
         "choices":  [
@@ -1465,15 +1466,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_48",
         "number":  48,
         "question":  "다음 중 옳지 않은 것은?",
         "choices":  [
@@ -1487,15 +1488,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_49",
         "number":  49,
         "question":  "다음 카르노 맵 결과는?",
         "choices":  [
@@ -1509,15 +1510,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_50",
         "number":  50,
         "question":  "1 또는 0과 같이 하나의 입력에 대하여 항상 그에 응하는 출력을 발생하게 하고, 다음에 새로운 입력이 주어질 때까지 그 상태를 안정적으로 유지하는 회로로서 컴퓨터 집적회로 속에서 기억소자로 사용되는 것은?",
         "choices":  [
@@ -1531,15 +1532,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_51",
         "number":  51,
         "question":  "시퀀스 제어회로에서 접지선의 색상으로 옳은 것은?",
         "choices":  [
@@ -1553,15 +1554,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_52",
         "number":  52,
         "question":  "공작기계의 움직임 순서, 위치 등의 정보를 수치에 의해 지령받은 작업을 수행하는 로봇은?",
         "choices":  [
@@ -1575,15 +1576,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_53",
         "number":  53,
         "question":  "다음 그림은 11핀의 전자계전기의 핀 배치도이다. 다음 중 a접점과 b접점의 수를 바르게 표시한 것은?",
         "choices":  [
@@ -1597,15 +1598,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_54",
         "number":  54,
         "question":  "전자접촉기(MC), 열동계전기 등의 고장 시 이들 회로를 점검하기에 가장 적합한 계측기는?",
         "choices":  [
@@ -1619,15 +1620,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_55",
         "number":  55,
         "question":  "무접점 스위치 기호와 명칭의 연결이 바른 것은?",
         "choices":  [
@@ -1641,15 +1642,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2018_4_56",
         "number":  56,
         "question":  "다음 회로에 대한 설명으로 옳은 것은?",
         "choices":  [
@@ -1663,15 +1664,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2018_4_56",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2018년 4회",
         "year":  2018,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_41",
         "number":  41,
         "question":  "전자개폐기의 철심이 진동하는 경우가 아닌 것은?",
         "choices":  [
@@ -1685,15 +1686,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_42",
         "number":  42,
         "question":  "오실로스코프를 이용하여 알 수 없는 것은?",
         "choices":  [
@@ -1707,15 +1708,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_43",
         "number":  43,
         "question":  "전자접촉기의 b접점을 나타내는 기호는?",
         "choices":  [
@@ -1729,15 +1730,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_44",
         "number":  44,
         "question":  "시퀀스 제어에서 사용하는 문자 기호와 그 해당 용어로 틀린 것은?",
         "choices":  [
@@ -1751,15 +1752,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_45",
         "number":  45,
         "question":  "다음 그림과 같은 회로의 명칭은?",
         "choices":  [
@@ -1773,15 +1774,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_46",
         "number":  46,
         "question":  "T가 1일 때에만 RS F/F 동작, T가 0일 때에는 입력 R, S의 상태와 무관하여 앞의 출력 상태를 유지하는 플립플롭은?",
         "choices":  [
@@ -1795,15 +1796,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_47",
         "number":  47,
         "question":  "다음 논리 기호와 같은 논리식은?",
         "choices":  [
@@ -1817,15 +1818,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_48",
         "number":  48,
         "question":  "무접점 방식에 비해 유접점 방식이 갖는 장점은?",
         "choices":  [
@@ -1839,15 +1840,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_49",
         "number":  49,
         "question":  "PLC 프로그래밍을 하는 순서로 옳은 것은?",
         "choices":  [
@@ -1861,15 +1862,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_50",
         "number":  50,
         "question":  "다음의 도시된 단면도의 명칭은?",
         "choices":  [
@@ -1883,15 +1884,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_51",
         "number":  51,
         "question":  "다음 그림과 같은 기하공차 기입틀에서 첫째 구획에 들어가는 내용은?",
         "choices":  [
@@ -1905,15 +1906,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_52",
         "number":  52,
         "question":  "공압장치를 구성하는 요소 가운데 공기 중의 먼지나 수분을 제거할 목적으로 사용되는 것은?",
         "choices":  [
@@ -1927,15 +1928,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_53",
         "number":  53,
         "question":  "공기압축기의 종류 중 터보형 압축기는?",
         "choices":  [
@@ -1949,15 +1950,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_54",
         "number":  54,
         "question":  "폐회로 제어시스템의 오차의 식으로 옳은 것은?",
         "choices":  [
@@ -1971,15 +1972,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_55",
         "number":  55,
         "question":  "회로의 종류 중 외부 신호접점이 닫혀 있는 동안 타이머가 접점의 개폐를 반복하는 회로로 교통신호기 등 일정의 동작을 반복하는 장치에 이용되는 회로는?",
         "choices":  [
@@ -1993,15 +1994,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_56",
         "number":  56,
         "question":  "누전차단기 사용상 주의사항에 관한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -2015,15 +2016,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_56",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_57",
         "number":  57,
         "question":  "다음 그림은 무슨 회로인가?",
         "choices":  [
@@ -2037,15 +2038,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_57",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_58",
         "number":  58,
         "question":  "인벌류트 곡선을 그리는 원리를 이용하여 기어를 절삭하는 방법을 무엇이라고 하는가?",
         "choices":  [
@@ -2059,15 +2060,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_58",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_59",
         "number":  59,
         "question":  "빌트 업 에지(구성인선)의 발생을 감소시키기 위한 방법으로 틀린 것은?",
         "choices":  [
@@ -2081,15 +2082,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_59",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_2_60",
         "number":  60,
         "question":  "한국산업표준(KS)에서 \u0027시퀀스 제어기호\u0027는 어느 부문에서 규정하고 있는가?",
         "choices":  [
@@ -2103,15 +2104,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_2_60",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 2회",
         "year":  2019,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_41",
         "number":  41,
         "question":  "다음 광센서 중 광변환 원리가 다른 하나는?",
         "choices":  [
@@ -2125,15 +2126,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_42",
         "number":  42,
         "question":  "부하의 이상 때문에 설정된 전류값 이상의 전류가 부하에 흘러 온도가 상승하면 바이메탈에 의해 주 접점을 열어(트립) 부하를 보호하고, 이상전류에 의한 화재를 방지하는 것은?",
         "choices":  [
@@ -2147,15 +2148,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_43",
         "number":  43,
         "question":  "전자개폐기의 철심이 진동할 경우 예상되는 원인으로 가장 가까운 것은?",
         "choices":  [
@@ -2169,15 +2170,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_44",
         "number":  44,
         "question":  "다음 그림의 스위치를 무엇이라고 하는가?",
         "choices":  [
@@ -2191,15 +2192,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_45",
         "number":  45,
         "question":  "다음 그림의 회로 명칭은?",
         "choices":  [
@@ -2213,15 +2214,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_46",
         "number":  46,
         "question":  "유접점회로와 비교했을 때 무접점회로의 특징으로 가장 거리가 먼 것은?",
         "choices":  [
@@ -2235,15 +2236,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_47",
         "number":  47,
         "question":  "D 래치를 두 개 사용하여 마스터와 슬레이브를 두고, D 입력 상태가 Q 출력으로 기억되었다가 다음 Up-edge가 발생할 때까지 그 상태를 유지해 주는 플립플롭은?",
         "choices":  [
@@ -2257,15 +2258,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_48",
         "number":  48,
         "question":  "다음 중 빛으로 입력을 받아 빛으로 출력하는 반도체 소자는?",
         "choices":  [
@@ -2279,15 +2280,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_49",
         "number":  49,
         "question":  "PLC의 주요 주변기기 중에 프로그램 로더가 하는 역할과 거리가 먼 것은?",
         "choices":  [
@@ -2301,15 +2302,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_50",
         "number":  50,
         "question":  "IEC에서 표준화한 PLC 언어 중 문자 기반 언어는?",
         "choices":  [
@@ -2323,15 +2324,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_51",
         "number":  51,
         "question":  "산업용 다관절 로봇이 3차원 공간에서 임의의 위치와 방향에 있는 물체를 잡는 데 필요한 자유도는?",
         "choices":  [
@@ -2345,15 +2346,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_52",
         "number":  52,
         "question":  "직류전압 $300\\text{V}$를 발생하는 절연저항계로 절연저항을 측정하였더니 $10\\text{M}\\Omega$ 이었다. 이때 흐르는 누설전류는?",
         "choices":  [
@@ -2367,15 +2368,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_53",
         "number":  53,
         "question":  "폭이 좁고 길이가 긴 가공물의 줄 작업방법은?",
         "choices":  [
@@ -2389,15 +2390,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_54",
         "number":  54,
         "question":  "도면에 사용하는 치수 보조기호를 설명한 것으로 틀린 것은?",
         "choices":  [
@@ -2411,15 +2412,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2019_4_55",
         "number":  55,
         "question":  "PLC 회로도 프로그램 방식 중 접점의 동작 상태를 회로도상에서 모니터링할 수 있는 것은?",
         "choices":  [
@@ -2433,15 +2434,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2019_4_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2019년 4회",
         "year":  2019,
         "round":  4,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_41",
         "number":  41,
         "question":  "KS B 0054에 따른 유압·공압기호에 관한 사항으로 옳은 것은?",
         "choices":  [
@@ -2455,15 +2456,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_42",
         "number":  42,
         "question":  "공압모터의 특징으로 옳지 않은 것은?",
         "choices":  [
@@ -2477,15 +2478,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_43",
         "number":  43,
         "question":  "마모에 강하고 무게에 비해 높은 출력을 내는 특징이 있고, 날개 끝이 벽에 밀착되어 지나가는 공기가 날개를 밀어내어 회전력을 얻는 방식이며, 로터가 편심되어 있는 구조의 모터는?",
         "choices":  [
@@ -2499,15 +2500,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_44",
         "number":  44,
         "question":  "펌프가 나타내는 동력과 효율에 대한 설명으로 옳은 것은?",
         "choices":  [
@@ -2521,15 +2522,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_45",
         "number":  45,
         "question":  "공기압축기 중 가장 널리 사용되는 것으로, 실린더 안을 피스톤이 왕복운동하면서 흡입밸브로부터 실린더 내에 공기를 흡입한 다음, 압축하여 배출밸브로부터 압축공기를 배출시키며 $10\\sim 100\\text{kgf/cm}^2$의 사용압력범위를 갖는 압축기는?",
         "choices":  [
@@ -2543,15 +2544,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_46",
         "number":  46,
         "question":  "다음 기호의 부속기기의 용도로 적당하지 않은 것은?",
         "choices":  [
@@ -2565,15 +2566,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_47",
         "number":  47,
         "question":  "다음 그림과 같이 배치된 회로의 피스톤 제어방식은?",
         "choices":  [
@@ -2587,15 +2588,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_48",
         "number":  48,
         "question":  "자동화의 5대 요소에 해당하지 않는 것은?",
         "choices":  [
@@ -2609,15 +2610,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_49",
         "number":  49,
         "question":  "되멂임 제어에 대한 설명으로 틀린 것은?",
         "choices":  [
@@ -2631,15 +2632,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_50",
         "number":  50,
         "question":  "자동제어계에서는 입력신호를 어떤 과정을 거쳐 출력신호에 이르게 되는데, 이 어떤 과정을 함수화하여 표현한 것을 무엇이라고 하는가?",
         "choices":  [
@@ -2653,15 +2654,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_51",
         "number":  51,
         "question":  "미리 정해진 순서에 따라 일련의 제어단계가 차례로 진행되어 나가는 자동제어를 일컫는 용어는?",
         "choices":  [
@@ -2675,15 +2676,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_52",
         "number":  52,
         "question":  "불연속동작의 대표적인 것으로 제어량이 목표값에서 어떤 양만큼 벗어나면 미리 정해진 일정한 조작량이 대상에 가해지는 제어는?",
         "choices":  [
@@ -2697,15 +2698,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_53",
         "number":  53,
         "question":  "블록선도의 등가변환 중 옳게 변환한 것은?",
         "choices":  [
@@ -2719,15 +2720,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_54",
         "number":  54,
         "question":  "회로도의 $Y$ 부분에 사용한 접점은?",
         "choices":  [
@@ -2741,15 +2742,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_55",
         "number":  55,
         "question":  "광센서를 원리에 따라 분류한 것 중 광기전력효과를 이용한 것이 아닌 것은?",
         "choices":  [
@@ -2763,15 +2764,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_56",
         "number":  56,
         "question":  "작업내용을 미리 프로그램으로 작성하여 로봇의 동작을 결정하는 로봇은?",
         "choices":  [
@@ -2785,15 +2786,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_56",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_57",
         "number":  57,
         "question":  "다음 중 고속도로의 과적 차량을 검출하기 위해 사용할 센서로 적합한 것은?",
         "choices":  [
@@ -2807,15 +2808,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_57",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_58",
         "number":  58,
         "question":  "시퀀스 제어의 주요 장점으로 거리가 먼 것은?",
         "choices":  [
@@ -2829,15 +2830,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_58",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_59",
         "number":  59,
         "question":  "자동화 시스템의 작업요소별 구성요소에서 가공, 조립, 검사 등의 작업을 위해서 일감을 요구되는 위치에 정확히 위치시키고, 필요한 작업을 할 수 있도록 견고하게 고정시켜 주는 기능을 가진 것은?",
         "choices":  [
@@ -2851,15 +2852,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_59",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_1_60",
         "number":  60,
         "question":  "시퀀스 제어를 구분하는 데 있어서 크게 입력부와 출력부로 구분할 때 다음 중 출력부에 해당하는 것은?",
         "choices":  [
@@ -2873,15 +2874,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_1_60",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 1회",
         "year":  2020,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_57",
         "number":  57,
         "question":  "1이든 0이든 신호에 입력에 대하여 설계된 출력을 하도록 하고 새로운 입력 때까지 그 상태를 유지하는 회로는?",
         "choices":  [
@@ -2895,15 +2896,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_57",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_58",
         "number":  58,
         "question":  "다음 그림의 논리식은?",
         "choices":  [
@@ -2917,15 +2918,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_58",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_59",
         "number":  59,
         "question":  "무접점 릴레이에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -2939,15 +2940,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_59",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_60",
         "number":  60,
         "question":  "y축을 중심으로 회전이 가능하도록 극좌표로 구성하여 x축의 길이운동, y축의 상하운동, 극좌표의 회전운동으로 넓은 활동범위를 갖도록 구성한 로봇은?",
         "choices":  [
@@ -2961,15 +2962,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_60",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_41",
         "number":  41,
         "question":  "일반적으로 공압 액추에이터나 공압기기의 작동압력($kgf/cm^2$)으로 가장 알맞은 압력은?",
         "choices":  [
@@ -2983,15 +2984,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_42",
         "number":  42,
         "question":  "왕복운동의 피스톤과 커넥팅 로드에 의하여 운전하고, 중속 회전과 높은 토크를 감당하며, 여러 가지 반송장치에 사용되는 공압모터는?",
         "choices":  [
@@ -3005,15 +3006,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_43",
         "number":  43,
         "question":  "다음 유압펌프 중 용적형 펌프가 아닌 것은?",
         "choices":  [
@@ -3027,15 +3028,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_44",
         "number":  44,
         "question":  "유압 동력부 펌프의 송출압력이 $60kgf/cm^2$이고, 송출 유량이 $30L/min$일 때 펌프동력은 몇 $kW$인가?",
         "choices":  [
@@ -3049,15 +3050,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_45",
         "number":  45,
         "question":  "압축된 공기 안에 존재하는 수증기는 제거해 주어야 하는데 그 방법 중 실리카겔, 알루미나겔, 합성제올라이트 등으로 공기 중의 수증기를 제거하는 방법은?",
         "choices":  [
@@ -3071,15 +3072,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_46",
         "number":  46,
         "question":  "수분제거기가 응결시킨 저수조의 수분을 별도의 물 빼기 작업 없이 자동으로 수분을 배출시키는 장치의 기호는?",
         "choices":  [
@@ -3093,15 +3094,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_47",
         "number":  47,
         "question":  "다음 그림과 같이 배치된 회로에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -3115,15 +3116,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_48",
         "number":  48,
         "question":  "자동화의 특징에 대한 설명과 가장 거리가 먼 것은?",
         "choices":  [
@@ -3137,15 +3138,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_49",
         "number":  49,
         "question":  "목표값이 일정하여 그 값에 이르도록 제어하는 제어시스템은?",
         "choices":  [
@@ -3159,15 +3160,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_50",
         "number":  50,
         "question":  "수치제어장치의 구성에서 서보기구의 종류가 아닌 것은?",
         "choices":  [
@@ -3181,15 +3182,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_51",
         "number":  51,
         "question":  "신호의 종류 중 시간에 따라 연속적으로 변하는 신호이며 자연신호를 그대로 반영한 신호는?",
         "choices":  [
@@ -3203,15 +3204,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_52",
         "number":  52,
         "question":  "다음 블록선도의 전달함수 $[C(s)/R(s)]$로 옳은 것은?",
         "choices":  [
@@ -3225,15 +3226,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_53",
         "number":  53,
         "question":  "자동화된 생산라인을 이용하여 다품종 소량 생산이 가능하도록 만든 유연생산체제를 일컫는 용어는?",
         "choices":  [
@@ -3247,15 +3248,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_54",
         "number":  54,
         "question":  "감지방법에 따른 센서의 종류가 다른 것은?",
         "choices":  [
@@ -3269,15 +3270,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2020_2_55",
         "number":  55,
         "question":  "센서용 검출변환기에서 제베크 효과(Seebeck Effect)를 이용한 것은?",
         "choices":  [
@@ -3291,15 +3292,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2020_2_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2020년 2회",
         "year":  2020,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_41",
         "number":  41,
         "question":  "광도전, 이미지센서, 포토다이오드 등의 센서가 감지하는 물리적 성질로 적절한 것은?",
         "choices":  [
@@ -3313,15 +3314,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_42",
         "number":  42,
         "question":  "센서의 신호 변환에 관한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -3335,15 +3336,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_43",
         "number":  43,
         "question":  "다음 그림과 같은 상을 나타내는 동기전동기에 대한 설명으로 틀린 것은?",
         "choices":  [
@@ -3357,15 +3358,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_44",
         "number":  44,
         "question":  "여자전류를 외부에서 공급받는 방식의 전동기는?",
         "choices":  [
@@ -3379,15 +3380,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_45",
         "number":  45,
         "question":  "유압동력부 펌프의 송출압력이 $70\\text{kgf/cm}^2$이고, 송출유량이 $30\\text{L/min}$일 때 펌프동력은 몇 kW인가?",
         "choices":  [
@@ -3401,15 +3402,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_46",
         "number":  46,
         "question":  "전자개폐기의 철심이 진동할 경우 예상되는 원인으로 가장 가까운 것은?",
         "choices":  [
@@ -3423,15 +3424,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_47",
         "number":  47,
         "question":  "PLC 프로그래밍 과정 중 실행파일을 생성하는 과정은?",
         "choices":  [
@@ -3445,15 +3446,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_48",
         "number":  48,
         "question":  "다음 중 PLC의 연산처리 기능에 속하지 않는 것은?",
         "choices":  [
@@ -3467,15 +3468,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_49",
         "number":  49,
         "question":  "용접입열식이 다음과 같고 전류가 $800\\text{A}$, 전압이 $35\\text{V}$, 용접속도가 분당 $35\\text{cm}$라면 용접입열은?\n\n$$H = \\frac{60EI}{v}$$",
         "choices":  [
@@ -3489,15 +3490,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_50",
         "number":  50,
         "question":  "다음 그림이 나타내는 공유압기호는?",
         "choices":  [
@@ -3511,15 +3512,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_51",
         "number":  51,
         "question":  "다음 블록선도의 전달함수 결과로 옳은 것은?",
         "choices":  [
@@ -3533,15 +3534,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_52",
         "number":  52,
         "question":  "다양한 제품 수요의 변화에 대처할 수 있도록 가공 공정의 변환이 용이한 자동화시스템으로서 유연생산시스템을 의미하는 것은?",
         "choices":  [
@@ -3555,15 +3556,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_53",
         "number":  53,
         "question":  "다음 그림과 같은 타임차트의 논리게이트는?",
         "choices":  [
@@ -3577,15 +3578,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_54",
         "number":  54,
         "question":  "2입력 OR게이트로 4입력 OR게이트를 만들려고 한다. 몇 개의 2입력 OR게이트가 필요한가?",
         "choices":  [
@@ -3599,15 +3600,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_55",
         "number":  55,
         "question":  "다음 그림과 같은 무접점 시퀀스의 출력($Y$)은?",
         "choices":  [
@@ -3621,15 +3622,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_56",
         "number":  56,
         "question":  "다음 회로의 명칭은?",
         "choices":  [
@@ -3643,15 +3644,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_56",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_57",
         "number":  57,
         "question":  "클록펄스가 가해질 때마다 반전되는 출력이 발생하는 플립플롭은?",
         "choices":  [
@@ -3665,15 +3666,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_57",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_58",
         "number":  58,
         "question":  "다음 카르노 맵의 간략식으로 맞는 것은?",
         "choices":  [
@@ -3687,15 +3688,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_58",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_59",
         "number":  59,
         "question":  "PLC 기능 중에서 특정한 입출력 상태 및 연산결과 등을 기억하는 것은?",
         "choices":  [
@@ -3709,15 +3710,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_59",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_1_60",
         "number":  60,
         "question":  "일정한 펄스당 회전각을 제어할 수 있으며 구조가 간단하고, 보급성이 좋아 짧은 거리 디지털 제어에 적합한 모터는?",
         "choices":  [
@@ -3731,15 +3732,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_1_60",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 1회",
         "year":  2021,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_41",
         "number":  41,
         "question":  "다음 그림과 같이 조작 후에 손을 떼면 접점은 그대로 유지되지만, 조작 부분은 본래의 상태로 복귀되는 스위치는?",
         "choices":  [
@@ -3753,15 +3754,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_42",
         "number":  42,
         "question":  "광센서를 원리에 따라 분류한 것 중 광기전력 효과를 이용한 것이 아닌 것은?",
         "choices":  [
@@ -3775,15 +3776,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_43",
         "number":  43,
         "question":  "저투자성 자동화(LCA ; Low Cost Automation)에 대한 설명 중 틀린 것은?",
         "choices":  [
@@ -3797,15 +3798,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_44",
         "number":  44,
         "question":  "PLC의 주변장치를 사용하여 프로그램을 PLC의 메모리에 기억시키는 작업은?",
         "choices":  [
@@ -3819,15 +3820,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_45",
         "number":  45,
         "question":  "PLC 프로그램 명령어 중에서 논리합(병렬)조건으로 접속되어 있는 경우에 사용하는 명령어는?",
         "choices":  [
@@ -3841,15 +3842,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_46",
         "number":  46,
         "question":  "PLC 기능 중에서 특정한 입출력 상태 및 연산 결과 등을 기억하는 것은?",
         "choices":  [
@@ -3863,15 +3864,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_47",
         "number":  47,
         "question":  "다음 중 유도형 센서(고주파 발전형 근접 스위치)가 검출할 수 없는 물질은?",
         "choices":  [
@@ -3885,15 +3886,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_48",
         "number":  48,
         "question":  "다음 그림과 같이 유접점 회로를 무접점 회로로 변환하고, 함수식으로 나타낸 것으로 옳은 것은?",
         "choices":  [
@@ -3907,15 +3908,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_49",
         "number":  49,
         "question":  "정전용량형 감지기의 검출거리에 영향을 미치는 요소가 아닌 것은?",
         "choices":  [
@@ -3929,15 +3930,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_50",
         "number":  50,
         "question":  "푸시버튼 스위치 a접점 기호인 것은?",
         "choices":  [
@@ -3951,15 +3952,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_51",
         "number":  51,
         "question":  "전자개폐기의 철심이 진동할 경우 예상되는 원인으로 가장 가까운 것은?",
         "choices":  [
@@ -3973,15 +3974,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_52",
         "number":  52,
         "question":  "다음 그림과 같은 유접점 시퀀스 회로도에 대한 설명으로 적합한 것은?",
         "choices":  [
@@ -3995,15 +3996,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_53",
         "number":  53,
         "question":  "논리회로를 간략화하는 데 있어서 0과 1을 연산하고자 할 때 틀린 것은?",
         "choices":  [
@@ -4017,15 +4018,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_54",
         "number":  54,
         "question":  "다음 그림과 같은 무접점 시퀀스의 출력($Y$)값으로 알맞은 것은?",
         "choices":  [
@@ -4039,15 +4040,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_55",
         "number":  55,
         "question":  "검출 스위치의 종류가 아닌 것은?",
         "choices":  [
@@ -4061,15 +4062,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_56",
         "number":  56,
         "question":  "다음 그림의 시퀀스제어도에서 $R_2$가 여자되기 위한 접점에 해당되는 것은?",
         "choices":  [
@@ -4083,15 +4084,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_56",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_57",
         "number":  57,
         "question":  "어떤 기계장치의 시퀀스제어에 있어서 단선 등 전기회로의 고장 진단을 하기 위하여 주로 사용되는 계측기는?",
         "choices":  [
@@ -4105,15 +4106,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_57",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_58",
         "number":  58,
         "question":  "3상 유도전동기의 정·역 운전에 관한 설명으로 거리가 먼 것은?",
         "choices":  [
@@ -4127,15 +4128,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_58",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_59",
         "number":  59,
         "question":  "다음 시퀀스제어 도면의 동작 설명으로 맞는 것은?",
         "choices":  [
@@ -4149,15 +4150,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_59",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2021_2_60",
         "number":  60,
         "question":  "공장 자동화의 단계에서 가장 발전된 단계는?",
         "choices":  [
@@ -4171,15 +4172,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2021_2_60",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2021년 2회",
         "year":  2021,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_41",
         "number":  41,
         "question":  "감지기, 측정장치 등과 같이 제어 대상으로부터 나오는 출력을 측정하여 기준 입력과 비교할 수 있게 하여 주는 것은?",
         "choices":  [
@@ -4193,15 +4194,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_42",
         "number":  42,
         "question":  "다음 그림과 같은 회로는?",
         "choices":  [
@@ -4215,15 +4216,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_43",
         "number":  43,
         "question":  "에어실린더 등에서 윤활유의 공급이 불충분하여 마모가 심한 경우에 PTFE와 O링을 조합시킨 슬리퍼 실을 사용하는데, 이에 대한 특징으로 틀린 것은?",
         "choices":  [
@@ -4237,15 +4238,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_44",
         "number":  44,
         "question":  "다음 중 에너지 축적용, 충격 압력의 흡수용, 펌프의 맥동제거용으로 사용되는 유압기기는?",
         "choices":  [
@@ -4259,15 +4260,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_45",
         "number":  45,
         "question":  "공기압축기의 설치 및 사용 시 주의점으로 틀린 것은?",
         "choices":  [
@@ -4281,15 +4282,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_46",
         "number":  46,
         "question":  "용량형 센서에서 센서의 표면적을 2배로 하면 정전용량은 몇 배가 되는가?",
         "choices":  [
@@ -4303,15 +4304,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_47",
         "number":  47,
         "question":  "실리카겔, 활성 알루미나 등의 고체 흡착제를 사용해서 수분을 흡착하는 방식에 대한 설명으로 옳은 것은?",
         "choices":  [
@@ -4325,15 +4326,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_48",
         "number":  48,
         "question":  "다음 보기와 같은 기능을 하는 공압기기의 요소는?\n\n[보기]\n• 공기압력의 맥동을 평준화한다.\n• 일시적으로 다량의 공기가 소비되어도 급격한 압력 강화를 방지한다.\n• 정전에 의해 압축기가 정지되었을 때 등 비상시에도 일정 시간 공기를 공급한다.\n• 주위의 외기에 의한 냉각효과로 응축수를 분리시킨다.",
         "choices":  [
@@ -4347,15 +4348,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_49",
         "number":  49,
         "question":  "방향제어밸브가 다음 그림처럼 작동된다면 이에 적당한 밸브기호는?",
         "choices":  [
@@ -4369,15 +4370,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_50",
         "number":  50,
         "question":  "밸브의 조작 부위 기호 중 작동 동력원이 다른 하나는?",
         "choices":  [
@@ -4391,15 +4392,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_51",
         "number":  51,
         "question":  "펌프의 효율 중 이론펌프의 토출량과 실제 펌프 토출량을 비율로 나타낸 효율은?",
         "choices":  [
@@ -4413,15 +4414,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_52",
         "number":  52,
         "question":  "기어펌프가 작동할 때 다음 그림과 같이 유체가 갇히는 현상이 발생하는데 이 현상에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -4435,15 +4436,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_53",
         "number":  53,
         "question":  "다음 그림과 같은 센터의 명칭은?",
         "choices":  [
@@ -4457,15 +4458,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_54",
         "number":  54,
         "question":  "해머작업 시 안전사항으로 옳지 않은 것은?",
         "choices":  [
@@ -4479,15 +4480,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_55",
         "number":  55,
         "question":  "유압동력부 펌프의 송출압력이 $70\\text{kgf/cm}^2$이고, 송출유량이 $30\\text{L/min}$일 때 펌프동력은 몇 kW인가?",
         "choices":  [
@@ -4501,15 +4502,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_56",
         "number":  56,
         "question":  "다음 그림과 같은 상을 나타내는 동기전동기에 대한 설명으로 틀린 것은?",
         "choices":  [
@@ -4523,15 +4524,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_56",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_57",
         "number":  57,
         "question":  "다음 회로도에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -4545,15 +4546,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_57",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_58",
         "number":  58,
         "question":  "PLC 시퀀스의 프로그램 처리방식은?",
         "choices":  [
@@ -4567,15 +4568,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_58",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_59",
         "number":  59,
         "question":  "3상 유도전동기의 큰 기동전류를 줄이기 위해 사용되는 운전회로는?",
         "choices":  [
@@ -4589,15 +4590,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_59",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_1_60",
         "number":  60,
         "question":  "이상적인 연산증폭기의 설명으로 틀린 것은?",
         "choices":  [
@@ -4611,15 +4612,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_1_60",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 1회",
         "year":  2022,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_41",
         "number":  41,
         "question":  "기능 다이어그램 형식의 PLC 프로그램 언어에서 다음 기호가 의미하는 것은?",
         "choices":  [
@@ -4633,15 +4634,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_42",
         "number":  42,
         "question":  "다음 중 AND 논리회로가 아닌 것은?",
         "choices":  [
@@ -4655,15 +4656,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_43",
         "number":  43,
         "question":  "공압회로 구성에 사용되는 시간지연밸브의 구성요소와 관계없는 것은?",
         "choices":  [
@@ -4677,15 +4678,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_44",
         "number":  44,
         "question":  "다음 그림이 나타내는 공압기호는?",
         "choices":  [
@@ -4699,15 +4700,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_45",
         "number":  45,
         "question":  "유압제어와 비교한 공압제어에 대한 설명으로 틀린 것은?",
         "choices":  [
@@ -4721,15 +4722,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_46",
         "number":  46,
         "question":  "밸브가 다음 그림처럼 작동한다면 이 밸브의 명칭은?",
         "choices":  [
@@ -4743,15 +4744,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_47",
         "number":  47,
         "question":  "다음은 공압모터의 종류 중 하나이다. 어느 형태의 모터인가?",
         "choices":  [
@@ -4765,15 +4766,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_48",
         "number":  48,
         "question":  "다음 그림은 11핀의 전자계전기의 핀의 배치도이다. 다음 중 a접점과 b접점의 수를 바르게 표시한 것은?",
         "choices":  [
@@ -4787,15 +4788,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_49",
         "number":  49,
         "question":  "기어펌프 소음의 원인으로 적당하지 않은 것은?",
         "choices":  [
@@ -4809,15 +4810,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_50",
         "number":  50,
         "question":  "유압기기에서 유압을 선정할 때 주의사항으로 옳지 않은 것은?",
         "choices":  [
@@ -4831,15 +4832,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_51",
         "number":  51,
         "question":  "회로의 압력이 일정 압력을 넘어서면 압력을 견디던 막이 압력 과다에 의해 파열됨으로써 압력을 낮춰 주어 급격한 압력 변화에 유압기기가 손상되는 것을 막을 수 있도록 장착해 놓은 장치는?",
         "choices":  [
@@ -4853,15 +4854,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_52",
         "number":  52,
         "question":  "다음 중 장갑을 착용하여야 하는 작업은?",
         "choices":  [
@@ -4875,15 +4876,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_53",
         "number":  53,
         "question":  "$\\overline{A}B + AB\\overline{C} + ABC$와 같은 것은?",
         "choices":  [
@@ -4897,15 +4898,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_54",
         "number":  54,
         "question":  "다음 그림에서 스위치 $PBS_1$을 동작시키면 $R-a$ 접점의 동작은?",
         "choices":  [
@@ -4919,15 +4920,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_55",
         "number":  55,
         "question":  "다음 중 PLC의 연산 처리 기능에 속하지 않는 것은?",
         "choices":  [
@@ -4941,15 +4942,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2022_2_56",
         "number":  56,
         "question":  "PLC의 운전 모드 중 프로그램 연산을 일시 정지시키는 모드는?",
         "choices":  [
@@ -4963,15 +4964,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2022_2_56",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2022년 2회",
         "year":  2022,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_57",
         "number":  57,
         "question":  "다음 보기에서 설명하는 동력 전달용 기계요소는?\n\n\u003c보기\u003e\n• 마찰력을 이용하여 평행한 두 축 사이에 회전 동력을 전달하는 장치이다.\n• 두 축 사이의 거리가 비교적 멀거나 직접 동력을 전달할 수 없을 때 사용한다.\n• 미끄럼이 발생할 수 있으므로 정확한 회전비를 필요로 하는 전달에는 부적합하다.",
         "choices":  [
@@ -4985,15 +4986,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_57",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_58",
         "number":  58,
         "question":  "다음 그림의 핸들에 적용된 나사에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5007,15 +5008,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_58",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_59",
         "number":  59,
         "question":  "PLC의 특수기능 유닛(특수모듈)이 아닌 것은?",
         "choices":  [
@@ -5029,15 +5030,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_59",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_60",
         "number":  60,
         "question":  "다음 PLC 언어 중 문자식 언어는?",
         "choices":  [
@@ -5051,15 +5052,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_60",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_41",
         "number":  41,
         "question":  "밸브의 윤활에 관한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5073,15 +5074,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_42",
         "number":  42,
         "question":  "격판이 두 개 존재하여 로드를 길게 사용하거나 공기압을 두 배로 받을 수 있도록 하여 출력을 두 배로 사용할 수 있는 실린더는?",
         "choices":  [
@@ -5095,15 +5096,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_43",
         "number":  43,
         "question":  "공압모터의 특징으로 옳지 않은 것은?",
         "choices":  [
@@ -5117,15 +5118,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_44",
         "number":  44,
         "question":  "다음 중 오일탱크의 구비조건으로 옳지 않은 것은?",
         "choices":  [
@@ -5139,15 +5140,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_45",
         "number":  45,
         "question":  "금속저항체를 당기면 길어지는 동시에 가늘어져 전기저항값이 증가하고, 반대로 압축되면 전기저항이 감소하는 현상을 이용한 센서는?",
         "choices":  [
@@ -5161,15 +5162,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_46",
         "number":  46,
         "question":  "다음 제어회로의 명칭은?",
         "choices":  [
@@ -5183,15 +5184,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_47",
         "number":  47,
         "question":  "다음 논리식 중 옳은 것은?",
         "choices":  [
@@ -5205,15 +5206,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_48",
         "number":  48,
         "question":  "다음 중 종류가 다른 치수는?",
         "choices":  [
@@ -5227,15 +5228,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_49",
         "number":  49,
         "question":  "기계에서 발생하는 소음이나 진동 등과 같은 주위 환경에서 발생하는 오차 또는 자연현상의 급변 등으로 발생하는 오차는?",
         "choices":  [
@@ -5249,15 +5250,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_50",
         "number":  50,
         "question":  "센서의 신호처리 시 문제점이 아닌 것은?",
         "choices":  [
@@ -5271,15 +5272,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_51",
         "number":  51,
         "question":  "다음 LD 프로그램의 명령어는?",
         "choices":  [
@@ -5293,15 +5294,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_52",
         "number":  52,
         "question":  "다음 회로에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5315,15 +5316,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_53",
         "number":  53,
         "question":  "다음 회로의 명칭은?",
         "choices":  [
@@ -5337,15 +5338,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_54",
         "number":  54,
         "question":  "액상 또는 기체상의 연료성 화재(휘발유, 벤젠 등)에 해당하는 것은?",
         "choices":  [
@@ -5359,15 +5360,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_55",
         "number":  55,
         "question":  "다음 중 기계적 에너지를 유압에너지로 바꾸는 유압기기는?",
         "choices":  [
@@ -5381,15 +5382,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_1_56",
         "number":  56,
         "question":  "다음 보기에서 설명하는 공압 액추에이터는?\n\n- 전진운동뿐만 아니라 후진운동에도 일을 해야 하는 경우에 사용된다.\n- 피스톤 로드의 구부러짐과 힘을 고려해야 하지만, 행정거리는 원칙적으로 제한이 없다.\n- 전진, 후진 완료 위치에 서서 관성으로 인한 충격으로 실린더가 손상되는 것을 방지하기 위하여 피스톤 끝부분에 쿠션을 사용하기도 한다.",
         "choices":  [
@@ -5403,15 +5404,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_1_56",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 1회",
         "year":  2023,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_41",
         "number":  41,
         "question":  "공압조정유닛에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5425,15 +5426,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_42",
         "number":  42,
         "question":  "다음 기호에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5447,15 +5448,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_43",
         "number":  43,
         "question":  "다음 보기에서 설명하는 공압 액추에이터는?\n\n[보기]\n- 전진운동뿐만 아니라 후진운동에도 일을 해야 하는 경우에 사용된다.\n- 피스톤 로드의 구부러짐과 힘을 고려해야 하지만, 행정거리는 원칙적으로 제한이 없다.\n- 전진, 후진 완료 위치에서 관성으로 인한 충격으로 실린더가 손상되는 것을 방지하기 위하여 피스톤 끝부분에 쿠션을 사용하기도 한다.",
         "choices":  [
@@ -5469,15 +5470,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_44",
         "number":  44,
         "question":  "오일탱크에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5491,15 +5492,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_45",
         "number":  45,
         "question":  "CCD 카메라로 읽은 화상을 보고 대상 물체의 모양의 양호 또는 불량 상태를 판별하는 센서는?",
         "choices":  [
@@ -5513,15 +5514,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_46",
         "number":  46,
         "question":  "다음 프로그램에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5535,15 +5536,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_47",
         "number":  47,
         "question":  "$A \\cdot (A + B) + B \\cdot (A + B)$와 같은 식은?",
         "choices":  [
@@ -5557,15 +5558,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_48",
         "number":  48,
         "question":  "치수 기입에 관한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5579,15 +5580,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_49",
         "number":  49,
         "question":  "세게 잡거나 눌렀을 때 측정부의 탄성 변형에 의해 생기는 오차는?",
         "choices":  [
@@ -5601,15 +5602,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_50",
         "number":  50,
         "question":  "동기(Synchronous)와 비동기(Asynchronous)식 신호에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -5623,15 +5624,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_51",
         "number":  51,
         "question":  "다음 LD 프로그램 명령어는?",
         "choices":  [
@@ -5645,15 +5646,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_52",
         "number":  52,
         "question":  "다음 그림의 결선방식은?",
         "choices":  [
@@ -5667,15 +5668,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_53",
         "number":  53,
         "question":  "입력이 주어지면 순시에 출력을 내고 입력을 제거해도 설정시간까지는 계속 출력을 내며, 설정시간 후 작동이 정지되는 회로는?",
         "choices":  [
@@ -5689,15 +5690,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_54",
         "number":  54,
         "question":  "부하의 이상 때문에 설정된 전류값 이상의 전류가 부하에 흘러 온도가 상승하면, 바이메탈에 의해 주접점을 열어(트립) 부하를 보호하는 제어기기는?",
         "choices":  [
@@ -5711,15 +5712,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_55",
         "number":  55,
         "question":  "다음 중 유압에너지를 기계적 에너지로 바꾸는 유압기기는?",
         "choices":  [
@@ -5733,15 +5734,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_56",
         "number":  56,
         "question":  "다음 유압회로의 명칭은?",
         "choices":  [
@@ -5755,15 +5756,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_56",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_57",
         "number":  57,
         "question":  "PLC 하드웨어 구조에서 외부 입출력기기의 노이즈가 PLC의 CPU쪽에 전달되지 않도록 하기 위하여 사용되는 소자는?",
         "choices":  [
@@ -5777,15 +5778,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_57",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_58",
         "number":  58,
         "question":  "다음 중 공압조정유닛의 구성요소에 해당하지 않는 것은?",
         "choices":  [
@@ -5799,15 +5800,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_58",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_59",
         "number":  59,
         "question":  "밀링머신에서 사용되는 부속장치가 아닌 것은?",
         "choices":  [
@@ -5821,15 +5822,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_59",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2023_2_60",
         "number":  60,
         "question":  "공기압축기 선정 및 사용 시 주의점이 아닌 것은?",
         "choices":  [
@@ -5843,15 +5844,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2023_2_60",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2023년 2회",
         "year":  2023,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_41",
         "number":  41,
         "question":  "다음 그림이 나타내는 기호는?",
         "choices":  [
@@ -5865,15 +5866,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_42",
         "number":  42,
         "question":  "유로의 단면적을 변화시켜 유량을 조절하는 밸브는?",
         "choices":  [
@@ -5887,15 +5888,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_43",
         "number":  43,
         "question":  "다음 중 제어정보 표시 형태에 의한 분류방법으로 짝지어진 것은?",
         "choices":  [
@@ -5909,15 +5910,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_44",
         "number":  44,
         "question":  "다음 그림이 나타내는 회로는?",
         "choices":  [
@@ -5931,15 +5932,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_45",
         "number":  45,
         "question":  "유압 동력부 펌프의 송출압력이 $60kgf/cm^2$이고, 송출유량이 $30L/min$일 때 펌프 동력은 몇 $kW$인가?",
         "choices":  [
@@ -5953,15 +5954,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_46",
         "number":  46,
         "question":  "다음 중 중립 상태에 내부의 유압을 모두 회귀시켜 무부하 중립을 유지하는 형태의 밸브는?",
         "choices":  [
@@ -5975,15 +5976,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_47",
         "number":  47,
         "question":  "다음 용적형 펌프 중 점도의 영향을 작게 받으며, 이물질의 영향도 거의 없고 저렴한 펌프는?",
         "choices":  [
@@ -5997,15 +5998,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_48",
         "number":  48,
         "question":  "설비도시 기호 중 $\\text{---} || \\text{---}$이 나타내는 구성품은?",
         "choices":  [
@@ -6019,15 +6020,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_49",
         "number":  49,
         "question":  "다음 공압 구성 중 압축된 공기를 탱크에 담기 전에 냉각하는 역할을 하는 부품은?",
         "choices":  [
@@ -6041,15 +6042,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_50",
         "number":  50,
         "question":  "유류탱크에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6063,15 +6064,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_51",
         "number":  51,
         "question":  "스프로킷 휠을 단면도시할 때 이뿌리원을 표시하는 선은?",
         "choices":  [
@@ -6085,15 +6086,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_52",
         "number":  52,
         "question":  "밀링에서 절삭속도 $20\\text{m/min}$, 커터 지름이 $50\\text{mm}$, 날수 12개, 1날당 이송이 $0.2\\text{mm/rev}$라면 테이블의 이송량은 몇 $\\text{mm}$인가?",
         "choices":  [
@@ -6107,15 +6108,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_53",
         "number":  53,
         "question":  "어미자의 $19\\text{mm}$에 아들자 눈금을 20개를 새긴 버니어캘리퍼스의 최소 읽음값 단위는?",
         "choices":  [
@@ -6129,15 +6130,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_54",
         "number":  54,
         "question":  "드릴작업 시 유의사항으로 옳지 않은 것은?",
         "choices":  [
@@ -6151,15 +6152,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_55",
         "number":  55,
         "question":  "리벳의 제도에 관한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6173,15 +6174,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_58",
         "number":  58,
         "question":  "다음 중 P형 반도체와 N형 반도체의 접합부에서 발생하는 광기전력 효과를 이용한 센서는?",
         "choices":  [
@@ -6195,15 +6196,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_58",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_59",
         "number":  59,
         "question":  "공기압 조정유닛(Air Service Unit)의 구성요소가 아닌 것은?",
         "choices":  [
@@ -6217,15 +6218,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_59",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_1_60",
         "number":  60,
         "question":  "칩이 절삭공구의 경사면 위를 미끄러지면서 나갈 때 마찰력에 의하여 경사면 일부가 오목하게 파이는 것은?",
         "choices":  [
@@ -6239,15 +6240,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_1_60",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 1회",
         "year":  2024,
         "round":  1,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_41",
         "number":  41,
         "question":  "밸브의 한쪽에 공압이 작동하여 내부의 공을 밀어 내어 공압 진입부가 닫히고 반대쪽으로 함께 들어온 공압이 출력되는 구조의 밸브는?",
         "choices":  [
@@ -6261,15 +6262,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_41",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_42",
         "number":  42,
         "question":  "실린더 내부에 실린더를 겹쳐 놓고 압력이 작동하면 1단 실린더가 작동하고, 계속해서 공압이 작동하면 2단 실린더가 작동하는 방식의 실린더 중 포트가 전진측, 후진측에 장착된 실린더는?",
         "choices":  [
@@ -6283,15 +6284,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_42",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_43",
         "number":  43,
         "question":  "고정 원판식 코일에 전류가 통하면 전자력에 의하여 회전원판이 잡아 당겨져 브레이크가 걸리고, 전류를 끊으면 스프링 작용으로 원판이 떨어져 회전을 계속하는 브레이크는?",
         "choices":  [
@@ -6305,15 +6306,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_43",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_44",
         "number":  44,
         "question":  "릴리프 밸브를 이용한 유압 브레이크 회로에서 유압 모터를 정지시키기 위해 오일의 공급을 중단했을 때 유압모터의 현상은?(단, 모터축의 부하 관성이 크다)",
         "choices":  [
@@ -6327,15 +6328,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_44",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_45",
         "number":  45,
         "question":  "어느 유체역학의 식이 다음과 같이 표현되었을 때 $H$가 의미하는 것은?\n\n$$\\frac{P}{\\gamma} + \\frac{V^2}{2g} + z = \\frac{P_1}{\\gamma} + \\frac{V_1^2}{2g} + z_1 = H$$",
         "choices":  [
@@ -6349,15 +6350,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_45",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_46",
         "number":  46,
         "question":  "불연속동작의 대표적인 제어로, 제어량이 목표값에서 어떤 양만큼 벗어나면 미리 정해진 일정한 조작량이 대상에 가해지는 제어는?",
         "choices":  [
@@ -6371,15 +6372,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_46",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_47",
         "number":  47,
         "question":  "방향제어밸브의 조작방식 중 기계 조작방식에 속하지 않는 것은?",
         "choices":  [
@@ -6393,15 +6394,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_47",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_48",
         "number":  48,
         "question":  "편심 로터가 흡입과 배출 구멍이 있는 하우징 내에서 회전하는 형태의 압축기는?",
         "choices":  [
@@ -6415,15 +6416,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_48",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_49",
         "number":  49,
         "question":  "온도가 일정할 때, 초기 상태에서 공기의 체적이 $10m^3$, 압력이 $5atm$이었고, 압축 후의 체적이 $2m^3$가 되었다면, 이때의 압력은 얼마인가?",
         "choices":  [
@@ -6437,15 +6438,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_49",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_50",
         "number":  50,
         "question":  "P형 반도체와 N형 반도체의 집합으로 구성된 소자로서, 한쪽 방향으로만 전류를 잘 통과시키는 정류작용의 성질을 가진 정류회로에 주로 사용되는 소자는?",
         "choices":  [
@@ -6459,15 +6460,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_50",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_51",
         "number":  51,
         "question":  "다음 중 베인펌프의 장점이 아닌 것은?",
         "choices":  [
@@ -6481,15 +6482,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_51",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_52",
         "number":  52,
         "question":  "다음 밸브 중 중립 상태에서 인입된 유압이 탱크로 회귀하는 밸브는?",
         "choices":  [
@@ -6503,15 +6504,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_52",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_53",
         "number":  53,
         "question":  "다음 중 용적이 밀폐되어 있지 않아 부하압력이 변동하며 토출량이 변하여 효율적인 운전이 가능한 펌프는?",
         "choices":  [
@@ -6525,15 +6526,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_53",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_54",
         "number":  54,
         "question":  "다음 배관기호 중 옥내외 소화전 기호는?",
         "choices":  [
@@ -6547,15 +6548,15 @@
         "has_image":  true,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_54",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_55",
         "number":  55,
         "question":  "회로의 압력이 일정 압력을 넘어서면 압력을 견디던 막이 압력 과다에 의해 파열됨으로써 압력을 낮추어 주어 급격한 압력 변화에 유압기기가 손상되는 것을 막을 수 있도록 장착하는 장치는?",
         "choices":  [
@@ -6569,15 +6570,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_55",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_56",
         "number":  56,
         "question":  "다음 중 유도형 센서(고주파 발진형 근접스위치)로 검출할 수 없는 물질은?",
         "choices":  [
@@ -6591,15 +6592,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_56",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_57",
         "number":  57,
         "question":  "일반적인 압축공기의 생산과 준비 단계가 옳은 것은?",
         "choices":  [
@@ -6613,15 +6614,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_57",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_58",
         "number":  58,
         "question":  "큰 운동에너지를 얻기 위해 설계된 것으로 리베팅, 펀칭, 프레싱 작업 등에 사용되는 실린더는?",
         "choices":  [
@@ -6635,15 +6636,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_58",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_59",
         "number":  59,
         "question":  "다음 중 서보센서가 아닌 것은?",
         "choices":  [
@@ -6657,15 +6658,15 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_59",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     },
     {
+        "id":  "ae_ind_2024_2_60",
         "number":  60,
         "question":  "유압기기에서 작동유의 기능에 대한 설명으로 옳지 않은 것은?",
         "choices":  [
@@ -6679,12 +6680,11 @@
         "has_image":  false,
         "question_img":  null,
         "subject":  "3과목: 자동화시스템 및 제어공학",
-        "id":  "ae_ind_2024_2_60",
+        "unit":  "3과목: 자동화시스템 및 제어공학",
+        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "round_info":  "자동화설비 산업기사 2024년 2회",
         "year":  2024,
         "round":  2,
-        "unit":  "3과목: 자동화시스템 및 제어공학",
-        "sub_unit":  "3과목: 자동화시스템 및 제어공학",
         "frequency":  1
     }
 ]
