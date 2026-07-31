@@ -238,7 +238,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       const roundFilter = searchParamsProps?.round || '';
       const unit = unitFilter || '';
       
-      const url = `/api/questions?subject=${subject}&start=${startIdx}&limit=${limitCount}&unit=${encodeURIComponent(unit)}&year=${yearFilter}&round=${roundFilter}`;
+      const rangeParams = (rStart && rEnd) ? `&rStart=${rStart}&rEnd=${rEnd}` : '';
+      const url = `/api/questions?subject=${subject}&start=${startIdx}&limit=${limitCount}&unit=${encodeURIComponent(unit)}&year=${yearFilter}&round=${roundFilter}${rangeParams}`;
       const res = await fetch(url);
       const data = await res.json();
       
@@ -338,10 +339,11 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
     fetchQuestions(initialStart, initialLimit);
   }, [paramsReady, setNum, setSize, rStart, fetchQuestions, searchParamsProps]);
 
-  // 백그라운드 프리페칭 로직
+  // 백그라운드 프리페칭 로직 (단원 세트 학습 시 지정된 문항 수 유지)
   useEffect(() => {
+    if (setNum) return; // 세트 학습 모드에서는 문항 수를 30개로 고정 (다음 세트 자동 병합 방지)
+
     if (questions.length > 0 && currentIndex > questions.length - 8 && !loading) {
-      // 다음 세트 번호 계산
       const currentLoadedCount = questions.length;
       const totalAvailable = totalQuestions;
       
@@ -351,7 +353,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         fetchQuestions(nextStart, limit, true);
       }
     }
-  }, [currentIndex, questions.length, totalQuestions, loading, setSize, fetchQuestions]);
+  }, [currentIndex, questions.length, totalQuestions, loading, setSize, setNum, fetchQuestions]);
 
   const remapExplanation = (text: string, mapping: number[]) => {
     if (!text || !mapping) return text;

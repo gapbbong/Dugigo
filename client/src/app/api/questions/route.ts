@@ -379,12 +379,20 @@ export async function GET(req: NextRequest) {
         });
       }
 
+      const rStart = searchParams.get("rStart") ? parseInt(searchParams.get("rStart")!) : null;
+      const rEnd = searchParams.get("rEnd") ? parseInt(searchParams.get("rEnd")!) : null;
+
       if (unitFilter) {
         const decodedUnit = decodeURIComponent(unitFilter);
+        const cleanUnit = decodedUnit.replace(/\s*\(\d+부\)$/, '').trim();
         allQuestions = allQuestions.filter(q => {
           const u = q.sub_unit || "";
-          return u === decodedUnit || u.includes(decodedUnit) || decodedUnit.includes(u);
+          return u === cleanUnit || u.includes(cleanUnit) || cleanUnit.includes(u);
         });
+      }
+
+      if (rStart !== null && rEnd !== null && !isNaN(rStart) && !isNaN(rEnd)) {
+        allQuestions = allQuestions.slice(rStart, rEnd);
       }
 
       const total = allQuestions.length;
