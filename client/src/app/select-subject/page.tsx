@@ -183,10 +183,19 @@ export default function SelectSubjectPage() {
       let fetchedSubjects = subjectsData.subjects || [];
       fetchedSubjects.sort((a: string, b: string) => {
         const getPriority = (name: string) => {
-          if (name.includes('한국사')) return 100;
-          if (name.includes('전기기사')) return 101;
-          if (name.includes('정보처리산업기사')) return 102;
-          return 0;
+          if (name.includes('한국사')) return 1;
+          if (name.includes('전기기사')) return 2;
+          if (name.includes('전기기능사')) return 3;
+          if (name.includes('전기공사산업기사')) return 4;
+          if (name.includes('정보처리기능사')) return 5;
+          if (name.includes('정보처리산업기사')) return 6;
+          if (name.includes('컴퓨터활용능력') || name.includes('컴활')) return 7;
+          if (name.includes('승강기기능사')) return 8;
+          if (name.includes('시각디자인')) return 9;
+          if (name.includes('생산자동화') || name.includes('자동화설비(생산자동화)기능사')) return 10;
+          if (name.includes('자동화설비산업기사') || name.includes('자동화설비 산업기사')) return 11;
+          if (name.includes('3D프린터')) return 12;
+          return 99;
         };
         const pa = getPriority(a);
         const pb = getPriority(b);

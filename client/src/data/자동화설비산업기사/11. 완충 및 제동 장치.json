@@ -1,0 +1,191 @@
+[
+  {
+    "number": 27,
+    "question": "스프링의 용도로 거리가 먼 것은?",
+    "choices": [
+      "진동",
+      "또는",
+      "충격",
+      "에너지를"
+    ],
+    "answer": 4,
+    "explanation": "본 문항은 2과목 기계 요소 설계 기출 핵심 개념을 묻는 문제로, 정답은 4번입니다.",
+    "question_img": null,
+    "subject": "자동화설비산업기사",
+    "id": "ae_ind_2026_9_27",
+    "round_info": "자동화설비 산업기사 2026년 9회",
+    "year": 2026,
+    "round": 9,
+    "unit": "11. 완충 및 제동 장치",
+    "sub_unit": "11. 완충 및 제동 장치",
+    "frequency": 1
+  },
+  {
+    "number": 32,
+    "question": "제9회 CBT대비 실전문제 ㉭ 코일 스프링의 중간 부분을 생략할 때는 생략하는 부분의 선지름의 중심선을 굵은 실선으로 그린다. ㉦ 특별한 단서가 없는 한 모두 오른쪽 감기 로 도시하고. 왼쪽 감기로 도시할 때에는",
+    "choices": [
+      "이라고",
+      "표시한다.",
+      "코일",
+      "스프링에서"
+    ],
+    "answer": 1,
+    "explanation": "본 문항은 2과목 기계 요소 설계 기출 핵심 개념을 묻는 문제로, 정답은 1번입니다.",
+    "question_img": null,
+    "subject": "자동화설비산업기사",
+    "id": "ae_ind_2026_9_32",
+    "round_info": "자동화설비 산업기사 2026년 9회",
+    "year": 2026,
+    "round": 9,
+    "unit": "11. 완충 및 제동 장치",
+    "sub_unit": "11. 완충 및 제동 장치",
+    "frequency": 1
+  },
+  {
+    "number": 35,
+    "question": "스프링의 자유 길이 H와 코일의 평균 지 름 D의 비를 무엇이라 하는가?",
+    "choices": [
+      "스프링",
+      "지수",
+      "스프링",
+      "상수"
+    ],
+    "answer": 4,
+    "explanation": "본 문항은 2과목 기계 요소 설계 기출 핵심 개념을 묻는 문제로, 정답은 4번입니다.",
+    "question_img": null,
+    "subject": "자동화설비산업기사",
+    "id": "ae_ind_2026_9_35",
+    "round_info": "자동화설비 산업기사 2026년 9회",
+    "year": 2026,
+    "round": 9,
+    "unit": "11. 완충 및 제동 장치",
+    "sub_unit": "11. 완충 및 제동 장치",
+    "frequency": 1
+  },
+  {
+    "number": 40,
+    "question": "다음 KS 재료 기호 중 탄소 공구강 강자 의 기호는?",
+    "choices": [
+      "STC",
+      "SF",
+      "STS",
+      "SPS"
+    ],
+    "answer": 1,
+    "explanation": "CD • STS : 합금 공구강 • SF : 단조용 강 • SPS : 스프링강 3과목 공유압",
+    "question_img": null,
+    "subject": "자동화설비산업기사",
+    "id": "ae_ind_2026_14_40",
+    "round_info": "자동화설비 산업기사 2026년 14회",
+    "year": 2026,
+    "round": 14,
+    "unit": "11. 완충 및 제동 장치",
+    "sub_unit": "11. 완충 및 제동 장치",
+    "frequency": 1
+  },
+  {
+    "number": 29,
+    "question": "KS 기계 재료 기호 중 스프링 강재는?",
+    "choices": [
+      "[보기 1 (그림 참조)]",
+      "[보기 2 (그림 참조)]",
+      "[보기 3 (그림 참조)]",
+      "[보기 4 (그림 참조)]"
+    ],
+    "answer": 4,
+    "explanation": "본 문항은 2과목 기계 요소 설계 기출 핵심 개념을 묻는 문제로, 정답은 4번입니다.",
+    "question_img": "/images/subjects/자동화설비산업기사/auto_r15_q29.png",
+    "subject": "자동화설비산업기사",
+    "id": "ae_ind_2026_15_29",
+    "round_info": "자동화설비 산업기사 2026년 15회",
+    "year": 2026,
+    "round": 15,
+    "unit": "11. 완충 및 제동 장치",
+    "sub_unit": "11. 완충 및 제동 장치",
+    "frequency": 1
+  },
+  {
+    "number": 32,
+    "question": "KS 재료 기호 중 합금 공구강 강재에 해 당히는 것은?",
+    "choices": [
+      "STS",
+      "SPS",
+      "STC",
+      "SBS"
+    ],
+    "answer": 4,
+    "explanation": "• STS : 합금 공구강 강재 • STC : 탄소 공구강 강재 • SPS : 스프링 강재",
+    "question_img": null,
+    "subject": "자동화설비산업기사",
+    "id": "ae_ind_2026_15_32",
+    "round_info": "자동화설비 산업기사 2026년 15회",
+    "year": 2026,
+    "round": 15,
+    "unit": "11. 완충 및 제동 장치",
+    "sub_unit": "11. 완충 및 제동 장치",
+    "frequency": 1
+  },
+  {
+    "number": 33,
+    "question": "일반 구조용 압연 강재의 KS 재료 기호로 알맞은 것은?",
+    "choices": [
+      "SPS",
+      "SS",
+      "SBC",
+      "SM"
+    ],
+    "answer": 3,
+    "explanation": "• SPS : 스프링 강재 •SS . 일반 구조용 압연 강재 • SM : 기계 구조용 압연 강재",
+    "question_img": null,
+    "subject": "자동화설비산업기사",
+    "id": "ae_ind_2026_15_33",
+    "round_info": "자동화설비 산업기사 2026년 15회",
+    "year": 2026,
+    "round": 15,
+    "unit": "11. 완충 및 제동 장치",
+    "sub_unit": "11. 완충 및 제동 장치",
+    "frequency": 1
+  },
+  {
+    "number": 26,
+    "question": "스프링용 스테인리스 강선의 KS 재료 기 등己 옳은 것은?",
+    "choices": [
+      "STC",
+      "STF",
+      "STD",
+      "STS"
+    ],
+    "answer": 4,
+    "explanation": "본 문항은 2과목 기계 요소 설계 기출 핵심 개념을 묻는 문제로, 정답은 4번입니다.",
+    "question_img": null,
+    "subject": "자동화설비산업기사",
+    "id": "ae_ind_2026_16_26",
+    "round_info": "자동화설비 산업기사 2026년 16회",
+    "year": 2026,
+    "round": 16,
+    "unit": "11. 완충 및 제동 장치",
+    "sub_unit": "11. 완충 및 제동 장치",
+    "frequency": 1
+  },
+  {
+    "number": 33,
+    "question": "어느 브레이크에서 제동 동력이 3kW, 브 레이크 용량이 O.8N/mm2 • m/s일 때 브레 이크 마찰 넓이는 약 몇 mm2인가?",
+    "choices": [
+      "[보기 1 (그림 참조)]",
+      "[보기 2 (그림 참조)]",
+      "[보기 3 (그림 참조)]",
+      "[보기 4 (그림 참조)]"
+    ],
+    "answer": 4,
+    "explanation": "본 문항은 2과목 기계 요소 설계 기출 핵심 개념을 묻는 문제로, 정답은 4번입니다.",
+    "question_img": "/images/subjects/자동화설비산업기사/auto_r16_q33.png",
+    "subject": "자동화설비산업기사",
+    "id": "ae_ind_2026_16_33",
+    "round_info": "자동화설비 산업기사 2026년 16회",
+    "year": 2026,
+    "round": 16,
+    "unit": "11. 완충 및 제동 장치",
+    "sub_unit": "11. 완충 및 제동 장치",
+    "frequency": 1
+  }
+]
