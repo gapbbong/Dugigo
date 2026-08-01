@@ -160,7 +160,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       try {
         const fetchUnit = unitFilter;
         const cleanUnit = fetchUnit.replace(/\s*\(\d+부\)$/, '').trim();
-        const safeUnitName = cleanUnit.replace(/[^a-z0-9가-힣]/gi, '_');
+        const unitWithoutSubject = cleanUnit.replace(/^\[[^\]]+\]\s*/, '');
+        const safeUnitName = unitWithoutSubject.replace(/[^a-z0-9가-힣]/gi, '_');
         const summaryFileName = `${safeUnitName}_${setNum}세트.json`;
         const staticUrl = `/summaries/${encodeURIComponent(subject)}/${encodeURIComponent(summaryFileName)}`;
         
@@ -1593,7 +1594,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                         setHideAutoSummary(e.target.checked);
                       }}
                     />
-                    <span className="text-xs font-bold text-slate-500 group-hover:text-slate-700 transition-colors">공부 시작 시 자동으로 열지 않기</span>
+                    <span className="text-xs font-bold text-slate-500 group-hover:text-slate-700 transition-colors">다음부터 보지 않기</span>
                   </label>
                   <button 
                     onClick={() => setAiSliderOpen(false)}

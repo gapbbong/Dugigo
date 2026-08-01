@@ -29,10 +29,11 @@ export async function GET(req: NextRequest) {
   }
 
   const cleanUnit = unit.replace(/\s*\(\d+부\)$/, '').trim();
-  const safeUnitName = cleanUnit.replace(/[^a-z0-9가-힣]/gi, '_');
+  const unitWithoutSubject = cleanUnit.replace(/^\[[^\]]+\]\s*/, '');
+  const safeUnitName = unitWithoutSubject.replace(/[^a-z0-9가-힣]/gi, '_');
   const summaryFileName = `${safeUnitName}_${set}세트.json`;
-  const fallbackFileName = `${cleanUnit.replace(/^\d+\.\s*/, '').replace(/[^a-z0-9가-힣]/gi, '_')}_${set}세트.json`;
-  const originalFileName = `${cleanUnit}_${set}세트.json`;
+  const fallbackFileName = `${unitWithoutSubject.replace(/^\d+\.\s*/, '').replace(/[^a-z0-9가-힣]/gi, '_')}_${set}세트.json`;
+  const originalFileName = `${unitWithoutSubject}_${set}세트.json`;
 
   let baseDir = process.cwd();
   // 만약 process.cwd()가 client 상위 폴더이고, client 폴더가 존재한다면 client 폴더 안을 base로 잡음
