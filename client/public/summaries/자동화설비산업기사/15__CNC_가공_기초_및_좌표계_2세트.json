@@ -1,0 +1,17 @@
+{
+  "subject": "자동화설비산업기사",
+  "unit": "15. CNC 가공 기초 및 좌표계",
+  "set": 2,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "",
+      "emoji": "📘",
+      "title": "15. CNC 가공 기초 및 좌표계 학습 시작!",
+      "content": "지금부터 15. CNC 가공 기초 및 좌표계 단원의 핵심 이론 요약 슬라이드를 학습합니다. 기출문제를 분석하여 꼭 외워야 할 알짜 개념들만 엄선했어요! 한 장씩 넘겨보며 원리와 출제 경향을 머릿속에 쏙쏙 집어넣어 보세요.",
+      "exam_point": "📌 단원 핵심 목표\n- 주요 개념의 정의 및 특징 파악\n- 시험에 단골 출제되는 오답 함정 극복",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    }
+  ]
+}

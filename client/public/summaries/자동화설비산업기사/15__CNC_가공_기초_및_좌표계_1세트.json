@@ -1,0 +1,37 @@
+{
+  "subject": "자동화설비산업기사",
+  "unit": "15. CNC 가공 기초 및 좌표계",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "",
+      "emoji": "📘",
+      "title": "15. CNC 가공 기초 및 좌표계 학습 시작!",
+      "content": "지금부터 15. CNC 가공 기초 및 좌표계 단원의 핵심 이론 요약 슬라이드를 학습합니다. 기출문제를 분석하여 꼭 외워야 할 알짜 개념들만 엄선했어요! 한 장씩 넘겨보며 원리와 출제 경향을 머릿속에 쏙쏙 집어넣어 보세요.",
+      "exam_point": "📌 단원 핵심 목표\n- 주요 개념의 정의 및 특징 파악\n- 시험에 단골 출제되는 오답 함정 극복",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "",
+      "emoji": "⚙️",
+      "title": "CNC 프로그래밍 및 회전속도 제어",
+      "content": "CNC 프로그래밍은 금속을 가공하는 CNC 공작기계 공구대의 좌표 경로 데이터 및 주축 가속 파라미터를 G코드 명령어를 사용해 순차 입력하는 기법입니다.\n\n1. 주축 회전 방향을 기준으로 Z축 좌표 축선은 머시닝센터 주 스핀들 가속 회전축과 일치합니다.\n2. 가공 공구가 공작물 금속 표면에서 멀어져 이격되는 진행 방향은 언제나 플러스(+) 기호 좌표로 정의됩니다.\n3. G90 절대 지령은 가공 가이드 좌표계 고정 원점(X0, Y0, Z0)을 기",
+      "exam_point": "🧮 공식 및 예제 풀이\n3. 계산식 및 예제 풀이",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n          <text x=\"200\" y=\"35\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">CNC 공작기계 오른손 직각좌표계</text>\n          <g transform=\"translate(200,130)\">\n            <line x1=\"0\" y1=\"0\" x2=\"100\" y2=\"0\" stroke=\"#3b82f6\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/>\n            <text x=\"110\" y=\"5\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">+Z 축 (주축 방향)</text>\n            \n            <line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"-90\" stroke=\"#10b981\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/>\n            <text x=\"0\" y=\"-100\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" text-anchor=\"middle\">+X 축</text>\n            \n            <line x1=\"0\" y1=\"0\" x2=\"-60\" y2=\"60\" stroke=\"#ef4444\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/>\n            <text x=\"-70\" y=\"75\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\" text-anchor=\"middle\">+Y 축</text>\n          </g>\n          <defs>\n            <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n              <path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#475569\"/>\n            </marker>\n          </defs>\n        </svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "",
+      "emoji": "💡",
+      "title": "헷갈리기 쉬운 개념 비교!",
+      "content": "자주 헷갈려 시험에서 오답 함정으로 자주 쓰이는 쌍둥이 개념들을 대조 정리해 둡니다. 두 용어를 서로 짝지어 정확하게 구분하는 능력이 시험 고득점의 비결이에요!",
+      "exam_point": "⚠️ 시험에 오답으로 출제되는 함정 포인트\nG90 (절대 지령) vs G91 (증분 지령): G90은 가공물 고정 원점으로부터의 절대 좌표 위치로 정확하게 이동을 내리는 지령이며, G91은 공구의 현재 포인트 위치에서부터 상대적인 증분량(거리와 방향) 만큼만 이동시키는 지령입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    }
+  ]
+}

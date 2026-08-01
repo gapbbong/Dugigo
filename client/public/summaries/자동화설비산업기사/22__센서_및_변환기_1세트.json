@@ -1,0 +1,37 @@
+{
+  "subject": "자동화설비산업기사",
+  "unit": "22. 센서 및 변환기",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "",
+      "emoji": "📘",
+      "title": "22. 센서 및 변환기 학습 시작!",
+      "content": "지금부터 22. 센서 및 변환기 단원의 핵심 이론 요약 슬라이드를 학습합니다. 기출문제를 분석하여 꼭 외워야 할 알짜 개념들만 엄선했어요! 한 장씩 넘겨보며 원리와 출제 경향을 머릿속에 쏙쏙 집어넣어 보세요.",
+      "exam_point": "📌 단원 핵심 목표\n- 주요 개념의 정의 및 특징 파악\n- 시험에 단골 출제되는 오답 함정 극복",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "",
+      "emoji": "⚙️",
+      "title": "근접센서 및 정전용량 유량 계산",
+      "content": "근접센서는 접촉 마찰 부품 없이 가인가 물체에 반사 발진하는 유전 변화나 유도 와전류를 측정하여 접근 여부를 계측하는 비접촉 측정 센서입니다.\n\n1. 고주파 발진형(유도형) 센서는 금속에 유도되는 와전류 감쇠로만 물체를 찾으므로 나무, 종이, 물 등 비금속은 검출하지 못합니다.\n2. 정전용량형 센서는 대전 유전체 극판 전하 결합 민감도를 보므로 물, 유리, 플라스틱 등 유전율 변화 물체를 검출합니다.\n3. 광전센서는 투광부 LED 광선이 물체에",
+      "exam_point": "🧮 공식 및 예제 풀이\n3. 계산식 및 예제 풀이",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "",
+      "emoji": "💡",
+      "title": "헷갈리기 쉬운 개념 비교!",
+      "content": "자주 헷갈려 시험에서 오답 함정으로 자주 쓰이는 쌍둥이 개념들을 대조 정리해 둡니다. 두 용어를 서로 짝지어 정확하게 구분하는 능력이 시험 고득점의 비결이에요!",
+      "exam_point": "⚠️ 시험에 오답으로 출제되는 함정 포인트\n제베크 효과(Seebeck) vs 펠티에 효과(Peltier): 제베크 효과는 두 금속 양단에 온도차를 주면 전압이 발생하는 온도 센서(열전대) 원리이며, 펠티에 효과는 반대로 전류를 흘려주면 한쪽은 열이 나고 다른 쪽은 차가워지는 냉각/가열 소자 원리입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    }
+  ]
+}

@@ -1442,7 +1442,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
               initial={{ scale: 0.9, opacity: 0, y: 20 }} 
               animate={{ scale: 1, opacity: 1, y: 0 }} 
               exit={{ scale: 0.9, opacity: 0, y: 20 }} 
-              className="w-full max-w-5xl bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col h-[90vh] md:h-[85vh] relative border border-white/20"
+              className="w-full max-w-5xl bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col h-[90vh] md:h-auto md:aspect-[16/9] max-h-[95vh] relative border border-white/20"
             >
               {/* 상단바 */}
               <div className="flex items-center justify-between px-6 py-4 md:px-10 md:py-6 border-b border-slate-100 bg-slate-50/50">

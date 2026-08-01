@@ -1,0 +1,37 @@
+{
+  "subject": "자동화설비산업기사",
+  "unit": "12. 유압 액추에이터 및 부속기기",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "",
+      "emoji": "📘",
+      "title": "12. 유압 액추에이터 및 부속기기 학습 시작!",
+      "content": "지금부터 12. 유압 액추에이터 및 부속기기 단원의 핵심 이론 요약 슬라이드를 학습합니다. 기출문제를 분석하여 꼭 외워야 할 알짜 개념들만 엄선했어요! 한 장씩 넘겨보며 원리와 출제 경향을 머릿속에 쏙쏙 집어넣어 보세요.",
+      "exam_point": "📌 단원 핵심 목표\n- 주요 개념의 정의 및 특징 파악\n- 시험에 단골 출제되는 오답 함정 극복",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "",
+      "emoji": "⚙️",
+      "title": "실린더 및 축압기(Accumulator)",
+      "content": "유압 액추에이터는 압축 오일 에너지를 기계 일률로 변환하는 장치이며, 축압기는 고압 오일을 일시 축적해 에너지를 저장 방출하는 기기입니다.\n\n1. 실린더에 가해진 압력이 일정할 때 피스톤 직경이 크면 추력 힘은 가압 면적에 비례해 비약적으로 커집니다.\n2. 축압기(어큐뮬레이터) 내부 완충실에는 산소 등 폭발성 가스를 배제하고 비활성인 안전한 질소(N2) 기체를 주입합니다.\n3. 축압기는 펌프의 순간 가동 동력을 보조하거나 정전 시 긴급 후진용 ",
+      "exam_point": "📌 핵심 출제 포인트\n• 실린더에 가해진 압력이 일정할 때 피스톤 직경이 크면 추력 힘은 가압 면적에 비례해 비약적으로 커집니다.\n• 축압기(어큐뮬레이터) 내부 완충실에는 산소 등 폭발성 가스를 배제하고 비활성인 안전한 질소(N2) 기체를 주입합니다.\n• 축압기는 펌프의 순간 가동 동력을 보조하거나 정전 시 긴급 후진용 긴급 오일을 공급합니다.\n• 유압 모터는 360도 양방향 고속 회전 동력을 발생시키며 오일의 누설을 통제하는 드레인이 필수입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "",
+      "emoji": "💡",
+      "title": "헷갈리기 쉬운 개념 비교!",
+      "content": "자주 헷갈려 시험에서 오답 함정으로 자주 쓰이는 쌍둥이 개념들을 대조 정리해 둡니다. 두 용어를 서로 짝지어 정확하게 구분하는 능력이 시험 고득점의 비결이에요!",
+      "exam_point": "⚠️ 시험에 오답으로 출제되는 함정 포인트\n질소 가스(N2) vs 산소/압축 공기: 축압기 가스 실에는 고온 유압유와 만나 유증기 폭발을 낳을 우려가 있는 산소나 압축 공기 사용을 엄금하며, 반드시 안정한 질소 가스만 써야 합니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    }
+  ]
+}

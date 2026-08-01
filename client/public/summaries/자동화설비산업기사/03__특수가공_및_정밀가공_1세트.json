@@ -1,0 +1,37 @@
+{
+  "subject": "자동화설비산업기사",
+  "unit": "03. 특수가공 및 정밀가공",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "",
+      "emoji": "📘",
+      "title": "03. 특수가공 및 정밀가공 학습 시작!",
+      "content": "지금부터 03. 특수가공 및 정밀가공 단원의 핵심 이론 요약 슬라이드를 학습합니다. 기출문제를 분석하여 꼭 외워야 할 알짜 개념들만 엄선했어요! 한 장씩 넘겨보며 원리와 출제 경향을 머릿속에 쏙쏙 집어넣어 보세요.",
+      "exam_point": "📌 단원 핵심 목표\n- 주요 개념의 정의 및 특징 파악\n- 시험에 단골 출제되는 오답 함정 극복",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "",
+      "emoji": "⚙️",
+      "title": "특수가공 (방전, 전해, 초음파)",
+      "content": "특수가공은 공구와 재료의 기계적 마찰이나 깎임에 의존하지 않고, 전기, 화학, 초음파 진동 등의 에너지를 가해 극경 재료를 가공하는 정밀 공정입니다.\n\n1. 방전가공(EDM)은 절연액(등유) 속에서 아크 방전 열로 재료를 미세하게 녹여냅니다.\n2. 방전가공 시 전극(공구)은 음극(-), 공작물은 양극(+)에 연결하는 것이 기본입니다.\n3. 전해가공(ECM)은 전해액 속에서 전기화학적 양극 용해 작용을 이용하므로 공구 소모가 전혀 없습니다.",
+      "exam_point": "📌 핵심 출제 포인트\n• 방전가공(EDM)은 절연액(등유) 속에서 아크 방전 열로 재료를 미세하게 녹여냅니다.\n• 방전가공 시 전극(공구)은 음극(-), 공작물은 양극(+)에 연결하는 것이 기본입니다.\n• 전해가공(ECM)은 전해액 속에서 전기화학적 양극 용해 작용을 이용하므로 공구 소모가 전혀 없습니다.\n• 초음파가공(USM)은 약 20kHz의 초음파 진동과 지립 현탁액으로 유리, 세라믹 등의 비금속 취성 재료를 가공합니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "",
+      "emoji": "⚙️",
+      "title": "정밀 입자 가공 및 연삭 결함",
+      "content": "정밀 입자가공은 숫돌 지립이나 미세한 가루를 사용하여 표면거칠기를 극대화하는 가공이며, 연삭 마모 및 숫돌의 수정을 수반합니다.\n\n1. 슈퍼피니싱은 입자가 작고 연한 숫돌을 낮은 압력으로 진동시켜 무방향성의 매끈한 면을 얻습니다.\n2. 버니싱은 금속 구멍에 가공경화용 구슬(강철 볼)을 강제로 압입·통과시켜 소성 변형으로 매끈하게 다듬습니다.\n3. 액체호닝은 연마재와 가공액을 고속으로 분사하여 미세 잔バリ(버) 제거 및 다듬질을 행합니다.",
+      "exam_point": "🔍 중요 대조/비교 포인트\n3. 비교 분석: 숫돌 이상 현상 및 조치\n| 현상명 | 정의 | 원인 | 해결 조치 (Dressing / Truing) |\n|---|---|---|---|\n| 눈메움 (Loading) | 숫돌의 기공에 금속 칩이 꽉 끼는 현상 | 연한 금속 가공, 큰 이송량 | 드레싱 (Dressing): 숫돌 표면을 깎아 기공을 틔워 줌 |\n| 입자 무딤 (Glazing) | 숫돌 입자가 마멸되어 무뎌지는 현상 | 결합도가 너무 높음, 주축 과속 | 드레싱 (Dressing): 무뎌진 입자를 털어내 새 입자를 노출함",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    }
+  ]
+}

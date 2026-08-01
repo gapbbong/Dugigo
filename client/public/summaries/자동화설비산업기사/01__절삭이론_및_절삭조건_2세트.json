@@ -1,0 +1,27 @@
+{
+  "subject": "자동화설비산업기사",
+  "unit": "01. 절삭이론 및 절삭조건",
+  "set": 2,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "",
+      "emoji": "📘",
+      "title": "01. 절삭이론 및 절삭조건 학습 시작!",
+      "content": "지금부터 01. 절삭이론 및 절삭조건 단원의 핵심 이론 요약 슬라이드를 학습합니다. 기출문제를 분석하여 꼭 외워야 할 알짜 개념들만 엄선했어요! 한 장씩 넘겨보며 원리와 출제 경향을 머릿속에 쏙쏙 집어넣어 보세요.",
+      "exam_point": "📌 단원 핵심 목표\n- 주요 개념의 정의 및 특징 파악\n- 시험에 단골 출제되는 오답 함정 극복",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n          <text x=\"200\" y=\"40\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">절삭 3분력 (Forces) 대조</text>\n          <g transform=\"translate(40, 70)\">\n            <rect x=\"0\" y=\"0\" width=\"320\" height=\"35\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1\"/>\n            <text x=\"15\" y=\"22\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">주분력 (가장 큼)</text>\n            <text x=\"305\" y=\"22\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\" text-anchor=\"end\">가공 평행 방향 힘</text>\n          </g>\n          <g transform=\"translate(40, 115)\">\n            <rect x=\"0\" y=\"0\" width=\"320\" height=\"35\" rx=\"6\" fill=\"#fffbeb\" stroke=\"#f59e0b\" stroke-width=\"1\"/>\n            <text x=\"15\" y=\"22\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\">배분력 (중간)</text>\n            <text x=\"305\" y=\"22\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\" text-anchor=\"end\">공구를 뒤로 밀어내는 힘</text>\n          </g>\n          <g transform=\"translate(40, 160)\">\n            <rect x=\"0\" y=\"0\" width=\"320\" height=\"35\" rx=\"6\" fill=\"#fef2f2\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n            <text x=\"15\" y=\"22\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\">이송분력 (가장 작음)</text>\n            <text x=\"305\" y=\"22\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\" text-anchor=\"end\">이송 방향 저항</text>\n          </g>\n          <text x=\"200\" y=\"225\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">v = (π * D * n) / 1000  [m/min]</text>\n        </svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "",
+      "emoji": "💡",
+      "title": "헷갈리기 쉬운 개념 비교!",
+      "content": "자주 헷갈려 시험에서 오답 함정으로 자주 쓰이는 쌍둥이 개념들을 대조 정리해 둡니다. 두 용어를 서로 짝지어 정확하게 구분하는 능력이 시험 고득점의 비결이에요!",
+      "exam_point": "⚠️ 시험에 오답으로 출제되는 함정 포인트\n크레이터 마모 vs 플랭크 마모: 크레이터 마모는 칩과 공구의 마찰로 인해 윗면(경사면)에 오목하게 구멍이 파이는 현상이고, 플랭크 마모는 가공면와 공구의 마찰로 인해 측면(여유면)이 마모되는 현상입니다.\n 주분력 vs 이송분력: 절삭력 성분 중 가장 크기가 큰 힘은 주분력이며, 가장 크기가 작아 무시되거나 작게 다뤄지는 힘은 이송분력입니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n          <text x=\"200\" y=\"40\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">절삭 3분력 (Forces) 대조</text>\n          <g transform=\"translate(40, 70)\">\n            <rect x=\"0\" y=\"0\" width=\"320\" height=\"35\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1\"/>\n            <text x=\"15\" y=\"22\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">주분력 (가장 큼)</text>\n            <text x=\"305\" y=\"22\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\" text-anchor=\"end\">가공 평행 방향 힘</text>\n          </g>\n          <g transform=\"translate(40, 115)\">\n            <rect x=\"0\" y=\"0\" width=\"320\" height=\"35\" rx=\"6\" fill=\"#fffbeb\" stroke=\"#f59e0b\" stroke-width=\"1\"/>\n            <text x=\"15\" y=\"22\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\">배분력 (중간)</text>\n            <text x=\"305\" y=\"22\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\" text-anchor=\"end\">공구를 뒤로 밀어내는 힘</text>\n          </g>\n          <g transform=\"translate(40, 160)\">\n            <rect x=\"0\" y=\"0\" width=\"320\" height=\"35\" rx=\"6\" fill=\"#fef2f2\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n            <text x=\"15\" y=\"22\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\">이송분력 (가장 작음)</text>\n            <text x=\"305\" y=\"22\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\" text-anchor=\"end\">이송 방향 저항</text>\n          </g>\n          <text x=\"200\" y=\"225\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">v = (π * D * n) / 1000  [m/min]</text>\n        </svg>"
+    }
+  ]
+}

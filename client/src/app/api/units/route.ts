@@ -224,7 +224,10 @@ export async function GET(req: NextRequest) {
 
     loadedFileData.forEach(({ file, questions }) => {
       const fileNameUnit = file.replace(/\.json$/, '').trim();
-      const isStandardUnitFile = /^\d+\./.test(fileNameUnit) || fileNameUnit.includes("족집게");
+      let isStandardUnitFile = /^\d+\./.test(fileNameUnit) || fileNameUnit.includes("족집게");
+      if (sanitizedSubject.includes('자동화설비산업기사')) {
+        isStandardUnitFile = false;
+      }
 
       questions.forEach((q: any) => {
         const text = (q.question || '').trim();

@@ -1,0 +1,37 @@
+{
+  "subject": "자동화설비산업기사",
+  "unit": "02. 선반, 밀링 및 범용 공작기계",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "",
+      "emoji": "📘",
+      "title": "02. 선반, 밀링 및 범용 공작기계 학습 시작!",
+      "content": "지금부터 02. 선반, 밀링 및 범용 공작기계 단원의 핵심 이론 요약 슬라이드를 학습합니다. 기출문제를 분석하여 꼭 외워야 할 알짜 개념들만 엄선했어요! 한 장씩 넘겨보며 원리와 출제 경향을 머릿속에 쏙쏙 집어넣어 보세요.",
+      "exam_point": "📌 단원 핵심 목표\n- 주요 개념의 정의 및 특징 파악\n- 시험에 단골 출제되는 오답 함정 극복",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "",
+      "emoji": "⚙️",
+      "title": "선반과 밀링의 기초 및 절삭 모드",
+      "content": "선반은 가공물을 주축에 물려 회전시키고 공구(바이트)를 이송시켜 외경을 깎는 기계이며, 밀링은 회전하는 커터에 가공물을 이송시켜 평면이나 홈을 파내는 기계입니다.\n\n1. 선반은 공작물이 회전 운동(주운동)을 하고 공구가 이송 운동을 담당합니다.\n2. 밀링은 공구가 회전 운동(주운동)을 하고 공작물이 이송 운동을 담당합니다.\n3. 상향 절삭은 커터 회전과 공작물 이송이 반대 방향이며 백래시가 저절로 제거됩니다.",
+      "exam_point": "🔍 중요 대조/비교 포인트\n3. 비교 분석: 상향 절삭 vs 하향 절삭\n| 구분 | 상향 절삭 (Up Cut) | 하향 절삭 (Down Cut) |\n|---|---|---|\n| 회전/이송 방향 | 서로 반대 (맞섬) | 서로 동일 (누름) |\n| 백래시 제거 장치 | 불필요 | 필수적 (유격 발생) |",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "",
+      "emoji": "⚙️",
+      "title": "분할 및 가공 계산",
+      "content": "분할은 밀링머신의 분할대를 사용하여 공작물의 원주를 등분하는 작업이며, 나사 구멍 등을 뚫기 위해 탭 구멍용 드릴 직경을 선정하는 계산이 포함됩니다.\n\n1. 간접 분할은 분할 크랭크의 회전비(보통 40:1)를 기준으로 구멍판을 조합합니다.\n2. 직접 분할은 24구멍판을 사용하여 24의 약수 등분만을 신속하게 분할합니다.\n3. 각도 분할 시 1회전은 9도($540'$)에 해당하므로 분율로 계산합니다.",
+      "exam_point": "🧮 공식 및 예제 풀이\n3. 계산식 및 예제 풀이",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n          <text x=\"200\" y=\"35\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">상향 절삭 vs 하향 절삭</text>\n          <g transform=\"translate(20, 60)\">\n            <rect x=\"0\" y=\"0\" width=\"170\" height=\"150\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n            <text x=\"85\" y=\"25\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" text-anchor=\"middle\">상향 절삭 (Up Cut)</text>\n            <text x=\"20\" y=\"55\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\">• 회전과 이송이 반대</text>\n            <text x=\"20\" y=\"80\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\">• 칩이 아래에서 위로</text>\n            <text x=\"20\" y=\"105\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\">• 공작물을 들어올림</text>\n            <text x=\"20\" y=\"130\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\">• 날 마모 큼 (수명 짧음)</text>\n          </g>\n          <g transform=\"translate(210, 60)\">\n            <rect x=\"0\" y=\"0\" width=\"170\" height=\"150\" rx=\"10\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.5\"/>\n            <text x=\"85\" y=\"25\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\" text-anchor=\"middle\">하향 절삭 (Down Cut)</text>\n            <text x=\"20\" y=\"55\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\">• 회전과 이송이 일치</text>\n            <text x=\"20\" y=\"80\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\">• 칩이 위에서 아래로</text>\n            <text x=\"20\" y=\"105\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\">• 공작물을 아래로 누름</text>\n            <text x=\"20\" y=\"130\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\">• 백래시 제거 장치 필요</text>\n          </g>\n        </svg>"
+    }
+  ]
+}

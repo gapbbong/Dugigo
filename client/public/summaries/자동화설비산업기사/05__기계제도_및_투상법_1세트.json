@@ -1,0 +1,37 @@
+{
+  "subject": "자동화설비산업기사",
+  "unit": "05. 기계제도 및 투상법",
+  "set": 1,
+  "slides": [
+    {
+      "id": 1,
+      "style": "Expert",
+      "image": "",
+      "emoji": "📘",
+      "title": "05. 기계제도 및 투상법 학습 시작!",
+      "content": "지금부터 05. 기계제도 및 투상법 단원의 핵심 이론 요약 슬라이드를 학습합니다. 기출문제를 분석하여 꼭 외워야 할 알짜 개념들만 엄선했어요! 한 장씩 넘겨보며 원리와 출제 경향을 머릿속에 쏙쏙 집어넣어 보세요.",
+      "exam_point": "📌 단원 핵심 목표\n- 주요 개념의 정의 및 특징 파악\n- 시험에 단골 출제되는 오답 함정 극복",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    },
+    {
+      "id": 2,
+      "style": "Expert",
+      "image": "",
+      "emoji": "⚙️",
+      "title": "제도 기본 및 투상법",
+      "content": "기계제도는 약속된 표준 규격(KS B 0001 등)을 적용하여 기계 부품의 형태를 2차원 도면에 정밀하게 설계·도시하는 일련의 작업입니다.\n\n1. 제3각법은 '눈 $\rightarrow$ 투상면 $\rightarrow$ 물체' 순으로 배치하여 정면도 상단에 평면도, 우측에 우측면도를 그립니다.\n2. 회전도시 단면도는 핸들, 암, 리브 등의 단면을 90도 회전하여 투상도 내부에 가는 실선으로 직접 겹쳐 그립니다.\n3. 굵은 파선은 도면에서 특정 영역",
+      "exam_point": "🔍 중요 대조/비교 포인트\n3. 비교 분석: 3각법 투상 배열\n| 투상도 위치 | 제3각법 (KS 표준) | 제1각법 |\n|---|---|---|\n| 정면도 기준 위쪽 | 평면도 (Top View) | 배면도 또는 저면도 |\n| 정면도 기준 우측 | 우측면도 (Right View) | 좌측면도 |",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n          <text x=\"200\" y=\"40\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">제3각법 투상 배치도</text>\n          <rect x=\"150\" y=\"100\" width=\"100\" height=\"60\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n          <text x=\"200\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4ed8\" text-anchor=\"middle\">정면도</text>\n          \n          <rect x=\"150\" y=\"25\" width=\"100\" height=\"50\" rx=\"6\" fill=\"#f1f5f9\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n          <text x=\"200\" y=\"55\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">평면도</text>\n\n          <rect x=\"270\" y=\"100\" width=\"80\" height=\"60\" rx=\"6\" fill=\"#f1f5f9\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n          <text x=\"310\" y=\"135\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">우측면도</text>\n\n          <rect x=\"50\" y=\"100\" width=\"80\" height=\"60\" rx=\"6\" fill=\"#f1f5f9\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n          <text x=\"90\" y=\"135\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">좌측면도</text>\n          \n          <text x=\"200\" y=\"200\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"middle\">정면도를 기준으로 위에는 평면도, 우측에는 우측면도 배치</text>\n        </svg>"
+    },
+    {
+      "id": 3,
+      "style": "Expert",
+      "image": "",
+      "emoji": "💡",
+      "title": "헷갈리기 쉬운 개념 비교!",
+      "content": "자주 헷갈려 시험에서 오답 함정으로 자주 쓰이는 쌍둥이 개념들을 대조 정리해 둡니다. 두 용어를 서로 짝지어 정확하게 구분하는 능력이 시험 고득점의 비결이에요!",
+      "exam_point": "⚠️ 시험에 오답으로 출제되는 함정 포인트\n가는 실선 vs 굵은 실선: 회전도시 단면도를 가공물 투상도와 겹쳐서 그릴 때는 혼동을 예방하기 위해 반드시 가는 실선을 사용하고, 물체의 실제 바깥 윤곽을 나타낼 때는 굵은 실선(외형선)을 씁니다.\n 관용 테이퍼 나사 vs 관용 평행 나사: 관용 테이퍼 나사는 기호로 R(수나사), Rc(암나사), Rp(평행암나사) 등을 사용하는 반면, 관용 평행 나사는 암수 구별 없이 PF 기호를 사용합니다.",
+      "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" rx=\"20\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">자동화설비 핵심 원리 분석</text>\n    <rect x=\"50\" y=\"80\" width=\"300\" height=\"90\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"2\" />\n    <circle cx=\"95\" cy=\"125\" r=\"22\" fill=\"#dbeafe\" />\n    <text x=\"95\" y=\"132\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\">💡</text>\n    <text x=\"135\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">핵심 개념 요약</text>\n    <text x=\"135\" y=\"138\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">주요 내용과 문제 출제 포인트를 암기하세요.</text>\n    <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#94a3b8\" text-anchor=\"middle\">두기고 Smart License Slide System</text>\n  </svg>"
+    }
+  ]
+}
