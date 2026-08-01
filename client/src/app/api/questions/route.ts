@@ -390,7 +390,8 @@ export async function GET(req: NextRequest) {
         const cleanUnit = decodedUnit.replace(/\s*\(\d+부\)$/, '').trim();
         allQuestions = allQuestions.filter(q => {
           const u = q.sub_unit || "";
-          return u === cleanUnit || u.includes(cleanUnit) || cleanUnit.includes(u);
+          const cleanU = u.replace(/[<>:"|?*]/g, "").trim();
+          return cleanU === cleanUnit || cleanU.includes(cleanUnit) || cleanUnit.includes(cleanU);
         });
       }
 

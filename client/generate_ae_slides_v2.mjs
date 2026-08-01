@@ -339,6 +339,18 @@ function generate() {
   const cleanUnitName = UNIT_NAMES['10'].trim();
   const safeUnitName = cleanUnitName.replace(/[^a-z0-9가-힣]/gi, '_');
 
+  // Destination 1: Next.js public summaries runtime path
+  const publicDir = 'F:/App/Dukigo/client/public/summaries/자동화설비산업기사';
+  if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir, { recursive: true });
+  }
+
+  // Destination 2: Project data inspection path under client/src/data/자동화설비산업기사/10/
+  const inspectDir = 'F:/App/Dukigo/client/src/data/자동화설비산업기사/10';
+  if (!fs.existsSync(inspectDir)) {
+    fs.mkdirSync(inspectDir, { recursive: true });
+  }
+
   // Save for Set 1 (Slides 1 to 5)
   const set1Slides = allSlides.slice(0, 5);
   const payload1 = {
@@ -348,14 +360,18 @@ function generate() {
     slides: set1Slides
   };
   fs.writeFileSync(
-    path.join(targetDir, `${safeUnitName}_1세트.json`),
+    path.join(publicDir, `${safeUnitName}_1세트.json`),
+    JSON.stringify(payload1, null, 2),
+    'utf8'
+  );
+  fs.writeFileSync(
+    path.join(inspectDir, `${safeUnitName}_1세트.json`),
     JSON.stringify(payload1, null, 2),
     'utf8'
   );
 
   // Save for Set 2 (Slides 1 and 6 to 9)
   const set2Slides = [allSlides[0], ...allSlides.slice(5)];
-  // Re-index ids
   const reindexedSet2 = set2Slides.map((s, idx) => ({ ...s, id: idx + 1 }));
   const payload2 = {
     subject: "자동화설비산업기사",
@@ -364,12 +380,17 @@ function generate() {
     slides: reindexedSet2
   };
   fs.writeFileSync(
-    path.join(targetDir, `${safeUnitName}_2세트.json`),
+    path.join(publicDir, `${safeUnitName}_2세트.json`),
+    JSON.stringify(payload2, null, 2),
+    'utf8'
+  );
+  fs.writeFileSync(
+    path.join(inspectDir, `${safeUnitName}_2세트.json`),
     JSON.stringify(payload2, null, 2),
     'utf8'
   );
 
-  console.log("Unit 10 slides successfully generated!");
+  console.log("Unit 10 slides successfully generated in both public/summaries and src/data/자동화설비산업기사/10/!");
 }
 
 generate();
