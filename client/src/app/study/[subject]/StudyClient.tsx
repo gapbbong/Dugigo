@@ -755,8 +755,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
 
   const renderMath = (text: string) => {
     if (!text) return '';
-    // 선택지 번호(1., ①, (1)) 제거를 위한 정규식 추가
-    let cleanText = text.replace(/^(\d+\.|①|②|③|④|⑤|\(\d+\))\s*/, '').replace(/\*\*/g, '');
+    // 선택지 번호(1., ①, (1)) 제거를 위한 정규식 (소수점 15.7, 2.5mm 보호를 위해 \d+\.(?!\d) 적용)
+    let cleanText = text.replace(/^(\d+\.(?!\d)|①|②|③|④|⑤|\(\d+\))\s*/, '').replace(/\*\*/g, '');
 
     if (!cleanText.includes('$') && !cleanText.includes('\\(') && !cleanText.includes('\\[') && !/[가-힣]/.test(cleanText)) {
       if (/\\(frac|sqrt|mu|pi|epsilon|omega|theta|phi|times|cdot|int|sum|alpha|beta|gamma|delta|sigma|Delta|Omega|sim|approx|neq|leq|geq|pm|mp|circ)/.test(cleanText) || /[\^_]/.test(cleanText)) {
