@@ -2630,8 +2630,8 @@
     "year": 2017,
     "round": 2,
     "frequency": 1,
-    "sub_unit": "13. 공압기기 및 공압 논리회로",
-    "unit_no": "U13",
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19",
     "visual_coords": [
       166,
       191,
@@ -3005,8 +3005,8 @@
     "year": 2021,
     "round": 1,
     "frequency": 1,
-    "sub_unit": "13. 공압기기 및 공압 논리회로",
-    "unit_no": "U13",
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19",
     "visual_coords": [
       636,
       656,
@@ -3034,8 +3034,8 @@
     "year": 2021,
     "round": 1,
     "frequency": 1,
-    "sub_unit": "13. 공압기기 및 공압 논리회로",
-    "unit_no": "U13",
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19",
     "visual_coords": [
       168,
       230,
@@ -3236,8 +3236,8 @@
     "year": 2022,
     "round": 2,
     "frequency": 1,
-    "sub_unit": "13. 공압기기 및 공압 논리회로",
-    "unit_no": "U13",
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19",
     "visual_coords": [
       636,
       656,
@@ -3265,8 +3265,8 @@
     "year": 2022,
     "round": 2,
     "frequency": 1,
-    "sub_unit": "13. 공압기기 및 공압 논리회로",
-    "unit_no": "U13",
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19",
     "visual_coords": [
       168,
       230,
@@ -3294,8 +3294,8 @@
     "year": 2022,
     "round": 2,
     "frequency": 1,
-    "sub_unit": "13. 공압기기 및 공압 논리회로",
-    "unit_no": "U13"
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19"
   },
   {
     "id": "ae_ind_2022_2_35",
@@ -3438,8 +3438,8 @@
     "year": 2023,
     "round": 2,
     "frequency": 1,
-    "sub_unit": "13. 공압기기 및 공압 논리회로",
-    "unit_no": "U13",
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19",
     "visual_coords": [
       698,
       229,
@@ -3490,8 +3490,8 @@
     "year": 2024,
     "round": 1,
     "frequency": 1,
-    "sub_unit": "13. 공압기기 및 공압 논리회로",
-    "unit_no": "U13",
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19",
     "visual_coords": [
       596,
       651,
@@ -3519,8 +3519,8 @@
     "year": 2024,
     "round": 1,
     "frequency": 1,
-    "sub_unit": "13. 공압기기 및 공압 논리회로",
-    "unit_no": "U13",
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19",
     "visual_coords": [
       586,
       205,
@@ -3600,8 +3600,8 @@
     "year": 2024,
     "round": 2,
     "frequency": 1,
-    "sub_unit": "13. 공압기기 및 공압 논리회로",
-    "unit_no": "U13",
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19",
     "visual_coords": [
       685,
       638,
@@ -4201,8 +4201,8 @@
     "year": 2023,
     "round": 2,
     "frequency": 1,
-    "sub_unit": "14. 유공압 응용회로 및 카운터",
-    "unit_no": "U14",
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19",
     "visual_coords": [
       168,
       203,
@@ -6276,8 +6276,8 @@
     "year": 2022,
     "round": 2,
     "frequency": 1,
-    "sub_unit": "16. CNC 고정 사이클 프로그래밍",
-    "unit_no": "U16"
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19"
   },
   {
     "id": "ae_ind_2022_2_31",
@@ -7037,8 +7037,8 @@
     "year": 2019,
     "round": 2,
     "frequency": 1,
-    "sub_unit": "17. CNC 원점복귀 및 공구보정",
-    "unit_no": "U17"
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19"
   },
   {
     "id": "ae_ind_2019_2_40",
@@ -7152,8 +7152,8 @@
     "year": 2019,
     "round": 4,
     "frequency": 1,
-    "sub_unit": "17. CNC 원점복귀 및 공구보정",
-    "unit_no": "U17"
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19"
   },
   {
     "id": "ae_ind_2019_4_39",
@@ -7579,8 +7579,8 @@
     "year": 2022,
     "round": 2,
     "frequency": 1,
-    "sub_unit": "17. CNC 원점복귀 및 공구보정",
-    "unit_no": "U17"
+    "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+    "unit_no": "U19"
   },
   {
     "id": "ae_ind_2023_1_29",

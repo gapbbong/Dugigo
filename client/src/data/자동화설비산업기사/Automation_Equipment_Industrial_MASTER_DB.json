@@ -6890,8 +6890,8 @@
       "year": 2021,
       "round": 1,
       "frequency": 1,
-      "sub_unit": "08. 주조, 용접 및 열처리 공정",
-      "unit_no": "U08"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2021_1_12",
@@ -6913,8 +6913,8 @@
       "year": 2021,
       "round": 1,
       "frequency": 1,
-      "sub_unit": "08. 주조, 용접 및 열처리 공정",
-      "unit_no": "U08"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2021_1_14",
@@ -7057,8 +7057,8 @@
       "year": 2022,
       "round": 1,
       "frequency": 1,
-      "sub_unit": "08. 주조, 용접 및 열처리 공정",
-      "unit_no": "U08"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2022_1_17",
@@ -10244,8 +10244,8 @@
       "year": 2017,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "13. 공압기기 및 공압 논리회로",
-      "unit_no": "U13",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         166,
         191,
@@ -10619,8 +10619,8 @@
       "year": 2021,
       "round": 1,
       "frequency": 1,
-      "sub_unit": "13. 공압기기 및 공압 논리회로",
-      "unit_no": "U13",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         636,
         656,
@@ -10648,8 +10648,8 @@
       "year": 2021,
       "round": 1,
       "frequency": 1,
-      "sub_unit": "13. 공압기기 및 공압 논리회로",
-      "unit_no": "U13",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         168,
         230,
@@ -10850,8 +10850,8 @@
       "year": 2022,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "13. 공압기기 및 공압 논리회로",
-      "unit_no": "U13",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         636,
         656,
@@ -10879,8 +10879,8 @@
       "year": 2022,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "13. 공압기기 및 공압 논리회로",
-      "unit_no": "U13",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         168,
         230,
@@ -10908,8 +10908,8 @@
       "year": 2022,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "13. 공압기기 및 공압 논리회로",
-      "unit_no": "U13"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2022_2_35",
@@ -11052,8 +11052,8 @@
       "year": 2023,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "13. 공압기기 및 공압 논리회로",
-      "unit_no": "U13",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         698,
         229,
@@ -11104,8 +11104,8 @@
       "year": 2024,
       "round": 1,
       "frequency": 1,
-      "sub_unit": "13. 공압기기 및 공압 논리회로",
-      "unit_no": "U13",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         596,
         651,
@@ -11133,8 +11133,8 @@
       "year": 2024,
       "round": 1,
       "frequency": 1,
-      "sub_unit": "13. 공압기기 및 공압 논리회로",
-      "unit_no": "U13",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         586,
         205,
@@ -11214,8 +11214,8 @@
       "year": 2024,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "13. 공압기기 및 공압 논리회로",
-      "unit_no": "U13",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         685,
         638,
@@ -11815,8 +11815,8 @@
       "year": 2023,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "14. 유공압 응용회로 및 카운터",
-      "unit_no": "U14",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         168,
         203,
@@ -13890,8 +13890,8 @@
       "year": 2022,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "16. CNC 고정 사이클 프로그래밍",
-      "unit_no": "U16"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2022_2_31",
@@ -14651,8 +14651,8 @@
       "year": 2019,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "17. CNC 원점복귀 및 공구보정",
-      "unit_no": "U17"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2019_2_40",
@@ -14766,8 +14766,8 @@
       "year": 2019,
       "round": 4,
       "frequency": 1,
-      "sub_unit": "17. CNC 원점복귀 및 공구보정",
-      "unit_no": "U17"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2019_4_39",
@@ -15193,8 +15193,8 @@
       "year": 2022,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "17. CNC 원점복귀 및 공구보정",
-      "unit_no": "U17"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2023_1_29",
@@ -16411,8 +16411,8 @@
       "year": 2017,
       "round": 4,
       "frequency": 1,
-      "sub_unit": "20. 전기회로 및 계전기 제어",
-      "unit_no": "U20"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2017_4_57",
@@ -16960,8 +16960,8 @@
       "year": 2020,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "20. 전기회로 및 계전기 제어",
-      "unit_no": "U20"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2021_1_20",
@@ -19224,8 +19224,8 @@
       "year": 2017,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "25. 로봇 구동 액추에이터 및 모터",
-      "unit_no": "U25",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         287,
         549,
@@ -19380,8 +19380,8 @@
       "year": 2021,
       "round": 1,
       "frequency": 1,
-      "sub_unit": "25. 로봇 구동 액추에이터 및 모터",
-      "unit_no": "U25"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2021_1_60",
@@ -19651,8 +19651,8 @@
       "year": 2017,
       "round": 4,
       "frequency": 1,
-      "sub_unit": "26. 메카트로닉스 제어 기구",
-      "unit_no": "U26"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2018_2_42",
@@ -19755,8 +19755,8 @@
       "year": 2018,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "26. 메카트로닉스 제어 기구",
-      "unit_no": "U26"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2018_4_42",
@@ -19870,8 +19870,8 @@
       "year": 2019,
       "round": 4,
       "frequency": 1,
-      "sub_unit": "26. 메카트로닉스 제어 기구",
-      "unit_no": "U26"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2020_1_47",
@@ -20003,8 +20003,8 @@
       "year": 2022,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "26. 메카트로닉스 제어 기구",
-      "unit_no": "U26",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         169,
         527,
@@ -20378,8 +20378,8 @@
       "year": 2017,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "27. 로봇 티칭 및 플레이백",
-      "unit_no": "U27"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2017_2_58",
@@ -20493,8 +20493,8 @@
       "year": 2018,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "27. 로봇 티칭 및 플레이백",
-      "unit_no": "U27",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         752,
         144,
@@ -20545,8 +20545,8 @@
       "year": 2018,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "27. 로봇 티칭 및 플레이백",
-      "unit_no": "U27"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2018_4_41",
@@ -20597,8 +20597,8 @@
       "year": 2018,
       "round": 4,
       "frequency": 1,
-      "sub_unit": "27. 로봇 티칭 및 플레이백",
-      "unit_no": "U27",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         685,
         638,
@@ -20799,8 +20799,8 @@
       "year": 2020,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "27. 로봇 티칭 및 플레이백",
-      "unit_no": "U27",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         665,
         142,
@@ -20851,8 +20851,8 @@
       "year": 2021,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "27. 로봇 티칭 및 플레이백",
-      "unit_no": "U27"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2022_1_42",
@@ -21157,8 +21157,8 @@
       "year": 2017,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "28. 유연생산시스템(FMS) 및 스마트공장",
-      "unit_no": "U28",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         167,
         251,
@@ -21186,8 +21186,8 @@
       "year": 2017,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "28. 유연생산시스템(FMS) 및 스마트공장",
-      "unit_no": "U28",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         501,
         136,
@@ -21215,8 +21215,8 @@
       "year": 2017,
       "round": 4,
       "frequency": 1,
-      "sub_unit": "28. 유연생산시스템(FMS) 및 스마트공장",
-      "unit_no": "U28",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         501,
         136,
@@ -21313,8 +21313,8 @@
       "year": 2018,
       "round": 4,
       "frequency": 1,
-      "sub_unit": "28. 유연생산시스템(FMS) 및 스마트공장",
-      "unit_no": "U28"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2019_2_46",
@@ -21336,8 +21336,8 @@
       "year": 2019,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "28. 유연생산시스템(FMS) 및 스마트공장",
-      "unit_no": "U28"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2019_2_47",
@@ -21359,8 +21359,8 @@
       "year": 2019,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "28. 유연생산시스템(FMS) 및 스마트공장",
-      "unit_no": "U28"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2019_2_53",
@@ -21618,8 +21618,8 @@
       "year": 2021,
       "round": 1,
       "frequency": 1,
-      "sub_unit": "28. 유연생산시스템(FMS) 및 스마트공장",
-      "unit_no": "U28",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         167,
         597,
@@ -22160,8 +22160,8 @@
       "year": 2017,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "29. 물류 반송 및 자동 운반",
-      "unit_no": "U29",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         691,
         198,
@@ -22189,8 +22189,8 @@
       "year": 2017,
       "round": 4,
       "frequency": 1,
-      "sub_unit": "29. 물류 반송 및 자동 운반",
-      "unit_no": "U29",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         266,
         126,
@@ -22218,8 +22218,8 @@
       "year": 2017,
       "round": 4,
       "frequency": 1,
-      "sub_unit": "29. 물류 반송 및 자동 운반",
-      "unit_no": "U29"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2018_2_47",
@@ -22241,8 +22241,8 @@
       "year": 2018,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "29. 물류 반송 및 자동 운반",
-      "unit_no": "U29"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2018_2_49",
@@ -22264,8 +22264,8 @@
       "year": 2018,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "29. 물류 반송 및 자동 운반",
-      "unit_no": "U29"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2018_2_52",
@@ -22310,8 +22310,8 @@
       "year": 2018,
       "round": 4,
       "frequency": 1,
-      "sub_unit": "29. 물류 반송 및 자동 운반",
-      "unit_no": "U29",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         616,
         118,
@@ -22414,8 +22414,8 @@
       "year": 2019,
       "round": 4,
       "frequency": 1,
-      "sub_unit": "29. 물류 반송 및 자동 운반",
-      "unit_no": "U29"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2019_4_53",
@@ -22587,8 +22587,8 @@
       "year": 2021,
       "round": 1,
       "frequency": 1,
-      "sub_unit": "29. 물류 반송 및 자동 운반",
-      "unit_no": "U29",
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19",
       "visual_coords": [
         501,
         136,
@@ -22766,8 +22766,8 @@
       "year": 2022,
       "round": 2,
       "frequency": 1,
-      "sub_unit": "29. 물류 반송 및 자동 운반",
-      "unit_no": "U29"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2023_1_47",
@@ -22789,8 +22789,8 @@
       "year": 2023,
       "round": 1,
       "frequency": 1,
-      "sub_unit": "29. 물류 반송 및 자동 운반",
-      "unit_no": "U29"
+      "sub_unit": "19. 논리 시퀀스 및 무접점 회로",
+      "unit_no": "U19"
     },
     {
       "id": "ae_ind_2023_1_49",
