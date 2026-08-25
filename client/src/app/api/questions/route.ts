@@ -368,19 +368,17 @@ export async function GET(req: NextRequest) {
           const baseSubUnit = isStandardUnitFile ? fileNameUnit : (q.sub_unit || classifyQuestion(sanitizedSubject, q));
           const subUnit = isStandardUnitFile ? fileNameUnit : ((sanitizedSubject === '전기기사' || !mainUnit || baseSubUnit.includes(mainUnit)) ? baseSubUnit : `[${mainUnit}] ${baseSubUnit}`);
 
-          questionMap.set(qId, { ...q, sub_unit: subUnit });
+          questionMap.set(qId, { ...q, sub_unit: subUnit, _qId: qId });
         });
       });
 
-      let allQuestions = Array.from(questionMap.values()).map(scrub);
+      Array.from(questionMap.entries()).forEach(([qId, q]: [string, any]) => {
+        const normText = normalize(q.question || "");
+        const calculatedFreq = Math.max(freqCountMap.get(normText) || 1, (qIdFreqMap.get(qId) || 1));
+        q.frequency = Math.max(Number(q.frequency) || 0, calculatedFreq);
+      });
 
-      if (yearFilter || roundFilter) {
-        allQuestions = allQuestions.filter(q => {
-          if (yearFilter && q.year !== yearFilter) return false;
-          if (roundFilter && q.round !== roundFilter) return false;
-          return true;
-        });
-      }
+      let allQuestions: any[] = [];
 
       const rStart = searchParams.get("rStart") ? parseInt(searchParams.get("rStart")!) : null;
       const rEnd = searchParams.get("rEnd") ? parseInt(searchParams.get("rEnd")!) : null;
@@ -388,10 +386,45 @@ export async function GET(req: NextRequest) {
       if (unitFilter) {
         const decodedUnit = decodeURIComponent(unitFilter);
         const cleanUnit = decodedUnit.replace(/\s*\(\d+부\)$/, '').trim();
+        const isFrequentUnit = cleanUnit.includes("자주나왔던문항") || 
+                               cleanUnit.includes("자주 나왔던 문항") || 
+                               (cleanUnit.includes("자주") && cleanUnit.includes("문항"));
+
+        if (isFrequentUnit) {
+          const uniqueFrequentMap = new Map<string, any>();
+          Array.from(questionMap.values()).forEach((q: any) => {
+            if ((q.frequency || 0) >= 2) {
+              const cleanQuestion = normalize(q.question);
+              const cleanChoices = (q.choices || []).map((c: string) => normalize(c)).join("|");
+              const contentKey = `${cleanQuestion}_${cleanChoices}`;
+              
+              if (!uniqueFrequentMap.has(contentKey)) {
+                uniqueFrequentMap.set(contentKey, q);
+              }
+            }
+          });
+
+          const frequentQuestions = Array.from(uniqueFrequentMap.values())
+            .sort((a: any, b: any) => (b.frequency || 0) - (a.frequency || 0));
+
+          allQuestions = frequentQuestions.map(scrub);
+        } else {
+          allQuestions = Array.from(questionMap.values()).map(scrub);
+          allQuestions = allQuestions.filter(q => {
+            const u = q.sub_unit || "";
+            const cleanU = u.replace(/[<>:"|?*]/g, "").trim();
+            return cleanU === cleanUnit || cleanU.includes(cleanUnit) || cleanUnit.includes(cleanU);
+          });
+        }
+      } else {
+        allQuestions = Array.from(questionMap.values()).map(scrub);
+      }
+
+      if (yearFilter || roundFilter) {
         allQuestions = allQuestions.filter(q => {
-          const u = q.sub_unit || "";
-          const cleanU = u.replace(/[<>:"|?*]/g, "").trim();
-          return cleanU === cleanUnit || cleanU.includes(cleanUnit) || cleanUnit.includes(cleanU);
+          if (yearFilter && q.year !== yearFilter) return false;
+          if (roundFilter && q.round !== roundFilter) return false;
+          return true;
         });
       }
 
