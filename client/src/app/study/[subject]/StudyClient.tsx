@@ -240,8 +240,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
       const unit = unitFilter || '';
       
       const rangeParams = (rStart && rEnd) ? `&rStart=${rStart}&rEnd=${rEnd}` : '';
-      const url = `/api/questions?subject=${subject}&start=${startIdx}&limit=${limitCount}&unit=${encodeURIComponent(unit)}&year=${yearFilter}&round=${roundFilter}${rangeParams}`;
-      const res = await fetch(url);
+      const url = `/api/questions?subject=${subject}&start=${startIdx}&limit=${limitCount}&unit=${encodeURIComponent(unit)}&year=${yearFilter}&round=${roundFilter}${rangeParams}&t=${Date.now()}`;
+      const res = await fetch(url, { cache: 'no-store' });
       const data = await res.json();
       
       if (data.questions) {
