@@ -434,6 +434,12 @@ export async function GET(req: NextRequest) {
           }
           return true;
         });
+
+        allQuestions.sort((a, b) => {
+          const numA = parseInt(String(a.number || '0').replace(/\D/g, '')) || 0;
+          const numB = parseInt(String(b.number || '0').replace(/\D/g, '')) || 0;
+          return numA - numB;
+        });
       }
 
       if (rStart !== null && rEnd !== null && !isNaN(rStart) && !isNaN(rEnd)) {

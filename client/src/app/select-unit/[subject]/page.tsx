@@ -412,7 +412,7 @@ export default function SelectUnitPage() {
       </main>
 
       <footer className="text-center py-12 text-slate-400 text-sm font-medium">
-        <p>© 2026 DugiGo Smart License Solution (v2.0.4)</p>
+        <p>© 2026 DugiGo Smart License Solution (v2.0.5)</p>
         <p className="text-xs font-black uppercase tracking-widest text-slate-600">경성전자고등학교 전용 학습 서비스</p>
       </footer>
 
