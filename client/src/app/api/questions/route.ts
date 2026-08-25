@@ -422,8 +422,16 @@ export async function GET(req: NextRequest) {
 
       if (yearFilter || roundFilter) {
         allQuestions = allQuestions.filter(q => {
-          if (yearFilter && q.year !== yearFilter) return false;
-          if (roundFilter && q.round !== roundFilter) return false;
+          if (yearFilter) {
+            const qYearClean = (q.year || '').replace(/년/g, '').trim();
+            const filterYearClean = yearFilter.replace(/년/g, '').trim();
+            if (q.year !== yearFilter && qYearClean !== filterYearClean) return false;
+          }
+          if (roundFilter) {
+            const qRoundClean = (q.round || '').replace(/회/g, '').trim();
+            const filterRoundClean = roundFilter.replace(/회/g, '').trim();
+            if (q.round !== roundFilter && qRoundClean !== filterRoundClean) return false;
+          }
           return true;
         });
       }
