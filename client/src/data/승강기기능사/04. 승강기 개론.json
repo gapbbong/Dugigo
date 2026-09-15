@@ -16,7 +16,7 @@
     "year": "2018",
     "subject": "승강기개론",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2018_01_56.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2018_01_56.png",
     "has_image": true,
     "frequency": 8
   },
@@ -265,7 +265,7 @@
     "year": "2017",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2017_01_03.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2017_01_03.png",
     "has_image": true,
     "frequency": 3
   },
@@ -1027,7 +1027,7 @@
     "year": "2019",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2019_01_10.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2019_01_10.png",
     "has_image": true,
     "frequency": 2
   },
@@ -1181,7 +1181,7 @@
     "year": "2019",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2019_02_13.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2019_02_13.png",
     "has_image": true,
     "frequency": 2
   },
@@ -1202,7 +1202,7 @@
     "year": "2020",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "images/17_20/Q_2020_01_13_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2020_01_13_ques.png",
     "frequency": 2
   },
   {
@@ -1564,7 +1564,7 @@
     "year": "2017",
     "subject": "승강기개론",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2017_02_32.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2017_02_32.png",
     "has_image": true,
     "frequency": 2
   },
@@ -1832,7 +1832,7 @@
     "year": "2020",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "images/17_20/Q_2020_02_33_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2020_02_33_ques.png",
     "frequency": 2
   },
   {
@@ -2194,7 +2194,7 @@
     "year": "2022",
     "subject": "승강기보수",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2022_02_02.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2022_02_02.png",
     "has_image": true,
     "frequency": 1
   },
@@ -2272,7 +2272,7 @@
     "year": "2015",
     "subject": "승강기보수",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2015_05_03.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2015_05_03.png",
     "has_image": true,
     "frequency": 1
   },
@@ -2312,7 +2312,7 @@
     "year": "2022",
     "subject": "승강기보수",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2022_02_03.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2022_02_03.png",
     "has_image": true,
     "frequency": 1
   },
@@ -2333,7 +2333,7 @@
     "year": "2022",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2022_02_03.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2022_02_03.png",
     "has_image": true,
     "frequency": 1
   },
@@ -2373,7 +2373,7 @@
     "year": "2020",
     "subject": "승강기개론",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "images/17_20/Q_2020_01_46_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2020_01_46_ques.png",
     "frequency": 1
   },
   {
@@ -2850,7 +2850,7 @@
     "year": "2020",
     "subject": "승강기개론",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2020_02_07.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2020_02_07.png",
     "has_image": true,
     "frequency": 1
   },
@@ -3403,7 +3403,7 @@
     "year": "2022",
     "subject": "승강기개론",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2022_02_10.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2022_02_10.png",
     "has_image": true,
     "frequency": 1
   },
@@ -3462,7 +3462,7 @@
     "year": "2021",
     "subject": "승강기보수",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2021_02_10.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2021_02_10.png",
     "has_image": true,
     "frequency": 1
   },
@@ -4263,7 +4263,7 @@
     "year": "2019",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2019_01_15.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2019_01_15.png",
     "has_image": true,
     "frequency": 1
   },
@@ -4493,7 +4493,7 @@
     "year": "2020",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "images/17_20/Q_2019_02_58_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2019_02_58_ques.png",
     "frequency": 1
   },
   {
@@ -5274,7 +5274,7 @@
     "year": "2019",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "images/17_20/Q_2019_02_4_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2019_02_4_ques.png",
     "frequency": 1
   },
   {
@@ -6339,7 +6339,7 @@
     "year": "2023",
     "subject": "승강기개론",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2023_01_29.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2023_01_29.png",
     "has_image": true,
     "frequency": 1
   },
@@ -6512,7 +6512,7 @@
     "year": "2020",
     "subject": "승강기개론",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "images/17_20/Q_2020_02_31_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2020_02_31_ques.png",
     "frequency": 1
   },
   {
@@ -7064,7 +7064,7 @@
     "year": "2024",
     "subject": "승강기개론",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2024_01_36.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2024_01_36.png",
     "has_image": true,
     "frequency": 1
   },
@@ -7161,7 +7161,7 @@
     "year": "2022",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "/images/21_24/Elevator_22_01_37_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_22_01_37_Q1.png",
     "frequency": 1
   },
   {
@@ -7277,7 +7277,7 @@
     "year": "2022",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "/images/21_24/Elevator_22_01_38_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_22_01_38_Q1.png",
     "frequency": 1
   },
   {
@@ -7297,7 +7297,7 @@
     "year": "2022",
     "subject": "안전관리",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2022_02_38.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2022_02_38.png",
     "has_image": true,
     "frequency": 1
   },
@@ -7509,7 +7509,7 @@
     "year": "2021",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2021_02_40.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2021_02_40.png",
     "has_image": true,
     "frequency": 1
   },
@@ -7872,7 +7872,7 @@
     "year": "2023",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "/images/21_24/Elevator_23_02_43_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_23_02_43_Q1.png",
     "frequency": 1
   },
   {
@@ -8615,7 +8615,7 @@
     "year": "2020",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "images/17_20/Q_2020_01_49_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2020_01_49_ques.png",
     "frequency": 1
   },
   {
@@ -8844,7 +8844,7 @@
     "year": "2019",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "images/17_20/Q_2019_02_33_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2019_02_33_ques.png",
     "frequency": 1
   },
   {
@@ -8902,7 +8902,7 @@
     "year": "2022",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "/images/21_24/Elevator_22_01_51_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_22_01_51_Q1.png",
     "frequency": 1
   },
   {
@@ -8979,7 +8979,7 @@
     "year": "2015",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2015_05_52.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2015_05_52.png",
     "has_image": true,
     "frequency": 1
   },
@@ -9057,7 +9057,7 @@
     "year": "2023",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "/images/21_24/Elevator_23_02_52_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_23_02_52_Q1.png",
     "frequency": 1
   },
   {
@@ -9267,7 +9267,7 @@
     "year": "2016",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2016_04_54.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2016_04_54.png",
     "has_image": true,
     "frequency": 1
   },
@@ -9383,7 +9383,7 @@
     "year": "2021",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "/images/21_24/Elevator_21_01_55_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_21_01_55_Q1.png",
     "frequency": 1
   },
   {
@@ -9403,7 +9403,7 @@
     "year": "2023",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "/images/21_24/Elevator_23_01_55_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_23_01_55_Q1.png",
     "frequency": 1
   },
   {
@@ -9442,7 +9442,7 @@
     "year": "2015",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2015_05_56.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2015_05_56.png",
     "has_image": true,
     "frequency": 1
   },
@@ -9501,7 +9501,7 @@
     "year": "2021",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2021_02_56.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2021_02_56.png",
     "has_image": true,
     "frequency": 1
   },
@@ -9522,7 +9522,7 @@
     "year": "2022",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "/images/21_24/Elevator_22_02_56_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_22_02_56_Q1.png",
     "frequency": 1
   },
   {
@@ -9620,7 +9620,7 @@
     "year": "2016",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "Elevator_2016_05_57.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2016_05_57.png",
     "has_image": true,
     "frequency": 1
   },
@@ -9641,7 +9641,7 @@
     "year": "2023",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "/images/21_24/Elevator_23_01_57_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_23_01_57_Q1.png",
     "frequency": 1
   },
   {
@@ -9739,7 +9739,7 @@
     "year": "2024",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "/images/21_24/Elevator_24_01_58_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_24_01_58_Q1.png",
     "frequency": 1
   },
   {
@@ -9797,7 +9797,7 @@
     "year": "2020",
     "subject": "기계전기기초",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "images/17_20/Q_2020_02_41_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2020_02_41_ques.png",
     "frequency": 1
   },
   {

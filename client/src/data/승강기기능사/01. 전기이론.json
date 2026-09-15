@@ -16,7 +16,7 @@
     "year": "2019",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "Elevator_2019_02_04.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2019_02_04.png",
     "has_image": true,
     "frequency": 8
   },
@@ -170,7 +170,7 @@
     "year": "2018",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "Elevator_2018_01_15.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2018_01_15.png",
     "has_image": true,
     "frequency": 3
   },
@@ -704,7 +704,7 @@
     "year": "2022",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "Elevator_2022_02_02.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2022_02_02.png",
     "has_image": true,
     "frequency": 1
   },
@@ -763,7 +763,7 @@
     "year": "2017",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "images/17_20/Q_2017_02_4_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2017_02_4_ques.png",
     "frequency": 1
   },
   {
@@ -783,7 +783,7 @@
     "year": "2018",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "images/17_20/Q_2018_02_4_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2018_02_4_ques.png",
     "frequency": 1
   },
   {
@@ -803,7 +803,7 @@
     "year": "2020",
     "subject": "안전관리",
     "sub_unit": "01. 전기이론",
-    "question_img": "images/17_20/Q_2020_01_4_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2020_01_4_ques.png",
     "frequency": 1
   },
   {
@@ -1507,7 +1507,7 @@
     "year": "2019",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "Elevator_2019_01_17.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2019_01_17.png",
     "has_image": true,
     "frequency": 1
   },
@@ -1699,7 +1699,7 @@
     "year": "2019",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "images/17_20/Q_2019_02_1_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2019_02_1_ques.png",
     "frequency": 1
   },
   {
@@ -1738,7 +1738,7 @@
     "year": "2022",
     "subject": "승강기보수",
     "sub_unit": "01. 전기이론",
-    "question_img": "Elevator_2022_01_19.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2022_01_19.png",
     "has_image": true,
     "frequency": 1
   },
@@ -1778,7 +1778,7 @@
     "year": "2019",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "Elevator_2019_02_20.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2019_02_20.png",
     "has_image": true,
     "frequency": 1
   },
@@ -1818,7 +1818,7 @@
     "year": "2020",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "images/17_20/Q_2020_01_3_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2020_01_3_ques.png",
     "frequency": 1
   },
   {
@@ -1857,7 +1857,7 @@
     "year": "2020",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "images/17_20/Q_2020_01_4_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2020_01_4_ques.png",
     "frequency": 1
   },
   {
@@ -2827,7 +2827,7 @@
     "year": "2015",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "Elevator_2015_05_48.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2015_05_48.png",
     "has_image": true,
     "frequency": 1
   },
@@ -3038,7 +3038,7 @@
     "year": "2020",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "images/17_20/Q_2020_02_31_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2020_02_31_ques.png",
     "frequency": 1
   },
   {
@@ -3225,7 +3225,7 @@
     "page": 14,
     "pdf_file": "Elevator_11_16.pdf",
     "question": "다음과 같은 지침형(아날로그형) 계기로 측정하기에 가장 알맞은 것은?(단, $R$은 지침의 0점을 조절하기 위한 가변저항이다)",
-    "question_img": "/images/exams/2015_01/2015_01_51_question_img.webp",
+    "question_img": "/images/subjects/승강기기능사/2015_01_51_question_img.webp",
     "round": "01",
     "year": "2015",
     "subject": "기계전기기초",
@@ -3420,7 +3420,7 @@
     "year": "2023",
     "subject": "승강기보수",
     "sub_unit": "01. 전기이론",
-    "question_img": "Elevator_2023_01_52.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2023_01_52.png",
     "has_image": true,
     "frequency": 1
   },
@@ -3726,7 +3726,7 @@
     "year": "2023",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "/images/21_24/Elevator_23_02_54_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_23_02_54_Q1.png",
     "frequency": 1
   },
   {
@@ -3993,7 +3993,7 @@
     "year": "2022",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "/images/21_24/Elevator_22_01_56_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_22_01_56_Q1.png",
     "frequency": 1
   },
   {
@@ -4013,7 +4013,7 @@
     "year": "2023",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "/images/21_24/Elevator_23_01_56_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_23_01_56_Q1.png",
     "frequency": 1
   },
   {
@@ -4261,7 +4261,7 @@
     "year": "2023",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "Elevator_2023_02_58.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2023_02_58.png",
     "has_image": true,
     "frequency": 1
   },
@@ -4453,7 +4453,7 @@
     "year": "2021",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "/images/21_24/Elevator_21_01_60_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_21_01_60_Q1.png",
     "frequency": 1
   },
   {
@@ -4492,7 +4492,7 @@
     "year": "2022",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
-    "question_img": "Elevator_2022_02_60.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2022_02_60.png",
     "has_image": true,
     "frequency": 1
   },

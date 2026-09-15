@@ -567,7 +567,7 @@
     "year": "2023",
     "subject": "안전관리",
     "sub_unit": "02. 기계일반",
-    "question_img": "Elevator_2023_01_02.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2023_01_02.png",
     "has_image": true,
     "frequency": 1
   },
@@ -1272,7 +1272,7 @@
     "year": "2022",
     "subject": "승강기개론",
     "sub_unit": "02. 기계일반",
-    "question_img": "/images/21_24/Elevator_22_01_22_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_22_01_22_Q1.png",
     "frequency": 1
   },
   {
@@ -1330,7 +1330,7 @@
     "year": "2019",
     "subject": "기계전기기초",
     "sub_unit": "02. 기계일반",
-    "question_img": "Elevator_2019_01_24.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2019_01_24.png",
     "has_image": true,
     "frequency": 1
   },
@@ -1769,7 +1769,7 @@
     "year": "2020",
     "subject": "기계전기기초",
     "sub_unit": "02. 기계일반",
-    "question_img": "images/17_20/Q_2020_02_33_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2020_02_33_ques.png",
     "frequency": 1
   },
   {
@@ -2037,7 +2037,7 @@
     "year": "2015",
     "subject": "승강기보수",
     "sub_unit": "02. 기계일반",
-    "question_img": "Elevator_2015_04_38.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2015_04_38.png",
     "has_image": true,
     "frequency": 1
   },
@@ -2229,7 +2229,7 @@
     "year": "2020",
     "subject": "승강기보수",
     "sub_unit": "02. 기계일반",
-    "question_img": "images/17_20/Q_2020_02_41_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2020_02_41_ques.png",
     "frequency": 1
   },
   {
@@ -2687,7 +2687,7 @@
     "year": "2023",
     "subject": "기계전기기초",
     "sub_unit": "02. 기계일반",
-    "question_img": "Elevator_2023_02_48.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2023_02_48.png",
     "has_image": true,
     "frequency": 1
   },
@@ -2917,7 +2917,7 @@
     "year": "2015",
     "subject": "기계전기기초",
     "sub_unit": "02. 기계일반",
-    "question_img": "Elevator_2015_02_56.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2015_02_56.png",
     "has_image": true,
     "frequency": 1
   },
@@ -2977,7 +2977,7 @@
     "year": "2015",
     "subject": "기계전기기초",
     "sub_unit": "02. 기계일반",
-    "question_img": "Elevator_2015_01_60.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2015_01_60.png",
     "has_image": true,
     "frequency": 1
   },
@@ -3036,7 +3036,7 @@
     "year": "2016",
     "subject": "기계전기기초",
     "sub_unit": "02. 기계일반",
-    "question_img": "Elevator_2016_04_60.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2016_04_60.png",
     "has_image": true,
     "frequency": 1
   }

@@ -339,7 +339,7 @@
     "year": "2019",
     "subject": "승강기개론",
     "sub_unit": "03. 승강기 점검 및 보수",
-    "question_img": "images/17_20/Q_2019_02_1_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2019_02_1_ques.png",
     "frequency": 2
   },
   {
@@ -378,7 +378,7 @@
     "year": "2020",
     "subject": "안전관리",
     "sub_unit": "03. 승강기 점검 및 보수",
-    "question_img": "images/17_20/Q_2020_01_3_ques.png",
+    "question_img": "/images/subjects/승강기기능사/17_20/Q_2020_01_3_ques.png",
     "frequency": 2
   },
   {
@@ -1140,7 +1140,7 @@
     "year": "2021",
     "subject": "승강기개론",
     "sub_unit": "03. 승강기 점검 및 보수",
-    "question_img": "/images/21_24/Elevator_21_01_06_Q1.png",
+    "question_img": "/images/subjects/승강기기능사/21_24/Elevator_21_01_06_Q1.png",
     "frequency": 1
   },
   {
@@ -1198,7 +1198,7 @@
     "year": "2020",
     "subject": "승강기보수",
     "sub_unit": "03. 승강기 점검 및 보수",
-    "question_img": "Elevator_2020_02_07.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2020_02_07.png",
     "has_image": true,
     "frequency": 1
   },
@@ -1542,7 +1542,7 @@
     "year": "2024",
     "subject": "승강기보수",
     "sub_unit": "03. 승강기 점검 및 보수",
-    "question_img": "Elevator_2024_01_16.png",
+    "question_img": "/images/subjects/승강기기능사/Elevator_2024_01_16.png",
     "has_image": true,
     "frequency": 1
   },
