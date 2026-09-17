@@ -3420,7 +3420,7 @@
     "year": "2023",
     "subject": "승강기보수",
     "sub_unit": "01. 전기이론",
-    "question_img": "/images/subjects/승강기기능사/Elevator_2023_01_52.png",
+    "question_img": null,
     "has_image": true,
     "frequency": 1
   },
@@ -3710,9 +3710,9 @@
     "frequency": 1
   },
   {
-    "answer": "1",
+    "answer": 1,
     "choices": [
-      "5",
+      "1.5",
       "3",
       "6",
       "9"
@@ -7452,7 +7452,7 @@
     "year": "2015",
     "subject": "기계전기기초",
     "sub_unit": "02. 기계일반",
-    "question_img": "/images/subjects/승강기기능사/Elevator_2015_02_56.png",
+    "question_img": null,
     "has_image": true,
     "frequency": 1
   },
@@ -8774,7 +8774,7 @@
     "year": "2020",
     "subject": "승강기보수",
     "sub_unit": "03. 승강기 점검 및 보수",
-    "question_img": "/images/subjects/승강기기능사/Elevator_2020_02_07.png",
+    "question_img": null,
     "has_image": true,
     "frequency": 1
   },
@@ -12072,7 +12072,7 @@
     "frequency": 2
   },
   {
-    "answer": "1",
+    "answer": 4,
     "choices": [
       "5~70[$\\mathrm{^\\circ C}$]",
       "5~60[$\\mathrm{^\\circ C}$]",
@@ -14735,10 +14735,10 @@
   {
     "answer": "2",
     "choices": [
-      "5",
-      "75",
-      "1",
-      "5"
+      "0.5",
+      "0.75",
+      "1.0",
+      "1.5"
     ],
     "explanation": "에스컬레이터의 경사도\n에스컬레이터의 경사도는 $30^\\circ$를 초과하지 않아야 한다. 다만, 층 고가 $6[m]$ 이하이고, 공칭속도가 $0.5[m/s]$ 이하인 경우에는 경사도를 $35^\\circ$까지 증가시킬 수 있다.",
     "number": "10",
@@ -14749,7 +14749,7 @@
     "year": "2022",
     "subject": "승강기개론",
     "sub_unit": "04. 승강기 개론",
-    "question_img": "/images/subjects/승강기기능사/Elevator_2022_02_10.png",
+    "question_img": null,
     "has_image": true,
     "frequency": 1
   },

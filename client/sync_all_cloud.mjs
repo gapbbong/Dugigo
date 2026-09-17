@@ -24,7 +24,8 @@ const SUBJECT_CONFIGS = [
   { subject_id: 'PRODUCTION_AUTO', folder: '자동화설비(생산자동화)기능사', file: 'Automation_Equipment_MASTER_DB.json' },
   { subject_id: 'ELECTRIC_CONSTRUCTION', folder: '전기공사산업기사', file: 'Electric_Construction_MASTER_DB.json' },
   { subject_id: 'VISUAL_DESIGN', folder: '시각디자인산업기사', file: 'VisualDesign_MASTER_DB.json' },
-  { subject_id: 'ELECTRIC_ENGINEER', folder: '전기기사', file: 'MASTER_DB.json' }
+  { subject_id: 'ELECTRIC_ENGINEER', folder: '전기기사', file: 'MASTER_DB.json' },
+  { subject_id: 'AUTOMATION_ENGINEER', folder: '자동화설비산업기사', file: 'Automation_Equipment_Industrial_MASTER_DB.json' }
 ];
 
 async function syncAllSubjects() {

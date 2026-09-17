@@ -3420,7 +3420,7 @@
     "year": "2023",
     "subject": "승강기보수",
     "sub_unit": "01. 전기이론",
-    "question_img": "/images/subjects/승강기기능사/Elevator_2023_01_52.png",
+    "question_img": null,
     "has_image": true,
     "frequency": 1
   },
@@ -3710,9 +3710,9 @@
     "frequency": 1
   },
   {
-    "answer": "1",
+    "answer": 1,
     "choices": [
-      "5",
+      "1.5",
       "3",
       "6",
       "9"
