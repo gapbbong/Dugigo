@@ -3061,7 +3061,7 @@
     "frequency": 1
   },
   {
-    "answer": "$\\frac{n_s - n}{n_s} \\times 100$",
+    "answer": 2,
     "choices": [
       "$\\frac{n_s - n}{n} \\times 100$",
       "$\\frac{n_s - n}{n_s} \\times 100$",
