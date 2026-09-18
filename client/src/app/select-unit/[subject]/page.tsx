@@ -242,14 +242,14 @@ export default function SelectUnitPage() {
                         title={stats ? `최근 5회 맞은 개수: ${stats.correctCounts.slice(-5).map(c => `${c}개`).join(', ')}` : undefined}
                       >
                         {stats && (
-                          <div className="absolute top-1.5 right-1.5 px-1.5 py-0.5 bg-orange-600 text-white text-[8px] font-black rounded-md shadow-sm">
+                          <div className="absolute top-1.5 right-1.5 px-2 py-0.5 bg-orange-600 text-white text-[10px] font-black rounded-md shadow-sm">
                             {stats.count}회
                           </div>
                         )}
                         <span className="text-2xl font-black tracking-tighter text-slate-800 dark:text-slate-200">{String(idx + 1).padStart(2, '0')}</span>
-                        <span className="text-[9px] font-black uppercase text-slate-400">공략</span>
+                        <span className="text-[10px] font-black uppercase text-slate-400">공략</span>
                         {stats && (
-                          <span className="text-[8px] font-bold text-orange-600 mt-1 z-10 leading-none">
+                          <span className="text-[10px] font-extrabold text-orange-600 mt-1 z-10 leading-none">
                             {stats.correctCounts.slice(-5).join(', ')}개
                           </span>
                         )}
@@ -311,15 +311,15 @@ export default function SelectUnitPage() {
                           >
                             {/* 횟수 뱃지 */}
                             {stats && (
-                              <div className="absolute top-1.5 right-1.5 bg-violet-600 text-white text-[8px] font-black rounded-md shadow-sm px-1.5 py-0.5">
+                              <div className="absolute top-1.5 right-1.5 bg-violet-600 text-white text-[10px] font-black rounded-md shadow-sm px-2 py-0.5">
                                 {stats.count}회
                               </div>
                             )}
 
                             <span className="text-2xl font-black tracking-tighter text-slate-800 dark:text-slate-200">{setNum}</span>
-                            <span className="text-[9px] font-black text-slate-400">세트 ({setQuestionsCount}문항)</span>
+                            <span className="text-[10px] font-black text-slate-400">세트 ({setQuestionsCount}문항)</span>
                             {stats && (
-                              <span className="text-[8px] font-bold text-violet-600 mt-1 z-10 leading-none">
+                              <span className="text-[10px] font-extrabold text-violet-600 mt-1 z-10 leading-none">
                                 {stats.correctCounts.slice(-5).join(', ')}개
                               </span>
                             )}
