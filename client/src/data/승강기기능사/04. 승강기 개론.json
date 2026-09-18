@@ -6687,25 +6687,6 @@
     "frequency": 1
   },
   {
-    "answer": "정답 없음",
-    "choices": [
-      "제1종 접지공사",
-      "제2종 접지공사",
-      "제3종 접지공사",
-      "특별 제3종 접지공사"
-    ],
-    "explanation": "※ KEC(한국전기설비기준) 개정으로 맞지 않는 문제임",
-    "number": "32",
-    "page": 118,
-    "pdf_file": "Elevator_11_16.pdf",
-    "question": "엘리베이터 동력전원이 $380[V]$인 제어반의 외함 및 금속제 프레임(frame)은 몇 종 접지공사에 해당하는가?",
-    "round": "05",
-    "year": "2016",
-    "subject": "기계전기기초",
-    "sub_unit": "04. 승강기 개론",
-    "frequency": 1
-  },
-  {
     "answer": "2",
     "choices": [
       "2단식",

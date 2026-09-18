@@ -346,25 +346,6 @@
     "frequency": 2
   },
   {
-    "answer": "정답 없음",
-    "choices": [
-      "전동기 주회로의 300[V] 이하의 것은 0.2[MΩ] 이상",
-      "전동기 주회로의 400[V]를 초과하는 것은 0.3[MΩ] 이상",
-      "승강로 내 안전회로의 150[V] 이하의 것은 0.2[MΩ] 이상",
-      "승강로 내 안전회로의 150[V] 초과 300[V] 이하의 것은 0.3[MΩ] 이상"
-    ],
-    "explanation": "KEC(한국전기설비기준) 개정으로 맞지 않는 문제임",
-    "number": "12",
-    "page": 76,
-    "pdf_file": "Elevator_17_20.pdf",
-    "question": "에스컬레이터의 절연저항에 관한 설명이다. 다음 중 가장 알맞은 것은?",
-    "round": "02",
-    "year": "2019",
-    "subject": "승강기보수",
-    "sub_unit": "01. 전기이론",
-    "frequency": 2
-  },
-  {
     "answer": "2",
     "choices": [
       "플러그를 사용하여 전원에 연결하는 방법",
@@ -1822,25 +1803,6 @@
     "frequency": 1
   },
   {
-    "answer": "N/A",
-    "choices": [
-      "제1종 접지공사",
-      "제2종 접지공사",
-      "제3종 접지공사",
-      "특별 제3종 접지공사"
-    ],
-    "explanation": "※ KEC(한국전기설비기준) 개정으로 맞지 않는 문제임",
-    "number": "22",
-    "page": 84,
-    "pdf_file": "Elevator_11_16.pdf",
-    "question": "사용전압 380[V]의 전동기를 사용하는 경우 접지공사는?",
-    "round": "02",
-    "year": "2016",
-    "subject": "기계전기기초",
-    "sub_unit": "01. 전기이론",
-    "frequency": 1
-  },
-  {
     "answer": "3",
     "choices": [
       "$1[\\Omega]$",
@@ -3228,25 +3190,6 @@
     "question_img": "/images/subjects/승강기기능사/2015_01_51_question_img.webp",
     "round": "01",
     "year": "2015",
-    "subject": "기계전기기초",
-    "sub_unit": "01. 전기이론",
-    "frequency": 1
-  },
-  {
-    "answer": "정답 없음",
-    "choices": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "explanation": "※ KEC(한국전기설비기준) 개정으로 맞지 않는 문제임",
-    "number": "51",
-    "page": 122,
-    "pdf_file": "Elevator_11_16.pdf",
-    "question": "엘리베이터 전동기 주회로의 사용전압이 380[V]이면 절연저항은 몇 [M$\\Omega$] 이상이어야 하는가?",
-    "round": "05",
-    "year": "2016",
     "subject": "기계전기기초",
     "sub_unit": "01. 전기이론",
     "frequency": 1
