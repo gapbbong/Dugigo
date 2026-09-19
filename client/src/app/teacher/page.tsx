@@ -8,6 +8,7 @@ import {
   Flag
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getLevelInfo } from '@/lib/levelSystem';
 
 const getLocalDateString = (date: Date) => {
   const pad = (n: number) => String(n).padStart(2, '0');
@@ -49,12 +50,6 @@ export default function TeacherDashboard() {
   });
   const [searchTerm, setSearchTerm] = useState('');
   const [modalSearch, setModalSearch] = useState('');
-
-  const LEVEL_TITLES = [
-    "입문자", "초보자", "수련자", "숙련자", 
-    "전문가", "달인", "명인", "현자", 
-    "영웅", "전설", "신화", "초월자"
-  ];
 
   useEffect(() => {
     fetchData();
@@ -418,7 +413,6 @@ export default function TeacherDashboard() {
                 key={student.id || idx} 
                 student={student} 
                 groups={groups} 
-                levelTitles={LEVEL_TITLES} 
                 onToggleGroup={toggleStudentInGroup} 
                 onDelete={deleteStudent}
                 formatTime={formatTime} 
@@ -536,10 +530,9 @@ function GroupTag({ active, label, count, onClick, onDelete }: any) {
   );
 }
 
-function StudentCard({ student, groups, levelTitles, onToggleGroup, formatTime, onDelete }: any) {
+function StudentCard({ student, groups, onToggleGroup, formatTime, onDelete }: any) {
   const [showGroups, setShowGroups] = useState(false);
-  const level = Math.floor((student.exp_points || 0) / 1000) + 1;
-  const levelTitle = levelTitles[Math.min(11, level - 1)];
+  const lvl = getLevelInfo(student.exp_points);
 
   return (
     <motion.div layout initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="bg-white border border-slate-200 rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transition-all group relative overflow-hidden">
@@ -554,7 +547,7 @@ function StudentCard({ student, groups, levelTitles, onToggleGroup, formatTime, 
         </div>
         <div>
           <h4 className="font-black text-slate-900 text-lg leading-tight">{student.username}</h4>
-          <div className="text-xs font-bold text-slate-400">Lv.{level} {levelTitle}</div>
+          <div className="text-xs font-bold text-slate-400">Lv.{lvl.tier} {lvl.formattedTitle}</div>
         </div>
       </div>
 

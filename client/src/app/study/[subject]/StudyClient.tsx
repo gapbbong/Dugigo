@@ -27,12 +27,7 @@ import 'katex/dist/katex.min.css';
 import { InlineMath as _InlineMath } from 'react-katex';
 
 const InlineMath = _InlineMath as any;
-
-const LEVEL_TITLES = [
-  "입문자", "초보자", "수련자", "숙련자", 
-  "전문가", "달인", "명인", "현자", 
-  "영웅", "전설", "신화", "초월자"
-];
+import { getLevelInfo } from '@/lib/levelSystem';
 
 const generateUUID = () => {
   if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
@@ -688,8 +683,10 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
         
         // 3. 레벨 계산용 이전 정보
         const currentExp = userProfile?.exp_points || 0;
-        const oldLevel = Math.floor(currentExp / 1000) + 1;
-        const newLevel = Math.floor((currentExp + gainedExp) / 1000) + 1;
+        const oldLevelInfo = getLevelInfo(currentExp);
+        const newLevelInfo = getLevelInfo(currentExp + gainedExp);
+        const oldLevel = oldLevelInfo.tier;
+        const newLevel = newLevelInfo.tier;
         
         // 4. DB 업데이트 (로그 저장 & 경험치 추가 & 오답 저장)
         const wrongQuestions = answers.filter(a => !a.isCorrect).map(a => ({
@@ -1069,7 +1066,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             <div className="flex items-center gap-1.5 bg-white/40 backdrop-blur-md px-2 py-1 md:px-4 md:py-2 rounded-xl border border-white/40 shadow-sm">
               <ShieldCheck className="w-3 h-3 md:w-5 md:h-5 text-brand-600" />
               <span className="text-[10px] md:text-sm font-black text-slate-800 dark:text-slate-200">
-                {userProfile ? (LEVEL_TITLES[Math.min(11, Math.floor((userProfile.exp_points || 0) / 1000))] || "입문자") : "입문자"}
+                {getLevelInfo(userProfile?.exp_points).formattedTitle}
               </span>
             </div>
             <div className="flex items-center gap-1.5 bg-white/40 backdrop-blur-md px-2 py-1 md:px-4 md:py-2 rounded-xl border border-white/40 shadow-sm">

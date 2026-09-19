@@ -18,12 +18,7 @@ import {
   Share,
   PlusSquare
 } from 'lucide-react';
-
-const LEVEL_TITLES = [
-  "입문자", "초보자", "수련자", "숙련자", 
-  "전문가", "달인", "명인", "현자", 
-  "영웅", "전설", "신화", "초월자"
-];
+import { getLevelInfo } from '@/lib/levelSystem';
 
 interface Unit {
   name: string;
@@ -203,7 +198,7 @@ export default function SelectUnitPage() {
               <div className="flex items-center gap-1 bg-brand-50 px-1.5 py-1 md:px-8 md:py-3 rounded-lg md:rounded-2xl border md:border-2 border-brand-100 shadow-sm flex-shrink-0">
                 <ShieldCheck className="w-3.5 h-3.5 md:w-10 md:h-10 text-brand-600" />
                 <span className="text-[13px] md:text-2xl font-black text-brand-700 whitespace-nowrap">
-                  {userProfile ? (LEVEL_TITLES[Math.min(11, Math.floor((userProfile.exp_points || 0) / 1000))] || "입문자") : "입문자"}
+                  {getLevelInfo(userProfile?.exp_points).formattedTitle}
                 </span>
               </div>
             </div>
