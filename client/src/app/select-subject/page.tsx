@@ -21,7 +21,8 @@ import {
   Key,
   Lock,
   AlertCircle,
-  X
+  X,
+  Printer
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -35,6 +36,7 @@ const getSubjectStyle = (name: string) => {
   if (name.includes('컴퓨터') || name.includes('컴활')) return { icon: Monitor, color: 'text-blue-500', bg: 'bg-blue-50', hoverBg: 'group-hover:bg-blue-500' };
   if (name.includes('한국사')) return { icon: History, color: 'text-rose-500', bg: 'bg-rose-50', hoverBg: 'group-hover:bg-rose-500' };
   if (name.includes('자동화설비') || name.includes('생산자동화')) return { icon: BookOpen, color: 'text-indigo-600', bg: 'bg-indigo-50', hoverBg: 'group-hover:bg-indigo-600' };
+  if (name.includes('3D프린터')) return { icon: Printer, color: 'text-cyan-600', bg: 'bg-cyan-50', hoverBg: 'group-hover:bg-cyan-600' };
   return { icon: BookOpen, color: 'text-brand-600', bg: 'bg-brand-50', hoverBg: 'group-hover:bg-brand-600' };
 };
 

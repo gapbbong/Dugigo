@@ -16,7 +16,9 @@ import {
   ShieldCheck,
   Download,
   Share,
-  PlusSquare
+  PlusSquare,
+  Clock,
+  AlertCircle
 } from 'lucide-react';
 import { getLevelInfo } from '@/lib/levelSystem';
 
@@ -214,6 +216,22 @@ export default function SelectUnitPage() {
             <span className="text-rose-500">고</span>민말고 <span className="text-slate-900 dark:text-slate-100 font-black">두기고</span>
           </motion.h1>
         </div>
+
+        {/* 문항 추출 및 검증 준비 중 상태 안내 */}
+        {!loading && units.length === 0 && exams.length === 0 && (
+          <div className="glass-card p-10 md:p-14 rounded-[2.5rem] border border-cyan-200 bg-cyan-50/40 text-center mb-12 shadow-sm">
+            <div className="w-16 h-16 md:w-20 md:h-20 bg-cyan-100 text-cyan-600 rounded-3xl flex items-center justify-center mx-auto mb-5 shadow-inner">
+              <Clock size={36} className="animate-pulse" />
+            </div>
+            <h3 className="text-xl md:text-2xl font-black text-slate-800 mb-2">
+              {subject} 기출문항을 정밀 추출 및 검증 중입니다
+            </h3>
+            <p className="text-sm md:text-base font-bold text-slate-500 max-w-lg mx-auto leading-relaxed">
+              최신 과년도 기출문제와 도면/그림 해설을 꼼꼼하게 디지털화하고 있습니다.<br className="hidden md:block" />
+              곧 오픈될 예정이니 잠시만 기다려 주세요! 🚀
+            </p>
+          </div>
+        )}
 
         {/* 🔥 자주 나왔던 문항 섹션 */}
         {units.some(u => u.originalName === "자주나왔던문항") && (

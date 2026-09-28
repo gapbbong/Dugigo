@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useRouter } from 'next/navigation';
@@ -1135,6 +1135,8 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                     imgSrc = `/images/subjects/자동화설비산업기사/${imgName}`;
                   } else if (imgName.startsWith('ae_') || subject.includes('자동화설비') || subject.includes('생산자동화')) {
                     imgSrc = `/images/subjects/자동화설비(생산자동화)기능사/${imgName}`;
+                  } else if (subject.includes('3D프린터')) {
+                    imgSrc = `/images/subjects/3D프린터운용기능사/${imgName}`;
                   } else {
                     // 정보처리기능사 모의고사(2026년) 및 Mock 폴더 처리
                     const year = currentQuestion.year;
@@ -1235,6 +1237,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                                     if (imgName.startsWith('vis_') || subject.includes('시각디자인')) return `/summaries/시각디자인산업기사/${imgName}`;
                                     if (subject.includes('자동화설비산업기사') || subject.includes('자동화설비 산업기사')) return `/images/subjects/자동화설비산업기사/${imgName}`;
                                     if (imgName.startsWith('ae_') || subject.includes('자동화설비')) return `/images/subjects/자동화설비(생산자동화)기능사/${imgName}`;
+                                    if (subject.includes('3D프린터')) return `/images/subjects/3D프린터운용기능사/${imgName}`;
                                     return imgName;
                                   })()}
                                   alt={`Choice Image ${idx + 1}`}

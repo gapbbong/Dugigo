@@ -24,6 +24,8 @@ export async function GET() {
       .filter(item => {
         if (!item.isDirectory()) return false;
         if (item.name.includes('_backup') || item.name.includes('_BACKUP') || item.name.includes('.bak')) return false;
+        // 3D프린터운용기능사는 추출 진행 중이므로 폴더가 비어있어도 서비스 노출 허용
+        if (item.name.includes('3D프린터')) return true;
         const subDirPath = path.join(dataDir, item.name);
         try {
           const files = fs.readdirSync(subDirPath);
@@ -33,6 +35,10 @@ export async function GET() {
         }
       })
       .map(item => item.name);
+
+    if (!subjects.some(s => s.includes('3D프린터'))) {
+      subjects.push('3D프린터운용기능사');
+    }
       
     return NextResponse.json({ subjects });
   } catch (error) {
