@@ -293,7 +293,7 @@ export default function SelectUnitPage() {
                   <div key={unit.name} className="glass-card p-6 rounded-[2rem] border border-white/60">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-8 h-8 bg-violet-50 rounded-lg flex items-center justify-center text-violet-600 font-black text-xs">{unitIndex}</div>
-                      <h4 className="text-sm font-black truncate dark:text-slate-200">{unit.name}</h4>
+                      <h4 className="text-base md:text-lg font-black truncate dark:text-slate-200" title={unit.name}>{unit.name}</h4>
                     </div>
                     <div className="grid grid-cols-3 gap-3">
                       {Array.from({ length: unitSetCount }).map((_, sIdx) => {
