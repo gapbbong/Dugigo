@@ -1,0 +1,445 @@
+[
+  {
+    "number": 11,
+    "question": "그림의 구속 조건 중 도형의 평행(Parallel) 조건을 부여하는 것은?",
+    "choices": [
+      "동심 (Concentric)",
+      "직각 (Perpendicular)",
+      "평행 (Parallel)",
+      "접선 (Tangent)"
+    ],
+    "answer": 3,
+    "explanation": "① 동심 : 두 개의 원을 동일 중심점에 구속시킨다.\n② 직각 : 선택한 두 개의 직선이 서로 직각으로 구속시킨다.\n④ 접선 : 스플라인의 끝을 포함하는 곡선을 다른 (곡)선에 접목 구속시킨다.",
+    "has_image": true,
+    "visual_coords": [
+      129,
+      611,
+      578,
+      989
+    ],
+    "subject": "3D스캐너 및 3D모델링",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2018_1_11",
+    "round_info": "2018년 제1회 과년도 기출복원문제",
+    "year": "2018",
+    "round": "1",
+    "page": 3,
+    "question_img": "images/3d_printer_2018_1_q11.webp"
+  },
+  {
+    "number": 20,
+    "question": "스케치 요소 중 두 개의 원에 적용할 수 없는 조건은?",
+    "choices": [
+      "동심",
+      "동일",
+      "평행",
+      "탄젠트"
+    ],
+    "answer": 2,
+    "explanation": "① 동심 : 두 개의 원의 중심점을 일치시킨다.\n② 동일 : 두 개의 원의 크기를 일치시킨다.\n④ 탄젠트 : 구속 조건 중 접선과 같은 의미로서 스플라인\n포함하는 곡선을 다른 (곡)선에 접하도록 구속시킨다.",
+    "has_image": false,
+    "visual_coords": null,
+    "subject": "3D프린터 SW설정 및 슬라이싱",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2018_1_20",
+    "round_info": "2018년 제1회 과년도 기출복원문제",
+    "year": "2018",
+    "round": "1",
+    "page": 5,
+    "question_img": null
+  },
+  {
+    "number": 17,
+    "question": "스케치에서 2D 객체를 구성하는 선에 대한 수정으로 할 수 없는 것은?",
+    "choices": [
+      "생성",
+      "분할",
+      "연결",
+      "연장"
+    ],
+    "answer": 4,
+    "explanation": "선에 대한 수정 기능은 삽입(생성), 삭제, 분할, 연결 등이 등이",
+    "has_image": false,
+    "visual_coords": null,
+    "subject": "3D프린터 SW설정 및 슬라이싱",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2019_1_17",
+    "round_info": "2019년 제1회 과년도 기출복원문제",
+    "year": "2019",
+    "round": "1",
+    "page": 20,
+    "question_img": null
+  },
+  {
+    "number": 37,
+    "question": "2D 스케치 환경에서 원을 호로 수정할 때 필요한 명령어는?",
+    "choices": [
+      "자르기",
+      "연 장",
+      "늘이기",
+      "간격띄우기"
+    ],
+    "answer": 1,
+    "explanation": "자르기 : 원을 지나는 다른 선을 이용하여 원을 잘라내어 호로 만든다.\n이외에 끊기(Break) 명령을 이용하여 호로 수정이 가능하다.",
+    "has_image": false,
+    "visual_coords": null,
+    "subject": "3D프린터 HW설정 및 출력",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2019_1_37",
+    "round_info": "2019년 제1회 과년도 기출복원문제",
+    "year": "2019",
+    "round": "1",
+    "page": 25,
+    "question_img": null
+  },
+  {
+    "number": 11,
+    "question": "선택한 면과 면, 선과 선 사이에 일정한 간격을 주는 제약 조건은 무엇인가?",
+    "choices": [
+      "일치 제약 조건",
+      "접촉 제약 조건",
+      "오프셋 제약 조건",
+      "각도 제약 조건"
+    ],
+    "answer": 3,
+    "explanation": "• 일치 제약 조건 : 면과 면, 선과 선, 축과 축 등을 선택하면 일치시켜주는 제약 조건이다.\n• 접촉 제약 조건 : 선택한 선과 선, 면과 면을 접촉하도록 하는 제약 조건이다.\n• 각도 제약 조건 : 면과 면, 선과 선을 선택해 각도로 제약을 주는 조건이다.\n• 고정 컴포넌트 : 선택한 파트를 고정시켜 주는 기능을",
+    "has_image": false,
+    "visual_coords": null,
+    "subject": "3D스캐너 및 3D모델링",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2020_1_11",
+    "round_info": "2020년 제1회 과년도 기출복원문제",
+    "year": "2020",
+    "round": "1",
+    "page": 33,
+    "question_img": null
+  },
+  {
+    "number": 15,
+    "question": "도형의 구속 조건 중 다음의 그림과 같이 한 축에 원기둥을 일치시키는 구속 조건은?",
+    "choices": [
+      "동 심",
+      "접 선",
+      "평 행",
+      "직 각"
+    ],
+    "answer": 1,
+    "explanation": "• 동심 : 두 개의 원을 동일 중심선에 구속시킨다.\n• 접선 : 곡선을 다른 (곡)선에 접하도록 구속시킨다.\n• 평행 : 두 직선이나 평면이 같은 거리만큼 떨어져 서로 만나지 않도록 구속시킨다.",
+    "has_image": true,
+    "visual_coords": [
+      130,
+      665,
+      228,
+      960
+    ],
+    "subject": "3D스캐너 및 3D모델링",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2020_1_15",
+    "round_info": "2020년 제1회 과년도 기출복원문제",
+    "year": "2020",
+    "round": "1",
+    "page": 34,
+    "question_img": "images/3d_printer_2020_1_q15.webp"
+  },
+  {
+    "number": 57,
+    "question": "2D스케치 수정에서 가능한 것이 아닌 것은?",
+    "choices": [
+      "구속조건",
+      "추가 및 삭제",
+      "두께 변경",
+      "크기 변경"
+    ],
+    "answer": 1,
+    "explanation": "① 구속조건은 3D모델링에서 수행하는 기능이다.",
+    "has_image": false,
+    "visual_coords": null,
+    "subject": "3D프린터 안전관리 및 후가공",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2021_2_57",
+    "round_info": "2021년 제2회 과년도 기출복원문제",
+    "year": "2021",
+    "round": "2",
+    "page": 56,
+    "question_img": null
+  },
+  {
+    "number": 7,
+    "question": "형상 구속에 대한 설명으로 틀린 것은?",
+    "choices": [
+      "동일 구속 : 두 개 이상 선택된 스케치 크기를 똑같이 구속",
+      "접선 구속 : 곡선 또는 직선을 곡선에 접하도록 구속",
+      "수평 구속 : 떨어진 두 개의 선을 평행하게 구속",
+      "일치 구속 : 2D 또는 3D스케치의 다른 형상에 점을 구속"
+    ],
+    "answer": 3,
+    "explanation": "• 수평 구속 : 스케치 좌표계의 X축에 평행이 되도록 점과 선을 구속\n• 평행 구속 : 떨어진 두 개의 선을 평행하게 구속",
+    "has_image": false,
+    "visual_coords": null,
+    "subject": "3D스캐너 및 3D모델링",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2022_2_7",
+    "round_info": "2022년 제2회 과년도 기출복원문제",
+    "year": "2022",
+    "round": "2",
+    "page": 59,
+    "question_img": null
+  },
+  {
+    "number": 12,
+    "question": "3D 모델링에서 스케치면을 선택할 수 없는 것은?",
+    "choices": [
+      "솔리드 곡면",
+      "가상면",
+      "작업 평면",
+      "솔리드 평면"
+    ],
+    "answer": 1,
+    "explanation": "스케치 작업은 평면에서만 가능하다.",
+    "has_image": false,
+    "visual_coords": null,
+    "subject": "3D스캐너 및 3D모델링",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2022_2_12",
+    "round_info": "2022년 제2회 과년도 기출복원문제",
+    "year": "2022",
+    "round": "2",
+    "page": 60,
+    "question_img": null
+  },
+  {
+    "number": 35,
+    "question": "2D 스케치에서 가능한 작업이 아닌 것은?",
+    "choices": [
+      "돌출",
+      "원",
+      "곡선",
+      "호"
+    ],
+    "answer": 1,
+    "explanation": "돌출은 2D 라인을 이용하여 3D 객체를 생성하는 방법이다.",
+    "has_image": false,
+    "visual_coords": null,
+    "subject": "3D프린터 HW설정 및 출력",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2022_2_35",
+    "round_info": "2022년 제2회 과년도 기출복원문제",
+    "year": "2022",
+    "round": "2",
+    "page": 65,
+    "question_img": null
+  },
+  {
+    "number": 1,
+    "question": "3D 모델링의 2D 스케치에 대한 설명으로 틀린 것은?",
+    "choices": [
+      "정투상도에 따라 XY, YZ, ZX 기준평면을 선택하여 작성한다.",
+      "2D 스케치로 작성된 도면을 이용하여 3D 형상을 만들 수 있다.",
+      "완성된 3D에서 2D 스케치를 수정하면 3D 형상이 수정된다.",
+      "완성된 형상의 곡면에서도 스케치 작업이 가능하다."
+    ],
+    "answer": 4,
+    "explanation": "스케치는 평면에서 작업한다.",
+    "has_image": false,
+    "visual_coords": null,
+    "subject": "3D스캐너 및 3D모델링",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2023_2_1",
+    "round_info": "2023년 제2회 과년도 기출복원문제",
+    "year": "2023",
+    "round": "2",
+    "page": 71,
+    "question_img": null
+  },
+  {
+    "number": 8,
+    "question": "다음 도형의 구속 조건에 해당하는 것은?",
+    "choices": [
+      "면과 면 각도, 축과 축 일치",
+      "면과 면 일치, 축과 축 각도",
+      "면과 면 일치, 선과 선 각도",
+      "면과 면 일치, 축과 축 일치"
+    ],
+    "answer": 4,
+    "explanation": "• 면과 면 일치 : 두 물체가 축은 일치하지만 (가)처럼 떨어져 있을 경우 발생하므로 면과 면의 일치 구속이 필요하다.\n• 축과 축 일치 : 두 물체의 중심이 일치한다.",
+    "has_image": true,
+    "visual_coords": [
+      88,
+      566,
+      219,
+      957
+    ],
+    "subject": "3D스캐너 및 3D모델링",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2023_2_8",
+    "round_info": "2023년 제2회 과년도 기출복원문제",
+    "year": "2023",
+    "round": "2",
+    "page": 72,
+    "question_img": "images/3d_printer_2023_2_q8.webp"
+  },
+  {
+    "number": 15,
+    "question": "2D 스케치의 구속 조건이 아닌 것은?",
+    "choices": [
+      "평면",
+      "수직",
+      "동심",
+      "평행"
+    ],
+    "answer": 1,
+    "explanation": "평면은 3차원에서 동일한 평면에 대한 구속에 해당한다. ②, ③, ④는 2차원에서 형상 구속이다.",
+    "has_image": false,
+    "visual_coords": null,
+    "subject": "3D스캐너 및 3D모델링",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2023_2_15",
+    "round_info": "2023년 제2회 과년도 기출복원문제",
+    "year": "2023",
+    "round": "2",
+    "page": 73,
+    "question_img": null
+  },
+  {
+    "number": 31,
+    "question": "그림과 같이 두 개체의 중심을 동일하게 하는 구속 조건은 무엇인가?",
+    "choices": [
+      "직각",
+      "동 심",
+      "평 행",
+      "접 선"
+    ],
+    "answer": 2,
+    "explanation": "② 동심 : 동일 중심점에 두 개의 호, 원 또는 타원을 구속한다.\n① 직각 : 선택한 두 개의 직선이 서로 직각이 되도록 구속시킨다.\n③ 평행 : 두 직선이나 평면이 같은 거리만큼 떨어져 서로 만나지 않도록 구속시킨다.\n④ 접선 : 스플라인의 끝을 포함하는 곡선을 다른 (곡)선에 접하도록 구속시킨다.",
+    "has_image": true,
+    "visual_coords": [
+      133,
+      161,
+      214,
+      461
+    ],
+    "subject": "3D프린터 HW설정 및 출력",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2024_2_31",
+    "round_info": "2024년 제2회 과년도 기출복원문제",
+    "year": "2024",
+    "round": "2",
+    "page": 91,
+    "question_img": "images/3d_printer_2024_2_q31.webp"
+  },
+  {
+    "number": 34,
+    "question": "3D모델링에서 구속 조건에 대한 설명으로 옳지 않은 것은?",
+    "choices": [
+      "치수 구속은 길이, 거리, 각도 등의 수치로 한다.",
+      "객체들 간의 자세를 흐트러짐 없이 고정하는 기능이다.",
+      "구속 조건의 종류는 형상 구속, 치수 구속, 구속 세 가지로 나눈다.",
+      "스케치 변경이나 수정을 편리하고 직관적 수행하기 위한 기능이다."
+    ],
+    "answer": 3,
+    "explanation": "③ 구속 조건에는 형상 구속과 치수 구속 두 가지가 있다.",
+    "has_image": false,
+    "visual_coords": null,
+    "subject": "3D프린터 HW설정 및 출력",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2024_2_34",
+    "round_info": "2024년 제2회 과년도 기출복원문제",
+    "year": "2024",
+    "round": "2",
+    "page": 91,
+    "question_img": null
+  },
+  {
+    "number": 35,
+    "question": "2D 스케치 작업에서만 가능한 기능으로 가장 적절하지 않은 것은?",
+    "choices": [
+      "돌출",
+      "대칭",
+      "축척",
+      "라운딩"
+    ],
+    "answer": 1,
+    "explanation": "3D 작업에는 돌출, 회전, 구멍, 스윕, 셸, 모깎기, 모따기 등이 있다.",
+    "has_image": false,
+    "visual_coords": null,
+    "subject": "3D프린터 HW설정 및 출력",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2024_2_35",
+    "round_info": "2024년 제2회 과년도 기출복원문제",
+    "year": "2024",
+    "round": "2",
+    "page": 92,
+    "question_img": null
+  },
+  {
+    "number": 2,
+    "question": "스케치의 값을 정해서 구속하는 조건은 무엇인가?",
+    "choices": [
+      "형상 구속",
+      "일치 구속",
+      "동일 구속",
+      "치수 구속"
+    ],
+    "answer": 4,
+    "explanation": "구속 조건의 종류\n• 치수 구속 : 스케치의 값을 정해서 크기를 맞추는 구속\n• 형상 구속 : 드로잉된 스케치 객체들 간의 자세를 맞추는 구속(수직, 수평, 직각, 평행, 동일, 동일선상, 일치, 동심, 접선 등)",
+    "has_image": false,
+    "visual_coords": null,
+    "subject": "3D스캐너 및 3D모델링",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2025_1_2",
+    "round_info": "2025년 제1회 최근 기출복원문제",
+    "year": "2025",
+    "round": "1",
+    "page": 98,
+    "question_img": null
+  },
+  {
+    "number": 36,
+    "question": "다음 구속 조건 기호 중 접선 구속에 해당하는 것은?",
+    "choices": [
+      "일치",
+      "동일선상",
+      "직각",
+      "접선"
+    ],
+    "answer": 4,
+    "explanation": "④ 접선: 스플라인의 끝을 포함하는 곡선을 다른 곡선에 접하게 구속한다.\n① 일치: 2D 또는 3D 스케치의 다른 형상에 점을 구속한다.\n② 동일선상: 두 개 이상의 선 또는 타원축이 동일한 선에 놓이도록 구속한다.\n③ 직각: 선택한 선형 형상이 서로 직각이 되도록 구속한다.",
+    "has_image": true,
+    "visual_coords": [
+      95,
+      570,
+      215,
+      895
+    ],
+    "subject": "3D프린터 HW설정 및 출력",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2025_1_36",
+    "round_info": "2025년 제1회 최근 기출복원문제",
+    "year": "2025",
+    "round": "1",
+    "page": 106,
+    "question_img": "images/3d_printer_2025_1_q36.webp"
+  },
+  {
+    "number": 46,
+    "question": "3D 모델링의 2D 스케치에 관한 설명으로 옳은 것은?",
+    "choices": [
+      "곡면에서도 2D 스케치 작업이 가능하다.",
+      "2D 스케치로 작성된 도면으로 3D 형상을 만들 수 있다.",
+      "완성된 3D 형상 내의 2D 스케치를 수정하면 형상이 수정된다.",
+      "정투상도에 따라 기본적으로 XY, YZ, ZX 기준평면을 선택하여 작성한다."
+    ],
+    "answer": 1,
+    "explanation": "① 2D 스케치 작업은 평면에서만 가능하다.",
+    "has_image": false,
+    "visual_coords": null,
+    "subject": "3D프린터 안전관리 및 후가공",
+    "unit": "04. 2D 스케치 및 구속조건",
+    "id": "3dp_2025_1_46",
+    "round_info": "2025년 제1회 최근 기출복원문제",
+    "year": "2025",
+    "round": "1",
+    "page": 108,
+    "question_img": null
+  }
+]
