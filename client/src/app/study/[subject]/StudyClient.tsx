@@ -1439,68 +1439,78 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1 }} 
             exit={{ opacity: 0 }} 
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-5 md:p-8 bg-slate-950/75 backdrop-blur-md"
             onClick={(e) => { if (e.target === e.currentTarget) setAiSliderOpen(false); }}
           >
             <motion.div 
-              initial={{ scale: 0.9, opacity: 0, y: 20 }} 
+              initial={{ scale: 0.92, opacity: 0, y: 20 }} 
               animate={{ scale: 1, opacity: 1, y: 0 }} 
-              exit={{ scale: 0.9, opacity: 0, y: 20 }} 
-              className="w-full max-w-5xl bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col h-[90vh] md:h-auto md:aspect-[16/9] max-h-[95vh] relative border border-white/20"
+              exit={{ scale: 0.92, opacity: 0, y: 20 }} 
+              className="w-full max-w-6xl bg-white rounded-[2.5rem] md:rounded-[3rem] shadow-2xl overflow-hidden flex flex-col h-[92vh] md:h-auto md:max-h-[92vh] relative border border-white/20"
             >
               {/* 상단바 */}
-              <div className="flex items-center justify-between px-6 py-4 md:px-10 md:py-6 border-b border-slate-100 bg-slate-50/50">
-                <div className="flex items-center gap-2">
+              <div className="flex items-center justify-between px-6 py-4 md:px-10 md:py-5 border-b border-slate-100 bg-slate-50/70 shrink-0">
+                <div className="flex items-center gap-2.5">
                   <span className="text-xl md:text-2xl">✨</span>
-                  <h3 className="font-black text-slate-800 text-sm md:text-xl">핵심 개념 요약</h3>
-                  <span className="text-[10px] md:text-xs text-brand-600 font-black bg-brand-50 px-3 py-1 rounded-full uppercase">
+                  <h3 className="font-black text-slate-800 text-sm md:text-lg">핵심 개념 요약 슬라이드</h3>
+                  <span className="text-[11px] md:text-xs text-brand-600 font-black bg-brand-50 px-3 py-1 rounded-full uppercase border border-brand-100">
                     {subject} · {unitFilter}
                   </span>
                 </div>
                 <button 
                   onClick={() => setAiSliderOpen(false)} 
-                  className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center bg-slate-200/50 hover:bg-slate-200 text-slate-500 hover:text-slate-800 transition-all"
+                  className="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center bg-slate-200/60 hover:bg-slate-200 text-slate-500 hover:text-slate-800 transition-all cursor-pointer"
                 >
-                  <X className="w-4 h-4 md:w-6 md:h-6" />
+                  <X className="w-5 h-5 md:w-6 md:h-6" />
                 </button>
               </div>
 
-              {/* 슬라이드 본문 */}
-              <div className="flex-1 overflow-y-auto px-6 md:px-20 py-4 md:py-8 relative select-none">
-                <style>{`
-                  @keyframes float {
-                    0%, 100% { transform: translateY(0px); }
-                    50% { transform: translateY(-15px); }
-                  }
-                `}</style>
+              {/* 플로팅 좌/우 이동 버튼 */}
+              {currentSlideIdx > 0 && (
+                <button 
+                  onClick={() => setCurrentSlideIdx(prev => prev - 1)}
+                  aria-label="이전 슬라이드"
+                  className="absolute left-3 md:left-5 top-1/2 -translate-y-1/2 z-30 w-11 h-11 md:w-13 md:h-13 rounded-full bg-white/95 hover:bg-white text-slate-700 hover:text-brand-600 flex items-center justify-center transition-all shadow-xl hover:shadow-2xl border border-slate-200/80 hover:scale-105 active:scale-95 cursor-pointer backdrop-blur-sm"
+                >
+                  <ChevronLeft className="w-6 h-6 md:w-7 md:h-7" />
+                </button>
+              )}
 
+              {slideData && currentSlideIdx < slideData.length - 1 && (
+                <button 
+                  onClick={() => setCurrentSlideIdx(prev => prev + 1)}
+                  aria-label="다음 슬라이드"
+                  className="absolute right-3 md:right-5 top-1/2 -translate-y-1/2 z-30 w-11 h-11 md:w-13 md:h-13 rounded-full bg-brand-600 hover:bg-brand-700 text-white flex items-center justify-center transition-all shadow-xl hover:shadow-2xl shadow-brand-500/30 hover:scale-105 active:scale-95 cursor-pointer"
+                >
+                  <ChevronRight className="w-6 h-6 md:w-7 md:h-7" />
+                </button>
+              )}
+
+              {/* 슬라이드 본문 */}
+              <div className="flex-1 overflow-y-auto px-6 sm:px-14 md:px-16 py-6 md:py-8 relative select-none">
                 <AnimatePresence mode="wait">
                   <motion.div 
                     key={currentSlideIdx}
-                    initial={{ opacity: 0, scale: 0.95 }}
+                    initial={{ opacity: 0, scale: 0.97 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.3 }}
-                    className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center w-full max-w-5xl min-h-full"
+                    exit={{ opacity: 0, scale: 0.97 }}
+                    transition={{ duration: 0.25 }}
+                    className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center w-full min-h-full"
                   >
-                    {/* 좌측: 거대한 비주얼 영역 */}
-                    <div className="md:col-span-5 flex justify-center items-center relative h-48 md:h-80 w-full">
-                      <div className="absolute inset-0 bg-gradient-to-tr from-brand-500/20 to-indigo-500/20 rounded-full blur-3xl" />
-                      <div 
-                        style={{ animation: 'float 3s ease-in-out infinite' }} 
-                        className="flex justify-center items-center drop-shadow-2xl select-none w-full h-full"
-                      >
+                    {/* 좌측: 대폭 확장된 인포그래픽/비주얼 영역 (7/12) */}
+                    <div className="lg:col-span-7 flex justify-center items-center relative w-full">
+                      <div className="absolute inset-0 bg-gradient-to-tr from-brand-500/15 via-indigo-500/10 to-teal-500/10 rounded-3xl blur-2xl -z-10" />
+                      <div className="w-full flex justify-center items-center select-none">
                         {slideData[currentSlideIdx].svg ? (
                           <div 
                             dangerouslySetInnerHTML={{ __html: slideData[currentSlideIdx].svg }} 
-                            className="w-full h-full max-h-[180px] md:max-h-[300px] flex items-center justify-center [&>svg]:w-full [&>svg]:h-full [&>svg]:max-h-[300px] p-4 bg-white/80 rounded-[2rem] shadow-2xl border-4 border-white/80"
+                            className="w-full max-w-full flex items-center justify-center bg-slate-900/95 rounded-2xl md:rounded-3xl shadow-xl border border-slate-700/50 p-2 md:p-3 overflow-hidden [&>svg]:w-full [&>svg]:h-auto [&>svg]:max-h-[380px] lg:[&>svg]:max-h-[460px] [&>svg]:object-contain"
                           />
                         ) : slideData[currentSlideIdx].image ? (
                           <img 
                             src={slideData[currentSlideIdx].image} 
                             alt={slideData[currentSlideIdx].title}
                             onError={(e) => {
-                              // 이미지 로드 실패 시 이미지 필드를 제거하여 이모지가 나오도록 함
                               const target = e.target as HTMLImageElement;
                               target.style.display = 'none';
                               const parent = target.parentElement;
@@ -1511,76 +1521,137 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                                 parent.appendChild(emojiSpan);
                               }
                             }}
-                            className="max-h-[180px] md:max-h-[300px] max-w-full object-cover rounded-[2rem] shadow-2xl border-4 border-white/80"
+                            className="max-h-[340px] lg:max-h-[440px] w-auto max-w-full object-contain rounded-2xl md:rounded-3xl shadow-xl border-4 border-white"
                           />
                         ) : (
-                          <span className="text-8xl md:text-[10rem]">{slideData[currentSlideIdx].emoji || "✨"}</span>
+                          <div className="flex flex-col items-center justify-center py-12">
+                            <span className="text-8xl md:text-[10rem]">{slideData[currentSlideIdx].emoji || "✨"}</span>
+                          </div>
                         )}
                       </div>
                     </div>
 
-                    {/* 우측: 핵심 텍스트 영역 */}
-                    <div className="md:col-span-7 flex flex-col justify-center text-center md:text-left space-y-4 md:space-y-6">
-                      <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight leading-snug word-break-keep-all">
-                        {slideData[currentSlideIdx].title}
-                      </h2>
-                      <p className="text-base md:text-xl font-bold text-slate-600 leading-relaxed md:leading-loose word-break-keep-all">
-                        {slideData[currentSlideIdx].content?.replaceAll('**', '')}
-                      </p>
+                    {/* 우측: 스마트 줄바꿈 & 카드형 텍스트 영역 (5/12) */}
+                    <div className="lg:col-span-5 flex flex-col justify-center text-left space-y-4">
+                      {/* 타이틀 헤더 */}
+                      <div className="space-y-1.5">
+                        <div className="flex items-center gap-2">
+                          <span className="text-xl md:text-2xl">{slideData[currentSlideIdx].emoji || "📌"}</span>
+                          <span className="text-xs font-black text-brand-600 bg-brand-50 px-2.5 py-0.5 rounded-md border border-brand-200">
+                            SLIDE {currentSlideIdx + 1}
+                          </span>
+                        </div>
+                        <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-slate-900 tracking-tight leading-snug break-keep">
+                          {slideData[currentSlideIdx].title}
+                        </h2>
+                      </div>
+
+                      {/* 핵심 개념 본문 (불릿/대괄호/번호/문장별 스마트 줄바꿈) */}
+                      <div className="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed break-keep space-y-2.5 bg-slate-50/80 p-4 rounded-2xl border border-slate-200/70">
+                        {(() => {
+                          const rawContent = (slideData[currentSlideIdx].content || '').replaceAll('**', '');
+                          const normalized = rawContent
+                            .replace(/([^\n])(?=[①②③④⑤⑥⑦⑧⑨⑩])/g, '$1\n')
+                            .replace(/([^\n])(?=\s*[•\-]\s*)/g, '$1\n')
+                            .replace(/([^\n])(?=\s*\[[^\]]+\])/g, '$1\n')
+                            .replace(/([^\n])(?=\s*\d+\.\s+)/g, '$1\n');
+                          const lines = normalized.split('\n').map((l: string) => l.trim()).filter(Boolean);
+
+                          return lines.map((line: string, idx: number) => {
+                            const isBullet = line.startsWith('•') || line.startsWith('-');
+                            const cleanLine = isBullet ? line.replace(/^[•\-]\s*/, '') : line;
+                            const startsWithBracket = /^\[[^\]]+\]/.test(cleanLine);
+                            const startsWithCircle = /^[①②③④⑤⑥⑦⑧⑨⑩]/.test(cleanLine);
+                            const startsWithNum = /^\d+\.\s*/.test(cleanLine);
+
+                            return (
+                              <div 
+                                key={idx} 
+                                className={"flex items-start gap-2 " + (
+                                  startsWithBracket 
+                                    ? 'bg-white p-2.5 rounded-xl border border-slate-200/80 shadow-xs' 
+                                    : startsWithCircle || startsWithNum
+                                    ? 'pl-1' 
+                                    : ''
+                                )}
+                              >
+                                {isBullet && !startsWithBracket && (
+                                  <span className="text-brand-500 font-bold mt-0.5 shrink-0">•</span>
+                                )}
+                                <span className={
+                                  startsWithBracket 
+                                    ? 'font-bold text-slate-800' 
+                                    : startsWithCircle || startsWithNum
+                                    ? 'font-bold text-slate-900' 
+                                    : ''
+                                }>
+                                  {cleanLine}
+                                </span>
+                              </div>
+                            );
+                          });
+                        })()}
+                      </div>
+
+                      {/* 기출 공략 포인트 (동그라미 번호, 별표, 세미콜론 줄바꿈 및 강조 카드) */}
                       {slideData[currentSlideIdx].exam_point && (
-                        <div className="p-4 md:p-5 bg-amber-50/80 rounded-[1.5rem] border-2 border-amber-200/50 text-amber-950 self-center md:self-start w-full shadow-sm flex flex-col gap-1 md:gap-2 text-left">
-                          <span className="text-xs md:text-sm font-black text-amber-600 uppercase tracking-widest flex items-center gap-1.5">
+                        <div className="p-4 bg-amber-50/90 rounded-2xl border-2 border-amber-200/90 text-amber-950 shadow-sm space-y-2">
+                          <span className="text-xs font-black text-amber-700 uppercase tracking-wide flex items-center gap-1.5">
                             📌 기출 공략 포인트 (시험 출제 기준)
                           </span>
-                        <div className="text-base md:text-xl font-bold leading-relaxed word-break-keep-all space-y-2">
-                          {slideData[currentSlideIdx].exam_point?.split('\n').map((line: string, i: number) => {
-                            if (line.trim().startsWith('- ')) {
-                              return <div key={i} className="flex gap-2 pl-2"><span className="text-amber-500">•</span><span>{line.trim().slice(2).replaceAll('**', '')}</span></div>;
-                            }
-                            return <p key={i}>{line.replaceAll('**', '')}</p>;
-                          })}
-                        </div>
+                          <div className="text-xs sm:text-sm font-semibold leading-relaxed break-keep space-y-2">
+                            {(() => {
+                              const raw = slideData[currentSlideIdx].exam_point.replaceAll('**', '');
+                              const normalized = raw
+                                .replace(/([^\n])(?=[①②③④⑤⑥⑦⑧⑨⑩])/g, '$1\n')
+                                .replace(/([^\n])(?=★)/g, '$1\n')
+                                .replace(/;\s*(?=[가-힣A-Za-z0-9])/g, ';\n');
+                              const lines = normalized.split('\n').map((l: string) => l.trim()).filter(Boolean);
+
+                              return lines.map((line: string, i: number) => {
+                                const isCircle = /^[①②③④⑤⑥⑦⑧⑨⑩]/.test(line);
+                                const isStar = line.startsWith('★');
+                                const isWarning = line.includes('주의') || line.includes('함정') || line.includes('불가');
+
+                                return (
+                                  <div 
+                                    key={i} 
+                                    className={"flex items-start gap-1.5 " + (
+                                      isCircle 
+                                        ? 'pl-2.5 pr-2 py-1.5 bg-amber-100/70 text-slate-900 font-bold rounded-xl border border-amber-200/50' 
+                                        : isStar 
+                                        ? 'text-amber-900 font-black tracking-tight' 
+                                        : isWarning
+                                        ? 'text-rose-700 font-bold'
+                                        : 'text-amber-950'
+                                    )}
+                                  >
+                                    <span>{line}</span>
+                                  </div>
+                                );
+                              });
+                            })()}
+                          </div>
                         </div>
                       )}
-
-
                     </div>
                   </motion.div>
                 </AnimatePresence>
-
-                {/* 슬라이드 넘김 화살표 */}
-                {currentSlideIdx > 0 && (
-                  <button 
-                    onClick={() => setCurrentSlideIdx(prev => prev - 1)}
-                    className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-all shadow-sm"
-                  >
-                    <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
-                  </button>
-                )}
-
-                {slideData && currentSlideIdx < slideData.length - 1 && (
-                  <button 
-                    onClick={() => setCurrentSlideIdx(prev => prev + 1)}
-                    className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 rounded-full bg-brand-600 hover:bg-brand-700 text-white flex items-center justify-center transition-all shadow-lg shadow-brand-500/30"
-                  >
-                    <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
-                  </button>
-                )}
               </div>
 
               {/* 하단 페이지네이션 인디케이터 */}
-              <div className="px-6 py-4 md:px-10 md:py-8 border-t border-slate-100 bg-white flex items-center justify-between">
-                <div className="flex items-center gap-6">
+              <div className="px-6 py-4 md:px-10 md:py-5 border-t border-slate-100 bg-white flex items-center justify-between shrink-0">
+                <div className="flex items-center gap-5">
                   <div className="flex gap-1.5 md:gap-2">
                     {slideData.map((_, i) => (
                       <div 
                         key={i} 
                         onClick={() => setCurrentSlideIdx(i)}
-                        className={`h-1.5 md:h-2 rounded-full transition-all cursor-pointer ${i === currentSlideIdx ? 'w-6 md:w-10 bg-brand-600' : 'w-1.5 md:w-2 bg-slate-200 hover:bg-slate-300'}`}
+                        className={"h-2 rounded-full transition-all cursor-pointer " + (i === currentSlideIdx ? 'w-7 md:w-10 bg-brand-600' : 'w-2 bg-slate-200 hover:bg-slate-300')}
                       />
                     ))}
                   </div>
-                  <div className="hidden md:block text-xs font-bold text-slate-400">
+                  <div className="text-xs font-bold text-slate-400">
                     <span className="text-slate-900 font-black">{currentSlideIdx + 1}</span> / {slideData.length}
                   </div>
                 </div>
@@ -1592,7 +1663,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                       className="w-4 h-4 rounded border-slate-300 text-brand-600 focus:ring-brand-500 cursor-pointer"
                       checked={hideAutoSummary}
                       onChange={(e) => {
-                        const hideKey = `dugigo_hide_summary_${subject}_${unitFilter}_${setNum}`;
+                        const hideKey = "dugigo_hide_summary_" + subject + "_" + unitFilter + "_" + setNum;
                         localStorage.setItem(hideKey, e.target.checked ? 'true' : 'false');
                         setHideAutoSummary(e.target.checked);
                       }}
@@ -1601,7 +1672,7 @@ export function StudyContent({ searchParamsProps }: { searchParamsProps: any }) 
                   </label>
                   <button 
                     onClick={() => setAiSliderOpen(false)}
-                    className="px-6 py-3 bg-brand-600 text-white font-black rounded-xl hover:bg-brand-700 transition-all active:scale-95 text-sm"
+                    className="px-6 py-2.5 md:py-3 bg-brand-600 text-white font-black rounded-xl hover:bg-brand-700 transition-all active:scale-95 text-xs md:text-sm cursor-pointer shadow-md hover:shadow-brand-500/20"
                   >
                     공부 시작하기
                   </button>
